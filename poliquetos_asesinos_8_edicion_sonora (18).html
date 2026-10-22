@@ -2393,7 +2393,41 @@ let synthBus=null,synthWaves=null,audio=null,musicBus=null,fxBus=null,noise=null
 const soundLast={shot:-10,torpedo:-10,death:-10,bossdeath:-10};
 let lastMusicGainTarget=-1;function setMusicTarget(v,smoothing=.2){if(!musicBus||!audio)return;if(Math.abs(v-lastMusicGainTarget)<.005)return;lastMusicGainTarget=v;musicBus.gain.setTargetAtTime(v,audio.currentTime,smoothing);}
 const SEMITONE=n=>Math.pow(2,n/12);
-function initAudio(){try{if(!audio){audio=new(window.AudioContext||window.webkitAudioContext)();const comp=audio.createDynamicsCompressor();comp.threshold.value=-20;comp.ratio.value=3;comp.connect(audio.destination);musicBus=audio.createGain();lastMusicGainTarget=-1;musicBus.gain.value=Math.max(.001,.80*app.musicVol);nextBeat=audio.currentTime+.04;musicBus.connect(comp);synthBus=audio.createGain();synthBus.connect(musicBus);const echo=audio.createDelay(1),feedback=audio.createGain(),echoGain=audio.createGain(),echoFilter=audio.createBiquadFilter(),pan=audio.createStereoPanner();echo.delayTime.value=.227;feedback.gain.value=.12;echoGain.gain.value=.055;echoFilter.type='lowpass';echoFilter.frequency.value=2200;pan.pan.value=.6;synthBus.connect(echo);echo.connect(echoFilter);echoFilter.connect(feedback).connect(echo);echoFilter.connect(echoGain).connect(pan).connect(musicBus);prepareSynthWaves();fxBus=audio.createGain();fxBus.gain.value=.70*app.sfxVol;fxBus.connect(comp);prepareAudioSamples();prepareInstruments();prepareArsenalSounds();warmBossAudio(recommendedVocal());}if(audio.state==='suspended')audio.resume();}catch(e){}}
+// The reverb sits before the music master: pause, mute and volume also gate its tail.
+let oceanAcoustics=null;
+function createOceanAcoustics(context,input,output){
+ const highpass=context.createBiquadFilter(),warmth=context.createBiquadFilter(),air=context.createBiquadFilter();
+ highpass.type='highpass';highpass.frequency.value=32;highpass.Q.value=.5;
+ warmth.type='lowshelf';warmth.frequency.value=160;warmth.gain.value=1.8;
+ air.type='lowpass';air.frequency.value=9000;air.Q.value=.55;
+ input.connect(highpass).connect(warmth).connect(air);air.connect(output);
+ const reverb=context.createConvolver(),wet=context.createGain(),damping=context.createBiquadFilter();
+ const rate=context.sampleRate,length=Math.ceil(rate*1.65),impulse=context.createBuffer(2,length,rate);
+ let seed=240519;for(let ch=0;ch<2;ch++){
+  const samples=impulse.getChannelData(ch);let low=0;
+  for(let i=0;i<length;i++){
+   seed=(Math.imul(seed,1664525)+1013904223)>>>0;
+   low=low*.56+(seed/2147483648-1)*.44;
+   const t=i/rate,fade=Math.min(1,t/.018)*Math.exp(-t*4.4);
+   samples[i]=low*fade*.18;
+  }
+ }
+ reverb.normalize=false;reverb.buffer=impulse;damping.type='lowpass';damping.frequency.value=3300;wet.gain.value=.24;
+ air.connect(reverb).connect(damping).connect(wet).connect(output);
+ return {air,wet};
+}
+function oceanMusicProfile(boss,energy){
+ const drive=clamp(Number(energy)||.5,.5,1);
+ return {wet:boss?.10:.29-(drive-.5)*.18,cutoff:boss?13500:8200+drive*2000};
+}
+function updateOceanAcoustics(){
+ if(!audio||!oceanAcoustics)return;
+ const profile=oceanMusicProfile(!!(currentTrack?.boss||currentTrack?.bossMetal),app.musicEnergy);
+ oceanAcoustics.wet.gain.setTargetAtTime(profile.wet,audio.currentTime,.7);
+ oceanAcoustics.air.frequency.setTargetAtTime(profile.cutoff,audio.currentTime,.65);
+}
+
+function initAudio(){try{if(!audio){audio=new(window.AudioContext||window.webkitAudioContext)();const comp=audio.createDynamicsCompressor();comp.threshold.value=-20;comp.ratio.value=3;comp.connect(audio.destination);musicBus=audio.createGain();lastMusicGainTarget=-1;musicBus.gain.value=Math.max(.001,.80*app.musicVol);nextBeat=audio.currentTime+.04;musicBus.connect(comp);synthBus=audio.createGain();oceanAcoustics=createOceanAcoustics(audio,synthBus,musicBus);prepareSynthWaves();fxBus=audio.createGain();fxBus.gain.value=.70*app.sfxVol;fxBus.connect(comp);prepareAudioSamples();prepareInstruments();prepareArsenalSounds();warmBossAudio(recommendedVocal());}if(audio.state==='suspended')audio.resume();}catch(e){}}
 function prepareSynthWaves(){synthWaves={};for(const type of ['sine','triangle','sawtooth','square']){const buffer=audio.createBuffer(1,audio.sampleRate,audio.sampleRate),data=buffer.getChannelData(0);for(let i=0;i<data.length;i++){const phase=TAU*220*i/audio.sampleRate;let v=0;if(type==='sine')v=Math.sin(phase);else for(let h=1;h<=12;h++){if(type==='square'&&h%2===0)continue;if(type==='triangle'&&h%2===0)continue;const amp=type==='triangle'?Math.pow(-1,(h-1)/2)/(h*h):1/(h*Math.pow(1+h*.12,.8));v+=Math.sin(phase*h)*amp;}data[i]=v*.65;}synthWaves[type]=buffer;}}
 function tone(f,t,d,type='sawtooth',vol=.022,filter=1400,bus=musicBus){if(!audio||!bus||!synthWaves||vol<=0)return;const src=audio.createBufferSource(),gain=audio.createGain();src.buffer=synthWaves[type]||synthWaves.triangle;src.loop=true;src.playbackRate.value=Math.max(30,f)/220;gain.gain.setValueAtTime(.0001,t);gain.gain.exponentialRampToValueAtTime(Math.max(.0002,vol),t+.012);gain.gain.exponentialRampToValueAtTime(Math.max(.0002,vol*.55),t+Math.max(.018,d*.35));gain.gain.exponentialRampToValueAtTime(.0001,t+Math.max(.025,d));src.connect(gain).connect(bus===musicBus?synthBus:bus);src.start(t);src.stop(t+Math.max(.03,d)+.01);src.onended=()=>{src.disconnect();gain.disconnect();};}
 
@@ -2411,7 +2445,7 @@ function prepareAudioSamples(){if(!audio||audioSamples)return;const rate=audio.s
  const death=make(.32,(t,x,p,l,r)=>{p+=2*Math.PI*(370*Math.exp(-t*14)+55)/rate;const z=r();l=.86*l+.14*z;return [(Math.sin(p)*.62+(z-l)*.32)*Math.pow(1-x,2.1),p,l];});
  const bossdeath=make(.65,(t,x,p,l,r)=>{p+=2*Math.PI*(250*Math.exp(-t*8)+38)/rate;const z=r();l=.94*l+.06*z;return [(Math.sin(p)*.73+(z-l)*.37)*Math.pow(1-x,1.1),p,l];});
  audioSamples={kick:bassKick,snare,hat,openhat,clap,shot,torpedo,death,bossdeath};}
-function sampleSound(sample,t,volume,bus=musicBus,speed=1){if(!audioSamples||!audio||!bus||volume<=0)return;const src=audio.createBufferSource(),g=audio.createGain();src.buffer=audioSamples[sample];src.playbackRate.value=speed;g.gain.value=Math.min(.9,volume);src.connect(g).connect(bus);src.start(t);src.onended=()=>{src.disconnect();g.disconnect();};}
+function sampleSound(sample,t,volume,bus=musicBus,speed=1){if(!audioSamples||!audio||!bus||volume<=0)return;const src=audio.createBufferSource(),g=audio.createGain();src.buffer=audioSamples[sample];src.playbackRate.value=speed;g.gain.value=Math.min(.9,volume);src.connect(g).connect(bus===musicBus?synthBus:bus);src.start(t);src.onended=()=>{src.disconnect();g.disconnect();};}
 function drum(t,kind,volume){if(!audioSamples)return;const samples={kick:'acousticKick',kickAlt:'acousticKickAlt',snare:'acousticSnare',snareAlt:'acousticSnareAlt',tom:'acousticTom',tomHigh:'acousticTomHigh',timpani:'acousticTom',hat:'acousticHat',openhat:'acousticOpenHat',ride:'acousticRide',crash:'acousticCrash',stick:'acousticStick',rim:'acousticStick',clap:'acousticClap',shaker:'acousticHat'},name=samples[kind]||kind;sampleSound(audioSamples[name]?name:'hat',t,volume,musicBus);}
 // Hostile ammunition has eight silhouettes, one bounded pre-rendered atlas and a warm danger core.
 const HOSTILE_KINDS=['spine','venom','mucus','scale','grain','petal','ring','ember'];
@@ -2919,8 +2953,8 @@ function instrumentNote(name,midi,t,duration,volume=.05,pan=0){
  src.connect(g).connect(p).connect(arrangementBus);scoreVoices.add(src);src.start(t);src.stop(t+d+.015);src.onended=()=>{scoreVoices.delete(src);src.disconnect();g.disconnect();p.disconnect();};
 }
 function resetArrangement(){
- if(!audio||!synthBus)return;const old=arrangementBus;arrangementBus=audio.createGain();arrangementBus.gain.value=1.40;arrangementBus.connect(synthBus);
- if(old){old.gain.setTargetAtTime(.0001,audio.currentTime,.025);setTimeout(()=>{try{old.disconnect();}catch(e){}},1000);}
+ if(!audio||!synthBus)return;const old=arrangementBus;arrangementBus=audio.createGain();arrangementBus.gain.setValueAtTime(.0001,audio.currentTime);arrangementBus.gain.setTargetAtTime(1.32,audio.currentTime,.12);arrangementBus.connect(synthBus);
+ if(old){old.gain.setTargetAtTime(.0001,audio.currentTime,.18);setTimeout(()=>{try{old.disconnect();}catch(e){}},1800);}
 }
 function prepareCombatInstruments(){
  if(!instrumentBank||!audioSamples)return;for(const [name,spec]of Object.entries(instrumentBank))if(name.startsWith('acoustic'))audioSamples[name]=spec.buffer;
@@ -4371,6 +4405,7 @@ function worm(e,t){
  if(small)ctx.scale(scale,scale);
  if(attacking&&e.attackStyle!=='bite'){ctx.globalAlpha*=clamp(e.attackAnim/.35,0,1);for(let j=0;j<3;j++)circle(25+j*6,(j-1)*3,2-j*.3,color);}ctx.restore();
  if(e.stun>0){ctx.save();ctx.strokeStyle='#fff1ad';ctx.lineWidth=1.3;ctx.beginPath();ctx.ellipse(c.x,c.y-e.r-5,e.r+6,4,t*.4,0,TAU);ctx.stroke();ctx.restore();}
+ drawOceanCreatureLight(e,c,t);
  if(e.hp<e.maxHp&&!e.boss)bar(c.x-15,c.y-e.r-16,30,3,e.hp/e.maxHp,color);
  if(e.warn>0){ctx.save();ctx.strokeStyle='#ffe5a5';ctx.lineWidth=2;ctx.setLineDash([5,7]);ctx.beginPath();ctx.moveTo(c.x,c.y);ctx.lineTo(c.x+Math.cos(e.a)*145,c.y+Math.sin(e.a)*145);ctx.stroke();ctx.setLineDash([]);ctx.beginPath();ctx.arc(c.x,c.y,e.r+9,0,TAU);ctx.stroke();ctx.restore();}
  if(e.boss){const bw=clamp(e.r*3,130,230),y=c.y-e.r-45;bar(c.x-bw/2,y,bw,6,e.hp/e.maxHp,color);text((ALL[e.type]||ALL.nereis)[0].toUpperCase(),c.x,y-7,11,'#fff5e7','center',900);}
@@ -4431,7 +4466,7 @@ function shipSprite(raw){
  if(shape===18)for(const side of [-1,1]){poly([[-22,side*18],[22,side*18],[25,side*13],[-24,side*13]],a.body,a.trim);ellipse(24,side*15,3,2,a.trim);}
  if(shape===24){poly([[9,-20],[23,-20],[23,20],[9,20]],a.body,a.trim);for(const side of [-1,1])line([[-14,side*7],[-21,side*23],[-10,side*26]],a.trim,2);}
  g.save();g.beginPath();if(!shape)g.ellipse(0,0,23,13,0,0,TAU);else{g.moveTo(...SHIP_HULLS[shape][0]);for(const p of SHIP_HULLS[shape].slice(1))g.lineTo(...p);g.closePath();}
- const gradient=g.createLinearGradient(0,-18,0,18);gradient.addColorStop(0,a.trim);gradient.addColorStop(.20,a.body);gradient.addColorStop(.78,a.body);gradient.addColorStop(1,'#0b172a');g.fillStyle=gradient;g.fill();g.strokeStyle=a.trim;g.lineWidth=1.4;g.stroke();g.clip();
+ const gradient=g.createLinearGradient(0,-18,0,18);gradient.addColorStop(0,a.trim);gradient.addColorStop(.17,shade(a.body,32));gradient.addColorStop(.48,a.body);gradient.addColorStop(.72,shade(a.body,-23));gradient.addColorStop(1,'#071322');g.fillStyle=gradient;g.fill();g.strokeStyle=a.trim;g.lineWidth=1.4;g.stroke();g.clip();
  g.strokeStyle=a.trim+'80';g.fillStyle=a.trim+'55';g.lineWidth=1;
  if(a.pattern==='stripes')for(let x=-30;x<32;x+=11){g.beginPath();g.moveTo(x,-20);g.lineTo(x+10,20);g.stroke();}
  if(a.pattern==='plates'||[3,13,16,23,25].includes(shape))for(let x=-23;x<27;x+=9){g.beginPath();g.moveTo(x,-19);g.lineTo(x+6,0);g.lineTo(x,19);g.stroke();}
@@ -4441,15 +4476,23 @@ function shipSprite(raw){
  if(shape===12)for(const side of [-1,1])poly([[14,side*3],[28,side*14],[21,side*3]],a.trim,'#132632');
  if(shape===19){for(let j=0;j<3;j++){g.beginPath();g.arc(14,0,4+j*4,-1.7,1.7);g.strokeStyle=a.trim;g.stroke();}}
  g.restore();
- ellipse(2,0,10,8,'#122c3c',a.trim);ellipse(5,-2,5.8,4,a.trim);ellipse(7,-3,2.3,1.8,'#f1ffff');
+ line([[-16,-7],[-4,-10],[13,-6]],'#edfffbb3',.85);
+ for(const x of [-14,-5,14]){ellipse(x,6,1.1,1.1,a.trim);}
+ ellipse(2,0,10,8,'#071723',a.trim);
+ const glass=g.createRadialGradient(6,-3,1,2,0,10);glass.addColorStop(0,'#ecfffa');glass.addColorStop(.22,a.trim);glass.addColorStop(1,'#0c3f59');ellipse(3,0,7.5,6,glass);ellipse(6,-3,2,1.2,'#ffffff');
  poly([[-27,-7],[-18,-6],[-18,6],[-27,7]],a.body,a.trim);g.fillStyle=a.engine;g.fillRect(-28,-5,4,3);g.fillRect(-28,2,4,3);
  line([[14,0],[30,0]],a.trim,3);line([[14,0],[28,0]],'#0f2434',1);
  shipSpriteCache.set(key,c);if(shipSpriteCache.size>12)shipSpriteCache.delete(shipSpriteCache.keys().next().value);return c;
 }
 function paintShip(g,appearance,t,scale=1,muzzle=false,boost=false){
- const a=sanitizeAppearance(appearance);g.save();g.scale(scale,scale);
- if(!app.reducedMotion){const length=(boost?24:11)+Math.sin(t*30)*3;g.fillStyle=a.engine+'9c';g.beginPath();g.moveTo(-25,-5);g.lineTo(-30-length,0);g.lineTo(-25,5);g.fill();}
- g.drawImage(shipSprite(a),-64,-48);if(muzzle){g.fillStyle='#fff2b8';g.beginPath();g.moveTo(30,-4);g.lineTo(43,0);g.lineTo(30,4);g.fill();}g.restore();
+ const a=sanitizeAppearance(appearance),clock=app.reducedMotion?0:t,opacity=g.globalAlpha;g.save();g.scale(scale,scale);
+ const length=(boost?52:24)+(app.reducedMotion?0:Math.sin(clock*24)*3),plume=g.createLinearGradient(-25,0,-25-length,0);
+ plume.addColorStop(0,'#d6fff0e6');plume.addColorStop(.22,a.engine+'aa');plume.addColorStop(1,a.engine+'00');g.fillStyle=plume;
+ g.beginPath();g.moveTo(-24,-5);g.quadraticCurveTo(-40,-9,-25-length,0);g.quadraticCurveTo(-40,9,-24,5);g.closePath();g.fill();
+ if(!app.eco&&!app.lowFx){g.globalAlpha=opacity*.38;g.drawImage(oceanGlow(a.engine),-62,-27,60,54);g.globalAlpha=opacity;}
+ if(!app.reducedMotion&&!app.eco){g.strokeStyle=a.engine+'65';g.lineWidth=.65;for(let i=0;i<4;i++){const q=(clock*1.1+i*.25)%1;g.globalAlpha=opacity*(1-q)*.55;g.beginPath();g.arc(-30-q*43,Math.sin(i*2+clock)*3,1+q*2,0,TAU);g.stroke();}g.globalAlpha=opacity;}
+ g.drawImage(shipSprite(a),-64,-48);
+ if(muzzle){g.fillStyle='#fff2b8';g.beginPath();g.moveTo(30,-4);g.lineTo(43,0);g.lineTo(30,4);g.fill();}g.restore();
 }
 function submarine(p,t){
  if(p.down&&drawPlayerDeath(p,t))return;const o=lerpObj('p',p.id,p),a=sanitizeAppearance(p.appearance),col=a.trim;drawDashTrail(p,o,t);ctx.save();ctx.translate(o.x,o.y);ctx.rotate(o.a||0);
@@ -7122,7 +7165,7 @@ installUI=function(){const result=bit32PreviousInstallUI.apply(this,arguments);b
  const previousUpdate=musicUpdate,previousSelector=initMusicSelector;
  // menuTrack resolves trackFor dynamically. Capture its established score before
  // installing world themes, so the port and shop keep their original music.
- const portScore=menuTrack();
+ // The port uses a slower, intimate arrangement of the first world theme.
  const MINOR=[0,2,3,5,7,8,10],DORIAN=[0,2,3,5,7,9,10],MAJOR=[0,2,4,5,7,9,11];
  const PHRYGIAN=[0,1,3,5,7,8,10],LYDIAN=[0,2,4,6,7,9,11],HARMONIC=[0,2,3,5,7,8,11];
  const form=[
@@ -7299,7 +7342,7 @@ installUI=function(){const result=bit32PreviousInstallUI.apply(this,arguments);b
  // Populate just the two existing exploration arrangements. Scientist, guardian,
  // reprise and escape caches continue to be created entirely by their old code.
  labelLaboratory(previousExplore(151));labelLaboratory(previousExplore(158));
- menuTrack=function(){return {...portScore};};
+ menuTrack=function(){const tr=track(1);return {...tr,menu:true,title:'Llamada del abismo',style:'NOCTURNO SUBMARINO · ARPA Y CRISTAL',bpm:78,step:60/78/4,modernExploration:{...tr.modernExploration,sections:tr.modernExploration.sections.map(section=>({...section,lead:'vibraphone',counter:'flute',comp:'harp',pad:'strings',dynamic:section.dynamic*.78}))}};};
 
  const ranges={bass:[28,60],cello:[36,76],viola:[48,84],violin:[55,92],flute:[60,94],oboe:[55,89],clarinet:[48,88],
   trumpet:[48,86],trombone:[34,72],brass:[40,82],guitar:[45,84],mandolin:[55,91],charango:[60,94],banjo:[48,88],
@@ -7316,12 +7359,18 @@ installUI=function(){const result=bit32PreviousInstallUI.apply(this,arguments);b
   const sparse=opening||chamber||texture==='return',chord=score.harmonies[section.harmony][Math.floor(local/2)%8];
   const phrase=Math.floor(local/4),sub=local%4,grid=score.rhythms[section.rhythm];
   const human=.96+(((Math.imul(score.seed+n,1103515245)>>>0)%997)/997)*.075;
-  const at=time+(s%2?score.swing*step:0),weight=section.dynamic*human,barTime=steps*step;
+  const energy=tr.menu?.65:clamp(app.musicEnergy||.6,.5,1);
+  const at=time+(s%2?score.swing*step:0),weight=section.dynamic*human*(.84+energy*.2),barTime=steps*step;
   const play=(name,d,octave,length,volume,pan=0,delay=0)=>{
    let midi=degree(score,d)+octave*12;const range=ranges[name]||[36,90];
    while(midi<range[0])midi+=12;while(midi>range[1])midi-=12;
    instrumentNote(name,midi,at+delay,Math.max(.065,Math.min(3.2,length)),volume*weight,pan);
   };
+  // A four-bar, harmonically grounded glass motif answers the main melody.
+  if(!tutti&&bar%4===0&&[0,Math.floor(steps/2),steps-2].includes(s)){
+   const note=s===0?chord+7:s===steps-2?chord+4:chord+9;
+   play('vibraphone',note,2,step*3.6,tr.menu?.027:.021,.48);
+  }
   // Written bass figures follow each world's meter. The chamber passage keeps
   // only the first note, leaving actual silence between soloist answers.
   const bassHits=sparse?[0]:score.bassGrid,bassIndex=bassHits.indexOf(s);
@@ -7365,7 +7414,7 @@ installUI=function(){const result=bit32PreviousInstallUI.apply(this,arguments);b
   }
  }
  musicTick=function(n,t,tr){
-  if(tr?.modernExploration&&!tr.menu&&!tr.boss&&!tr.scientistPhase&&!tr.escapeStage)return perform(n,t,tr);
+  if(tr?.modernExploration&&!tr.boss&&!tr.scientistPhase&&!tr.escapeStage)return perform(n,t,tr);
   return previousTick.apply(this,arguments);
  };
  musicUpdate=function(){
@@ -7380,7 +7429,7 @@ installUI=function(){const result=bit32PreviousInstallUI.apply(this,arguments);b
    const next=labelLaboratory(marea32Audio.trackForEncounter(level));
    if(next.modernExploration===score){musicLevel=level;currentBossScoreKey=String(s.runId||0)+':'+level+':'+next.id+'::0';currentTrack=next;}
   }
-  return previousUpdate.apply(this,arguments);
+  const result=previousUpdate.apply(this,arguments);updateOceanAcoustics();return result;
  };
  initMusicSelector=function(){
   const result=previousSelector.apply(this,arguments),select=$('#musicSector');
@@ -7430,9 +7479,151 @@ function modernWeaponIcon(g,id,x,y,size=40){
  }
  g.restore();
 }
+// Small cached layers keep the ocean lighting independent of combat simulation.
+const oceanSceneCache=new Map(),oceanGlowCache=new Map();
+function oceanGlow(color){
+ if(oceanGlowCache.has(color))return oceanGlowCache.get(color);
+ const c=document.createElement('canvas');c.width=c.height=96;const g=c.getContext('2d'),r=g.createRadialGradient(48,48,0,48,48,48);
+ r.addColorStop(0,color+'9c');r.addColorStop(.25,color+'38');r.addColorStop(1,color+'00');g.fillStyle=r;g.fillRect(0,0,96,96);
+ oceanGlowCache.set(color,c);if(oceanGlowCache.size>32)oceanGlowCache.delete(oceanGlowCache.keys().next().value);return c;
+}
+function oceanCoral(g,x,y,height,color,kind=0){
+ g.save();g.translate(x,y);g.strokeStyle=color;g.lineCap='round';
+ for(let stem=0;stem<5;stem++){
+  const tip=(stem-2)*height*.24,h=height*(.62+(stem%3)*.16);
+  g.lineWidth=Math.max(1.2,height*.045);g.beginPath();g.moveTo(0,0);g.bezierCurveTo(tip*.3,-h*.3,tip*1.1,-h*.6,tip,-h);g.stroke();
+  for(let j=1;j<4;j++){
+   const by=-h*j/4,bx=tip*j/4,side=(j+stem)%2?1:-1;
+   g.lineWidth=Math.max(.8,height*.018);g.beginPath();g.moveTo(bx,by);g.quadraticCurveTo(bx+side*height*.16,by-height*.03,bx+side*height*.21,by-height*.17);g.stroke();
+   if(kind===1){g.fillStyle=color+'77';g.beginPath();g.ellipse(bx+side*height*.14,by-height*.06,height*.11,height*.035,-side*.5,0,TAU);g.fill();}
+  }
+  g.fillStyle='#d1fff0';g.globalAlpha=.7;g.beginPath();g.arc(tip,-h,1.4,0,TAU);g.fill();g.globalAlpha=1;
+ }
+ g.restore();
+}
+function oceanScene(spec){
+ const world=spec.world;if(oceanSceneCache.has(world))return oceanSceneCache.get(world);
+ const c=document.createElement('canvas');c.width=960;c.height=560;const g=c.getContext('2d');
+ const palette=GBA_PALETTES[Math.max(0,Math.min(GBA_PALETTES.length-1,world-1))],accent=palette[3],deep=world>7;
+ const water=g.createLinearGradient(0,0,0,560);water.addColorStop(0,shade(palette[1],deep?-24:-12));water.addColorStop(.42,shade(palette[0],-7));water.addColorStop(1,'#020b19');g.fillStyle=water;g.fillRect(0,0,960,560);
+ const bloom=g.createRadialGradient(710,85,0,710,85,620);bloom.addColorStop(0,accent+'38');bloom.addColorStop(1,accent+'00');g.fillStyle=bloom;g.fillRect(0,0,960,560);
+ // Distant escarpments, then a darker foreground reef. World palettes tint each habitat.
+ for(let layer=0;layer<3;layer++){
+  g.fillStyle=['#17394766','#092434b5','#030e1cd9'][layer];g.beginPath();g.moveTo(0,560);
+  for(let x=0;x<=984;x+=24){const y=414+layer*43+Math.sin(x*.009+world+layer)*27+Math.sin(x*.029+layer*3)*10;g.lineTo(x,y);}
+  g.lineTo(960,560);g.closePath();g.fill();
+ }
+ for(let i=0;i<13;i++){
+  const x=(i*193+world*71)%960,y=518+(i%3)*13,h=22+(i*17+world*7)%64;
+  g.globalAlpha=i%3===0?.85:.38;oceanCoral(g,x,y,h,world===6?['#c5819a','#d5ab72','#7ba4b5'][i%3]:i%3===0?accent:'#477e91',world===4?1:0);
+  if(i%3===0){g.globalAlpha=.32;g.drawImage(oceanGlow(accent),x-47,y-h-40,94,94);}
+ }
+ g.globalAlpha=1;
+ if([11,12].includes(world)){
+  // Crystalline outcrops give the deeper worlds a recognisable silhouette.
+  for(let i=0;i<7;i++){const x=75+i*139,h=28+(i*37)%70;g.fillStyle=accent+'26';g.strokeStyle=accent+'65';g.beginPath();g.moveTo(x-10,536);g.lineTo(x-7,536-h);g.lineTo(x+3,522-h);g.lineTo(x+16,536);g.closePath();g.fill();g.stroke();}
+ }
+ // Retain the campaign's habitat identities beneath the shared lighting treatment.
+ const habitat=CAMPAIGN_WORLDS[world-1].habitat;
+ if(habitat===3){
+  for(let i=0;i<9;i++){g.globalAlpha=i%2?.31:.57;ambientKelp(g,15+i*119,575,130+(i*53)%180,i*1.7,true);}g.globalAlpha=1;
+ }
+ if(world===8){
+  g.fillStyle='#020b16';g.beginPath();g.moveTo(0,78);
+  for(let x=0;x<=960;x+=40)g.lineTo(x,85+Math.abs(Math.sin(x*.023))*63+(x%120===0?29:0));
+  g.lineTo(960,0);g.lineTo(0,0);g.closePath();g.fill();
+ }
+ if(habitat===19){
+  g.save();g.translate(515,492);g.rotate(-.09);g.strokeStyle='#c7ceba65';g.lineCap='round';g.lineWidth=7;g.beginPath();g.moveTo(-215,0);g.quadraticCurveTo(0,-22,210,0);g.stroke();
+  for(let i=0;i<11;i++){const x=-183+i*35;g.lineWidth=3.5;g.beginPath();g.moveTo(x,0);g.bezierCurveTo(x-16,-75,x+17,-92,x+33,-8);g.stroke();g.fillStyle='#d5dac78c';g.beginPath();g.ellipse(x,-4,5,7,0,0,TAU);g.fill();}g.restore();
+ }
+ if(habitat===7){
+  for(let i=0;i<6;i++){const x=55+i*174,h=30+(i*23)%58;g.fillStyle='#19202b';g.strokeStyle='#8d6a5759';g.lineWidth=2;g.beginPath();g.moveTo(x-18,548);g.lineTo(x-9,548-h);g.lineTo(x+7,544-h);g.lineTo(x+22,548);g.closePath();g.fill();g.stroke();g.fillStyle='#f7a476';g.beginPath();g.ellipse(x,546-h,7,2.4,0,0,TAU);g.fill();g.globalAlpha=.3;g.drawImage(oceanGlow('#f79b6b'),x-45,500-h,90,90);g.globalAlpha=1;}
+ }
+ if(habitat===16){
+  const ice=g.createLinearGradient(0,80,0,195);ice.addColorStop(0,'#8bbbc9a0');ice.addColorStop(1,'#47869b08');g.fillStyle=ice;g.strokeStyle='#d2f6f34d';g.lineWidth=1;
+  for(let i=0;i<10;i++){const x=i*108,h=40+(i*43)%75;g.beginPath();g.moveTo(x,80);g.lineTo(x+104,80);g.lineTo(x+78,80+h);g.lineTo(x+31,100+h);g.closePath();g.fill();g.stroke();}
+ }
+ if(habitat===1||habitat===4){
+  g.strokeStyle=habitat===1?'#d0b99928':'#98a77a20';g.lineWidth=1.3;
+  for(let i=0;i<7;i++){const y=465+i*13;g.beginPath();g.moveTo(0,y);for(let x=0;x<=960;x+=24)g.lineTo(x,y+Math.sin(x*.019+i)*5);g.stroke();}
+ }
+ const vignette=g.createRadialGradient(480,270,150,480,270,590);vignette.addColorStop(0,'#01071300');vignette.addColorStop(1,'#010713bb');g.fillStyle=vignette;g.fillRect(0,0,960,560);
+ oceanSceneCache.set(world,c);if(oceanSceneCache.size>4)oceanSceneCache.delete(oceanSceneCache.keys().next().value);return c;
+}
+function drawOceanDepth(g,t,level){
+ const spec=campaignLevelSpec(level),accent=GBA_PALETTES[spec.world-1][3],clock=app.reducedMotion?0:t,low=app.eco||app.lowFx;
+ g.save();g.drawImage(oceanScene(spec),0,0);
+ // Light shafts stay behind all enemies and hostile projectiles.
+ g.globalCompositeOperation='screen';
+ for(let i=0;i<(low?2:4);i++){
+  const x=140+i*255+Math.sin(clock*.13+i)*22,beam=g.createLinearGradient(x,65,x-170,550);
+  beam.addColorStop(0,accent+'17');beam.addColorStop(.55,accent+'08');beam.addColorStop(1,accent+'00');g.fillStyle=beam;
+  g.beginPath();g.moveTo(x,72);g.lineTo(x+42,72);g.lineTo(x-75,560);g.lineTo(x-225,560);g.closePath();g.fill();
+ }
+ g.globalCompositeOperation='source-over';
+ for(let i=0;i<(low?14:48);i++){
+  const depth=1+(i%3),x=(i*173+spec.world*41+clock*depth*2.7)%960,y=90+((i*97-clock*depth*3.5)%450+450)%450;
+  g.globalAlpha=.14+depth*.09;g.fillStyle=i%7===0?accent:'#c5eee9';g.beginPath();g.arc(x,y,.4+depth*.38,0,TAU);g.fill();
+ }
+ if(!low){
+  g.globalAlpha=.16;g.strokeStyle=accent;g.lineWidth=.7;
+  for(let i=0;i<5;i++){const x=62+i*193+Math.sin(clock*.4+i)*8,y=100+((i*113-clock*12)%430+430)%430;g.beginPath();g.arc(x,y,2+i%3,0,TAU);g.stroke();}
+  // Small silhouettes drift in the far distance, clear of the combat plane.
+  g.globalAlpha=.12;g.fillStyle='#b1dfdf';
+  for(let i=0;i<9;i++){const x=((clock*6+i*42+spec.world*91)%1180)-110,y=195+(i%3)*16+Math.sin(clock*.35+i)*4;g.beginPath();g.ellipse(x,y,5,1.7,0,0,TAU);g.fill();g.beginPath();g.moveTo(x-4,y);g.lineTo(x-8,y-3);g.lineTo(x-8,y+3);g.closePath();g.fill();}
+ }
+ g.restore();
+}
+function drawOceanCreatureLight(e,c,t){
+ if(e.hidden>0||e.hp<=0)return;const style=CREATURE_STYLE[e.type]||CREATURE_STYLE.nereis,color=style.color;
+ const r=e.r||12,clock=app.reducedMotion?0:t;
+ ctx.save();ctx.translate(c.x,c.y);ctx.rotate(c.a||0);
+ if(!app.lowFx&&!app.eco){ctx.globalAlpha=.22;ctx.drawImage(oceanGlow(color),-r*2.3,-r*2.3,r*4.6,r*4.6);}
+ ctx.globalAlpha=.55+Math.sin(clock*1.8+(e.id||0))*.15;ctx.fillStyle='#cbfff0';
+ for(let i=0;i<5;i++){const x=(i-2)*r*.36,y=Math.sin(i*.9)*r*.2;ctx.beginPath();ctx.arc(x,y,Math.max(.65,r*.035),0,TAU);ctx.fill();}
+ ctx.restore();
+}
+let oceanMenuArtSource='';
+function oceanMenuArtwork(){
+ if(oceanMenuArtSource)return oceanMenuArtSource;
+ const c=document.createElement('canvas');c.width=1600;c.height=1000;const g=c.getContext('2d');
+ const water=g.createLinearGradient(0,0,1300,1000);water.addColorStop(0,'#020c19');water.addColorStop(.48,'#062b40');water.addColorStop(1,'#010712');g.fillStyle=water;g.fillRect(0,0,1600,1000);
+ const sun=g.createRadialGradient(1180,0,0,1180,0,1080);sun.addColorStop(0,'#52c9b356');sun.addColorStop(.45,'#1b718327');sun.addColorStop(1,'#12325200');g.fillStyle=sun;g.fillRect(0,0,1600,1000);
+ for(let i=0;i<6;i++){const x=730+i*161;g.fillStyle=i%2?'#77ecd609':'#77ecd611';g.beginPath();g.moveTo(x,0);g.lineTo(x+34,0);g.lineTo(x-300,1000);g.lineTo(x-440,1000);g.closePath();g.fill();}
+ for(let layer=0;layer<3;layer++){
+  g.fillStyle=['#123344','#0a2133','#020d1b'][layer];g.beginPath();g.moveTo(0,1000);
+  for(let x=0;x<=1620;x+=30)g.lineTo(x,790+layer*65+Math.sin(x*.005+layer*2)*72+Math.sin(x*.015)*16);
+  g.lineTo(1600,1000);g.closePath();g.fill();
+ }
+ // The leviathan is painted segment by segment, with bristles, armour and light organs.
+ for(let i=42;i>=0;i--){
+  const u=i/42,a=-1.2+u*4.8,x=1190+Math.cos(a)*208,y=490+Math.sin(a)*212,r=22+Math.sin(u*Math.PI)*23;
+  g.save();g.translate(x,y);g.rotate(a+Math.PI/2);
+  for(const side of [-1,1])for(let j=0;j<3;j++){g.strokeStyle='#cf839470';g.lineWidth=1.4;g.beginPath();g.moveTo(-8+j*7,side*r*.7);g.quadraticCurveTo(-19+j*9,side*(r+11),-25+j*12,side*(r+25));g.stroke();}
+  const shell=g.createLinearGradient(0,-r,0,r);shell.addColorStop(0,'#b17b95');shell.addColorStop(.32,'#77556f');shell.addColorStop(.7,'#342d4b');shell.addColorStop(1,'#14273d');g.fillStyle=shell;g.strokeStyle='#d89baf70';g.lineWidth=1.2;g.beginPath();g.ellipse(0,0,r*.57,r,0,0,TAU);g.fill();g.stroke();
+  g.fillStyle='#b8ffe7';for(const side of [-1,1]){g.beginPath();g.arc(0,side*r*.6,2.2,0,TAU);g.fill();}
+  g.restore();
+ }
+ // A sculpted head and curved mandibles break the circular silhouette.
+ g.save();g.translate(1265,292);g.rotate(.28);
+ g.fillStyle='#93667f';g.strokeStyle='#e8b6b7';g.lineWidth=2;g.beginPath();g.ellipse(0,0,43,37,0,0,TAU);g.fill();g.stroke();
+ for(const side of [-1,1]){g.fillStyle='#e5cfb7';g.beginPath();g.moveTo(17,side*20);g.quadraticCurveTo(76,side*39,68,side*3);g.quadraticCurveTo(54,side*24,27,side*4);g.closePath();g.fill();g.fillStyle='#d4ffe7';g.beginPath();g.ellipse(12,side*17,5,3,-side*.4,0,TAU);g.fill();g.strokeStyle='#cb96ad';g.lineWidth=2;g.beginPath();g.moveTo(8,side*27);g.quadraticCurveTo(35,side*64,67,side*65);g.stroke();}
+ g.restore();
+ g.globalAlpha=.5;g.drawImage(oceanGlow('#7effd6'),1160,210,220,220);g.globalAlpha=1;
+ for(let i=0;i<15;i++){const x=650+i*67,y=920+Math.sin(i)*32;oceanCoral(g,x,y,45+(i*31)%114,i%3===0?'#aa72ab':'#417f88',i%2);}
+ // Expedition submarine, with its searchlight aimed into the unknown.
+ g.save();g.translate(870,715);g.rotate(-.3);
+ const light=g.createLinearGradient(0,0,410,0);light.addColorStop(0,'#a0ffe923');light.addColorStop(1,'#a0ffe900');g.fillStyle=light;g.beginPath();g.moveTo(80,0);g.lineTo(460,-84);g.lineTo(460,84);g.closePath();g.fill();
+ paintShip(g,app.appearance||{},0,4.3,false,false);g.restore();
+ for(let i=0;i<145;i++){const x=(i*379)%1600,y=(i*173)%1000;g.globalAlpha=.12+(i%4)*.08;g.fillStyle=i%5?'#a0c8d3':'#94ffe0';g.beginPath();g.arc(x,y,.6+i%3*.45,0,TAU);g.fill();}g.globalAlpha=1;
+ const scrim=g.createLinearGradient(0,0,1600,0);scrim.addColorStop(0,'#010915d9');scrim.addColorStop(.38,'#01091580');scrim.addColorStop(.67,'#01091500');g.fillStyle=scrim;g.fillRect(0,0,1600,1000);
+ oceanMenuArtSource=c.toDataURL('image/png');return oceanMenuArtSource;
+}
+
 const modernBackgroundBase=background;
 function modernBackdrop(t,level){
- const clock=app.reducedMotion?0:t,g=ctx,spec=campaignLevelSpec(level),state=app.state||{};modernBackgroundBase(clock,level);g.save();
+ const clock=app.reducedMotion?0:t,g=ctx,spec=campaignLevelSpec(level),state=app.state||{};if(spec.lab)modernBackgroundBase(clock,level);else drawOceanDepth(g,clock,level);g.save();
  if(spec.lab){
   const emergency=!!state.labEmergency||level>=163,glow=emergency?'#ee8266':'#72e2ed';
   for(let i=0;i<5;i++){
@@ -7589,6 +7780,22 @@ function modernInterfaceStyle(){
  @media(max-height:620px) and (orientation:landscape){#stage.modernInterface #welcome .welcomeGrid{padding:15px 18px!important;width:min(430px,50vw)!important}#stage.modernInterface #overlay.modernTitleOverlay #welcome{padding:14px 22px!important}#stage.modernInterface .welcomeHero h1{font-size:35px!important;margin-bottom:9px!important}#stage.modernInterface .bit32CampaignSummary{margin-bottom:11px;font-size:10px}#stage.modernInterface #welcome :is(.modeCard,#continueBtn,#openHarbor,#gbaOpenOptions,#gbaOpenRoute,#gbaOpenLab){min-height:35px!important;padding:8px 10px!important;font-size:11px!important}#stage.modernInterface #welcome .modeCard strong{font-size:11px!important}#stage.modernInterface #welcome #menuMicro{font-size:9px!important;padding:7px 12px;margin-top:8px!important}#stage.modernInterface #welcome .gbaDebug{font-size:9px;padding:7px 10px;margin-bottom:7px}}
  @media(prefers-reduced-motion:reduce){#stage.modernInterface *,#stage.modernInterface *:before,#stage.modernInterface *:after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
  #stage.modernNoMotion *,#stage.modernNoMotion *:before,#stage.modernNoMotion *:after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+
+ #stage.modernInterface{background:radial-gradient(ellipse at 68% 15%,#10333e 0%,#051724 50%,#020a14 100%)!important}
+ #stage.modernInterface>#game{outline:1px solid #7cddcc47;border-radius:12px;box-shadow:0 20px 80px #0009,0 0 50px #4bc7b00b}
+ #stage.modernInterface #overlay.modernTitleOverlay:before{background:linear-gradient(90deg,#010b1677,transparent 70%),linear-gradient(0deg,#01081688,transparent 35%)}
+ #stage.modernInterface #welcome .welcomeGrid{height:auto!important;min-height:0!important;margin-top:clamp(12px,9vh,100px)!important;padding:30px!important;border:1px solid #7cddcc47;border-radius:22px;background:linear-gradient(150deg,#102e38e0,#05121edb)!important;box-shadow:inset 0 1px #bdfff41a,0 30px 90px #0006}
+ #stage.modernInterface .welcomeHero:before{content:'EXPEDICIÓN ABISAL';display:block;font-size:10px;letter-spacing:.32em;font-weight:750;color:#83e5ca;margin:0 0 19px}
+ #stage.modernInterface .welcomeHero h1{font-size:clamp(34px,3.7vw,59px)!important;font-weight:800!important;letter-spacing:-.055em!important;transform:none!important}
+ #stage.modernInterface .welcomeHero h1 em{color:#9ef5d4!important}
+ #stage.modernInterface #welcome #solo{background:linear-gradient(120deg,#8deccf,#c9f7df)!important;border-color:#b6ffe4!important;color:#092c32!important;box-shadow:0 5px 24px #5ef0bf20!important}
+ #stage.modernInterface #welcome #solo :is(strong,small,i){color:#092c32!important}
+ #stage.modernInterface #welcome :is(.modeCard,#continueBtn,#openHarbor,#gbaOpenOptions,#gbaOpenRoute,#gbaOpenLab):hover{border-color:#a1f8d8!important;filter:brightness(1.13);transform:translateY(-1px)}
+ #stage.modernInterface button:focus-visible{outline:2px solid #c1ffe3!important;outline-offset:4px!important}
+ #stage.modernInterface .modernGearRail button:not(:disabled){border-color:#8ce4d44d!important}
+ #stage.modernInterface .modernGearRail button:disabled{opacity:.48}
+ @media(max-width:639px){#stage.modernInterface #welcome .welcomeGrid{margin-top:12px!important;padding:22px!important;background:linear-gradient(150deg,#102e38eb,#05121ee3)!important}#stage.modernInterface #modernMenuArt{object-position:64% center!important}#stage.modernInterface .welcomeHero:before{font-size:9px;margin-bottom:14px}#stage.modernInterface .welcomeHero h1{font-size:38px!important}}
+ @media(max-height:620px) and (orientation:landscape){#stage.modernInterface #welcome .welcomeGrid{margin-top:0!important;padding:18px!important}#stage.modernInterface .welcomeHero:before{margin-bottom:10px}#stage.modernInterface .welcomeHero h1{font-size:32px!important}}
  `;document.head.append(style);
 }
 function modernMountInterface(){
@@ -7603,9 +7810,8 @@ function modernMountInterface(){
   }
   for(const id of ['dash','revive']){const button=actionsRoot.querySelector('[data-act="'+id+'"]');if(button)dock.append(button);}
   let image=document.getElementById('modernMenuArt');if(!image){image=document.createElement('img');image.id='modernMenuArt';image.alt='';image.setAttribute('aria-hidden','true');image.setAttribute('draggable','false');image.decoding='async';overlay.insertBefore(image,overlay.children[0]||null);}
-  // The same supplied bitmap is assigned exactly once; live state snapshots only
-  // toggle visibility, never reserialize the 4.6 MB data URI or create new images.
-  if(!image.getAttribute('src')&&typeof BIT32_MENU_ART==='string')image.src=BIT32_MENU_ART;
+  // Render the offline cover once; live snapshots only toggle its visibility.
+  if(!image.getAttribute('src'))image.src=oceanMenuArtwork();
   const online=document.getElementById('onlineSettings');if(online&&typeof MutationObserver!=='undefined'){modernInterfaceObserver=new MutationObserver(modernSyncView);modernInterfaceObserver.observe(online,{attributes:true,attributeFilter:['class','hidden','style']});}
   if(typeof ResizeObserver!=='undefined'){modernStageObserver=new ResizeObserver(()=>modernLayout());modernStageObserver.observe(stage);}
   modernInterfaceMounted=true;modernViewSignature='';
