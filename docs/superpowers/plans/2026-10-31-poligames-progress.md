@@ -1,0 +1,27 @@
+# SDD ledger — plan: docs/superpowers/plans/2026-10-31-poligames.md
+
+Base: c581170 (previous improved branch). Current branch: instrucciones-poligames. User previously delegated all design choices and authorized publishing a new GitHub branch; current explicit instruction excludes music/canciones. PDF text at /tmp/PoliGames.txt, original /workspace/attachments/55aff052-68f8-4110-afc8-9af651be91b8/PoliGames.pdf.
+
+Pre-flight: tasks1/2 share campaignLevelSpec + scheduler; parent integrates all HTML mutations atomically. Research agents read only and produced /tmp/poligames-taxa.json (61entries) and worlds.json14. No production subagent edits. Task3 economy consumes existing shopBuy authority/checkpoint. Task4 UI consumes final IDs and levelmapping.
+
+Ruling: previous user delegation covers routine implementation choices; no repeat approval. Keep existing isolated checkout, feature branch, no worktree.
+Ruling: PDF final 'Acto14' is world14; laboratory has9 normal + quartet10 + epitoke11 + scientist12 + Eunice13 + escape14. 144total.
+Ruling: displaced oldworlds cave/mountains/slope/canyon migrate to most similar remaining habitats (rock, grass, hadal), and other worlds by semantic identity. Existing music composition functions/banks untouched; level-routing metadata may need remapping to maintain access.
+
+Task1/2 core implemented (not complete until browser integration): campaign.test.cjs 7/7 pass. ExactPDFcounts solo/coop, validTYPES, bosses no normal waves, trio/duo spawned separately, checkpoints campaign7→8 preserve economy, authoritative retry host restores perpilot snapshots, escape180active secs pauses/ends with enemiesalive, Eunice anchored, gauntlet4.
+Task3 engine economy implemented: progression.test.cjs4/4pass. Act gates corrected; new5skin catalog rows, validatedpurchase debitonce, savedownership and appearance, sector rewards act-based idempotent.
+
+Outstanding: full taxonomy anatomy/rendering hooks/clientbestiarystartup, UI shipyardrestandcosmetics, keybindings, HUD enlarging/icons/menus/shop/death, world14distinctvisuals, anchoredEunicedrawandescapeHUD, final regressiontests and fresh review. Browser oldpresentationtests initially 3/4: startup renderBossBestiary crashed new Osedax/Alvinella missing BOSS_ATTACK_BOOK; entries now added but rerun needed. Do not ignore browserstartup errors.
+
+Artifacts: /tmp/apply-poligames-engine.py, /tmp/poligames-engine.js, /tmp/poligames-campaign.js applied already; DO NOT APPLY TWICE. /tmp/poligames-economy.py applied. Actual repo source is authoritative. /tmp/poli-source.txt is STALE after implementation; regenerate sanitized lines before using. No commits yet on new branch. Testshelpers game.cjs exposes engine internals ONLY in VM test copy. Prior tests/presentation.test.cjs exposes client internals ONLY testservercopy. No productiondebugAPI.
+
+Task1/2: complete — campaign.test.cjs11/11; first tests observed RED on16/165 campaign, old counts, retry, timer and moving Eunice. Final added real spawn-budget and full boss-group completion checks. Mechanical laser test observed RED and GREEN.
+Task3: complete — progression5/5, UI7/7 with live rest/appearance, durable purchase/reload, shortcuts, audio controls. Old UI failures observed before implementation; final paid-skin and progress-migration failures reproduced before fixes.
+Task4: complete — native-resolution new cover,14 different habitat layers, HUD at edges (portrait rows), unique upgrade/consumable icons, store/pause/death, large anchored Eunice, visible180s rescue/fire, equipment lighting. Actual Chromium smoke:14 background captures + shop purchase/harbor/rest/death/options/Eunice/escape/mobile;0 page errors. Latest cosmetic polish changes SVG display and renders cover vectors directly rather than magnifying sprites.
+Final review: fresh reviewer review_poligames identified3 P2s. All fixed with regression RED→GREEN: migrated rewarded ledger max, version8 destination marker, durable owned-skin synchronization. Related raw unowned appearance also RED→GREEN fixed. Suite27/27 on /tmp/poligames-final-tests.log before final cover-vector/SVG-only polish. Embedded original asset banks3/3 unchanged by byte inclusion check. No deferred review findings.
+Ruling: persistent cosmetic collection is a validated list from local browser profile, shared at solo/host seat creation or guest join; it imports no money or passive ranks. The host checks purchases and appearance against its imported/earned collection. This maintains the existing offline profile model; it is not an anti-tamper service.
+Remaining: final smoke/regression after cosmetic polish, update plan checkboxes, commit, authorized new-branch push and verify remote.
+
+Final verification: node --test →27 passed,0 failed,0 skipped; /tmp/poligames-release-tests.log, after final cover-vector and SVG specificity fix. SVG regression was observed RED ('display:none') and GREEN (symbol visible) and included in the green suite.
+Additional validation limit: managed Chromium blocked direct file:// navigation with ERR_BLOCKED_BY_ADMINISTRATOR before evaluating the HTML. This optional check is environment-blocked, not an application failure. All functional/browser checks used the local HTTP test server; the single-player integration test rejects every external resource request. No browser policy was disabled.
+Task5: source verification, offline resource behavior, documentation, diff-check and independent review complete; publication pending immediately below.

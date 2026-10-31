@@ -1,33 +1,53 @@
-# Poliquetos asesinos
+# Poliquetos asesinos · PoliGames
 
-Videojuego 2D de exploración y combate submarino. El juego completo está en **`poliquetos_asesinos_8_edicion_sonora (18).html`**: gráficos, instrumentos y sonidos están incluidos y el modo individual funciona sin internet.
+Videojuego 2D de exploración y combate submarino. Abre **`poliquetos_asesinos_8_edicion_sonora (18).html`** en Chrome, Edge o Firefox. El juego completo, sus gráficos y sonidos están incluidos: el modo individual funciona sin internet.
 
-## Jugar
-
-Abre el HTML en un navegador moderno. También puedes servir la carpeta con:
+Para actualizar conservando tus guardados, reemplaza el HTML anterior en su misma carpeta y usa el mismo navegador. No borres los datos del sitio. También puedes servir esta carpeta:
 
 ```sh
 python3 -m http.server 8000 --bind 127.0.0.1
 ```
 
-El audio comienza después de interactuar con el juego. En **Opciones** puedes ajustar música y FX de forma independiente, escuchar temas y elegir la calidad gráfica. El modo ECO reduce partículas e iluminación; se respeta la preferencia de movimiento reducido del navegador. Las partidas individuales se guardan por sector en el navegador.
+## Campaña del PDF
 
-## Dirección audiovisual
+| Acto | Mundos |
+|---|---|
+| 1 | Superficie marina, playas arenosas, costa rocosa, bosques de kelp |
+| 2 | Arrecifes tropicales, pastos marinos, estuarios y fango, sedimentos contaminados |
+| 3 | Zona planctónica, Antártica, restos de ballena, campos hidrotermales, zona hadal |
+| 4 | El laboratorio |
 
-- Portada ilustrada con un leviatán, arrecifes y una nave de expedición.
-- Escenarios con profundidad, luz submarina y detalles propios de cada hábitat.
-- Submarinos con casco metálico, cristal, propulsores y estela; criaturas con bioluminiscencia.
-- Música de puerto con arpa y cristal, motivos de exploración y mezcla de combate más definida.
-- Reverberación estéreo y transiciones suaves, con música y cola de reverberación controladas por el mismo volumen.
+Son **14 mundos y 144 sectores**. Los primeros 13 mundos tienen 9 sectores normales y un encuentro de jefe. Las cantidades y las familias/géneros siguen la distribución del PDF. El laboratorio tiene 9 oleadas, un cuarteto mecánico, epítoke, científico, Eunice anclada y un único rescate: sobrevive 180 segundos, con pausa efectiva y oleadas continuas.
 
-El cooperativo requiere internet y los servicios de PeerJS/WebRTC.
+La pantalla de derrota permite reintentar desde el comienzo del sector actual, conservando el equipamiento y las monedas de ese punto. Los guardados de la campaña anterior se migran por hábitat, manteniendo las recompensas ya cobradas y el acceso a los mundos.
 
-## Comprobar los cambios
+## Descanso, tienda y aspecto
 
-Las pruebas usan Node.js, Playwright y Chromium; estas herramientas están disponibles en el entorno cloud preparado. No se necesitan para jugar.
+Después de cada sector puedes continuar, comprar, visitar el **Astillero** o guardar y salir. El Astillero permite cambiar aspecto sin reanudar la misión. Algunas skins son trofeos y otras se compran; la colección cosmética permanece entre expediciones en este navegador.
+
+Los equipos se compran por acto:
+
+- Acto 1: draga y arrastre. Sonar disponible desde el inicio.
+- Acto 2: Niskin, box corer y CTD.
+- Acto 3: multicorer, ROV y lander.
+- Acto 4: deflector.
+
+Las compras y los créditos se validan en el motor/anfitrión; la colección cosmética persistente se importa del perfil local y solo permite aplicar aspectos registrados como propios. No aporta estadísticas de combate.
+
+## Controles y opciones
+
+WASD mueve; flechas o ratón disparan; F evade; H rescata al copiloto; 1 y 2 usan consumibles; P/Esc pausa. Los atajos de cada equipo se pueden cambiar en **Opciones**, con prevención de teclas duplicadas o reservadas.
+
+Los controles de audio se simplifican a música, efectos y sus respectivos volúmenes. **Las composiciones, canciones, instrumentos y muestras no se han sustituido**: quedan pendientes del trabajo musical del autor. El sonido comienza al interactuar con el juego.
+
+El modo ECO reduce partículas y luz; la preferencia de movimiento reducido desactiva desplazamientos y animaciones decorativas. El cooperativo requiere internet y PeerJS/WebRTC; ambos jugadores deben usar esta misma versión.
+
+## Pruebas
+
+Node.js, Playwright y Chromium están disponibles en el entorno cloud preparado; no son necesarios para jugar.
 
 ```sh
 node --test
 ```
 
-Para otro ejecutable de Chromium, define `CHROMIUM_PATH`. Las pruebas ejecutan el juego sin recursos externos y comprueban reverberación, mezcla musical, pausa, volumen, guardado y transparencia del submarino. La instrumentación de pruebas se añade únicamente a la copia servida por el propio test.
+Puedes indicar otro Chromium mediante `CHROMIUM_PATH`. Las pruebas usan copias instrumentadas exclusivamente dentro de los servidores/VM de test: el juego distribuido no expone una API de depuración. Se comprueban campaña, conteos, jefes, economía, migración, reintento, rescate, skins, astillero, atajos, audio y HUD.
