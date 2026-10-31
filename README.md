@@ -51,3 +51,12 @@ node --test
 ```
 
 Puedes indicar otro Chromium mediante `CHROMIUM_PATH`. Las pruebas usan copias instrumentadas exclusivamente dentro de los servidores/VM de test: el juego distribuido no expone una API de depuración. Se comprueban campaña, conteos, jefes, economía, migración, reintento, rescate, skins, astillero, atajos, audio y HUD.
+
+## Dos ediciones, desde esta actualización
+
+- **Normal:** `versiones/poliquetos-normal.html`, con progresión y economía normales.
+- **Pruebas:** `versiones/poliquetos-pruebas.html`, con todos los mundos, niveles, armas y skins accesibles. Las habilidades/equipos y mejoras empiezan sin comprar, excepto el sonar inicial. Puedes comprarlos sin límite de dinero. No da invulnerabilidad ni sube estadísticas automáticamente.
+
+El selector de mundo y nivel de la edición de pruebas está en el menú principal. Las dos ediciones tienen guardados separados. La normal mantiene las claves de guardado anteriores; para actualizar una partida local, sustituye el HTML antiguo en su misma ubicación.
+
+Para futuras actualizaciones, modifica el HTML principal, ejecuta `python3 scripts/build-editions.py` y distribuye **ambas** ediciones. Cada HTML funciona por sí solo. No edites las copias generadas manualmente.
