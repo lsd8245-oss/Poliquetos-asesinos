@@ -1,0 +1,44 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://poliquetos.local/schemas/cosmetics.schema.json",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "id": {
+        "type": "string",
+        "pattern": "^[a-z][a-z0-9_]*$"
+      },
+      "nombre": {
+        "type": "string",
+        "minLength": 1
+      },
+      "desbloqueo": {
+        "type": "string",
+        "pattern": "^[a-z][a-z0-9_]*$"
+      },
+      "sprite_set": {
+        "type": "string",
+        "pattern": "^[a-z][a-z0-9_]*$"
+      }
+    },
+    "required": [
+      "id",
+      "nombre",
+      "desbloqueo",
+      "sprite_set"
+    ],
+    "additionalProperties": false
+  },
+  "minItems": 1,
+  "examples": [
+    [
+      {
+        "id": "dorado",
+        "nombre": "Dorado",
+        "desbloqueo": "partida_sin_muertes",
+        "sprite_set": "ui_ship_dorado"
+      }
+    ]
+  ]
+}

@@ -1,0 +1,2 @@
+# Data-contract checks only. No Python dependency in the distributed HTML game.
+jsonschema==4.26.0

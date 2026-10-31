@@ -2,6 +2,8 @@
 
 Videojuego 2D de exploración y combate submarino. Abre **`poliquetos_asesinos_8_edicion_sonora (18).html`** en Chrome, Edge o Firefox. El juego completo, sus gráficos y sonidos están incluidos: el modo individual funciona sin internet.
 
+**Rediseño v2 en desarrollo:** la [nueva especificación](docs/specs/poliquetos-asesinos-v2.md) reemplaza al PDF como objetivo futuro. La fase 0 prepara el inventario y los contratos de datos; los HTML actuales todavía contienen la campaña descrita más abajo. Consulta [lo hecho y lo pendiente](docs/v2-progreso.md) y las [decisiones técnicas](docs/decisiones.md). Las canciones siguen pendientes.
+
 Para actualizar conservando tus guardados, reemplaza el HTML anterior en su misma carpeta y usa el mismo navegador. No borres los datos del sitio. También puedes servir esta carpeta:
 
 ```sh
@@ -45,6 +47,8 @@ El modo ECO reduce partículas y luz; la preferencia de movimiento reducido desa
 ## Pruebas
 
 Node.js, Playwright y Chromium están disponibles en el entorno cloud preparado; no son necesarios para jugar.
+
+La validación de datos v2 requiere Python 3 y `python3 -m pip install -r requirements-dev.txt`; tampoco son necesarios para jugar.
 
 ```sh
 node --test

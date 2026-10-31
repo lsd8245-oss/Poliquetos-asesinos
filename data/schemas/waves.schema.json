@@ -1,0 +1,143 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://poliquetos.local/schemas/waves.schema.json",
+  "type": "object",
+  "properties": {
+    "mundo": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 15
+    },
+    "eventos": {
+      "type": "array",
+      "items": {
+        "oneOf": [
+          {
+            "type": "object",
+            "properties": {
+              "t": {
+                "type": "number",
+                "minimum": 0
+              },
+              "tipo": {
+                "const": "oleada"
+              },
+              "enemigo": {
+                "type": "string",
+                "pattern": "^[a-z][a-z0-9_]*$"
+              },
+              "cantidad": {
+                "type": "integer",
+                "minimum": 1
+              },
+              "formacion": {
+                "type": "string",
+                "pattern": "^[a-z][a-z0-9_]*$"
+              },
+              "y": {
+                "type": "number",
+                "minimum": 0
+              },
+              "portadora": {
+                "type": "boolean"
+              },
+              "item": {
+                "enum": [
+                  "rojo",
+                  "verde",
+                  "azul",
+                  "amarillo"
+                ]
+              }
+            },
+            "required": [
+              "t",
+              "tipo",
+              "enemigo",
+              "cantidad",
+              "formacion",
+              "y"
+            ],
+            "additionalProperties": false,
+            "allOf": [
+              {
+                "if": {
+                  "properties": {
+                    "portadora": {
+                      "const": true
+                    }
+                  },
+                  "required": [
+                    "portadora"
+                  ]
+                },
+                "then": {
+                  "required": [
+                    "item"
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "type": "object",
+            "properties": {
+              "t": {
+                "type": "number",
+                "minimum": 0
+              },
+              "tipo": {
+                "enum": [
+                  "minijefe",
+                  "alerta_jefe"
+                ]
+              },
+              "id": {
+                "type": "string",
+                "pattern": "^[a-z][a-z0-9_]*$"
+              }
+            },
+            "required": [
+              "t",
+              "tipo",
+              "id"
+            ],
+            "additionalProperties": false
+          }
+        ]
+      },
+      "minItems": 1
+    }
+  },
+  "required": [
+    "mundo",
+    "eventos"
+  ],
+  "additionalProperties": false,
+  "examples": [
+    {
+      "mundo": 1,
+      "eventos": [
+        {
+          "t": 10,
+          "tipo": "oleada",
+          "enemigo": "serpulidae",
+          "cantidad": 6,
+          "formacion": "linea_vertical",
+          "y": 168,
+          "portadora": false
+        },
+        {
+          "t": 60,
+          "tipo": "minijefe",
+          "id": "mini_w01_pisionidae"
+        },
+        {
+          "t": 170,
+          "tipo": "alerta_jefe",
+          "id": "boss_w01_nereididae"
+        }
+      ]
+    }
+  ]
+}

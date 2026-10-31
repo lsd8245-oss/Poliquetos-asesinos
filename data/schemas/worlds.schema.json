@@ -1,0 +1,139 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://poliquetos.local/schemas/worlds.schema.json",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "id": {
+        "type": "integer",
+        "minimum": 1,
+        "maximum": 15
+      },
+      "nombre": {
+        "type": "string",
+        "minLength": 1
+      },
+      "acto": {
+        "type": "integer",
+        "minimum": 1,
+        "maximum": 4
+      },
+      "duracion_hasta_jefe_seg": {
+        "type": "number",
+        "exclusiveMinimum": 0
+      },
+      "enemigos_total": {
+        "type": "integer",
+        "minimum": 1
+      },
+      "minijefe_inicio_seg": {
+        "type": "number",
+        "minimum": 0
+      },
+      "minijefe_ventana_seg": {
+        "type": "number",
+        "exclusiveMinimum": 0
+      },
+      "alerta_jefe_seg": {
+        "type": "number",
+        "minimum": 0
+      },
+      "paleta": {
+        "type": "array",
+        "items": {
+          "type": "string",
+          "pattern": "^#[0-9a-fA-F]{6}$"
+        },
+        "minItems": 1
+      },
+      "scroll_px_s": {
+        "type": "number",
+        "exclusiveMinimum": 0
+      },
+      "cancion_jefe": {
+        "type": "string",
+        "minLength": 1
+      },
+      "musica_etapa": {
+        "type": "string",
+        "pattern": "^[a-z][a-z0-9_]*$"
+      },
+      "musica_jefe": {
+        "type": "string",
+        "pattern": "^[a-z][a-z0-9_]*$"
+      },
+      "peligros": {
+        "type": "array",
+        "items": {
+          "type": "string",
+          "pattern": "^[a-z][a-z0-9_]*$"
+        },
+        "minItems": 0
+      },
+      "minijefe": {
+        "type": "string",
+        "pattern": "^[a-z][a-z0-9_]*$"
+      },
+      "jefes": {
+        "type": "array",
+        "items": {
+          "type": "string",
+          "pattern": "^[a-z][a-z0-9_]*$"
+        },
+        "minItems": 1
+      }
+    },
+    "required": [
+      "id",
+      "nombre",
+      "acto",
+      "duracion_hasta_jefe_seg",
+      "enemigos_total",
+      "minijefe_inicio_seg",
+      "minijefe_ventana_seg",
+      "alerta_jefe_seg",
+      "paleta",
+      "scroll_px_s",
+      "cancion_jefe",
+      "musica_etapa",
+      "musica_jefe",
+      "peligros",
+      "minijefe",
+      "jefes"
+    ],
+    "additionalProperties": false
+  },
+  "minItems": 1,
+  "examples": [
+    [
+      {
+        "id": 1,
+        "nombre": "Superficie marina",
+        "acto": 1,
+        "duracion_hasta_jefe_seg": 180,
+        "enemigos_total": 90,
+        "minijefe_inicio_seg": 60,
+        "minijefe_ventana_seg": 60,
+        "alerta_jefe_seg": 170,
+        "paleta": [
+          "#7fd8f0",
+          "#2bb5c9",
+          "#f5f1d0"
+        ],
+        "scroll_px_s": 60,
+        "cancion_jefe": "Nereida Vuelve a Desgarrar",
+        "musica_etapa": "w01_level_instr",
+        "musica_jefe": "w01_boss_vocal",
+        "peligros": [
+          "boyas",
+          "cascos"
+        ],
+        "minijefe": "mini_w01_pisionidae",
+        "jefes": [
+          "boss_w01_nereididae"
+        ]
+      }
+    ]
+  ]
+}

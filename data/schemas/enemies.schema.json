@@ -1,0 +1,135 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://poliquetos.local/schemas/enemies.schema.json",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "id": {
+        "type": "string",
+        "pattern": "^[a-z][a-z0-9_]*$"
+      },
+      "familia": {
+        "type": "string",
+        "minLength": 1
+      },
+      "tipo": {
+        "type": "string",
+        "minLength": 1
+      },
+      "categoria": {
+        "enum": [
+          "enjambre",
+          "pequeno",
+          "mediano",
+          "escolta"
+        ]
+      },
+      "mundos": {
+        "type": "object",
+        "minProperties": 1,
+        "patternProperties": {
+          "^([1-9]|1[0-5])$": {
+            "type": "object",
+            "properties": {
+              "rol": {
+                "enum": [
+                  "unico",
+                  "recurrente"
+                ]
+              },
+              "sprite_set": {
+                "type": "string",
+                "pattern": "^[a-z][a-z0-9_]*$"
+              }
+            },
+            "required": [
+              "rol",
+              "sprite_set"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "additionalProperties": false
+      },
+      "movimiento": {
+        "enum": [
+          "M1",
+          "M2",
+          "M3",
+          "M4",
+          "M5",
+          "M6",
+          "M7",
+          "M8"
+        ]
+      },
+      "disparo": {
+        "enum": [
+          "F0",
+          "F1",
+          "F2",
+          "F3",
+          "F4",
+          "F5"
+        ]
+      },
+      "puntos": {
+        "type": "integer",
+        "minimum": 0
+      },
+      "drop": {
+        "type": "object",
+        "additionalProperties": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        }
+      },
+      "estado": {
+        "enum": [
+          "revisar",
+          "confirmado"
+        ]
+      }
+    },
+    "required": [
+      "id",
+      "familia",
+      "tipo",
+      "categoria",
+      "mundos",
+      "movimiento",
+      "disparo",
+      "puntos",
+      "drop",
+      "estado"
+    ],
+    "additionalProperties": false
+  },
+  "minItems": 1,
+  "examples": [
+    [
+      {
+        "id": "serpulidae",
+        "familia": "Serpulidae (Hydroides)",
+        "tipo": "tubicola",
+        "categoria": "pequeno",
+        "mundos": {
+          "1": {
+            "rol": "unico",
+            "sprite_set": "w01_enemy_serpulidae"
+          }
+        },
+        "movimiento": "M5",
+        "disparo": "F3",
+        "puntos": 100,
+        "drop": {
+          "moneda_chica": 0.35,
+          "moneda_grande": 0.05
+        },
+        "estado": "revisar"
+      }
+    ]
+  ]
+}

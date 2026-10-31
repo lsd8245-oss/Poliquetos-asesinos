@@ -1,0 +1,3849 @@
+{
+  "version": 1,
+  "source": {
+    "file": "poliquetos_asesinos_8_edicion_sonora (18).html",
+    "sha256": "fbf5bbb4a721ed018ec05d81bc4643bdd55928f0936daf3032c5daa43b9c91f8",
+    "campaign": 8,
+    "statsNote": "Base TYPES values only; actual HP, speed, radius and contact damage are scaled by spawnEnemy and its wrappers. Not v2 balance.",
+    "spritesNote": "Runtime Canvas atlases, not external PNG assets. Renderer keys are selectors, not file paths."
+  },
+  "worlds": [
+    {
+      "id": 1,
+      "act": 1,
+      "name": "Superficie marina",
+      "unique": [
+        "hydroides",
+        "euphrosine",
+        "fabric",
+        "pision",
+        "lacy"
+      ],
+      "recurrent": [
+        "syll",
+        "phyll"
+      ],
+      "legacyStageCount": 10,
+      "bosses": [
+        {
+          "id": "nereis",
+          "type": "nereis",
+          "name": "Nereidae",
+          "sprite": {
+            "format": "canvas_procedural",
+            "key": "nereis",
+            "renderer": "getBossSprite",
+            "png": null
+          }
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "act": 1,
+      "name": "Playas arenosas",
+      "unique": [
+        "arenicola",
+        "magelona",
+        "sthenelais",
+        "sacco",
+        "goniada"
+      ],
+      "recurrent": [
+        "spio",
+        "nepht",
+        "glycer"
+      ],
+      "legacyStageCount": 10,
+      "bosses": [
+        {
+          "id": "capit",
+          "type": "capit",
+          "name": "Capitelidae",
+          "sprite": {
+            "format": "canvas_procedural",
+            "key": "capit",
+            "renderer": "getBossSprite",
+            "png": null
+          }
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "act": 1,
+      "name": "Costa rocosa",
+      "unique": [
+        "dodeca",
+        "oenone",
+        "arabella",
+        "spha",
+        "histrio"
+      ],
+      "recurrent": [
+        "syll",
+        "spio",
+        "phyll",
+        "serp",
+        "hesio"
+      ],
+      "legacyStageCount": 10,
+      "bosses": [
+        {
+          "id": "polyn",
+          "type": "polyn",
+          "name": "Polinoidae",
+          "sprite": {
+            "format": "canvas_procedural",
+            "key": "polyn",
+            "renderer": "getBossSprite",
+            "png": null
+          }
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "act": 1,
+      "name": "Bosques de kelp",
+      "unique": [
+        "spirorbis",
+        "myxicola",
+        "spinther",
+        "trocho",
+        "cteno"
+      ],
+      "recurrent": [
+        "syll",
+        "phyll",
+        "cirrat"
+      ],
+      "legacyStageCount": 10,
+      "bosses": [
+        {
+          "id": "tere",
+          "type": "tere",
+          "name": "Terebellidae",
+          "sprite": {
+            "format": "canvas_procedural",
+            "key": "tere",
+            "renderer": "getBossSprite",
+            "png": null
+          }
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "act": 2,
+      "name": "Arrecifes tropicales",
+      "unique": [
+        "spirobranchus",
+        "sabellastarte",
+        "eulepeth",
+        "acoet",
+        "pholoe"
+      ],
+      "recurrent": [
+        "syll",
+        "phyll",
+        "hesio"
+      ],
+      "legacyStageCount": 10,
+      "bosses": [
+        {
+          "id": "hermo",
+          "type": "hermo",
+          "name": "Hermodice carunculata",
+          "sprite": {
+            "format": "canvas_procedural",
+            "key": "hermo",
+            "renderer": "getBossSprite",
+            "png": null
+          }
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "act": 2,
+      "name": "Praderas de pastos marinos",
+      "unique": [
+        "glycera",
+        "diopatra",
+        "chaetopterus",
+        "sabellaria",
+        "pectinaria"
+      ],
+      "recurrent": [
+        "syll",
+        "nepht",
+        "hesio"
+      ],
+      "legacyStageCount": 10,
+      "bosses": [
+        {
+          "id": "leafqueen",
+          "type": "phyll",
+          "name": "Phyllodocidae (gusano hoja)",
+          "sprite": {
+            "format": "canvas_procedural",
+            "key": "leafqueen",
+            "renderer": "getBossSprite",
+            "png": null
+          }
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "act": 2,
+      "name": "Estuarios y fango",
+      "unique": [
+        "aricidea",
+        "terebellides",
+        "questa",
+        "fauvel",
+        "protod"
+      ],
+      "recurrent": [
+        "spio",
+        "nepht",
+        "glycer"
+      ],
+      "legacyStageCount": 10,
+      "bosses": [
+        {
+          "id": "orbin",
+          "type": "orbin",
+          "name": "Orbiniidae",
+          "sprite": {
+            "format": "canvas_procedural",
+            "key": "orbin",
+            "renderer": "getBossSprite",
+            "png": null
+          }
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "act": 2,
+      "name": "Sedimentos contaminados",
+      "unique": [
+        "ophelia",
+        "cossura",
+        "pilarg",
+        "lumbrineris",
+        "owenia"
+      ],
+      "recurrent": [
+        "glycer",
+        "dorville"
+      ],
+      "legacyStageCount": 10,
+      "bosses": [
+        {
+          "id": "capit",
+          "type": "capit",
+          "name": "Capitella capitata",
+          "sprite": {
+            "format": "canvas_procedural",
+            "key": "capit",
+            "renderer": "getBossSprite",
+            "png": null
+          }
+        },
+        {
+          "id": "pollutionSpio",
+          "type": "spio",
+          "name": "Streblospio benedicti",
+          "sprite": {
+            "format": "canvas_procedural",
+            "key": "pollutionSpio",
+            "renderer": "getBossSprite",
+            "png": null
+          }
+        },
+        {
+          "id": "pollutionCirrat",
+          "type": "cirrat",
+          "name": "Cirriformia tentaculata",
+          "sprite": {
+            "format": "canvas_procedural",
+            "key": "pollutionCirrat",
+            "renderer": "getBossSprite",
+            "png": null
+          }
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "act": 3,
+      "name": "Zona planctónica",
+      "unique": [
+        "pontod",
+        "lopado",
+        "typhlo",
+        "poeo",
+        "iospil"
+      ],
+      "recurrent": [
+        "syllStolon",
+        "alciop"
+      ],
+      "legacyStageCount": 10,
+      "bosses": [
+        {
+          "id": "tomo",
+          "type": "tomo",
+          "name": "Tomopteridae",
+          "sprite": {
+            "format": "canvas_procedural",
+            "key": "tomo",
+            "renderer": "getBossSprite",
+            "png": null
+          }
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "act": 3,
+      "name": "Zona antártica",
+      "unique": [
+        "flabegraviera",
+        "aphelochaeta",
+        "mald",
+        "perkinsiana",
+        "amphar"
+      ],
+      "recurrent": [
+        "spio",
+        "serp",
+        "alciop"
+      ],
+      "legacyStageCount": 10,
+      "bosses": [
+        {
+          "id": "eulagisca",
+          "type": "polyn",
+          "name": "Eulagisca gigantea",
+          "sprite": {
+            "format": "canvas_procedural",
+            "key": "eulagisca",
+            "renderer": "getBossSprite",
+            "png": null
+          }
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "act": 3,
+      "name": "Restos de ballena",
+      "unique": [
+        "hesiocaeca",
+        "nautil",
+        "chryso",
+        "brada",
+        "bathykurila"
+      ],
+      "recurrent": [
+        "cirrat",
+        "ophryotrocha"
+      ],
+      "legacyStageCount": 10,
+      "bosses": [
+        {
+          "id": "osedax",
+          "type": "osedax",
+          "name": "Osedax",
+          "sprite": {
+            "format": "canvas_procedural",
+            "key": "osedax",
+            "renderer": "getBossSprite",
+            "png": null
+          }
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "act": 3,
+      "name": "Campos hidrotermales",
+      "unique": [
+        "riftia",
+        "paralvinella",
+        "branchinotogluma",
+        "amphisamytha",
+        "hesiolyra"
+      ],
+      "recurrent": [
+        "serp",
+        "cirrat",
+        "dorville"
+      ],
+      "legacyStageCount": 10,
+      "bosses": [
+        {
+          "id": "alvinella",
+          "type": "alvinella",
+          "name": "Alvinella pompejana (gusano de Pompeya)",
+          "sprite": {
+            "format": "canvas_procedural",
+            "key": "alvinella",
+            "renderer": "getBossSprite",
+            "png": null
+          }
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "act": 3,
+      "name": "Zona hadal",
+      "unique": [
+        "swima",
+        "aphro",
+        "scali",
+        "stern",
+        "macellicephaloides"
+      ],
+      "recurrent": [
+        "nepht",
+        "glycer",
+        "dorville",
+        "alciop",
+        "cirrat"
+      ],
+      "legacyStageCount": 10,
+      "bosses": [
+        {
+          "id": "hadalsovereign",
+          "type": "polyn",
+          "name": "Macellicephaloides grandicirra",
+          "sprite": {
+            "format": "canvas_procedural",
+            "key": "hadalsovereign",
+            "renderer": "getBossSprite",
+            "png": null
+          }
+        },
+        {
+          "id": "riftia",
+          "type": "riftia",
+          "name": "Riftia pachyptila",
+          "sprite": {
+            "format": "canvas_procedural",
+            "key": "riftia",
+            "renderer": "getBossSprite",
+            "png": null
+          }
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "act": 4,
+      "name": "El laboratorio",
+      "unique": [
+        "mechNereis",
+        "mechPolyn",
+        "mechRiftia",
+        "mechChaet",
+        "mechSyll",
+        "mechSabel"
+      ],
+      "recurrent": [
+        "hydroides",
+        "euphrosine",
+        "fabric",
+        "pision",
+        "lacy",
+        "syll",
+        "phyll",
+        "arenicola",
+        "magelona",
+        "sthenelais",
+        "sacco",
+        "goniada",
+        "spio",
+        "nepht",
+        "glycer",
+        "dodeca",
+        "oenone",
+        "arabella",
+        "spha",
+        "histrio",
+        "serp",
+        "hesio",
+        "spirorbis",
+        "myxicola",
+        "spinther",
+        "trocho",
+        "cteno",
+        "cirrat",
+        "spirobranchus",
+        "sabellastarte",
+        "eulepeth",
+        "acoet",
+        "pholoe",
+        "glycera",
+        "diopatra",
+        "chaetopterus",
+        "sabellaria",
+        "pectinaria",
+        "aricidea",
+        "terebellides",
+        "questa",
+        "fauvel",
+        "protod",
+        "ophelia",
+        "cossura",
+        "pilarg",
+        "lumbrineris",
+        "owenia",
+        "dorville",
+        "pontod",
+        "lopado",
+        "typhlo",
+        "poeo",
+        "iospil",
+        "syllStolon",
+        "alciop",
+        "flabegraviera",
+        "aphelochaeta",
+        "mald",
+        "perkinsiana",
+        "amphar",
+        "hesiocaeca",
+        "nautil",
+        "chryso",
+        "brada",
+        "bathykurila",
+        "ophryotrocha",
+        "riftia",
+        "paralvinella",
+        "branchinotogluma",
+        "amphisamytha",
+        "hesiolyra",
+        "swima",
+        "aphro",
+        "scali",
+        "stern",
+        "macellicephaloides"
+      ],
+      "legacyStageCount": 14,
+      "bosses": [
+        {
+          "id": "mechNereis",
+          "type": "mechNereis",
+          "name": "Nereidae robótico",
+          "sprite": {
+            "format": "canvas_procedural",
+            "key": "mechNereis",
+            "renderer": "getBossSprite",
+            "png": null
+          }
+        },
+        {
+          "id": "mechPolyn",
+          "type": "mechPolyn",
+          "name": "Polinoidae robótico",
+          "sprite": {
+            "format": "canvas_procedural",
+            "key": "mechPolyn",
+            "renderer": "getBossSprite",
+            "png": null
+          }
+        },
+        {
+          "id": "mechOrbin",
+          "type": "mechOrbin",
+          "name": "Orbiniidae robótico",
+          "sprite": {
+            "format": "canvas_procedural",
+            "key": "mechOrbin",
+            "renderer": "getBossSprite",
+            "png": null
+          }
+        },
+        {
+          "id": "mechTere",
+          "type": "mechTere",
+          "name": "Terebellidae robótico",
+          "sprite": {
+            "format": "canvas_procedural",
+            "key": "mechTere",
+            "renderer": "getBossSprite",
+            "png": null
+          }
+        },
+        {
+          "id": "epitoke",
+          "type": "epitoke",
+          "name": "Poliqueto epitoquia",
+          "sprite": {
+            "format": "canvas_procedural",
+            "key": "epitoke",
+            "renderer": "getBossSprite",
+            "png": null
+          }
+        },
+        {
+          "id": "scientist",
+          "type": "scientist",
+          "name": "El científico",
+          "sprite": {
+            "format": "canvas_procedural",
+            "key": "scientist",
+            "renderer": "getBossSprite",
+            "png": null
+          }
+        },
+        {
+          "id": "euniceTitan",
+          "type": "euniceTitan",
+          "name": "Eunice aphroditois (gusano Bobbit)",
+          "sprite": {
+            "format": "canvas_procedural",
+            "key": "euniceTitan",
+            "renderer": "getBossSprite",
+            "png": null
+          }
+        }
+      ]
+    }
+  ],
+  "entities": [
+    {
+      "id": "nereis",
+      "name": "Nereididae",
+      "stats": {
+        "color": "#ff6a8d",
+        "radius": 10,
+        "baseHp": 65,
+        "baseSpeed": 123,
+        "attack": "rush"
+      },
+      "appearances": [],
+      "bossAppearances": [
+        {
+          "world": 1,
+          "id": "nereis",
+          "name": "Nereidae"
+        }
+      ],
+      "sprite": {
+        "format": "canvas_procedural",
+        "key": "nereis",
+        "renderer": "getWormSprite",
+        "png": null
+      }
+    },
+    {
+      "id": "cirrat",
+      "name": "Cirratulidae",
+      "stats": {
+        "color": "#c48bff",
+        "radius": 13,
+        "baseHp": 87,
+        "baseSpeed": 75,
+        "attack": "toxic"
+      },
+      "appearances": [
+        {
+          "world": 4,
+          "role": "recurrent"
+        },
+        {
+          "world": 11,
+          "role": "recurrent"
+        },
+        {
+          "world": 12,
+          "role": "recurrent"
+        },
+        {
+          "world": 13,
+          "role": "recurrent"
+        },
+        {
+          "world": 14,
+          "role": "recurrent"
+        }
+      ],
+      "bossAppearances": [
+        {
+          "world": 8,
+          "id": "pollutionCirrat",
+          "name": "Cirriformia tentaculata"
+        }
+      ],
+      "sprite": {
+        "format": "canvas_procedural",
+        "key": "cirrat",
+        "renderer": "getWormSprite",
+        "png": null
+      }
+    },
+    {
+      "id": "tere",
+      "name": "Terebellidae",
+      "stats": {
+        "color": "#ffc47e",
+        "radius": 15,
+        "baseHp": 117,
+        "baseSpeed": 66,
+        "attack": "fan"
+      },
+      "appearances": [],
+      "bossAppearances": [
+        {
+          "world": 4,
+          "id": "tere",
+          "name": "Terebellidae"
+        }
+      ],
+      "sprite": {
+        "format": "canvas_procedural",
+        "key": "tere",
+        "renderer": "getWormSprite",
+        "png": null
+      }
+    },
+    {
+      "id": "spio",
+      "name": "Spionidae",
+      "stats": {
+        "color": "#7cdeff",
+        "radius": 9,
+        "baseHp": 55,
+        "baseSpeed": 120,
+        "attack": "double"
+      },
+      "appearances": [
+        {
+          "world": 2,
+          "role": "recurrent"
+        },
+        {
+          "world": 3,
+          "role": "recurrent"
+        },
+        {
+          "world": 7,
+          "role": "recurrent"
+        },
+        {
+          "world": 10,
+          "role": "recurrent"
+        },
+        {
+          "world": 14,
+          "role": "recurrent"
+        }
+      ],
+      "bossAppearances": [
+        {
+          "world": 8,
+          "id": "pollutionSpio",
+          "name": "Streblospio benedicti"
+        }
+      ],
+      "sprite": {
+        "format": "canvas_procedural",
+        "key": "spio",
+        "renderer": "getWormSprite",
+        "png": null
+      }
+    },
+    {
+      "id": "polyn",
+      "name": "Polynoidae",
+      "stats": {
+        "color": "#a2edaa",
+        "radius": 17,
+        "baseHp": 175,
+        "baseSpeed": 65,
+        "attack": "armor"
+      },
+      "appearances": [],
+      "bossAppearances": [
+        {
+          "world": 3,
+          "id": "polyn",
+          "name": "Polinoidae"
+        },
+        {
+          "world": 10,
+          "id": "eulagisca",
+          "name": "Eulagisca gigantea"
+        },
+        {
+          "world": 13,
+          "id": "hadalsovereign",
+          "name": "Macellicephaloides grandicirra"
+        }
+      ],
+      "sprite": {
+        "format": "canvas_procedural",
+        "key": "polyn",
+        "renderer": "getWormSprite",
+        "png": null
+      }
+    },
+    {
+      "id": "sab",
+      "name": "Sabellidae",
+      "stats": {
+        "color": "#ff9bdb",
+        "radius": 14,
+        "baseHp": 97,
+        "baseSpeed": 65,
+        "attack": "circle"
+      },
+      "appearances": [],
+      "bossAppearances": [],
+      "sprite": {
+        "format": "canvas_procedural",
+        "key": "sab",
+        "renderer": "getWormSprite",
+        "png": null
+      }
+    },
+    {
+      "id": "eunic",
+      "name": "Eunicidae",
+      "stats": {
+        "color": "#ff9a6a",
+        "radius": 13,
+        "baseHp": 103,
+        "baseSpeed": 105,
+        "attack": "charge"
+      },
+      "appearances": [],
+      "bossAppearances": [],
+      "sprite": {
+        "format": "canvas_procedural",
+        "key": "eunic",
+        "renderer": "getWormSprite",
+        "png": null
+      }
+    },
+    {
+      "id": "amphi",
+      "name": "Amphinomidae",
+      "stats": {
+        "color": "#ffe082",
+        "radius": 13,
+        "baseHp": 121,
+        "baseSpeed": 99,
+        "attack": "spikes"
+      },
+      "appearances": [],
+      "bossAppearances": [],
+      "sprite": {
+        "format": "canvas_procedural",
+        "key": "amphi",
+        "renderer": "getWormSprite",
+        "png": null
+      }
+    },
+    {
+      "id": "glycer",
+      "name": "Glyceridae",
+      "stats": {
+        "color": "#ffadc3",
+        "radius": 11,
+        "baseHp": 77,
+        "baseSpeed": 112,
+        "attack": "needle"
+      },
+      "appearances": [
+        {
+          "world": 2,
+          "role": "recurrent"
+        },
+        {
+          "world": 7,
+          "role": "recurrent"
+        },
+        {
+          "world": 8,
+          "role": "recurrent"
+        },
+        {
+          "world": 13,
+          "role": "recurrent"
+        },
+        {
+          "world": 14,
+          "role": "recurrent"
+        }
+      ],
+      "bossAppearances": [],
+      "sprite": {
+        "format": "canvas_procedural",
+        "key": "glycer",
+        "renderer": "getWormSprite",
+        "png": null
+      }
+    },
+    {
+      "id": "onuph",
+      "name": "Onuphidae",
+      "stats": {
+        "color": "#b7e57a",
+        "radius": 15,
+        "baseHp": 135,
+        "baseSpeed": 77,
+        "attack": "burrow"
+      },
+      "appearances": [],
+      "bossAppearances": [],
+      "sprite": {
+        "format": "canvas_procedural",
+        "key": "onuph",
+        "renderer": "getWormSprite",
+        "png": null
+      }
+    },
+    {
+      "id": "syll",
+      "name": "Syllidae",
+      "stats": {
+        "color": "#f9c3ff",
+        "radius": 8,
+        "baseHp": 62,
+        "baseSpeed": 130,
+        "attack": "split"
+      },
+      "appearances": [
+        {
+          "world": 1,
+          "role": "recurrent"
+        },
+        {
+          "world": 3,
+          "role": "recurrent"
+        },
+        {
+          "world": 4,
+          "role": "recurrent"
+        },
+        {
+          "world": 5,
+          "role": "recurrent"
+        },
+        {
+          "world": 6,
+          "role": "recurrent"
+        },
+        {
+          "world": 14,
+          "role": "recurrent"
+        }
+      ],
+      "bossAppearances": [],
+      "sprite": {
+        "format": "canvas_procedural",
+        "key": "syll",
+        "renderer": "getWormSprite",
+        "png": null
+      }
+    },
+    {
+      "id": "phyll",
+      "name": "Phyllodocidae",
+      "stats": {
+        "color": "#66e9c7",
+        "radius": 10,
+        "baseHp": 85,
+        "baseSpeed": 124,
+        "attack": "zig"
+      },
+      "appearances": [
+        {
+          "world": 1,
+          "role": "recurrent"
+        },
+        {
+          "world": 3,
+          "role": "recurrent"
+        },
+        {
+          "world": 4,
+          "role": "recurrent"
+        },
+        {
+          "world": 5,
+          "role": "recurrent"
+        },
+        {
+          "world": 14,
+          "role": "recurrent"
+        }
+      ],
+      "bossAppearances": [
+        {
+          "world": 6,
+          "id": "leafqueen",
+          "name": "Phyllodocidae (gusano hoja)"
+        }
+      ],
+      "sprite": {
+        "format": "canvas_procedural",
+        "key": "phyll",
+        "renderer": "getWormSprite",
+        "png": null
+      }
+    },
+    {
+      "id": "serp",
+      "name": "Serpulidae",
+      "stats": {
+        "color": "#97bbff",
+        "radius": 14,
+        "baseHp": 104,
+        "baseSpeed": 54,
+        "attack": "circle"
+      },
+      "appearances": [
+        {
+          "world": 3,
+          "role": "recurrent"
+        },
+        {
+          "world": 10,
+          "role": "recurrent"
+        },
+        {
+          "world": 12,
+          "role": "recurrent"
+        },
+        {
+          "world": 14,
+          "role": "recurrent"
+        }
+      ],
+      "bossAppearances": [],
+      "sprite": {
+        "format": "canvas_procedural",
+        "key": "serp",
+        "renderer": "getWormSprite",
+        "png": null
+      }
+    },
+    {
+      "id": "ophel",
+      "name": "Opheliidae",
+      "stats": {
+        "color": "#dfa875",
+        "radius": 12,
+        "baseHp": 94,
+        "baseSpeed": 109,
+        "attack": "rush"
+      },
+      "appearances": [],
+      "bossAppearances": [],
+      "sprite": {
+        "format": "canvas_procedural",
+        "key": "ophel",
+        "renderer": "getWormSprite",
+        "png": null
+      }
+    },
+    {
+      "id": "capit",
+      "name": "Capitellidae",
+      "stats": {
+        "color": "#e1ba91",
+        "radius": 18,
+        "baseHp": 189,
+        "baseSpeed": 79,
+        "attack": "retract"
+      },
+      "appearances": [],
+      "bossAppearances": [
+        {
+          "world": 2,
+          "id": "capit",
+          "name": "Capitelidae"
+        },
+        {
+          "world": 8,
+          "id": "capit",
+          "name": "Capitella capitata"
+        }
+      ],
+      "sprite": {
+        "format": "canvas_procedural",
+        "key": "capit",
+        "renderer": "getWormSprite",
+        "png": null
+      }
+    },
+    {
+      "id": "orbin",
+      "name": "Orbiniidae",
+      "stats": {
+        "color": "#dbe784",
+        "radius": 20,
+        "baseHp": 214,
+        "baseSpeed": 59,
+        "attack": "mucus"
+      },
+      "appearances": [],
+      "bossAppearances": [
+        {
+          "world": 7,
+          "id": "orbin",
+          "name": "Orbiniidae"
+        }
+      ],
+      "sprite": {
+        "format": "canvas_procedural",
+        "key": "orbin",
+        "renderer": "getWormSprite",
+        "png": null
+      }
+    },
+    {
+      "id": "magel",
+      "name": "Magelonidae",
+      "stats": {
+        "color": "#ff937c",
+        "radius": 18,
+        "baseHp": 186,
+        "baseSpeed": 76,
+        "attack": "spikes"
+      },
+      "appearances": [],
+      "bossAppearances": [],
+      "sprite": {
+        "format": "canvas_procedural",
+        "key": "magel",
+        "renderer": "getWormSprite",
+        "png": null
+      }
+    },
+    {
+      "id": "cossu",
+      "name": "Cossuridae",
+      "stats": {
+        "color": "#aaa8ff",
+        "radius": 11,
+        "baseHp": 115,
+        "baseSpeed": 116,
+        "attack": "needle"
+      },
+      "appearances": [],
+      "bossAppearances": [],
+      "sprite": {
+        "format": "canvas_procedural",
+        "key": "cossu",
+        "renderer": "getWormSprite",
+        "png": null
+      }
+    },
+    {
+      "id": "nepht",
+      "name": "Nephtyidae",
+      "stats": {
+        "color": "#68e7f4",
+        "radius": 11,
+        "baseHp": 93,
+        "baseSpeed": 127,
+        "attack": "zig"
+      },
+      "appearances": [
+        {
+          "world": 2,
+          "role": "recurrent"
+        },
+        {
+          "world": 6,
+          "role": "recurrent"
+        },
+        {
+          "world": 7,
+          "role": "recurrent"
+        },
+        {
+          "world": 13,
+          "role": "recurrent"
+        },
+        {
+          "world": 14,
+          "role": "recurrent"
+        }
+      ],
+      "bossAppearances": [],
+      "sprite": {
+        "format": "canvas_procedural",
+        "key": "nepht",
+        "renderer": "getWormSprite",
+        "png": null
+      }
+    },
+    {
+      "id": "lumbr",
+      "name": "Lumbrineridae",
+      "stats": {
+        "color": "#df739d",
+        "radius": 12,
+        "baseHp": 118,
+        "baseSpeed": 121,
+        "attack": "charge"
+      },
+      "appearances": [],
+      "bossAppearances": [],
+      "sprite": {
+        "format": "canvas_procedural",
+        "key": "lumbr",
+        "renderer": "getWormSprite",
+        "png": null
+      }
+    },
+    {
+      "id": "areni",
+      "name": "Arenicolidae",
+      "stats": {
+        "color": "#d6a66e",
+        "radius": 16,
+        "baseHp": 145,
+        "baseSpeed": 63,
+        "attack": "burrow"
+      },
+      "appearances": [],
+      "bossAppearances": [],
+      "sprite": {
+        "format": "canvas_procedural",
+        "key": "areni",
+        "renderer": "getWormSprite",
+        "png": null
+      }
+    },
+    {
+      "id": "mald",
+      "name": "Maldanidae",
+      "stats": {
+        "color": "#b5ddc8",
+        "radius": 12,
+        "baseHp": 114,
+        "baseSpeed": 78,
+        "attack": "needle"
+      },
+      "appearances": [
+        {
+          "world": 10,
+          "role": "unique"
+        },
+        {
+          "world": 14,
+          "role": "recurrent"
+        }
+      ],
+      "bossAppearances": [],
+      "sprite": {
+        "format": "canvas_procedural",
+        "key": "mald",
+        "renderer": "getWormSprite",
+        "png": null
+      }
+    },
+    {
+      "id": "pect",
+      "name": "Pectinariidae",
+      "stats": {
+        "color": "#edbc68",
+        "radius": 16,
+        "baseHp": 168,
+        "baseSpeed": 55,
+        "attack": "armor"
+      },
+      "appearances": [],
+      "bossAppearances": [],
+      "sprite": {
+        "format": "canvas_procedural",
+        "key": "pect",
+        "renderer": "getWormSprite",
+        "png": null
+      }
+    },
+    {
+      "id": "chaet",
+      "name": "Chaetopteridae",
+      "stats": {
+        "color": "#89b8ff",
+        "radius": 17,
+        "baseHp": 126,
+        "baseSpeed": 66,
+        "attack": "pulse"
+      },
+      "appearances": [],
+      "bossAppearances": [],
+      "sprite": {
+        "format": "canvas_procedural",
+        "key": "chaet",
+        "renderer": "getWormSprite",
+        "png": null
+      }
+    },
+    {
+      "id": "oweni",
+      "name": "Oweniidae",
+      "stats": {
+        "color": "#b7efb0",
+        "radius": 13,
+        "baseHp": 112,
+        "baseSpeed": 69,
+        "attack": "circle"
+      },
+      "appearances": [],
+      "bossAppearances": [],
+      "sprite": {
+        "format": "canvas_procedural",
+        "key": "oweni",
+        "renderer": "getWormSprite",
+        "png": null
+      }
+    },
+    {
+      "id": "flab",
+      "name": "Flabelligeridae",
+      "stats": {
+        "color": "#f3aac0",
+        "radius": 15,
+        "baseHp": 149,
+        "baseSpeed": 67,
+        "attack": "toxic"
+      },
+      "appearances": [],
+      "bossAppearances": [],
+      "sprite": {
+        "format": "canvas_procedural",
+        "key": "flab",
+        "renderer": "getWormSprite",
+        "png": null
+      }
+    },
+    {
+      "id": "spha",
+      "name": "Sphaerodoridae",
+      "stats": {
+        "color": "#f4d987",
+        "radius": 10,
+        "baseHp": 84,
+        "baseSpeed": 105,
+        "attack": "spikes"
+      },
+      "appearances": [
+        {
+          "world": 3,
+          "role": "unique"
+        },
+        {
+          "world": 14,
+          "role": "recurrent"
+        }
+      ],
+      "bossAppearances": [],
+      "sprite": {
+        "format": "canvas_procedural",
+        "key": "spha",
+        "renderer": "getWormSprite",
+        "png": null
+      }
+    },
+    {
+      "id": "euphr",
+      "name": "Euphrosinidae",
+      "stats": {
+        "color": "#ff826f",
+        "radius": 12,
+        "baseHp": 112,
+        "baseSpeed": 109,
+        "attack": "volley"
+      },
+      "appearances": [],
+      "bossAppearances": [],
+      "sprite": {
+        "format": "canvas_procedural",
+        "key": "euphr",
+        "renderer": "getWormSprite",
+        "png": null
+      }
+    },
+    {
+      "id": "aphro",
+      "name": "Aphroditidae",
+      "stats": {
+        "color": "#e5bf8b",
+        "radius": 18,
+        "baseHp": 160,
+        "baseSpeed": 64,
+        "attack": "spikes"
+      },
+      "appearances": [
+        {
+          "world": 13,
+          "role": "unique"
+        },
+        {
+          "world": 14,
+          "role": "recurrent"
+        }
+      ],
+      "bossAppearances": [],
+      "sprite": {
+        "format": "canvas_procedural",
+        "key": "aphro",
+        "renderer": "getWormSprite",
+        "png": null
+      }
+    },
+    {
+      "id": "sigal",
+      "name": "Sigalionidae",
+      "stats": {
+        "color": "#dba89d",
+        "radius": 15,
+        "baseHp": 142,
+        "baseSpeed": 85,
+        "attack": "volley"
+      },
+      "appearances": [],
+      "bossAppearances": [],
+      "sprite": {
+        "format": "canvas_procedural",
+        "key": "sigal",
+        "renderer": "getWormSprite",
+        "png": null
+      }
+    },
+    {
+      "id": "sabel",
+      "name": "Sabellariidae",
+      "stats": {
+        "color": "#e3bd6d",
+        "radius": 16,
+        "baseHp": 158,
+        "baseSpeed": 48,
+        "attack": "fan"
+      },
+      "appearances": [],
+      "bossAppearances": [],
+      "sprite": {
+        "format": "canvas_procedural",
+        "key": "sabel",
+        "renderer": "getWormSprite",
+        "png": null
+      }
+    },
+    {
+      "id": "stern",
+      "name": "Sternaspidae",
+      "stats": {
+        "color": "#cda995",
+        "radius": 17,
+        "baseHp": 176,
+        "baseSpeed": 53,
+        "attack": "retract"
+      },
+      "appearances": [
+        {
+          "world": 13,
+          "role": "unique"
+        },
+        {
+          "world": 14,
+          "role": "recurrent"
+        }
+      ],
+      "bossAppearances": [],
+      "sprite": {
+        "format": "canvas_procedural",
+        "key": "stern",
+        "renderer": "getWormSprite",
+        "png": null
+      }
+    },
+    {
+      "id": "amphar",
+      "name": "Ampharetidae",
+      "stats": {
+        "color": "#c3d3a2",
+        "radius": 14,
+        "baseHp": 124,
+        "baseSpeed": 60,
+        "attack": "fan"
+      },
+      "appearances": [
+        {
+          "world": 10,
+          "role": "unique"
+        },
+        {
+          "world": 14,
+          "role": "recurrent"
+        }
+      ],
+      "bossAppearances": [],
+      "sprite": {
+        "format": "canvas_procedural",
+        "key": "amphar",
+        "renderer": "getWormSprite",
+        "png": null
+      }
+    },
+    {
+      "id": "tricho",
+      "name": "Trichobranchidae",
+      "stats": {
+        "color": "#d2a0b5",
+        "radius": 14,
+        "baseHp": 128,
+        "baseSpeed": 59,
+        "attack": "pulse"
+      },
+      "appearances": [],
+      "bossAppearances": [],
+      "sprite": {
+        "format": "canvas_procedural",
+        "key": "tricho",
+        "renderer": "getWormSprite",
+        "png": null
+      }
+    },
+    {
+      "id": "paraon",
+      "name": "Paraonidae",
+      "stats": {
+        "color": "#d7cb8a",
+        "radius": 10,
+        "baseHp": 84,
+        "baseSpeed": 87,
+        "attack": "needle"
+      },
+      "appearances": [],
+      "bossAppearances": [],
+      "sprite": {
+        "format": "canvas_procedural",
+        "key": "paraon",
+        "renderer": "getWormSprite",
+        "png": null
+      }
+    },
+    {
+      "id": "scali",
+      "name": "Scalibregmatidae",
+      "stats": {
+        "color": "#d2b0aa",
+        "radius": 15,
+        "baseHp": 148,
+        "baseSpeed": 61,
+        "attack": "mucus"
+      },
+      "appearances": [
+        {
+          "world": 13,
+          "role": "unique"
+        },
+        {
+          "world": 14,
+          "role": "recurrent"
+        }
+      ],
+      "bossAppearances": [],
+      "sprite": {
+        "format": "canvas_procedural",
+        "key": "scali",
+        "renderer": "getWormSprite",
+        "png": null
+      }
+    },
+    {
+      "id": "hesio",
+      "name": "Hesionidae",
+      "stats": {
+        "color": "#e2abaf",
+        "radius": 10,
+        "baseHp": 80,
+        "baseSpeed": 132,
+        "attack": "zig"
+      },
+      "appearances": [
+        {
+          "world": 3,
+          "role": "recurrent"
+        },
+        {
+          "world": 5,
+          "role": "recurrent"
+        },
+        {
+          "world": 6,
+          "role": "recurrent"
+        },
+        {
+          "world": 14,
+          "role": "recurrent"
+        }
+      ],
+      "bossAppearances": [],
+      "sprite": {
+        "format": "canvas_procedural",
+        "key": "hesio",
+        "renderer": "getWormSprite",
+        "png": null
+      }
+    },
+    {
+      "id": "gonia",
+      "name": "Goniadidae",
+      "stats": {
+        "color": "#d3a082",
+        "radius": 12,
+        "baseHp": 112,
+        "baseSpeed": 105,
+        "attack": "needle"
+      },
+      "appearances": [],
+      "bossAppearances": [],
+      "sprite": {
+        "format": "canvas_procedural",
+        "key": "gonia",
+        "renderer": "getWormSprite",
+        "png": null
+      }
+    },
+    {
+      "id": "tomo",
+      "name": "Tomopteridae",
+      "stats": {
+        "color": "#eacb84",
+        "radius": 12,
+        "baseHp": 91,
+        "baseSpeed": 125,
+        "attack": "zig"
+      },
+      "appearances": [],
+      "bossAppearances": [
+        {
+          "world": 9,
+          "id": "tomo",
+          "name": "Tomopteridae"
+        }
+      ],
+      "sprite": {
+        "format": "canvas_procedural",
+        "key": "tomo",
+        "renderer": "getWormSprite",
+        "png": null
+      }
+    },
+    {
+      "id": "sibog",
+      "name": "Siboglinidae",
+      "stats": {
+        "color": "#e7a28e",
+        "radius": 17,
+        "baseHp": 175,
+        "baseSpeed": 43,
+        "attack": "pulse"
+      },
+      "appearances": [],
+      "bossAppearances": [],
+      "sprite": {
+        "format": "canvas_procedural",
+        "key": "sibog",
+        "renderer": "getWormSprite",
+        "png": null
+      }
+    },
+    {
+      "id": "swima",
+      "name": "Acrocirridae",
+      "stats": {
+        "color": "#a8ed9f",
+        "radius": 13,
+        "baseHp": 126,
+        "baseSpeed": 111,
+        "attack": "volley"
+      },
+      "appearances": [
+        {
+          "world": 13,
+          "role": "unique"
+        },
+        {
+          "world": 14,
+          "role": "recurrent"
+        }
+      ],
+      "bossAppearances": [],
+      "sprite": {
+        "format": "canvas_procedural",
+        "key": "swima",
+        "renderer": "getWormSprite",
+        "png": null
+      }
+    },
+    {
+      "id": "typhlo",
+      "name": "Typhloscolecidae",
+      "stats": {
+        "color": "#dbc6a5",
+        "radius": 11,
+        "baseHp": 97,
+        "baseSpeed": 120,
+        "attack": "fan"
+      },
+      "appearances": [
+        {
+          "world": 9,
+          "role": "unique"
+        },
+        {
+          "world": 14,
+          "role": "recurrent"
+        }
+      ],
+      "bossAppearances": [],
+      "sprite": {
+        "format": "canvas_procedural",
+        "key": "typhlo",
+        "renderer": "getWormSprite",
+        "png": null
+      }
+    },
+    {
+      "id": "lopado",
+      "name": "Lopadorrhynchidae",
+      "stats": {
+        "color": "#e7bb83",
+        "radius": 13,
+        "baseHp": 133,
+        "baseSpeed": 100,
+        "attack": "double"
+      },
+      "appearances": [
+        {
+          "world": 9,
+          "role": "unique"
+        },
+        {
+          "world": 14,
+          "role": "recurrent"
+        }
+      ],
+      "bossAppearances": [],
+      "sprite": {
+        "format": "canvas_procedural",
+        "key": "lopado",
+        "renderer": "getWormSprite",
+        "png": null
+      }
+    },
+    {
+      "id": "poeo",
+      "name": "Poeobius · Poeobiidae",
+      "stats": {
+        "color": "#c9beb6",
+        "radius": 15,
+        "baseHp": 156,
+        "baseSpeed": 53,
+        "attack": "mucus"
+      },
+      "appearances": [
+        {
+          "world": 9,
+          "role": "unique"
+        },
+        {
+          "world": 14,
+          "role": "recurrent"
+        }
+      ],
+      "bossAppearances": [],
+      "sprite": {
+        "format": "canvas_procedural",
+        "key": "poeo",
+        "renderer": "getWormSprite",
+        "png": null
+      }
+    },
+    {
+      "id": "pugo",
+      "name": "Chaetopteridae",
+      "stats": {
+        "color": "#afdbb5",
+        "radius": 16,
+        "baseHp": 165,
+        "baseSpeed": 58,
+        "attack": "pulse"
+      },
+      "appearances": [],
+      "bossAppearances": [],
+      "sprite": {
+        "format": "canvas_procedural",
+        "key": "pugo",
+        "renderer": "getWormSprite",
+        "png": null
+      }
+    },
+    {
+      "id": "hermo",
+      "name": "Amphinomidae · Hermodice carunculata",
+      "stats": {
+        "color": "#ef8050",
+        "radius": 14,
+        "baseHp": 121,
+        "baseSpeed": 99,
+        "attack": "rush"
+      },
+      "appearances": [],
+      "bossAppearances": [
+        {
+          "world": 5,
+          "id": "hermo",
+          "name": "Hermodice carunculata"
+        }
+      ],
+      "sprite": {
+        "format": "canvas_procedural",
+        "key": "hermo",
+        "renderer": "getWormSprite",
+        "png": null
+      }
+    },
+    {
+      "id": "riftia",
+      "name": "Siboglinidae · Riftia pachyptila",
+      "stats": {
+        "color": "#efb9ae",
+        "radius": 17,
+        "baseHp": 175,
+        "baseSpeed": 43,
+        "attack": "pulse"
+      },
+      "appearances": [
+        {
+          "world": 12,
+          "role": "unique"
+        },
+        {
+          "world": 14,
+          "role": "recurrent"
+        }
+      ],
+      "bossAppearances": [
+        {
+          "world": 13,
+          "id": "riftia",
+          "name": "Riftia pachyptila"
+        }
+      ],
+      "sprite": {
+        "format": "canvas_procedural",
+        "key": "riftia",
+        "renderer": "getWormSprite",
+        "png": null
+      }
+    },
+    {
+      "id": "osedax",
+      "name": "Siboglinidae · Osedax",
+      "stats": {
+        "color": "#e8a4bf",
+        "radius": 13,
+        "baseHp": 145,
+        "baseSpeed": 0,
+        "attack": "pulse"
+      },
+      "appearances": [],
+      "bossAppearances": [
+        {
+          "world": 11,
+          "id": "osedax",
+          "name": "Osedax"
+        }
+      ],
+      "sprite": {
+        "format": "canvas_procedural",
+        "key": "osedax",
+        "renderer": "getWormSprite",
+        "png": null
+      }
+    },
+    {
+      "id": "chaetopterus",
+      "name": "Chaetopteridae · Chaetopterus",
+      "stats": {
+        "color": "#a8dccb",
+        "radius": 17,
+        "baseHp": 126,
+        "baseSpeed": 0,
+        "attack": "pulse"
+      },
+      "appearances": [
+        {
+          "world": 6,
+          "role": "unique"
+        },
+        {
+          "world": 14,
+          "role": "recurrent"
+        }
+      ],
+      "bossAppearances": [],
+      "sprite": {
+        "format": "canvas_procedural",
+        "key": "chaetopterus",
+        "renderer": "getWormSprite",
+        "png": null
+      }
+    },
+    {
+      "id": "mechNereis",
+      "name": "Nereida robótica",
+      "stats": {
+        "color": "#7cdaed",
+        "radius": 13,
+        "baseHp": 155,
+        "baseSpeed": 106,
+        "attack": "laser"
+      },
+      "appearances": [
+        {
+          "world": 14,
+          "role": "unique"
+        }
+      ],
+      "bossAppearances": [
+        {
+          "world": 14,
+          "id": "mechNereis",
+          "name": "Nereidae robótico"
+        }
+      ],
+      "sprite": {
+        "format": "canvas_procedural",
+        "key": "mechNereis",
+        "renderer": "getWormSprite",
+        "png": null
+      }
+    },
+    {
+      "id": "mechPolyn",
+      "name": "Polinoideo robótico",
+      "stats": {
+        "color": "#b8c4ea",
+        "radius": 19,
+        "baseHp": 380,
+        "baseSpeed": 59,
+        "attack": "laser"
+      },
+      "appearances": [
+        {
+          "world": 14,
+          "role": "unique"
+        }
+      ],
+      "bossAppearances": [
+        {
+          "world": 14,
+          "id": "mechPolyn",
+          "name": "Polinoidae robótico"
+        }
+      ],
+      "sprite": {
+        "format": "canvas_procedural",
+        "key": "mechPolyn",
+        "renderer": "getWormSprite",
+        "png": null
+      }
+    },
+    {
+      "id": "mechRiftia",
+      "name": "Tubo robótico",
+      "stats": {
+        "color": "#ffadce",
+        "radius": 18,
+        "baseHp": 390,
+        "baseSpeed": 38,
+        "attack": "laser"
+      },
+      "appearances": [
+        {
+          "world": 14,
+          "role": "unique"
+        }
+      ],
+      "bossAppearances": [],
+      "sprite": {
+        "format": "canvas_procedural",
+        "key": "mechRiftia",
+        "renderer": "getWormSprite",
+        "png": null
+      }
+    },
+    {
+      "id": "scientist",
+      "name": "Dr. Nereo · submarino",
+      "stats": {
+        "color": "#dce8f2",
+        "radius": 21,
+        "baseHp": 350,
+        "baseSpeed": 65,
+        "attack": "laser"
+      },
+      "appearances": [],
+      "bossAppearances": [
+        {
+          "world": 14,
+          "id": "scientist",
+          "name": "El científico"
+        }
+      ],
+      "sprite": {
+        "format": "canvas_procedural",
+        "key": "scientist",
+        "renderer": "getWormSprite",
+        "png": null
+      }
+    },
+    {
+      "id": "fabric",
+      "name": "Fabriciidae",
+      "stats": {
+        "color": "#e9adcc",
+        "radius": 14,
+        "baseHp": 97,
+        "baseSpeed": 65,
+        "attack": "fan"
+      },
+      "appearances": [
+        {
+          "world": 1,
+          "role": "unique"
+        },
+        {
+          "world": 14,
+          "role": "recurrent"
+        }
+      ],
+      "bossAppearances": [],
+      "sprite": {
+        "format": "canvas_procedural",
+        "key": "fabric",
+        "renderer": "getWormSprite",
+        "png": null
+      }
+    },
+    {
+      "id": "pision",
+      "name": "Pisionidae",
+      "stats": {
+        "color": "#d8c9b2",
+        "radius": 15,
+        "baseHp": 142,
+        "baseSpeed": 85,
+        "attack": "zig"
+      },
+      "appearances": [
+        {
+          "world": 1,
+          "role": "unique"
+        },
+        {
+          "world": 14,
+          "role": "recurrent"
+        }
+      ],
+      "bossAppearances": [],
+      "sprite": {
+        "format": "canvas_procedural",
+        "key": "pision",
+        "renderer": "getWormSprite",
+        "png": null
+      }
+    },
+    {
+      "id": "lacy",
+      "name": "Lacydoniidae",
+      "stats": {
+        "color": "#b9bbdf",
+        "radius": 10,
+        "baseHp": 80,
+        "baseSpeed": 132,
+        "attack": "double"
+      },
+      "appearances": [
+        {
+          "world": 1,
+          "role": "unique"
+        },
+        {
+          "world": 14,
+          "role": "recurrent"
+        }
+      ],
+      "bossAppearances": [],
+      "sprite": {
+        "format": "canvas_procedural",
+        "key": "lacy",
+        "renderer": "getWormSprite",
+        "png": null
+      }
+    },
+    {
+      "id": "sacco",
+      "name": "Saccocirrus · Saccocirridae",
+      "stats": {
+        "color": "#d9d1a5",
+        "radius": 10,
+        "baseHp": 84,
+        "baseSpeed": 87,
+        "attack": "needle"
+      },
+      "appearances": [
+        {
+          "world": 2,
+          "role": "unique"
+        },
+        {
+          "world": 14,
+          "role": "recurrent"
+        }
+      ],
+      "bossAppearances": [],
+      "sprite": {
+        "format": "canvas_procedural",
+        "key": "sacco",
+        "renderer": "getWormSprite",
+        "png": null
+      }
+    },
+    {
+      "id": "oenone",
+      "name": "Oenone · Oenonidae",
+      "stats": {
+        "color": "#cd9487",
+        "radius": 12,
+        "baseHp": 118,
+        "baseSpeed": 121,
+        "attack": "charge"
+      },
+      "appearances": [
+        {
+          "world": 3,
+          "role": "unique"
+        },
+        {
+          "world": 14,
+          "role": "recurrent"
+        }
+      ],
+      "bossAppearances": [],
+      "sprite": {
+        "format": "canvas_procedural",
+        "key": "oenone",
+        "renderer": "getWormSprite",
+        "png": null
+      }
+    },
+    {
+      "id": "arabella",
+      "name": "Arabella · Arabellidae",
+      "stats": {
+        "color": "#ad7c99",
+        "radius": 12,
+        "baseHp": 118,
+        "baseSpeed": 121,
+        "attack": "needle"
+      },
+      "appearances": [
+        {
+          "world": 3,
+          "role": "unique"
+        },
+        {
+          "world": 14,
+          "role": "recurrent"
+        }
+      ],
+      "bossAppearances": [],
+      "sprite": {
+        "format": "canvas_procedural",
+        "key": "arabella",
+        "renderer": "getWormSprite",
+        "png": null
+      }
+    },
+    {
+      "id": "histrio",
+      "name": "Histriobdellidae",
+      "stats": {
+        "color": "#d5b987",
+        "radius": 10,
+        "baseHp": 84,
+        "baseSpeed": 105,
+        "attack": "zig"
+      },
+      "appearances": [
+        {
+          "world": 3,
+          "role": "unique"
+        },
+        {
+          "world": 14,
+          "role": "recurrent"
+        }
+      ],
+      "bossAppearances": [],
+      "sprite": {
+        "format": "canvas_procedural",
+        "key": "histrio",
+        "renderer": "getWormSprite",
+        "png": null
+      }
+    },
+    {
+      "id": "spinther",
+      "name": "Spintheridae",
+      "stats": {
+        "color": "#d68c79",
+        "radius": 12,
+        "baseHp": 112,
+        "baseSpeed": 109,
+        "attack": "spikes"
+      },
+      "appearances": [
+        {
+          "world": 4,
+          "role": "unique"
+        },
+        {
+          "world": 14,
+          "role": "recurrent"
+        }
+      ],
+      "bossAppearances": [],
+      "sprite": {
+        "format": "canvas_procedural",
+        "key": "spinther",
+        "renderer": "getWormSprite",
+        "png": null
+      }
+    },
+    {
+      "id": "trocho",
+      "name": "Trochochaeta · Trochochaetidae",
+      "stats": {
+        "color": "#c6ba8d",
+        "radius": 9,
+        "baseHp": 55,
+        "baseSpeed": 120,
+        "attack": "double"
+      },
+      "appearances": [
+        {
+          "world": 4,
+          "role": "unique"
+        },
+        {
+          "world": 14,
+          "role": "recurrent"
+        }
+      ],
+      "bossAppearances": [],
+      "sprite": {
+        "format": "canvas_procedural",
+        "key": "trocho",
+        "renderer": "getWormSprite",
+        "png": null
+      }
+    },
+    {
+      "id": "cteno",
+      "name": "Ctenodrilidae",
+      "stats": {
+        "color": "#deb8a4",
+        "radius": 10,
+        "baseHp": 84,
+        "baseSpeed": 87,
+        "attack": "mucus"
+      },
+      "appearances": [
+        {
+          "world": 4,
+          "role": "unique"
+        },
+        {
+          "world": 14,
+          "role": "recurrent"
+        }
+      ],
+      "bossAppearances": [],
+      "sprite": {
+        "format": "canvas_procedural",
+        "key": "cteno",
+        "renderer": "getWormSprite",
+        "png": null
+      }
+    },
+    {
+      "id": "eulepeth",
+      "name": "Eulepethidae",
+      "stats": {
+        "color": "#b18b77",
+        "radius": 17,
+        "baseHp": 175,
+        "baseSpeed": 65,
+        "attack": "armor"
+      },
+      "appearances": [
+        {
+          "world": 5,
+          "role": "unique"
+        },
+        {
+          "world": 14,
+          "role": "recurrent"
+        }
+      ],
+      "bossAppearances": [],
+      "sprite": {
+        "format": "canvas_procedural",
+        "key": "eulepeth",
+        "renderer": "getWormSprite",
+        "png": null
+      }
+    },
+    {
+      "id": "acoet",
+      "name": "Acoetidae",
+      "stats": {
+        "color": "#b69f6e",
+        "radius": 15,
+        "baseHp": 142,
+        "baseSpeed": 85,
+        "attack": "volley"
+      },
+      "appearances": [
+        {
+          "world": 5,
+          "role": "unique"
+        },
+        {
+          "world": 14,
+          "role": "recurrent"
+        }
+      ],
+      "bossAppearances": [],
+      "sprite": {
+        "format": "canvas_procedural",
+        "key": "acoet",
+        "renderer": "getWormSprite",
+        "png": null
+      }
+    },
+    {
+      "id": "pholoe",
+      "name": "Pholoe · Pholoidae",
+      "stats": {
+        "color": "#debd9b",
+        "radius": 17,
+        "baseHp": 175,
+        "baseSpeed": 65,
+        "attack": "zig"
+      },
+      "appearances": [
+        {
+          "world": 5,
+          "role": "unique"
+        },
+        {
+          "world": 14,
+          "role": "recurrent"
+        }
+      ],
+      "bossAppearances": [],
+      "sprite": {
+        "format": "canvas_procedural",
+        "key": "pholoe",
+        "renderer": "getWormSprite",
+        "png": null
+      }
+    },
+    {
+      "id": "questa",
+      "name": "Questa · Questidae",
+      "stats": {
+        "color": "#cab6a1",
+        "radius": 10,
+        "baseHp": 84,
+        "baseSpeed": 87,
+        "attack": "needle"
+      },
+      "appearances": [
+        {
+          "world": 7,
+          "role": "unique"
+        },
+        {
+          "world": 14,
+          "role": "recurrent"
+        }
+      ],
+      "bossAppearances": [],
+      "sprite": {
+        "format": "canvas_procedural",
+        "key": "questa",
+        "renderer": "getWormSprite",
+        "png": null
+      }
+    },
+    {
+      "id": "fauvel",
+      "name": "Fauveliopsidae",
+      "stats": {
+        "color": "#c0a58f",
+        "radius": 17,
+        "baseHp": 176,
+        "baseSpeed": 53,
+        "attack": "retract"
+      },
+      "appearances": [
+        {
+          "world": 7,
+          "role": "unique"
+        },
+        {
+          "world": 14,
+          "role": "recurrent"
+        }
+      ],
+      "bossAppearances": [],
+      "sprite": {
+        "format": "canvas_procedural",
+        "key": "fauvel",
+        "renderer": "getWormSprite",
+        "png": null
+      }
+    },
+    {
+      "id": "protod",
+      "name": "Protodrilus · Protodrilidae",
+      "stats": {
+        "color": "#bfcfb8",
+        "radius": 10,
+        "baseHp": 84,
+        "baseSpeed": 87,
+        "attack": "zig"
+      },
+      "appearances": [
+        {
+          "world": 7,
+          "role": "unique"
+        },
+        {
+          "world": 14,
+          "role": "recurrent"
+        }
+      ],
+      "bossAppearances": [],
+      "sprite": {
+        "format": "canvas_procedural",
+        "key": "protod",
+        "renderer": "getWormSprite",
+        "png": null
+      }
+    },
+    {
+      "id": "pilarg",
+      "name": "Sigambra · Pilargidae",
+      "stats": {
+        "color": "#c28ba0",
+        "radius": 10,
+        "baseHp": 80,
+        "baseSpeed": 132,
+        "attack": "charge"
+      },
+      "appearances": [
+        {
+          "world": 8,
+          "role": "unique"
+        },
+        {
+          "world": 14,
+          "role": "recurrent"
+        }
+      ],
+      "bossAppearances": [],
+      "sprite": {
+        "format": "canvas_procedural",
+        "key": "pilarg",
+        "renderer": "getWormSprite",
+        "png": null
+      }
+    },
+    {
+      "id": "dorville",
+      "name": "Dorvilleidae",
+      "stats": {
+        "color": "#d7ad98",
+        "radius": 8,
+        "baseHp": 62,
+        "baseSpeed": 130,
+        "attack": "double"
+      },
+      "appearances": [
+        {
+          "world": 8,
+          "role": "recurrent"
+        },
+        {
+          "world": 12,
+          "role": "recurrent"
+        },
+        {
+          "world": 13,
+          "role": "recurrent"
+        },
+        {
+          "world": 14,
+          "role": "recurrent"
+        }
+      ],
+      "bossAppearances": [],
+      "sprite": {
+        "format": "canvas_procedural",
+        "key": "dorville",
+        "renderer": "getWormSprite",
+        "png": null
+      }
+    },
+    {
+      "id": "pontod",
+      "name": "Pontodora · Pontodoridae",
+      "stats": {
+        "color": "#c3ded6",
+        "radius": 10,
+        "baseHp": 80,
+        "baseSpeed": 132,
+        "attack": "needle"
+      },
+      "appearances": [
+        {
+          "world": 9,
+          "role": "unique"
+        },
+        {
+          "world": 14,
+          "role": "recurrent"
+        }
+      ],
+      "bossAppearances": [],
+      "sprite": {
+        "format": "canvas_procedural",
+        "key": "pontod",
+        "renderer": "getWormSprite",
+        "png": null
+      }
+    },
+    {
+      "id": "iospil",
+      "name": "Iospilidae",
+      "stats": {
+        "color": "#bcd8e4",
+        "radius": 13,
+        "baseHp": 133,
+        "baseSpeed": 100,
+        "attack": "zig"
+      },
+      "appearances": [
+        {
+          "world": 9,
+          "role": "unique"
+        },
+        {
+          "world": 14,
+          "role": "recurrent"
+        }
+      ],
+      "bossAppearances": [],
+      "sprite": {
+        "format": "canvas_procedural",
+        "key": "iospil",
+        "renderer": "getWormSprite",
+        "png": null
+      }
+    },
+    {
+      "id": "alciop",
+      "name": "Alciopidae",
+      "stats": {
+        "color": "#b5d9df",
+        "radius": 10,
+        "baseHp": 85,
+        "baseSpeed": 124,
+        "attack": "double"
+      },
+      "appearances": [
+        {
+          "world": 9,
+          "role": "recurrent"
+        },
+        {
+          "world": 10,
+          "role": "recurrent"
+        },
+        {
+          "world": 13,
+          "role": "recurrent"
+        },
+        {
+          "world": 14,
+          "role": "recurrent"
+        }
+      ],
+      "bossAppearances": [],
+      "sprite": {
+        "format": "canvas_procedural",
+        "key": "alciop",
+        "renderer": "getWormSprite",
+        "png": null
+      }
+    },
+    {
+      "id": "nautil",
+      "name": "Nautiliniellidae",
+      "stats": {
+        "color": "#d8baa9",
+        "radius": 10,
+        "baseHp": 80,
+        "baseSpeed": 132,
+        "attack": "mucus"
+      },
+      "appearances": [
+        {
+          "world": 11,
+          "role": "unique"
+        },
+        {
+          "world": 14,
+          "role": "recurrent"
+        }
+      ],
+      "bossAppearances": [],
+      "sprite": {
+        "format": "canvas_procedural",
+        "key": "nautil",
+        "renderer": "getWormSprite",
+        "png": null
+      }
+    },
+    {
+      "id": "chryso",
+      "name": "Chrysopetalidae",
+      "stats": {
+        "color": "#e0c16d",
+        "radius": 12,
+        "baseHp": 112,
+        "baseSpeed": 109,
+        "attack": "volley"
+      },
+      "appearances": [
+        {
+          "world": 11,
+          "role": "unique"
+        },
+        {
+          "world": 14,
+          "role": "recurrent"
+        }
+      ],
+      "bossAppearances": [],
+      "sprite": {
+        "format": "canvas_procedural",
+        "key": "chryso",
+        "renderer": "getWormSprite",
+        "png": null
+      }
+    },
+    {
+      "id": "paralvinella",
+      "name": "Paralvinella · Alvinellidae",
+      "stats": {
+        "color": "#bd897b",
+        "radius": 13,
+        "baseHp": 121,
+        "baseSpeed": 99,
+        "attack": "fan"
+      },
+      "appearances": [
+        {
+          "world": 12,
+          "role": "unique"
+        },
+        {
+          "world": 14,
+          "role": "recurrent"
+        }
+      ],
+      "bossAppearances": [],
+      "sprite": {
+        "format": "canvas_procedural",
+        "key": "paralvinella",
+        "renderer": "getWormSprite",
+        "png": null
+      }
+    },
+    {
+      "id": "alvinella",
+      "name": "Alvinella pompejana · Alvinellidae",
+      "stats": {
+        "color": "#b79185",
+        "radius": 13,
+        "baseHp": 121,
+        "baseSpeed": 99,
+        "attack": "pulse"
+      },
+      "appearances": [],
+      "bossAppearances": [
+        {
+          "world": 12,
+          "id": "alvinella",
+          "name": "Alvinella pompejana (gusano de Pompeya)"
+        }
+      ],
+      "sprite": {
+        "format": "canvas_procedural",
+        "key": "alvinella",
+        "renderer": "getWormSprite",
+        "png": null
+      }
+    },
+    {
+      "id": "hydroides",
+      "name": "Hydroides · Serpulidae",
+      "stats": {
+        "color": "#bbbdcf",
+        "radius": 14,
+        "baseHp": 104,
+        "baseSpeed": 54,
+        "attack": "circle"
+      },
+      "appearances": [
+        {
+          "world": 1,
+          "role": "unique"
+        },
+        {
+          "world": 14,
+          "role": "recurrent"
+        }
+      ],
+      "bossAppearances": [],
+      "sprite": {
+        "format": "canvas_procedural",
+        "key": "hydroides",
+        "renderer": "getWormSprite",
+        "png": null
+      }
+    },
+    {
+      "id": "euphrosine",
+      "name": "Euphrosine · Euphrosinidae",
+      "stats": {
+        "color": "#e78c79",
+        "radius": 12,
+        "baseHp": 112,
+        "baseSpeed": 109,
+        "attack": "volley"
+      },
+      "appearances": [
+        {
+          "world": 1,
+          "role": "unique"
+        },
+        {
+          "world": 14,
+          "role": "recurrent"
+        }
+      ],
+      "bossAppearances": [],
+      "sprite": {
+        "format": "canvas_procedural",
+        "key": "euphrosine",
+        "renderer": "getWormSprite",
+        "png": null
+      }
+    },
+    {
+      "id": "arenicola",
+      "name": "Arenicola · Arenicolidae",
+      "stats": {
+        "color": "#c8a06d",
+        "radius": 16,
+        "baseHp": 145,
+        "baseSpeed": 63,
+        "attack": "burrow"
+      },
+      "appearances": [
+        {
+          "world": 2,
+          "role": "unique"
+        },
+        {
+          "world": 14,
+          "role": "recurrent"
+        }
+      ],
+      "bossAppearances": [],
+      "sprite": {
+        "format": "canvas_procedural",
+        "key": "arenicola",
+        "renderer": "getWormSprite",
+        "png": null
+      }
+    },
+    {
+      "id": "magelona",
+      "name": "Magelona · Magelonidae",
+      "stats": {
+        "color": "#dca390",
+        "radius": 18,
+        "baseHp": 186,
+        "baseSpeed": 76,
+        "attack": "spikes"
+      },
+      "appearances": [
+        {
+          "world": 2,
+          "role": "unique"
+        },
+        {
+          "world": 14,
+          "role": "recurrent"
+        }
+      ],
+      "bossAppearances": [],
+      "sprite": {
+        "format": "canvas_procedural",
+        "key": "magelona",
+        "renderer": "getWormSprite",
+        "png": null
+      }
+    },
+    {
+      "id": "sthenelais",
+      "name": "Sthenelais · Sigalionidae",
+      "stats": {
+        "color": "#c5a797",
+        "radius": 15,
+        "baseHp": 142,
+        "baseSpeed": 85,
+        "attack": "volley"
+      },
+      "appearances": [
+        {
+          "world": 2,
+          "role": "unique"
+        },
+        {
+          "world": 14,
+          "role": "recurrent"
+        }
+      ],
+      "bossAppearances": [],
+      "sprite": {
+        "format": "canvas_procedural",
+        "key": "sthenelais",
+        "renderer": "getWormSprite",
+        "png": null
+      }
+    },
+    {
+      "id": "goniada",
+      "name": "Goniada · Goniadidae",
+      "stats": {
+        "color": "#c69c79",
+        "radius": 12,
+        "baseHp": 112,
+        "baseSpeed": 105,
+        "attack": "needle"
+      },
+      "appearances": [
+        {
+          "world": 2,
+          "role": "unique"
+        },
+        {
+          "world": 14,
+          "role": "recurrent"
+        }
+      ],
+      "bossAppearances": [],
+      "sprite": {
+        "format": "canvas_procedural",
+        "key": "goniada",
+        "renderer": "getWormSprite",
+        "png": null
+      }
+    },
+    {
+      "id": "dodeca",
+      "name": "Dodecaceria · Cirratulidae",
+      "stats": {
+        "color": "#bd9d79",
+        "radius": 13,
+        "baseHp": 87,
+        "baseSpeed": 75,
+        "attack": "toxic"
+      },
+      "appearances": [
+        {
+          "world": 3,
+          "role": "unique"
+        },
+        {
+          "world": 14,
+          "role": "recurrent"
+        }
+      ],
+      "bossAppearances": [],
+      "sprite": {
+        "format": "canvas_procedural",
+        "key": "dodeca",
+        "renderer": "getWormSprite",
+        "png": null
+      }
+    },
+    {
+      "id": "spirorbis",
+      "name": "Spirorbis · Serpulidae",
+      "stats": {
+        "color": "#e8d4a7",
+        "radius": 14,
+        "baseHp": 104,
+        "baseSpeed": 54,
+        "attack": "circle"
+      },
+      "appearances": [
+        {
+          "world": 4,
+          "role": "unique"
+        },
+        {
+          "world": 14,
+          "role": "recurrent"
+        }
+      ],
+      "bossAppearances": [],
+      "sprite": {
+        "format": "canvas_procedural",
+        "key": "spirorbis",
+        "renderer": "getWormSprite",
+        "png": null
+      }
+    },
+    {
+      "id": "myxicola",
+      "name": "Myxicola · Sabellidae",
+      "stats": {
+        "color": "#cdb0c9",
+        "radius": 14,
+        "baseHp": 97,
+        "baseSpeed": 65,
+        "attack": "fan"
+      },
+      "appearances": [
+        {
+          "world": 4,
+          "role": "unique"
+        },
+        {
+          "world": 14,
+          "role": "recurrent"
+        }
+      ],
+      "bossAppearances": [],
+      "sprite": {
+        "format": "canvas_procedural",
+        "key": "myxicola",
+        "renderer": "getWormSprite",
+        "png": null
+      }
+    },
+    {
+      "id": "spirobranchus",
+      "name": "Spirobranchus giganteus · Serpulidae",
+      "stats": {
+        "color": "#e9bb63",
+        "radius": 14,
+        "baseHp": 104,
+        "baseSpeed": 54,
+        "attack": "circle"
+      },
+      "appearances": [
+        {
+          "world": 5,
+          "role": "unique"
+        },
+        {
+          "world": 14,
+          "role": "recurrent"
+        }
+      ],
+      "bossAppearances": [],
+      "sprite": {
+        "format": "canvas_procedural",
+        "key": "spirobranchus",
+        "renderer": "getWormSprite",
+        "png": null
+      }
+    },
+    {
+      "id": "sabellastarte",
+      "name": "Sabellastarte · Sabellidae",
+      "stats": {
+        "color": "#d8b5d6",
+        "radius": 14,
+        "baseHp": 97,
+        "baseSpeed": 65,
+        "attack": "fan"
+      },
+      "appearances": [
+        {
+          "world": 5,
+          "role": "unique"
+        },
+        {
+          "world": 14,
+          "role": "recurrent"
+        }
+      ],
+      "bossAppearances": [],
+      "sprite": {
+        "format": "canvas_procedural",
+        "key": "sabellastarte",
+        "renderer": "getWormSprite",
+        "png": null
+      }
+    },
+    {
+      "id": "glycera",
+      "name": "Glycera · Glyceridae",
+      "stats": {
+        "color": "#dca2ad",
+        "radius": 11,
+        "baseHp": 77,
+        "baseSpeed": 112,
+        "attack": "needle"
+      },
+      "appearances": [
+        {
+          "world": 6,
+          "role": "unique"
+        },
+        {
+          "world": 14,
+          "role": "recurrent"
+        }
+      ],
+      "bossAppearances": [],
+      "sprite": {
+        "format": "canvas_procedural",
+        "key": "glycera",
+        "renderer": "getWormSprite",
+        "png": null
+      }
+    },
+    {
+      "id": "diopatra",
+      "name": "Diopatra · Onuphidae",
+      "stats": {
+        "color": "#b7c985",
+        "radius": 15,
+        "baseHp": 135,
+        "baseSpeed": 77,
+        "attack": "burrow"
+      },
+      "appearances": [
+        {
+          "world": 6,
+          "role": "unique"
+        },
+        {
+          "world": 14,
+          "role": "recurrent"
+        }
+      ],
+      "bossAppearances": [],
+      "sprite": {
+        "format": "canvas_procedural",
+        "key": "diopatra",
+        "renderer": "getWormSprite",
+        "png": null
+      }
+    },
+    {
+      "id": "sabellaria",
+      "name": "Sabellaria · Sabellariidae",
+      "stats": {
+        "color": "#cbb372",
+        "radius": 16,
+        "baseHp": 158,
+        "baseSpeed": 48,
+        "attack": "fan"
+      },
+      "appearances": [
+        {
+          "world": 6,
+          "role": "unique"
+        },
+        {
+          "world": 14,
+          "role": "recurrent"
+        }
+      ],
+      "bossAppearances": [],
+      "sprite": {
+        "format": "canvas_procedural",
+        "key": "sabellaria",
+        "renderer": "getWormSprite",
+        "png": null
+      }
+    },
+    {
+      "id": "pectinaria",
+      "name": "Pectinaria · Pectinariidae",
+      "stats": {
+        "color": "#d8bd80",
+        "radius": 16,
+        "baseHp": 168,
+        "baseSpeed": 55,
+        "attack": "armor"
+      },
+      "appearances": [
+        {
+          "world": 6,
+          "role": "unique"
+        },
+        {
+          "world": 14,
+          "role": "recurrent"
+        }
+      ],
+      "bossAppearances": [],
+      "sprite": {
+        "format": "canvas_procedural",
+        "key": "pectinaria",
+        "renderer": "getWormSprite",
+        "png": null
+      }
+    },
+    {
+      "id": "aricidea",
+      "name": "Aricidea · Paraonidae",
+      "stats": {
+        "color": "#c9bd83",
+        "radius": 10,
+        "baseHp": 84,
+        "baseSpeed": 87,
+        "attack": "needle"
+      },
+      "appearances": [
+        {
+          "world": 7,
+          "role": "unique"
+        },
+        {
+          "world": 14,
+          "role": "recurrent"
+        }
+      ],
+      "bossAppearances": [],
+      "sprite": {
+        "format": "canvas_procedural",
+        "key": "aricidea",
+        "renderer": "getWormSprite",
+        "png": null
+      }
+    },
+    {
+      "id": "terebellides",
+      "name": "Terebellides · Trichobranchidae",
+      "stats": {
+        "color": "#c4a4b1",
+        "radius": 14,
+        "baseHp": 128,
+        "baseSpeed": 59,
+        "attack": "pulse"
+      },
+      "appearances": [
+        {
+          "world": 7,
+          "role": "unique"
+        },
+        {
+          "world": 14,
+          "role": "recurrent"
+        }
+      ],
+      "bossAppearances": [],
+      "sprite": {
+        "format": "canvas_procedural",
+        "key": "terebellides",
+        "renderer": "getWormSprite",
+        "png": null
+      }
+    },
+    {
+      "id": "ophelia",
+      "name": "Ophelia · Opheliidae",
+      "stats": {
+        "color": "#c59d7d",
+        "radius": 12,
+        "baseHp": 94,
+        "baseSpeed": 109,
+        "attack": "rush"
+      },
+      "appearances": [
+        {
+          "world": 8,
+          "role": "unique"
+        },
+        {
+          "world": 14,
+          "role": "recurrent"
+        }
+      ],
+      "bossAppearances": [],
+      "sprite": {
+        "format": "canvas_procedural",
+        "key": "ophelia",
+        "renderer": "getWormSprite",
+        "png": null
+      }
+    },
+    {
+      "id": "cossura",
+      "name": "Cossura · Cossuridae",
+      "stats": {
+        "color": "#aaa2c9",
+        "radius": 11,
+        "baseHp": 115,
+        "baseSpeed": 116,
+        "attack": "needle"
+      },
+      "appearances": [
+        {
+          "world": 8,
+          "role": "unique"
+        },
+        {
+          "world": 14,
+          "role": "recurrent"
+        }
+      ],
+      "bossAppearances": [],
+      "sprite": {
+        "format": "canvas_procedural",
+        "key": "cossura",
+        "renderer": "getWormSprite",
+        "png": null
+      }
+    },
+    {
+      "id": "lumbrineris",
+      "name": "Lumbrineris · Lumbrineridae",
+      "stats": {
+        "color": "#c587a6",
+        "radius": 12,
+        "baseHp": 118,
+        "baseSpeed": 121,
+        "attack": "charge"
+      },
+      "appearances": [
+        {
+          "world": 8,
+          "role": "unique"
+        },
+        {
+          "world": 14,
+          "role": "recurrent"
+        }
+      ],
+      "bossAppearances": [],
+      "sprite": {
+        "format": "canvas_procedural",
+        "key": "lumbrineris",
+        "renderer": "getWormSprite",
+        "png": null
+      }
+    },
+    {
+      "id": "owenia",
+      "name": "Owenia · Oweniidae",
+      "stats": {
+        "color": "#bdcda0",
+        "radius": 13,
+        "baseHp": 112,
+        "baseSpeed": 69,
+        "attack": "circle"
+      },
+      "appearances": [
+        {
+          "world": 8,
+          "role": "unique"
+        },
+        {
+          "world": 14,
+          "role": "recurrent"
+        }
+      ],
+      "bossAppearances": [],
+      "sprite": {
+        "format": "canvas_procedural",
+        "key": "owenia",
+        "renderer": "getWormSprite",
+        "png": null
+      }
+    },
+    {
+      "id": "syllStolon",
+      "name": "Syllidae · estolones nadadores · Syllidae",
+      "stats": {
+        "color": "#edc1e9",
+        "radius": 8,
+        "baseHp": 62,
+        "baseSpeed": 130,
+        "attack": "split"
+      },
+      "appearances": [
+        {
+          "world": 9,
+          "role": "recurrent"
+        },
+        {
+          "world": 14,
+          "role": "recurrent"
+        }
+      ],
+      "bossAppearances": [],
+      "sprite": {
+        "format": "canvas_procedural",
+        "key": "syllStolon",
+        "renderer": "getWormSprite",
+        "png": null
+      }
+    },
+    {
+      "id": "flabegraviera",
+      "name": "Flabegraviera · Flabelligeridae",
+      "stats": {
+        "color": "#d7b8c0",
+        "radius": 15,
+        "baseHp": 149,
+        "baseSpeed": 67,
+        "attack": "toxic"
+      },
+      "appearances": [
+        {
+          "world": 10,
+          "role": "unique"
+        },
+        {
+          "world": 14,
+          "role": "recurrent"
+        }
+      ],
+      "bossAppearances": [],
+      "sprite": {
+        "format": "canvas_procedural",
+        "key": "flabegraviera",
+        "renderer": "getWormSprite",
+        "png": null
+      }
+    },
+    {
+      "id": "aphelochaeta",
+      "name": "Aphelochaeta · Cirratulidae",
+      "stats": {
+        "color": "#b4adc9",
+        "radius": 13,
+        "baseHp": 87,
+        "baseSpeed": 75,
+        "attack": "toxic"
+      },
+      "appearances": [
+        {
+          "world": 10,
+          "role": "unique"
+        },
+        {
+          "world": 14,
+          "role": "recurrent"
+        }
+      ],
+      "bossAppearances": [],
+      "sprite": {
+        "format": "canvas_procedural",
+        "key": "aphelochaeta",
+        "renderer": "getWormSprite",
+        "png": null
+      }
+    },
+    {
+      "id": "perkinsiana",
+      "name": "Perkinsiana · Sabellidae",
+      "stats": {
+        "color": "#d5c6df",
+        "radius": 14,
+        "baseHp": 97,
+        "baseSpeed": 65,
+        "attack": "circle"
+      },
+      "appearances": [
+        {
+          "world": 10,
+          "role": "unique"
+        },
+        {
+          "world": 14,
+          "role": "recurrent"
+        }
+      ],
+      "bossAppearances": [],
+      "sprite": {
+        "format": "canvas_procedural",
+        "key": "perkinsiana",
+        "renderer": "getWormSprite",
+        "png": null
+      }
+    },
+    {
+      "id": "hesiocaeca",
+      "name": "Hesiocaeca · Hesionidae",
+      "stats": {
+        "color": "#caadac",
+        "radius": 10,
+        "baseHp": 80,
+        "baseSpeed": 132,
+        "attack": "zig"
+      },
+      "appearances": [
+        {
+          "world": 11,
+          "role": "unique"
+        },
+        {
+          "world": 14,
+          "role": "recurrent"
+        }
+      ],
+      "bossAppearances": [],
+      "sprite": {
+        "format": "canvas_procedural",
+        "key": "hesiocaeca",
+        "renderer": "getWormSprite",
+        "png": null
+      }
+    },
+    {
+      "id": "brada",
+      "name": "Brada · Flabelligeridae",
+      "stats": {
+        "color": "#b4a29a",
+        "radius": 15,
+        "baseHp": 149,
+        "baseSpeed": 67,
+        "attack": "toxic"
+      },
+      "appearances": [
+        {
+          "world": 11,
+          "role": "unique"
+        },
+        {
+          "world": 14,
+          "role": "recurrent"
+        }
+      ],
+      "bossAppearances": [],
+      "sprite": {
+        "format": "canvas_procedural",
+        "key": "brada",
+        "renderer": "getWormSprite",
+        "png": null
+      }
+    },
+    {
+      "id": "bathykurila",
+      "name": "Bathykurila · Polynoidae",
+      "stats": {
+        "color": "#c8baa5",
+        "radius": 17,
+        "baseHp": 175,
+        "baseSpeed": 65,
+        "attack": "armor"
+      },
+      "appearances": [
+        {
+          "world": 11,
+          "role": "unique"
+        },
+        {
+          "world": 14,
+          "role": "recurrent"
+        }
+      ],
+      "bossAppearances": [],
+      "sprite": {
+        "format": "canvas_procedural",
+        "key": "bathykurila",
+        "renderer": "getWormSprite",
+        "png": null
+      }
+    },
+    {
+      "id": "ophryotrocha",
+      "name": "Ophryotrocha · Dorvilleidae",
+      "stats": {
+        "color": "#d9ad9c",
+        "radius": 8,
+        "baseHp": 62,
+        "baseSpeed": 130,
+        "attack": "double"
+      },
+      "appearances": [
+        {
+          "world": 11,
+          "role": "recurrent"
+        },
+        {
+          "world": 14,
+          "role": "recurrent"
+        }
+      ],
+      "bossAppearances": [],
+      "sprite": {
+        "format": "canvas_procedural",
+        "key": "ophryotrocha",
+        "renderer": "getWormSprite",
+        "png": null
+      }
+    },
+    {
+      "id": "branchinotogluma",
+      "name": "Branchinotogluma · Polynoidae",
+      "stats": {
+        "color": "#b69587",
+        "radius": 17,
+        "baseHp": 175,
+        "baseSpeed": 65,
+        "attack": "volley"
+      },
+      "appearances": [
+        {
+          "world": 12,
+          "role": "unique"
+        },
+        {
+          "world": 14,
+          "role": "recurrent"
+        }
+      ],
+      "bossAppearances": [],
+      "sprite": {
+        "format": "canvas_procedural",
+        "key": "branchinotogluma",
+        "renderer": "getWormSprite",
+        "png": null
+      }
+    },
+    {
+      "id": "amphisamytha",
+      "name": "Amphisamytha · Ampharetidae",
+      "stats": {
+        "color": "#c9b89b",
+        "radius": 14,
+        "baseHp": 124,
+        "baseSpeed": 60,
+        "attack": "fan"
+      },
+      "appearances": [
+        {
+          "world": 12,
+          "role": "unique"
+        },
+        {
+          "world": 14,
+          "role": "recurrent"
+        }
+      ],
+      "bossAppearances": [],
+      "sprite": {
+        "format": "canvas_procedural",
+        "key": "amphisamytha",
+        "renderer": "getWormSprite",
+        "png": null
+      }
+    },
+    {
+      "id": "hesiolyra",
+      "name": "Hesiolyra · Hesionidae",
+      "stats": {
+        "color": "#d4b8a9",
+        "radius": 10,
+        "baseHp": 80,
+        "baseSpeed": 132,
+        "attack": "zig"
+      },
+      "appearances": [
+        {
+          "world": 12,
+          "role": "unique"
+        },
+        {
+          "world": 14,
+          "role": "recurrent"
+        }
+      ],
+      "bossAppearances": [],
+      "sprite": {
+        "format": "canvas_procedural",
+        "key": "hesiolyra",
+        "renderer": "getWormSprite",
+        "png": null
+      }
+    },
+    {
+      "id": "macellicephaloides",
+      "name": "Macellicephaloides · Polynoidae",
+      "stats": {
+        "color": "#c9c4d8",
+        "radius": 17,
+        "baseHp": 175,
+        "baseSpeed": 65,
+        "attack": "volley"
+      },
+      "appearances": [
+        {
+          "world": 13,
+          "role": "unique"
+        },
+        {
+          "world": 14,
+          "role": "recurrent"
+        }
+      ],
+      "bossAppearances": [],
+      "sprite": {
+        "format": "canvas_procedural",
+        "key": "macellicephaloides",
+        "renderer": "getWormSprite",
+        "png": null
+      }
+    },
+    {
+      "id": "mechOrbin",
+      "name": "Orbiniidae robótico",
+      "stats": {
+        "color": "#b7d5bb",
+        "radius": 20,
+        "baseHp": 214,
+        "baseSpeed": 59,
+        "attack": "laser"
+      },
+      "appearances": [],
+      "bossAppearances": [
+        {
+          "world": 14,
+          "id": "mechOrbin",
+          "name": "Orbiniidae robótico"
+        }
+      ],
+      "sprite": {
+        "format": "canvas_procedural",
+        "key": "mechOrbin",
+        "renderer": "getWormSprite",
+        "png": null
+      }
+    },
+    {
+      "id": "mechTere",
+      "name": "Terebellidae robótico",
+      "stats": {
+        "color": "#d4b594",
+        "radius": 15,
+        "baseHp": 117,
+        "baseSpeed": 66,
+        "attack": "laser"
+      },
+      "appearances": [],
+      "bossAppearances": [
+        {
+          "world": 14,
+          "id": "mechTere",
+          "name": "Terebellidae robótico"
+        }
+      ],
+      "sprite": {
+        "format": "canvas_procedural",
+        "key": "mechTere",
+        "renderer": "getWormSprite",
+        "png": null
+      }
+    },
+    {
+      "id": "mechChaet",
+      "name": "Quetóptero robótico",
+      "stats": {
+        "color": "#8ee8ef",
+        "radius": 18,
+        "baseHp": 260,
+        "baseSpeed": 43,
+        "attack": "laser"
+      },
+      "appearances": [
+        {
+          "world": 14,
+          "role": "unique"
+        }
+      ],
+      "bossAppearances": [],
+      "sprite": {
+        "format": "canvas_procedural",
+        "key": "mechChaet",
+        "renderer": "getWormSprite",
+        "png": null
+      }
+    },
+    {
+      "id": "mechSyll",
+      "name": "Sílido robótico",
+      "stats": {
+        "color": "#d3a4f4",
+        "radius": 11,
+        "baseHp": 180,
+        "baseSpeed": 96,
+        "attack": "mucus"
+      },
+      "appearances": [
+        {
+          "world": 14,
+          "role": "unique"
+        }
+      ],
+      "bossAppearances": [],
+      "sprite": {
+        "format": "canvas_procedural",
+        "key": "mechSyll",
+        "renderer": "getWormSprite",
+        "png": null
+      }
+    },
+    {
+      "id": "mechSabel",
+      "name": "Sabellárido robótico",
+      "stats": {
+        "color": "#f2cc87",
+        "radius": 19,
+        "baseHp": 320,
+        "baseSpeed": 26,
+        "attack": "volley"
+      },
+      "appearances": [
+        {
+          "world": 14,
+          "role": "unique"
+        }
+      ],
+      "bossAppearances": [],
+      "sprite": {
+        "format": "canvas_procedural",
+        "key": "mechSabel",
+        "renderer": "getWormSprite",
+        "png": null
+      }
+    },
+    {
+      "id": "epitoke",
+      "name": "Nereididae · epítoke fantástico",
+      "stats": {
+        "color": "#e39ac6",
+        "radius": 40,
+        "baseHp": 620,
+        "baseSpeed": 84,
+        "attack": "swim"
+      },
+      "appearances": [],
+      "bossAppearances": [
+        {
+          "world": 14,
+          "id": "epitoke",
+          "name": "Poliqueto epitoquia"
+        }
+      ],
+      "sprite": {
+        "format": "canvas_procedural",
+        "key": "epitoke",
+        "renderer": "getWormSprite",
+        "png": null
+      }
+    },
+    {
+      "id": "epitokeYoung",
+      "name": "Nereididae · cría de epítoke",
+      "stats": {
+        "color": "#f4b8dc",
+        "radius": 9,
+        "baseHp": 95,
+        "baseSpeed": 145,
+        "attack": "zig"
+      },
+      "appearances": [],
+      "bossAppearances": [],
+      "sprite": {
+        "format": "canvas_procedural",
+        "key": "epitokeYoung",
+        "renderer": "getWormSprite",
+        "png": null
+      }
+    },
+    {
+      "id": "euniceTitan",
+      "name": "Eunicidae · Eunice aphroditois fantástico",
+      "stats": {
+        "color": "#bf684e",
+        "radius": 68,
+        "baseHp": 1100,
+        "baseSpeed": 66,
+        "attack": "charge"
+      },
+      "appearances": [],
+      "bossAppearances": [
+        {
+          "world": 14,
+          "id": "euniceTitan",
+          "name": "Eunice aphroditois (gusano Bobbit)"
+        }
+      ],
+      "sprite": {
+        "format": "canvas_procedural",
+        "key": "euniceTitan",
+        "renderer": "getWormSprite",
+        "png": null
+      }
+    }
+  ]
+}

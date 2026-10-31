@@ -1,0 +1,192 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://poliquetos.local/schemas/bosses.schema.json",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "id": {
+        "type": "string",
+        "pattern": "^[a-z][a-z0-9_]*$"
+      },
+      "nombre": {
+        "type": "string",
+        "minLength": 1
+      },
+      "vida": {
+        "type": "number",
+        "exclusiveMinimum": 0
+      },
+      "tamano": {
+        "type": "array",
+        "items": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "minItems": 2,
+        "maxItems": 2
+      },
+      "segmentos": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "string",
+              "pattern": "^[a-z][a-z0-9_]*$"
+            },
+            "hitbox": {
+              "type": "array",
+              "items": {
+                "type": "number",
+                "minimum": 0
+              },
+              "minItems": 4,
+              "maxItems": 4
+            },
+            "debil": {
+              "type": "boolean"
+            },
+            "mult_dano": {
+              "type": "number",
+              "exclusiveMinimum": 0
+            }
+          },
+          "required": [
+            "id",
+            "hitbox",
+            "debil",
+            "mult_dano"
+          ],
+          "additionalProperties": false
+        },
+        "minItems": 1
+      },
+      "fases": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "desde_pct": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 100
+            },
+            "hasta_pct": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 100
+            },
+            "patrones": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "pattern": "^[a-z][a-z0-9_]*$"
+              },
+              "minItems": 1
+            }
+          },
+          "required": [
+            "desde_pct",
+            "hasta_pct",
+            "patrones"
+          ],
+          "additionalProperties": false
+        },
+        "minItems": 1
+      },
+      "recompensa_extra": {
+        "type": "integer",
+        "minimum": 0
+      },
+      "objeto_unico": {
+        "anyOf": [
+          {
+            "type": "string",
+            "pattern": "^[a-z][a-z0-9_]*$"
+          },
+          {
+            "type": "null"
+          }
+        ]
+      }
+    },
+    "required": [
+      "id",
+      "nombre",
+      "vida",
+      "tamano",
+      "segmentos",
+      "fases",
+      "recompensa_extra",
+      "objeto_unico"
+    ],
+    "additionalProperties": false
+  },
+  "minItems": 1,
+  "examples": [
+    [
+      {
+        "id": "boss_w01_nereididae",
+        "nombre": "Nereidae",
+        "vida": 1750,
+        "tamano": [
+          180,
+          120
+        ],
+        "segmentos": [
+          {
+            "id": "cabeza",
+            "hitbox": [
+              0,
+              0,
+              48,
+              48
+            ],
+            "debil": true,
+            "mult_dano": 2
+          },
+          {
+            "id": "cuerpo",
+            "hitbox": [
+              48,
+              0,
+              132,
+              48
+            ],
+            "debil": false,
+            "mult_dano": 0.5
+          }
+        ],
+        "fases": [
+          {
+            "desde_pct": 100,
+            "hasta_pct": 66,
+            "patrones": [
+              "ondular_vertical",
+              "balas_apuntadas_3"
+            ]
+          },
+          {
+            "desde_pct": 66,
+            "hasta_pct": 33,
+            "patrones": [
+              "faringe_embestida",
+              "abanico_5"
+            ]
+          },
+          {
+            "desde_pct": 33,
+            "hasta_pct": 0,
+            "patrones": [
+              "dividir_en_dos",
+              "anillo_12"
+            ]
+          }
+        ],
+        "recompensa_extra": 0,
+        "objeto_unico": null
+      }
+    ]
+  ]
+}

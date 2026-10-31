@@ -1,0 +1,119 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://poliquetos.local/schemas/shop.schema.json",
+  "type": "object",
+  "properties": {
+    "mejoras": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[a-z][a-z0-9_]*$"
+          },
+          "rangos": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "efecto_por_rango": {
+            "type": "object",
+            "minProperties": 1,
+            "additionalProperties": {
+              "type": "number"
+            }
+          },
+          "costos": {
+            "type": "array",
+            "items": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "minItems": 1
+          }
+        },
+        "required": [
+          "id",
+          "rangos",
+          "efecto_por_rango",
+          "costos"
+        ],
+        "additionalProperties": false
+      },
+      "minItems": 1
+    },
+    "equipo": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[a-z][a-z0-9_]*$"
+          },
+          "acto": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 4
+          },
+          "costo": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "efecto": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "required": [
+          "id",
+          "acto",
+          "costo",
+          "efecto"
+        ],
+        "additionalProperties": false
+      },
+      "minItems": 1
+    },
+    "reembolso_misma_visita": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1
+    }
+  },
+  "required": [
+    "mejoras",
+    "equipo",
+    "reembolso_misma_visita"
+  ],
+  "additionalProperties": false,
+  "examples": [
+    {
+      "mejoras": [
+        {
+          "id": "escudo_max",
+          "rangos": 5,
+          "efecto_por_rango": {
+            "escudo": 20
+          },
+          "costos": [
+            250,
+            450,
+            700,
+            1000,
+            1400
+          ]
+        }
+      ],
+      "equipo": [
+        {
+          "id": "draga",
+          "acto": 1,
+          "costo": 600,
+          "efecto": "autorecoger_96px"
+        }
+      ],
+      "reembolso_misma_visita": 1
+    }
+  ]
+}

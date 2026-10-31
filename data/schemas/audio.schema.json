@@ -1,0 +1,55 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://poliquetos.local/schemas/audio.schema.json",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "id": {
+        "type": "string",
+        "pattern": "^[a-z][a-z0-9_]*$"
+      },
+      "ruta": {
+        "type": "string",
+        "minLength": 1
+      },
+      "volumen": {
+        "type": "number",
+        "minimum": 0,
+        "maximum": 1
+      },
+      "loop_start": {
+        "type": "number",
+        "minimum": 0
+      },
+      "loop_end": {
+        "type": "number",
+        "exclusiveMinimum": 0
+      },
+      "bpm": {
+        "type": "number",
+        "exclusiveMinimum": 0
+      }
+    },
+    "required": [
+      "id",
+      "ruta",
+      "volumen",
+      "loop_start",
+      "loop_end"
+    ],
+    "additionalProperties": false
+  },
+  "minItems": 1,
+  "examples": [
+    [
+      {
+        "id": "w01_level_instr",
+        "ruta": "assets/audio/music/w01_level_instr.ogg",
+        "volumen": 0.7,
+        "loop_start": 0,
+        "loop_end": 10
+      }
+    ]
+  ]
+}

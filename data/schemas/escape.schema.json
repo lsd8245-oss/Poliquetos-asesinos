@@ -1,0 +1,112 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://poliquetos.local/schemas/escape.schema.json",
+  "type": "object",
+  "properties": {
+    "id": {
+      "const": 15
+    },
+    "duracion_seg": {
+      "type": "number",
+      "exclusiveMinimum": 0
+    },
+    "scroll_px_s": {
+      "type": "number",
+      "exclusiveMinimum": 0
+    },
+    "enemigos_total": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "checkpoint_cada_seg": {
+      "type": "number",
+      "exclusiveMinimum": 0
+    },
+    "recompensa": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "tramos": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "inicio_seg": {
+            "type": "number",
+            "minimum": 0
+          },
+          "fin_seg": {
+            "type": "number",
+            "exclusiveMinimum": 0
+          },
+          "enemigos": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "peligros": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "pattern": "^[a-z][a-z0-9_]*$"
+            },
+            "minItems": 0
+          }
+        },
+        "required": [
+          "inicio_seg",
+          "fin_seg",
+          "enemigos",
+          "peligros"
+        ],
+        "additionalProperties": false
+      },
+      "minItems": 1
+    }
+  },
+  "required": [
+    "id",
+    "duracion_seg",
+    "scroll_px_s",
+    "enemigos_total",
+    "checkpoint_cada_seg",
+    "recompensa",
+    "tramos"
+  ],
+  "additionalProperties": false,
+  "examples": [
+    {
+      "id": 15,
+      "duracion_seg": 300,
+      "scroll_px_s": 120,
+      "enemigos_total": 90,
+      "checkpoint_cada_seg": 90,
+      "recompensa": 1000,
+      "tramos": [
+        {
+          "inicio_seg": 0,
+          "fin_seg": 90,
+          "enemigos": 30,
+          "peligros": [
+            "compuertas",
+            "laseres"
+          ]
+        },
+        {
+          "inicio_seg": 90,
+          "fin_seg": 210,
+          "enemigos": 40,
+          "peligros": [
+            "escombros",
+            "corrientes"
+          ]
+        },
+        {
+          "inicio_seg": 210,
+          "fin_seg": 300,
+          "enemigos": 20,
+          "peligros": []
+        }
+      ]
+    }
+  ]
+}
