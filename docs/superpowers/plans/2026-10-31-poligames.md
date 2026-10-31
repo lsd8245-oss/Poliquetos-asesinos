@@ -60,4 +60,4 @@
 - [x] Ejecutar node --test y smoke funcional offline de sector, descanso, compra, astillero, reintento.
 - [x] Revisión independiente; corregir fallos sustantivos con prueba de regresión.
 - [x] Documentar controles, campaña y entrega; git diff --check.
-- [ ] Commit y publicación de rama instrucciones-poligames; verificar remoto y enlace GitHub.
+- [x] Commit y publicación de rama instrucciones-poligames; verificar remoto y enlace GitHub.
