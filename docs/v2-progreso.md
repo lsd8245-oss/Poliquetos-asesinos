@@ -75,3 +75,7 @@ HojasCSV generadas antes de programar la tienda. Totales17900base/21480bono/3045
 ### Fase7
 
 Menús nativos de portada, dificultad, tres ranuras, pausa con cuenta atrás, muerte, resultados y descanso; astillero3zonas, skins por logros, remapeo teclado/mando, opciones y selector exclusivo dePruebas. Guardado JSONuser:// con .bak, importación/exportación, perfiles independientes y restauración del descanso.133comprobaciones deUI y89de tienda/guardado aprobadas.
+
+### Fase8
+
+Contenido completo de los mundos1–13 enJSON: familias únicas/recurrentes, conteos40/60, portadoras y escudos, minijefes y jefes. Pruebas Python verifican conteos, composición y tiempos de cada mundo. Datos orgánicos preservados de la tabla4.2.

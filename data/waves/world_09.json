@@ -1,0 +1,242 @@
+{
+  "mundo": 9,
+  "semilla": 0,
+  "eventos": [
+    {
+      "t": 10.0,
+      "tipo": "oleada",
+      "enemigo": "pontod",
+      "cantidad": 8,
+      "formacion": "linea_vertical",
+      "y": 60,
+      "portadora": true,
+      "separacion_px": 32,
+      "separacion_seg": 0.3,
+      "item": "rojo"
+    },
+    {
+      "t": 19.875,
+      "tipo": "oleada",
+      "enemigo": "lopado",
+      "cantidad": 8,
+      "formacion": "linea_horizontal",
+      "y": 110,
+      "portadora": false,
+      "separacion_px": 32,
+      "separacion_seg": 0.3
+    },
+    {
+      "t": 25,
+      "tipo": "peligro",
+      "id": "medusas",
+      "duracion_seg": 10,
+      "y": 280
+    },
+    {
+      "t": 29.75,
+      "tipo": "oleada",
+      "enemigo": "typhlo",
+      "cantidad": 7,
+      "formacion": "v",
+      "y": 168,
+      "portadora": false,
+      "separacion_px": 32,
+      "separacion_seg": 0.3
+    },
+    {
+      "t": 39.625,
+      "tipo": "oleada",
+      "enemigo": "poeo",
+      "cantidad": 8,
+      "formacion": "v_invertida",
+      "y": 220,
+      "portadora": true,
+      "separacion_px": 32,
+      "separacion_seg": 0.3,
+      "item": "verde"
+    },
+    {
+      "t": 49.5,
+      "tipo": "oleada",
+      "enemigo": "iospil",
+      "cantidad": 8,
+      "formacion": "zigzag",
+      "y": 276,
+      "portadora": false,
+      "separacion_px": 32,
+      "separacion_seg": 0.3
+    },
+    {
+      "t": 54.0,
+      "tipo": "escudo",
+      "item": "amarillo",
+      "y": 168
+    },
+    {
+      "t": 60.0,
+      "tipo": "oleada",
+      "enemigo": "syll_stolon",
+      "cantidad": 13,
+      "formacion": "circulo",
+      "y": 60,
+      "portadora": false,
+      "separacion_px": 32,
+      "separacion_seg": 0.3
+    },
+    {
+      "t": 69.25,
+      "tipo": "oleada",
+      "enemigo": "alciop",
+      "cantidad": 7,
+      "formacion": "doble_columna",
+      "y": 110,
+      "portadora": true,
+      "separacion_px": 32,
+      "separacion_seg": 0.3,
+      "item": "azul"
+    },
+    {
+      "t": 79.125,
+      "tipo": "oleada",
+      "enemigo": "alciop",
+      "cantidad": 6,
+      "formacion": "ambos_lados",
+      "y": 168,
+      "portadora": false,
+      "separacion_px": 32,
+      "separacion_seg": 0.3
+    },
+    {
+      "t": 90.0,
+      "tipo": "minijefe",
+      "id": "mini_w09_lopado",
+      "escoltas": {
+        "enemigo": "lopado",
+        "cantidad": 2,
+        "vida": 16,
+        "tamano": [
+          40,
+          32
+        ]
+      }
+    },
+    {
+      "t": 150.0,
+      "tipo": "oleada",
+      "enemigo": "syll_stolon",
+      "cantidad": 20,
+      "formacion": "v_invertida",
+      "y": 60,
+      "portadora": false,
+      "separacion_px": 32,
+      "separacion_seg": 0.3
+    },
+    {
+      "t": 155.0,
+      "tipo": "escudo",
+      "item": "amarillo",
+      "y": 168
+    },
+    {
+      "t": 159.875,
+      "tipo": "oleada",
+      "enemigo": "typhlo",
+      "cantidad": 12,
+      "formacion": "zigzag",
+      "y": 110,
+      "portadora": true,
+      "separacion_px": 32,
+      "separacion_seg": 0.3,
+      "item": "rojo"
+    },
+    {
+      "t": 160.0,
+      "tipo": "peligro",
+      "id": "medusas",
+      "duracion_seg": 10,
+      "y": 280
+    },
+    {
+      "t": 169.75,
+      "tipo": "oleada",
+      "enemigo": "poeo",
+      "cantidad": 11,
+      "formacion": "circulo",
+      "y": 168,
+      "portadora": false,
+      "separacion_px": 32,
+      "separacion_seg": 0.3
+    },
+    {
+      "t": 179.625,
+      "tipo": "oleada",
+      "enemigo": "alciop",
+      "cantidad": 10,
+      "formacion": "doble_columna",
+      "y": 220,
+      "portadora": false,
+      "separacion_px": 32,
+      "separacion_seg": 0.3
+    },
+    {
+      "t": 189.5,
+      "tipo": "oleada",
+      "enemigo": "alciop",
+      "cantidad": 9,
+      "formacion": "ambos_lados",
+      "y": 276,
+      "portadora": true,
+      "separacion_px": 32,
+      "separacion_seg": 0.3,
+      "item": "verde"
+    },
+    {
+      "t": 199.375,
+      "tipo": "oleada",
+      "enemigo": "lopado",
+      "cantidad": 12,
+      "formacion": "diagonal",
+      "y": 60,
+      "portadora": false,
+      "separacion_px": 32,
+      "separacion_seg": 0.3
+    },
+    {
+      "t": 209.25,
+      "tipo": "oleada",
+      "enemigo": "pontod",
+      "cantidad": 12,
+      "formacion": "linea_vertical",
+      "y": 110,
+      "portadora": false,
+      "separacion_px": 32,
+      "separacion_seg": 0.3
+    },
+    {
+      "t": 219.125,
+      "tipo": "oleada",
+      "enemigo": "iospil",
+      "cantidad": 11,
+      "formacion": "linea_horizontal",
+      "y": 168,
+      "portadora": true,
+      "separacion_px": 32,
+      "separacion_seg": 0.3,
+      "item": "azul"
+    },
+    {
+      "t": 228,
+      "tipo": "escudo",
+      "item": "amarillo",
+      "y": 168
+    },
+    {
+      "t": 230,
+      "tipo": "alerta_jefe",
+      "id": "boss_w09_tomo",
+      "jefes": [
+        "boss_w09_tomo"
+      ]
+    }
+  ]
+}

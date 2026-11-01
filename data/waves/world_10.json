@@ -1,0 +1,322 @@
+{
+  "mundo": 10,
+  "semilla": 0,
+  "eventos": [
+    {
+      "t": 10.0,
+      "tipo": "oleada",
+      "enemigo": "flabegraviera",
+      "cantidad": 9,
+      "formacion": "linea_vertical",
+      "y": 60,
+      "portadora": true,
+      "separacion_px": 32,
+      "separacion_seg": 0.3,
+      "item": "rojo"
+    },
+    {
+      "t": 19.875,
+      "tipo": "oleada",
+      "enemigo": "aphelochaeta",
+      "cantidad": 9,
+      "formacion": "linea_horizontal",
+      "y": 110,
+      "portadora": false,
+      "separacion_px": 32,
+      "separacion_seg": 0.3
+    },
+    {
+      "t": 25,
+      "tipo": "peligro",
+      "id": "icebergs",
+      "duracion_seg": 10,
+      "y": 280
+    },
+    {
+      "t": 29.75,
+      "tipo": "oleada",
+      "enemigo": "mald",
+      "cantidad": 10,
+      "formacion": "v",
+      "y": 168,
+      "portadora": false,
+      "separacion_px": 32,
+      "separacion_seg": 0.3
+    },
+    {
+      "t": 37,
+      "tipo": "peligro",
+      "id": "granizo",
+      "duracion_seg": 10,
+      "y": 40
+    },
+    {
+      "t": 39.625,
+      "tipo": "oleada",
+      "enemigo": "perkinsiana",
+      "cantidad": 10,
+      "formacion": "v_invertida",
+      "y": 220,
+      "portadora": false,
+      "separacion_px": 32,
+      "separacion_seg": 0.3
+    },
+    {
+      "t": 49.5,
+      "tipo": "oleada",
+      "enemigo": "amphar",
+      "cantidad": 10,
+      "formacion": "zigzag",
+      "y": 276,
+      "portadora": true,
+      "separacion_px": 32,
+      "separacion_seg": 0.3,
+      "item": "verde"
+    },
+    {
+      "t": 54.0,
+      "tipo": "escudo",
+      "item": "amarillo",
+      "y": 168
+    },
+    {
+      "t": 60.0,
+      "tipo": "oleada",
+      "enemigo": "spio",
+      "cantidad": 11,
+      "formacion": "circulo",
+      "y": 60,
+      "portadora": false,
+      "separacion_px": 32,
+      "separacion_seg": 0.3
+    },
+    {
+      "t": 69.25,
+      "tipo": "oleada",
+      "enemigo": "serp",
+      "cantidad": 11,
+      "formacion": "doble_columna",
+      "y": 110,
+      "portadora": false,
+      "separacion_px": 32,
+      "separacion_seg": 0.3
+    },
+    {
+      "t": 79.125,
+      "tipo": "oleada",
+      "enemigo": "alciop",
+      "cantidad": 10,
+      "formacion": "ambos_lados",
+      "y": 168,
+      "portadora": false,
+      "separacion_px": 32,
+      "separacion_seg": 0.3
+    },
+    {
+      "t": 90.0,
+      "tipo": "minijefe",
+      "id": "mini_w10_flabegraviera",
+      "escoltas": {
+        "enemigo": "aphelochaeta",
+        "cantidad": 2,
+        "vida": 18,
+        "tamano": [
+          40,
+          32
+        ]
+      }
+    },
+    {
+      "t": 150.0,
+      "tipo": "oleada",
+      "enemigo": "aphelochaeta",
+      "cantidad": 15,
+      "formacion": "v_invertida",
+      "y": 60,
+      "portadora": true,
+      "separacion_px": 32,
+      "separacion_seg": 0.3,
+      "item": "azul"
+    },
+    {
+      "t": 155.0,
+      "tipo": "escudo",
+      "item": "amarillo",
+      "y": 168
+    },
+    {
+      "t": 155.643,
+      "tipo": "oleada",
+      "enemigo": "mald",
+      "cantidad": 7,
+      "formacion": "zigzag",
+      "y": 110,
+      "portadora": false,
+      "separacion_px": 32,
+      "separacion_seg": 0.3
+    },
+    {
+      "t": 160.0,
+      "tipo": "peligro",
+      "id": "icebergs",
+      "duracion_seg": 10,
+      "y": 280
+    },
+    {
+      "t": 161.286,
+      "tipo": "oleada",
+      "enemigo": "mald",
+      "cantidad": 7,
+      "formacion": "circulo",
+      "y": 168,
+      "portadora": false,
+      "separacion_px": 32,
+      "separacion_seg": 0.3
+    },
+    {
+      "t": 166.929,
+      "tipo": "oleada",
+      "enemigo": "serp",
+      "cantidad": 8,
+      "formacion": "doble_columna",
+      "y": 220,
+      "portadora": false,
+      "separacion_px": 32,
+      "separacion_seg": 0.3
+    },
+    {
+      "t": 168.0,
+      "tipo": "peligro",
+      "id": "granizo",
+      "duracion_seg": 10,
+      "y": 40
+    },
+    {
+      "t": 172.571,
+      "tipo": "oleada",
+      "enemigo": "serp",
+      "cantidad": 8,
+      "formacion": "ambos_lados",
+      "y": 276,
+      "portadora": false,
+      "separacion_px": 32,
+      "separacion_seg": 0.3
+    },
+    {
+      "t": 178.214,
+      "tipo": "oleada",
+      "enemigo": "alciop",
+      "cantidad": 8,
+      "formacion": "diagonal",
+      "y": 60,
+      "portadora": true,
+      "separacion_px": 32,
+      "separacion_seg": 0.3,
+      "item": "rojo"
+    },
+    {
+      "t": 183.857,
+      "tipo": "oleada",
+      "enemigo": "alciop",
+      "cantidad": 8,
+      "formacion": "linea_vertical",
+      "y": 110,
+      "portadora": false,
+      "separacion_px": 32,
+      "separacion_seg": 0.3
+    },
+    {
+      "t": 189.5,
+      "tipo": "oleada",
+      "enemigo": "spio",
+      "cantidad": 16,
+      "formacion": "linea_horizontal",
+      "y": 168,
+      "portadora": false,
+      "separacion_px": 32,
+      "separacion_seg": 0.3
+    },
+    {
+      "t": 195.143,
+      "tipo": "oleada",
+      "enemigo": "amphar",
+      "cantidad": 7,
+      "formacion": "v",
+      "y": 220,
+      "portadora": false,
+      "separacion_px": 32,
+      "separacion_seg": 0.3
+    },
+    {
+      "t": 200.786,
+      "tipo": "oleada",
+      "enemigo": "amphar",
+      "cantidad": 7,
+      "formacion": "v_invertida",
+      "y": 276,
+      "portadora": true,
+      "separacion_px": 32,
+      "separacion_seg": 0.3,
+      "item": "verde"
+    },
+    {
+      "t": 206.429,
+      "tipo": "oleada",
+      "enemigo": "flabegraviera",
+      "cantidad": 8,
+      "formacion": "zigzag",
+      "y": 60,
+      "portadora": false,
+      "separacion_px": 32,
+      "separacion_seg": 0.3
+    },
+    {
+      "t": 212.071,
+      "tipo": "oleada",
+      "enemigo": "flabegraviera",
+      "cantidad": 7,
+      "formacion": "circulo",
+      "y": 110,
+      "portadora": false,
+      "separacion_px": 32,
+      "separacion_seg": 0.3
+    },
+    {
+      "t": 217.714,
+      "tipo": "oleada",
+      "enemigo": "perkinsiana",
+      "cantidad": 7,
+      "formacion": "doble_columna",
+      "y": 168,
+      "portadora": false,
+      "separacion_px": 32,
+      "separacion_seg": 0.3
+    },
+    {
+      "t": 223.357,
+      "tipo": "oleada",
+      "enemigo": "perkinsiana",
+      "cantidad": 7,
+      "formacion": "ambos_lados",
+      "y": 220,
+      "portadora": true,
+      "separacion_px": 32,
+      "separacion_seg": 0.3,
+      "item": "azul"
+    },
+    {
+      "t": 228,
+      "tipo": "escudo",
+      "item": "amarillo",
+      "y": 168
+    },
+    {
+      "t": 230,
+      "tipo": "alerta_jefe",
+      "id": "boss_w10_eulagisca",
+      "jefes": [
+        "boss_w10_eulagisca"
+      ]
+    }
+  ]
+}

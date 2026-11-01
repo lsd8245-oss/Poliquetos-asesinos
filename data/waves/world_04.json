@@ -1,0 +1,242 @@
+{
+  "mundo": 4,
+  "semilla": 0,
+  "eventos": [
+    {
+      "t": 10.0,
+      "tipo": "oleada",
+      "enemigo": "spirorbis",
+      "cantidad": 7,
+      "formacion": "linea_vertical",
+      "y": 60,
+      "portadora": true,
+      "separacion_px": 32,
+      "separacion_seg": 0.3,
+      "item": "rojo"
+    },
+    {
+      "t": 16.125,
+      "tipo": "oleada",
+      "enemigo": "myxicola",
+      "cantidad": 6,
+      "formacion": "linea_horizontal",
+      "y": 110,
+      "portadora": false,
+      "separacion_px": 32,
+      "separacion_seg": 0.3
+    },
+    {
+      "t": 22.25,
+      "tipo": "oleada",
+      "enemigo": "spinther",
+      "cantidad": 7,
+      "formacion": "v",
+      "y": 168,
+      "portadora": false,
+      "separacion_px": 32,
+      "separacion_seg": 0.3
+    },
+    {
+      "t": 25,
+      "tipo": "peligro",
+      "id": "kelp",
+      "duracion_seg": 10,
+      "y": 280
+    },
+    {
+      "t": 28.375,
+      "tipo": "oleada",
+      "enemigo": "trocho",
+      "cantidad": 6,
+      "formacion": "v_invertida",
+      "y": 220,
+      "portadora": true,
+      "separacion_px": 32,
+      "separacion_seg": 0.3,
+      "item": "verde"
+    },
+    {
+      "t": 34.5,
+      "tipo": "oleada",
+      "enemigo": "cteno",
+      "cantidad": 7,
+      "formacion": "zigzag",
+      "y": 276,
+      "portadora": false,
+      "separacion_px": 32,
+      "separacion_seg": 0.3
+    },
+    {
+      "t": 36.0,
+      "tipo": "escudo",
+      "item": "amarillo",
+      "y": 168
+    },
+    {
+      "t": 45.0,
+      "tipo": "oleada",
+      "enemigo": "syll",
+      "cantidad": 7,
+      "formacion": "circulo",
+      "y": 60,
+      "portadora": false,
+      "separacion_px": 32,
+      "separacion_seg": 0.3
+    },
+    {
+      "t": 46.75,
+      "tipo": "oleada",
+      "enemigo": "phyll",
+      "cantidad": 7,
+      "formacion": "doble_columna",
+      "y": 110,
+      "portadora": true,
+      "separacion_px": 32,
+      "separacion_seg": 0.3,
+      "item": "azul"
+    },
+    {
+      "t": 52.875,
+      "tipo": "oleada",
+      "enemigo": "cirrat",
+      "cantidad": 7,
+      "formacion": "ambos_lados",
+      "y": 168,
+      "portadora": false,
+      "separacion_px": 32,
+      "separacion_seg": 0.3
+    },
+    {
+      "t": 60.0,
+      "tipo": "minijefe",
+      "id": "mini_w04_myxicola",
+      "escoltas": {
+        "enemigo": "myxicola",
+        "cantidad": 2,
+        "vida": 10,
+        "tamano": [
+          40,
+          32
+        ]
+      }
+    },
+    {
+      "t": 120.0,
+      "tipo": "oleada",
+      "enemigo": "phyll",
+      "cantidad": 11,
+      "formacion": "v_invertida",
+      "y": 60,
+      "portadora": false,
+      "separacion_px": 32,
+      "separacion_seg": 0.3
+    },
+    {
+      "t": 125.0,
+      "tipo": "escudo",
+      "item": "amarillo",
+      "y": 168
+    },
+    {
+      "t": 126.125,
+      "tipo": "oleada",
+      "enemigo": "cirrat",
+      "cantidad": 11,
+      "formacion": "zigzag",
+      "y": 110,
+      "portadora": true,
+      "separacion_px": 32,
+      "separacion_seg": 0.3,
+      "item": "rojo"
+    },
+    {
+      "t": 130.0,
+      "tipo": "peligro",
+      "id": "kelp",
+      "duracion_seg": 10,
+      "y": 280
+    },
+    {
+      "t": 132.25,
+      "tipo": "oleada",
+      "enemigo": "myxicola",
+      "cantidad": 10,
+      "formacion": "circulo",
+      "y": 168,
+      "portadora": false,
+      "separacion_px": 32,
+      "separacion_seg": 0.3
+    },
+    {
+      "t": 138.375,
+      "tipo": "oleada",
+      "enemigo": "spinther",
+      "cantidad": 9,
+      "formacion": "doble_columna",
+      "y": 220,
+      "portadora": false,
+      "separacion_px": 32,
+      "separacion_seg": 0.3
+    },
+    {
+      "t": 144.5,
+      "tipo": "oleada",
+      "enemigo": "spirorbis",
+      "cantidad": 10,
+      "formacion": "ambos_lados",
+      "y": 276,
+      "portadora": true,
+      "separacion_px": 32,
+      "separacion_seg": 0.3,
+      "item": "verde"
+    },
+    {
+      "t": 150.625,
+      "tipo": "oleada",
+      "enemigo": "syll",
+      "cantidad": 11,
+      "formacion": "diagonal",
+      "y": 60,
+      "portadora": false,
+      "separacion_px": 32,
+      "separacion_seg": 0.3
+    },
+    {
+      "t": 156.75,
+      "tipo": "oleada",
+      "enemigo": "trocho",
+      "cantidad": 10,
+      "formacion": "linea_vertical",
+      "y": 110,
+      "portadora": false,
+      "separacion_px": 32,
+      "separacion_seg": 0.3
+    },
+    {
+      "t": 162.875,
+      "tipo": "oleada",
+      "enemigo": "cteno",
+      "cantidad": 9,
+      "formacion": "linea_horizontal",
+      "y": 168,
+      "portadora": true,
+      "separacion_px": 32,
+      "separacion_seg": 0.3,
+      "item": "azul"
+    },
+    {
+      "t": 168,
+      "tipo": "escudo",
+      "item": "amarillo",
+      "y": 168
+    },
+    {
+      "t": 170,
+      "tipo": "alerta_jefe",
+      "id": "boss_w04_tere",
+      "jefes": [
+        "boss_w04_tere"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,427 @@
+{
+  "mundo": 13,
+  "semilla": 0,
+  "eventos": [
+    {
+      "t": 10.0,
+      "tipo": "oleada",
+      "enemigo": "swima",
+      "cantidad": 7,
+      "formacion": "linea_vertical",
+      "y": 60,
+      "portadora": true,
+      "separacion_px": 32,
+      "separacion_seg": 0.3,
+      "item": "rojo"
+    },
+    {
+      "t": 16.267,
+      "tipo": "oleada",
+      "enemigo": "swima",
+      "cantidad": 7,
+      "formacion": "linea_horizontal",
+      "y": 110,
+      "portadora": false,
+      "separacion_px": 32,
+      "separacion_seg": 0.3
+    },
+    {
+      "t": 22.533,
+      "tipo": "oleada",
+      "enemigo": "aphro",
+      "cantidad": 7,
+      "formacion": "v",
+      "y": 168,
+      "portadora": false,
+      "separacion_px": 32,
+      "separacion_seg": 0.3
+    },
+    {
+      "t": 28.8,
+      "tipo": "oleada",
+      "enemigo": "aphro",
+      "cantidad": 7,
+      "formacion": "v_invertida",
+      "y": 220,
+      "portadora": false,
+      "separacion_px": 32,
+      "separacion_seg": 0.3
+    },
+    {
+      "t": 35.067,
+      "tipo": "oleada",
+      "enemigo": "scali",
+      "cantidad": 7,
+      "formacion": "zigzag",
+      "y": 276,
+      "portadora": false,
+      "separacion_px": 32,
+      "separacion_seg": 0.3
+    },
+    {
+      "t": 41.333,
+      "tipo": "oleada",
+      "enemigo": "scali",
+      "cantidad": 7,
+      "formacion": "circulo",
+      "y": 60,
+      "portadora": false,
+      "separacion_px": 32,
+      "separacion_seg": 0.3
+    },
+    {
+      "t": 47.6,
+      "tipo": "oleada",
+      "enemigo": "stern",
+      "cantidad": 7,
+      "formacion": "doble_columna",
+      "y": 110,
+      "portadora": false,
+      "separacion_px": 32,
+      "separacion_seg": 0.3
+    },
+    {
+      "t": 53.867,
+      "tipo": "oleada",
+      "enemigo": "stern",
+      "cantidad": 6,
+      "formacion": "ambos_lados",
+      "y": 168,
+      "portadora": true,
+      "separacion_px": 32,
+      "separacion_seg": 0.3,
+      "item": "verde"
+    },
+    {
+      "t": 60.133,
+      "tipo": "oleada",
+      "enemigo": "macellicephaloides",
+      "cantidad": 7,
+      "formacion": "diagonal",
+      "y": 220,
+      "portadora": false,
+      "separacion_px": 32,
+      "separacion_seg": 0.3
+    },
+    {
+      "t": 63.0,
+      "tipo": "escudo",
+      "item": "amarillo",
+      "y": 168
+    },
+    {
+      "t": 66.4,
+      "tipo": "oleada",
+      "enemigo": "macellicephaloides",
+      "cantidad": 7,
+      "formacion": "linea_vertical",
+      "y": 276,
+      "portadora": false,
+      "separacion_px": 32,
+      "separacion_seg": 0.3
+    },
+    {
+      "t": 72.667,
+      "tipo": "oleada",
+      "enemigo": "nepht",
+      "cantidad": 9,
+      "formacion": "linea_horizontal",
+      "y": 60,
+      "portadora": false,
+      "separacion_px": 32,
+      "separacion_seg": 0.3
+    },
+    {
+      "t": 78.933,
+      "tipo": "oleada",
+      "enemigo": "glycer",
+      "cantidad": 9,
+      "formacion": "v",
+      "y": 110,
+      "portadora": false,
+      "separacion_px": 32,
+      "separacion_seg": 0.3
+    },
+    {
+      "t": 85.2,
+      "tipo": "oleada",
+      "enemigo": "dorville",
+      "cantidad": 9,
+      "formacion": "v_invertida",
+      "y": 168,
+      "portadora": false,
+      "separacion_px": 32,
+      "separacion_seg": 0.3
+    },
+    {
+      "t": 91.467,
+      "tipo": "oleada",
+      "enemigo": "alciop",
+      "cantidad": 9,
+      "formacion": "zigzag",
+      "y": 220,
+      "portadora": true,
+      "separacion_px": 32,
+      "separacion_seg": 0.3,
+      "item": "azul"
+    },
+    {
+      "t": 97.733,
+      "tipo": "oleada",
+      "enemigo": "cirrat",
+      "cantidad": 9,
+      "formacion": "circulo",
+      "y": 276,
+      "portadora": false,
+      "separacion_px": 32,
+      "separacion_seg": 0.3
+    },
+    {
+      "t": 105.0,
+      "tipo": "minijefe",
+      "id": "mini_w13_aphro",
+      "escoltas": {
+        "enemigo": "aphro",
+        "cantidad": 2,
+        "vida": 22,
+        "tamano": [
+          40,
+          32
+        ]
+      }
+    },
+    {
+      "t": 165.0,
+      "tipo": "oleada",
+      "enemigo": "cirrat",
+      "cantidad": 13,
+      "formacion": "v_invertida",
+      "y": 60,
+      "portadora": false,
+      "separacion_px": 32,
+      "separacion_seg": 0.3
+    },
+    {
+      "t": 169.947,
+      "tipo": "oleada",
+      "enemigo": "alciop",
+      "cantidad": 7,
+      "formacion": "zigzag",
+      "y": 110,
+      "portadora": false,
+      "separacion_px": 32,
+      "separacion_seg": 0.3
+    },
+    {
+      "t": 170.0,
+      "tipo": "escudo",
+      "item": "amarillo",
+      "y": 168
+    },
+    {
+      "t": 174.895,
+      "tipo": "oleada",
+      "enemigo": "alciop",
+      "cantidad": 7,
+      "formacion": "circulo",
+      "y": 168,
+      "portadora": false,
+      "separacion_px": 32,
+      "separacion_seg": 0.3
+    },
+    {
+      "t": 179.842,
+      "tipo": "oleada",
+      "enemigo": "glycer",
+      "cantidad": 7,
+      "formacion": "doble_columna",
+      "y": 220,
+      "portadora": false,
+      "separacion_px": 32,
+      "separacion_seg": 0.3
+    },
+    {
+      "t": 184.789,
+      "tipo": "oleada",
+      "enemigo": "glycer",
+      "cantidad": 7,
+      "formacion": "ambos_lados",
+      "y": 276,
+      "portadora": false,
+      "separacion_px": 32,
+      "separacion_seg": 0.3
+    },
+    {
+      "t": 189.737,
+      "tipo": "oleada",
+      "enemigo": "stern",
+      "cantidad": 11,
+      "formacion": "diagonal",
+      "y": 60,
+      "portadora": true,
+      "separacion_px": 32,
+      "separacion_seg": 0.3,
+      "item": "rojo"
+    },
+    {
+      "t": 194.684,
+      "tipo": "oleada",
+      "enemigo": "stern",
+      "cantidad": 10,
+      "formacion": "linea_vertical",
+      "y": 110,
+      "portadora": false,
+      "separacion_px": 32,
+      "separacion_seg": 0.3
+    },
+    {
+      "t": 199.632,
+      "tipo": "oleada",
+      "enemigo": "dorville",
+      "cantidad": 7,
+      "formacion": "linea_horizontal",
+      "y": 168,
+      "portadora": false,
+      "separacion_px": 32,
+      "separacion_seg": 0.3
+    },
+    {
+      "t": 204.579,
+      "tipo": "oleada",
+      "enemigo": "dorville",
+      "cantidad": 7,
+      "formacion": "v",
+      "y": 220,
+      "portadora": false,
+      "separacion_px": 32,
+      "separacion_seg": 0.3
+    },
+    {
+      "t": 209.526,
+      "tipo": "oleada",
+      "enemigo": "macellicephaloides",
+      "cantidad": 10,
+      "formacion": "v_invertida",
+      "y": 276,
+      "portadora": false,
+      "separacion_px": 32,
+      "separacion_seg": 0.3
+    },
+    {
+      "t": 214.474,
+      "tipo": "oleada",
+      "enemigo": "macellicephaloides",
+      "cantidad": 10,
+      "formacion": "zigzag",
+      "y": 60,
+      "portadora": false,
+      "separacion_px": 32,
+      "separacion_seg": 0.3
+    },
+    {
+      "t": 219.421,
+      "tipo": "oleada",
+      "enemigo": "nepht",
+      "cantidad": 7,
+      "formacion": "circulo",
+      "y": 110,
+      "portadora": true,
+      "separacion_px": 32,
+      "separacion_seg": 0.3,
+      "item": "verde"
+    },
+    {
+      "t": 224.368,
+      "tipo": "oleada",
+      "enemigo": "nepht",
+      "cantidad": 7,
+      "formacion": "doble_columna",
+      "y": 168,
+      "portadora": false,
+      "separacion_px": 32,
+      "separacion_seg": 0.3
+    },
+    {
+      "t": 229.316,
+      "tipo": "oleada",
+      "enemigo": "aphro",
+      "cantidad": 10,
+      "formacion": "ambos_lados",
+      "y": 220,
+      "portadora": false,
+      "separacion_px": 32,
+      "separacion_seg": 0.3
+    },
+    {
+      "t": 234.263,
+      "tipo": "oleada",
+      "enemigo": "aphro",
+      "cantidad": 10,
+      "formacion": "diagonal",
+      "y": 276,
+      "portadora": false,
+      "separacion_px": 32,
+      "separacion_seg": 0.3
+    },
+    {
+      "t": 239.211,
+      "tipo": "oleada",
+      "enemigo": "scali",
+      "cantidad": 10,
+      "formacion": "linea_vertical",
+      "y": 60,
+      "portadora": false,
+      "separacion_px": 32,
+      "separacion_seg": 0.3
+    },
+    {
+      "t": 244.158,
+      "tipo": "oleada",
+      "enemigo": "scali",
+      "cantidad": 10,
+      "formacion": "linea_horizontal",
+      "y": 110,
+      "portadora": false,
+      "separacion_px": 32,
+      "separacion_seg": 0.3
+    },
+    {
+      "t": 249.105,
+      "tipo": "oleada",
+      "enemigo": "swima",
+      "cantidad": 11,
+      "formacion": "v",
+      "y": 168,
+      "portadora": false,
+      "separacion_px": 32,
+      "separacion_seg": 0.3
+    },
+    {
+      "t": 254.053,
+      "tipo": "oleada",
+      "enemigo": "swima",
+      "cantidad": 10,
+      "formacion": "v_invertida",
+      "y": 220,
+      "portadora": true,
+      "separacion_px": 32,
+      "separacion_seg": 0.3,
+      "item": "azul"
+    },
+    {
+      "t": 258,
+      "tipo": "escudo",
+      "item": "amarillo",
+      "y": 168
+    },
+    {
+      "t": 260,
+      "tipo": "alerta_jefe",
+      "id": "boss_w13_hadalsovereign",
+      "jefes": [
+        "boss_w13_hadalsovereign",
+        "boss_w13_riftia"
+      ]
+    }
+  ]
+}
