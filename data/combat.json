@@ -1,0 +1,700 @@
+{
+  "screen": {
+    "width": 640,
+    "height": 360,
+    "play_height": 336,
+    "hud_height": 24
+  },
+  "player": {
+    "sprite_size": [
+      48,
+      24
+    ],
+    "hitbox": [
+      10,
+      6
+    ],
+    "speed": 160,
+    "shield": 100,
+    "damage_invulnerability": 1,
+    "respawn_invulnerability": 2,
+    "start_pos": [
+      80,
+      168
+    ],
+    "initial_bombs": 2,
+    "max_bombs": 5,
+    "max_weapon_level": 8,
+    "magnet_radius": 24
+  },
+  "timings": {
+    "bomb_cooldown": 1.5,
+    "boss_entry": 3,
+    "boss_defeat": 3,
+    "phase_invulnerability": 3,
+    "strong_telegraph": 0.5,
+    "alert": 6,
+    "death_explosion": 1.2,
+    "death_fade": 0.5,
+    "pause_resume": 3,
+    "checkpoint_notice": 2,
+    "intro": 2,
+    "retry_fade": 0.5,
+    "regen_delay": 5,
+    "lab_room_line": 2
+  },
+  "enemy": {
+    "bullet_pool": 200,
+    "bullet_size": [
+      6,
+      6
+    ],
+    "bullet_speed_base": 90,
+    "bullet_speed_world_scale": 0.04,
+    "dps_ref_base": 30,
+    "dps_ref_world_step": 6,
+    "bullet_damage_base": 10,
+    "bullet_damage_world_step": 0.5,
+    "contact_damage_base": 20,
+    "contact_damage_world_step": 1,
+    "boss_contact_base": 30,
+    "boss_contact_world_step": 2,
+    "hazard_damage": 20,
+    "speed": 70,
+    "swarm_hp_divisor": 20,
+    "small_hp_divisor": 10,
+    "medium_hp_multiplier": 3,
+    "escort_hp_multiplier": 2,
+    "armored_hp_multiplier": 1.5,
+    "bullet_ttl": 12,
+    "max_active": 50,
+    "spawn_margin": 32
+  },
+  "items": {
+    "speed": 30,
+    "shield_fraction": 0.25,
+    "max_level_value": 100,
+    "small_coin": 5,
+    "large_coin": 25,
+    "radius": 10,
+    "magnet_speed": 200
+  },
+  "boss": {
+    "minimum_time_fraction": 0.4,
+    "weak_multiplier": 2,
+    "body_multiplier": 0.5,
+    "bomb_multiplier": 0.5,
+    "phase_thresholds": [
+      66,
+      33
+    ],
+    "mini_thresholds": [
+      50
+    ],
+    "miniboss_target": 50,
+    "entry_x": 750,
+    "arena_x": 500,
+    "lane_y": [
+      70,
+      168,
+      266
+    ]
+  },
+  "scroll": {
+    "normal": 60,
+    "escape": 120,
+    "parallax": [
+      0.1,
+      0.3,
+      0.6,
+      1
+    ]
+  },
+  "shot": [
+    {
+      "level": 1,
+      "dps": 10,
+      "count": 1,
+      "interval": 0.25,
+      "damage": 2.5,
+      "speed": 440,
+      "angles": [
+        0
+      ],
+      "offsets_y": [
+        0
+      ],
+      "pierce": 0,
+      "beam": false
+    },
+    {
+      "level": 2,
+      "dps": 13,
+      "count": 2,
+      "interval": 0.25,
+      "damage": 1.625,
+      "speed": 440,
+      "angles": [
+        0,
+        0
+      ],
+      "offsets_y": [
+        -4,
+        4
+      ],
+      "pierce": 0,
+      "beam": false
+    },
+    {
+      "level": 3,
+      "dps": 16,
+      "count": 3,
+      "interval": 0.25,
+      "damage": 1.3333333333333333,
+      "speed": 440,
+      "angles": [
+        -0.1,
+        0.0,
+        0.1
+      ],
+      "offsets_y": [
+        0,
+        0,
+        0
+      ],
+      "pierce": 0,
+      "beam": false
+    },
+    {
+      "level": 4,
+      "dps": 20,
+      "count": 3,
+      "interval": 0.2,
+      "damage": 1.3333333333333333,
+      "speed": 440,
+      "angles": [
+        -0.1,
+        0.0,
+        0.1
+      ],
+      "offsets_y": [
+        0,
+        0,
+        0
+      ],
+      "pierce": 0,
+      "beam": false
+    },
+    {
+      "level": 5,
+      "dps": 24,
+      "count": 4,
+      "interval": 0.2,
+      "damage": 1.2000000000000002,
+      "speed": 440,
+      "angles": [
+        -0.15000000000000002,
+        -0.05,
+        0.05,
+        0.15000000000000002
+      ],
+      "offsets_y": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "pierce": 1,
+      "beam": false
+    },
+    {
+      "level": 6,
+      "dps": 29,
+      "count": 4,
+      "interval": 0.2,
+      "damage": 1.4500000000000002,
+      "speed": 440,
+      "angles": [
+        -0.15000000000000002,
+        -0.05,
+        0.05,
+        0.15000000000000002
+      ],
+      "offsets_y": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "pierce": 2,
+      "beam": false
+    },
+    {
+      "level": 7,
+      "dps": 34,
+      "count": 5,
+      "interval": 0.2,
+      "damage": 1.36,
+      "speed": 440,
+      "angles": [
+        -0.2,
+        -0.1,
+        0.0,
+        0.1,
+        0.2
+      ],
+      "offsets_y": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "pierce": 2,
+      "beam": false
+    },
+    {
+      "level": 8,
+      "dps": 40,
+      "count": 6,
+      "interval": 0.2,
+      "damage": 1.3333333333333333,
+      "speed": 440,
+      "angles": [
+        -0.25,
+        -0.15000000000000002,
+        -0.05,
+        0.05,
+        0.15000000000000002,
+        0.25
+      ],
+      "offsets_y": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "pierce": 3,
+      "beam": true
+    }
+  ],
+  "missile": [
+    {
+      "level": 1,
+      "dps": 4,
+      "count": 1,
+      "interval": 1,
+      "damage": 4.0,
+      "speed": 140,
+      "homing": false,
+      "area": 0,
+      "arc_gravity": 120,
+      "launch_velocity_y": 100,
+      "directions": [
+        1
+      ]
+    },
+    {
+      "level": 2,
+      "dps": 6,
+      "count": 1,
+      "interval": 1,
+      "damage": 6.0,
+      "speed": 180,
+      "homing": false,
+      "area": 0,
+      "arc_gravity": 120,
+      "launch_velocity_y": 100,
+      "directions": [
+        1
+      ]
+    },
+    {
+      "level": 3,
+      "dps": 8,
+      "count": 2,
+      "interval": 1,
+      "damage": 4.0,
+      "speed": 180,
+      "homing": false,
+      "area": 0,
+      "arc_gravity": 120,
+      "launch_velocity_y": 100,
+      "directions": [
+        -1,
+        1
+      ]
+    },
+    {
+      "level": 4,
+      "dps": 10,
+      "count": 2,
+      "interval": 1,
+      "damage": 5.0,
+      "speed": 180,
+      "homing": false,
+      "area": 24,
+      "arc_gravity": 120,
+      "launch_velocity_y": 100,
+      "directions": [
+        -1,
+        1
+      ]
+    },
+    {
+      "level": 5,
+      "dps": 12,
+      "count": 2,
+      "interval": 1,
+      "damage": 6.0,
+      "speed": 180,
+      "homing": true,
+      "area": 0,
+      "arc_gravity": 120,
+      "launch_velocity_y": 100,
+      "directions": [
+        -1,
+        1
+      ]
+    },
+    {
+      "level": 6,
+      "dps": 14,
+      "count": 3,
+      "interval": 1,
+      "damage": 4.666666666666667,
+      "speed": 180,
+      "homing": true,
+      "area": 0,
+      "arc_gravity": 120,
+      "launch_velocity_y": 100,
+      "directions": [
+        -1,
+        1
+      ]
+    },
+    {
+      "level": 7,
+      "dps": 17,
+      "count": 3,
+      "interval": 1,
+      "damage": 5.666666666666667,
+      "speed": 180,
+      "homing": true,
+      "area": 24,
+      "arc_gravity": 120,
+      "launch_velocity_y": 100,
+      "directions": [
+        -1,
+        1
+      ]
+    },
+    {
+      "level": 8,
+      "dps": 20,
+      "count": 4,
+      "interval": 1,
+      "damage": 5.0,
+      "speed": 180,
+      "homing": true,
+      "area": 24,
+      "arc_gravity": 120,
+      "launch_velocity_y": 100,
+      "directions": [
+        -1,
+        1
+      ]
+    }
+  ],
+  "bomb": [
+    {
+      "level": 1,
+      "radius": 80,
+      "damage": 50,
+      "full_screen": false
+    },
+    {
+      "level": 2,
+      "radius": 100,
+      "damage": 80,
+      "full_screen": false
+    },
+    {
+      "level": 3,
+      "radius": 120,
+      "damage": 120,
+      "full_screen": false
+    },
+    {
+      "level": 4,
+      "radius": 160,
+      "damage": 170,
+      "full_screen": false
+    },
+    {
+      "level": 5,
+      "radius": 200,
+      "damage": 230,
+      "full_screen": false
+    },
+    {
+      "level": 6,
+      "radius": 240,
+      "damage": 300,
+      "full_screen": false
+    },
+    {
+      "level": 7,
+      "radius": 280,
+      "damage": 380,
+      "full_screen": false
+    },
+    {
+      "level": 8,
+      "radius": 740,
+      "damage": 500,
+      "full_screen": true
+    }
+  ],
+  "movement": {
+    "M1": {
+      "speed": 70
+    },
+    "M2": {
+      "speed": 70,
+      "amplitude": 40,
+      "frequency": 2
+    },
+    "M3": {
+      "speed": 60,
+      "pursuit_speed": 30
+    },
+    "M4": {
+      "speed": 70,
+      "entry_vertical_speed": 80,
+      "turn_after": 1
+    },
+    "M5": {
+      "scroll_multiplier": 1,
+      "anchor_y": 304
+    },
+    "M6": {
+      "telegraph": 0.5,
+      "stay": 3,
+      "emerge_speed": 100,
+      "retreat_speed": 80
+    },
+    "M7": {
+      "speed": 60,
+      "stop_after": 1,
+      "telegraph": 0.5,
+      "charge_speed": 250,
+      "charge_duration": 2
+    },
+    "M8": {
+      "speed": 45,
+      "radius": 45,
+      "angular_speed": 2
+    }
+  },
+  "fire_patterns": {
+    "F0": {
+      "interval": 0,
+      "count": 0
+    },
+    "F1": {
+      "interval": 2,
+      "count": 1,
+      "spread": 0
+    },
+    "F2": {
+      "interval": 2.5,
+      "count": 1,
+      "spread": 0
+    },
+    "F3": {
+      "interval": 3,
+      "count": 3,
+      "spread": 0.55
+    },
+    "F4": {
+      "interval": 4,
+      "count": 8,
+      "spread": 6.283185307179586
+    },
+    "F5": {
+      "interval": 3,
+      "count": 3,
+      "spread": 0,
+      "burst_interval": 0.15
+    }
+  },
+  "formations": {
+    "spacing_px": 32,
+    "spacing_seg": 0.3,
+    "vertical_bounds": [
+      24,
+      312
+    ],
+    "circle_radius": 64,
+    "zigzag_amplitude": 40
+  },
+  "difficulty": {
+    "easy": {
+      "damage": 0.7,
+      "boss_hp": 0.85,
+      "bullet_speed": 0.9,
+      "shield_items": 1.3,
+      "alert_checkpoint": true
+    },
+    "normal": {
+      "damage": 1,
+      "boss_hp": 1,
+      "bullet_speed": 1,
+      "shield_items": 1,
+      "alert_checkpoint": false
+    },
+    "hard": {
+      "damage": 1.3,
+      "boss_hp": 1.15,
+      "bullet_speed": 1.1,
+      "shield_items": 0.8,
+      "alert_checkpoint": false
+    }
+  },
+  "hazards": {
+    "solid": {
+      "damage": 20,
+      "width": 48,
+      "height": 56,
+      "duration": 12
+    },
+    "corriente_marea": {
+      "damage": 0,
+      "push_y": 30,
+      "duration": 10
+    },
+    "kelp": {
+      "damage": 0,
+      "slow": 0.3,
+      "duration": 12
+    },
+    "corriente_hojas": {
+      "damage": 0,
+      "push_x": -20,
+      "duration": 10
+    },
+    "petroleo": {
+      "damage": 0,
+      "slow": 0.25,
+      "duration": 12
+    },
+    "granizo": {
+      "damage": 10,
+      "duration": 6
+    },
+    "geiseres": {
+      "damage": 20,
+      "telegraph": 1,
+      "duration": 3
+    },
+    "laseres": {
+      "damage": 20,
+      "cycle": 3,
+      "telegraph": 0.5,
+      "duration": 1
+    },
+    "compuertas": {
+      "damage": 20,
+      "cycle": 4,
+      "telegraph": 0.5,
+      "duration": 1.5
+    },
+    "escombros": {
+      "damage": 20,
+      "telegraph": 0.5,
+      "duration": 3
+    },
+    "cintas": {
+      "damage": 0,
+      "push_x": -30,
+      "duration": 10
+    },
+    "corrientes": {
+      "damage": 0,
+      "push_y": 35,
+      "duration": 10
+    },
+    "barriles": {
+      "damage": 20,
+      "blast_radius": 70,
+      "enemy_damage": 60,
+      "duration": 12
+    }
+  },
+  "projectiles": {
+    "shot_size": [
+      8,
+      4
+    ],
+    "beam_size": [
+      20,
+      10
+    ],
+    "missile_size": [
+      12,
+      6
+    ],
+    "shot_ttl": 2,
+    "missile_ttl": 4,
+    "homing_turn_speed": 4,
+    "missile_floor_margin": 10,
+    "explosion_duration": 0.3,
+    "pierce_damage_multiplier": 1
+  },
+  "effects": {
+    "damage_flash": 0.16,
+    "large_shake": 3,
+    "small_shake": 1,
+    "shake_duration": 0.3,
+    "escape_pulse_period": 2,
+    "escape_pulse_alpha": 0.18,
+    "death_tip_count": 20,
+    "suggest_easy_deaths": 5
+  },
+  "gear": {
+    "net_capacity": 5,
+    "niskin_interval": 20,
+    "niskin_radius": 140,
+    "niskin_slow": 0.5,
+    "niskin_boss_slow": 0.75,
+    "niskin_duration": 2,
+    "multicorer_interval": 6,
+    "multicorer_count": 4,
+    "multicorer_damage": 3,
+    "rov_dps_fraction": 0.3,
+    "rov_interval": 0.3,
+    "lander_shield_fraction": 0.5,
+    "deflector_width": 32,
+    "deflector_damage": 5,
+    "regen_delay": 5,
+    "grapple_speed": 0.25,
+    "homing_turn": 3,
+    "enemy_homing_time": 2,
+    "magnet_speed": 260
+  },
+  "friendly_projectile": {
+    "ttl": 3,
+    "size": [
+      10,
+      4
+    ],
+    "beam_size": [
+      24,
+      8
+    ],
+    "spawn_offset": 20
+  }
+}

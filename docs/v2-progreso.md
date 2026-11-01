@@ -51,3 +51,7 @@ El usuario pide rehacer todas las fases como juego nativo de Windows, sin navega
 ### Fase1
 
 Proyecto Godot, resolución640×360 con escalado entero y nearest; generador de PNG provisionales, atlas w01–w15, manifiesto y bitmap con caracteres españoles. Renderizador carga PNG individuales reemplazables, atlas como respaldo. F3 muestra la hitbox de10×6. Arte final pendiente según documento. Verificado con cuatro pruebas Python y prueba Godot de assets.
+
+### Fase2
+
+Simulación nativa separada del renderizado: movimiento8direcciones160px/s, hitbox10×6, disparo principal8niveles, escudo, colisiones, pool200proyectiles, pausa y reaparición. Valores compartidos encombat.json y lectorJSON permite sustituir datos juntoalEXE. Prueba headless core aprobada; las mediciones de rendimiento visibles pertenecen a fase10.
