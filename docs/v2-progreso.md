@@ -79,3 +79,7 @@ Menús nativos de portada, dificultad, tres ranuras, pausa con cuenta atrás, mu
 ### Fase8
 
 Contenido completo de los mundos1–13 enJSON: familias únicas/recurrentes, conteos40/60, portadoras y escudos, minijefes y jefes. Pruebas Python verifican conteos, composición y tiempos de cada mundo. Datos orgánicos preservados de la tabla4.2.
+
+### Fase9
+
+Laboratorio de250enemigos con140robots y110orgánicos seleccionados mediante semilla de partida. Cuatro encuentros con descanso entreellos y escape300s/90enemigos con checkpoints90s. Recorrido automatizado verifica14mundos/2424enemigos/17descansos, guardado de cada descanso,4encuentroslab y final; usa daño artificial de prueba y no representa una partida humana ni una medición del balance.

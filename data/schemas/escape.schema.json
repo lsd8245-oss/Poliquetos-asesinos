@@ -61,6 +61,159 @@
         "additionalProperties": false
       },
       "minItems": 1
+    },
+    "checkpoints": {
+      "type": "array",
+      "items": {
+        "type": "number",
+        "minimum": 0
+      },
+      "uniqueItems": true
+    },
+    "sin_tienda": {
+      "type": "boolean"
+    },
+    "sin_jefe": {
+      "type": "boolean"
+    },
+    "fondo_transicion": {
+      "type": "object",
+      "properties": {
+        "desde_seg": {
+          "type": "number",
+          "minimum": 0
+        },
+        "hasta_seg": {
+          "type": "number",
+          "minimum": 0
+        },
+        "mundo_destino": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 14
+        }
+      },
+      "required": [
+        "desde_seg",
+        "hasta_seg",
+        "mundo_destino"
+      ],
+      "additionalProperties": false
+    },
+    "eventos": {
+      "type": "array",
+      "items": {
+        "oneOf": [
+          {
+            "type": "object",
+            "properties": {
+              "t": {
+                "type": "number",
+                "minimum": 0
+              },
+              "tipo": {
+                "const": "oleada"
+              },
+              "enemigo": {
+                "type": "string",
+                "pattern": "^[a-z][a-z0-9_]*$"
+              },
+              "cantidad": {
+                "type": "integer",
+                "minimum": 1,
+                "maximum": 20
+              },
+              "formacion": {
+                "type": "string",
+                "pattern": "^[a-z][a-z0-9_]*$"
+              },
+              "y": {
+                "type": "number",
+                "minimum": 0
+              },
+              "portadora": {
+                "type": "boolean"
+              },
+              "item": {
+                "enum": [
+                  "rojo",
+                  "verde",
+                  "azul",
+                  "amarillo"
+                ]
+              },
+              "separacion_px": {
+                "type": "number",
+                "minimum": 0
+              },
+              "separacion_seg": {
+                "type": "number",
+                "minimum": 0
+              }
+            },
+            "required": [
+              "t",
+              "tipo",
+              "enemigo",
+              "cantidad",
+              "formacion",
+              "y"
+            ],
+            "additionalProperties": false,
+            "allOf": [
+              {
+                "if": {
+                  "properties": {
+                    "portadora": {
+                      "const": true
+                    }
+                  },
+                  "required": [
+                    "portadora"
+                  ]
+                },
+                "then": {
+                  "required": [
+                    "item"
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "type": "object",
+            "properties": {
+              "t": {
+                "type": "number",
+                "minimum": 0
+              },
+              "tipo": {
+                "const": "peligro"
+              },
+              "id": {
+                "type": "string",
+                "pattern": "^[a-z][a-z0-9_]*$"
+              },
+              "duracion_seg": {
+                "type": "number",
+                "minimum": 0
+              },
+              "y": {
+                "type": "number",
+                "minimum": 0
+              }
+            },
+            "required": [
+              "t",
+              "tipo",
+              "id",
+              "duracion_seg",
+              "y"
+            ],
+            "additionalProperties": false
+          }
+        ]
+      }
     }
   },
   "required": [
