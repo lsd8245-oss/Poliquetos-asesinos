@@ -122,3 +122,11 @@ Tras aceptar la dirección del piloto y reiterar el catálogo completo, el usuar
 Se comprobaron25 controles nativos (incluyen19 pruebas Python), carga/importación y atlas, entrada y salida de ambas ediciones y render. Capturas reales de fixtures del motor a640×360,1280×720,1920×1080. Los dos instaladores fueron reconstruidos y verificados medianteCRC, payload, PE/PCK, hashes y arranque del pack con Godot Linux, no medianteWindows real.
 
 El lote sigue `integrated-review`/`placeholder`; quedan HUD, efectos, otras skins y acabado artístico. La última carga de50enemigos/200balas/64proyectiles aliados mide50,37FPS medios con llvmpipe (p95 33,89ms), y una medición aislada56,54FPS. No se acredita60FPS estables, aprobación final del mundo1 ni fase10 terminada. Windows real, mando y partida humana siguen pendientes. Detalles y límites: `docs/arte/integracion-w01/README.md`.
+
+## Encargo 02 — rescate de simulación exportada, en revisión
+
+Se reprodujo el bloqueo del instalador anterior con el PCK y su EXE bajo Wine: M1 00:00, sin avance de etapa. Las guardas FileAccess sobre scripts remapeados dejaban tres controladores vacíos y omitían el cálculo real de compras. Se sustituyen por preload de los sistemas existentes. No se alteran gráficos, datos, economía, perfiles, audio ni el legado.
+
+La suite actual pasa 27 controles con render (25 sin render). La regresión aislada sobre los dos payloads extraídos comprueba oleada a10s, tiempo20s, scroll1200px, movimiento, disparos enemigos y bajas. Se ejecutan además los PE Windows con ventana/teclado/grabación mediante Wine; no es Windows real ni una instalación NSIS completada. Los dos instaladores se reconstruyen y verifican por CRC, PE/PCK y SHA-256. [Informe, capturas, vídeos, comandos y pendientes](verificacion/rescate-w01/README.md).
+
+Se entrega únicamente la corrección A. La instalación/desinstalación Windows real, mando y aceptación del usuario siguen pendientes. No se declara finalizado mundo1 ni se inicia B1–B4 o mundo2.

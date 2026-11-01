@@ -1,0 +1,7 @@
+Godot Engine v4.6.3.stable.official.7d41c59c4 - https://godotengine.org
+OpenGL API 4.5 (Core Profile) Mesa 25.0.7-2+deb13u1 - Compatibility - Using Device: Mesa - llvmpipe (LLVM 19.1.7, 256 bits)
+
+RUNTIME_STAGE_TRACE {"boss_system":true,"edition":"pruebas","elapsed":0.0,"enemies":0,"enemy_bullets":0,"os":"Windows","regular_kills":0,"regular_spawned":0,"scroll":0.0,"stage_system":true,"state":"playing","target_elapsed":0.0,"weapon_system":true,"world_time":0.0}
+RUNTIME_STAGE_TRACE {"boss_system":true,"edition":"pruebas","elapsed":5.00512639682544,"enemies":0,"enemy_bullets":0,"os":"Windows","regular_kills":0,"regular_spawned":0,"scroll":300.307583809523,"stage_system":true,"state":"playing","target_elapsed":5.0,"weapon_system":true,"world_time":5.00512639682544}
+RUNTIME_STAGE_TRACE {"boss_system":true,"edition":"pruebas","elapsed":12.0018611005292,"enemies":4,"enemy_bullets":12,"os":"Windows","regular_kills":0,"regular_spawned":4,"scroll":720.111666031749,"stage_system":true,"state":"playing","target_elapsed":12.0,"weapon_system":true,"world_time":12.0018611005292}
+RUNTIME_STAGE_TRACE {"boss_system":true,"edition":"pruebas","elapsed":20.003109827802,"enemies":4,"enemy_bullets":6,"os":"Windows","regular_kills":4,"regular_spawned":8,"scroll":1200.18658966811,"stage_system":true,"state":"playing","target_elapsed":20.0,"weapon_system":true,"world_time":20.003109827802}

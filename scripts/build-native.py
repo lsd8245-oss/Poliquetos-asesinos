@@ -10,11 +10,12 @@ import os
 from pathlib import Path
 import shutil
 import subprocess
+import tempfile
 
 ROOT=Path(__file__).resolve().parents[1]
 
-def run(command,env):
-    r=subprocess.run(command,cwd=ROOT,env=env,stdout=subprocess.PIPE,stderr=subprocess.STDOUT,text=True,timeout=240)
+def run(command,env,cwd=ROOT):
+    r=subprocess.run(command,cwd=cwd,env=env,stdout=subprocess.PIPE,stderr=subprocess.STDOUT,text=True,timeout=240)
     if r.returncode or 'SCRIPT ERROR:' in r.stdout or 'ERROR:' in r.stdout:
         raise RuntimeError(r.stdout)
     print(r.stdout[-1000:])
@@ -44,6 +45,10 @@ def main():
     for preset,name in targets:
         target=out/name
         run([args.godot,'--headless','--path',str(ROOT),'--export-release',preset,str(target)],env)
+        # Test the exported pack, never substitute an editor-only startup check.
+        with tempfile.TemporaryDirectory(prefix='poliquetos-build-check-') as clean:
+            run([args.godot,'--headless','--main-pack',str(target),'--','--verify-export'],env,cwd=clean)
+            run([args.godot,'--headless','--main-pack',str(target),'--script',str(ROOT/'native-tests/export_stage_probe.gd')],env,cwd=clean)
         manifest.append({'file':name,'bytes':target.stat().st_size,'sha256':hashlib.sha256(target.read_bytes()).hexdigest(),'preset':preset})
     if args.makensis:
         deliveries=ROOT/'entregas';deliveries.mkdir(exist_ok=True)

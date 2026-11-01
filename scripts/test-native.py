@@ -31,6 +31,10 @@ def main():
     run('normal-start',['godot','--headless','--path',str(ROOT),'--','--verify-export'],expected='EXPORT_VERIFY_PASS')
     run('pruebas-start',['godot','--headless','--path',str(ROOT),'--','--pruebas','--verify-export'],expected='EXPORT_VERIFY_PASS')
     for edition in ('normal','pruebas'):
+        command=['godot','--headless','--path',str(ROOT),'--script','native-tests/export_stage_probe.gd','--']
+        if edition=='pruebas':command.append('--pruebas')
+        run(edition+'-stage-runtime',command,expected='EXPORT_STAGE_PASS')
+    for edition in ('normal','pruebas'):
         command=['godot','--headless','--path',str(ROOT),'--script','native-tests/art_w01_quit.gd','--']
         if edition=='pruebas':command.append('--pruebas')
         run(edition+'-quit',command,timeout=20,expected='W01 QUIT PASS')

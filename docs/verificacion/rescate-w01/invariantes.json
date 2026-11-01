@@ -1,0 +1,10 @@
+{
+  "base": "9ea435b692b437deb202519076823d6fae47aac4",
+  "branch": "fix/w01-export-stage-runtime",
+  "protected_files": 1764,
+  "changed": [],
+  "attachment_exact": true,
+  "scope": "A; B1-B4 not started",
+  "windows_real_tested": false,
+  "wine_installer_completed": false
+}

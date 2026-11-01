@@ -2,6 +2,10 @@ class_name PoliGame
 extends RefCounted
 
 const Data = preload("res://src/core/data.gd")
+const Stages = preload("res://src/stages/stages.gd")
+const Weapons = preload("res://src/weapons/weapons.gd")
+const Bosses = preload("res://src/bosses/bosses.gd")
+const Shop = preload("res://src/shop/shop.gd")
 var sound_events:Array=[]
 var data: Dictionary
 var profile: Dictionary
@@ -59,22 +63,17 @@ var rng = RandomNumberGenerator.new()
 
 func _init():
 	data = Data.all()
-	if FileAccess.file_exists("res://src/stages/stages.gd"):
-		stage_system = load("res://src/stages/stages.gd").new()
-	if FileAccess.file_exists("res://src/weapons/weapons.gd"):
-		weapon_system = load("res://src/weapons/weapons.gd").new()
-	if FileAccess.file_exists("res://src/bosses/bosses.gd"):
-		boss_system = load("res://src/bosses/bosses.gd").new()
+	# Required resources are remapped to compiled scripts in exported packs.
+	# preload resolves that mapping and fails explicitly if a dependency is absent.
+	stage_system = Stages.new()
+	weapon_system = Weapons.new()
+	boss_system = Bosses.new()
 
 func equipment(id: String) -> bool:
 	return profile.get("equipment",{}).has(id)
 
 func refresh_stats():
-	if FileAccess.file_exists("res://src/shop/shop.gd"):
-		stats = load("res://src/shop/shop.gd").stats(profile)
-	else:
-		var base:Dictionary=data.combat.player
-		stats={"max_shield":float(base.shield),"damage_mult":1.0,"rate_mult":1.0,"min_missile":1,"max_bombs":int(base.initial_bombs),"regen":0.0,"magnet":float(base.magnet_radius),"speed":float(base.speed)}
+	stats = Shop.stats(profile)
 
 func start(p: Dictionary, restore_checkpoint: Dictionary = {}):
 	profile = p

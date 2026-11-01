@@ -1,0 +1,32 @@
+{
+  "executable": "/workspace/rescue-qa/baseline-normal/Poliquetos-Normal.exe",
+  "sha256": "89326bff2dfebf01da18d78df401063037720a0ac39c488f4d2d21e26150f3fd",
+  "resolution": [
+    1280,
+    720
+  ],
+  "host": "Linux, Wine10 compatibility layer; NOT real Windows",
+  "capture": "Real Windows EXE window, X11 keyboard and screen recording",
+  "wall_seconds": 27.40697811500104,
+  "samples": {
+    "0": {
+      "wall_elapsed": 2.030333803000758,
+      "trace_unavailable_in_old_binary": true
+    },
+    "5": {
+      "wall_elapsed": 7.006057090000468,
+      "trace_unavailable_in_old_binary": true
+    },
+    "12": {
+      "wall_elapsed": 14.011125818000437,
+      "trace_unavailable_in_old_binary": true
+    },
+    "20": {
+      "wall_elapsed": 22.029630180000822,
+      "trace_unavailable_in_old_binary": true
+    }
+  },
+  "passed": false,
+  "legacy_observation": true,
+  "exit_code": 0
+}

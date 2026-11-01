@@ -56,27 +56,37 @@ var sandbox_weapons = {"shot": 1, "missile": 1, "bomb": 1}
 var intro_clock = 0.0
 var smoke_frames = 0
 var import_dialog: FileDialog
+var runtime_trace=false
+var runtime_trace_index=0
+var runtime_trace_start=0.0
 
 func _ready():
 	sandbox = OS.has_feature("pruebas") or OS.get_cmdline_user_args().has("--pruebas")
+	runtime_trace=OS.get_cmdline_user_args().has("--runtime-trace")
+	if runtime_trace:ProjectSettings.set_setting("application/run/flush_stdout_on_print",true)
 	audio=Sound.new()
 	add_child(audio)
 	assets = Assets.new()
 	assets.load_all()
 	game = Game.new()
 	if OS.get_cmdline_user_args().has("--verify-export"):
+		set_process(false)
 		var p=Shop.create_profile(sandbox)
 		game.start(p)
 		var ok=game.data.worlds.size()==14 and game.player.shield==100 and game.enemies.is_empty() and assets.has_sprite("w14_boss_boss_w14_eunice_titan_move")
 		ok=ok and p.equipment.size()==1 and p.equipment.get("sonar",false)
 		ok=ok and int(p.credits)==(999999999 if sandbox else 0)
+		ok=ok and game.stage_system!=null and game.weapon_system!=null and game.boss_system!=null
+		# A loaded scene alone cannot prove an exported campaign is running.
+		for frame in range(1201):game.step(1.0/60.0,{})
+		ok=ok and game.world_time>=20.0 and game.scroll>=1200.0 and game.regular_spawned>=4 and not game.enemies.is_empty()
 		var probe=FileAccess.open("user://export-verification.tmp",FileAccess.WRITE)
 		ok=ok and probe!=null
 		if probe!=null:
 			probe.store_string("ok")
 			probe.close()
 			DirAccess.remove_absolute("user://export-verification.tmp")
-		print("EXPORT_VERIFY_", "PASS" if ok else "FAIL", " edition=", "pruebas" if sandbox else "normal", " worlds=", game.data.worlds.size(), " shield=", game.player.shield)
+		print("EXPORT_VERIFY_", "PASS" if ok else "FAIL", " edition=", "pruebas" if sandbox else "normal", " worlds=", game.data.worlds.size(), " shield=", game.player.shield, " world_time=",game.world_time," scroll=",game.scroll," spawned=",game.regular_spawned," controllers=",game.stage_system!=null and game.weapon_system!=null and game.boss_system!=null)
 		get_tree().quit(0 if ok else 1)
 		return
 	options = Save.default_options()
@@ -322,6 +332,8 @@ func _confirm(action: String):
 
 func _start(profile: Dictionary, loaded: bool = false):
 	game.start(profile)
+	runtime_trace_index=0
+	runtime_trace_start=game.total_time
 	active_slot = int(profile.get("slot", 1))
 	last_state = ""
 	if loaded and profile.get("completed",false):
@@ -334,6 +346,15 @@ func _start(profile: Dictionary, loaded: bool = false):
 		profile.resume = "playing"
 		intro_clock = 2.0
 		_show("game")
+	_trace_runtime()
+
+func _trace_runtime():
+	if not runtime_trace or runtime_trace_index>=4:return
+	var targets=[0.0,5.0,12.0,20.0]
+	var elapsed=game.total_time-runtime_trace_start
+	if elapsed<targets[runtime_trace_index]:return
+	print("RUNTIME_STAGE_TRACE ",JSON.stringify({"target_elapsed":targets[runtime_trace_index],"elapsed":elapsed,"state":game.state,"world_time":game.world_time,"scroll":game.scroll,"enemies":game.enemies.size(),"regular_spawned":game.regular_spawned,"regular_kills":game.regular_kills,"enemy_bullets":game.enemy_bullets.size(),"stage_system":game.stage_system!=null,"weapon_system":game.weapon_system!=null,"boss_system":game.boss_system!=null,"edition":"pruebas" if sandbox else "normal","os":OS.get_name()}))
+	runtime_trace_index+=1
 
 func _enter_rest():
 	game.state = "rest"
@@ -694,6 +715,7 @@ func _process(dt):
 				if stick.length() > 0.2:
 					movement += stick
 			game.step(minf(dt, 0.05), {"move": movement.limit_length(), "fire": _held("fire") or options.autofire, "bomb": pending_bomb})
+			_trace_runtime()
 			pending_bomb = false
 		if game.state != last_state:
 			last_state = game.state

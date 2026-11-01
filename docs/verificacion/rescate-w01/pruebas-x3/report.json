@@ -1,0 +1,80 @@
+{
+  "executable": "/workspace/rescue-qa/payload-pruebas/Poliquetos-Pruebas.exe",
+  "sha256": "2397b5ac3868a7d8b7589519e78baee69a415f31eb896a7e87b7068bd054361f",
+  "resolution": [
+    1920,
+    1080
+  ],
+  "host": "Linux, Wine10 compatibility layer; NOT real Windows",
+  "capture": "Real Windows EXE window, X11 keyboard and screen recording",
+  "wall_seconds": 27.202181804999782,
+  "samples": {
+    "0": {
+      "boss_system": true,
+      "edition": "pruebas",
+      "elapsed": 0.0,
+      "enemies": 0,
+      "enemy_bullets": 0,
+      "os": "Windows",
+      "regular_kills": 0,
+      "regular_spawned": 0,
+      "scroll": 0.0,
+      "stage_system": true,
+      "state": "playing",
+      "target_elapsed": 0.0,
+      "weapon_system": true,
+      "world_time": 0.0
+    },
+    "5": {
+      "boss_system": true,
+      "edition": "pruebas",
+      "elapsed": 5.00888888888889,
+      "enemies": 0,
+      "enemy_bullets": 0,
+      "os": "Windows",
+      "regular_kills": 0,
+      "regular_spawned": 0,
+      "scroll": 300.533333333333,
+      "stage_system": true,
+      "state": "playing",
+      "target_elapsed": 5.0,
+      "weapon_system": true,
+      "world_time": 5.00888888888889
+    },
+    "12": {
+      "boss_system": true,
+      "edition": "pruebas",
+      "elapsed": 12.0053204444444,
+      "enemies": 4,
+      "enemy_bullets": 12,
+      "os": "Windows",
+      "regular_kills": 0,
+      "regular_spawned": 4,
+      "scroll": 720.319226666667,
+      "stage_system": true,
+      "state": "playing",
+      "target_elapsed": 12.0,
+      "weapon_system": true,
+      "world_time": 12.0053204444444
+    },
+    "20": {
+      "boss_system": true,
+      "edition": "pruebas",
+      "elapsed": 20.007118095238,
+      "enemies": 4,
+      "enemy_bullets": 4,
+      "os": "Windows",
+      "regular_kills": 4,
+      "regular_spawned": 8,
+      "scroll": 1200.42708571428,
+      "stage_system": true,
+      "state": "playing",
+      "target_elapsed": 20.0,
+      "weapon_system": true,
+      "world_time": 20.007118095238
+    }
+  },
+  "passed": true,
+  "legacy_observation": false,
+  "exit_code": 0
+}

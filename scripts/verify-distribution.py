@@ -9,6 +9,7 @@ def main():
     p=argparse.ArgumentParser(description=__doc__)
     p.add_argument('--sevenzip',required=True)
     args=p.parse_args()
+    (ROOT/'build/test-reports').mkdir(parents=True,exist_ok=True)
     records=[]
     for edition in ('Normal','Pruebas'):
         installer=ROOT/f'entregas/Poliquetos-{edition}-Instalar.exe'
@@ -27,11 +28,19 @@ def main():
             for name in ['LICENSE-Godot.txt','COPYRIGHT-Godot.txt']:
                 if not (folder/name).is_file():raise RuntimeError('Missing '+name)
             env=dict(os.environ,XDG_DATA_HOME=str(folder/'data'),XDG_CONFIG_HOME=str(folder/'config'),XDG_CACHE_HOME=str(folder/'cache'))
-            r=subprocess.run(['godot','--headless','--main-pack',str(exe),'--','--verify-export'],env=env,capture_output=True,text=True,timeout=40)
+            r=subprocess.run(['godot','--headless','--main-pack',str(exe),'--','--verify-export'],cwd=folder,env=env,capture_output=True,text=True,timeout=40)
             log=r.stdout+r.stderr
             expected='pruebas' if edition=='Pruebas' else 'normal'
             if r.returncode or 'ERROR:' in log or 'EXPORT_VERIFY_PASS edition='+expected not in log:raise RuntimeError(log)
-            records.append({'edition':edition,'installer_bytes':installer.stat().st_size,'installer_sha256':hashlib.sha256(installer.read_bytes()).hexdigest(),'payload_sha256':hashlib.sha256(data).hexdigest(),'windows_pe_x64':True,'embedded_pck':True,'installer_crc_and_payload':True,'packed_runtime_probe':expected,'probe_host':'Godot Linux 4.6.3, not native Windows'})
+            (ROOT/'build/test-reports'/('export-'+edition.lower()+'-start.log')).write_text(log)
+            r=subprocess.run(['godot','--headless','--main-pack',str(exe),'--script',str(ROOT/'native-tests/export_stage_probe.gd')],cwd=folder,env=env,capture_output=True,text=True,timeout=40)
+            stage_log=r.stdout+r.stderr
+            (ROOT/'build/test-reports'/('export-'+edition.lower()+'-stage.log')).write_text(stage_log)
+            if r.returncode or 'ERROR:' in stage_log or 'EXPORT_STAGE_PASS' not in stage_log:raise RuntimeError(stage_log)
+            report_line=next(line for line in stage_log.splitlines() if line.startswith('EXPORT_STAGE_REPORT '))
+            stage_report=json.loads(report_line.removeprefix('EXPORT_STAGE_REPORT '))
+            if stage_report['edition']!=expected:raise RuntimeError('Stage probe edition mismatch')
+            records.append({'edition':edition,'installer_bytes':installer.stat().st_size,'installer_sha256':hashlib.sha256(installer.read_bytes()).hexdigest(),'payload_sha256':hashlib.sha256(data).hexdigest(),'windows_pe_x64':True,'embedded_pck':True,'installer_crc_and_payload':True,'packed_runtime_probe':expected,'stage_probe':stage_report,'probe_host':'Godot Linux 4.6.3, not native Windows'})
             print('DISTRIBUTION PASS '+edition,flush=True)
     linux=ROOT/'build/poliquetos-linux.x86_64'
     if linux.exists():

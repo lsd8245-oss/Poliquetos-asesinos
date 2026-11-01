@@ -1,0 +1,260 @@
+RUN Normal 1
+{
+  "executable": "/workspace/rescue-qa/payload-normal/Poliquetos-Normal.exe",
+  "sha256": "dbd04026de9efc919d85935e8a52ad68e984a1a237d69a898bd82f912991ce47",
+  "resolution": [
+    640,
+    360
+  ],
+  "host": "Linux, Wine10 compatibility layer; NOT real Windows",
+  "capture": "Real Windows EXE window, X11 keyboard and screen recording",
+  "wall_seconds": 27.201616021999143,
+  "samples": {
+    "0": {
+      "boss_system": true,
+      "edition": "normal",
+      "elapsed": 0.0,
+      "enemies": 0,
+      "enemy_bullets": 0,
+      "os": "Windows",
+      "regular_kills": 0,
+      "regular_spawned": 0,
+      "scroll": 0.0,
+      "stage_system": true,
+      "state": "playing",
+      "target_elapsed": 0.0,
+      "weapon_system": true,
+      "world_time": 0.0
+    },
+    "5": {
+      "boss_system": true,
+      "edition": "normal",
+      "elapsed": 5.00268398268397,
+      "enemies": 0,
+      "enemy_bullets": 0,
+      "os": "Windows",
+      "regular_kills": 0,
+      "regular_spawned": 0,
+      "scroll": 300.16103896104,
+      "stage_system": true,
+      "state": "playing",
+      "target_elapsed": 5.0,
+      "weapon_system": true,
+      "world_time": 5.00268398268397
+    },
+    "12": {
+      "boss_system": true,
+      "edition": "normal",
+      "elapsed": 12.006005112554,
+      "enemies": 4,
+      "enemy_bullets": 12,
+      "os": "Windows",
+      "regular_kills": 0,
+      "regular_spawned": 4,
+      "scroll": 720.36030675325,
+      "stage_system": true,
+      "state": "playing",
+      "target_elapsed": 12.0,
+      "weapon_system": true,
+      "world_time": 12.006005112554
+    },
+    "20": {
+      "boss_system": true,
+      "edition": "normal",
+      "elapsed": 20.000664961039,
+      "enemies": 4,
+      "enemy_bullets": 6,
+      "os": "Windows",
+      "regular_kills": 4,
+      "regular_spawned": 8,
+      "scroll": 1200.03989766232,
+      "stage_system": true,
+      "state": "playing",
+      "target_elapsed": 20.0,
+      "weapon_system": true,
+      "world_time": 20.000664961039
+    }
+  },
+  "passed": true,
+  "legacy_observation": false,
+  "exit_code": 0
+}
+PASS Normal 1
+RUN Pruebas 1
+{
+  "executable": "/workspace/rescue-qa/payload-pruebas/Poliquetos-Pruebas.exe",
+  "sha256": "2397b5ac3868a7d8b7589519e78baee69a415f31eb896a7e87b7068bd054361f",
+  "resolution": [
+    640,
+    360
+  ],
+  "host": "Linux, Wine10 compatibility layer; NOT real Windows",
+  "capture": "Real Windows EXE window, X11 keyboard and screen recording",
+  "wall_seconds": 27.2202846149994,
+  "samples": {
+    "0": {
+      "boss_system": true,
+      "edition": "pruebas",
+      "elapsed": 0.0,
+      "enemies": 0,
+      "enemy_bullets": 0,
+      "os": "Windows",
+      "regular_kills": 0,
+      "regular_spawned": 0,
+      "scroll": 0.0,
+      "stage_system": true,
+      "state": "playing",
+      "target_elapsed": 0.0,
+      "weapon_system": true,
+      "world_time": 0.0
+    },
+    "5": {
+      "boss_system": true,
+      "edition": "pruebas",
+      "elapsed": 5.00166781385282,
+      "enemies": 0,
+      "enemy_bullets": 0,
+      "os": "Windows",
+      "regular_kills": 0,
+      "regular_spawned": 0,
+      "scroll": 300.100068831167,
+      "stage_system": true,
+      "state": "playing",
+      "target_elapsed": 5.0,
+      "weapon_system": true,
+      "world_time": 5.00166781385282
+    },
+    "12": {
+      "boss_system": true,
+      "edition": "pruebas",
+      "elapsed": 12.0019357340067,
+      "enemies": 4,
+      "enemy_bullets": 12,
+      "os": "Windows",
+      "regular_kills": 0,
+      "regular_spawned": 4,
+      "scroll": 720.116144040401,
+      "stage_system": true,
+      "state": "playing",
+      "target_elapsed": 12.0,
+      "weapon_system": true,
+      "world_time": 12.0019357340067
+    },
+    "20": {
+      "boss_system": true,
+      "edition": "pruebas",
+      "elapsed": 20.0018027037039,
+      "enemies": 4,
+      "enemy_bullets": 6,
+      "os": "Windows",
+      "regular_kills": 4,
+      "regular_spawned": 8,
+      "scroll": 1200.1081622222,
+      "stage_system": true,
+      "state": "playing",
+      "target_elapsed": 20.0,
+      "weapon_system": true,
+      "world_time": 20.0018027037039
+    }
+  },
+  "passed": true,
+  "legacy_observation": false,
+  "exit_code": 0
+}
+PASS Pruebas 1
+RUN Normal 3
+{
+  "executable": "/workspace/rescue-qa/payload-normal/Poliquetos-Normal.exe",
+  "sha256": "dbd04026de9efc919d85935e8a52ad68e984a1a237d69a898bd82f912991ce47",
+  "resolution": [
+    1920,
+    1080
+  ],
+  "host": "Linux, Wine10 compatibility layer; NOT real Windows",
+  "capture": "Real Windows EXE window, X11 keyboard and screen recording",
+  "wall_seconds": 27.402191028000743,
+  "samples": {
+    "0": {
+      "boss_system": true,
+      "edition": "normal",
+      "elapsed": 0.0,
+      "enemies": 0,
+      "enemy_bullets": 0,
+      "os": "Windows",
+      "regular_kills": 0,
+      "regular_spawned": 0,
+      "scroll": 0.0,
+      "stage_system": true,
+      "state": "playing",
+      "target_elapsed": 0.0,
+      "weapon_system": true,
+      "world_time": 0.0
+    },
+    "5": {
+      "boss_system": true,
+      "edition": "normal",
+      "elapsed": 5.01477066666666,
+      "enemies": 0,
+      "enemy_bullets": 0,
+      "os": "Windows",
+      "regular_kills": 0,
+      "regular_spawned": 0,
+      "scroll": 300.88624,
+      "stage_system": true,
+      "state": "playing",
+      "target_elapsed": 5.0,
+      "weapon_system": true,
+      "world_time": 5.01477066666666
+    },
+    "12": {
+      "boss_system": true,
+      "edition": "normal",
+      "elapsed": 12.0116411111111,
+      "enemies": 4,
+      "enemy_bullets": 12,
+      "os": "Windows",
+      "regular_kills": 0,
+      "regular_spawned": 4,
+      "scroll": 720.698466666667,
+      "stage_system": true,
+      "state": "playing",
+      "target_elapsed": 12.0,
+      "weapon_system": true,
+      "world_time": 12.0116411111111
+    },
+    "20": {
+      "boss_system": true,
+      "edition": "normal",
+      "elapsed": 20.0076722222223,
+      "enemies": 4,
+      "enemy_bullets": 6,
+      "os": "Windows",
+      "regular_kills": 4,
+      "regular_spawned": 8,
+      "scroll": 1200.46033333333,
+      "stage_system": true,
+      "state": "playing",
+      "target_elapsed": 20.0,
+      "weapon_system": true,
+      "world_time": 20.0076722222223
+    }
+  },
+  "passed": true,
+  "legacy_observation": false,
+  "exit_code": 0
+}
+PASS Normal 3
+RUN Pruebas 3
+Traceback (most recent call last):
+  File "/workspace/Poliquetos-asesinos/scripts/qa-exported-windows.py", line 152, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "/workspace/Poliquetos-asesinos/scripts/qa-exported-windows.py", line 136, in main
+    assert last['world_time']>=20 and last['scroll']>=1200 and last['regular_spawned']>=4 and last['regular_kills']>=1,last
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: {'boss_system': True, 'edition': 'pruebas', 'elapsed': 20.0065428042329, 'enemies': 8, 'enemy_bullets': 20, 'os': 'Windows', 'regular_kills': 0, 'regular_spawned': 8, 'scroll': 1200.39256825397, 'stage_system': True, 'state': 'playing', 'target_elapsed': 20.0, 'weapon_system': True, 'world_time': 20.0065428042329}
+Traceback (most recent call last):
+  File "<stdin>", line 6, in <module>
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['python3', '-u', '/workspace/Poliquetos-asesinos/scripts/qa-exported-windows.py', '--exe', '/workspace/rescue-qa/payload-pruebas/Poliquetos-Pruebas.exe', '--wine', '/workspace/tools/wine/usr/lib/wine/wine64', '--prefix', '/workspace/rescue-qa/wine-ready', '--output', '/workspace/rescue-qa/reviewed-pruebas-x3', '--scale', '3']' returned non-zero exit status 1.

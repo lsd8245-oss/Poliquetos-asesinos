@@ -1,0 +1,80 @@
+{
+  "executable": "/workspace/rescue-qa/payload-normal/Poliquetos-Normal.exe",
+  "sha256": "dbd04026de9efc919d85935e8a52ad68e984a1a237d69a898bd82f912991ce47",
+  "resolution": [
+    1280,
+    720
+  ],
+  "host": "Linux, Wine10 compatibility layer; NOT real Windows",
+  "capture": "Real Windows EXE window, X11 keyboard and screen recording",
+  "wall_seconds": 26.7893735130001,
+  "samples": {
+    "0": {
+      "boss_system": true,
+      "edition": "normal",
+      "elapsed": 0.0,
+      "enemies": 0,
+      "enemy_bullets": 0,
+      "os": "Windows",
+      "regular_kills": 0,
+      "regular_spawned": 0,
+      "scroll": 0.0,
+      "stage_system": true,
+      "state": "playing",
+      "target_elapsed": 0.0,
+      "weapon_system": true,
+      "world_time": 0.0
+    },
+    "5": {
+      "boss_system": true,
+      "edition": "normal",
+      "elapsed": 5.007836,
+      "enemies": 0,
+      "enemy_bullets": 0,
+      "os": "Windows",
+      "regular_kills": 0,
+      "regular_spawned": 0,
+      "scroll": 300.470160000001,
+      "stage_system": true,
+      "state": "playing",
+      "target_elapsed": 5.0,
+      "weapon_system": true,
+      "world_time": 5.007836
+    },
+    "12": {
+      "boss_system": true,
+      "edition": "normal",
+      "elapsed": 12.0002602424243,
+      "enemies": 4,
+      "enemy_bullets": 12,
+      "os": "Windows",
+      "regular_kills": 0,
+      "regular_spawned": 4,
+      "scroll": 720.015614545456,
+      "stage_system": true,
+      "state": "playing",
+      "target_elapsed": 12.0,
+      "weapon_system": true,
+      "world_time": 12.0002602424243
+    },
+    "20": {
+      "boss_system": true,
+      "edition": "normal",
+      "elapsed": 20.0057817272727,
+      "enemies": 4,
+      "enemy_bullets": 8,
+      "os": "Windows",
+      "regular_kills": 4,
+      "regular_spawned": 8,
+      "scroll": 1200.34690363636,
+      "stage_system": true,
+      "state": "playing",
+      "target_elapsed": 20.0,
+      "weapon_system": true,
+      "world_time": 20.0057817272727
+    }
+  },
+  "passed": true,
+  "legacy_observation": false,
+  "exit_code": 0
+}
