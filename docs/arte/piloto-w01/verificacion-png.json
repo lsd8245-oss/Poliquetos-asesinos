@@ -1,0 +1,107 @@
+{
+  "status": "pass",
+  "png_count": 39,
+  "checks": [
+    {
+      "asset": "A_nave_cientifica",
+      "colors": 15,
+      "size": [
+        48,
+        24
+      ],
+      "alpha_binary": true,
+      "nearest_x8": true
+    },
+    {
+      "asset": "A_nave_industrial",
+      "colors": 15,
+      "size": [
+        48,
+        24
+      ],
+      "alpha_binary": true,
+      "nearest_x8": true
+    },
+    {
+      "asset": "A_nave_expedicion",
+      "colors": 15,
+      "size": [
+        48,
+        24
+      ],
+      "alpha_binary": true,
+      "nearest_x8": true
+    },
+    {
+      "asset": "B_hydroides",
+      "frames": 3,
+      "shared_colors": 16,
+      "size": [
+        48,
+        48
+      ],
+      "base_y": [
+        46,
+        46,
+        46
+      ],
+      "white_damage_frames": 2
+    },
+    {
+      "asset": "C_capa_01",
+      "size": [
+        1280,
+        336
+      ],
+      "loop_edges_equal": true,
+      "mirror_join_equal": true
+    },
+    {
+      "asset": "C_capa_02",
+      "size": [
+        1280,
+        336
+      ],
+      "loop_edges_equal": true,
+      "mirror_join_equal": true
+    },
+    {
+      "asset": "C_capa_03",
+      "size": [
+        1280,
+        336
+      ],
+      "loop_edges_equal": true,
+      "mirror_join_equal": true
+    },
+    {
+      "asset": "C_capa_04",
+      "size": [
+        1280,
+        336
+      ],
+      "loop_edges_equal": true,
+      "mirror_join_equal": true
+    },
+    {
+      "asset": "C_mockup",
+      "size": [
+        640,
+        360
+      ],
+      "nearest_x3": true,
+      "type": "MOCKUP"
+    },
+    {
+      "asset": "D_portada_mockup",
+      "size": [
+        640,
+        360
+      ],
+      "nearest_x3": true,
+      "type": "MOCKUP"
+    }
+  ],
+  "art_approval": false,
+  "game_integration": false
+}

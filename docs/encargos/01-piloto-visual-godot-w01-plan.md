@@ -12,12 +12,12 @@ Base: `docs/instrucciones-redisenio-v2` / `f60abfb`, descendiente verificado de 
 
 ## B — Conceptos revisables (commit independiente)
 
-- [ ] Imagegen: tres variantes de nave; Hydroides tubícola con retracción/extensión; cuatro capas W01; portada original sin letras integradas.
-- [ ] Conservar fuentes originales y trazabilidad. Pillow únicamente para recortes, alfa, nearest, paletas, hojas y composición; no generar criaturas con primitivas.
-- [ ] Revisar bocetos a48×24 y48×48, paleta máxima16, alfa binario, silueta, anclajes y ampliaciones×8. Dos cuadros blancos de daño.
-- [ ] Preparar capas640×336; revisar empalmes repetidos, composición con sprites y HUD reservado. Identificar maquetas como MOCKUP.
-- [ ] Crear portada640×360 y tipografía separada, comparativa con placeholders previos y README con límites/aprobaciones.
-- [ ] Repetir suite nativa; render solo si hay display disponible, nunca llamarlo Windows. Verificar hashes protegidos, dimensiones/paletas/alfa, revisar imágenes y commit B.
-- [ ] Publicar rama y comprobar enlaces PNG individuales con respuesta200 y contenido idéntico.
+- [x] Imagegen: tres variantes de nave; Hydroides tubícola con retracción/extensión; cuatro capas W01; portada original sin letras integradas.
+- [x] Conservar fuentes originales y trazabilidad. Pillow únicamente para recortes, alfa, nearest, paletas, hojas y composición; no generar criaturas con primitivas.
+- [x] Revisar bocetos a48×24 y48×48, paleta máxima16, alfa binario, silueta, anclajes y ampliaciones×8. Dos cuadros blancos de daño.
+- [x] Preparar capas640×336; revisar empalmes repetidos, composición con sprites y HUD reservado. Identificar maquetas como MOCKUP.
+- [x] Crear portada640×360 y tipografía separada, comparativa con placeholders previos y README con límites/aprobaciones.
+- [x] Repetir suite nativa; render solo si hay display disponible, nunca llamarlo Windows. Verificar hashes protegidos, dimensiones/paletas/alfa, revisar imágenes y commit B.
+- Publicación posterior al commit B: comprobar enlaces PNG individuales con respuesta200 y contenido idéntico; resultado comunicado en la entrega para evitar un commit autorreferente.
 
 Fuera de alcance: integración en assets/manifiesto de producción, código, datos, balance, audio, guardados, mundo2 y reconstrucción de instaladores. Las limitaciones de generación o Windows se declaran; conceptos no aprobados y cero assets finales nuevos.

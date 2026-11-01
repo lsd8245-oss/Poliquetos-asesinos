@@ -1,0 +1,32 @@
+{
+  "base": "f60abfbdb4bb8975b51fe897f4cedea988039822",
+  "native_ancestor": "ac29e2365202cba90dcf504c1913651aa6b5426d",
+  "branch": "arte/piloto-godot-w01",
+  "documentation_commit": "b7212c2",
+  "protected_file_count": 1777,
+  "protected_files_changed": [],
+  "spec_sha256": "1f42e2dad262b02ad87d6eb53f0454a6a00890751f379e918e186de10fd68b2a",
+  "native_checks_passed": 19,
+  "native_execution": "Linux headless Godot 4.6.3; isolated build/test-reports user/config/cache",
+  "render_executed": false,
+  "display_probe": "xdpyinfo -display :0: unable to open display",
+  "windows_tested": false,
+  "installers_rebuilt": false,
+  "music_changed": false,
+  "production_manifest_entries": 557,
+  "production_placeholder_entries": 557,
+  "new_final_approved_assets": 0,
+  "concept_pngs": 39,
+  "visual_review": [
+    "A_variantes.png",
+    "B_hydroides_hoja.png",
+    "C_empalmes.png",
+    "comparativa.png",
+    "C_mockup_640x360.png",
+    "C_mockup_1920x1080.png",
+    "D_portada_mockup_640x360.png",
+    "D_portada_mockup_1920x1080.png"
+  ],
+  "review_scope": "Concept PNGs only, not a running game screenshot",
+  "phase_accepted": false
+}

@@ -1,0 +1,717 @@
+{
+  "version": 1,
+  "production_integration": false,
+  "sources": {
+    "A_naves": "Tres variantes laterales originales de nave oceanográfica: científica marfil/turquesa, industrial ocre, expedición azul/oliva; cabina con tripulante y cañón a derecha.",
+    "B_hydroides": "Serpulidae tubícola con tubo calcáreo, corona radiolar coral y opérculo; cuatro poses generadas, cuarta descartada por recorte.",
+    "C1_agua": "Agua superficial luminosa celeste/turquesa con luz lejana; sin objetos jugables.",
+    "C2_puerto": "Cascos de barco y pilotes lejanos sobre transparencia.",
+    "C3_corrientes": "Corrientes, peces de fondo y estructuras bajas sobre transparencia.",
+    "C4_boyas": "Boya, cadena, espuma y esquina portuaria; centro libre sobre transparencia.",
+    "D_portada": "Ilustración original de peligro submarino: nave tripulada, horda de poliquetos diferenciados, proyectiles y burbujas; sin letras generadas."
+  },
+  "assets": [
+    {
+      "path": "A_nave_cientifica_48x24.png",
+      "state": "concepto/no aprobado",
+      "author_tool": "Codex: preparación Pillow de conceptos imagegen / PNG previos del repositorio para comparativa, balas y tipografía",
+      "date": "2026-11-01",
+      "dimensions": [
+        48,
+        24
+      ],
+      "opaque_palette_colors": 15,
+      "alpha_range": [
+        0,
+        255
+      ],
+      "sha256": "d42a45ef8af187c18de9161568c479c9c8c4e0f30c695fc6c12d25d148f1ef99",
+      "brief": "Derivado reproducible; ver preparar.py y README.",
+      "authorized_use": "Evaluación del piloto Poliquetos Asesinos; integración y uso como arte final condicionados a aprobación explícita. No assets comerciales de terceros importados."
+    },
+    {
+      "path": "A_nave_cientifica_x8.png",
+      "state": "concepto/no aprobado",
+      "author_tool": "Codex: preparación Pillow de conceptos imagegen / PNG previos del repositorio para comparativa, balas y tipografía",
+      "date": "2026-11-01",
+      "dimensions": [
+        384,
+        192
+      ],
+      "opaque_palette_colors": 15,
+      "alpha_range": [
+        0,
+        255
+      ],
+      "sha256": "e648858eac5bab46b2927f176afcb0252a455f66d79cc60b1f4e773beb8de9df",
+      "brief": "Derivado reproducible; ver preparar.py y README.",
+      "authorized_use": "Evaluación del piloto Poliquetos Asesinos; integración y uso como arte final condicionados a aprobación explícita. No assets comerciales de terceros importados."
+    },
+    {
+      "path": "A_nave_expedicion_48x24.png",
+      "state": "concepto/no aprobado",
+      "author_tool": "Codex: preparación Pillow de conceptos imagegen / PNG previos del repositorio para comparativa, balas y tipografía",
+      "date": "2026-11-01",
+      "dimensions": [
+        48,
+        24
+      ],
+      "opaque_palette_colors": 15,
+      "alpha_range": [
+        0,
+        255
+      ],
+      "sha256": "2167576130f3fa80794f37e726bd838096ddb339b835129b094bc9ee71784067",
+      "brief": "Derivado reproducible; ver preparar.py y README.",
+      "authorized_use": "Evaluación del piloto Poliquetos Asesinos; integración y uso como arte final condicionados a aprobación explícita. No assets comerciales de terceros importados."
+    },
+    {
+      "path": "A_nave_expedicion_x8.png",
+      "state": "concepto/no aprobado",
+      "author_tool": "Codex: preparación Pillow de conceptos imagegen / PNG previos del repositorio para comparativa, balas y tipografía",
+      "date": "2026-11-01",
+      "dimensions": [
+        384,
+        192
+      ],
+      "opaque_palette_colors": 15,
+      "alpha_range": [
+        0,
+        255
+      ],
+      "sha256": "8b9a07f047e1a6b8de9a5698bea3bd90b51fbc0ce14381782ca8db261de01919",
+      "brief": "Derivado reproducible; ver preparar.py y README.",
+      "authorized_use": "Evaluación del piloto Poliquetos Asesinos; integración y uso como arte final condicionados a aprobación explícita. No assets comerciales de terceros importados."
+    },
+    {
+      "path": "A_nave_industrial_48x24.png",
+      "state": "concepto/no aprobado",
+      "author_tool": "Codex: preparación Pillow de conceptos imagegen / PNG previos del repositorio para comparativa, balas y tipografía",
+      "date": "2026-11-01",
+      "dimensions": [
+        48,
+        24
+      ],
+      "opaque_palette_colors": 15,
+      "alpha_range": [
+        0,
+        255
+      ],
+      "sha256": "4a71603889c4a35d2a07d55d22b91ad73e1c8c24071266670b4d3d8b17b7a4d6",
+      "brief": "Derivado reproducible; ver preparar.py y README.",
+      "authorized_use": "Evaluación del piloto Poliquetos Asesinos; integración y uso como arte final condicionados a aprobación explícita. No assets comerciales de terceros importados."
+    },
+    {
+      "path": "A_nave_industrial_x8.png",
+      "state": "concepto/no aprobado",
+      "author_tool": "Codex: preparación Pillow de conceptos imagegen / PNG previos del repositorio para comparativa, balas y tipografía",
+      "date": "2026-11-01",
+      "dimensions": [
+        384,
+        192
+      ],
+      "opaque_palette_colors": 15,
+      "alpha_range": [
+        0,
+        255
+      ],
+      "sha256": "d3dc21ade675719e78fa59ddad35749bbbe754d11dd48c829650c751193be51f",
+      "brief": "Derivado reproducible; ver preparar.py y README.",
+      "authorized_use": "Evaluación del piloto Poliquetos Asesinos; integración y uso como arte final condicionados a aprobación explícita. No assets comerciales de terceros importados."
+    },
+    {
+      "path": "A_variantes.png",
+      "state": "concepto/no aprobado",
+      "author_tool": "Codex: preparación Pillow de conceptos imagegen / PNG previos del repositorio para comparativa, balas y tipografía",
+      "date": "2026-11-01",
+      "dimensions": [
+        1000,
+        760
+      ],
+      "opaque_palette_colors": 290,
+      "alpha_range": [
+        255,
+        255
+      ],
+      "sha256": "ca7ac548f68882fd9237ed6a70eaa5b34a820ef463b175b74aa7498cd55bb8f8",
+      "brief": "Derivado reproducible; ver preparar.py y README.",
+      "authorized_use": "Evaluación del piloto Poliquetos Asesinos; integración y uso como arte final condicionados a aprobación explícita. No assets comerciales de terceros importados."
+    },
+    {
+      "path": "B_hydroides_hit_01.png",
+      "state": "concepto/no aprobado",
+      "author_tool": "Codex: preparación Pillow de conceptos imagegen / PNG previos del repositorio para comparativa, balas y tipografía",
+      "date": "2026-11-01",
+      "dimensions": [
+        48,
+        48
+      ],
+      "opaque_palette_colors": 1,
+      "alpha_range": [
+        0,
+        255
+      ],
+      "sha256": "d0347890f74ddfedc7b094c990ae69209935efff49c7d60ee08f289ef36f04df",
+      "brief": "Derivado reproducible; ver preparar.py y README.",
+      "authorized_use": "Evaluación del piloto Poliquetos Asesinos; integración y uso como arte final condicionados a aprobación explícita. No assets comerciales de terceros importados."
+    },
+    {
+      "path": "B_hydroides_hit_02.png",
+      "state": "concepto/no aprobado",
+      "author_tool": "Codex: preparación Pillow de conceptos imagegen / PNG previos del repositorio para comparativa, balas y tipografía",
+      "date": "2026-11-01",
+      "dimensions": [
+        48,
+        48
+      ],
+      "opaque_palette_colors": 1,
+      "alpha_range": [
+        0,
+        255
+      ],
+      "sha256": "d0347890f74ddfedc7b094c990ae69209935efff49c7d60ee08f289ef36f04df",
+      "brief": "Derivado reproducible; ver preparar.py y README.",
+      "authorized_use": "Evaluación del piloto Poliquetos Asesinos; integración y uso como arte final condicionados a aprobación explícita. No assets comerciales de terceros importados."
+    },
+    {
+      "path": "B_hydroides_hoja.png",
+      "state": "concepto/no aprobado",
+      "author_tool": "Codex: preparación Pillow de conceptos imagegen / PNG previos del repositorio para comparativa, balas y tipografía",
+      "date": "2026-11-01",
+      "dimensions": [
+        1240,
+        620
+      ],
+      "opaque_palette_colors": 267,
+      "alpha_range": [
+        255,
+        255
+      ],
+      "sha256": "bd6d83d4e2eb0c8eef5c8ea554bca60bd8836dbbd294c00263b30649b0ab5695",
+      "brief": "Derivado reproducible; ver preparar.py y README.",
+      "authorized_use": "Evaluación del piloto Poliquetos Asesinos; integración y uso como arte final condicionados a aprobación explícita. No assets comerciales de terceros importados."
+    },
+    {
+      "path": "B_hydroides_move_01.png",
+      "state": "concepto/no aprobado",
+      "author_tool": "Codex: preparación Pillow de conceptos imagegen / PNG previos del repositorio para comparativa, balas y tipografía",
+      "date": "2026-11-01",
+      "dimensions": [
+        48,
+        48
+      ],
+      "opaque_palette_colors": 16,
+      "alpha_range": [
+        0,
+        255
+      ],
+      "sha256": "5843f5081504dc623756ffb299d157445199767a9caa7f65311aa48c06f03bbe",
+      "brief": "Derivado reproducible; ver preparar.py y README.",
+      "authorized_use": "Evaluación del piloto Poliquetos Asesinos; integración y uso como arte final condicionados a aprobación explícita. No assets comerciales de terceros importados."
+    },
+    {
+      "path": "B_hydroides_move_01_x8.png",
+      "state": "concepto/no aprobado",
+      "author_tool": "Codex: preparación Pillow de conceptos imagegen / PNG previos del repositorio para comparativa, balas y tipografía",
+      "date": "2026-11-01",
+      "dimensions": [
+        384,
+        384
+      ],
+      "opaque_palette_colors": 16,
+      "alpha_range": [
+        0,
+        255
+      ],
+      "sha256": "97a6345cd28bbd0d13befcb1bf112fbbde5d33c5e7fc0a9d853d6c3f80077e00",
+      "brief": "Derivado reproducible; ver preparar.py y README.",
+      "authorized_use": "Evaluación del piloto Poliquetos Asesinos; integración y uso como arte final condicionados a aprobación explícita. No assets comerciales de terceros importados."
+    },
+    {
+      "path": "B_hydroides_move_02.png",
+      "state": "concepto/no aprobado",
+      "author_tool": "Codex: preparación Pillow de conceptos imagegen / PNG previos del repositorio para comparativa, balas y tipografía",
+      "date": "2026-11-01",
+      "dimensions": [
+        48,
+        48
+      ],
+      "opaque_palette_colors": 16,
+      "alpha_range": [
+        0,
+        255
+      ],
+      "sha256": "d13020e77d84f1131d1d3a4a465b57bbbc4f21bdec9a923146f5a2865b7b0b8f",
+      "brief": "Derivado reproducible; ver preparar.py y README.",
+      "authorized_use": "Evaluación del piloto Poliquetos Asesinos; integración y uso como arte final condicionados a aprobación explícita. No assets comerciales de terceros importados."
+    },
+    {
+      "path": "B_hydroides_move_02_x8.png",
+      "state": "concepto/no aprobado",
+      "author_tool": "Codex: preparación Pillow de conceptos imagegen / PNG previos del repositorio para comparativa, balas y tipografía",
+      "date": "2026-11-01",
+      "dimensions": [
+        384,
+        384
+      ],
+      "opaque_palette_colors": 16,
+      "alpha_range": [
+        0,
+        255
+      ],
+      "sha256": "45615c5e3be1102412cc583b74656ef9f12b4510f646e3b250c11bd1d8abe2ee",
+      "brief": "Derivado reproducible; ver preparar.py y README.",
+      "authorized_use": "Evaluación del piloto Poliquetos Asesinos; integración y uso como arte final condicionados a aprobación explícita. No assets comerciales de terceros importados."
+    },
+    {
+      "path": "B_hydroides_move_03.png",
+      "state": "concepto/no aprobado",
+      "author_tool": "Codex: preparación Pillow de conceptos imagegen / PNG previos del repositorio para comparativa, balas y tipografía",
+      "date": "2026-11-01",
+      "dimensions": [
+        48,
+        48
+      ],
+      "opaque_palette_colors": 16,
+      "alpha_range": [
+        0,
+        255
+      ],
+      "sha256": "c4b68c71531da1760bafa63910dddc16877c206d704b93470ac8c697dd38abc6",
+      "brief": "Derivado reproducible; ver preparar.py y README.",
+      "authorized_use": "Evaluación del piloto Poliquetos Asesinos; integración y uso como arte final condicionados a aprobación explícita. No assets comerciales de terceros importados."
+    },
+    {
+      "path": "B_hydroides_move_03_x8.png",
+      "state": "concepto/no aprobado",
+      "author_tool": "Codex: preparación Pillow de conceptos imagegen / PNG previos del repositorio para comparativa, balas y tipografía",
+      "date": "2026-11-01",
+      "dimensions": [
+        384,
+        384
+      ],
+      "opaque_palette_colors": 16,
+      "alpha_range": [
+        0,
+        255
+      ],
+      "sha256": "ee62dda48fe7003c883207a97cbaaf5520b26569cc56f9ee6a19417c512129d8",
+      "brief": "Derivado reproducible; ver preparar.py y README.",
+      "authorized_use": "Evaluación del piloto Poliquetos Asesinos; integración y uso como arte final condicionados a aprobación explícita. No assets comerciales de terceros importados."
+    },
+    {
+      "path": "B_hydroides_paleta.png",
+      "state": "concepto/no aprobado",
+      "author_tool": "Codex: preparación Pillow de conceptos imagegen / PNG previos del repositorio para comparativa, balas y tipografía",
+      "date": "2026-11-01",
+      "dimensions": [
+        512,
+        64
+      ],
+      "opaque_palette_colors": 204,
+      "alpha_range": [
+        255,
+        255
+      ],
+      "sha256": "66aeed8c5b2140a6bb50d50bed02446b53b3b46811fbbafc3dcd82a7d89c2dc6",
+      "brief": "Derivado reproducible; ver preparar.py y README.",
+      "authorized_use": "Evaluación del piloto Poliquetos Asesinos; integración y uso como arte final condicionados a aprobación explícita. No assets comerciales de terceros importados."
+    },
+    {
+      "path": "B_hydroides_silueta.png",
+      "state": "concepto/no aprobado",
+      "author_tool": "Codex: preparación Pillow de conceptos imagegen / PNG previos del repositorio para comparativa, balas y tipografía",
+      "date": "2026-11-01",
+      "dimensions": [
+        48,
+        48
+      ],
+      "opaque_palette_colors": 1,
+      "alpha_range": [
+        0,
+        255
+      ],
+      "sha256": "be712580ccc5593be2c1bd4bd94f002d113e4408931d5da94ac606a62e85d5e1",
+      "brief": "Derivado reproducible; ver preparar.py y README.",
+      "authorized_use": "Evaluación del piloto Poliquetos Asesinos; integración y uso como arte final condicionados a aprobación explícita. No assets comerciales de terceros importados."
+    },
+    {
+      "path": "C_capa_01_1280x336.png",
+      "state": "concepto/no aprobado",
+      "author_tool": "Codex: preparación Pillow de conceptos imagegen / PNG previos del repositorio para comparativa, balas y tipografía",
+      "date": "2026-11-01",
+      "dimensions": [
+        1280,
+        336
+      ],
+      "opaque_palette_colors": 34218,
+      "alpha_range": [
+        255,
+        255
+      ],
+      "sha256": "48c304169c1acd1fafd5b093936afef9a5dfef5433d2931a256235392c1bdb7b",
+      "brief": "Derivado reproducible; ver preparar.py y README.",
+      "authorized_use": "Evaluación del piloto Poliquetos Asesinos; integración y uso como arte final condicionados a aprobación explícita. No assets comerciales de terceros importados."
+    },
+    {
+      "path": "C_capa_02_1280x336.png",
+      "state": "concepto/no aprobado",
+      "author_tool": "Codex: preparación Pillow de conceptos imagegen / PNG previos del repositorio para comparativa, balas y tipografía",
+      "date": "2026-11-01",
+      "dimensions": [
+        1280,
+        336
+      ],
+      "opaque_palette_colors": 9167,
+      "alpha_range": [
+        0,
+        255
+      ],
+      "sha256": "049362b9a9be9e200ed6aff1ba926b140b281968e869692d0eda125b159c821a",
+      "brief": "Derivado reproducible; ver preparar.py y README.",
+      "authorized_use": "Evaluación del piloto Poliquetos Asesinos; integración y uso como arte final condicionados a aprobación explícita. No assets comerciales de terceros importados."
+    },
+    {
+      "path": "C_capa_03_1280x336.png",
+      "state": "concepto/no aprobado",
+      "author_tool": "Codex: preparación Pillow de conceptos imagegen / PNG previos del repositorio para comparativa, balas y tipografía",
+      "date": "2026-11-01",
+      "dimensions": [
+        1280,
+        336
+      ],
+      "opaque_palette_colors": 15218,
+      "alpha_range": [
+        0,
+        255
+      ],
+      "sha256": "538fb4edcdde5fa72f15b9bafd133a37e7dbe084e62f03bf5ddd7cb791571ae2",
+      "brief": "Derivado reproducible; ver preparar.py y README.",
+      "authorized_use": "Evaluación del piloto Poliquetos Asesinos; integración y uso como arte final condicionados a aprobación explícita. No assets comerciales de terceros importados."
+    },
+    {
+      "path": "C_capa_04_1280x336.png",
+      "state": "concepto/no aprobado",
+      "author_tool": "Codex: preparación Pillow de conceptos imagegen / PNG previos del repositorio para comparativa, balas y tipografía",
+      "date": "2026-11-01",
+      "dimensions": [
+        1280,
+        336
+      ],
+      "opaque_palette_colors": 20844,
+      "alpha_range": [
+        0,
+        255
+      ],
+      "sha256": "e089d9fb0fd11aeeb75927a2c4f37805598390a23eed4663a08fc9c90253021d",
+      "brief": "Derivado reproducible; ver preparar.py y README.",
+      "authorized_use": "Evaluación del piloto Poliquetos Asesinos; integración y uso como arte final condicionados a aprobación explícita. No assets comerciales de terceros importados."
+    },
+    {
+      "path": "C_composicion_1280x336.png",
+      "state": "concepto/no aprobado",
+      "author_tool": "Codex: preparación Pillow de conceptos imagegen / PNG previos del repositorio para comparativa, balas y tipografía",
+      "date": "2026-11-01",
+      "dimensions": [
+        1280,
+        336
+      ],
+      "opaque_palette_colors": 68531,
+      "alpha_range": [
+        255,
+        255
+      ],
+      "sha256": "d773879c3a7bac710d189e086c9c585d9135182b34830c96fbe06f9455e1c3fc",
+      "brief": "Derivado reproducible; ver preparar.py y README.",
+      "authorized_use": "Evaluación del piloto Poliquetos Asesinos; integración y uso como arte final condicionados a aprobación explícita. No assets comerciales de terceros importados."
+    },
+    {
+      "path": "C_empalmes.png",
+      "state": "concepto/no aprobado",
+      "author_tool": "Codex: preparación Pillow de conceptos imagegen / PNG previos del repositorio para comparativa, balas y tipografía",
+      "date": "2026-11-01",
+      "dimensions": [
+        1280,
+        776
+      ],
+      "opaque_palette_colors": 49599,
+      "alpha_range": [
+        255,
+        255
+      ],
+      "sha256": "d097fd98a82a7d221d3f3325f2e85536e9b1f4285055b747148ed79fe6da56a3",
+      "brief": "Derivado reproducible; ver preparar.py y README.",
+      "authorized_use": "Evaluación del piloto Poliquetos Asesinos; integración y uso como arte final condicionados a aprobación explícita. No assets comerciales de terceros importados."
+    },
+    {
+      "path": "C_mockup_1920x1080.png",
+      "state": "concepto/no aprobado",
+      "author_tool": "Codex: preparación Pillow de conceptos imagegen / PNG previos del repositorio para comparativa, balas y tipografía",
+      "date": "2026-11-01",
+      "dimensions": [
+        1920,
+        1080
+      ],
+      "opaque_palette_colors": 67819,
+      "alpha_range": [
+        255,
+        255
+      ],
+      "sha256": "457a8c7497dd4b49a698ba35024c4d4003bb73535f0471d69514d02a7d428deb",
+      "brief": "Derivado reproducible; ver preparar.py y README.",
+      "authorized_use": "Evaluación del piloto Poliquetos Asesinos; integración y uso como arte final condicionados a aprobación explícita. No assets comerciales de terceros importados."
+    },
+    {
+      "path": "C_mockup_640x360.png",
+      "state": "concepto/no aprobado",
+      "author_tool": "Codex: preparación Pillow de conceptos imagegen / PNG previos del repositorio para comparativa, balas y tipografía",
+      "date": "2026-11-01",
+      "dimensions": [
+        640,
+        360
+      ],
+      "opaque_palette_colors": 67819,
+      "alpha_range": [
+        255,
+        255
+      ],
+      "sha256": "0fdb5517a2552d9826e83698e2a7e00ef26d4495d4f1e006e80af42520a0ee46",
+      "brief": "Derivado reproducible; ver preparar.py y README.",
+      "authorized_use": "Evaluación del piloto Poliquetos Asesinos; integración y uso como arte final condicionados a aprobación explícita. No assets comerciales de terceros importados."
+    },
+    {
+      "path": "D_ilustracion_640x360.png",
+      "state": "concepto/no aprobado",
+      "author_tool": "Codex: preparación Pillow de conceptos imagegen / PNG previos del repositorio para comparativa, balas y tipografía",
+      "date": "2026-11-01",
+      "dimensions": [
+        640,
+        360
+      ],
+      "opaque_palette_colors": 141382,
+      "alpha_range": [
+        255,
+        255
+      ],
+      "sha256": "8c0b65c5aef30e9faaf774b4a575a9c62e494a83684e92118708bd94ef182cea",
+      "brief": "Derivado reproducible; ver preparar.py y README.",
+      "authorized_use": "Evaluación del piloto Poliquetos Asesinos; integración y uso como arte final condicionados a aprobación explícita. No assets comerciales de terceros importados."
+    },
+    {
+      "path": "D_portada_mockup_1920x1080.png",
+      "state": "concepto/no aprobado",
+      "author_tool": "Codex: preparación Pillow de conceptos imagegen / PNG previos del repositorio para comparativa, balas y tipografía",
+      "date": "2026-11-01",
+      "dimensions": [
+        1920,
+        1080
+      ],
+      "opaque_palette_colors": 124299,
+      "alpha_range": [
+        255,
+        255
+      ],
+      "sha256": "234fddfc25bbdafa1134d12467a497e99cb3b743ca93c97280d83ea77143be03",
+      "brief": "Derivado reproducible; ver preparar.py y README.",
+      "authorized_use": "Evaluación del piloto Poliquetos Asesinos; integración y uso como arte final condicionados a aprobación explícita. No assets comerciales de terceros importados."
+    },
+    {
+      "path": "D_portada_mockup_640x360.png",
+      "state": "concepto/no aprobado",
+      "author_tool": "Codex: preparación Pillow de conceptos imagegen / PNG previos del repositorio para comparativa, balas y tipografía",
+      "date": "2026-11-01",
+      "dimensions": [
+        640,
+        360
+      ],
+      "opaque_palette_colors": 124299,
+      "alpha_range": [
+        255,
+        255
+      ],
+      "sha256": "6846cfb4b243b79204f85559e7dd8c8e28bc0c1ec5f60423925d35d15692ac59",
+      "brief": "Derivado reproducible; ver preparar.py y README.",
+      "authorized_use": "Evaluación del piloto Poliquetos Asesinos; integración y uso como arte final condicionados a aprobación explícita. No assets comerciales de terceros importados."
+    },
+    {
+      "path": "D_textos_separados_640x360.png",
+      "state": "concepto/no aprobado",
+      "author_tool": "Codex: preparación Pillow de conceptos imagegen / PNG previos del repositorio para comparativa, balas y tipografía",
+      "date": "2026-11-01",
+      "dimensions": [
+        640,
+        360
+      ],
+      "opaque_palette_colors": 3,
+      "alpha_range": [
+        0,
+        255
+      ],
+      "sha256": "194fa8e86c1bfaa3568eceec268f357c09c704cce5fb9d41d439dbb0ad221ff5",
+      "brief": "Derivado reproducible; ver preparar.py y README.",
+      "authorized_use": "Evaluación del piloto Poliquetos Asesinos; integración y uso como arte final condicionados a aprobación explícita. No assets comerciales de terceros importados."
+    },
+    {
+      "path": "comparacion_previo_mockup.png",
+      "state": "concepto/no aprobado",
+      "author_tool": "Codex: preparación Pillow de conceptos imagegen / PNG previos del repositorio para comparativa, balas y tipografía",
+      "date": "2026-11-01",
+      "dimensions": [
+        640,
+        360
+      ],
+      "opaque_palette_colors": 9,
+      "alpha_range": [
+        255,
+        255
+      ],
+      "sha256": "18e7814fde958919034c30bc34a53b38f781988da738ad2d29dac96253bff128",
+      "brief": "Derivado reproducible; ver preparar.py y README.",
+      "authorized_use": "Evaluación del piloto Poliquetos Asesinos; integración y uso como arte final condicionados a aprobación explícita. No assets comerciales de terceros importados."
+    },
+    {
+      "path": "comparativa.png",
+      "state": "concepto/no aprobado",
+      "author_tool": "Codex: preparación Pillow de conceptos imagegen / PNG previos del repositorio para comparativa, balas y tipografía",
+      "date": "2026-11-01",
+      "dimensions": [
+        1280,
+        1060
+      ],
+      "opaque_palette_colors": 68068,
+      "alpha_range": [
+        255,
+        255
+      ],
+      "sha256": "6880abb87d20c2cc06a1099ef2998a9611ee0dfbce192954232bc24049dbdf5c",
+      "brief": "Derivado reproducible; ver preparar.py y README.",
+      "authorized_use": "Evaluación del piloto Poliquetos Asesinos; integración y uso como arte final condicionados a aprobación explícita. No assets comerciales de terceros importados."
+    },
+    {
+      "path": "originales/A_naves.png",
+      "state": "concepto/no aprobado",
+      "author_tool": "OpenAI imagegen",
+      "date": "2026-11-01",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "opaque_palette_colors": 183867,
+      "alpha_range": [
+        0,
+        254
+      ],
+      "sha256": "031ccf3f21ae546a707bdeb053d656d04ca7e794d18d7bf3153d6fc9818a93cc",
+      "brief": "Tres variantes laterales originales de nave oceanográfica: científica marfil/turquesa, industrial ocre, expedición azul/oliva; cabina con tripulante y cañón a derecha.",
+      "authorized_use": "Evaluación del piloto Poliquetos Asesinos; integración y uso como arte final condicionados a aprobación explícita. No assets comerciales de terceros importados."
+    },
+    {
+      "path": "originales/B_hydroides.png",
+      "state": "concepto/no aprobado",
+      "author_tool": "OpenAI imagegen",
+      "date": "2026-11-01",
+      "dimensions": [
+        2172,
+        724
+      ],
+      "opaque_palette_colors": 212799,
+      "alpha_range": [
+        0,
+        255
+      ],
+      "sha256": "61c0085f77ea47b5b26bb94a8675f83f00da4b5b2a3ee81ac1984529593eda02",
+      "brief": "Serpulidae tubícola con tubo calcáreo, corona radiolar coral y opérculo; cuatro poses generadas, cuarta descartada por recorte.",
+      "authorized_use": "Evaluación del piloto Poliquetos Asesinos; integración y uso como arte final condicionados a aprobación explícita. No assets comerciales de terceros importados."
+    },
+    {
+      "path": "originales/C1_agua.png",
+      "state": "concepto/no aprobado",
+      "author_tool": "OpenAI imagegen",
+      "date": "2026-11-01",
+      "dimensions": [
+        1731,
+        909
+      ],
+      "opaque_palette_colors": 61950,
+      "alpha_range": [
+        255,
+        255
+      ],
+      "sha256": "2148d570c2ea86239b1dd236cab46dd9f56491e27c9d8c4b6f093b9849e119a9",
+      "brief": "Agua superficial luminosa celeste/turquesa con luz lejana; sin objetos jugables.",
+      "authorized_use": "Evaluación del piloto Poliquetos Asesinos; integración y uso como arte final condicionados a aprobación explícita. No assets comerciales de terceros importados."
+    },
+    {
+      "path": "originales/C2_puerto.png",
+      "state": "concepto/no aprobado",
+      "author_tool": "OpenAI imagegen",
+      "date": "2026-11-01",
+      "dimensions": [
+        1731,
+        909
+      ],
+      "opaque_palette_colors": 33895,
+      "alpha_range": [
+        0,
+        255
+      ],
+      "sha256": "5dd1ef882563d2bb403069a035b660dba846f61195569188ff0773fa14e47be0",
+      "brief": "Cascos de barco y pilotes lejanos sobre transparencia.",
+      "authorized_use": "Evaluación del piloto Poliquetos Asesinos; integración y uso como arte final condicionados a aprobación explícita. No assets comerciales de terceros importados."
+    },
+    {
+      "path": "originales/C3_corrientes.png",
+      "state": "concepto/no aprobado",
+      "author_tool": "OpenAI imagegen",
+      "date": "2026-11-01",
+      "dimensions": [
+        1731,
+        909
+      ],
+      "opaque_palette_colors": 68426,
+      "alpha_range": [
+        0,
+        255
+      ],
+      "sha256": "a6fe9ea4eff9725ceb202d4c805e0ae06dffe83d53d5597e1c17caaed49b50c3",
+      "brief": "Corrientes, peces de fondo y estructuras bajas sobre transparencia.",
+      "authorized_use": "Evaluación del piloto Poliquetos Asesinos; integración y uso como arte final condicionados a aprobación explícita. No assets comerciales de terceros importados."
+    },
+    {
+      "path": "originales/C4_boyas.png",
+      "state": "concepto/no aprobado",
+      "author_tool": "OpenAI imagegen",
+      "date": "2026-11-01",
+      "dimensions": [
+        1734,
+        907
+      ],
+      "opaque_palette_colors": 132963,
+      "alpha_range": [
+        0,
+        255
+      ],
+      "sha256": "05280af3016765ee23fce0f872d8285fec1eafff3ff45553bd66ab5cc9cedc26",
+      "brief": "Boya, cadena, espuma y esquina portuaria; centro libre sobre transparencia.",
+      "authorized_use": "Evaluación del piloto Poliquetos Asesinos; integración y uso como arte final condicionados a aprobación explícita. No assets comerciales de terceros importados."
+    },
+    {
+      "path": "originales/D_portada.png",
+      "state": "concepto/no aprobado",
+      "author_tool": "OpenAI imagegen",
+      "date": "2026-11-01",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "opaque_palette_colors": 637388,
+      "alpha_range": [
+        255,
+        255
+      ],
+      "sha256": "01a657d39720792117e91260a5c203565162d14a57b704189fd2fd5fb5cec517",
+      "brief": "Ilustración original de peligro submarino: nave tripulada, horda de poliquetos diferenciados, proyectiles y burbujas; sin letras generadas.",
+      "authorized_use": "Evaluación del piloto Poliquetos Asesinos; integración y uso como arte final condicionados a aprobación explícita. No assets comerciales de terceros importados."
+    }
+  ]
+}
