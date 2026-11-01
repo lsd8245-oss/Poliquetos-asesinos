@@ -28,7 +28,8 @@
               },
               "cantidad": {
                 "type": "integer",
-                "minimum": 1
+                "minimum": 1,
+                "maximum": 20
               },
               "formacion": {
                 "type": "string",
@@ -48,6 +49,14 @@
                   "azul",
                   "amarillo"
                 ]
+              },
+              "separacion_px": {
+                "type": "number",
+                "minimum": 0
+              },
+              "separacion_seg": {
+                "type": "number",
+                "minimum": 0
               }
             },
             "required": [
@@ -95,6 +104,46 @@
               "id": {
                 "type": "string",
                 "pattern": "^[a-z][a-z0-9_]*$"
+              },
+              "jefes": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "pattern": "^[a-z][a-z0-9_]*$"
+                },
+                "uniqueItems": true
+              },
+              "escoltas": {
+                "type": "object",
+                "properties": {
+                  "enemigo": {
+                    "type": "string",
+                    "pattern": "^[a-z][a-z0-9_]*$"
+                  },
+                  "cantidad": {
+                    "const": 2
+                  },
+                  "vida": {
+                    "type": "number",
+                    "minimum": 0
+                  },
+                  "tamano": {
+                    "type": "array",
+                    "items": {
+                      "type": "number",
+                      "exclusiveMinimum": 0
+                    },
+                    "minItems": 2,
+                    "maxItems": 2
+                  }
+                },
+                "required": [
+                  "enemigo",
+                  "cantidad",
+                  "vida",
+                  "tamano"
+                ],
+                "additionalProperties": false
               }
             },
             "required": [
@@ -103,10 +152,72 @@
               "id"
             ],
             "additionalProperties": false
+          },
+          {
+            "type": "object",
+            "properties": {
+              "t": {
+                "type": "number",
+                "minimum": 0
+              },
+              "tipo": {
+                "const": "escudo"
+              },
+              "item": {
+                "const": "amarillo"
+              },
+              "y": {
+                "type": "number",
+                "minimum": 0
+              }
+            },
+            "required": [
+              "t",
+              "tipo",
+              "item",
+              "y"
+            ],
+            "additionalProperties": false
+          },
+          {
+            "type": "object",
+            "properties": {
+              "t": {
+                "type": "number",
+                "minimum": 0
+              },
+              "tipo": {
+                "const": "peligro"
+              },
+              "id": {
+                "type": "string",
+                "pattern": "^[a-z][a-z0-9_]*$"
+              },
+              "duracion_seg": {
+                "type": "number",
+                "minimum": 0
+              },
+              "y": {
+                "type": "number",
+                "minimum": 0
+              }
+            },
+            "required": [
+              "t",
+              "tipo",
+              "id",
+              "duracion_seg",
+              "y"
+            ],
+            "additionalProperties": false
           }
         ]
       },
       "minItems": 1
+    },
+    "semilla": {
+      "type": "integer",
+      "minimum": 0
     }
   },
   "required": [

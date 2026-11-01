@@ -59,3 +59,7 @@ Simulación nativa separada del renderizado: movimiento8direcciones160px/s, hitb
 ### Fase3
 
 Misiles automáticos8niveles, bombas8niveles con cooldown y limpieza de proyectiles, burbujas de arma/escudo, conversión de nivel máximo, equipo pasivo y reintento con armas de entrada. Prueba headless verifica las16tablas deDPS, bombas, duplicación de burbujas y restauración de armas.
+
+### Fase4
+
+Lector de oleadasJSON, formaciones, movimientosM1–M8 y disparosF0–F5, peligros y checkpoints. Mundo1 verificado con90enemigos, minijefe, alerta a170s y reanudación de oleadas aunque el minijefe siga vivo. Las cantidades son independientes de escoltas/invocaciones.

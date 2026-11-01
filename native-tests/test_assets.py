@@ -75,6 +75,56 @@ class AssetsTest(unittest.TestCase):
             if char != ' ':
                 self.assertIsNotNone(font.crop((x,y,x+w,y+h)).getbbox(), char)
 
+    def test_ship_cosmetic_sets_have_replaceable_frames(self):
+        cosmetics = ROOT / 'data/cosmetics.json'
+        if not cosmetics.exists():
+            self.skipTest('cosmetics data not generated yet')
+        names = {a['nombre'] for a in json.loads((ROOT / 'assets/assets_manifest.json').read_text())['assets']}
+        for skin in json.loads(cosmetics.read_text()):
+            self.assertIn('w01_' + skin['sprite_set'] + '_move', names)
+
+    def test_imported_png_uses_resource_loader_without_warnings(self):
+        godot = shutil.which('godot')
+        if not godot:
+            self.skipTest('Godot binary unavailable')
+        with tempfile.TemporaryDirectory(prefix='poli-imported-') as temporary:
+            fixture = Path(temporary)
+            (fixture / 'src/core').mkdir(parents=True)
+            (fixture / 'assets').mkdir()
+            shutil.copy2(ROOT / 'src/core/assets.gd', fixture / 'src/core/assets.gd')
+            Image.new('RGBA', (4,4), (12,34,56,255)).save(fixture / 'assets/test.png')
+            (fixture / 'project.godot').write_text('config_version=5\n[application]\nconfig/name="Imported PNG fixture"\n')
+            (fixture / 'check.gd').write_text('''extends SceneTree
+const Assets = preload("res://src/core/assets.gd")
+class ExternalAssets extends Assets:
+    func _external_path(relative: String) -> String:
+        return "res://external.png"
+func _init():
+    var texture = Assets.new()._load_png("assets/test.png")
+    if not texture is CompressedTexture2D:
+        print("Imported PNG resource loader was bypassed")
+        quit(1)
+        return
+    # Simulate an executable-adjacent artist PNG with the same imported asset key.
+    var custom = Image.create(4,4,false,Image.FORMAT_RGBA8)
+    custom.fill(Color8(65,43,21,255))
+    custom.save_png("res://external.png")
+    var replacement = ExternalAssets.new()._load_png("assets/test.png")
+    if replacement.get_image().get_pixel(0,0) != Color8(65,43,21,255):
+        print("External artist PNG lost priority")
+        quit(1)
+        return
+    print("Imported PNG and external priority passed")
+    quit(0)
+''')
+            env = dict(os.environ, XDG_DATA_HOME=str(fixture / 'user'), XDG_CONFIG_HOME=str(fixture / 'config'), XDG_CACHE_HOME=str(fixture / 'cache'))
+            imported = subprocess.run([godot,'--headless','--editor','--path',str(fixture),'--quit'],capture_output=True,text=True,env=env,timeout=30)
+            self.assertEqual(imported.returncode, 0, imported.stdout+imported.stderr)
+            result = subprocess.run([godot,'--headless','--path',str(fixture),'--script','check.gd'],capture_output=True,text=True,env=env,timeout=15)
+            self.assertEqual(result.returncode, 0, result.stdout+result.stderr)
+            self.assertNotIn('WARNING:', result.stderr)
+            self.assertIn('Imported PNG and external priority passed', result.stdout)
+
     def test_individual_png_replacement_precedes_atlas_fallback(self):
         godot = shutil.which('godot')
         if not godot:

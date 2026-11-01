@@ -82,6 +82,90 @@
           "pattern": "^[a-z][a-z0-9_]*$"
         },
         "minItems": 1
+      },
+      "unicos": {
+        "type": "array",
+        "items": {
+          "type": "string",
+          "pattern": "^[a-z][a-z0-9_]*$"
+        },
+        "uniqueItems": true
+      },
+      "recurrentes": {
+        "type": "array",
+        "items": {
+          "type": "string",
+          "pattern": "^[a-z][a-z0-9_]*$"
+        },
+        "uniqueItems": true
+      },
+      "mini_tipo": {
+        "type": "string",
+        "pattern": "^[a-z][a-z0-9_]*$"
+      },
+      "vida_minijefe": {
+        "type": "number",
+        "minimum": 0
+      },
+      "jefe_objetivo_seg": {
+        "type": "number",
+        "minimum": 0
+      },
+      "base_monedas": {
+        "type": "integer",
+        "minimum": 0
+      },
+      "semilla": {
+        "type": "integer",
+        "minimum": 0
+      },
+      "laboratorio_organicos": {
+        "type": "integer",
+        "minimum": 0
+      },
+      "laboratorio_roboticos": {
+        "type": "integer",
+        "minimum": 0
+      },
+      "sectores_jefes": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 4
+            },
+            "jefes": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "pattern": "^[a-z][a-z0-9_]*$"
+              },
+              "uniqueItems": true
+            },
+            "objetivo_seg": {
+              "type": "number",
+              "minimum": 0
+            },
+            "base_monedas": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "texto": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "id",
+            "jefes",
+            "objetivo_seg",
+            "base_monedas",
+            "texto"
+          ],
+          "additionalProperties": false
+        }
       }
     },
     "required": [

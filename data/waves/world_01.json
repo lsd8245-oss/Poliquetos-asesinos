@@ -1,0 +1,234 @@
+{
+  "mundo": 1,
+  "semilla": 0,
+  "eventos": [
+    {
+      "t": 10.0,
+      "tipo": "oleada",
+      "enemigo": "hydroides",
+      "cantidad": 4,
+      "formacion": "linea_vertical",
+      "y": 60,
+      "portadora": true,
+      "separacion_px": 32,
+      "separacion_seg": 0.3,
+      "item": "rojo"
+    },
+    {
+      "t": 17.0,
+      "tipo": "oleada",
+      "enemigo": "euphrosine",
+      "cantidad": 4,
+      "formacion": "linea_horizontal",
+      "y": 110,
+      "portadora": false,
+      "separacion_px": 32,
+      "separacion_seg": 0.3
+    },
+    {
+      "t": 24.0,
+      "tipo": "oleada",
+      "enemigo": "fabric",
+      "cantidad": 5,
+      "formacion": "v",
+      "y": 168,
+      "portadora": false,
+      "separacion_px": 32,
+      "separacion_seg": 0.3
+    },
+    {
+      "t": 25,
+      "tipo": "peligro",
+      "id": "boyas",
+      "duracion_seg": 10,
+      "y": 280
+    },
+    {
+      "t": 31.0,
+      "tipo": "oleada",
+      "enemigo": "pision",
+      "cantidad": 5,
+      "formacion": "v_invertida",
+      "y": 220,
+      "portadora": true,
+      "separacion_px": 32,
+      "separacion_seg": 0.3,
+      "item": "verde"
+    },
+    {
+      "t": 36.0,
+      "tipo": "escudo",
+      "item": "amarillo",
+      "y": 168
+    },
+    {
+      "t": 37,
+      "tipo": "peligro",
+      "id": "cascos",
+      "duracion_seg": 10,
+      "y": 40
+    },
+    {
+      "t": 38.0,
+      "tipo": "oleada",
+      "enemigo": "lacy",
+      "cantidad": 4,
+      "formacion": "zigzag",
+      "y": 276,
+      "portadora": false,
+      "separacion_px": 32,
+      "separacion_seg": 0.3
+    },
+    {
+      "t": 45.0,
+      "tipo": "oleada",
+      "enemigo": "syll",
+      "cantidad": 7,
+      "formacion": "circulo",
+      "y": 60,
+      "portadora": true,
+      "separacion_px": 32,
+      "separacion_seg": 0.3,
+      "item": "azul"
+    },
+    {
+      "t": 52.0,
+      "tipo": "oleada",
+      "enemigo": "phyll",
+      "cantidad": 7,
+      "formacion": "doble_columna",
+      "y": 110,
+      "portadora": false,
+      "separacion_px": 32,
+      "separacion_seg": 0.3
+    },
+    {
+      "t": 60.0,
+      "tipo": "minijefe",
+      "id": "mini_w01_pision",
+      "escoltas": {
+        "enemigo": "euphrosine",
+        "cantidad": 2,
+        "vida": 6,
+        "tamano": [
+          40,
+          32
+        ]
+      }
+    },
+    {
+      "t": 120.0,
+      "tipo": "oleada",
+      "enemigo": "phyll",
+      "cantidad": 11,
+      "formacion": "v_invertida",
+      "y": 60,
+      "portadora": false,
+      "separacion_px": 32,
+      "separacion_seg": 0.3
+    },
+    {
+      "t": 125.0,
+      "tipo": "escudo",
+      "item": "amarillo",
+      "y": 168
+    },
+    {
+      "t": 127.0,
+      "tipo": "oleada",
+      "enemigo": "pision",
+      "cantidad": 6,
+      "formacion": "zigzag",
+      "y": 110,
+      "portadora": true,
+      "separacion_px": 32,
+      "separacion_seg": 0.3,
+      "item": "rojo"
+    },
+    {
+      "t": 130.0,
+      "tipo": "peligro",
+      "id": "boyas",
+      "duracion_seg": 10,
+      "y": 280
+    },
+    {
+      "t": 134.0,
+      "tipo": "oleada",
+      "enemigo": "syll",
+      "cantidad": 11,
+      "formacion": "circulo",
+      "y": 168,
+      "portadora": false,
+      "separacion_px": 32,
+      "separacion_seg": 0.3
+    },
+    {
+      "t": 138.0,
+      "tipo": "peligro",
+      "id": "cascos",
+      "duracion_seg": 10,
+      "y": 40
+    },
+    {
+      "t": 141.0,
+      "tipo": "oleada",
+      "enemigo": "euphrosine",
+      "cantidad": 7,
+      "formacion": "doble_columna",
+      "y": 220,
+      "portadora": true,
+      "separacion_px": 32,
+      "separacion_seg": 0.3,
+      "item": "verde"
+    },
+    {
+      "t": 148.0,
+      "tipo": "oleada",
+      "enemigo": "hydroides",
+      "cantidad": 7,
+      "formacion": "ambos_lados",
+      "y": 276,
+      "portadora": false,
+      "separacion_px": 32,
+      "separacion_seg": 0.3
+    },
+    {
+      "t": 155.0,
+      "tipo": "oleada",
+      "enemigo": "lacy",
+      "cantidad": 6,
+      "formacion": "diagonal",
+      "y": 60,
+      "portadora": false,
+      "separacion_px": 32,
+      "separacion_seg": 0.3
+    },
+    {
+      "t": 162.0,
+      "tipo": "oleada",
+      "enemigo": "fabric",
+      "cantidad": 6,
+      "formacion": "linea_vertical",
+      "y": 110,
+      "portadora": true,
+      "separacion_px": 32,
+      "separacion_seg": 0.3,
+      "item": "azul"
+    },
+    {
+      "t": 168,
+      "tipo": "escudo",
+      "item": "amarillo",
+      "y": 168
+    },
+    {
+      "t": 170,
+      "tipo": "alerta_jefe",
+      "id": "boss_w01_nereis",
+      "jefes": [
+        "boss_w01_nereis"
+      ]
+    }
+  ]
+}

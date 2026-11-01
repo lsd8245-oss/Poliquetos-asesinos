@@ -91,6 +91,46 @@
           "revisar",
           "confirmado"
         ]
+      },
+      "tamano": {
+        "type": "array",
+        "items": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "minItems": 2,
+        "maxItems": 2
+      },
+      "blindado": {
+        "type": "boolean"
+      },
+      "robot_codigo": {
+        "enum": [
+          "R1",
+          "R2",
+          "R3",
+          "R4",
+          "R5",
+          "R6"
+        ]
+      },
+      "parametros": {
+        "type": "object",
+        "properties": {
+          "carcasa_abierta_seg": {
+            "type": "number",
+            "minimum": 0
+          },
+          "cadena_intervalo_seg": {
+            "type": "number",
+            "minimum": 0
+          }
+        },
+        "required": [
+          "carcasa_abierta_seg",
+          "cadena_intervalo_seg"
+        ],
+        "additionalProperties": false
       }
     },
     "required": [

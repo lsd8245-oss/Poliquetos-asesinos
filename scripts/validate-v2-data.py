@@ -17,6 +17,35 @@ def load(path):
 def validate(kind, data):
     schema = load(SCHEMAS / f"{kind}.schema.json")
     Draft202012Validator(schema).validate(data)
+    if kind in ('worlds', 'enemies', 'bosses'):
+        if len({item['id'] for item in data}) != len(data):
+            raise ValueError('Duplicate content identifier')
+    if kind == 'worlds':
+        for world in data:
+            if world['minijefe_inicio_seg'] != world['duracion_hasta_jefe_seg'] / 2 - 30:
+                raise ValueError('Incorrect miniboss timeline')
+            if world['alerta_jefe_seg'] != world['duracion_hasta_jefe_seg'] - 10:
+                raise ValueError('Incorrect boss alert timeline')
+    if kind == 'bosses':
+        for boss in data:
+            phases = boss['fases']
+            if phases[0]['desde_pct'] != 100 or phases[-1]['hasta_pct'] != 0:
+                raise ValueError('Boss phases must span full HP')
+            if any(a['hasta_pct'] != b['desde_pct'] for a,b in zip(phases, phases[1:])):
+                raise ValueError('Boss phases have a gap')
+    if kind == 'combat':
+        for group in ('shot', 'missile'):
+            for weapon in data[group]:
+                if abs(weapon['damage'] * weapon['count'] / weapon['interval'] - weapon['dps']) > 1e-7:
+                    raise ValueError('Weapon damage/cadence differs from DPS')
+    if kind == 'escape':
+        if sum(section['enemigos'] for section in data['tramos']) != data['enemigos_total']:
+            raise ValueError('Escape section counts differ from total')
+        if 'eventos' in data:
+            for section in data['tramos']:
+                count = sum(e['cantidad'] for e in data['eventos'] if e['tipo'] == 'oleada' and section['inicio_seg'] <= e['t'] < section['fin_seg'])
+                if count != section['enemigos']:
+                    raise ValueError('Escape waves differ from section count')
     if kind == "atlas":
         width, height = data["tamano"]
         for frame in data["frames"].values():
@@ -62,6 +91,7 @@ def self_test():
         "cosmetics": (lambda x: x[0].update(id="INVALID ID")),
         "audio": (lambda x: x[0].update(volumen=2)),
         "waves": (lambda x: x["eventos"][0].update(cantidad=-1)),
+        "combat": (lambda x: x["shot"][0].update(damage=-1)),
         "escape": (lambda x: x.update(duracion_seg=0)),
         "atlas": (lambda x: x["frames"][next(iter(x["frames"]))].update(x=1024)),
         "assets_manifest": (lambda x: x["assets"][0].update(estado="inventado")),
@@ -110,7 +140,7 @@ def main():
         Draft202012Validator.check_schema(load(path))
     validate_file("legacy_inventory", ROOT / "data/legacy_inventory.json")
     # Validate populated future data as soon as its owning phase adds it.
-    for kind in ("worlds", "enemies", "bosses", "shop", "cosmetics", "audio", "escape"):
+    for kind in ("worlds", "enemies", "bosses", "combat", "shop", "cosmetics", "audio", "escape"):
         path = ROOT / f"data/{kind}.json"
         if path.exists():
             validate_file(kind, path)
@@ -123,7 +153,7 @@ def main():
         validate_file("assets_manifest", manifest)
     if args.self_test:
         self_test()
-    print(f"{len(schemas)} contracts verified; legacy inventory valid. Future content is not yet implemented.")
+    print(f"{len(schemas)} contracts verified; available campaign data and legacy inventory valid.")
 
 
 if __name__ == "__main__":

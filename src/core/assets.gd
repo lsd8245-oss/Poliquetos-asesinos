@@ -106,10 +106,15 @@ func _external_path(relative: String) -> String:
 
 func _load_png(relative: String) -> Texture2D:
 	var external := _external_path(relative)
-	var path := external if not external.is_empty() and FileAccess.file_exists(external) else "res://" + relative
+	var path := "res://" + relative
+	if not external.is_empty() and FileAccess.file_exists(external):
+		# Artist PNGs beside the executable always override the imported resource.
+		path = external
+	elif ResourceLoader.exists(path):
+		return ResourceLoader.load(path) as Texture2D
 	if not FileAccess.file_exists(path):
-		# Godot exports may remap source PNGs to imported texture resources.
-		return load(path) as Texture2D if ResourceLoader.exists(path) else null
+		return null
+	# Raw PNGs also work in development fixtures or an unimported external pack.
 	var png := Image.load_from_file(path)
 	if png == null or png.is_empty():
 		push_warning("Unable to read PNG: " + path)

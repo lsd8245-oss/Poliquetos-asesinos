@@ -13,7 +13,8 @@ func _init() -> void:
 	assert(assets.text_size("A\nAB", 2) == Vector2(24,36))
 	assert(assets.has_sprite("w15_bg_layer4_idle"))
 	# The actual texture pixels come from individually replaceable PNGs.
-	var source = Image.load_from_file("res://assets/ui/w01_ui_ship_original_move_01.png")
+	var source := Image.new()
+	assert(source.load_png_from_buffer(FileAccess.get_file_as_bytes("res://assets/ui/w01_ui_ship_original_move_01.png")) == OK)
 	assert(assets.get_texture("w01_ui_ship_original_move").get_image().get_data() == source.get_data())
 	print("Native assets: PNG loading, animation, unknown keys and Spanish bitmap metrics passed")
 	quit(0)

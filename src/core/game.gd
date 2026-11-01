@@ -92,7 +92,7 @@ func start(p: Dictionary, restore_checkpoint: Dictionary = {}):
 	mini_spawned = false
 	mini_defeated = false
 	boss_spawned = false
-	lander_used = false
+	lander_used = int(profile.get("lander_used_world",0)) == int(profile.world)
 	net_stock = int(data.combat.get("gear",{}).get("net_capacity",5))
 	rng.seed = int(profile.get("seed",12345)) + int(profile.world)
 	enemies.clear()
@@ -325,6 +325,7 @@ func damage_player(amount: float, source: String, boss: bool = false):
 	if player.shield<=0:
 		if equipment("lander") and not lander_used:
 			lander_used=true
+			profile.lander_used_world=int(profile.world)
 			player.shield=float(stats.max_shield)*0.5
 			invulnerability=float(data.combat.player.respawn_invulnerability)
 			set_notice("LANDER: RESURRECCIÓN")
@@ -345,7 +346,7 @@ func hit_enemy(e: Dictionary, amount: float, hit_pos: Vector2, bomb: bool = fals
 		if boss_system!=null:
 			boss_system.damage(self,e,amount,hit_pos,bomb)
 		return
-	if e.get("id","")=="r6_escudo_afrodita" and fmod(float(e.age),5)>1 and hit_pos.x<e.pos.x:
+	if e.get("id","")=="mech_polyn" and fmod(float(e.age),5)>1 and hit_pos.x<e.pos.x:
 		return
 	e.hp -= amount
 	e.flash=0.04
@@ -365,8 +366,12 @@ func kill_enemy(e: Dictionary):
 			if wave_state[key].killed==wave_state[key].count and wave_state[key].get("item","")!="":
 				spawn_drop(wave_state[key].item,e.pos,"carrier:"+key)
 		var base=float(world.get("base_monedas",0))
-		var coin_value=base*0.75/float(maxi(1,int(world.get("enemigos_total",90))))
-		spawn_drop("coin",e.pos,"enemy:%s" % e.uid,coin_value)
+		var total=maxi(1,int(world.get("enemigos_total",90)))
+		var units=floori(base*0.75/float(data.combat.items.small_coin))
+		var ordinal=int(e.get("ordinal",0))
+		var coin_units=floori(float((ordinal+1)*units)/total)-floori(float(ordinal*units)/total)
+		if coin_units>0:
+			spawn_drop("coin",e.pos,"enemy:%s" % e.uid,coin_units*float(data.combat.items.small_coin))
 
 func spawn_drop(kind: String, pos: Vector2, uid: String, value: float = 0.0):
 	var key="%d:%s:%s" % [int(profile.world),str(profile.get("lab_boss",0)),uid]
@@ -487,10 +492,10 @@ func step_hazards(dt: float):
 		if h.duration<=0:
 			hazards.remove_at(i)
 
-func clear_enemy_bullets(convert: bool):
+func clear_enemy_bullets(convert: bool, owner: String = "", phase: int = 0):
 	for i in range(enemy_bullets.size()-1,-1,-1):
 		if convert:
-			spawn_drop("coin",enemy_bullets[i].pos,"phase:%s:%d:%d"%[str(profile.get("lab_boss",0)),serial,i],float(data.combat.items.small_coin))
+			spawn_drop("coin",enemy_bullets[i].pos,"phase:%s:%d:%d"%[owner,phase,i],float(data.combat.items.small_coin))
 		recycle_bullet(i)
 	serial+=1
 
