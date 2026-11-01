@@ -1,0 +1,270 @@
+[
+  {
+    "edition": "Normal",
+    "payload_sha256": "36e580b539ce440fdb678b71b5cffb792566eaa9b927549066949628ed5ac44c",
+    "movie_payload_match": true,
+    "runtime": "Windows EXE under Wine10; NOT real Windows; NOT NSIS installation",
+    "video": {
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "width": 640,
+          "height": 360,
+          "nb_frames": "996"
+        }
+      ],
+      "format": {
+        "duration": "49.850000"
+      }
+    },
+    "samples": {
+      "0": {
+        "boss_system": true,
+        "edition": "normal",
+        "elapsed": 0.0,
+        "enemies": 0,
+        "enemy_bullets": 0,
+        "os": "Windows",
+        "regular_kills": 0,
+        "regular_spawned": 0,
+        "scroll": 0.0,
+        "stage_system": true,
+        "state": "playing",
+        "target_elapsed": 0.0,
+        "weapon_system": true,
+        "world_time": 0.0
+      },
+      "5": {
+        "boss_system": true,
+        "edition": "normal",
+        "elapsed": 5.00256724242424,
+        "enemies": 0,
+        "enemy_bullets": 0,
+        "os": "Windows",
+        "regular_kills": 0,
+        "regular_spawned": 0,
+        "scroll": 300.154034545456,
+        "stage_system": true,
+        "state": "playing",
+        "target_elapsed": 5.0,
+        "weapon_system": true,
+        "world_time": 5.00256724242424
+      },
+      "12": {
+        "boss_system": true,
+        "edition": "normal",
+        "elapsed": 12.0063817407408,
+        "enemies": 4,
+        "enemy_bullets": 12,
+        "os": "Windows",
+        "regular_kills": 0,
+        "regular_spawned": 4,
+        "scroll": 720.382904444451,
+        "stage_system": true,
+        "state": "playing",
+        "target_elapsed": 12.0,
+        "weapon_system": true,
+        "world_time": 12.0063817407408
+      },
+      "15": {
+        "boss_system": true,
+        "edition": "normal",
+        "elapsed": 15.0003211346803,
+        "enemies": 4,
+        "enemy_bullets": 24,
+        "os": "Windows",
+        "regular_kills": 0,
+        "regular_spawned": 4,
+        "scroll": 900.019268080815,
+        "stage_system": true,
+        "state": "playing",
+        "target_elapsed": 15.0,
+        "weapon_system": true,
+        "world_time": 15.0003211346803
+      },
+      "20": {
+        "boss_system": true,
+        "edition": "normal",
+        "elapsed": 20.0063817407408,
+        "enemies": 4,
+        "enemy_bullets": 4,
+        "os": "Windows",
+        "regular_kills": 4,
+        "regular_spawned": 8,
+        "scroll": 1200.38290444445,
+        "stage_system": true,
+        "state": "playing",
+        "target_elapsed": 20.0,
+        "weapon_system": true,
+        "world_time": 20.0063817407408
+      },
+      "30": {
+        "boss_system": true,
+        "edition": "normal",
+        "elapsed": 30.0014860740744,
+        "enemies": 2,
+        "enemy_bullets": 21,
+        "os": "Windows",
+        "regular_kills": 7,
+        "regular_spawned": 13,
+        "scroll": 1800.08916444446,
+        "stage_system": true,
+        "state": "playing",
+        "target_elapsed": 30.0,
+        "weapon_system": true,
+        "world_time": 30.0014860740744
+      },
+      "40": {
+        "boss_system": true,
+        "edition": "normal",
+        "elapsed": 40.0012800740743,
+        "enemies": 3,
+        "enemy_bullets": 7,
+        "os": "Windows",
+        "regular_kills": 14,
+        "regular_spawned": 22,
+        "scroll": 2400.07680444445,
+        "stage_system": true,
+        "state": "playing",
+        "target_elapsed": 40.0,
+        "weapon_system": true,
+        "world_time": 40.0012800740743
+      }
+    }
+  },
+  {
+    "edition": "Pruebas",
+    "payload_sha256": "8513d78d8498752a612b16c43e3cfaca9a4f8a49ede140d3b319447ed7cee363",
+    "movie_payload_match": true,
+    "runtime": "Windows EXE under Wine10; NOT real Windows; NOT NSIS installation",
+    "video": {
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "width": 640,
+          "height": 360,
+          "nb_frames": "998"
+        }
+      ],
+      "format": {
+        "duration": "50.000000"
+      }
+    },
+    "samples": {
+      "0": {
+        "boss_system": true,
+        "edition": "pruebas",
+        "elapsed": 0.0,
+        "enemies": 0,
+        "enemy_bullets": 0,
+        "os": "Windows",
+        "regular_kills": 0,
+        "regular_spawned": 0,
+        "scroll": 0.0,
+        "stage_system": true,
+        "state": "playing",
+        "target_elapsed": 0.0,
+        "weapon_system": true,
+        "world_time": 0.0
+      },
+      "5": {
+        "boss_system": true,
+        "edition": "pruebas",
+        "elapsed": 5.00104733333331,
+        "enemies": 0,
+        "enemy_bullets": 0,
+        "os": "Windows",
+        "regular_kills": 0,
+        "regular_spawned": 0,
+        "scroll": 300.062840000001,
+        "stage_system": true,
+        "state": "playing",
+        "target_elapsed": 5.0,
+        "weapon_system": true,
+        "world_time": 5.00104733333331
+      },
+      "12": {
+        "boss_system": true,
+        "edition": "pruebas",
+        "elapsed": 12.001587,
+        "enemies": 4,
+        "enemy_bullets": 12,
+        "os": "Windows",
+        "regular_kills": 0,
+        "regular_spawned": 4,
+        "scroll": 720.09522,
+        "stage_system": true,
+        "state": "playing",
+        "target_elapsed": 12.0,
+        "weapon_system": true,
+        "world_time": 12.001587
+      },
+      "15": {
+        "boss_system": true,
+        "edition": "pruebas",
+        "elapsed": 15.0038597272727,
+        "enemies": 3,
+        "enemy_bullets": 24,
+        "os": "Windows",
+        "regular_kills": 1,
+        "regular_spawned": 4,
+        "scroll": 900.231583636364,
+        "stage_system": true,
+        "state": "playing",
+        "target_elapsed": 15.0,
+        "weapon_system": true,
+        "world_time": 15.0038597272727
+      },
+      "20": {
+        "boss_system": true,
+        "edition": "pruebas",
+        "elapsed": 20.0059409999999,
+        "enemies": 4,
+        "enemy_bullets": 4,
+        "os": "Windows",
+        "regular_kills": 4,
+        "regular_spawned": 8,
+        "scroll": 1200.35646,
+        "stage_system": true,
+        "state": "playing",
+        "target_elapsed": 20.0,
+        "weapon_system": true,
+        "world_time": 20.0059409999999
+      },
+      "30": {
+        "boss_system": true,
+        "edition": "pruebas",
+        "elapsed": 30.0100654444444,
+        "enemies": 2,
+        "enemy_bullets": 21,
+        "os": "Windows",
+        "regular_kills": 7,
+        "regular_spawned": 13,
+        "scroll": 1800.60392666668,
+        "stage_system": true,
+        "state": "playing",
+        "target_elapsed": 30.0,
+        "weapon_system": true,
+        "world_time": 30.0100654444444
+      },
+      "40": {
+        "boss_system": true,
+        "edition": "pruebas",
+        "elapsed": 40.004561,
+        "enemies": 3,
+        "enemy_bullets": 7,
+        "os": "Windows",
+        "regular_kills": 14,
+        "regular_spawned": 22,
+        "scroll": 2400.27366000002,
+        "stage_system": true,
+        "state": "playing",
+        "target_elapsed": 40.0,
+        "weapon_system": true,
+        "world_time": 40.004561
+      }
+    }
+  }
+]

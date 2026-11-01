@@ -1,0 +1,142 @@
+[
+  {
+    "name": "import",
+    "passed": true,
+    "exit": 0
+  },
+  {
+    "name": "python-contracts",
+    "passed": true,
+    "exit": 0
+  },
+  {
+    "name": "schemas",
+    "passed": true,
+    "exit": 0
+  },
+  {
+    "name": "art_w01_test",
+    "passed": true,
+    "exit": 0
+  },
+  {
+    "name": "assets_test",
+    "passed": true,
+    "exit": 0
+  },
+  {
+    "name": "audio_test",
+    "passed": true,
+    "exit": 0
+  },
+  {
+    "name": "b1_presentation_test",
+    "passed": true,
+    "exit": 0
+  },
+  {
+    "name": "balance_test",
+    "passed": true,
+    "exit": 0
+  },
+  {
+    "name": "boss_integration_test",
+    "passed": true,
+    "exit": 0
+  },
+  {
+    "name": "boss_patterns_test",
+    "passed": true,
+    "exit": 0
+  },
+  {
+    "name": "campaign_flow_test",
+    "passed": true,
+    "exit": 0
+  },
+  {
+    "name": "core_test",
+    "passed": true,
+    "exit": 0
+  },
+  {
+    "name": "frame_flow_test",
+    "passed": true,
+    "exit": 0
+  },
+  {
+    "name": "hazard_collision_test",
+    "passed": true,
+    "exit": 0
+  },
+  {
+    "name": "hazards_test",
+    "passed": true,
+    "exit": 0
+  },
+  {
+    "name": "integration_regressions_test",
+    "passed": true,
+    "exit": 0
+  },
+  {
+    "name": "shop_save_test",
+    "passed": true,
+    "exit": 0
+  },
+  {
+    "name": "stages_test",
+    "passed": true,
+    "exit": 0
+  },
+  {
+    "name": "ui_test",
+    "passed": true,
+    "exit": 0
+  },
+  {
+    "name": "weapons_test",
+    "passed": true,
+    "exit": 0
+  },
+  {
+    "name": "normal-start",
+    "passed": true,
+    "exit": 0
+  },
+  {
+    "name": "pruebas-start",
+    "passed": true,
+    "exit": 0
+  },
+  {
+    "name": "normal-stage-runtime",
+    "passed": true,
+    "exit": 0
+  },
+  {
+    "name": "pruebas-stage-runtime",
+    "passed": true,
+    "exit": 0
+  },
+  {
+    "name": "normal-quit",
+    "passed": true,
+    "exit": 0
+  },
+  {
+    "name": "pruebas-quit",
+    "passed": true,
+    "exit": 0
+  },
+  {
+    "name": "visual",
+    "passed": true,
+    "exit": 0
+  },
+  {
+    "name": "performance",
+    "passed": true,
+    "exit": 0
+  }
+]

@@ -1,0 +1,116 @@
+01_fx_bubble_burst_05.png[39m[0m
+[  60% ] [90m[1mreimport[22m | w01_fx_bubble_burst_06.png[39m[0m
+[  70% ] [90m[1mreimport[22m | w01_fx_bubble_burst_07.png[39m[0m
+[  80% ] [90m[1mreimport[22m | w01_fx_bubble_burst_08.png[39m[0m
+[  80% ] [90m[1mreimport[22m | w01_fx_bubble_burst_08.png[39m[0m
+[  80% ] [90m[1mreimport[22m | w01_fx_bubble_burst_08.png[39m[0m
+[  90% ] [90m[1mreimport[22m | Finalizing Asset Import...[39m[0m
+[92m[ DONE ][39m [1mreimport[22m
+[0m
+[   0% ] [90m[1mreimport[22m | Started (Re)Importing Assets (9 steps)[39m[0m
+[   0% ] [90m[1mreimport[22m | Executing post-reimport operations...[39m[0m
+[92m[ DONE ][39m [1mreimport[22m
+[0m
+[   0% ] [90m[1mloading_editor_layout[22m | Started Loading editor (5 steps)[39m[0m
+[   0% ] [90m[1mloading_editor_layout[22m | Loading editor layout...[39m[0m
+[  16% ] [90m[1mloading_editor_layout[22m | Loading docks...[39m[0m
+[92m[ DONE ][39m [1mloading_editor_layout[22m
+[0m
+
+90m[1msavepack[22m | Storing File: res://src/core/game.gd.remap[39m[0m
+[  98% ] [90m[1msavepack[22m | Storing File: res://src/core/data.gd.remap[39m[0m
+[  98% ] [90m[1msavepack[22m | Storing File: res://src/core/assets.gd.remap[39m[0m
+[  98% ] [90m[1msavepack[22m | Storing File: res://src/bosses/patterns.gd.remap[39m[0m
+[  98% ] [90m[1msavepack[22m | Storing File: res://src/save/saves.gd.remap[39m[0m
+[  98% ] [90m[1msavepack[22m | Storing File: res://src/stages/stages.gd.remap[39m[0m
+[  98% ] [90m[1msavepack[22m | Storing File: res://src/weapons/weapons.gd.remap[39m[0m
+[  98% ] [90m[1msavepack[22m | Storing File: res://native/main.tscn.remap[39m[0m
+[  98% ] [90m[1msavepack[22m | Storing File: res://.godot/global_script_class_cache.cfg[39m[0m
+[  98% ] [90m[1msavepack[22m | Storing File: res://.godot/uid_cache.bin[39m[0m
+[  98% ] [90m[1msavepack[22m | Storing File: res://project.binary[39m[0m
+[92m[ DONE ][39m [1msavepack[22m
+[0m
+
+Godot Engine v4.6.3.stable.official.7d41c59c4 - https://godotengine.org
+
+EXPORT_VERIFY_PASS edition=normal worlds=14 shield=90.0 world_time=20.0166666666668 scroll=1201.0 spawned=8 controllers=true
+
+":true},"res://src/stages/stages.gd":{"file_access":false,"loaded":true,"resource_loader":true},"res://src/weapons/weapons.gd":{"file_access":false,"loaded":true,"resource_loader":true}},"samples":[{"boss_system":true,"elapsed":0.0,"enemies":0,"regular_kills":0,"regular_spawned":0,"scroll":0.0,"stage_system":true,"state":"playing","weapon_system":true,"world_time":0.0},{"boss_system":true,"elapsed":5.0,"enemies":0,"regular_kills":0,"regular_spawned":0,"scroll":300.0,"stage_system":true,"state":"playing","weapon_system":true,"world_time":4.99999999999999},{"boss_system":true,"elapsed":12.0,"enemies":4,"regular_kills":0,"regular_spawned":4,"scroll":720.0,"stage_system":true,"state":"playing","weapon_system":true,"world_time":12.0000000000002},{"boss_system":true,"elapsed":20.0,"enemies":3,"regular_kills":5,"regular_spawned":8,"scroll":1200.0,"stage_system":true,"state":"playing","weapon_system":true,"world_time":20.0000000000001}],"shield":90.0,"shop_stats_match":true}
+EXPORT_STAGE_PASS
+
+90m[1msavepack[22m | Storing File: res://src/core/game.gd.remap[39m[0m
+[  98% ] [90m[1msavepack[22m | Storing File: res://src/core/data.gd.remap[39m[0m
+[  98% ] [90m[1msavepack[22m | Storing File: res://src/core/assets.gd.remap[39m[0m
+[  98% ] [90m[1msavepack[22m | Storing File: res://src/bosses/patterns.gd.remap[39m[0m
+[  98% ] [90m[1msavepack[22m | Storing File: res://src/save/saves.gd.remap[39m[0m
+[  98% ] [90m[1msavepack[22m | Storing File: res://src/stages/stages.gd.remap[39m[0m
+[  98% ] [90m[1msavepack[22m | Storing File: res://src/weapons/weapons.gd.remap[39m[0m
+[  98% ] [90m[1msavepack[22m | Storing File: res://native/main.tscn.remap[39m[0m
+[  98% ] [90m[1msavepack[22m | Storing File: res://.godot/global_script_class_cache.cfg[39m[0m
+[  98% ] [90m[1msavepack[22m | Storing File: res://.godot/uid_cache.bin[39m[0m
+[  98% ] [90m[1msavepack[22m | Storing File: res://project.binary[39m[0m
+[92m[ DONE ][39m [1msavepack[22m
+[0m
+
+Godot Engine v4.6.3.stable.official.7d41c59c4 - https://godotengine.org
+
+EXPORT_VERIFY_PASS edition=pruebas worlds=14 shield=90.0 world_time=20.0166666666668 scroll=1201.0 spawned=8 controllers=true
+
+":true},"res://src/stages/stages.gd":{"file_access":false,"loaded":true,"resource_loader":true},"res://src/weapons/weapons.gd":{"file_access":false,"loaded":true,"resource_loader":true}},"samples":[{"boss_system":true,"elapsed":0.0,"enemies":0,"regular_kills":0,"regular_spawned":0,"scroll":0.0,"stage_system":true,"state":"playing","weapon_system":true,"world_time":0.0},{"boss_system":true,"elapsed":5.0,"enemies":0,"regular_kills":0,"regular_spawned":0,"scroll":300.0,"stage_system":true,"state":"playing","weapon_system":true,"world_time":4.99999999999999},{"boss_system":true,"elapsed":12.0,"enemies":4,"regular_kills":0,"regular_spawned":4,"scroll":720.0,"stage_system":true,"state":"playing","weapon_system":true,"world_time":12.0000000000002},{"boss_system":true,"elapsed":20.0,"enemies":3,"regular_kills":5,"regular_spawned":8,"scroll":1200.0,"stage_system":true,"state":"playing","weapon_system":true,"world_time":20.0000000000001}],"shield":90.0,"shop_stats_match":true}
+EXPORT_STAGE_PASS
+
+90m[1msavepack[22m | Storing File: res://src/core/game.gd.remap[39m[0m
+[  98% ] [90m[1msavepack[22m | Storing File: res://src/core/data.gd.remap[39m[0m
+[  98% ] [90m[1msavepack[22m | Storing File: res://src/core/assets.gd.remap[39m[0m
+[  98% ] [90m[1msavepack[22m | Storing File: res://src/bosses/patterns.gd.remap[39m[0m
+[  98% ] [90m[1msavepack[22m | Storing File: res://src/save/saves.gd.remap[39m[0m
+[  98% ] [90m[1msavepack[22m | Storing File: res://src/stages/stages.gd.remap[39m[0m
+[  98% ] [90m[1msavepack[22m | Storing File: res://src/weapons/weapons.gd.remap[39m[0m
+[  98% ] [90m[1msavepack[22m | Storing File: res://native/main.tscn.remap[39m[0m
+[  98% ] [90m[1msavepack[22m | Storing File: res://.godot/global_script_class_cache.cfg[39m[0m
+[  98% ] [90m[1msavepack[22m | Storing File: res://.godot/uid_cache.bin[39m[0m
+[  98% ] [90m[1msavepack[22m | Storing File: res://project.binary[39m[0m
+[92m[ DONE ][39m [1msavepack[22m
+[0m
+
+Godot Engine v4.6.3.stable.official.7d41c59c4 - https://godotengine.org
+
+EXPORT_VERIFY_PASS edition=normal worlds=14 shield=90.0 world_time=20.0166666666668 scroll=1201.0 spawned=8 controllers=true
+
+":true},"res://src/stages/stages.gd":{"file_access":false,"loaded":true,"resource_loader":true},"res://src/weapons/weapons.gd":{"file_access":false,"loaded":true,"resource_loader":true}},"samples":[{"boss_system":true,"elapsed":0.0,"enemies":0,"regular_kills":0,"regular_spawned":0,"scroll":0.0,"stage_system":true,"state":"playing","weapon_system":true,"world_time":0.0},{"boss_system":true,"elapsed":5.0,"enemies":0,"regular_kills":0,"regular_spawned":0,"scroll":300.0,"stage_system":true,"state":"playing","weapon_system":true,"world_time":4.99999999999999},{"boss_system":true,"elapsed":12.0,"enemies":4,"regular_kills":0,"regular_spawned":4,"scroll":720.0,"stage_system":true,"state":"playing","weapon_system":true,"world_time":12.0000000000002},{"boss_system":true,"elapsed":20.0,"enemies":3,"regular_kills":5,"regular_spawned":8,"scroll":1200.0,"stage_system":true,"state":"playing","weapon_system":true,"world_time":20.0000000000001}],"shield":90.0,"shop_stats_match":true}
+EXPORT_STAGE_PASS
+
+
+
+[
+  {
+    "file": "Poliquetos-Normal.exe",
+    "bytes": 110289192,
+    "sha256": "36e580b539ce440fdb678b71b5cffb792566eaa9b927549066949628ed5ac44c",
+    "preset": "Windows Normal"
+  },
+  {
+    "file": "Poliquetos-Pruebas.exe",
+    "bytes": 110289240,
+    "sha256": "8513d78d8498752a612b16c43e3cfaca9a4f8a49ede140d3b319447ed7cee363",
+    "preset": "Windows Pruebas"
+  },
+  {
+    "file": "poliquetos-linux.x86_64",
+    "bytes": 76705592,
+    "sha256": "4546d8565c5e010e8b3e4d0d256a067ee7af109def891a074168bbc7aca7f0a7",
+    "preset": "Linux Verification"
+  },
+  {
+    "file": "entregas/Poliquetos-Normal-Instalar.exe",
+    "bytes": 29689085,
+    "sha256": "7b347e723f74c346fa7175a953f8d79c367ed5b87398db202eeb9c49d578e3dd",
+    "preset": "Normal installer"
+  },
+  {
+    "file": "entregas/Poliquetos-Pruebas-Instalar.exe",
+    "bytes": 29688598,
+    "sha256": "582f8ccad0d1200d569d006aaa497dea33c6c9b149f7224393aaf5bcb46e4baa",
+    "preset": "Pruebas installer"
+  }
+]

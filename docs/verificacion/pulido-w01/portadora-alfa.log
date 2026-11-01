@@ -1,0 +1,3 @@
+/workspace/Poliquetos-asesinos/native-tests/carrier_alpha_probe.py:11: DeprecationWarning: Image.Image.getdata is deprecated and will be removed in Pillow 14 (2027-10-15). Use get_flattened_data instead.
+  pixels=list(im.getdata())
+CARRIER ALPHA PASS: 8 thin neutral rims; transparent center, no dark backing

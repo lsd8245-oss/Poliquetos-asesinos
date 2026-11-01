@@ -1,0 +1,453 @@
+{
+  "version": 2,
+  "assets": [
+    {
+      "nombre": "w01_bg_coast_pillars_idle",
+      "mundo": 1,
+      "tipo": "bg",
+      "tamano": [
+        192,
+        144
+      ],
+      "cuadros": 1,
+      "fps": 0,
+      "ruta": "assets/backgrounds/w01/w01_bg_coast_pillars_idle_01.png",
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w01_bg_ruin_arch_idle",
+      "mundo": 1,
+      "tipo": "bg",
+      "tamano": [
+        256,
+        144
+      ],
+      "cuadros": 1,
+      "fps": 0,
+      "ruta": "assets/backgrounds/w01/w01_bg_ruin_arch_idle_01.png",
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w01_bg_wreck_truss_idle",
+      "mundo": 1,
+      "tipo": "bg",
+      "tamano": [
+        320,
+        144
+      ],
+      "cuadros": 1,
+      "fps": 0,
+      "ruta": "assets/backgrounds/w01/w01_bg_wreck_truss_idle_01.png",
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w01_bg_coast_rocks_idle",
+      "mundo": 1,
+      "tipo": "bg",
+      "tamano": [
+        176,
+        80
+      ],
+      "cuadros": 1,
+      "fps": 0,
+      "ruta": "assets/backgrounds/w01/w01_bg_coast_rocks_idle_01.png",
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w01_bg_algae_sway",
+      "mundo": 1,
+      "tipo": "bg",
+      "tamano": [
+        96,
+        96
+      ],
+      "cuadros": 4,
+      "fps": 4,
+      "ruta": "assets/backgrounds/w01/w01_bg_algae_sway_01.png",
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w01_bg_chain_sway",
+      "mundo": 1,
+      "tipo": "bg",
+      "tamano": [
+        48,
+        128
+      ],
+      "cuadros": 4,
+      "fps": 3,
+      "ruta": "assets/backgrounds/w01/w01_bg_chain_sway_01.png",
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w01_bg_fish_swim",
+      "mundo": 1,
+      "tipo": "bg",
+      "tamano": [
+        96,
+        40
+      ],
+      "cuadros": 4,
+      "fps": 5,
+      "ruta": "assets/backgrounds/w01/w01_bg_fish_swim_01.png",
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w01_bg_bubble_rise",
+      "mundo": 1,
+      "tipo": "bg",
+      "tamano": [
+        24,
+        40
+      ],
+      "cuadros": 4,
+      "fps": 4,
+      "ruta": "assets/backgrounds/w01/w01_bg_bubble_rise_01.png",
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w01_bg_caustic_drift",
+      "mundo": 1,
+      "tipo": "bg",
+      "tamano": [
+        220,
+        72
+      ],
+      "cuadros": 4,
+      "fps": 3,
+      "ruta": "assets/backgrounds/w01/w01_bg_caustic_drift_01.png",
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w01_bg_plankton_drift",
+      "mundo": 1,
+      "tipo": "bg",
+      "tamano": [
+        96,
+        64
+      ],
+      "cuadros": 4,
+      "fps": 2,
+      "ruta": "assets/backgrounds/w01/w01_bg_plankton_drift_01.png",
+      "estado": "placeholder"
+    }
+  ],
+  "provenance": [
+    {
+      "nombre": "w01_bg_coast_pillars_idle",
+      "source": "image_gen original, 2026-11-01",
+      "sheet": "docs/arte/pulido-w01/fuentes/environment-objects.png",
+      "source_sha256": "a0038fbdc97dabd2eadb918f97cf09a3eb5a671855a1f004806fd31cc08cbdba",
+      "crop_boxes": [
+        [
+          0,
+          40,
+          380,
+          355
+        ]
+      ],
+      "processing": "crop, binary alpha threshold100, shared16color palette, nearest-neighbor resize only",
+      "review": "PNG integrado para revisión humana; no aprobado como arte final",
+      "frames_sha256": {
+        "assets/backgrounds/w01/w01_bg_coast_pillars_idle_01.png": "5957ba9ae241d0e5a74cd63711198264bf4b353929b59a877c086aa5cc558af5"
+      }
+    },
+    {
+      "nombre": "w01_bg_ruin_arch_idle",
+      "source": "image_gen original, 2026-11-01",
+      "sheet": "docs/arte/pulido-w01/fuentes/environment-objects.png",
+      "source_sha256": "a0038fbdc97dabd2eadb918f97cf09a3eb5a671855a1f004806fd31cc08cbdba",
+      "crop_boxes": [
+        [
+          384,
+          120,
+          764,
+          355
+        ]
+      ],
+      "processing": "crop, binary alpha threshold100, shared16color palette, nearest-neighbor resize only",
+      "review": "PNG integrado para revisión humana; no aprobado como arte final",
+      "frames_sha256": {
+        "assets/backgrounds/w01/w01_bg_ruin_arch_idle_01.png": "54659e70cd8c041b539eeb5e6df801beee1a8b625b7929ed15207352baf81e41"
+      }
+    },
+    {
+      "nombre": "w01_bg_wreck_truss_idle",
+      "source": "image_gen original, 2026-11-01",
+      "sheet": "docs/arte/pulido-w01/fuentes/environment-objects.png",
+      "source_sha256": "a0038fbdc97dabd2eadb918f97cf09a3eb5a671855a1f004806fd31cc08cbdba",
+      "crop_boxes": [
+        [
+          768,
+          130,
+          1154,
+          355
+        ]
+      ],
+      "processing": "crop, binary alpha threshold100, shared16color palette, nearest-neighbor resize only",
+      "review": "PNG integrado para revisión humana; no aprobado como arte final",
+      "frames_sha256": {
+        "assets/backgrounds/w01/w01_bg_wreck_truss_idle_01.png": "f897ac55608a34955061e7494efed8df69d27468b54813e280a72d73398b5986"
+      }
+    },
+    {
+      "nombre": "w01_bg_coast_rocks_idle",
+      "source": "image_gen original, 2026-11-01",
+      "sheet": "docs/arte/pulido-w01/fuentes/environment-objects.png",
+      "source_sha256": "a0038fbdc97dabd2eadb918f97cf09a3eb5a671855a1f004806fd31cc08cbdba",
+      "crop_boxes": [
+        [
+          1154,
+          160,
+          1536,
+          355
+        ]
+      ],
+      "processing": "crop, binary alpha threshold100, shared16color palette, nearest-neighbor resize only",
+      "review": "PNG integrado para revisión humana; no aprobado como arte final",
+      "frames_sha256": {
+        "assets/backgrounds/w01/w01_bg_coast_rocks_idle_01.png": "792a54588b2e37eb10d58c0a6731886a69af1927256b72b885fe506277889153"
+      }
+    },
+    {
+      "nombre": "w01_bg_algae_sway",
+      "source": "image_gen original, 2026-11-01",
+      "sheet": "docs/arte/pulido-w01/fuentes/environment-objects.png",
+      "source_sha256": "a0038fbdc97dabd2eadb918f97cf09a3eb5a671855a1f004806fd31cc08cbdba",
+      "crop_boxes": [
+        [
+          0,
+          384,
+          384,
+          658
+        ],
+        [
+          384,
+          384,
+          768,
+          658
+        ],
+        [
+          768,
+          384,
+          1152,
+          658
+        ],
+        [
+          1152,
+          384,
+          1536,
+          658
+        ]
+      ],
+      "processing": "crop, binary alpha threshold100, shared16color palette, nearest-neighbor resize only",
+      "review": "PNG integrado para revisión humana; no aprobado como arte final",
+      "frames_sha256": {
+        "assets/backgrounds/w01/w01_bg_algae_sway_01.png": "eff4718c2737eda9cb021cc792272347b626ba41c4ee2a295bed6c51ab8f06e6",
+        "assets/backgrounds/w01/w01_bg_algae_sway_02.png": "1fbbe2b27ffe13982366eacef1886e6e4a6a3880b968d61bd9e7406095397a46",
+        "assets/backgrounds/w01/w01_bg_algae_sway_03.png": "9773fcc910d0f1618d1726754a2e08e3880ddd1bfd3df5a3e8925aef39b7b5cc",
+        "assets/backgrounds/w01/w01_bg_algae_sway_04.png": "602d2fd8fed888367e03575e7215488c19c1f76f522cb2e9b28755a6cb3bf33e"
+      }
+    },
+    {
+      "nombre": "w01_bg_chain_sway",
+      "source": "image_gen original, 2026-11-01",
+      "sheet": "docs/arte/pulido-w01/fuentes/environment-objects.png",
+      "source_sha256": "a0038fbdc97dabd2eadb918f97cf09a3eb5a671855a1f004806fd31cc08cbdba",
+      "crop_boxes": [
+        [
+          0,
+          662,
+          384,
+          1005
+        ],
+        [
+          384,
+          662,
+          768,
+          1005
+        ],
+        [
+          768,
+          662,
+          1152,
+          1005
+        ],
+        [
+          1152,
+          662,
+          1536,
+          1005
+        ]
+      ],
+      "processing": "crop, binary alpha threshold100, shared16color palette, nearest-neighbor resize only",
+      "review": "PNG integrado para revisión humana; no aprobado como arte final",
+      "frames_sha256": {
+        "assets/backgrounds/w01/w01_bg_chain_sway_01.png": "34213e3e00715bedae162750094f30aae98b6675abf9927158d49e35665f781b",
+        "assets/backgrounds/w01/w01_bg_chain_sway_02.png": "7be215e8998de6e75795df3807b3a0e0b7361b51c1c2839e7ff49be5af882b51",
+        "assets/backgrounds/w01/w01_bg_chain_sway_03.png": "88a7bb18e9e3169b0d871ce7dc69d372b37221fbdd23dbd616fda827cf1bfed3",
+        "assets/backgrounds/w01/w01_bg_chain_sway_04.png": "c04ede43354bdb2a86667879b9730f33660d744810353126c91622f1798bd4d7"
+      }
+    },
+    {
+      "nombre": "w01_bg_fish_swim",
+      "source": "image_gen original, 2026-11-01",
+      "sheet": "docs/arte/pulido-w01/fuentes/environment-particles.png",
+      "source_sha256": "bdf66914035f1320bbe183504e6446c971cde8fab73049c97f3a98fccafccb83",
+      "crop_boxes": [
+        [
+          0,
+          120,
+          314,
+          285
+        ],
+        [
+          314,
+          120,
+          627,
+          285
+        ],
+        [
+          627,
+          120,
+          940,
+          285
+        ],
+        [
+          940,
+          120,
+          1254,
+          285
+        ]
+      ],
+      "processing": "crop, binary alpha threshold100, shared16color palette, nearest-neighbor resize only",
+      "review": "PNG integrado para revisión humana; no aprobado como arte final",
+      "frames_sha256": {
+        "assets/backgrounds/w01/w01_bg_fish_swim_01.png": "d3eb66f86a8aad571ce288087e7580d18350f670b10b3bc6db0f0cfc3b3ae0c8",
+        "assets/backgrounds/w01/w01_bg_fish_swim_02.png": "9782928acd8f572946dbdacb3b0f1617b6e94f9d8efd46ac06a21f3c45356908",
+        "assets/backgrounds/w01/w01_bg_fish_swim_03.png": "4d1b15e645badde25128ccb6fcfbaf22edf3fd17af55d16db2d62d81115d1943",
+        "assets/backgrounds/w01/w01_bg_fish_swim_04.png": "0bead4cfd9d6a079255afce4108fe02118e836fcf085492b4f1c70b5118e6477"
+      }
+    },
+    {
+      "nombre": "w01_bg_bubble_rise",
+      "source": "image_gen original, 2026-11-01",
+      "sheet": "docs/arte/pulido-w01/fuentes/environment-particles.png",
+      "source_sha256": "bdf66914035f1320bbe183504e6446c971cde8fab73049c97f3a98fccafccb83",
+      "crop_boxes": [
+        [
+          0,
+          380,
+          314,
+          660
+        ],
+        [
+          314,
+          380,
+          627,
+          660
+        ],
+        [
+          627,
+          380,
+          940,
+          660
+        ],
+        [
+          940,
+          380,
+          1254,
+          660
+        ]
+      ],
+      "processing": "crop, binary alpha threshold100, shared16color palette, nearest-neighbor resize only",
+      "review": "PNG integrado para revisión humana; no aprobado como arte final",
+      "frames_sha256": {
+        "assets/backgrounds/w01/w01_bg_bubble_rise_01.png": "d6598fb14ea70723c199edc87a14be0a256993934f208b101837c8a650be2ba4",
+        "assets/backgrounds/w01/w01_bg_bubble_rise_02.png": "692348a683ac165736b4f47b2aa90d804a4d607705d6664f62e0d584166fed61",
+        "assets/backgrounds/w01/w01_bg_bubble_rise_03.png": "a271ca0ee96e312efb0ed1935211858332f73c6993df91e22feb0c9ccb679600",
+        "assets/backgrounds/w01/w01_bg_bubble_rise_04.png": "90f4edce858a25f3a0513de56ecabdb53e18c7bc1d660cb9203022c00d17897f"
+      }
+    },
+    {
+      "nombre": "w01_bg_caustic_drift",
+      "source": "image_gen original, 2026-11-01",
+      "sheet": "docs/arte/pulido-w01/fuentes/environment-particles.png",
+      "source_sha256": "bdf66914035f1320bbe183504e6446c971cde8fab73049c97f3a98fccafccb83",
+      "crop_boxes": [
+        [
+          0,
+          725,
+          314,
+          910
+        ],
+        [
+          314,
+          725,
+          627,
+          910
+        ],
+        [
+          627,
+          725,
+          940,
+          910
+        ],
+        [
+          940,
+          725,
+          1254,
+          910
+        ]
+      ],
+      "processing": "crop, binary alpha threshold100, shared16color palette, nearest-neighbor resize only",
+      "review": "PNG integrado para revisión humana; no aprobado como arte final",
+      "frames_sha256": {
+        "assets/backgrounds/w01/w01_bg_caustic_drift_01.png": "8a6b5e2f955f74219ed34c10c6a35e07effa7a6b82439ff3171a7708fa968817",
+        "assets/backgrounds/w01/w01_bg_caustic_drift_02.png": "d052c552dc5623f673d95711e7de0513778f7f2f16f8bf570c40c47a098e46ab",
+        "assets/backgrounds/w01/w01_bg_caustic_drift_03.png": "bd58b9eb3003fd40bf671b72f3128f3e1071d6e2cf7981367d75893c8d53be8e",
+        "assets/backgrounds/w01/w01_bg_caustic_drift_04.png": "9f876807a9aea812f5d5b9417787f99f9beae714e2bdb69662b86be8bfe6b7ca"
+      }
+    },
+    {
+      "nombre": "w01_bg_plankton_drift",
+      "source": "image_gen original, 2026-11-01",
+      "sheet": "docs/arte/pulido-w01/fuentes/environment-particles.png",
+      "source_sha256": "bdf66914035f1320bbe183504e6446c971cde8fab73049c97f3a98fccafccb83",
+      "crop_boxes": [
+        [
+          0,
+          1010,
+          314,
+          1195
+        ],
+        [
+          314,
+          1010,
+          627,
+          1195
+        ],
+        [
+          627,
+          1010,
+          940,
+          1195
+        ],
+        [
+          940,
+          1010,
+          1254,
+          1195
+        ]
+      ],
+      "processing": "crop, binary alpha threshold100, shared16color palette, nearest-neighbor resize only",
+      "review": "PNG integrado para revisión humana; no aprobado como arte final",
+      "frames_sha256": {
+        "assets/backgrounds/w01/w01_bg_plankton_drift_01.png": "a7bfb0e0f26eca08222d40c5ad360cd205fe20bb733d8a87ecac97a7e65caa74",
+        "assets/backgrounds/w01/w01_bg_plankton_drift_02.png": "684ae7765629d7b81181f045eaf3a9eb307a05cd0c346a0cd43b372d4bf2a62a",
+        "assets/backgrounds/w01/w01_bg_plankton_drift_03.png": "e495b0cff361a91cfe9837bf3b43c0e5c8a38816e23cc2385c5814f0c67b9acc",
+        "assets/backgrounds/w01/w01_bg_plankton_drift_04.png": "d4ef0f851419688d6796165ca9545ae565dae671746748b9e25189282c5038a9"
+      }
+    }
+  ]
+}

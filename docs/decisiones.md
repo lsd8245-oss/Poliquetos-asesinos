@@ -100,3 +100,11 @@ El render por regiones transparentes conserva la captura de control píxel a pí
 ## Encargo 02 — carga de recursos exportados
 
 En `fix/w01-export-stage-runtime`, basado en `9ea435b`, se confirma que FileAccess no detecta los scripts remapeados del PCK. Stages, Weapons, Bosses y Shop son dependencias requeridas: se precargan y se elimina su fallback silencioso; se conservan sus implementaciones y valores. Los checks de exportación deben correr desde carpetas vacías y exigir simulación, no solo carga de escena. El indicador opcional `--runtime-trace` registra datos reales sin cambiar el juego. Evidencia y límites de Wine/Windows: [informe del rescate](verificacion/rescate-w01/README.md). Solo bloque A; B1 necesita aceptación expresa del usuario.
+
+## Encargo 03 — B1 visual sobre exportación corregida
+
+Base d31d340 de `fix/w01-export-stage-runtime`; trabajo en `pulido/w01-combate-vfx-b1`. El usuario autoriza únicamente B1, con revisión visual al entregar. Los PNG originales se integran como `integrated-review` y estado contractual `placeholder`, sin declararlos arte final aprobado. Se reemplazan los recuadros técnicos de balas, FX, ítems, peligros, HUD y variantes de nave; la nave científica y las criaturas existentes se conservan. Diez módulos ambientales crean tres sectores sobre cuatro profundidades, sin cambiar los tiempos de etapa. La articulación por cuatro regiones PNG mueve la imagen ±1px, sin alterar colisiones.
+
+El render y el estado visual se separan de la simulación. Se preservan datos, música, tienda, guardados, daño, cadencia, oleadas y jefes. Los misiles alargados limitan el giro visual para mantener el cuerpo alrededor del AABB existente; la trayectoria física no cambia. Los FX recorren todos sus cuadros durante el TTL real. Las pruebas distinguen tiles de fondo y módulos transparentes. El nuevo empaquetado MaxRects mantiene atlasW01≤2048×2048; no se reconstruyen otros atlas.
+
+Revisión de B1 pendiente del usuario; B2, B3, B4 y mundo2 no se inician. [Auditoría](arte/pulido-w01/auditoria.md), [informe y límites](verificacion/pulido-w01/README.md).

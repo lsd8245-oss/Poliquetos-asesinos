@@ -1,0 +1,197 @@
+FFFFFFFFFFFFFFFFFFFFFFF.F
+======================================================================
+FAIL: test_bullets_effects_and_pickups_are_review_art_with_pixel_silhouettes (test_b1_visual_contracts.B1VisualContracts.test_bullets_effects_and_pickups_are_review_art_with_pixel_silhouettes) (asset='w01_bullet_shot_move')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/Poliquetos-asesinos/native-tests/test_b1_visual_contracts.py", line 61, in test_bullets_effects_and_pickups_are_review_art_with_pixel_silhouettes
+    self.assertEqual(metadata.get('art_stage'), 'integrated-review', key)
+AssertionError: None != 'integrated-review' : w01_bullet_shot_move
+
+======================================================================
+FAIL: test_bullets_effects_and_pickups_are_review_art_with_pixel_silhouettes (test_b1_visual_contracts.B1VisualContracts.test_bullets_effects_and_pickups_are_review_art_with_pixel_silhouettes) (asset='w01_bullet_enemy_move')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/Poliquetos-asesinos/native-tests/test_b1_visual_contracts.py", line 61, in test_bullets_effects_and_pickups_are_review_art_with_pixel_silhouettes
+    self.assertEqual(metadata.get('art_stage'), 'integrated-review', key)
+AssertionError: None != 'integrated-review' : w01_bullet_enemy_move
+
+======================================================================
+FAIL: test_bullets_effects_and_pickups_are_review_art_with_pixel_silhouettes (test_b1_visual_contracts.B1VisualContracts.test_bullets_effects_and_pickups_are_review_art_with_pixel_silhouettes) (asset='w01_bullet_missile_move')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/Poliquetos-asesinos/native-tests/test_b1_visual_contracts.py", line 61, in test_bullets_effects_and_pickups_are_review_art_with_pixel_silhouettes
+    self.assertEqual(metadata.get('art_stage'), 'integrated-review', key)
+AssertionError: None != 'integrated-review' : w01_bullet_missile_move
+
+======================================================================
+FAIL: test_bullets_effects_and_pickups_are_review_art_with_pixel_silhouettes (test_b1_visual_contracts.B1VisualContracts.test_bullets_effects_and_pickups_are_review_art_with_pixel_silhouettes) (asset='w01_bullet_laser_move')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/Poliquetos-asesinos/native-tests/test_b1_visual_contracts.py", line 61, in test_bullets_effects_and_pickups_are_review_art_with_pixel_silhouettes
+    self.assertEqual(metadata.get('art_stage'), 'integrated-review', key)
+AssertionError: None != 'integrated-review' : w01_bullet_laser_move
+
+======================================================================
+FAIL: test_bullets_effects_and_pickups_are_review_art_with_pixel_silhouettes (test_b1_visual_contracts.B1VisualContracts.test_bullets_effects_and_pickups_are_review_art_with_pixel_silhouettes) (asset='w01_bullet_homing_move')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/Poliquetos-asesinos/native-tests/test_b1_visual_contracts.py", line 61, in test_bullets_effects_and_pickups_are_review_art_with_pixel_silhouettes
+    self.assertEqual(metadata.get('art_stage'), 'integrated-review', key)
+AssertionError: None != 'integrated-review' : w01_bullet_homing_move
+
+======================================================================
+FAIL: test_bullets_effects_and_pickups_are_review_art_with_pixel_silhouettes (test_b1_visual_contracts.B1VisualContracts.test_bullets_effects_and_pickups_are_review_art_with_pixel_silhouettes) (asset='w01_bullet_bounce_move')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/Poliquetos-asesinos/native-tests/test_b1_visual_contracts.py", line 61, in test_bullets_effects_and_pickups_are_review_art_with_pixel_silhouettes
+    self.assertEqual(metadata.get('art_stage'), 'integrated-review', key)
+AssertionError: None != 'integrated-review' : w01_bullet_bounce_move
+
+======================================================================
+FAIL: test_bullets_effects_and_pickups_are_review_art_with_pixel_silhouettes (test_b1_visual_contracts.B1VisualContracts.test_bullets_effects_and_pickups_are_review_art_with_pixel_silhouettes) (asset='w01_bullet_bomb_move')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/Poliquetos-asesinos/native-tests/test_b1_visual_contracts.py", line 61, in test_bullets_effects_and_pickups_are_review_art_with_pixel_silhouettes
+    self.assertEqual(metadata.get('art_stage'), 'integrated-review', key)
+AssertionError: None != 'integrated-review' : w01_bullet_bomb_move
+
+======================================================================
+FAIL: test_bullets_effects_and_pickups_are_review_art_with_pixel_silhouettes (test_b1_visual_contracts.B1VisualContracts.test_bullets_effects_and_pickups_are_review_art_with_pixel_silhouettes) (asset='w01_ui_item_coin_idle')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/Poliquetos-asesinos/native-tests/test_b1_visual_contracts.py", line 61, in test_bullets_effects_and_pickups_are_review_art_with_pixel_silhouettes
+    self.assertEqual(metadata.get('art_stage'), 'integrated-review', key)
+AssertionError: None != 'integrated-review' : w01_ui_item_coin_idle
+
+======================================================================
+FAIL: test_bullets_effects_and_pickups_are_review_art_with_pixel_silhouettes (test_b1_visual_contracts.B1VisualContracts.test_bullets_effects_and_pickups_are_review_art_with_pixel_silhouettes) (asset='w01_ui_item_shot_idle')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/Poliquetos-asesinos/native-tests/test_b1_visual_contracts.py", line 61, in test_bullets_effects_and_pickups_are_review_art_with_pixel_silhouettes
+    self.assertEqual(metadata.get('art_stage'), 'integrated-review', key)
+AssertionError: None != 'integrated-review' : w01_ui_item_shot_idle
+
+======================================================================
+FAIL: test_bullets_effects_and_pickups_are_review_art_with_pixel_silhouettes (test_b1_visual_contracts.B1VisualContracts.test_bullets_effects_and_pickups_are_review_art_with_pixel_silhouettes) (asset='w01_ui_item_missile_idle')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/Poliquetos-asesinos/native-tests/test_b1_visual_contracts.py", line 61, in test_bullets_effects_and_pickups_are_review_art_with_pixel_silhouettes
+    self.assertEqual(metadata.get('art_stage'), 'integrated-review', key)
+AssertionError: None != 'integrated-review' : w01_ui_item_missile_idle
+
+======================================================================
+FAIL: test_bullets_effects_and_pickups_are_review_art_with_pixel_silhouettes (test_b1_visual_contracts.B1VisualContracts.test_bullets_effects_and_pickups_are_review_art_with_pixel_silhouettes) (asset='w01_ui_item_bomb_idle')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/Poliquetos-asesinos/native-tests/test_b1_visual_contracts.py", line 61, in test_bullets_effects_and_pickups_are_review_art_with_pixel_silhouettes
+    self.assertEqual(metadata.get('art_stage'), 'integrated-review', key)
+AssertionError: None != 'integrated-review' : w01_ui_item_bomb_idle
+
+======================================================================
+FAIL: test_bullets_effects_and_pickups_are_review_art_with_pixel_silhouettes (test_b1_visual_contracts.B1VisualContracts.test_bullets_effects_and_pickups_are_review_art_with_pixel_silhouettes) (asset='w01_ui_item_shield_idle')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/Poliquetos-asesinos/native-tests/test_b1_visual_contracts.py", line 61, in test_bullets_effects_and_pickups_are_review_art_with_pixel_silhouettes
+    self.assertEqual(metadata.get('art_stage'), 'integrated-review', key)
+AssertionError: None != 'integrated-review' : w01_ui_item_shield_idle
+
+======================================================================
+FAIL: test_bullets_effects_and_pickups_are_review_art_with_pixel_silhouettes (test_b1_visual_contracts.B1VisualContracts.test_bullets_effects_and_pickups_are_review_art_with_pixel_silhouettes) (asset='w01_ui_item_score_idle')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/Poliquetos-asesinos/native-tests/test_b1_visual_contracts.py", line 61, in test_bullets_effects_and_pickups_are_review_art_with_pixel_silhouettes
+    self.assertEqual(metadata.get('art_stage'), 'integrated-review', key)
+AssertionError: None != 'integrated-review' : w01_ui_item_score_idle
+
+======================================================================
+FAIL: test_bullets_effects_and_pickups_are_review_art_with_pixel_silhouettes (test_b1_visual_contracts.B1VisualContracts.test_bullets_effects_and_pickups_are_review_art_with_pixel_silhouettes) (asset='w01_ui_item_life_idle')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/Poliquetos-asesinos/native-tests/test_b1_visual_contracts.py", line 61, in test_bullets_effects_and_pickups_are_review_art_with_pixel_silhouettes
+    self.assertEqual(metadata.get('art_stage'), 'integrated-review', key)
+AssertionError: None != 'integrated-review' : w01_ui_item_life_idle
+
+======================================================================
+FAIL: test_bullets_effects_and_pickups_are_review_art_with_pixel_silhouettes (test_b1_visual_contracts.B1VisualContracts.test_bullets_effects_and_pickups_are_review_art_with_pixel_silhouettes) (asset='w01_ui_item_magnet_idle')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/Poliquetos-asesinos/native-tests/test_b1_visual_contracts.py", line 61, in test_bullets_effects_and_pickups_are_review_art_with_pixel_silhouettes
+    self.assertEqual(metadata.get('art_stage'), 'integrated-review', key)
+AssertionError: None != 'integrated-review' : w01_ui_item_magnet_idle
+
+======================================================================
+FAIL: test_bullets_effects_and_pickups_are_review_art_with_pixel_silhouettes (test_b1_visual_contracts.B1VisualContracts.test_bullets_effects_and_pickups_are_review_art_with_pixel_silhouettes) (asset='w01_fx_explosion_burst')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/Poliquetos-asesinos/native-tests/test_b1_visual_contracts.py", line 61, in test_bullets_effects_and_pickups_are_review_art_with_pixel_silhouettes
+    self.assertEqual(metadata.get('art_stage'), 'integrated-review', key)
+AssertionError: None != 'integrated-review' : w01_fx_explosion_burst
+
+======================================================================
+FAIL: test_bullets_effects_and_pickups_are_review_art_with_pixel_silhouettes (test_b1_visual_contracts.B1VisualContracts.test_bullets_effects_and_pickups_are_review_art_with_pixel_silhouettes) (asset='w01_fx_bomb_burst')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/Poliquetos-asesinos/native-tests/test_b1_visual_contracts.py", line 61, in test_bullets_effects_and_pickups_are_review_art_with_pixel_silhouettes
+    self.assertEqual(metadata.get('art_stage'), 'integrated-review', key)
+AssertionError: None != 'integrated-review' : w01_fx_bomb_burst
+
+======================================================================
+FAIL: test_bullets_effects_and_pickups_are_review_art_with_pixel_silhouettes (test_b1_visual_contracts.B1VisualContracts.test_bullets_effects_and_pickups_are_review_art_with_pixel_silhouettes) (asset='w01_fx_hit_burst')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/Poliquetos-asesinos/native-tests/test_b1_visual_contracts.py", line 61, in test_bullets_effects_and_pickups_are_review_art_with_pixel_silhouettes
+    self.assertEqual(metadata.get('art_stage'), 'integrated-review', key)
+AssertionError: None != 'integrated-review' : w01_fx_hit_burst
+
+======================================================================
+FAIL: test_bullets_effects_and_pickups_are_review_art_with_pixel_silhouettes (test_b1_visual_contracts.B1VisualContracts.test_bullets_effects_and_pickups_are_review_art_with_pixel_silhouettes) (asset='w01_fx_bubble_burst')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/Poliquetos-asesinos/native-tests/test_b1_visual_contracts.py", line 61, in test_bullets_effects_and_pickups_are_review_art_with_pixel_silhouettes
+    self.assertEqual(metadata.get('art_stage'), 'integrated-review', key)
+AssertionError: None != 'integrated-review' : w01_fx_bubble_burst
+
+======================================================================
+FAIL: test_bullets_effects_and_pickups_are_review_art_with_pixel_silhouettes (test_b1_visual_contracts.B1VisualContracts.test_bullets_effects_and_pickups_are_review_art_with_pixel_silhouettes) (asset='w01_fx_spark_burst')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/Poliquetos-asesinos/native-tests/test_b1_visual_contracts.py", line 61, in test_bullets_effects_and_pickups_are_review_art_with_pixel_silhouettes
+    self.assertEqual(metadata.get('art_stage'), 'integrated-review', key)
+AssertionError: None != 'integrated-review' : w01_fx_spark_burst
+
+======================================================================
+FAIL: test_bullets_effects_and_pickups_are_review_art_with_pixel_silhouettes (test_b1_visual_contracts.B1VisualContracts.test_bullets_effects_and_pickups_are_review_art_with_pixel_silhouettes) (asset='w01_fx_trail_burst')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/Poliquetos-asesinos/native-tests/test_b1_visual_contracts.py", line 61, in test_bullets_effects_and_pickups_are_review_art_with_pixel_silhouettes
+    self.assertEqual(metadata.get('art_stage'), 'integrated-review', key)
+AssertionError: None != 'integrated-review' : w01_fx_trail_burst
+
+======================================================================
+FAIL: test_bullets_effects_and_pickups_are_review_art_with_pixel_silhouettes (test_b1_visual_contracts.B1VisualContracts.test_bullets_effects_and_pickups_are_review_art_with_pixel_silhouettes) (asset='w01_fx_flash_burst')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/Poliquetos-asesinos/native-tests/test_b1_visual_contracts.py", line 61, in test_bullets_effects_and_pickups_are_review_art_with_pixel_silhouettes
+    self.assertEqual(metadata.get('art_stage'), 'integrated-review', key)
+AssertionError: None != 'integrated-review' : w01_fx_flash_burst
+
+======================================================================
+FAIL: test_fx_do_not_reuse_one_sheet_for_every_action (test_b1_visual_contracts.B1VisualContracts.test_fx_do_not_reuse_one_sheet_for_every_action)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/Poliquetos-asesinos/native-tests/test_b1_visual_contracts.py", line 100, in test_fx_do_not_reuse_one_sheet_for_every_action
+    self.assertTrue(signature not in sheets, key + ' reuses another FX sheet')
+AssertionError: False is not true : w01_fx_spark_burst reuses another FX sheet
+
+======================================================================
+FAIL: test_real_projectile_families_have_different_silhouettes (test_b1_visual_contracts.B1VisualContracts.test_real_projectile_families_have_different_silhouettes)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/Poliquetos-asesinos/native-tests/test_b1_visual_contracts.py", line 89, in test_real_projectile_families_have_different_silhouettes
+    self.assertTrue(mask not in silhouettes,
+AssertionError: False is not true : enemy has the same normalized silhouette as shot
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.075s
+
+FAILED (failures=24)

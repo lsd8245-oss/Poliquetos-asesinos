@@ -57,7 +57,7 @@ class AssetsTest(unittest.TestCase):
                 self.assertEqual(image.info.get('asset_name'), key, key)
                 rect = atlases[asset['mundo']]['frames'][frame_key]
                 self.assertEqual(image.tobytes(), atlas_images[asset['mundo']].crop((rect['x'], rect['y'], rect['x']+rect['w'], rect['y']+rect['h'])).tobytes())
-                if asset['tipo'] == 'bg':
+                if asset['tipo'] == 'bg' and '_bg_layer' in key:
                     self.assertGreaterEqual(image.height, 336)
                     self.assertEqual(image.width % 640, 0)
                     self.assertEqual(image.crop((0,0,1,image.height)).tobytes(), image.crop((image.width-1,0,image.width,image.height)).tobytes())

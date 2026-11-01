@@ -3962,8 +3962,8 @@
         64,
         16
       ],
-      "cuadros": 1,
-      "fps": 0,
+      "cuadros": 4,
+      "fps": 8,
       "estado": "placeholder"
     },
     {
@@ -3988,7 +3988,7 @@
         12,
         4
       ],
-      "cuadros": 2,
+      "cuadros": 4,
       "fps": 10,
       "estado": "placeholder"
     },
@@ -4001,7 +4001,7 @@
         8,
         8
       ],
-      "cuadros": 2,
+      "cuadros": 4,
       "fps": 10,
       "estado": "placeholder"
     },
@@ -4014,7 +4014,7 @@
         16,
         8
       ],
-      "cuadros": 2,
+      "cuadros": 4,
       "fps": 10,
       "estado": "placeholder"
     },
@@ -4027,7 +4027,7 @@
         32,
         8
       ],
-      "cuadros": 2,
+      "cuadros": 4,
       "fps": 10,
       "estado": "placeholder"
     },
@@ -4040,7 +4040,7 @@
         12,
         8
       ],
-      "cuadros": 2,
+      "cuadros": 4,
       "fps": 10,
       "estado": "placeholder"
     },
@@ -4053,7 +4053,7 @@
         8,
         8
       ],
-      "cuadros": 2,
+      "cuadros": 4,
       "fps": 10,
       "estado": "placeholder"
     },
@@ -4066,7 +4066,7 @@
         12,
         12
       ],
-      "cuadros": 2,
+      "cuadros": 4,
       "fps": 10,
       "estado": "placeholder"
     },
@@ -4219,8 +4219,8 @@
       "tipo": "fx",
       "ruta": "assets/fx/w01_fx_bubble_burst_01.png",
       "tamano": [
-        8,
-        8
+        32,
+        32
       ],
       "cuadros": 8,
       "fps": 12,
@@ -7422,6 +7422,214 @@
       ],
       "cuadros": 1,
       "fps": 1,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w01_bg_coast_pillars_idle",
+      "mundo": 1,
+      "tipo": "bg",
+      "tamano": [
+        192,
+        144
+      ],
+      "cuadros": 1,
+      "fps": 0,
+      "ruta": "assets/backgrounds/w01/w01_bg_coast_pillars_idle_01.png",
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w01_bg_ruin_arch_idle",
+      "mundo": 1,
+      "tipo": "bg",
+      "tamano": [
+        256,
+        144
+      ],
+      "cuadros": 1,
+      "fps": 0,
+      "ruta": "assets/backgrounds/w01/w01_bg_ruin_arch_idle_01.png",
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w01_bg_wreck_truss_idle",
+      "mundo": 1,
+      "tipo": "bg",
+      "tamano": [
+        320,
+        144
+      ],
+      "cuadros": 1,
+      "fps": 0,
+      "ruta": "assets/backgrounds/w01/w01_bg_wreck_truss_idle_01.png",
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w01_bg_coast_rocks_idle",
+      "mundo": 1,
+      "tipo": "bg",
+      "tamano": [
+        176,
+        80
+      ],
+      "cuadros": 1,
+      "fps": 0,
+      "ruta": "assets/backgrounds/w01/w01_bg_coast_rocks_idle_01.png",
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w01_bg_algae_sway",
+      "mundo": 1,
+      "tipo": "bg",
+      "tamano": [
+        96,
+        96
+      ],
+      "cuadros": 4,
+      "fps": 4,
+      "ruta": "assets/backgrounds/w01/w01_bg_algae_sway_01.png",
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w01_bg_chain_sway",
+      "mundo": 1,
+      "tipo": "bg",
+      "tamano": [
+        48,
+        128
+      ],
+      "cuadros": 4,
+      "fps": 3,
+      "ruta": "assets/backgrounds/w01/w01_bg_chain_sway_01.png",
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w01_bg_fish_swim",
+      "mundo": 1,
+      "tipo": "bg",
+      "tamano": [
+        96,
+        40
+      ],
+      "cuadros": 4,
+      "fps": 5,
+      "ruta": "assets/backgrounds/w01/w01_bg_fish_swim_01.png",
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w01_bg_bubble_rise",
+      "mundo": 1,
+      "tipo": "bg",
+      "tamano": [
+        24,
+        40
+      ],
+      "cuadros": 4,
+      "fps": 4,
+      "ruta": "assets/backgrounds/w01/w01_bg_bubble_rise_01.png",
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w01_bg_caustic_drift",
+      "mundo": 1,
+      "tipo": "bg",
+      "tamano": [
+        220,
+        72
+      ],
+      "cuadros": 4,
+      "fps": 3,
+      "ruta": "assets/backgrounds/w01/w01_bg_caustic_drift_01.png",
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w01_bg_plankton_drift",
+      "mundo": 1,
+      "tipo": "bg",
+      "tamano": [
+        96,
+        64
+      ],
+      "cuadros": 4,
+      "fps": 2,
+      "ruta": "assets/backgrounds/w01/w01_bg_plankton_drift_01.png",
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w01_ui_equipment_sonar_idle",
+      "mundo": 1,
+      "tipo": "ui",
+      "ruta": "assets/ui/w01_ui_equipment_sonar_idle_01.png",
+      "tamano": [
+        16,
+        16
+      ],
+      "cuadros": 2,
+      "fps": 8,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w01_ui_equipment_ctd_idle",
+      "mundo": 1,
+      "tipo": "ui",
+      "ruta": "assets/ui/w01_ui_equipment_ctd_idle_01.png",
+      "tamano": [
+        16,
+        16
+      ],
+      "cuadros": 2,
+      "fps": 8,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w01_ui_equipment_deflector_idle",
+      "mundo": 1,
+      "tipo": "ui",
+      "ruta": "assets/ui/w01_ui_equipment_deflector_idle_01.png",
+      "tamano": [
+        16,
+        16
+      ],
+      "cuadros": 2,
+      "fps": 8,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w01_fx_shield_burst",
+      "mundo": 1,
+      "tipo": "fx",
+      "ruta": "assets/fx/w01_fx_shield_burst_01.png",
+      "tamano": [
+        48,
+        48
+      ],
+      "cuadros": 8,
+      "fps": 12,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w01_fx_muzzle_burst",
+      "mundo": 1,
+      "tipo": "fx",
+      "ruta": "assets/fx/w01_fx_muzzle_burst_01.png",
+      "tamano": [
+        24,
+        16
+      ],
+      "cuadros": 8,
+      "fps": 24,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w01_fx_collect_burst",
+      "mundo": 1,
+      "tipo": "fx",
+      "ruta": "assets/fx/w01_fx_collect_burst_01.png",
+      "tamano": [
+        24,
+        24
+      ],
+      "cuadros": 8,
+      "fps": 16,
       "estado": "placeholder"
     }
   ]

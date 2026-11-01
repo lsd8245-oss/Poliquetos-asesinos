@@ -1,0 +1,4438 @@
+{
+  "state": "integrated-review",
+  "approval": "All PNGs remain placeholder pending B1 native visual review. No final approval claimed.",
+  "assets": [
+    {
+      "nombre": "w01_bullet_shot_move",
+      "mundo": 1,
+      "tipo": "bullet",
+      "ruta": "assets/sprites/w01/w01_bullet_shot_move_01.png",
+      "tamano": [
+        12,
+        4
+      ],
+      "cuadros": 4,
+      "fps": 10,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w01_bullet_enemy_move",
+      "mundo": 1,
+      "tipo": "bullet",
+      "ruta": "assets/sprites/w01/w01_bullet_enemy_move_01.png",
+      "tamano": [
+        8,
+        8
+      ],
+      "cuadros": 4,
+      "fps": 10,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w01_bullet_missile_move",
+      "mundo": 1,
+      "tipo": "bullet",
+      "ruta": "assets/sprites/w01/w01_bullet_missile_move_01.png",
+      "tamano": [
+        16,
+        8
+      ],
+      "cuadros": 4,
+      "fps": 10,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w01_bullet_laser_move",
+      "mundo": 1,
+      "tipo": "bullet",
+      "ruta": "assets/sprites/w01/w01_bullet_laser_move_01.png",
+      "tamano": [
+        32,
+        8
+      ],
+      "cuadros": 4,
+      "fps": 10,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w01_bullet_homing_move",
+      "mundo": 1,
+      "tipo": "bullet",
+      "ruta": "assets/sprites/w01/w01_bullet_homing_move_01.png",
+      "tamano": [
+        12,
+        8
+      ],
+      "cuadros": 4,
+      "fps": 10,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w01_bullet_bounce_move",
+      "mundo": 1,
+      "tipo": "bullet",
+      "ruta": "assets/sprites/w01/w01_bullet_bounce_move_01.png",
+      "tamano": [
+        8,
+        8
+      ],
+      "cuadros": 4,
+      "fps": 10,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w01_bullet_bomb_move",
+      "mundo": 1,
+      "tipo": "bullet",
+      "ruta": "assets/sprites/w01/w01_bullet_bomb_move_01.png",
+      "tamano": [
+        12,
+        12
+      ],
+      "cuadros": 4,
+      "fps": 10,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w01_ui_item_coin_idle",
+      "mundo": 1,
+      "tipo": "ui",
+      "ruta": "assets/ui/w01_ui_item_coin_idle_01.png",
+      "tamano": [
+        16,
+        16
+      ],
+      "cuadros": 2,
+      "fps": 8,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w01_ui_item_shot_idle",
+      "mundo": 1,
+      "tipo": "ui",
+      "ruta": "assets/ui/w01_ui_item_shot_idle_01.png",
+      "tamano": [
+        16,
+        16
+      ],
+      "cuadros": 2,
+      "fps": 8,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w01_ui_item_missile_idle",
+      "mundo": 1,
+      "tipo": "ui",
+      "ruta": "assets/ui/w01_ui_item_missile_idle_01.png",
+      "tamano": [
+        16,
+        16
+      ],
+      "cuadros": 2,
+      "fps": 8,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w01_ui_item_bomb_idle",
+      "mundo": 1,
+      "tipo": "ui",
+      "ruta": "assets/ui/w01_ui_item_bomb_idle_01.png",
+      "tamano": [
+        16,
+        16
+      ],
+      "cuadros": 2,
+      "fps": 8,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w01_ui_item_shield_idle",
+      "mundo": 1,
+      "tipo": "ui",
+      "ruta": "assets/ui/w01_ui_item_shield_idle_01.png",
+      "tamano": [
+        16,
+        16
+      ],
+      "cuadros": 2,
+      "fps": 8,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w01_ui_item_score_idle",
+      "mundo": 1,
+      "tipo": "ui",
+      "ruta": "assets/ui/w01_ui_item_score_idle_01.png",
+      "tamano": [
+        16,
+        16
+      ],
+      "cuadros": 2,
+      "fps": 8,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w01_ui_item_life_idle",
+      "mundo": 1,
+      "tipo": "ui",
+      "ruta": "assets/ui/w01_ui_item_life_idle_01.png",
+      "tamano": [
+        16,
+        16
+      ],
+      "cuadros": 2,
+      "fps": 8,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w01_ui_item_magnet_idle",
+      "mundo": 1,
+      "tipo": "ui",
+      "ruta": "assets/ui/w01_ui_item_magnet_idle_01.png",
+      "tamano": [
+        16,
+        16
+      ],
+      "cuadros": 2,
+      "fps": 8,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w01_ui_equipment_sonar_idle",
+      "mundo": 1,
+      "tipo": "ui",
+      "ruta": "assets/ui/w01_ui_equipment_sonar_idle_01.png",
+      "tamano": [
+        16,
+        16
+      ],
+      "cuadros": 2,
+      "fps": 8,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w01_ui_equipment_ctd_idle",
+      "mundo": 1,
+      "tipo": "ui",
+      "ruta": "assets/ui/w01_ui_equipment_ctd_idle_01.png",
+      "tamano": [
+        16,
+        16
+      ],
+      "cuadros": 2,
+      "fps": 8,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w01_ui_equipment_deflector_idle",
+      "mundo": 1,
+      "tipo": "ui",
+      "ruta": "assets/ui/w01_ui_equipment_deflector_idle_01.png",
+      "tamano": [
+        16,
+        16
+      ],
+      "cuadros": 2,
+      "fps": 8,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w01_ui_hazard_idle",
+      "mundo": 1,
+      "tipo": "ui",
+      "ruta": "assets/ui/w01_ui_hazard_idle_01.png",
+      "tamano": [
+        64,
+        16
+      ],
+      "cuadros": 4,
+      "fps": 8,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w01_fx_explosion_burst",
+      "mundo": 1,
+      "tipo": "fx",
+      "ruta": "assets/fx/w01_fx_explosion_burst_01.png",
+      "tamano": [
+        64,
+        64
+      ],
+      "cuadros": 8,
+      "fps": 12,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w01_fx_bomb_burst",
+      "mundo": 1,
+      "tipo": "fx",
+      "ruta": "assets/fx/w01_fx_bomb_burst_01.png",
+      "tamano": [
+        128,
+        128
+      ],
+      "cuadros": 8,
+      "fps": 12,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w01_fx_hit_burst",
+      "mundo": 1,
+      "tipo": "fx",
+      "ruta": "assets/fx/w01_fx_hit_burst_01.png",
+      "tamano": [
+        32,
+        32
+      ],
+      "cuadros": 8,
+      "fps": 12,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w01_fx_spark_burst",
+      "mundo": 1,
+      "tipo": "fx",
+      "ruta": "assets/fx/w01_fx_spark_burst_01.png",
+      "tamano": [
+        8,
+        8
+      ],
+      "cuadros": 8,
+      "fps": 12,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w01_fx_trail_burst",
+      "mundo": 1,
+      "tipo": "fx",
+      "ruta": "assets/fx/w01_fx_trail_burst_01.png",
+      "tamano": [
+        16,
+        8
+      ],
+      "cuadros": 8,
+      "fps": 12,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w01_fx_flash_burst",
+      "mundo": 1,
+      "tipo": "fx",
+      "ruta": "assets/fx/w01_fx_flash_burst_01.png",
+      "tamano": [
+        48,
+        24
+      ],
+      "cuadros": 8,
+      "fps": 12,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w01_fx_shield_burst",
+      "mundo": 1,
+      "tipo": "fx",
+      "ruta": "assets/fx/w01_fx_shield_burst_01.png",
+      "tamano": [
+        48,
+        48
+      ],
+      "cuadros": 8,
+      "fps": 12,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w01_fx_muzzle_burst",
+      "mundo": 1,
+      "tipo": "fx",
+      "ruta": "assets/fx/w01_fx_muzzle_burst_01.png",
+      "tamano": [
+        24,
+        16
+      ],
+      "cuadros": 8,
+      "fps": 24,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w01_fx_collect_burst",
+      "mundo": 1,
+      "tipo": "fx",
+      "ruta": "assets/fx/w01_fx_collect_burst_01.png",
+      "tamano": [
+        24,
+        24
+      ],
+      "cuadros": 8,
+      "fps": 16,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w01_ui_panel_idle",
+      "mundo": 1,
+      "tipo": "ui",
+      "ruta": "assets/ui/w01_ui_panel_idle_01.png",
+      "tamano": [
+        640,
+        360
+      ],
+      "cuadros": 1,
+      "fps": 0,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w01_ui_panel_selected_idle",
+      "mundo": 1,
+      "tipo": "ui",
+      "ruta": "assets/ui/w01_ui_panel_selected_idle_01.png",
+      "tamano": [
+        640,
+        360
+      ],
+      "cuadros": 1,
+      "fps": 0,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w01_ui_hud_idle",
+      "mundo": 1,
+      "tipo": "ui",
+      "ruta": "assets/ui/w01_ui_hud_idle_01.png",
+      "tamano": [
+        640,
+        24
+      ],
+      "cuadros": 1,
+      "fps": 0,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w01_ui_ship_batiscafo_amarillo_move",
+      "mundo": 1,
+      "tipo": "ui",
+      "ruta": "assets/ui/w01_ui_ship_batiscafo_amarillo_move_01.png",
+      "tamano": [
+        48,
+        24
+      ],
+      "cuadros": 4,
+      "fps": 10,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w01_ui_ship_coral_move",
+      "mundo": 1,
+      "tipo": "ui",
+      "ruta": "assets/ui/w01_ui_ship_coral_move_01.png",
+      "tamano": [
+        48,
+        24
+      ],
+      "cuadros": 4,
+      "fps": 10,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w01_ui_ship_abisal_move",
+      "mundo": 1,
+      "tipo": "ui",
+      "ruta": "assets/ui/w01_ui_ship_abisal_move_01.png",
+      "tamano": [
+        48,
+        24
+      ],
+      "cuadros": 4,
+      "fps": 10,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w01_ui_ship_bioluminiscente_move",
+      "mundo": 1,
+      "tipo": "ui",
+      "ruta": "assets/ui/w01_ui_ship_bioluminiscente_move_01.png",
+      "tamano": [
+        48,
+        24
+      ],
+      "cuadros": 4,
+      "fps": 10,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w01_ui_ship_magma_move",
+      "mundo": 1,
+      "tipo": "ui",
+      "ruta": "assets/ui/w01_ui_ship_magma_move_01.png",
+      "tamano": [
+        48,
+        24
+      ],
+      "cuadros": 4,
+      "fps": 10,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w01_ui_ship_laboratorio_move",
+      "mundo": 1,
+      "tipo": "ui",
+      "ruta": "assets/ui/w01_ui_ship_laboratorio_move_01.png",
+      "tamano": [
+        48,
+        24
+      ],
+      "cuadros": 4,
+      "fps": 10,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w01_ui_ship_fantasma_move",
+      "mundo": 1,
+      "tipo": "ui",
+      "ruta": "assets/ui/w01_ui_ship_fantasma_move_01.png",
+      "tamano": [
+        48,
+        24
+      ],
+      "cuadros": 4,
+      "fps": 10,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w01_ui_ship_dorado_move",
+      "mundo": 1,
+      "tipo": "ui",
+      "ruta": "assets/ui/w01_ui_ship_dorado_move_01.png",
+      "tamano": [
+        48,
+        24
+      ],
+      "cuadros": 4,
+      "fps": 10,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w01_fx_bubble_burst",
+      "mundo": 1,
+      "tipo": "fx",
+      "ruta": "assets/fx/w01_fx_bubble_burst_01.png",
+      "tamano": [
+        32,
+        32
+      ],
+      "cuadros": 8,
+      "fps": 12,
+      "estado": "placeholder"
+    }
+  ],
+  "provenance": [
+    {
+      "path": "assets/sprites/w01/w01_bullet_shot_move_01.png",
+      "asset": "w01_bullet_shot_move",
+      "frame": 1,
+      "size": [
+        12,
+        4
+      ],
+      "source": "docs/arte/pulido-w01/originales/b1-projectiles-imagegen.png",
+      "source_box": [
+        31,
+        69,
+        157,
+        100
+      ],
+      "sha256": "96dbe5fba1e7300b7b6cc2fdd72c0a35ecae6454dd3c265f86197efd2bc85191",
+      "state": "integrated-review",
+      "status": "placeholder",
+      "author": "OpenAI imagegen / Codex Pillow preparation",
+      "date": "2026-11-01",
+      "transform": "crop, nearest-neighbor resize, alpha>=96 binary, shared maximum16 RGB palette; no geometric drawing",
+      "notes": "Existing simulation, damage and collision sizes unchanged; source design faces right."
+    },
+    {
+      "path": "assets/sprites/w01/w01_bullet_shot_move_02.png",
+      "asset": "w01_bullet_shot_move",
+      "frame": 2,
+      "size": [
+        12,
+        4
+      ],
+      "source": "docs/arte/pulido-w01/originales/b1-projectiles-imagegen.png",
+      "source_box": [
+        157,
+        68,
+        307,
+        100
+      ],
+      "sha256": "5678d90f0b948f33c12fbaa37f2f50919938f603b0a00ac5ecabfa5539008527",
+      "state": "integrated-review",
+      "status": "placeholder",
+      "author": "OpenAI imagegen / Codex Pillow preparation",
+      "date": "2026-11-01",
+      "transform": "crop, nearest-neighbor resize, alpha>=96 binary, shared maximum16 RGB palette; no geometric drawing",
+      "notes": "Existing simulation, damage and collision sizes unchanged; source design faces right."
+    },
+    {
+      "path": "assets/sprites/w01/w01_bullet_shot_move_03.png",
+      "asset": "w01_bullet_shot_move",
+      "frame": 3,
+      "size": [
+        12,
+        4
+      ],
+      "source": "docs/arte/pulido-w01/originales/b1-projectiles-imagegen.png",
+      "source_box": [
+        336,
+        68,
+        464,
+        101
+      ],
+      "sha256": "ed277b0a3e00a5ca26a090469f785f2805008cfc5d3c361740cc1e79494553a1",
+      "state": "integrated-review",
+      "status": "placeholder",
+      "author": "OpenAI imagegen / Codex Pillow preparation",
+      "date": "2026-11-01",
+      "transform": "crop, nearest-neighbor resize, alpha>=96 binary, shared maximum16 RGB palette; no geometric drawing",
+      "notes": "Existing simulation, damage and collision sizes unchanged; source design faces right."
+    },
+    {
+      "path": "assets/sprites/w01/w01_bullet_shot_move_04.png",
+      "asset": "w01_bullet_shot_move",
+      "frame": 4,
+      "size": [
+        12,
+        4
+      ],
+      "source": "docs/arte/pulido-w01/originales/b1-projectiles-imagegen.png",
+      "source_box": [
+        492,
+        67,
+        613,
+        101
+      ],
+      "sha256": "d9c6d1a6ef6ac9a1cb13cffd77125997e204d548a5f7333ec3125e21785723e8",
+      "state": "integrated-review",
+      "status": "placeholder",
+      "author": "OpenAI imagegen / Codex Pillow preparation",
+      "date": "2026-11-01",
+      "transform": "crop, nearest-neighbor resize, alpha>=96 binary, shared maximum16 RGB palette; no geometric drawing",
+      "notes": "Existing simulation, damage and collision sizes unchanged; source design faces right."
+    },
+    {
+      "path": "assets/sprites/w01/w01_bullet_enemy_move_01.png",
+      "asset": "w01_bullet_enemy_move",
+      "frame": 1,
+      "size": [
+        8,
+        8
+      ],
+      "source": "docs/arte/pulido-w01/originales/b1-projectiles-imagegen.png",
+      "source_box": [
+        627,
+        0,
+        784,
+        157
+      ],
+      "sha256": "4f5e65c73bd5d6c8dbc3232ad4f0a28874ba10d3b7aa5bb44e04288f81d3be06",
+      "state": "integrated-review",
+      "status": "placeholder",
+      "author": "OpenAI imagegen / Codex Pillow preparation",
+      "date": "2026-11-01",
+      "transform": "crop, nearest-neighbor resize, alpha>=96 binary, shared maximum16 RGB palette; no geometric drawing",
+      "notes": "Existing simulation, damage and collision sizes unchanged; source design faces right."
+    },
+    {
+      "path": "assets/sprites/w01/w01_bullet_enemy_move_02.png",
+      "asset": "w01_bullet_enemy_move",
+      "frame": 2,
+      "size": [
+        8,
+        8
+      ],
+      "source": "docs/arte/pulido-w01/originales/b1-projectiles-imagegen.png",
+      "source_box": [
+        784,
+        0,
+        940,
+        157
+      ],
+      "sha256": "2717f9c4fb3fdfe7c1b93c2d8a6c7b76ef7cbebd8df27356031a9e1332eeb21c",
+      "state": "integrated-review",
+      "status": "placeholder",
+      "author": "OpenAI imagegen / Codex Pillow preparation",
+      "date": "2026-11-01",
+      "transform": "crop, nearest-neighbor resize, alpha>=96 binary, shared maximum16 RGB palette; no geometric drawing",
+      "notes": "Existing simulation, damage and collision sizes unchanged; source design faces right."
+    },
+    {
+      "path": "assets/sprites/w01/w01_bullet_enemy_move_03.png",
+      "asset": "w01_bullet_enemy_move",
+      "frame": 3,
+      "size": [
+        8,
+        8
+      ],
+      "source": "docs/arte/pulido-w01/originales/b1-projectiles-imagegen.png",
+      "source_box": [
+        940,
+        0,
+        1097,
+        157
+      ],
+      "sha256": "fd8db1ba831aabd97d2fa6c281e2c0142d95a0fdd616efc703e51d49ecb3a6ae",
+      "state": "integrated-review",
+      "status": "placeholder",
+      "author": "OpenAI imagegen / Codex Pillow preparation",
+      "date": "2026-11-01",
+      "transform": "crop, nearest-neighbor resize, alpha>=96 binary, shared maximum16 RGB palette; no geometric drawing",
+      "notes": "Existing simulation, damage and collision sizes unchanged; source design faces right."
+    },
+    {
+      "path": "assets/sprites/w01/w01_bullet_enemy_move_04.png",
+      "asset": "w01_bullet_enemy_move",
+      "frame": 4,
+      "size": [
+        8,
+        8
+      ],
+      "source": "docs/arte/pulido-w01/originales/b1-projectiles-imagegen.png",
+      "source_box": [
+        1097,
+        0,
+        1254,
+        157
+      ],
+      "sha256": "2124eb0e49f0b22885128c3f32aae9f815d919982e741cc51e27705015d4e298",
+      "state": "integrated-review",
+      "status": "placeholder",
+      "author": "OpenAI imagegen / Codex Pillow preparation",
+      "date": "2026-11-01",
+      "transform": "crop, nearest-neighbor resize, alpha>=96 binary, shared maximum16 RGB palette; no geometric drawing",
+      "notes": "Existing simulation, damage and collision sizes unchanged; source design faces right."
+    },
+    {
+      "path": "assets/sprites/w01/w01_bullet_missile_move_01.png",
+      "asset": "w01_bullet_missile_move",
+      "frame": 1,
+      "size": [
+        16,
+        8
+      ],
+      "source": "docs/arte/pulido-w01/originales/b1-projectiles-imagegen.png",
+      "source_box": [
+        17,
+        204,
+        157,
+        267
+      ],
+      "sha256": "98ddcb03dd58c2897de4f7e9d4323cfb644314c4a3516fa30194e8169ce85ade",
+      "state": "integrated-review",
+      "status": "placeholder",
+      "author": "OpenAI imagegen / Codex Pillow preparation",
+      "date": "2026-11-01",
+      "transform": "crop, nearest-neighbor resize, alpha>=96 binary, shared maximum16 RGB palette; no geometric drawing",
+      "notes": "Existing simulation, damage and collision sizes unchanged; source design faces right."
+    },
+    {
+      "path": "assets/sprites/w01/w01_bullet_missile_move_02.png",
+      "asset": "w01_bullet_missile_move",
+      "frame": 2,
+      "size": [
+        16,
+        8
+      ],
+      "source": "docs/arte/pulido-w01/originales/b1-projectiles-imagegen.png",
+      "source_box": [
+        157,
+        199,
+        308,
+        264
+      ],
+      "sha256": "15a06c2aafa60c5b6d9ccb2c0f0e52753b7f4aa9cb143e56378dbfe12eb5ecdd",
+      "state": "integrated-review",
+      "status": "placeholder",
+      "author": "OpenAI imagegen / Codex Pillow preparation",
+      "date": "2026-11-01",
+      "transform": "crop, nearest-neighbor resize, alpha>=96 binary, shared maximum16 RGB palette; no geometric drawing",
+      "notes": "Existing simulation, damage and collision sizes unchanged; source design faces right."
+    },
+    {
+      "path": "assets/sprites/w01/w01_bullet_missile_move_03.png",
+      "asset": "w01_bullet_missile_move",
+      "frame": 3,
+      "size": [
+        16,
+        8
+      ],
+      "source": "docs/arte/pulido-w01/originales/b1-projectiles-imagegen.png",
+      "source_box": [
+        338,
+        203,
+        470,
+        266
+      ],
+      "sha256": "19f7f1167428b07ce251fd6a3e527dab0692aadab0db3afa885e076371a2e33e",
+      "state": "integrated-review",
+      "status": "placeholder",
+      "author": "OpenAI imagegen / Codex Pillow preparation",
+      "date": "2026-11-01",
+      "transform": "crop, nearest-neighbor resize, alpha>=96 binary, shared maximum16 RGB palette; no geometric drawing",
+      "notes": "Existing simulation, damage and collision sizes unchanged; source design faces right."
+    },
+    {
+      "path": "assets/sprites/w01/w01_bullet_missile_move_04.png",
+      "asset": "w01_bullet_missile_move",
+      "frame": 4,
+      "size": [
+        16,
+        8
+      ],
+      "source": "docs/arte/pulido-w01/originales/b1-projectiles-imagegen.png",
+      "source_box": [
+        485,
+        203,
+        619,
+        264
+      ],
+      "sha256": "b57fcc751f1bf168025e1f5a5724ea79dcd552c090c05330d51d63ad92542829",
+      "state": "integrated-review",
+      "status": "placeholder",
+      "author": "OpenAI imagegen / Codex Pillow preparation",
+      "date": "2026-11-01",
+      "transform": "crop, nearest-neighbor resize, alpha>=96 binary, shared maximum16 RGB palette; no geometric drawing",
+      "notes": "Existing simulation, damage and collision sizes unchanged; source design faces right."
+    },
+    {
+      "path": "assets/sprites/w01/w01_bullet_laser_move_01.png",
+      "asset": "w01_bullet_laser_move",
+      "frame": 1,
+      "size": [
+        32,
+        8
+      ],
+      "source": "docs/arte/pulido-w01/originales/b1-projectiles-imagegen.png",
+      "source_box": [
+        627,
+        175,
+        784,
+        285
+      ],
+      "sha256": "ed80cb2d63658a4e93f58987b296c9891b596bea004e8a5d228078b033b50c4e",
+      "state": "integrated-review",
+      "status": "placeholder",
+      "author": "OpenAI imagegen / Codex Pillow preparation",
+      "date": "2026-11-01",
+      "transform": "crop, nearest-neighbor resize, alpha>=96 binary, shared maximum16 RGB palette; no geometric drawing",
+      "notes": "Existing simulation, damage and collision sizes unchanged; source design faces right."
+    },
+    {
+      "path": "assets/sprites/w01/w01_bullet_laser_move_02.png",
+      "asset": "w01_bullet_laser_move",
+      "frame": 2,
+      "size": [
+        32,
+        8
+      ],
+      "source": "docs/arte/pulido-w01/originales/b1-projectiles-imagegen.png",
+      "source_box": [
+        784,
+        175,
+        940,
+        285
+      ],
+      "sha256": "0e0df408219c319817e71e2e13d5aba1ce38930064221ede4056a9f330e0b843",
+      "state": "integrated-review",
+      "status": "placeholder",
+      "author": "OpenAI imagegen / Codex Pillow preparation",
+      "date": "2026-11-01",
+      "transform": "crop, nearest-neighbor resize, alpha>=96 binary, shared maximum16 RGB palette; no geometric drawing",
+      "notes": "Existing simulation, damage and collision sizes unchanged; source design faces right."
+    },
+    {
+      "path": "assets/sprites/w01/w01_bullet_laser_move_03.png",
+      "asset": "w01_bullet_laser_move",
+      "frame": 3,
+      "size": [
+        32,
+        8
+      ],
+      "source": "docs/arte/pulido-w01/originales/b1-projectiles-imagegen.png",
+      "source_box": [
+        940,
+        175,
+        1097,
+        285
+      ],
+      "sha256": "25be87a415b04bd146fae8919b920f497c7280a5ffdce3d5490a791c7349ab62",
+      "state": "integrated-review",
+      "status": "placeholder",
+      "author": "OpenAI imagegen / Codex Pillow preparation",
+      "date": "2026-11-01",
+      "transform": "crop, nearest-neighbor resize, alpha>=96 binary, shared maximum16 RGB palette; no geometric drawing",
+      "notes": "Existing simulation, damage and collision sizes unchanged; source design faces right."
+    },
+    {
+      "path": "assets/sprites/w01/w01_bullet_laser_move_04.png",
+      "asset": "w01_bullet_laser_move",
+      "frame": 4,
+      "size": [
+        32,
+        8
+      ],
+      "source": "docs/arte/pulido-w01/originales/b1-projectiles-imagegen.png",
+      "source_box": [
+        1097,
+        175,
+        1254,
+        285
+      ],
+      "sha256": "6d4cbed218b17fd485196867829f9b06b3764f8fe6bc740124931b3866ac1eb0",
+      "state": "integrated-review",
+      "status": "placeholder",
+      "author": "OpenAI imagegen / Codex Pillow preparation",
+      "date": "2026-11-01",
+      "transform": "crop, nearest-neighbor resize, alpha>=96 binary, shared maximum16 RGB palette; no geometric drawing",
+      "notes": "Existing simulation, damage and collision sizes unchanged; source design faces right."
+    },
+    {
+      "path": "assets/sprites/w01/w01_bullet_homing_move_01.png",
+      "asset": "w01_bullet_homing_move",
+      "frame": 1,
+      "size": [
+        12,
+        8
+      ],
+      "source": "docs/arte/pulido-w01/originales/b1-projectiles-imagegen.png",
+      "source_box": [
+        0,
+        314,
+        157,
+        470
+      ],
+      "sha256": "30d8d0ceeb22d08de299bd7c65ca21fabdd9c174968eced3cfc74784ef6d86f4",
+      "state": "integrated-review",
+      "status": "placeholder",
+      "author": "OpenAI imagegen / Codex Pillow preparation",
+      "date": "2026-11-01",
+      "transform": "crop, nearest-neighbor resize, alpha>=96 binary, shared maximum16 RGB palette; no geometric drawing",
+      "notes": "Existing simulation, damage and collision sizes unchanged; source design faces right."
+    },
+    {
+      "path": "assets/sprites/w01/w01_bullet_homing_move_02.png",
+      "asset": "w01_bullet_homing_move",
+      "frame": 2,
+      "size": [
+        12,
+        8
+      ],
+      "source": "docs/arte/pulido-w01/originales/b1-projectiles-imagegen.png",
+      "source_box": [
+        157,
+        314,
+        314,
+        470
+      ],
+      "sha256": "17fcfc5db6ebe97a1c87f82393bbee8236daae5a5bce3a275523684f2c567070",
+      "state": "integrated-review",
+      "status": "placeholder",
+      "author": "OpenAI imagegen / Codex Pillow preparation",
+      "date": "2026-11-01",
+      "transform": "crop, nearest-neighbor resize, alpha>=96 binary, shared maximum16 RGB palette; no geometric drawing",
+      "notes": "Existing simulation, damage and collision sizes unchanged; source design faces right."
+    },
+    {
+      "path": "assets/sprites/w01/w01_bullet_homing_move_03.png",
+      "asset": "w01_bullet_homing_move",
+      "frame": 3,
+      "size": [
+        12,
+        8
+      ],
+      "source": "docs/arte/pulido-w01/originales/b1-projectiles-imagegen.png",
+      "source_box": [
+        314,
+        314,
+        470,
+        470
+      ],
+      "sha256": "a78bc8e40d960dc67d4a80fb5d53944d65f865671a73b9efbc9b68d75a0da5ca",
+      "state": "integrated-review",
+      "status": "placeholder",
+      "author": "OpenAI imagegen / Codex Pillow preparation",
+      "date": "2026-11-01",
+      "transform": "crop, nearest-neighbor resize, alpha>=96 binary, shared maximum16 RGB palette; no geometric drawing",
+      "notes": "Existing simulation, damage and collision sizes unchanged; source design faces right."
+    },
+    {
+      "path": "assets/sprites/w01/w01_bullet_homing_move_04.png",
+      "asset": "w01_bullet_homing_move",
+      "frame": 4,
+      "size": [
+        12,
+        8
+      ],
+      "source": "docs/arte/pulido-w01/originales/b1-projectiles-imagegen.png",
+      "source_box": [
+        470,
+        314,
+        627,
+        470
+      ],
+      "sha256": "f3dd7e412d236cd1cd284c6fe61bc5622d88e6a7b88ee0241f7c5284702ce8d9",
+      "state": "integrated-review",
+      "status": "placeholder",
+      "author": "OpenAI imagegen / Codex Pillow preparation",
+      "date": "2026-11-01",
+      "transform": "crop, nearest-neighbor resize, alpha>=96 binary, shared maximum16 RGB palette; no geometric drawing",
+      "notes": "Existing simulation, damage and collision sizes unchanged; source design faces right."
+    },
+    {
+      "path": "assets/sprites/w01/w01_bullet_bounce_move_01.png",
+      "asset": "w01_bullet_bounce_move",
+      "frame": 1,
+      "size": [
+        8,
+        8
+      ],
+      "source": "docs/arte/pulido-w01/originales/b1-projectiles-imagegen.png",
+      "source_box": [
+        627,
+        314,
+        784,
+        470
+      ],
+      "sha256": "7389f70bb83c29ee9a51897a4e692554fc04d7031c97e4923aec3d2336a15a89",
+      "state": "integrated-review",
+      "status": "placeholder",
+      "author": "OpenAI imagegen / Codex Pillow preparation",
+      "date": "2026-11-01",
+      "transform": "crop, nearest-neighbor resize, alpha>=96 binary, shared maximum16 RGB palette; no geometric drawing",
+      "notes": "Existing simulation, damage and collision sizes unchanged; source design faces right."
+    },
+    {
+      "path": "assets/sprites/w01/w01_bullet_bounce_move_02.png",
+      "asset": "w01_bullet_bounce_move",
+      "frame": 2,
+      "size": [
+        8,
+        8
+      ],
+      "source": "docs/arte/pulido-w01/originales/b1-projectiles-imagegen.png",
+      "source_box": [
+        784,
+        314,
+        940,
+        470
+      ],
+      "sha256": "e7f16ac5a569c74f9273c5fa4307fea9ec5427083b97bbf3c37179c7f5c6e097",
+      "state": "integrated-review",
+      "status": "placeholder",
+      "author": "OpenAI imagegen / Codex Pillow preparation",
+      "date": "2026-11-01",
+      "transform": "crop, nearest-neighbor resize, alpha>=96 binary, shared maximum16 RGB palette; no geometric drawing",
+      "notes": "Existing simulation, damage and collision sizes unchanged; source design faces right."
+    },
+    {
+      "path": "assets/sprites/w01/w01_bullet_bounce_move_03.png",
+      "asset": "w01_bullet_bounce_move",
+      "frame": 3,
+      "size": [
+        8,
+        8
+      ],
+      "source": "docs/arte/pulido-w01/originales/b1-projectiles-imagegen.png",
+      "source_box": [
+        940,
+        314,
+        1097,
+        470
+      ],
+      "sha256": "35dc33b095acfadb1f3d1c0f953a6a77b30b2aa238a46c533a53221fbd3b807d",
+      "state": "integrated-review",
+      "status": "placeholder",
+      "author": "OpenAI imagegen / Codex Pillow preparation",
+      "date": "2026-11-01",
+      "transform": "crop, nearest-neighbor resize, alpha>=96 binary, shared maximum16 RGB palette; no geometric drawing",
+      "notes": "Existing simulation, damage and collision sizes unchanged; source design faces right."
+    },
+    {
+      "path": "assets/sprites/w01/w01_bullet_bounce_move_04.png",
+      "asset": "w01_bullet_bounce_move",
+      "frame": 4,
+      "size": [
+        8,
+        8
+      ],
+      "source": "docs/arte/pulido-w01/originales/b1-projectiles-imagegen.png",
+      "source_box": [
+        1097,
+        314,
+        1254,
+        470
+      ],
+      "sha256": "624dc27001daef4e47c7788ef46290c0f33680f225e9bc36de5ccb2888ac31dc",
+      "state": "integrated-review",
+      "status": "placeholder",
+      "author": "OpenAI imagegen / Codex Pillow preparation",
+      "date": "2026-11-01",
+      "transform": "crop, nearest-neighbor resize, alpha>=96 binary, shared maximum16 RGB palette; no geometric drawing",
+      "notes": "Existing simulation, damage and collision sizes unchanged; source design faces right."
+    },
+    {
+      "path": "assets/sprites/w01/w01_bullet_bomb_move_01.png",
+      "asset": "w01_bullet_bomb_move",
+      "frame": 1,
+      "size": [
+        12,
+        12
+      ],
+      "source": "docs/arte/pulido-w01/originales/b1-projectiles-imagegen.png",
+      "source_box": [
+        0,
+        470,
+        157,
+        627
+      ],
+      "sha256": "f4f66aa99c5010999374d54a932f80a700cd37ecdb0ed9d031fcd50464f03f51",
+      "state": "integrated-review",
+      "status": "placeholder",
+      "author": "OpenAI imagegen / Codex Pillow preparation",
+      "date": "2026-11-01",
+      "transform": "crop, nearest-neighbor resize, alpha>=96 binary, shared maximum16 RGB palette; no geometric drawing",
+      "notes": "Existing simulation, damage and collision sizes unchanged; source design faces right."
+    },
+    {
+      "path": "assets/sprites/w01/w01_bullet_bomb_move_02.png",
+      "asset": "w01_bullet_bomb_move",
+      "frame": 2,
+      "size": [
+        12,
+        12
+      ],
+      "source": "docs/arte/pulido-w01/originales/b1-projectiles-imagegen.png",
+      "source_box": [
+        157,
+        470,
+        314,
+        627
+      ],
+      "sha256": "4d9c975f7c8734d97e8ba79e119d3b66e560080b65360071d6d0734f6e78d54e",
+      "state": "integrated-review",
+      "status": "placeholder",
+      "author": "OpenAI imagegen / Codex Pillow preparation",
+      "date": "2026-11-01",
+      "transform": "crop, nearest-neighbor resize, alpha>=96 binary, shared maximum16 RGB palette; no geometric drawing",
+      "notes": "Existing simulation, damage and collision sizes unchanged; source design faces right."
+    },
+    {
+      "path": "assets/sprites/w01/w01_bullet_bomb_move_03.png",
+      "asset": "w01_bullet_bomb_move",
+      "frame": 3,
+      "size": [
+        12,
+        12
+      ],
+      "source": "docs/arte/pulido-w01/originales/b1-projectiles-imagegen.png",
+      "source_box": [
+        314,
+        470,
+        470,
+        627
+      ],
+      "sha256": "64b69085bcf31543015782368133dcfcaa8908136443b59b83fcba54aab33ac7",
+      "state": "integrated-review",
+      "status": "placeholder",
+      "author": "OpenAI imagegen / Codex Pillow preparation",
+      "date": "2026-11-01",
+      "transform": "crop, nearest-neighbor resize, alpha>=96 binary, shared maximum16 RGB palette; no geometric drawing",
+      "notes": "Existing simulation, damage and collision sizes unchanged; source design faces right."
+    },
+    {
+      "path": "assets/sprites/w01/w01_bullet_bomb_move_04.png",
+      "asset": "w01_bullet_bomb_move",
+      "frame": 4,
+      "size": [
+        12,
+        12
+      ],
+      "source": "docs/arte/pulido-w01/originales/b1-projectiles-imagegen.png",
+      "source_box": [
+        470,
+        470,
+        627,
+        627
+      ],
+      "sha256": "3e2c5e42a375c1975c35dffb082ac8475d2c6e6ccf9a207f676faf11fcaac21b",
+      "state": "integrated-review",
+      "status": "placeholder",
+      "author": "OpenAI imagegen / Codex Pillow preparation",
+      "date": "2026-11-01",
+      "transform": "crop, nearest-neighbor resize, alpha>=96 binary, shared maximum16 RGB palette; no geometric drawing",
+      "notes": "Existing simulation, damage and collision sizes unchanged; source design faces right."
+    },
+    {
+      "path": "assets/ui/w01_ui_item_coin_idle_01.png",
+      "asset": "w01_ui_item_coin_idle",
+      "frame": 1,
+      "size": [
+        16,
+        16
+      ],
+      "source": "docs/arte/pulido-w01/originales/b1-projectiles-imagegen.png",
+      "source_box": [
+        0,
+        627,
+        157,
+        784
+      ],
+      "sha256": "f27d1283910eeaa973ff6fb335e29ff96dd90345ef8bfadd46fa48bbe306e277",
+      "state": "integrated-review",
+      "status": "placeholder",
+      "author": "OpenAI imagegen / Codex Pillow preparation",
+      "date": "2026-11-01",
+      "transform": "crop, nearest-neighbor resize, alpha>=96 binary, shared maximum16 RGB palette; no geometric drawing",
+      "notes": ""
+    },
+    {
+      "path": "assets/ui/w01_ui_item_coin_idle_02.png",
+      "asset": "w01_ui_item_coin_idle",
+      "frame": 2,
+      "size": [
+        16,
+        16
+      ],
+      "source": "docs/arte/pulido-w01/originales/b1-projectiles-imagegen.png",
+      "source_box": [
+        157,
+        627,
+        314,
+        784
+      ],
+      "sha256": "8945b007060962c1f583b4063a617fbfb72ca7c8fbe3182a017c4482189bfb47",
+      "state": "integrated-review",
+      "status": "placeholder",
+      "author": "OpenAI imagegen / Codex Pillow preparation",
+      "date": "2026-11-01",
+      "transform": "crop, nearest-neighbor resize, alpha>=96 binary, shared maximum16 RGB palette; no geometric drawing",
+      "notes": ""
+    },
+    {
+      "path": "assets/ui/w01_ui_item_shot_idle_01.png",
+      "asset": "w01_ui_item_shot_idle",
+      "frame": 1,
+      "size": [
+        16,
+        16
+      ],
+      "source": "docs/arte/pulido-w01/originales/b1-projectiles-imagegen.png",
+      "source_box": [
+        314,
+        627,
+        470,
+        784
+      ],
+      "sha256": "3b9cf544c6bd9f1f6f8ca623a2df733cbd4726de5b1ba131566b0fe83418dfcf",
+      "state": "integrated-review",
+      "status": "placeholder",
+      "author": "OpenAI imagegen / Codex Pillow preparation",
+      "date": "2026-11-01",
+      "transform": "crop, nearest-neighbor resize, alpha>=96 binary, shared maximum16 RGB palette; no geometric drawing",
+      "notes": ""
+    },
+    {
+      "path": "assets/ui/w01_ui_item_shot_idle_02.png",
+      "asset": "w01_ui_item_shot_idle",
+      "frame": 2,
+      "size": [
+        16,
+        16
+      ],
+      "source": "docs/arte/pulido-w01/originales/b1-projectiles-imagegen.png",
+      "source_box": [
+        470,
+        627,
+        627,
+        784
+      ],
+      "sha256": "c94197cf6dae684df68608ad25cdc8405d795c0e653b8350c681c0a8e091c4d3",
+      "state": "integrated-review",
+      "status": "placeholder",
+      "author": "OpenAI imagegen / Codex Pillow preparation",
+      "date": "2026-11-01",
+      "transform": "crop, nearest-neighbor resize, alpha>=96 binary, shared maximum16 RGB palette; no geometric drawing",
+      "notes": ""
+    },
+    {
+      "path": "assets/ui/w01_ui_item_missile_idle_01.png",
+      "asset": "w01_ui_item_missile_idle",
+      "frame": 1,
+      "size": [
+        16,
+        16
+      ],
+      "source": "docs/arte/pulido-w01/originales/b1-projectiles-imagegen.png",
+      "source_box": [
+        627,
+        627,
+        784,
+        784
+      ],
+      "sha256": "0d355626a18419aeb2baad86b2c8c3fe9fa1a246f7072d745d583de41932d6cb",
+      "state": "integrated-review",
+      "status": "placeholder",
+      "author": "OpenAI imagegen / Codex Pillow preparation",
+      "date": "2026-11-01",
+      "transform": "crop, nearest-neighbor resize, alpha>=96 binary, shared maximum16 RGB palette; no geometric drawing",
+      "notes": ""
+    },
+    {
+      "path": "assets/ui/w01_ui_item_missile_idle_02.png",
+      "asset": "w01_ui_item_missile_idle",
+      "frame": 2,
+      "size": [
+        16,
+        16
+      ],
+      "source": "docs/arte/pulido-w01/originales/b1-projectiles-imagegen.png",
+      "source_box": [
+        784,
+        627,
+        940,
+        784
+      ],
+      "sha256": "dbdfda3fb4cdf5a76ec6e56cfc72dcfb7eb07e42a712ba9a1a1e2f5e2dea607a",
+      "state": "integrated-review",
+      "status": "placeholder",
+      "author": "OpenAI imagegen / Codex Pillow preparation",
+      "date": "2026-11-01",
+      "transform": "crop, nearest-neighbor resize, alpha>=96 binary, shared maximum16 RGB palette; no geometric drawing",
+      "notes": ""
+    },
+    {
+      "path": "assets/ui/w01_ui_item_bomb_idle_01.png",
+      "asset": "w01_ui_item_bomb_idle",
+      "frame": 1,
+      "size": [
+        16,
+        16
+      ],
+      "source": "docs/arte/pulido-w01/originales/b1-projectiles-imagegen.png",
+      "source_box": [
+        940,
+        627,
+        1097,
+        784
+      ],
+      "sha256": "add0e781ece5c373c2413febf2f5cf3861a98de878fda85536786a65a666310f",
+      "state": "integrated-review",
+      "status": "placeholder",
+      "author": "OpenAI imagegen / Codex Pillow preparation",
+      "date": "2026-11-01",
+      "transform": "crop, nearest-neighbor resize, alpha>=96 binary, shared maximum16 RGB palette; no geometric drawing",
+      "notes": ""
+    },
+    {
+      "path": "assets/ui/w01_ui_item_bomb_idle_02.png",
+      "asset": "w01_ui_item_bomb_idle",
+      "frame": 2,
+      "size": [
+        16,
+        16
+      ],
+      "source": "docs/arte/pulido-w01/originales/b1-projectiles-imagegen.png",
+      "source_box": [
+        1097,
+        627,
+        1254,
+        784
+      ],
+      "sha256": "5d07b6676a8886715fd967cd90e3d4e5518beb83c02514c71229f365d3787083",
+      "state": "integrated-review",
+      "status": "placeholder",
+      "author": "OpenAI imagegen / Codex Pillow preparation",
+      "date": "2026-11-01",
+      "transform": "crop, nearest-neighbor resize, alpha>=96 binary, shared maximum16 RGB palette; no geometric drawing",
+      "notes": ""
+    },
+    {
+      "path": "assets/ui/w01_ui_item_shield_idle_01.png",
+      "asset": "w01_ui_item_shield_idle",
+      "frame": 1,
+      "size": [
+        16,
+        16
+      ],
+      "source": "docs/arte/pulido-w01/originales/b1-projectiles-imagegen.png",
+      "source_box": [
+        0,
+        784,
+        157,
+        940
+      ],
+      "sha256": "1bb9e39d6a4ca141a8bedff686cd4d2fea7f0baeb4979f5853df1bb0c7ca4853",
+      "state": "integrated-review",
+      "status": "placeholder",
+      "author": "OpenAI imagegen / Codex Pillow preparation",
+      "date": "2026-11-01",
+      "transform": "crop, nearest-neighbor resize, alpha>=96 binary, shared maximum16 RGB palette; no geometric drawing",
+      "notes": ""
+    },
+    {
+      "path": "assets/ui/w01_ui_item_shield_idle_02.png",
+      "asset": "w01_ui_item_shield_idle",
+      "frame": 2,
+      "size": [
+        16,
+        16
+      ],
+      "source": "docs/arte/pulido-w01/originales/b1-projectiles-imagegen.png",
+      "source_box": [
+        157,
+        784,
+        314,
+        940
+      ],
+      "sha256": "e9cf4a86c85fb847c157b4cd2a3733dbe576238eaef971540b8053db7e9e41b6",
+      "state": "integrated-review",
+      "status": "placeholder",
+      "author": "OpenAI imagegen / Codex Pillow preparation",
+      "date": "2026-11-01",
+      "transform": "crop, nearest-neighbor resize, alpha>=96 binary, shared maximum16 RGB palette; no geometric drawing",
+      "notes": ""
+    },
+    {
+      "path": "assets/ui/w01_ui_item_score_idle_01.png",
+      "asset": "w01_ui_item_score_idle",
+      "frame": 1,
+      "size": [
+        16,
+        16
+      ],
+      "source": "docs/arte/pulido-w01/originales/b1-projectiles-imagegen.png",
+      "source_box": [
+        314,
+        784,
+        470,
+        940
+      ],
+      "sha256": "b1d2eeeecd3e64597274b5365640e368ebaf27e17966c48c413539993d4833da",
+      "state": "integrated-review",
+      "status": "placeholder",
+      "author": "OpenAI imagegen / Codex Pillow preparation",
+      "date": "2026-11-01",
+      "transform": "crop, nearest-neighbor resize, alpha>=96 binary, shared maximum16 RGB palette; no geometric drawing",
+      "notes": ""
+    },
+    {
+      "path": "assets/ui/w01_ui_item_score_idle_02.png",
+      "asset": "w01_ui_item_score_idle",
+      "frame": 2,
+      "size": [
+        16,
+        16
+      ],
+      "source": "docs/arte/pulido-w01/originales/b1-projectiles-imagegen.png",
+      "source_box": [
+        470,
+        784,
+        627,
+        940
+      ],
+      "sha256": "e100ebc293070dbe18284534556310f81e54e8467bd04af845d4ecd43a5c332c",
+      "state": "integrated-review",
+      "status": "placeholder",
+      "author": "OpenAI imagegen / Codex Pillow preparation",
+      "date": "2026-11-01",
+      "transform": "crop, nearest-neighbor resize, alpha>=96 binary, shared maximum16 RGB palette; no geometric drawing",
+      "notes": ""
+    },
+    {
+      "path": "assets/ui/w01_ui_item_life_idle_01.png",
+      "asset": "w01_ui_item_life_idle",
+      "frame": 1,
+      "size": [
+        16,
+        16
+      ],
+      "source": "docs/arte/pulido-w01/originales/b1-projectiles-imagegen.png",
+      "source_box": [
+        627,
+        784,
+        784,
+        940
+      ],
+      "sha256": "58b1867819e86c886aa3e67b5cc2732c092ee0fedc31e974c7b2595b04cb12c4",
+      "state": "integrated-review",
+      "status": "placeholder",
+      "author": "OpenAI imagegen / Codex Pillow preparation",
+      "date": "2026-11-01",
+      "transform": "crop, nearest-neighbor resize, alpha>=96 binary, shared maximum16 RGB palette; no geometric drawing",
+      "notes": ""
+    },
+    {
+      "path": "assets/ui/w01_ui_item_life_idle_02.png",
+      "asset": "w01_ui_item_life_idle",
+      "frame": 2,
+      "size": [
+        16,
+        16
+      ],
+      "source": "docs/arte/pulido-w01/originales/b1-projectiles-imagegen.png",
+      "source_box": [
+        784,
+        784,
+        940,
+        940
+      ],
+      "sha256": "3802b17298a597409e07a9cf15bccc7fa9adf14c1c29cdae59b7a82db98d21ee",
+      "state": "integrated-review",
+      "status": "placeholder",
+      "author": "OpenAI imagegen / Codex Pillow preparation",
+      "date": "2026-11-01",
+      "transform": "crop, nearest-neighbor resize, alpha>=96 binary, shared maximum16 RGB palette; no geometric drawing",
+      "notes": ""
+    },
+    {
+      "path": "assets/ui/w01_ui_item_magnet_idle_01.png",
+      "asset": "w01_ui_item_magnet_idle",
+      "frame": 1,
+      "size": [
+        16,
+        16
+      ],
+      "source": "docs/arte/pulido-w01/originales/b1-projectiles-imagegen.png",
+      "source_box": [
+        940,
+        784,
+        1097,
+        940
+      ],
+      "sha256": "6981e777120d12bc143027d32ed08af0597d14dd232ff74a7ca3398ab21ed873",
+      "state": "integrated-review",
+      "status": "placeholder",
+      "author": "OpenAI imagegen / Codex Pillow preparation",
+      "date": "2026-11-01",
+      "transform": "crop, nearest-neighbor resize, alpha>=96 binary, shared maximum16 RGB palette; no geometric drawing",
+      "notes": ""
+    },
+    {
+      "path": "assets/ui/w01_ui_item_magnet_idle_02.png",
+      "asset": "w01_ui_item_magnet_idle",
+      "frame": 2,
+      "size": [
+        16,
+        16
+      ],
+      "source": "docs/arte/pulido-w01/originales/b1-projectiles-imagegen.png",
+      "source_box": [
+        1097,
+        784,
+        1254,
+        940
+      ],
+      "sha256": "2944b57f1c8c3e13b7abc5d17e2caa08f9b094ecac9dd53c6c8616c8408e085d",
+      "state": "integrated-review",
+      "status": "placeholder",
+      "author": "OpenAI imagegen / Codex Pillow preparation",
+      "date": "2026-11-01",
+      "transform": "crop, nearest-neighbor resize, alpha>=96 binary, shared maximum16 RGB palette; no geometric drawing",
+      "notes": ""
+    },
+    {
+      "path": "assets/ui/w01_ui_equipment_sonar_idle_01.png",
+      "asset": "w01_ui_equipment_sonar_idle",
+      "frame": 1,
+      "size": [
+        16,
+        16
+      ],
+      "source": "docs/arte/pulido-w01/originales/b1-projectiles-imagegen.png",
+      "source_box": [
+        0,
+        940,
+        157,
+        1097
+      ],
+      "sha256": "e7dccf5d93b5b5f1cf7ac924d8a16ddf1b0832a5bbefcd0dc415fc6a9294b034",
+      "state": "integrated-review",
+      "status": "placeholder",
+      "author": "OpenAI imagegen / Codex Pillow preparation",
+      "date": "2026-11-01",
+      "transform": "crop, nearest-neighbor resize, alpha>=96 binary, shared maximum16 RGB palette; no geometric drawing",
+      "notes": ""
+    },
+    {
+      "path": "assets/ui/w01_ui_equipment_sonar_idle_02.png",
+      "asset": "w01_ui_equipment_sonar_idle",
+      "frame": 2,
+      "size": [
+        16,
+        16
+      ],
+      "source": "docs/arte/pulido-w01/originales/b1-projectiles-imagegen.png",
+      "source_box": [
+        157,
+        940,
+        314,
+        1097
+      ],
+      "sha256": "a64ec1f081f81d288cc24104d209538ba2f92317123769fc9d99ae657a6a57f5",
+      "state": "integrated-review",
+      "status": "placeholder",
+      "author": "OpenAI imagegen / Codex Pillow preparation",
+      "date": "2026-11-01",
+      "transform": "crop, nearest-neighbor resize, alpha>=96 binary, shared maximum16 RGB palette; no geometric drawing",
+      "notes": ""
+    },
+    {
+      "path": "assets/ui/w01_ui_equipment_ctd_idle_01.png",
+      "asset": "w01_ui_equipment_ctd_idle",
+      "frame": 1,
+      "size": [
+        16,
+        16
+      ],
+      "source": "docs/arte/pulido-w01/originales/b1-projectiles-imagegen.png",
+      "source_box": [
+        0,
+        1097,
+        157,
+        1254
+      ],
+      "sha256": "0931e1bf04c430713692db9f895b70e29d13ae85d2db59a3b8ec54dd95a3cc13",
+      "state": "integrated-review",
+      "status": "placeholder",
+      "author": "OpenAI imagegen / Codex Pillow preparation",
+      "date": "2026-11-01",
+      "transform": "crop, nearest-neighbor resize, alpha>=96 binary, shared maximum16 RGB palette; no geometric drawing",
+      "notes": ""
+    },
+    {
+      "path": "assets/ui/w01_ui_equipment_ctd_idle_02.png",
+      "asset": "w01_ui_equipment_ctd_idle",
+      "frame": 2,
+      "size": [
+        16,
+        16
+      ],
+      "source": "docs/arte/pulido-w01/originales/b1-projectiles-imagegen.png",
+      "source_box": [
+        157,
+        1097,
+        314,
+        1254
+      ],
+      "sha256": "02433abfdf76fa8f44972cb7f0483a9f0ccf858348276d37d3d39791fe8a5565",
+      "state": "integrated-review",
+      "status": "placeholder",
+      "author": "OpenAI imagegen / Codex Pillow preparation",
+      "date": "2026-11-01",
+      "transform": "crop, nearest-neighbor resize, alpha>=96 binary, shared maximum16 RGB palette; no geometric drawing",
+      "notes": ""
+    },
+    {
+      "path": "assets/ui/w01_ui_equipment_deflector_idle_01.png",
+      "asset": "w01_ui_equipment_deflector_idle",
+      "frame": 1,
+      "size": [
+        16,
+        16
+      ],
+      "source": "docs/arte/pulido-w01/originales/b1-projectiles-imagegen.png",
+      "source_box": [
+        627,
+        1097,
+        784,
+        1254
+      ],
+      "sha256": "ca500d36b876ed082a1bb1570476754efdcf3a5f3a309dc9cc11ff9516ec7d42",
+      "state": "integrated-review",
+      "status": "placeholder",
+      "author": "OpenAI imagegen / Codex Pillow preparation",
+      "date": "2026-11-01",
+      "transform": "crop, nearest-neighbor resize, alpha>=96 binary, shared maximum16 RGB palette; no geometric drawing",
+      "notes": ""
+    },
+    {
+      "path": "assets/ui/w01_ui_equipment_deflector_idle_02.png",
+      "asset": "w01_ui_equipment_deflector_idle",
+      "frame": 2,
+      "size": [
+        16,
+        16
+      ],
+      "source": "docs/arte/pulido-w01/originales/b1-projectiles-imagegen.png",
+      "source_box": [
+        784,
+        1097,
+        940,
+        1254
+      ],
+      "sha256": "7f55b00d28a271f109f6cc4459afa30449cc87b6cc1cb2e95c60218b14255426",
+      "state": "integrated-review",
+      "status": "placeholder",
+      "author": "OpenAI imagegen / Codex Pillow preparation",
+      "date": "2026-11-01",
+      "transform": "crop, nearest-neighbor resize, alpha>=96 binary, shared maximum16 RGB palette; no geometric drawing",
+      "notes": ""
+    },
+    {
+      "path": "assets/ui/w01_ui_hazard_idle_01.png",
+      "asset": "w01_ui_hazard_idle",
+      "frame": 1,
+      "size": [
+        64,
+        16
+      ],
+      "source": "docs/arte/pulido-w01/originales/b1-projectiles-imagegen.png",
+      "source_box": [
+        627,
+        470,
+        784,
+        627
+      ],
+      "sha256": "9f4fd8e17a4b32fb844cf3938a5a2651e7a97a0698c202493f56cb68096dce61",
+      "state": "integrated-review",
+      "status": "placeholder",
+      "author": "OpenAI imagegen / Codex Pillow preparation",
+      "date": "2026-11-01",
+      "transform": "crop, nearest-neighbor resize, alpha>=96 binary, shared maximum16 RGB palette; no geometric drawing",
+      "notes": "Coral-colored anemone spine hazard on navy rock; no technical label."
+    },
+    {
+      "path": "assets/ui/w01_ui_hazard_idle_02.png",
+      "asset": "w01_ui_hazard_idle",
+      "frame": 2,
+      "size": [
+        64,
+        16
+      ],
+      "source": "docs/arte/pulido-w01/originales/b1-projectiles-imagegen.png",
+      "source_box": [
+        784,
+        470,
+        940,
+        627
+      ],
+      "sha256": "04f93f2f7147ea06aab5daba1ef0ac4ef8cdca7df33300cdeef7b10b80be865e",
+      "state": "integrated-review",
+      "status": "placeholder",
+      "author": "OpenAI imagegen / Codex Pillow preparation",
+      "date": "2026-11-01",
+      "transform": "crop, nearest-neighbor resize, alpha>=96 binary, shared maximum16 RGB palette; no geometric drawing",
+      "notes": "Coral-colored anemone spine hazard on navy rock; no technical label."
+    },
+    {
+      "path": "assets/ui/w01_ui_hazard_idle_03.png",
+      "asset": "w01_ui_hazard_idle",
+      "frame": 3,
+      "size": [
+        64,
+        16
+      ],
+      "source": "docs/arte/pulido-w01/originales/b1-projectiles-imagegen.png",
+      "source_box": [
+        940,
+        470,
+        1097,
+        627
+      ],
+      "sha256": "842ccb48a6f57b75c811c1ff680f8e0e8fa78287fe61fa5b62a969f601883a23",
+      "state": "integrated-review",
+      "status": "placeholder",
+      "author": "OpenAI imagegen / Codex Pillow preparation",
+      "date": "2026-11-01",
+      "transform": "crop, nearest-neighbor resize, alpha>=96 binary, shared maximum16 RGB palette; no geometric drawing",
+      "notes": "Coral-colored anemone spine hazard on navy rock; no technical label."
+    },
+    {
+      "path": "assets/ui/w01_ui_hazard_idle_04.png",
+      "asset": "w01_ui_hazard_idle",
+      "frame": 4,
+      "size": [
+        64,
+        16
+      ],
+      "source": "docs/arte/pulido-w01/originales/b1-projectiles-imagegen.png",
+      "source_box": [
+        1097,
+        470,
+        1254,
+        627
+      ],
+      "sha256": "c1965a30f73470f400d5874257f223a8c4f111ea42b0f8c3566682a4afd42032",
+      "state": "integrated-review",
+      "status": "placeholder",
+      "author": "OpenAI imagegen / Codex Pillow preparation",
+      "date": "2026-11-01",
+      "transform": "crop, nearest-neighbor resize, alpha>=96 binary, shared maximum16 RGB palette; no geometric drawing",
+      "notes": "Coral-colored anemone spine hazard on navy rock; no technical label."
+    },
+    {
+      "path": "assets/fx/w01_fx_explosion_burst_01.png",
+      "asset": "w01_fx_explosion_burst",
+      "frame": 1,
+      "size": [
+        64,
+        64
+      ],
+      "source": "docs/arte/pulido-w01/originales/b1-fx-imagegen.png",
+      "source_box": [
+        0,
+        0,
+        157,
+        170
+      ],
+      "sha256": "d89188e7e2e9654164f5e4c27eba318e8ece48ef0201e4ce6dc40665904d7c95",
+      "state": "integrated-review",
+      "status": "placeholder",
+      "author": "OpenAI imagegen / Codex Pillow preparation",
+      "date": "2026-11-01",
+      "transform": "crop, nearest-neighbor resize, alpha>=96 binary, shared maximum16 RGB palette; no geometric drawing",
+      "notes": "Eight original sequential source frames; age-based playback; trail and carrier bubble require looping time."
+    },
+    {
+      "path": "assets/fx/w01_fx_explosion_burst_02.png",
+      "asset": "w01_fx_explosion_burst",
+      "frame": 2,
+      "size": [
+        64,
+        64
+      ],
+      "source": "docs/arte/pulido-w01/originales/b1-fx-imagegen.png",
+      "source_box": [
+        157,
+        0,
+        314,
+        170
+      ],
+      "sha256": "f2906da70a796d818efc323321c471c36b8a9d663f3ef93961f2b9da93d00cae",
+      "state": "integrated-review",
+      "status": "placeholder",
+      "author": "OpenAI imagegen / Codex Pillow preparation",
+      "date": "2026-11-01",
+      "transform": "crop, nearest-neighbor resize, alpha>=96 binary, shared maximum16 RGB palette; no geometric drawing",
+      "notes": "Eight original sequential source frames; age-based playback; trail and carrier bubble require looping time."
+    },
+    {
+      "path": "assets/fx/w01_fx_explosion_burst_03.png",
+      "asset": "w01_fx_explosion_burst",
+      "frame": 3,
+      "size": [
+        64,
+        64
+      ],
+      "source": "docs/arte/pulido-w01/originales/b1-fx-imagegen.png",
+      "source_box": [
+        314,
+        0,
+        470,
+        170
+      ],
+      "sha256": "7aba6d5346bc7a7b9e51d5228c578379a094e5fc673ec26a55b6e5a9aebe143c",
+      "state": "integrated-review",
+      "status": "placeholder",
+      "author": "OpenAI imagegen / Codex Pillow preparation",
+      "date": "2026-11-01",
+      "transform": "crop, nearest-neighbor resize, alpha>=96 binary, shared maximum16 RGB palette; no geometric drawing",
+      "notes": "Eight original sequential source frames; age-based playback; trail and carrier bubble require looping time."
+    },
+    {
+      "path": "assets/fx/w01_fx_explosion_burst_04.png",
+      "asset": "w01_fx_explosion_burst",
+      "frame": 4,
+      "size": [
+        64,
+        64
+      ],
+      "source": "docs/arte/pulido-w01/originales/b1-fx-imagegen.png",
+      "source_box": [
+        470,
+        0,
+        627,
+        170
+      ],
+      "sha256": "db89cbcc19c9bdd904bf92c5d8cd4dc8f6e001f40690a93b0d25c26ddf4d6fa7",
+      "state": "integrated-review",
+      "status": "placeholder",
+      "author": "OpenAI imagegen / Codex Pillow preparation",
+      "date": "2026-11-01",
+      "transform": "crop, nearest-neighbor resize, alpha>=96 binary, shared maximum16 RGB palette; no geometric drawing",
+      "notes": "Eight original sequential source frames; age-based playback; trail and carrier bubble require looping time."
+    },
+    {
+      "path": "assets/fx/w01_fx_explosion_burst_05.png",
+      "asset": "w01_fx_explosion_burst",
+      "frame": 5,
+      "size": [
+        64,
+        64
+      ],
+      "source": "docs/arte/pulido-w01/originales/b1-fx-imagegen.png",
+      "source_box": [
+        627,
+        0,
+        784,
+        170
+      ],
+      "sha256": "953c93af0af5eaf640775b16eddb7787731f48025cc8ca7c6d39e3aa7cbde013",
+      "state": "integrated-review",
+      "status": "placeholder",
+      "author": "OpenAI imagegen / Codex Pillow preparation",
+      "date": "2026-11-01",
+      "transform": "crop, nearest-neighbor resize, alpha>=96 binary, shared maximum16 RGB palette; no geometric drawing",
+      "notes": "Eight original sequential source frames; age-based playback; trail and carrier bubble require looping time."
+    },
+    {
+      "path": "assets/fx/w01_fx_explosion_burst_06.png",
+      "asset": "w01_fx_explosion_burst",
+      "frame": 6,
+      "size": [
+        64,
+        64
+      ],
+      "source": "docs/arte/pulido-w01/originales/b1-fx-imagegen.png",
+      "source_box": [
+        784,
+        0,
+        940,
+        170
+      ],
+      "sha256": "aa9217599156c52d3801a4c839e6e5f74e3a4677ee1e0c6f8fed0ed396606b80",
+      "state": "integrated-review",
+      "status": "placeholder",
+      "author": "OpenAI imagegen / Codex Pillow preparation",
+      "date": "2026-11-01",
+      "transform": "crop, nearest-neighbor resize, alpha>=96 binary, shared maximum16 RGB palette; no geometric drawing",
+      "notes": "Eight original sequential source frames; age-based playback; trail and carrier bubble require looping time."
+    },
+    {
+      "path": "assets/fx/w01_fx_explosion_burst_07.png",
+      "asset": "w01_fx_explosion_burst",
+      "frame": 7,
+      "size": [
+        64,
+        64
+      ],
+      "source": "docs/arte/pulido-w01/originales/b1-fx-imagegen.png",
+      "source_box": [
+        940,
+        0,
+        1097,
+        170
+      ],
+      "sha256": "1825e3ee2c0015ddca609fcc31d99a2d34bc256f17309638b6f2c5ec2d0508b4",
+      "state": "integrated-review",
+      "status": "placeholder",
+      "author": "OpenAI imagegen / Codex Pillow preparation",
+      "date": "2026-11-01",
+      "transform": "crop, nearest-neighbor resize, alpha>=96 binary, shared maximum16 RGB palette; no geometric drawing",
+      "notes": "Eight original sequential source frames; age-based playback; trail and carrier bubble require looping time."
+    },
+    {
+      "path": "assets/fx/w01_fx_explosion_burst_08.png",
+      "asset": "w01_fx_explosion_burst",
+      "frame": 8,
+      "size": [
+        64,
+        64
+      ],
+      "source": "docs/arte/pulido-w01/originales/b1-fx-imagegen.png",
+      "source_box": [
+        1097,
+        0,
+        1254,
+        170
+      ],
+      "sha256": "1f81d8504fd971cac272d83b9e8fdfc4946d0f470c35a3735fb1dbc89e34f1c1",
+      "state": "integrated-review",
+      "status": "placeholder",
+      "author": "OpenAI imagegen / Codex Pillow preparation",
+      "date": "2026-11-01",
+      "transform": "crop, nearest-neighbor resize, alpha>=96 binary, shared maximum16 RGB palette; no geometric drawing",
+      "notes": "Eight original sequential source frames; age-based playback; trail and carrier bubble require looping time."
+    },
+    {
+      "path": "assets/fx/w01_fx_bomb_burst_01.png",
+      "asset": "w01_fx_bomb_burst",
+      "frame": 1,
+      "size": [
+        128,
+        128
+      ],
+      "source": "docs/arte/pulido-w01/originales/b1-fx-imagegen.png",
+      "source_box": [
+        0,
+        170,
+        157,
+        350
+      ],
+      "sha256": "888d48e26e686a050e74eb9fd54dae0da54502929180ef231137ed191849b002",
+      "state": "integrated-review",
+      "status": "placeholder",
+      "author": "OpenAI imagegen / Codex Pillow preparation",
+      "date": "2026-11-01",
+      "transform": "crop, nearest-neighbor resize, alpha>=96 binary, shared maximum16 RGB palette; no geometric drawing",
+      "notes": "Eight original sequential source frames; age-based playback; trail and carrier bubble require looping time."
+    },
+    {
+      "path": "assets/fx/w01_fx_bomb_burst_02.png",
+      "asset": "w01_fx_bomb_burst",
+      "frame": 2,
+      "size": [
+        128,
+        128
+      ],
+      "source": "docs/arte/pulido-w01/originales/b1-fx-imagegen.png",
+      "source_box": [
+        157,
+        170,
+        314,
+        350
+      ],
+      "sha256": "50578705f582ddea783695051a9a3751c696d82300c9e0c2625036b5c1b4d94f",
+      "state": "integrated-review",
+      "status": "placeholder",
+      "author": "OpenAI imagegen / Codex Pillow preparation",
+      "date": "2026-11-01",
+      "transform": "crop, nearest-neighbor resize, alpha>=96 binary, shared maximum16 RGB palette; no geometric drawing",
+      "notes": "Eight original sequential source frames; age-based playback; trail and carrier bubble require looping time."
+    },
+    {
+      "path": "assets/fx/w01_fx_bomb_burst_03.png",
+      "asset": "w01_fx_bomb_burst",
+      "frame": 3,
+      "size": [
+        128,
+        128
+      ],
+      "source": "docs/arte/pulido-w01/originales/b1-fx-imagegen.png",
+      "source_box": [
+        314,
+        170,
+        470,
+        350
+      ],
+      "sha256": "6e509a89bbe143a4fb02acbc5772cc0625ebc625350fc60cd77c564bdbe0418c",
+      "state": "integrated-review",
+      "status": "placeholder",
+      "author": "OpenAI imagegen / Codex Pillow preparation",
+      "date": "2026-11-01",
+      "transform": "crop, nearest-neighbor resize, alpha>=96 binary, shared maximum16 RGB palette; no geometric drawing",
+      "notes": "Eight original sequential source frames; age-based playback; trail and carrier bubble require looping time."
+    },
+    {
+      "path": "assets/fx/w01_fx_bomb_burst_04.png",
+      "asset": "w01_fx_bomb_burst",
+      "frame": 4,
+      "size": [
+        128,
+        128
+      ],
+      "source": "docs/arte/pulido-w01/originales/b1-fx-imagegen.png",
+      "source_box": [
+        470,
+        170,
+        627,
+        350
+      ],
+      "sha256": "b54643a486f9577ec137db92db415cb49cf3e5069d75a267957a9f64943e579f",
+      "state": "integrated-review",
+      "status": "placeholder",
+      "author": "OpenAI imagegen / Codex Pillow preparation",
+      "date": "2026-11-01",
+      "transform": "crop, nearest-neighbor resize, alpha>=96 binary, shared maximum16 RGB palette; no geometric drawing",
+      "notes": "Eight original sequential source frames; age-based playback; trail and carrier bubble require looping time."
+    },
+    {
+      "path": "assets/fx/w01_fx_bomb_burst_05.png",
+      "asset": "w01_fx_bomb_burst",
+      "frame": 5,
+      "size": [
+        128,
+        128
+      ],
+      "source": "docs/arte/pulido-w01/originales/b1-fx-imagegen.png",
+      "source_box": [
+        627,
+        170,
+        784,
+        350
+      ],
+      "sha256": "8d559b2710aaaf6669b277a66e9515c36cb73a2044242bddc1c90ee78e84c2ac",
+      "state": "integrated-review",
+      "status": "placeholder",
+      "author": "OpenAI imagegen / Codex Pillow preparation",
+      "date": "2026-11-01",
+      "transform": "crop, nearest-neighbor resize, alpha>=96 binary, shared maximum16 RGB palette; no geometric drawing",
+      "notes": "Eight original sequential source frames; age-based playback; trail and carrier bubble require looping time."
+    },
+    {
+      "path": "assets/fx/w01_fx_bomb_burst_06.png",
+      "asset": "w01_fx_bomb_burst",
+      "frame": 6,
+      "size": [
+        128,
+        128
+      ],
+      "source": "docs/arte/pulido-w01/originales/b1-fx-imagegen.png",
+      "source_box": [
+        784,
+        170,
+        940,
+        350
+      ],
+      "sha256": "e683745ba75be15fb0d266d71a91ea5425a178a971ebe4f398c8989900d1cbe4",
+      "state": "integrated-review",
+      "status": "placeholder",
+      "author": "OpenAI imagegen / Codex Pillow preparation",
+      "date": "2026-11-01",
+      "transform": "crop, nearest-neighbor resize, alpha>=96 binary, shared maximum16 RGB palette; no geometric drawing",
+      "notes": "Eight original sequential source frames; age-based playback; trail and carrier bubble require looping time."
+    },
+    {
+      "path": "assets/fx/w01_fx_bomb_burst_07.png",
+      "asset": "w01_fx_bomb_burst",
+      "frame": 7,
+      "size": [
+        128,
+        128
+      ],
+      "source": "docs/arte/pulido-w01/originales/b1-fx-imagegen.png",
+      "source_box": [
+        940,
+        170,
+        1097,
+        350
+      ],
+      "sha256": "da733bc49ab47083187debfb0d5ffbeb515fd33a9bb98b8d16ed47aca086940a",
+      "state": "integrated-review",
+      "status": "placeholder",
+      "author": "OpenAI imagegen / Codex Pillow preparation",
+      "date": "2026-11-01",
+      "transform": "crop, nearest-neighbor resize, alpha>=96 binary, shared maximum16 RGB palette; no geometric drawing",
+      "notes": "Eight original sequential source frames; age-based playback; trail and carrier bubble require looping time."
+    },
+    {
+      "path": "assets/fx/w01_fx_bomb_burst_08.png",
+      "asset": "w01_fx_bomb_burst",
+      "frame": 8,
+      "size": [
+        128,
+        128
+      ],
+      "source": "docs/arte/pulido-w01/originales/b1-fx-imagegen.png",
+      "source_box": [
+        1097,
+        170,
+        1254,
+        350
+      ],
+      "sha256": "29f7b27a751627cbffb9b8d4075871ca8d92c0cf23e24c9e0287f4f1397f4207",
+      "state": "integrated-review",
+      "status": "placeholder",
+      "author": "OpenAI imagegen / Codex Pillow preparation",
+      "date": "2026-11-01",
+      "transform": "crop, nearest-neighbor resize, alpha>=96 binary, shared maximum16 RGB palette; no geometric drawing",
+      "notes": "Eight original sequential source frames; age-based playback; trail and carrier bubble require looping time."
+    },
+    {
+      "path": "assets/fx/w01_fx_hit_burst_01.png",
+      "asset": "w01_fx_hit_burst",
+      "frame": 1,
+      "size": [
+        32,
+        32
+      ],
+      "source": "docs/arte/pulido-w01/originales/b1-fx-imagegen.png",
+      "source_box": [
+        0,
+        350,
+        157,
+        505
+      ],
+      "sha256": "7703667b6332d3937943332354a17f3ec6410b74cfb6e8b35e13cbb1b6f73409",
+      "state": "integrated-review",
+      "status": "placeholder",
+      "author": "OpenAI imagegen / Codex Pillow preparation",
+      "date": "2026-11-01",
+      "transform": "crop, nearest-neighbor resize, alpha>=96 binary, shared maximum16 RGB palette; no geometric drawing",
+      "notes": "Eight original sequential source frames; age-based playback; trail and carrier bubble require looping time."
+    },
+    {
+      "path": "assets/fx/w01_fx_hit_burst_02.png",
+      "asset": "w01_fx_hit_burst",
+      "frame": 2,
+      "size": [
+        32,
+        32
+      ],
+      "source": "docs/arte/pulido-w01/originales/b1-fx-imagegen.png",
+      "source_box": [
+        157,
+        350,
+        314,
+        505
+      ],
+      "sha256": "cdead7d82a7e33b5ee1fb608d74070317b54549dcb296a39c67ffc01980a0579",
+      "state": "integrated-review",
+      "status": "placeholder",
+      "author": "OpenAI imagegen / Codex Pillow preparation",
+      "date": "2026-11-01",
+      "transform": "crop, nearest-neighbor resize, alpha>=96 binary, shared maximum16 RGB palette; no geometric drawing",
+      "notes": "Eight original sequential source frames; age-based playback; trail and carrier bubble require looping time."
+    },
+    {
+      "path": "assets/fx/w01_fx_hit_burst_03.png",
+      "asset": "w01_fx_hit_burst",
+      "frame": 3,
+      "size": [
+        32,
+        32
+      ],
+      "source": "docs/arte/pulido-w01/originales/b1-fx-imagegen.png",
+      "source_box": [
+        314,
+        350,
+        470,
+        505
+      ],
+      "sha256": "b0f059262fc9e6297b949c42b902d434281b52e04598b8eaee89b185caf25063",
+      "state": "integrated-review",
+      "status": "placeholder",
+      "author": "OpenAI imagegen / Codex Pillow preparation",
+      "date": "2026-11-01",
+      "transform": "crop, nearest-neighbor resize, alpha>=96 binary, shared maximum16 RGB palette; no geometric drawing",
+      "notes": "Eight original sequential source frames; age-based playback; trail and carrier bubble require looping time."
+    },
+    {
+      "path": "assets/fx/w01_fx_hit_burst_04.png",
+      "asset": "w01_fx_hit_burst",
+      "frame": 4,
+      "size": [
+        32,
+        32
+      ],
+      "source": "docs/arte/pulido-w01/originales/b1-fx-imagegen.png",
+      "source_box": [
+        470,
+        350,
+        627,
+        505
+      ],
+      "sha256": "6f54ec1f13c153f2de313594c2723b2d67cbd35324577f290ddb214cad749cf6",
+      "state": "integrated-review",
+      "status": "placeholder",
+      "author": "OpenAI imagegen / Codex Pillow preparation",
+      "date": "2026-11-01",
+      "transform": "crop, nearest-neighbor resize, alpha>=96 binary, shared maximum16 RGB palette; no geometric drawing",
+      "notes": "Eight original sequential source frames; age-based playback; trail and carrier bubble require looping time."
+    },
+    {
+      "path": "assets/fx/w01_fx_hit_burst_05.png",
+      "asset": "w01_fx_hit_burst",
+      "frame": 5,
+      "size": [
+        32,
+        32
+      ],
+      "source": "docs/arte/pulido-w01/originales/b1-fx-imagegen.png",
+      "source_box": [
+        627,
+        350,
+        784,
+        505
+      ],
+      "sha256": "929be653fc21e2fd2e8df1a32ee8498b39dc8d43bab0e88aa164842b1a1e9d0a",
+      "state": "integrated-review",
+      "status": "placeholder",
+      "author": "OpenAI imagegen / Codex Pillow preparation",
+      "date": "2026-11-01",
+      "transform": "crop, nearest-neighbor resize, alpha>=96 binary, shared maximum16 RGB palette; no geometric drawing",
+      "notes": "Eight original sequential source frames; age-based playback; trail and carrier bubble require looping time."
+    },
+    {
+      "path": "assets/fx/w01_fx_hit_burst_06.png",
+      "asset": "w01_fx_hit_burst",
+      "frame": 6,
+      "size": [
+        32,
+        32
+      ],
+      "source": "docs/arte/pulido-w01/originales/b1-fx-imagegen.png",
+      "source_box": [
+        784,
+        350,
+        940,
+        505
+      ],
+      "sha256": "184f0f37028a33ec95805c2d3222b18bb289b6e013c6722d0092727536c8514f",
+      "state": "integrated-review",
+      "status": "placeholder",
+      "author": "OpenAI imagegen / Codex Pillow preparation",
+      "date": "2026-11-01",
+      "transform": "crop, nearest-neighbor resize, alpha>=96 binary, shared maximum16 RGB palette; no geometric drawing",
+      "notes": "Eight original sequential source frames; age-based playback; trail and carrier bubble require looping time."
+    },
+    {
+      "path": "assets/fx/w01_fx_hit_burst_07.png",
+      "asset": "w01_fx_hit_burst",
+      "frame": 7,
+      "size": [
+        32,
+        32
+      ],
+      "source": "docs/arte/pulido-w01/originales/b1-fx-imagegen.png",
+      "source_box": [
+        940,
+        350,
+        1097,
+        505
+      ],
+      "sha256": "4ed10d2808659e1fef3d0805a1da89eb2b714e98a75d334ebbf8cddcb0c8b0d3",
+      "state": "integrated-review",
+      "status": "placeholder",
+      "author": "OpenAI imagegen / Codex Pillow preparation",
+      "date": "2026-11-01",
+      "transform": "crop, nearest-neighbor resize, alpha>=96 binary, shared maximum16 RGB palette; no geometric drawing",
+      "notes": "Eight original sequential source frames; age-based playback; trail and carrier bubble require looping time."
+    },
+    {
+      "path": "assets/fx/w01_fx_hit_burst_08.png",
+      "asset": "w01_fx_hit_burst",
+      "frame": 8,
+      "size": [
+        32,
+        32
+      ],
+      "source": "docs/arte/pulido-w01/originales/b1-fx-imagegen.png",
+      "source_box": [
+        1097,
+        350,
+        1254,
+        505
+      ],
+      "sha256": "52e705572d0a8d78e78580889bcf21643361c756f924d87aaa3f037606cbada3",
+      "state": "integrated-review",
+      "status": "placeholder",
+      "author": "OpenAI imagegen / Codex Pillow preparation",
+      "date": "2026-11-01",
+      "transform": "crop, nearest-neighbor resize, alpha>=96 binary, shared maximum16 RGB palette; no geometric drawing",
+      "notes": "Eight original sequential source frames; age-based playback; trail and carrier bubble require looping time."
+    },
+    {
+      "path": "assets/fx/w01_fx_spark_burst_01.png",
+      "asset": "w01_fx_spark_burst",
+      "frame": 1,
+      "size": [
+        8,
+        8
+      ],
+      "source": "docs/arte/pulido-w01/originales/b1-fx-imagegen.png",
+      "source_box": [
+        36,
+        687,
+        132,
+        783
+      ],
+      "sha256": "28736dec21a4c1b6d4f9706b9db4153cea84df111eaf193c408cc8cf94a9b311",
+      "state": "integrated-review",
+      "status": "placeholder",
+      "author": "OpenAI imagegen / Codex Pillow preparation",
+      "date": "2026-11-01",
+      "transform": "crop, nearest-neighbor resize, alpha>=96 binary, shared maximum16 RGB palette; no geometric drawing",
+      "notes": "Eight original sequential source frames; age-based playback; trail and carrier bubble require looping time."
+    },
+    {
+      "path": "assets/fx/w01_fx_spark_burst_02.png",
+      "asset": "w01_fx_spark_burst",
+      "frame": 2,
+      "size": [
+        8,
+        8
+      ],
+      "source": "docs/arte/pulido-w01/originales/b1-fx-imagegen.png",
+      "source_box": [
+        187,
+        687,
+        283,
+        783
+      ],
+      "sha256": "b4190a2df743c631c6332dcfe4128882b6956d3c6d47482e706e553ccf9b2bcc",
+      "state": "integrated-review",
+      "status": "placeholder",
+      "author": "OpenAI imagegen / Codex Pillow preparation",
+      "date": "2026-11-01",
+      "transform": "crop, nearest-neighbor resize, alpha>=96 binary, shared maximum16 RGB palette; no geometric drawing",
+      "notes": "Eight original sequential source frames; age-based playback; trail and carrier bubble require looping time."
+    },
+    {
+      "path": "assets/fx/w01_fx_spark_burst_03.png",
+      "asset": "w01_fx_spark_burst",
+      "frame": 3,
+      "size": [
+        8,
+        8
+      ],
+      "source": "docs/arte/pulido-w01/originales/b1-fx-imagegen.png",
+      "source_box": [
+        343,
+        687,
+        439,
+        783
+      ],
+      "sha256": "e82ba09d224ea581dd2194c2f7625184169447be8bf9df1ccaefd6a2af0f8a2b",
+      "state": "integrated-review",
+      "status": "placeholder",
+      "author": "OpenAI imagegen / Codex Pillow preparation",
+      "date": "2026-11-01",
+      "transform": "crop, nearest-neighbor resize, alpha>=96 binary, shared maximum16 RGB palette; no geometric drawing",
+      "notes": "Eight original sequential source frames; age-based playback; trail and carrier bubble require looping time."
+    },
+    {
+      "path": "assets/fx/w01_fx_spark_burst_04.png",
+      "asset": "w01_fx_spark_burst",
+      "frame": 4,
+      "size": [
+        8,
+        8
+      ],
+      "source": "docs/arte/pulido-w01/originales/b1-fx-imagegen.png",
+      "source_box": [
+        499,
+        687,
+        595,
+        783
+      ],
+      "sha256": "6cb4ee71aef6fd22e871075600c8556d2b2588cba6d09e95e2afe13e433ef183",
+      "state": "integrated-review",
+      "status": "placeholder",
+      "author": "OpenAI imagegen / Codex Pillow preparation",
+      "date": "2026-11-01",
+      "transform": "crop, nearest-neighbor resize, alpha>=96 binary, shared maximum16 RGB palette; no geometric drawing",
+      "notes": "Eight original sequential source frames; age-based playback; trail and carrier bubble require looping time."
+    },
+    {
+      "path": "assets/fx/w01_fx_spark_burst_05.png",
+      "asset": "w01_fx_spark_burst",
+      "frame": 5,
+      "size": [
+        8,
+        8
+      ],
+      "source": "docs/arte/pulido-w01/originales/b1-fx-imagegen.png",
+      "source_box": [
+        657,
+        685,
+        753,
+        781
+      ],
+      "sha256": "24726aaabd8c68645af79b6756d85fea9dcf25b5fa9b4fbea1a473fbce8d00ba",
+      "state": "integrated-review",
+      "status": "placeholder",
+      "author": "OpenAI imagegen / Codex Pillow preparation",
+      "date": "2026-11-01",
+      "transform": "crop, nearest-neighbor resize, alpha>=96 binary, shared maximum16 RGB palette; no geometric drawing",
+      "notes": "Eight original sequential source frames; age-based playback; trail and carrier bubble require looping time."
+    },
+    {
+      "path": "assets/fx/w01_fx_spark_burst_06.png",
+      "asset": "w01_fx_spark_burst",
+      "frame": 6,
+      "size": [
+        8,
+        8
+      ],
+      "source": "docs/arte/pulido-w01/originales/b1-fx-imagegen.png",
+      "source_box": [
+        811,
+        689,
+        907,
+        785
+      ],
+      "sha256": "b543d3b0e74508e4e5140caea44fdb8f46c16923e78597bf0da03256d36ca1e2",
+      "state": "integrated-review",
+      "status": "placeholder",
+      "author": "OpenAI imagegen / Codex Pillow preparation",
+      "date": "2026-11-01",
+      "transform": "crop, nearest-neighbor resize, alpha>=96 binary, shared maximum16 RGB palette; no geometric drawing",
+      "notes": "Eight original sequential source frames; age-based playback; trail and carrier bubble require looping time."
+    },
+    {
+      "path": "assets/fx/w01_fx_spark_burst_07.png",
+      "asset": "w01_fx_spark_burst",
+      "frame": 7,
+      "size": [
+        8,
+        8
+      ],
+      "source": "docs/arte/pulido-w01/originales/b1-fx-imagegen.png",
+      "source_box": [
+        966,
+        688,
+        1062,
+        784
+      ],
+      "sha256": "d0ea0811c97198cfb5d355d7d54c6a1615dd2b67d2d12db2e67f1578d48bd5ce",
+      "state": "integrated-review",
+      "status": "placeholder",
+      "author": "OpenAI imagegen / Codex Pillow preparation",
+      "date": "2026-11-01",
+      "transform": "crop, nearest-neighbor resize, alpha>=96 binary, shared maximum16 RGB palette; no geometric drawing",
+      "notes": "Eight original sequential source frames; age-based playback; trail and carrier bubble require looping time."
+    },
+    {
+      "path": "assets/fx/w01_fx_spark_burst_08.png",
+      "asset": "w01_fx_spark_burst",
+      "frame": 8,
+      "size": [
+        8,
+        8
+      ],
+      "source": "docs/arte/pulido-w01/originales/b1-fx-imagegen.png",
+      "source_box": [
+        1119,
+        688,
+        1215,
+        784
+      ],
+      "sha256": "386b9afdd59f816459a6a3788ae7c29b1cc451d3ec03e7e02c0c676dd3a42808",
+      "state": "integrated-review",
+      "status": "placeholder",
+      "author": "OpenAI imagegen / Codex Pillow preparation",
+      "date": "2026-11-01",
+      "transform": "crop, nearest-neighbor resize, alpha>=96 binary, shared maximum16 RGB palette; no geometric drawing",
+      "notes": "Eight original sequential source frames; age-based playback; trail and carrier bubble require looping time."
+    },
+    {
+      "path": "assets/fx/w01_fx_trail_burst_01.png",
+      "asset": "w01_fx_trail_burst",
+      "frame": 1,
+      "size": [
+        16,
+        8
+      ],
+      "source": "docs/arte/pulido-w01/originales/b1-fx-imagegen.png",
+      "source_box": [
+        0,
+        805,
+        157,
+        945
+      ],
+      "sha256": "e039854d89ed86cf42a022e6337c7e04636b2b7bd75c7b16d6ab1256e238764e",
+      "state": "integrated-review",
+      "status": "placeholder",
+      "author": "OpenAI imagegen / Codex Pillow preparation",
+      "date": "2026-11-01",
+      "transform": "crop, nearest-neighbor resize, alpha>=96 binary, shared maximum16 RGB palette; no geometric drawing",
+      "notes": "Eight original sequential source frames; age-based playback; trail and carrier bubble require looping time."
+    },
+    {
+      "path": "assets/fx/w01_fx_trail_burst_02.png",
+      "asset": "w01_fx_trail_burst",
+      "frame": 2,
+      "size": [
+        16,
+        8
+      ],
+      "source": "docs/arte/pulido-w01/originales/b1-fx-imagegen.png",
+      "source_box": [
+        157,
+        805,
+        314,
+        945
+      ],
+      "sha256": "a1d7c0dd9695799af8bf8ef07b7d1a45106f0d2dd837a200b4abfd947a0b5727",
+      "state": "integrated-review",
+      "status": "placeholder",
+      "author": "OpenAI imagegen / Codex Pillow preparation",
+      "date": "2026-11-01",
+      "transform": "crop, nearest-neighbor resize, alpha>=96 binary, shared maximum16 RGB palette; no geometric drawing",
+      "notes": "Eight original sequential source frames; age-based playback; trail and carrier bubble require looping time."
+    },
+    {
+      "path": "assets/fx/w01_fx_trail_burst_03.png",
+      "asset": "w01_fx_trail_burst",
+      "frame": 3,
+      "size": [
+        16,
+        8
+      ],
+      "source": "docs/arte/pulido-w01/originales/b1-fx-imagegen.png",
+      "source_box": [
+        314,
+        805,
+        470,
+        945
+      ],
+      "sha256": "5636bf0aea5a7878f49f1c763df76f5cac7994b1a4e529c729f541c561586fdd",
+      "state": "integrated-review",
+      "status": "placeholder",
+      "author": "OpenAI imagegen / Codex Pillow preparation",
+      "date": "2026-11-01",
+      "transform": "crop, nearest-neighbor resize, alpha>=96 binary, shared maximum16 RGB palette; no geometric drawing",
+      "notes": "Eight original sequential source frames; age-based playback; trail and carrier bubble require looping time."
+    },
+    {
+      "path": "assets/fx/w01_fx_trail_burst_04.png",
+      "asset": "w01_fx_trail_burst",
+      "frame": 4,
+      "size": [
+        16,
+        8
+      ],
+      "source": "docs/arte/pulido-w01/originales/b1-fx-imagegen.png",
+      "source_box": [
+        470,
+        805,
+        627,
+        945
+      ],
+      "sha256": "4c210dc4af47b3ef77490b3130dc84586bba2bddf269fd97026821598a1aced3",
+      "state": "integrated-review",
+      "status": "placeholder",
+      "author": "OpenAI imagegen / Codex Pillow preparation",
+      "date": "2026-11-01",
+      "transform": "crop, nearest-neighbor resize, alpha>=96 binary, shared maximum16 RGB palette; no geometric drawing",
+      "notes": "Eight original sequential source frames; age-based playback; trail and carrier bubble require looping time."
+    },
+    {
+      "path": "assets/fx/w01_fx_trail_burst_05.png",
+      "asset": "w01_fx_trail_burst",
+      "frame": 5,
+      "size": [
+        16,
+        8
+      ],
+      "source": "docs/arte/pulido-w01/originales/b1-fx-imagegen.png",
+      "source_box": [
+        627,
+        805,
+        784,
+        945
+      ],
+      "sha256": "5f75f15fe3e3357d2f30c567defd890b76c8f263e4e0087e7dda40040c7337b1",
+      "state": "integrated-review",
+      "status": "placeholder",
+      "author": "OpenAI imagegen / Codex Pillow preparation",
+      "date": "2026-11-01",
+      "transform": "crop, nearest-neighbor resize, alpha>=96 binary, shared maximum16 RGB palette; no geometric drawing",
+      "notes": "Eight original sequential source frames; age-based playback; trail and carrier bubble require looping time."
+    },
+    {
+      "path": "assets/fx/w01_fx_trail_burst_06.png",
+      "asset": "w01_fx_trail_burst",
+      "frame": 6,
+      "size": [
+        16,
+        8
+      ],
+      "source": "docs/arte/pulido-w01/originales/b1-fx-imagegen.png",
+      "source_box": [
+        784,
+        805,
+        940,
+        945
+      ],
+      "sha256": "be5aef034cd4e8a1085fbdd24c524adcec53e46177ef0563f676815f2e5724e8",
+      "state": "integrated-review",
+      "status": "placeholder",
+      "author": "OpenAI imagegen / Codex Pillow preparation",
+      "date": "2026-11-01",
+      "transform": "crop, nearest-neighbor resize, alpha>=96 binary, shared maximum16 RGB palette; no geometric drawing",
+      "notes": "Eight original sequential source frames; age-based playback; trail and carrier bubble require looping time."
+    },
+    {
+      "path": "assets/fx/w01_fx_trail_burst_07.png",
+      "asset": "w01_fx_trail_burst",
+      "frame": 7,
+      "size": [
+        16,
+        8
+      ],
+      "source": "docs/arte/pulido-w01/originales/b1-fx-imagegen.png",
+      "source_box": [
+        940,
+        805,
+        1097,
+        945
+      ],
+      "sha256": "bcf5fd64eaac61da91e2ae32d41fa77d8225eb6a9aa2f3a31c029fe1e1067981",
+      "state": "integrated-review",
+      "status": "placeholder",
+      "author": "OpenAI imagegen / Codex Pillow preparation",
+      "date": "2026-11-01",
+      "transform": "crop, nearest-neighbor resize, alpha>=96 binary, shared maximum16 RGB palette; no geometric drawing",
+      "notes": "Eight original sequential source frames; age-based playback; trail and carrier bubble require looping time."
+    },
+    {
+      "path": "assets/fx/w01_fx_trail_burst_08.png",
+      "asset": "w01_fx_trail_burst",
+      "frame": 8,
+      "size": [
+        16,
+        8
+      ],
+      "source": "docs/arte/pulido-w01/originales/b1-fx-imagegen.png",
+      "source_box": [
+        1097,
+        805,
+        1254,
+        945
+      ],
+      "sha256": "cafa40f08450e052d6213d8d1d242bcd77df5cc8a87da4982c60783753f4fadd",
+      "state": "integrated-review",
+      "status": "placeholder",
+      "author": "OpenAI imagegen / Codex Pillow preparation",
+      "date": "2026-11-01",
+      "transform": "crop, nearest-neighbor resize, alpha>=96 binary, shared maximum16 RGB palette; no geometric drawing",
+      "notes": "Eight original sequential source frames; age-based playback; trail and carrier bubble require looping time."
+    },
+    {
+      "path": "assets/fx/w01_fx_flash_burst_01.png",
+      "asset": "w01_fx_flash_burst",
+      "frame": 1,
+      "size": [
+        48,
+        24
+      ],
+      "source": "docs/arte/pulido-w01/originales/b1-fx-imagegen.png",
+      "source_box": [
+        0,
+        945,
+        157,
+        1080
+      ],
+      "sha256": "cf918d3ec460c619871f14c0594c8ed6063fa8f27fe3e797571dcb1e5b70f393",
+      "state": "integrated-review",
+      "status": "placeholder",
+      "author": "OpenAI imagegen / Codex Pillow preparation",
+      "date": "2026-11-01",
+      "transform": "crop, nearest-neighbor resize, alpha>=96 binary, shared maximum16 RGB palette; no geometric drawing",
+      "notes": "Eight original sequential source frames; age-based playback; trail and carrier bubble require looping time."
+    },
+    {
+      "path": "assets/fx/w01_fx_flash_burst_02.png",
+      "asset": "w01_fx_flash_burst",
+      "frame": 2,
+      "size": [
+        48,
+        24
+      ],
+      "source": "docs/arte/pulido-w01/originales/b1-fx-imagegen.png",
+      "source_box": [
+        157,
+        945,
+        314,
+        1080
+      ],
+      "sha256": "eae86d4dfa59e7a3b711d098dde64eb0c6d74bdb711a88f97e9057d77e3f649d",
+      "state": "integrated-review",
+      "status": "placeholder",
+      "author": "OpenAI imagegen / Codex Pillow preparation",
+      "date": "2026-11-01",
+      "transform": "crop, nearest-neighbor resize, alpha>=96 binary, shared maximum16 RGB palette; no geometric drawing",
+      "notes": "Eight original sequential source frames; age-based playback; trail and carrier bubble require looping time."
+    },
+    {
+      "path": "assets/fx/w01_fx_flash_burst_03.png",
+      "asset": "w01_fx_flash_burst",
+      "frame": 3,
+      "size": [
+        48,
+        24
+      ],
+      "source": "docs/arte/pulido-w01/originales/b1-fx-imagegen.png",
+      "source_box": [
+        314,
+        945,
+        470,
+        1080
+      ],
+      "sha256": "7e8aca076c1e51cc8c7251b1b33c6c31820527816423403a750b0b1bd49f9687",
+      "state": "integrated-review",
+      "status": "placeholder",
+      "author": "OpenAI imagegen / Codex Pillow preparation",
+      "date": "2026-11-01",
+      "transform": "crop, nearest-neighbor resize, alpha>=96 binary, shared maximum16 RGB palette; no geometric drawing",
+      "notes": "Eight original sequential source frames; age-based playback; trail and carrier bubble require looping time."
+    },
+    {
+      "path": "assets/fx/w01_fx_flash_burst_04.png",
+      "asset": "w01_fx_flash_burst",
+      "frame": 4,
+      "size": [
+        48,
+        24
+      ],
+      "source": "docs/arte/pulido-w01/originales/b1-fx-imagegen.png",
+      "source_box": [
+        470,
+        945,
+        627,
+        1080
+      ],
+      "sha256": "7fa68d093904db2951cf11439b9f4e1e0c10a46749861f5bbda9e85bd54cdf06",
+      "state": "integrated-review",
+      "status": "placeholder",
+      "author": "OpenAI imagegen / Codex Pillow preparation",
+      "date": "2026-11-01",
+      "transform": "crop, nearest-neighbor resize, alpha>=96 binary, shared maximum16 RGB palette; no geometric drawing",
+      "notes": "Eight original sequential source frames; age-based playback; trail and carrier bubble require looping time."
+    },
+    {
+      "path": "assets/fx/w01_fx_flash_burst_05.png",
+      "asset": "w01_fx_flash_burst",
+      "frame": 5,
+      "size": [
+        48,
+        24
+      ],
+      "source": "docs/arte/pulido-w01/originales/b1-fx-imagegen.png",
+      "source_box": [
+        627,
+        945,
+        784,
+        1080
+      ],
+      "sha256": "d21477ac093b65610e01b4771852d97f0a9436977b80be05323b340293ce74f8",
+      "state": "integrated-review",
+      "status": "placeholder",
+      "author": "OpenAI imagegen / Codex Pillow preparation",
+      "date": "2026-11-01",
+      "transform": "crop, nearest-neighbor resize, alpha>=96 binary, shared maximum16 RGB palette; no geometric drawing",
+      "notes": "Eight original sequential source frames; age-based playback; trail and carrier bubble require looping time."
+    },
+    {
+      "path": "assets/fx/w01_fx_flash_burst_06.png",
+      "asset": "w01_fx_flash_burst",
+      "frame": 6,
+      "size": [
+        48,
+        24
+      ],
+      "source": "docs/arte/pulido-w01/originales/b1-fx-imagegen.png",
+      "source_box": [
+        784,
+        945,
+        940,
+        1080
+      ],
+      "sha256": "5bcd4311f8370fb0fa47fb32ab943ccbde71e6bcfcbd252a4b4208519333e788",
+      "state": "integrated-review",
+      "status": "placeholder",
+      "author": "OpenAI imagegen / Codex Pillow preparation",
+      "date": "2026-11-01",
+      "transform": "crop, nearest-neighbor resize, alpha>=96 binary, shared maximum16 RGB palette; no geometric drawing",
+      "notes": "Eight original sequential source frames; age-based playback; trail and carrier bubble require looping time."
+    },
+    {
+      "path": "assets/fx/w01_fx_flash_burst_07.png",
+      "asset": "w01_fx_flash_burst",
+      "frame": 7,
+      "size": [
+        48,
+        24
+      ],
+      "source": "docs/arte/pulido-w01/originales/b1-fx-imagegen.png",
+      "source_box": [
+        940,
+        945,
+        1097,
+        1080
+      ],
+      "sha256": "4a830be08fd254b0cf26c588c0b13e37371dd2d7cabaebc34661d628e1caebcd",
+      "state": "integrated-review",
+      "status": "placeholder",
+      "author": "OpenAI imagegen / Codex Pillow preparation",
+      "date": "2026-11-01",
+      "transform": "crop, nearest-neighbor resize, alpha>=96 binary, shared maximum16 RGB palette; no geometric drawing",
+      "notes": "Eight original sequential source frames; age-based playback; trail and carrier bubble require looping time."
+    },
+    {
+      "path": "assets/fx/w01_fx_flash_burst_08.png",
+      "asset": "w01_fx_flash_burst",
+      "frame": 8,
+      "size": [
+        48,
+        24
+      ],
+      "source": "docs/arte/pulido-w01/originales/b1-fx-imagegen.png",
+      "source_box": [
+        1097,
+        945,
+        1254,
+        1080
+      ],
+      "sha256": "70ba7838fa6c6d55e8f484235a3869c69b05ba053170d7434119150bee4db1a7",
+      "state": "integrated-review",
+      "status": "placeholder",
+      "author": "OpenAI imagegen / Codex Pillow preparation",
+      "date": "2026-11-01",
+      "transform": "crop, nearest-neighbor resize, alpha>=96 binary, shared maximum16 RGB palette; no geometric drawing",
+      "notes": "Eight original sequential source frames; age-based playback; trail and carrier bubble require looping time."
+    },
+    {
+      "path": "assets/fx/w01_fx_shield_burst_01.png",
+      "asset": "w01_fx_shield_burst",
+      "frame": 1,
+      "size": [
+        48,
+        48
+      ],
+      "source": "docs/arte/pulido-w01/originales/b1-fx-imagegen.png",
+      "source_box": [
+        0,
+        1080,
+        157,
+        1254
+      ],
+      "sha256": "e59d11ac4574988f917e9152c52647d32354bf44fdfbf232a7479407df9c484a",
+      "state": "integrated-review",
+      "status": "placeholder",
+      "author": "OpenAI imagegen / Codex Pillow preparation",
+      "date": "2026-11-01",
+      "transform": "crop, nearest-neighbor resize, alpha>=96 binary, shared maximum16 RGB palette; no geometric drawing",
+      "notes": "Eight original sequential source frames; age-based playback; trail and carrier bubble require looping time."
+    },
+    {
+      "path": "assets/fx/w01_fx_shield_burst_02.png",
+      "asset": "w01_fx_shield_burst",
+      "frame": 2,
+      "size": [
+        48,
+        48
+      ],
+      "source": "docs/arte/pulido-w01/originales/b1-fx-imagegen.png",
+      "source_box": [
+        157,
+        1080,
+        314,
+        1254
+      ],
+      "sha256": "ee940cd8907cd96670cc0549b1351803ad01014ac32e4d19d9ba1f29d72ae256",
+      "state": "integrated-review",
+      "status": "placeholder",
+      "author": "OpenAI imagegen / Codex Pillow preparation",
+      "date": "2026-11-01",
+      "transform": "crop, nearest-neighbor resize, alpha>=96 binary, shared maximum16 RGB palette; no geometric drawing",
+      "notes": "Eight original sequential source frames; age-based playback; trail and carrier bubble require looping time."
+    },
+    {
+      "path": "assets/fx/w01_fx_shield_burst_03.png",
+      "asset": "w01_fx_shield_burst",
+      "frame": 3,
+      "size": [
+        48,
+        48
+      ],
+      "source": "docs/arte/pulido-w01/originales/b1-fx-imagegen.png",
+      "source_box": [
+        314,
+        1080,
+        470,
+        1254
+      ],
+      "sha256": "78b1263aa266aa82f7c41273e601a47efc428181c02a18a4d8be8b0044488d27",
+      "state": "integrated-review",
+      "status": "placeholder",
+      "author": "OpenAI imagegen / Codex Pillow preparation",
+      "date": "2026-11-01",
+      "transform": "crop, nearest-neighbor resize, alpha>=96 binary, shared maximum16 RGB palette; no geometric drawing",
+      "notes": "Eight original sequential source frames; age-based playback; trail and carrier bubble require looping time."
+    },
+    {
+      "path": "assets/fx/w01_fx_shield_burst_04.png",
+      "asset": "w01_fx_shield_burst",
+      "frame": 4,
+      "size": [
+        48,
+        48
+      ],
+      "source": "docs/arte/pulido-w01/originales/b1-fx-imagegen.png",
+      "source_box": [
+        470,
+        1080,
+        627,
+        1254
+      ],
+      "sha256": "cb47e36a49ec34d627fae40957145cb613cca54b9f8f7d1dea5fa29929d55749",
+      "state": "integrated-review",
+      "status": "placeholder",
+      "author": "OpenAI imagegen / Codex Pillow preparation",
+      "date": "2026-11-01",
+      "transform": "crop, nearest-neighbor resize, alpha>=96 binary, shared maximum16 RGB palette; no geometric drawing",
+      "notes": "Eight original sequential source frames; age-based playback; trail and carrier bubble require looping time."
+    },
+    {
+      "path": "assets/fx/w01_fx_shield_burst_05.png",
+      "asset": "w01_fx_shield_burst",
+      "frame": 5,
+      "size": [
+        48,
+        48
+      ],
+      "source": "docs/arte/pulido-w01/originales/b1-fx-imagegen.png",
+      "source_box": [
+        627,
+        1080,
+        784,
+        1254
+      ],
+      "sha256": "b02271a15c52e8f55379135efb232773a6353b59622c12ab7f5cdf15d0e60523",
+      "state": "integrated-review",
+      "status": "placeholder",
+      "author": "OpenAI imagegen / Codex Pillow preparation",
+      "date": "2026-11-01",
+      "transform": "crop, nearest-neighbor resize, alpha>=96 binary, shared maximum16 RGB palette; no geometric drawing",
+      "notes": "Eight original sequential source frames; age-based playback; trail and carrier bubble require looping time."
+    },
+    {
+      "path": "assets/fx/w01_fx_shield_burst_06.png",
+      "asset": "w01_fx_shield_burst",
+      "frame": 6,
+      "size": [
+        48,
+        48
+      ],
+      "source": "docs/arte/pulido-w01/originales/b1-fx-imagegen.png",
+      "source_box": [
+        784,
+        1080,
+        940,
+        1254
+      ],
+      "sha256": "c8f7ee9b45b5557388c327d8cd8ee0359451bcd2d7dd3bee0ea13814815c5d96",
+      "state": "integrated-review",
+      "status": "placeholder",
+      "author": "OpenAI imagegen / Codex Pillow preparation",
+      "date": "2026-11-01",
+      "transform": "crop, nearest-neighbor resize, alpha>=96 binary, shared maximum16 RGB palette; no geometric drawing",
+      "notes": "Eight original sequential source frames; age-based playback; trail and carrier bubble require looping time."
+    },
+    {
+      "path": "assets/fx/w01_fx_shield_burst_07.png",
+      "asset": "w01_fx_shield_burst",
+      "frame": 7,
+      "size": [
+        48,
+        48
+      ],
+      "source": "docs/arte/pulido-w01/originales/b1-fx-imagegen.png",
+      "source_box": [
+        940,
+        1080,
+        1097,
+        1254
+      ],
+      "sha256": "e388cbc14ca63d676f53f66d4c0b83bfba204b7960de249d8302ae39a3f36e9e",
+      "state": "integrated-review",
+      "status": "placeholder",
+      "author": "OpenAI imagegen / Codex Pillow preparation",
+      "date": "2026-11-01",
+      "transform": "crop, nearest-neighbor resize, alpha>=96 binary, shared maximum16 RGB palette; no geometric drawing",
+      "notes": "Eight original sequential source frames; age-based playback; trail and carrier bubble require looping time."
+    },
+    {
+      "path": "assets/fx/w01_fx_shield_burst_08.png",
+      "asset": "w01_fx_shield_burst",
+      "frame": 8,
+      "size": [
+        48,
+        48
+      ],
+      "source": "docs/arte/pulido-w01/originales/b1-fx-imagegen.png",
+      "source_box": [
+        1097,
+        1080,
+        1254,
+        1254
+      ],
+      "sha256": "8901f199fd8dc08fffb3fc70d416debf7f216ad1843a9c8cfc4122c566b8ba76",
+      "state": "integrated-review",
+      "status": "placeholder",
+      "author": "OpenAI imagegen / Codex Pillow preparation",
+      "date": "2026-11-01",
+      "transform": "crop, nearest-neighbor resize, alpha>=96 binary, shared maximum16 RGB palette; no geometric drawing",
+      "notes": "Eight original sequential source frames; age-based playback; trail and carrier bubble require looping time."
+    },
+    {
+      "path": "assets/fx/w01_fx_muzzle_burst_01.png",
+      "asset": "w01_fx_muzzle_burst",
+      "frame": 1,
+      "size": [
+        24,
+        16
+      ],
+      "source": "docs/arte/pulido-w01/originales/b1-fx-imagegen.png",
+      "source_box": [
+        0,
+        945,
+        157,
+        1080
+      ],
+      "sha256": "698398c74a24e2767052bc0fa73b9014a91ffc752c73e1b3027b745bae626101",
+      "state": "integrated-review",
+      "status": "placeholder",
+      "author": "OpenAI imagegen / Codex Pillow preparation",
+      "date": "2026-11-01",
+      "transform": "crop, nearest-neighbor resize, alpha>=96 binary, shared maximum16 RGB palette; no geometric drawing",
+      "notes": "Directional cyan-white muzzle flash; short333ms playback."
+    },
+    {
+      "path": "assets/fx/w01_fx_muzzle_burst_02.png",
+      "asset": "w01_fx_muzzle_burst",
+      "frame": 2,
+      "size": [
+        24,
+        16
+      ],
+      "source": "docs/arte/pulido-w01/originales/b1-fx-imagegen.png",
+      "source_box": [
+        157,
+        945,
+        314,
+        1080
+      ],
+      "sha256": "5a564ecbe4342dbbf31b656996dfd73cfe461528f39bd968374ce19bd1dd3cf3",
+      "state": "integrated-review",
+      "status": "placeholder",
+      "author": "OpenAI imagegen / Codex Pillow preparation",
+      "date": "2026-11-01",
+      "transform": "crop, nearest-neighbor resize, alpha>=96 binary, shared maximum16 RGB palette; no geometric drawing",
+      "notes": "Directional cyan-white muzzle flash; short333ms playback."
+    },
+    {
+      "path": "assets/fx/w01_fx_muzzle_burst_03.png",
+      "asset": "w01_fx_muzzle_burst",
+      "frame": 3,
+      "size": [
+        24,
+        16
+      ],
+      "source": "docs/arte/pulido-w01/originales/b1-fx-imagegen.png",
+      "source_box": [
+        314,
+        945,
+        470,
+        1080
+      ],
+      "sha256": "c93442f19f26ed7282a1c45fa41a1fcdbd9684221fe46da228e184c499ac6a8c",
+      "state": "integrated-review",
+      "status": "placeholder",
+      "author": "OpenAI imagegen / Codex Pillow preparation",
+      "date": "2026-11-01",
+      "transform": "crop, nearest-neighbor resize, alpha>=96 binary, shared maximum16 RGB palette; no geometric drawing",
+      "notes": "Directional cyan-white muzzle flash; short333ms playback."
+    },
+    {
+      "path": "assets/fx/w01_fx_muzzle_burst_04.png",
+      "asset": "w01_fx_muzzle_burst",
+      "frame": 4,
+      "size": [
+        24,
+        16
+      ],
+      "source": "docs/arte/pulido-w01/originales/b1-fx-imagegen.png",
+      "source_box": [
+        470,
+        945,
+        627,
+        1080
+      ],
+      "sha256": "aca039194192e2ff14ea557301967d4efbe04fdef91b1c00251d79985fb9e188",
+      "state": "integrated-review",
+      "status": "placeholder",
+      "author": "OpenAI imagegen / Codex Pillow preparation",
+      "date": "2026-11-01",
+      "transform": "crop, nearest-neighbor resize, alpha>=96 binary, shared maximum16 RGB palette; no geometric drawing",
+      "notes": "Directional cyan-white muzzle flash; short333ms playback."
+    },
+    {
+      "path": "assets/fx/w01_fx_muzzle_burst_05.png",
+      "asset": "w01_fx_muzzle_burst",
+      "frame": 5,
+      "size": [
+        24,
+        16
+      ],
+      "source": "docs/arte/pulido-w01/originales/b1-fx-imagegen.png",
+      "source_box": [
+        627,
+        945,
+        784,
+        1080
+      ],
+      "sha256": "f8b6e72c31c941574bfa56804408d939b49bd2d1b8c742ddef96b369e70247f3",
+      "state": "integrated-review",
+      "status": "placeholder",
+      "author": "OpenAI imagegen / Codex Pillow preparation",
+      "date": "2026-11-01",
+      "transform": "crop, nearest-neighbor resize, alpha>=96 binary, shared maximum16 RGB palette; no geometric drawing",
+      "notes": "Directional cyan-white muzzle flash; short333ms playback."
+    },
+    {
+      "path": "assets/fx/w01_fx_muzzle_burst_06.png",
+      "asset": "w01_fx_muzzle_burst",
+      "frame": 6,
+      "size": [
+        24,
+        16
+      ],
+      "source": "docs/arte/pulido-w01/originales/b1-fx-imagegen.png",
+      "source_box": [
+        784,
+        945,
+        940,
+        1080
+      ],
+      "sha256": "affea90108cb2968c05682fb280230a53ea5e994142fddd28701a08e96f57942",
+      "state": "integrated-review",
+      "status": "placeholder",
+      "author": "OpenAI imagegen / Codex Pillow preparation",
+      "date": "2026-11-01",
+      "transform": "crop, nearest-neighbor resize, alpha>=96 binary, shared maximum16 RGB palette; no geometric drawing",
+      "notes": "Directional cyan-white muzzle flash; short333ms playback."
+    },
+    {
+      "path": "assets/fx/w01_fx_muzzle_burst_07.png",
+      "asset": "w01_fx_muzzle_burst",
+      "frame": 7,
+      "size": [
+        24,
+        16
+      ],
+      "source": "docs/arte/pulido-w01/originales/b1-fx-imagegen.png",
+      "source_box": [
+        940,
+        945,
+        1097,
+        1080
+      ],
+      "sha256": "8d44b5bc472692c1799dedefe78278c2c1011f2ab9fd9ef26c53263711c9d51a",
+      "state": "integrated-review",
+      "status": "placeholder",
+      "author": "OpenAI imagegen / Codex Pillow preparation",
+      "date": "2026-11-01",
+      "transform": "crop, nearest-neighbor resize, alpha>=96 binary, shared maximum16 RGB palette; no geometric drawing",
+      "notes": "Directional cyan-white muzzle flash; short333ms playback."
+    },
+    {
+      "path": "assets/fx/w01_fx_muzzle_burst_08.png",
+      "asset": "w01_fx_muzzle_burst",
+      "frame": 8,
+      "size": [
+        24,
+        16
+      ],
+      "source": "docs/arte/pulido-w01/originales/b1-fx-imagegen.png",
+      "source_box": [
+        1097,
+        945,
+        1254,
+        1080
+      ],
+      "sha256": "eab538a7b93dd8f7ef76964df792978de0e0943b5868a6c75908b80319f79f5e",
+      "state": "integrated-review",
+      "status": "placeholder",
+      "author": "OpenAI imagegen / Codex Pillow preparation",
+      "date": "2026-11-01",
+      "transform": "crop, nearest-neighbor resize, alpha>=96 binary, shared maximum16 RGB palette; no geometric drawing",
+      "notes": "Directional cyan-white muzzle flash; short333ms playback."
+    },
+    {
+      "path": "assets/fx/w01_fx_collect_burst_01.png",
+      "asset": "w01_fx_collect_burst",
+      "frame": 1,
+      "size": [
+        24,
+        24
+      ],
+      "source": "docs/arte/pulido-w01/originales/b1-fx-imagegen.png",
+      "source_box": [
+        0,
+        685,
+        157,
+        795
+      ],
+      "sha256": "1afd0e3354c0d6cf1683964774daab62d7adc91f3a5ff712295cf6ea1e8752a8",
+      "state": "integrated-review",
+      "status": "placeholder",
+      "author": "OpenAI imagegen / Codex Pillow preparation",
+      "date": "2026-11-01",
+      "transform": "crop, nearest-neighbor resize, alpha>=96 binary, shared maximum16 RGB palette; no geometric drawing",
+      "notes": "Gold collection sparkle, distinct from cyan weapon impact; 500ms playback."
+    },
+    {
+      "path": "assets/fx/w01_fx_collect_burst_02.png",
+      "asset": "w01_fx_collect_burst",
+      "frame": 2,
+      "size": [
+        24,
+        24
+      ],
+      "source": "docs/arte/pulido-w01/originales/b1-fx-imagegen.png",
+      "source_box": [
+        157,
+        685,
+        314,
+        795
+      ],
+      "sha256": "a3aadfef2353eb50d2c24af5f58a0b91046c59a75f3d6e65631c037d32ab0f47",
+      "state": "integrated-review",
+      "status": "placeholder",
+      "author": "OpenAI imagegen / Codex Pillow preparation",
+      "date": "2026-11-01",
+      "transform": "crop, nearest-neighbor resize, alpha>=96 binary, shared maximum16 RGB palette; no geometric drawing",
+      "notes": "Gold collection sparkle, distinct from cyan weapon impact; 500ms playback."
+    },
+    {
+      "path": "assets/fx/w01_fx_collect_burst_03.png",
+      "asset": "w01_fx_collect_burst",
+      "frame": 3,
+      "size": [
+        24,
+        24
+      ],
+      "source": "docs/arte/pulido-w01/originales/b1-fx-imagegen.png",
+      "source_box": [
+        314,
+        685,
+        470,
+        795
+      ],
+      "sha256": "6bfc10ed3cf1bf1f07971d11c7a0e1fc52f1e4f4faa74d0a7e640f836becd55c",
+      "state": "integrated-review",
+      "status": "placeholder",
+      "author": "OpenAI imagegen / Codex Pillow preparation",
+      "date": "2026-11-01",
+      "transform": "crop, nearest-neighbor resize, alpha>=96 binary, shared maximum16 RGB palette; no geometric drawing",
+      "notes": "Gold collection sparkle, distinct from cyan weapon impact; 500ms playback."
+    },
+    {
+      "path": "assets/fx/w01_fx_collect_burst_04.png",
+      "asset": "w01_fx_collect_burst",
+      "frame": 4,
+      "size": [
+        24,
+        24
+      ],
+      "source": "docs/arte/pulido-w01/originales/b1-fx-imagegen.png",
+      "source_box": [
+        470,
+        685,
+        627,
+        795
+      ],
+      "sha256": "69d004d9d2b08a78693c2b9046a3fb3f9c9bb95b1cf6a096d4f179b6d0019c50",
+      "state": "integrated-review",
+      "status": "placeholder",
+      "author": "OpenAI imagegen / Codex Pillow preparation",
+      "date": "2026-11-01",
+      "transform": "crop, nearest-neighbor resize, alpha>=96 binary, shared maximum16 RGB palette; no geometric drawing",
+      "notes": "Gold collection sparkle, distinct from cyan weapon impact; 500ms playback."
+    },
+    {
+      "path": "assets/fx/w01_fx_collect_burst_05.png",
+      "asset": "w01_fx_collect_burst",
+      "frame": 5,
+      "size": [
+        24,
+        24
+      ],
+      "source": "docs/arte/pulido-w01/originales/b1-fx-imagegen.png",
+      "source_box": [
+        627,
+        685,
+        784,
+        795
+      ],
+      "sha256": "92b6e786bd0af236854c03648fa0df72ffe9d01cee6b3fc9493aeeec1eaabaac",
+      "state": "integrated-review",
+      "status": "placeholder",
+      "author": "OpenAI imagegen / Codex Pillow preparation",
+      "date": "2026-11-01",
+      "transform": "crop, nearest-neighbor resize, alpha>=96 binary, shared maximum16 RGB palette; no geometric drawing",
+      "notes": "Gold collection sparkle, distinct from cyan weapon impact; 500ms playback."
+    },
+    {
+      "path": "assets/fx/w01_fx_collect_burst_06.png",
+      "asset": "w01_fx_collect_burst",
+      "frame": 6,
+      "size": [
+        24,
+        24
+      ],
+      "source": "docs/arte/pulido-w01/originales/b1-fx-imagegen.png",
+      "source_box": [
+        784,
+        685,
+        940,
+        795
+      ],
+      "sha256": "fb7295fd2565f64b4580ad691a122afb22265960a21c2c4ce0223941bd6fea6d",
+      "state": "integrated-review",
+      "status": "placeholder",
+      "author": "OpenAI imagegen / Codex Pillow preparation",
+      "date": "2026-11-01",
+      "transform": "crop, nearest-neighbor resize, alpha>=96 binary, shared maximum16 RGB palette; no geometric drawing",
+      "notes": "Gold collection sparkle, distinct from cyan weapon impact; 500ms playback."
+    },
+    {
+      "path": "assets/fx/w01_fx_collect_burst_07.png",
+      "asset": "w01_fx_collect_burst",
+      "frame": 7,
+      "size": [
+        24,
+        24
+      ],
+      "source": "docs/arte/pulido-w01/originales/b1-fx-imagegen.png",
+      "source_box": [
+        940,
+        685,
+        1097,
+        795
+      ],
+      "sha256": "c3ee3ffe4ee393b6aa08585d499bc894407d08766351887c0d801ee38981b2e1",
+      "state": "integrated-review",
+      "status": "placeholder",
+      "author": "OpenAI imagegen / Codex Pillow preparation",
+      "date": "2026-11-01",
+      "transform": "crop, nearest-neighbor resize, alpha>=96 binary, shared maximum16 RGB palette; no geometric drawing",
+      "notes": "Gold collection sparkle, distinct from cyan weapon impact; 500ms playback."
+    },
+    {
+      "path": "assets/fx/w01_fx_collect_burst_08.png",
+      "asset": "w01_fx_collect_burst",
+      "frame": 8,
+      "size": [
+        24,
+        24
+      ],
+      "source": "docs/arte/pulido-w01/originales/b1-fx-imagegen.png",
+      "source_box": [
+        1097,
+        685,
+        1254,
+        795
+      ],
+      "sha256": "311274618ed73af0a491bb852e5811278abac4a9244f0e7de46b5fce02c901cd",
+      "state": "integrated-review",
+      "status": "placeholder",
+      "author": "OpenAI imagegen / Codex Pillow preparation",
+      "date": "2026-11-01",
+      "transform": "crop, nearest-neighbor resize, alpha>=96 binary, shared maximum16 RGB palette; no geometric drawing",
+      "notes": "Gold collection sparkle, distinct from cyan weapon impact; 500ms playback."
+    },
+    {
+      "path": "assets/ui/w01_ui_panel_idle_01.png",
+      "asset": "w01_ui_panel_idle",
+      "frame": 1,
+      "size": [
+        640,
+        360
+      ],
+      "source": "docs/arte/pulido-w01/originales/b1-ui-imagegen.png",
+      "source_box": [
+        4,
+        62,
+        624,
+        638
+      ],
+      "sha256": "457d6f91879130f1d77d9adc72e87106572602037f347f2bf76bfe1885d7b6cd",
+      "state": "integrated-review",
+      "status": "placeholder",
+      "author": "OpenAI imagegen / Codex Pillow preparation",
+      "date": "2026-11-01",
+      "transform": "crop, nearest-neighbor resize, alpha>=96 binary, shared maximum16 RGB palette; no geometric drawing",
+      "notes": "Quiet navy instrument texture, no technical text; tint alpha supplied by runtime for translucent equipment panels."
+    },
+    {
+      "path": "assets/ui/w01_ui_panel_selected_idle_01.png",
+      "asset": "w01_ui_panel_selected_idle",
+      "frame": 1,
+      "size": [
+        640,
+        360
+      ],
+      "source": "docs/arte/pulido-w01/originales/b1-ui-imagegen.png",
+      "source_box": [
+        630,
+        62,
+        1247,
+        638
+      ],
+      "sha256": "6168539b271972dd5e31f6ce47641ac85673b4c46107868e2d235310ae2bda7d",
+      "state": "integrated-review",
+      "status": "placeholder",
+      "author": "OpenAI imagegen / Codex Pillow preparation",
+      "date": "2026-11-01",
+      "transform": "crop, nearest-neighbor resize, alpha>=96 binary, shared maximum16 RGB palette; no geometric drawing",
+      "notes": "Quiet navy instrument texture, no technical text; tint alpha supplied by runtime for translucent equipment panels."
+    },
+    {
+      "path": "assets/ui/w01_ui_hud_idle_01.png",
+      "asset": "w01_ui_hud_idle",
+      "frame": 1,
+      "size": [
+        640,
+        24
+      ],
+      "source": "docs/arte/pulido-w01/originales/b1-ui-imagegen.png",
+      "source_box": [
+        4,
+        788,
+        1247,
+        884
+      ],
+      "sha256": "47809fd2e8d5583ed1cbaee991819f6e728a0cac7557b6edbdc3a37d647df62b",
+      "state": "integrated-review",
+      "status": "placeholder",
+      "author": "OpenAI imagegen / Codex Pillow preparation",
+      "date": "2026-11-01",
+      "transform": "crop, nearest-neighbor resize, alpha>=96 binary, shared maximum16 RGB palette; no geometric drawing",
+      "notes": "Quiet navy instrument texture, no technical text; tint alpha supplied by runtime for translucent equipment panels."
+    },
+    {
+      "path": "assets/ui/w01_ui_ship_batiscafo_amarillo_move_01.png",
+      "asset": "w01_ui_ship_batiscafo_amarillo_move",
+      "frame": 1,
+      "size": [
+        48,
+        24
+      ],
+      "source": "assets/ui/w01_ui_ship_original_move_01.png",
+      "source_box": [
+        0,
+        0,
+        48,
+        24
+      ],
+      "sha256": "71ddba796bf9a0894d4f2aede88eed3714e34c88c715341c6cea3a821e36d68b",
+      "state": "integrated-review",
+      "status": "placeholder",
+      "author": "OpenAI imagegen / Codex Pillow preparation",
+      "date": "2026-11-01",
+      "transform": "crop, nearest-neighbor resize, alpha>=96 binary, shared maximum16 RGB palette; no geometric drawing",
+      "notes": "Palette-only derivative of original scientific ship; silhouette/anchor intact. Original scientific ship untouched. Hull motion handled by renderer."
+    },
+    {
+      "path": "assets/ui/w01_ui_ship_batiscafo_amarillo_move_02.png",
+      "asset": "w01_ui_ship_batiscafo_amarillo_move",
+      "frame": 2,
+      "size": [
+        48,
+        24
+      ],
+      "source": "assets/ui/w01_ui_ship_original_move_02.png",
+      "source_box": [
+        0,
+        0,
+        48,
+        24
+      ],
+      "sha256": "add1204c195f3ddef59ad9eb520f501f20a15989ef917e55576aefc8a2b58bc6",
+      "state": "integrated-review",
+      "status": "placeholder",
+      "author": "OpenAI imagegen / Codex Pillow preparation",
+      "date": "2026-11-01",
+      "transform": "crop, nearest-neighbor resize, alpha>=96 binary, shared maximum16 RGB palette; no geometric drawing",
+      "notes": "Palette-only derivative of original scientific ship; silhouette/anchor intact. Original scientific ship untouched. Hull motion handled by renderer."
+    },
+    {
+      "path": "assets/ui/w01_ui_ship_batiscafo_amarillo_move_03.png",
+      "asset": "w01_ui_ship_batiscafo_amarillo_move",
+      "frame": 3,
+      "size": [
+        48,
+        24
+      ],
+      "source": "assets/ui/w01_ui_ship_original_move_03.png",
+      "source_box": [
+        0,
+        0,
+        48,
+        24
+      ],
+      "sha256": "844d7a4ebc8fc9e5bd681355f4f8064d032575c38e36dc279d6ca63ec4469bb4",
+      "state": "integrated-review",
+      "status": "placeholder",
+      "author": "OpenAI imagegen / Codex Pillow preparation",
+      "date": "2026-11-01",
+      "transform": "crop, nearest-neighbor resize, alpha>=96 binary, shared maximum16 RGB palette; no geometric drawing",
+      "notes": "Palette-only derivative of original scientific ship; silhouette/anchor intact. Original scientific ship untouched. Hull motion handled by renderer."
+    },
+    {
+      "path": "assets/ui/w01_ui_ship_batiscafo_amarillo_move_04.png",
+      "asset": "w01_ui_ship_batiscafo_amarillo_move",
+      "frame": 4,
+      "size": [
+        48,
+        24
+      ],
+      "source": "assets/ui/w01_ui_ship_original_move_04.png",
+      "source_box": [
+        0,
+        0,
+        48,
+        24
+      ],
+      "sha256": "1f5179e1054a561d006e287e7a87c9077b88f3b4fd19a40fe09a4681a1f5bb41",
+      "state": "integrated-review",
+      "status": "placeholder",
+      "author": "OpenAI imagegen / Codex Pillow preparation",
+      "date": "2026-11-01",
+      "transform": "crop, nearest-neighbor resize, alpha>=96 binary, shared maximum16 RGB palette; no geometric drawing",
+      "notes": "Palette-only derivative of original scientific ship; silhouette/anchor intact. Original scientific ship untouched. Hull motion handled by renderer."
+    },
+    {
+      "path": "assets/ui/w01_ui_ship_coral_move_01.png",
+      "asset": "w01_ui_ship_coral_move",
+      "frame": 1,
+      "size": [
+        48,
+        24
+      ],
+      "source": "assets/ui/w01_ui_ship_original_move_01.png",
+      "source_box": [
+        0,
+        0,
+        48,
+        24
+      ],
+      "sha256": "7f79851d95f28a53c6464d475b43de96127b7ecb36323acb8ef6508d42ba9a00",
+      "state": "integrated-review",
+      "status": "placeholder",
+      "author": "OpenAI imagegen / Codex Pillow preparation",
+      "date": "2026-11-01",
+      "transform": "crop, nearest-neighbor resize, alpha>=96 binary, shared maximum16 RGB palette; no geometric drawing",
+      "notes": "Palette-only derivative of original scientific ship; silhouette/anchor intact. Original scientific ship untouched. Hull motion handled by renderer."
+    },
+    {
+      "path": "assets/ui/w01_ui_ship_coral_move_02.png",
+      "asset": "w01_ui_ship_coral_move",
+      "frame": 2,
+      "size": [
+        48,
+        24
+      ],
+      "source": "assets/ui/w01_ui_ship_original_move_02.png",
+      "source_box": [
+        0,
+        0,
+        48,
+        24
+      ],
+      "sha256": "0d3f285af7f396d9a28016759c8f9bb99225e498fc29b5d6aad41aefd80ac928",
+      "state": "integrated-review",
+      "status": "placeholder",
+      "author": "OpenAI imagegen / Codex Pillow preparation",
+      "date": "2026-11-01",
+      "transform": "crop, nearest-neighbor resize, alpha>=96 binary, shared maximum16 RGB palette; no geometric drawing",
+      "notes": "Palette-only derivative of original scientific ship; silhouette/anchor intact. Original scientific ship untouched. Hull motion handled by renderer."
+    },
+    {
+      "path": "assets/ui/w01_ui_ship_coral_move_03.png",
+      "asset": "w01_ui_ship_coral_move",
+      "frame": 3,
+      "size": [
+        48,
+        24
+      ],
+      "source": "assets/ui/w01_ui_ship_original_move_03.png",
+      "source_box": [
+        0,
+        0,
+        48,
+        24
+      ],
+      "sha256": "6b405872f85926d274b7b2867188960bb27b6365082e35a44cefbcf6c5ec699d",
+      "state": "integrated-review",
+      "status": "placeholder",
+      "author": "OpenAI imagegen / Codex Pillow preparation",
+      "date": "2026-11-01",
+      "transform": "crop, nearest-neighbor resize, alpha>=96 binary, shared maximum16 RGB palette; no geometric drawing",
+      "notes": "Palette-only derivative of original scientific ship; silhouette/anchor intact. Original scientific ship untouched. Hull motion handled by renderer."
+    },
+    {
+      "path": "assets/ui/w01_ui_ship_coral_move_04.png",
+      "asset": "w01_ui_ship_coral_move",
+      "frame": 4,
+      "size": [
+        48,
+        24
+      ],
+      "source": "assets/ui/w01_ui_ship_original_move_04.png",
+      "source_box": [
+        0,
+        0,
+        48,
+        24
+      ],
+      "sha256": "7b9d5bbc4a32db2a217630bdc488b005766f35c9bf89d3b0a110e3e9c6bd5c07",
+      "state": "integrated-review",
+      "status": "placeholder",
+      "author": "OpenAI imagegen / Codex Pillow preparation",
+      "date": "2026-11-01",
+      "transform": "crop, nearest-neighbor resize, alpha>=96 binary, shared maximum16 RGB palette; no geometric drawing",
+      "notes": "Palette-only derivative of original scientific ship; silhouette/anchor intact. Original scientific ship untouched. Hull motion handled by renderer."
+    },
+    {
+      "path": "assets/ui/w01_ui_ship_abisal_move_01.png",
+      "asset": "w01_ui_ship_abisal_move",
+      "frame": 1,
+      "size": [
+        48,
+        24
+      ],
+      "source": "assets/ui/w01_ui_ship_original_move_01.png",
+      "source_box": [
+        0,
+        0,
+        48,
+        24
+      ],
+      "sha256": "1b35652317152daad895378676651a5399fdd9946fbe2ead9e2735ab920e964a",
+      "state": "integrated-review",
+      "status": "placeholder",
+      "author": "OpenAI imagegen / Codex Pillow preparation",
+      "date": "2026-11-01",
+      "transform": "crop, nearest-neighbor resize, alpha>=96 binary, shared maximum16 RGB palette; no geometric drawing",
+      "notes": "Palette-only derivative of original scientific ship; silhouette/anchor intact. Original scientific ship untouched. Hull motion handled by renderer."
+    },
+    {
+      "path": "assets/ui/w01_ui_ship_abisal_move_02.png",
+      "asset": "w01_ui_ship_abisal_move",
+      "frame": 2,
+      "size": [
+        48,
+        24
+      ],
+      "source": "assets/ui/w01_ui_ship_original_move_02.png",
+      "source_box": [
+        0,
+        0,
+        48,
+        24
+      ],
+      "sha256": "24425feaa38a2c2e5c87c552fb3b78d579e4968a6f90e7a9a3e325aca12af5fd",
+      "state": "integrated-review",
+      "status": "placeholder",
+      "author": "OpenAI imagegen / Codex Pillow preparation",
+      "date": "2026-11-01",
+      "transform": "crop, nearest-neighbor resize, alpha>=96 binary, shared maximum16 RGB palette; no geometric drawing",
+      "notes": "Palette-only derivative of original scientific ship; silhouette/anchor intact. Original scientific ship untouched. Hull motion handled by renderer."
+    },
+    {
+      "path": "assets/ui/w01_ui_ship_abisal_move_03.png",
+      "asset": "w01_ui_ship_abisal_move",
+      "frame": 3,
+      "size": [
+        48,
+        24
+      ],
+      "source": "assets/ui/w01_ui_ship_original_move_03.png",
+      "source_box": [
+        0,
+        0,
+        48,
+        24
+      ],
+      "sha256": "445e9cd71163c0f01bd5824a0913da0f529e0d71b86a0684887b65503ade8d7d",
+      "state": "integrated-review",
+      "status": "placeholder",
+      "author": "OpenAI imagegen / Codex Pillow preparation",
+      "date": "2026-11-01",
+      "transform": "crop, nearest-neighbor resize, alpha>=96 binary, shared maximum16 RGB palette; no geometric drawing",
+      "notes": "Palette-only derivative of original scientific ship; silhouette/anchor intact. Original scientific ship untouched. Hull motion handled by renderer."
+    },
+    {
+      "path": "assets/ui/w01_ui_ship_abisal_move_04.png",
+      "asset": "w01_ui_ship_abisal_move",
+      "frame": 4,
+      "size": [
+        48,
+        24
+      ],
+      "source": "assets/ui/w01_ui_ship_original_move_04.png",
+      "source_box": [
+        0,
+        0,
+        48,
+        24
+      ],
+      "sha256": "fa04c7a9595892894e8005adfc466060c890ec89201763f0e29facd405aefa06",
+      "state": "integrated-review",
+      "status": "placeholder",
+      "author": "OpenAI imagegen / Codex Pillow preparation",
+      "date": "2026-11-01",
+      "transform": "crop, nearest-neighbor resize, alpha>=96 binary, shared maximum16 RGB palette; no geometric drawing",
+      "notes": "Palette-only derivative of original scientific ship; silhouette/anchor intact. Original scientific ship untouched. Hull motion handled by renderer."
+    },
+    {
+      "path": "assets/ui/w01_ui_ship_bioluminiscente_move_01.png",
+      "asset": "w01_ui_ship_bioluminiscente_move",
+      "frame": 1,
+      "size": [
+        48,
+        24
+      ],
+      "source": "assets/ui/w01_ui_ship_original_move_01.png",
+      "source_box": [
+        0,
+        0,
+        48,
+        24
+      ],
+      "sha256": "35282aa4d522774668efde54989b25f8fce28b9458f43c59749f454015bc370f",
+      "state": "integrated-review",
+      "status": "placeholder",
+      "author": "OpenAI imagegen / Codex Pillow preparation",
+      "date": "2026-11-01",
+      "transform": "crop, nearest-neighbor resize, alpha>=96 binary, shared maximum16 RGB palette; no geometric drawing",
+      "notes": "Palette-only derivative of original scientific ship; silhouette/anchor intact. Original scientific ship untouched. Hull motion handled by renderer."
+    },
+    {
+      "path": "assets/ui/w01_ui_ship_bioluminiscente_move_02.png",
+      "asset": "w01_ui_ship_bioluminiscente_move",
+      "frame": 2,
+      "size": [
+        48,
+        24
+      ],
+      "source": "assets/ui/w01_ui_ship_original_move_02.png",
+      "source_box": [
+        0,
+        0,
+        48,
+        24
+      ],
+      "sha256": "61c885504501c1f2b05e0f76df6fbf56ab59e6a9af8ae74f92ade81c37baf880",
+      "state": "integrated-review",
+      "status": "placeholder",
+      "author": "OpenAI imagegen / Codex Pillow preparation",
+      "date": "2026-11-01",
+      "transform": "crop, nearest-neighbor resize, alpha>=96 binary, shared maximum16 RGB palette; no geometric drawing",
+      "notes": "Palette-only derivative of original scientific ship; silhouette/anchor intact. Original scientific ship untouched. Hull motion handled by renderer."
+    },
+    {
+      "path": "assets/ui/w01_ui_ship_bioluminiscente_move_03.png",
+      "asset": "w01_ui_ship_bioluminiscente_move",
+      "frame": 3,
+      "size": [
+        48,
+        24
+      ],
+      "source": "assets/ui/w01_ui_ship_original_move_03.png",
+      "source_box": [
+        0,
+        0,
+        48,
+        24
+      ],
+      "sha256": "4d18c43b99de4c26820b3f2afda0dea79052567f7dd1d0fc109afcc0618139a2",
+      "state": "integrated-review",
+      "status": "placeholder",
+      "author": "OpenAI imagegen / Codex Pillow preparation",
+      "date": "2026-11-01",
+      "transform": "crop, nearest-neighbor resize, alpha>=96 binary, shared maximum16 RGB palette; no geometric drawing",
+      "notes": "Palette-only derivative of original scientific ship; silhouette/anchor intact. Original scientific ship untouched. Hull motion handled by renderer."
+    },
+    {
+      "path": "assets/ui/w01_ui_ship_bioluminiscente_move_04.png",
+      "asset": "w01_ui_ship_bioluminiscente_move",
+      "frame": 4,
+      "size": [
+        48,
+        24
+      ],
+      "source": "assets/ui/w01_ui_ship_original_move_04.png",
+      "source_box": [
+        0,
+        0,
+        48,
+        24
+      ],
+      "sha256": "8a4b8cfc1030782434880a327cd5aaba6b7ae58a6f1e4e62beb4aad4332c94a0",
+      "state": "integrated-review",
+      "status": "placeholder",
+      "author": "OpenAI imagegen / Codex Pillow preparation",
+      "date": "2026-11-01",
+      "transform": "crop, nearest-neighbor resize, alpha>=96 binary, shared maximum16 RGB palette; no geometric drawing",
+      "notes": "Palette-only derivative of original scientific ship; silhouette/anchor intact. Original scientific ship untouched. Hull motion handled by renderer."
+    },
+    {
+      "path": "assets/ui/w01_ui_ship_magma_move_01.png",
+      "asset": "w01_ui_ship_magma_move",
+      "frame": 1,
+      "size": [
+        48,
+        24
+      ],
+      "source": "assets/ui/w01_ui_ship_original_move_01.png",
+      "source_box": [
+        0,
+        0,
+        48,
+        24
+      ],
+      "sha256": "dc2530db05f4fe218eeb411c7e22ad5c3ed739edf58dc8c6612c319e530ce152",
+      "state": "integrated-review",
+      "status": "placeholder",
+      "author": "OpenAI imagegen / Codex Pillow preparation",
+      "date": "2026-11-01",
+      "transform": "crop, nearest-neighbor resize, alpha>=96 binary, shared maximum16 RGB palette; no geometric drawing",
+      "notes": "Palette-only derivative of original scientific ship; silhouette/anchor intact. Original scientific ship untouched. Hull motion handled by renderer."
+    },
+    {
+      "path": "assets/ui/w01_ui_ship_magma_move_02.png",
+      "asset": "w01_ui_ship_magma_move",
+      "frame": 2,
+      "size": [
+        48,
+        24
+      ],
+      "source": "assets/ui/w01_ui_ship_original_move_02.png",
+      "source_box": [
+        0,
+        0,
+        48,
+        24
+      ],
+      "sha256": "22d9054eb048a075aa470e30fb18e8329a8fc48b67936aa426280cc7fbf54f49",
+      "state": "integrated-review",
+      "status": "placeholder",
+      "author": "OpenAI imagegen / Codex Pillow preparation",
+      "date": "2026-11-01",
+      "transform": "crop, nearest-neighbor resize, alpha>=96 binary, shared maximum16 RGB palette; no geometric drawing",
+      "notes": "Palette-only derivative of original scientific ship; silhouette/anchor intact. Original scientific ship untouched. Hull motion handled by renderer."
+    },
+    {
+      "path": "assets/ui/w01_ui_ship_magma_move_03.png",
+      "asset": "w01_ui_ship_magma_move",
+      "frame": 3,
+      "size": [
+        48,
+        24
+      ],
+      "source": "assets/ui/w01_ui_ship_original_move_03.png",
+      "source_box": [
+        0,
+        0,
+        48,
+        24
+      ],
+      "sha256": "86a386e20d49686595e367d6df3b591d35250d2643fcbf6ede822d5257d92cd1",
+      "state": "integrated-review",
+      "status": "placeholder",
+      "author": "OpenAI imagegen / Codex Pillow preparation",
+      "date": "2026-11-01",
+      "transform": "crop, nearest-neighbor resize, alpha>=96 binary, shared maximum16 RGB palette; no geometric drawing",
+      "notes": "Palette-only derivative of original scientific ship; silhouette/anchor intact. Original scientific ship untouched. Hull motion handled by renderer."
+    },
+    {
+      "path": "assets/ui/w01_ui_ship_magma_move_04.png",
+      "asset": "w01_ui_ship_magma_move",
+      "frame": 4,
+      "size": [
+        48,
+        24
+      ],
+      "source": "assets/ui/w01_ui_ship_original_move_04.png",
+      "source_box": [
+        0,
+        0,
+        48,
+        24
+      ],
+      "sha256": "7ac3cf50764a635a2200cfdee6130c545c554b2692b64a992776490096a30a31",
+      "state": "integrated-review",
+      "status": "placeholder",
+      "author": "OpenAI imagegen / Codex Pillow preparation",
+      "date": "2026-11-01",
+      "transform": "crop, nearest-neighbor resize, alpha>=96 binary, shared maximum16 RGB palette; no geometric drawing",
+      "notes": "Palette-only derivative of original scientific ship; silhouette/anchor intact. Original scientific ship untouched. Hull motion handled by renderer."
+    },
+    {
+      "path": "assets/ui/w01_ui_ship_laboratorio_move_01.png",
+      "asset": "w01_ui_ship_laboratorio_move",
+      "frame": 1,
+      "size": [
+        48,
+        24
+      ],
+      "source": "assets/ui/w01_ui_ship_original_move_01.png",
+      "source_box": [
+        0,
+        0,
+        48,
+        24
+      ],
+      "sha256": "885a5aa00cd5894e4e93c470a095095780bda141c9a0397af0250d01b2450042",
+      "state": "integrated-review",
+      "status": "placeholder",
+      "author": "OpenAI imagegen / Codex Pillow preparation",
+      "date": "2026-11-01",
+      "transform": "crop, nearest-neighbor resize, alpha>=96 binary, shared maximum16 RGB palette; no geometric drawing",
+      "notes": "Palette-only derivative of original scientific ship; silhouette/anchor intact. Original scientific ship untouched. Hull motion handled by renderer."
+    },
+    {
+      "path": "assets/ui/w01_ui_ship_laboratorio_move_02.png",
+      "asset": "w01_ui_ship_laboratorio_move",
+      "frame": 2,
+      "size": [
+        48,
+        24
+      ],
+      "source": "assets/ui/w01_ui_ship_original_move_02.png",
+      "source_box": [
+        0,
+        0,
+        48,
+        24
+      ],
+      "sha256": "cbe772dddf9092cc408b6d367cb52b1907b9e65544ce6f693f0bceef5d4b19c4",
+      "state": "integrated-review",
+      "status": "placeholder",
+      "author": "OpenAI imagegen / Codex Pillow preparation",
+      "date": "2026-11-01",
+      "transform": "crop, nearest-neighbor resize, alpha>=96 binary, shared maximum16 RGB palette; no geometric drawing",
+      "notes": "Palette-only derivative of original scientific ship; silhouette/anchor intact. Original scientific ship untouched. Hull motion handled by renderer."
+    },
+    {
+      "path": "assets/ui/w01_ui_ship_laboratorio_move_03.png",
+      "asset": "w01_ui_ship_laboratorio_move",
+      "frame": 3,
+      "size": [
+        48,
+        24
+      ],
+      "source": "assets/ui/w01_ui_ship_original_move_03.png",
+      "source_box": [
+        0,
+        0,
+        48,
+        24
+      ],
+      "sha256": "1ddc47dcb3e5148ba6f9907eb63943c92ec198ae89d4a21805aa9339a8397aa2",
+      "state": "integrated-review",
+      "status": "placeholder",
+      "author": "OpenAI imagegen / Codex Pillow preparation",
+      "date": "2026-11-01",
+      "transform": "crop, nearest-neighbor resize, alpha>=96 binary, shared maximum16 RGB palette; no geometric drawing",
+      "notes": "Palette-only derivative of original scientific ship; silhouette/anchor intact. Original scientific ship untouched. Hull motion handled by renderer."
+    },
+    {
+      "path": "assets/ui/w01_ui_ship_laboratorio_move_04.png",
+      "asset": "w01_ui_ship_laboratorio_move",
+      "frame": 4,
+      "size": [
+        48,
+        24
+      ],
+      "source": "assets/ui/w01_ui_ship_original_move_04.png",
+      "source_box": [
+        0,
+        0,
+        48,
+        24
+      ],
+      "sha256": "921c855b526818dea332b143fc2bbf84e89b573e3883e2fcc41c99203b810e66",
+      "state": "integrated-review",
+      "status": "placeholder",
+      "author": "OpenAI imagegen / Codex Pillow preparation",
+      "date": "2026-11-01",
+      "transform": "crop, nearest-neighbor resize, alpha>=96 binary, shared maximum16 RGB palette; no geometric drawing",
+      "notes": "Palette-only derivative of original scientific ship; silhouette/anchor intact. Original scientific ship untouched. Hull motion handled by renderer."
+    },
+    {
+      "path": "assets/ui/w01_ui_ship_fantasma_move_01.png",
+      "asset": "w01_ui_ship_fantasma_move",
+      "frame": 1,
+      "size": [
+        48,
+        24
+      ],
+      "source": "assets/ui/w01_ui_ship_original_move_01.png",
+      "source_box": [
+        0,
+        0,
+        48,
+        24
+      ],
+      "sha256": "54cd8ad278f85fd2cc4ee51e97688e4f983c643eec87438beee88dddcc0200ea",
+      "state": "integrated-review",
+      "status": "placeholder",
+      "author": "OpenAI imagegen / Codex Pillow preparation",
+      "date": "2026-11-01",
+      "transform": "crop, nearest-neighbor resize, alpha>=96 binary, shared maximum16 RGB palette; no geometric drawing",
+      "notes": "Palette-only derivative of original scientific ship; silhouette/anchor intact. Original scientific ship untouched. Hull motion handled by renderer."
+    },
+    {
+      "path": "assets/ui/w01_ui_ship_fantasma_move_02.png",
+      "asset": "w01_ui_ship_fantasma_move",
+      "frame": 2,
+      "size": [
+        48,
+        24
+      ],
+      "source": "assets/ui/w01_ui_ship_original_move_02.png",
+      "source_box": [
+        0,
+        0,
+        48,
+        24
+      ],
+      "sha256": "b36ad48568c93ab8aa2bd84741f6136ce978d89f61ffc9014e3b656dd306845e",
+      "state": "integrated-review",
+      "status": "placeholder",
+      "author": "OpenAI imagegen / Codex Pillow preparation",
+      "date": "2026-11-01",
+      "transform": "crop, nearest-neighbor resize, alpha>=96 binary, shared maximum16 RGB palette; no geometric drawing",
+      "notes": "Palette-only derivative of original scientific ship; silhouette/anchor intact. Original scientific ship untouched. Hull motion handled by renderer."
+    },
+    {
+      "path": "assets/ui/w01_ui_ship_fantasma_move_03.png",
+      "asset": "w01_ui_ship_fantasma_move",
+      "frame": 3,
+      "size": [
+        48,
+        24
+      ],
+      "source": "assets/ui/w01_ui_ship_original_move_03.png",
+      "source_box": [
+        0,
+        0,
+        48,
+        24
+      ],
+      "sha256": "83ca86c27b9a3b429a04eaa8d2979c52cd3a35ad36f7e8fdba37b3c58c944b8e",
+      "state": "integrated-review",
+      "status": "placeholder",
+      "author": "OpenAI imagegen / Codex Pillow preparation",
+      "date": "2026-11-01",
+      "transform": "crop, nearest-neighbor resize, alpha>=96 binary, shared maximum16 RGB palette; no geometric drawing",
+      "notes": "Palette-only derivative of original scientific ship; silhouette/anchor intact. Original scientific ship untouched. Hull motion handled by renderer."
+    },
+    {
+      "path": "assets/ui/w01_ui_ship_fantasma_move_04.png",
+      "asset": "w01_ui_ship_fantasma_move",
+      "frame": 4,
+      "size": [
+        48,
+        24
+      ],
+      "source": "assets/ui/w01_ui_ship_original_move_04.png",
+      "source_box": [
+        0,
+        0,
+        48,
+        24
+      ],
+      "sha256": "88c21f531427347ef1f6bf8d7a97b8dfc94d28358de5cc0ba086469c427d7241",
+      "state": "integrated-review",
+      "status": "placeholder",
+      "author": "OpenAI imagegen / Codex Pillow preparation",
+      "date": "2026-11-01",
+      "transform": "crop, nearest-neighbor resize, alpha>=96 binary, shared maximum16 RGB palette; no geometric drawing",
+      "notes": "Palette-only derivative of original scientific ship; silhouette/anchor intact. Original scientific ship untouched. Hull motion handled by renderer."
+    },
+    {
+      "path": "assets/ui/w01_ui_ship_dorado_move_01.png",
+      "asset": "w01_ui_ship_dorado_move",
+      "frame": 1,
+      "size": [
+        48,
+        24
+      ],
+      "source": "assets/ui/w01_ui_ship_original_move_01.png",
+      "source_box": [
+        0,
+        0,
+        48,
+        24
+      ],
+      "sha256": "7ebe38679b4b3eeda9b35b00a9e2593dc72ad979758da5084470795992425a2b",
+      "state": "integrated-review",
+      "status": "placeholder",
+      "author": "OpenAI imagegen / Codex Pillow preparation",
+      "date": "2026-11-01",
+      "transform": "crop, nearest-neighbor resize, alpha>=96 binary, shared maximum16 RGB palette; no geometric drawing",
+      "notes": "Palette-only derivative of original scientific ship; silhouette/anchor intact. Original scientific ship untouched. Hull motion handled by renderer."
+    },
+    {
+      "path": "assets/ui/w01_ui_ship_dorado_move_02.png",
+      "asset": "w01_ui_ship_dorado_move",
+      "frame": 2,
+      "size": [
+        48,
+        24
+      ],
+      "source": "assets/ui/w01_ui_ship_original_move_02.png",
+      "source_box": [
+        0,
+        0,
+        48,
+        24
+      ],
+      "sha256": "8db5800e1f95506fba6a652525beb10ecdfcba056557f3237373679ff87d5af1",
+      "state": "integrated-review",
+      "status": "placeholder",
+      "author": "OpenAI imagegen / Codex Pillow preparation",
+      "date": "2026-11-01",
+      "transform": "crop, nearest-neighbor resize, alpha>=96 binary, shared maximum16 RGB palette; no geometric drawing",
+      "notes": "Palette-only derivative of original scientific ship; silhouette/anchor intact. Original scientific ship untouched. Hull motion handled by renderer."
+    },
+    {
+      "path": "assets/ui/w01_ui_ship_dorado_move_03.png",
+      "asset": "w01_ui_ship_dorado_move",
+      "frame": 3,
+      "size": [
+        48,
+        24
+      ],
+      "source": "assets/ui/w01_ui_ship_original_move_03.png",
+      "source_box": [
+        0,
+        0,
+        48,
+        24
+      ],
+      "sha256": "412eeb1e533aecfa79ca2510a20ce42ed85107703bba915fb007e3c58450b443",
+      "state": "integrated-review",
+      "status": "placeholder",
+      "author": "OpenAI imagegen / Codex Pillow preparation",
+      "date": "2026-11-01",
+      "transform": "crop, nearest-neighbor resize, alpha>=96 binary, shared maximum16 RGB palette; no geometric drawing",
+      "notes": "Palette-only derivative of original scientific ship; silhouette/anchor intact. Original scientific ship untouched. Hull motion handled by renderer."
+    },
+    {
+      "path": "assets/ui/w01_ui_ship_dorado_move_04.png",
+      "asset": "w01_ui_ship_dorado_move",
+      "frame": 4,
+      "size": [
+        48,
+        24
+      ],
+      "source": "assets/ui/w01_ui_ship_original_move_04.png",
+      "source_box": [
+        0,
+        0,
+        48,
+        24
+      ],
+      "sha256": "beb356d6eb9294582ba6dc4dc1cd14bfe887bcace7e4dc88df913c4e2a10727f",
+      "state": "integrated-review",
+      "status": "placeholder",
+      "author": "OpenAI imagegen / Codex Pillow preparation",
+      "date": "2026-11-01",
+      "transform": "crop, nearest-neighbor resize, alpha>=96 binary, shared maximum16 RGB palette; no geometric drawing",
+      "notes": "Palette-only derivative of original scientific ship; silhouette/anchor intact. Original scientific ship untouched. Hull motion handled by renderer."
+    },
+    {
+      "path": "assets/fx/w01_fx_bubble_burst_01.png",
+      "asset": "w01_fx_bubble_burst",
+      "frame": 1,
+      "size": [
+        32,
+        32
+      ],
+      "source": "docs/arte/pulido-w01/originales/b1-fx-imagegen.png",
+      "source_box": [
+        20,
+        513,
+        151,
+        642
+      ],
+      "sha256": "55955b4e3ff73208b53d6976322c0b8e597b81f0546dba129abb92849ba8cd5e",
+      "state": "integrated-review",
+      "status": "placeholder",
+      "author": "OpenAI imagegen / Codex Pillow preparation",
+      "date": "2026-11-01",
+      "transform": "crop, nearest-neighbor resize, alpha>=96 binary, shared maximum16 RGB palette; no geometric drawing",
+      "notes": "Original imagegen bubble cropped and alpha/color masked: retain only pearl highlights, remove dark blue backing colors; neutral light-gray palette avoids dark blocks under colored carrier tint. Promoted from8x8 to32x32 visual frame; gameplay hitboxes unchanged. Center and exterior remain transparent. Eight source frames; loop age-based playback."
+    },
+    {
+      "path": "assets/fx/w01_fx_bubble_burst_02.png",
+      "asset": "w01_fx_bubble_burst",
+      "frame": 2,
+      "size": [
+        32,
+        32
+      ],
+      "source": "docs/arte/pulido-w01/originales/b1-fx-imagegen.png",
+      "source_box": [
+        179,
+        513,
+        308,
+        649
+      ],
+      "sha256": "38860399b7278507c5b783cb5953e10014d6a7955cfe9a73d8c6ccfe502a9fd0",
+      "state": "integrated-review",
+      "status": "placeholder",
+      "author": "OpenAI imagegen / Codex Pillow preparation",
+      "date": "2026-11-01",
+      "transform": "crop, nearest-neighbor resize, alpha>=96 binary, shared maximum16 RGB palette; no geometric drawing",
+      "notes": "Original imagegen bubble cropped and alpha/color masked: retain only pearl highlights, remove dark blue backing colors; neutral light-gray palette avoids dark blocks under colored carrier tint. Promoted from8x8 to32x32 visual frame; gameplay hitboxes unchanged. Center and exterior remain transparent. Eight source frames; loop age-based playback."
+    },
+    {
+      "path": "assets/fx/w01_fx_bubble_burst_03.png",
+      "asset": "w01_fx_bubble_burst",
+      "frame": 3,
+      "size": [
+        32,
+        32
+      ],
+      "source": "docs/arte/pulido-w01/originales/b1-fx-imagegen.png",
+      "source_box": [
+        331,
+        509,
+        461,
+        645
+      ],
+      "sha256": "bfb948f7a356546f678d59ee433875bd5a1c2a8cfe3d407bd6ebf4697b11e70e",
+      "state": "integrated-review",
+      "status": "placeholder",
+      "author": "OpenAI imagegen / Codex Pillow preparation",
+      "date": "2026-11-01",
+      "transform": "crop, nearest-neighbor resize, alpha>=96 binary, shared maximum16 RGB palette; no geometric drawing",
+      "notes": "Original imagegen bubble cropped and alpha/color masked: retain only pearl highlights, remove dark blue backing colors; neutral light-gray palette avoids dark blocks under colored carrier tint. Promoted from8x8 to32x32 visual frame; gameplay hitboxes unchanged. Center and exterior remain transparent. Eight source frames; loop age-based playback."
+    },
+    {
+      "path": "assets/fx/w01_fx_bubble_burst_04.png",
+      "asset": "w01_fx_bubble_burst",
+      "frame": 4,
+      "size": [
+        32,
+        32
+      ],
+      "source": "docs/arte/pulido-w01/originales/b1-fx-imagegen.png",
+      "source_box": [
+        485,
+        509,
+        617,
+        647
+      ],
+      "sha256": "0e62017ab254f9f9b5e8393b6cbf8f03b3af2c1c018fab5af26410039a044476",
+      "state": "integrated-review",
+      "status": "placeholder",
+      "author": "OpenAI imagegen / Codex Pillow preparation",
+      "date": "2026-11-01",
+      "transform": "crop, nearest-neighbor resize, alpha>=96 binary, shared maximum16 RGB palette; no geometric drawing",
+      "notes": "Original imagegen bubble cropped and alpha/color masked: retain only pearl highlights, remove dark blue backing colors; neutral light-gray palette avoids dark blocks under colored carrier tint. Promoted from8x8 to32x32 visual frame; gameplay hitboxes unchanged. Center and exterior remain transparent. Eight source frames; loop age-based playback."
+    },
+    {
+      "path": "assets/fx/w01_fx_bubble_burst_05.png",
+      "asset": "w01_fx_bubble_burst",
+      "frame": 5,
+      "size": [
+        32,
+        32
+      ],
+      "source": "docs/arte/pulido-w01/originales/b1-fx-imagegen.png",
+      "source_box": [
+        640,
+        512,
+        770,
+        642
+      ],
+      "sha256": "a18e83fbd94747044228f326923abbaec00cf465497f873346091560cdf900bf",
+      "state": "integrated-review",
+      "status": "placeholder",
+      "author": "OpenAI imagegen / Codex Pillow preparation",
+      "date": "2026-11-01",
+      "transform": "crop, nearest-neighbor resize, alpha>=96 binary, shared maximum16 RGB palette; no geometric drawing",
+      "notes": "Original imagegen bubble cropped and alpha/color masked: retain only pearl highlights, remove dark blue backing colors; neutral light-gray palette avoids dark blocks under colored carrier tint. Promoted from8x8 to32x32 visual frame; gameplay hitboxes unchanged. Center and exterior remain transparent. Eight source frames; loop age-based playback."
+    },
+    {
+      "path": "assets/fx/w01_fx_bubble_burst_06.png",
+      "asset": "w01_fx_bubble_burst",
+      "frame": 6,
+      "size": [
+        32,
+        32
+      ],
+      "source": "docs/arte/pulido-w01/originales/b1-fx-imagegen.png",
+      "source_box": [
+        794,
+        513,
+        929,
+        645
+      ],
+      "sha256": "03af19abd033472a7698d44de0e53c9726c429d52b33e22172b3d6d384fecbcb",
+      "state": "integrated-review",
+      "status": "placeholder",
+      "author": "OpenAI imagegen / Codex Pillow preparation",
+      "date": "2026-11-01",
+      "transform": "crop, nearest-neighbor resize, alpha>=96 binary, shared maximum16 RGB palette; no geometric drawing",
+      "notes": "Original imagegen bubble cropped and alpha/color masked: retain only pearl highlights, remove dark blue backing colors; neutral light-gray palette avoids dark blocks under colored carrier tint. Promoted from8x8 to32x32 visual frame; gameplay hitboxes unchanged. Center and exterior remain transparent. Eight source frames; loop age-based playback."
+    },
+    {
+      "path": "assets/fx/w01_fx_bubble_burst_07.png",
+      "asset": "w01_fx_bubble_burst",
+      "frame": 7,
+      "size": [
+        32,
+        32
+      ],
+      "source": "docs/arte/pulido-w01/originales/b1-fx-imagegen.png",
+      "source_box": [
+        949,
+        513,
+        1085,
+        645
+      ],
+      "sha256": "b385ff1ba179b5b5e5ecfa92ac71fd7ce24ea60fd69e541b0a55d27738f2467f",
+      "state": "integrated-review",
+      "status": "placeholder",
+      "author": "OpenAI imagegen / Codex Pillow preparation",
+      "date": "2026-11-01",
+      "transform": "crop, nearest-neighbor resize, alpha>=96 binary, shared maximum16 RGB palette; no geometric drawing",
+      "notes": "Original imagegen bubble cropped and alpha/color masked: retain only pearl highlights, remove dark blue backing colors; neutral light-gray palette avoids dark blocks under colored carrier tint. Promoted from8x8 to32x32 visual frame; gameplay hitboxes unchanged. Center and exterior remain transparent. Eight source frames; loop age-based playback."
+    },
+    {
+      "path": "assets/fx/w01_fx_bubble_burst_08.png",
+      "asset": "w01_fx_bubble_burst",
+      "frame": 8,
+      "size": [
+        32,
+        32
+      ],
+      "source": "docs/arte/pulido-w01/originales/b1-fx-imagegen.png",
+      "source_box": [
+        1104,
+        513,
+        1235,
+        658
+      ],
+      "sha256": "2515ad3822e5d9ed12ef08ff04857d0c82024d027c67f007ec35ba3ba6e9b96a",
+      "state": "integrated-review",
+      "status": "placeholder",
+      "author": "OpenAI imagegen / Codex Pillow preparation",
+      "date": "2026-11-01",
+      "transform": "crop, nearest-neighbor resize, alpha>=96 binary, shared maximum16 RGB palette; no geometric drawing",
+      "notes": "Original imagegen bubble cropped and alpha/color masked: retain only pearl highlights, remove dark blue backing colors; neutral light-gray palette avoids dark blocks under colored carrier tint. Promoted from8x8 to32x32 visual frame; gameplay hitboxes unchanged. Center and exterior remain transparent. Eight source frames; loop age-based playback."
+    }
+  ],
+  "source_records": [
+    {
+      "path": "docs/arte/pulido-w01/originales/b1-projectiles-imagegen.png",
+      "tool": "OpenAI imagegen",
+      "license": "Original generated artwork for this repository; no commercial game assets copied",
+      "date": "2026-11-01",
+      "sha256": "aa2452010488c3320f0a3d9e812401bf9c084756d9e5f0d6f4aba0975dee014f"
+    },
+    {
+      "path": "docs/arte/pulido-w01/originales/b1-fx-imagegen.png",
+      "tool": "OpenAI imagegen",
+      "license": "Original generated artwork for this repository; no commercial game assets copied",
+      "date": "2026-11-01",
+      "sha256": "a14a649eb6a0600a0563cd8c6c7a7e55e065a26e713764ce667528131e778770"
+    },
+    {
+      "path": "docs/arte/pulido-w01/originales/b1-ui-imagegen.png",
+      "tool": "OpenAI imagegen",
+      "license": "Original generated artwork for this repository; no commercial game assets copied",
+      "date": "2026-11-01",
+      "sha256": "fadd1124c0a95a50c4c23217f36bfa59034946b1d06d9778d38122d5bef5f688"
+    }
+  ]
+}

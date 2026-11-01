@@ -1,0 +1,11 @@
+{
+  "base": "d31d3406f07868942bbd3f594bee78d0f12d63b7",
+  "native_checks": 28,
+  "source_gameplay_unchanged": true,
+  "outside_world1_manifest_unchanged": true,
+  "attachment_exact": true,
+  "both_final_payloads_match_movies": true,
+  "physical_windows_tested": false,
+  "human_visual_approval": "pending",
+  "b2_b3_b4_started": false
+}

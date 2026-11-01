@@ -28,6 +28,7 @@ def main():
     p.add_argument('--output',type=Path,required=True)
     p.add_argument('--display',default=':91')
     p.add_argument('--scale',type=int,choices=(1,2,3),default=2)
+    p.add_argument('--seconds',type=int,choices=(20,40),default=20,help='Effective game time, not capture duration')
     p.add_argument('--legacy',action='store_true',help='Record old EXE with no trace; do not claim its timer advanced')
     a=p.parse_args()
     out=a.output.resolve();out.mkdir(parents=True,exist_ok=True)
@@ -41,6 +42,7 @@ def main():
     options=json.loads(pref.read_text()) if pref.exists() else {}
     options['screen']=f'window{a.scale}'
     options['autofire']=False
+    options['show_hitbox']=False
     pref.write_text(json.dumps(options))
     env=dict(os.environ,DISPLAY=a.display,WINEPREFIX=a.prefix,WINEDEBUG='-all',WINEDLLOVERRIDES='zlib1=n',WINESERVER=str(Path(a.wine).with_name('wineserver')),XDG_CACHE_HOME=str(out/'cache'))
     x=C.CDLL('libX11.so.6');xt=C.CDLL('libXtst.so.6')
@@ -104,22 +106,23 @@ def main():
         if 'RUNTIME_STAGE_TRACE' not in text:
             tap('Right');tap('Return')
         start=time.monotonic();samples={};actions=set()
-        while time.monotonic()-start<65:
+        expected={0,5,12,20} if a.seconds==20 else {0,5,12,15,20,30,40}
+        while time.monotonic()-start<110:
             elapsed=time.monotonic()-start
             # Normal physical keyboard input only; first demonstrate lateral move.
-            for mark,name,press in [(2.1,'d',True),(2.5,'d',False),(2.6,'a',True),(3.0,'a',False),(14.5,'Up',True),(16.5,'Up',False),(15.5,'z',True)]:
+            for mark,name,press in [(2.1,'d',True),(2.5,'d',False),(2.6,'a',True),(3.0,'a',False),(14.5,'w',True),(16.5,'w',False),(15.5,'z',True)]+([(29.0,'x',True),(29.2,'x',False)] if a.seconds==40 else []):
                 if elapsed>=mark and mark not in actions:key(name,press);actions.add(mark)
             text=(out/'wine.log').read_text(errors='replace')
             for line in text.splitlines():
                 if line.startswith('RUNTIME_STAGE_TRACE '):
                     item=json.loads(line.removeprefix('RUNTIME_STAGE_TRACE '));target=int(item['target_elapsed'])
-                    if target not in samples:
+                    if target in expected and target not in samples:
                         samples[target]=item;time.sleep(.12);shot(f't{target:02d}')
             if a.legacy:
                 for target in (0,5,12,20):
                     if elapsed>=target+2 and target not in samples:
                         shot(f't{target:02d}');samples[target]={'wall_elapsed':elapsed,'trace_unavailable_in_old_binary':True}
-            if 20 in samples:time.sleep(1);break
+            if a.seconds in samples:time.sleep(1);break
             if app.poll() is not None:raise RuntimeError('Windows game exited during play')
             time.sleep(.05)
         for name in list(held):key(name,False)
@@ -131,9 +134,9 @@ def main():
         tap('Return');tap('Right');tap('Return')
         app.wait(timeout=12)
         if not a.legacy:
-            assert set(samples)=={0,5,12,20},samples
-            last=samples[20]
-            assert last['world_time']>=20 and last['scroll']>=1200 and last['regular_spawned']>=4 and last['regular_kills']>=1,last
+            assert set(samples)==expected,samples
+            last=samples[a.seconds]
+            assert last['world_time']>=a.seconds and last['scroll']>=60*a.seconds and last['regular_spawned']>=4 and last['regular_kills']>=1,last
             assert all(s[n] for s in samples.values() for n in ('stage_system','weapon_system','boss_system'))
             assert any(s['enemy_bullets']>0 for s in samples.values()),samples
             assert app.returncode==0,app.returncode

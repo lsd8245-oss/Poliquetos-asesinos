@@ -56,6 +56,9 @@ var sandbox_weapons = {"shot": 1, "missile": 1, "bomb": 1}
 var intro_clock = 0.0
 var smoke_frames = 0
 var import_dialog: FileDialog
+const Presentation=preload("res://src/visuals/combat_presentation.gd")
+const W01Environment=preload("res://src/visuals/w01_environment.gd")
+var presentation=Presentation.new()
 var runtime_trace=false
 var runtime_trace_index=0
 var runtime_trace_start=0.0
@@ -332,6 +335,7 @@ func _confirm(action: String):
 
 func _start(profile: Dictionary, loaded: bool = false):
 	game.start(profile)
+	presentation.reset()
 	runtime_trace_index=0
 	runtime_trace_start=game.total_time
 	active_slot = int(profile.get("slot", 1))
@@ -349,8 +353,8 @@ func _start(profile: Dictionary, loaded: bool = false):
 	_trace_runtime()
 
 func _trace_runtime():
-	if not runtime_trace or runtime_trace_index>=4:return
-	var targets=[0.0,5.0,12.0,20.0]
+	if not runtime_trace or runtime_trace_index>=7:return
+	var targets=[0.0,5.0,12.0,15.0,20.0,30.0,40.0]
 	var elapsed=game.total_time-runtime_trace_start
 	if elapsed<targets[runtime_trace_index]:return
 	print("RUNTIME_STAGE_TRACE ",JSON.stringify({"target_elapsed":targets[runtime_trace_index],"elapsed":elapsed,"state":game.state,"world_time":game.world_time,"scroll":game.scroll,"enemies":game.enemies.size(),"regular_spawned":game.regular_spawned,"regular_kills":game.regular_kills,"enemy_bullets":game.enemy_bullets.size(),"stage_system":game.stage_system!=null,"weapon_system":game.weapon_system!=null,"boss_system":game.boss_system!=null,"edition":"pruebas" if sandbox else "normal","os":OS.get_name()}))
@@ -714,7 +718,9 @@ func _process(dt):
 				var stick = Vector2(Input.get_joy_axis(device, JOY_AXIS_LEFT_X), Input.get_joy_axis(device, JOY_AXIS_LEFT_Y))
 				if stick.length() > 0.2:
 					movement += stick
+			var before_time=game.total_time
 			game.step(minf(dt, 0.05), {"move": movement.limit_length(), "fire": _held("fire") or options.autofire, "bomb": pending_bomb})
+			if game.total_time>before_time:presentation.step(game,game.total_time-before_time)
 			_trace_runtime()
 			pending_bomb = false
 		if game.state != last_state:
@@ -830,6 +836,9 @@ func _background_tiles(texture_size:Vector2, offset:float, factor:float)->Array:
 	return result
 
 func _draw_background(world_id: int, offset: float):
+	if world_id==1:
+		W01Environment.draw(self,assets,offset,clock)
+		return
 	var fade=0.0
 	if world_id==15 and not game.profile.is_empty():
 		var transition=game.data.escape.fondo_transicion
@@ -848,14 +857,23 @@ func _draw_background(world_id: int, offset: float):
 				for rect in _background_tiles(sea_texture.get_size(),offset,float(factors[layer-1])):
 					assets.background_sprite(self,sea,rect,clock,Color(1,1,1,fade))
 
+func _loop_fx(key:String,time:float)->float:
+	return fposmod(time,maxf(0.01,assets.animation_duration(key)))
+
 func _draw_ship(pos: Vector2, size: Vector2):
 	var skin = str(game.profile.get("skin", "original"))
 	var colors = game.profile.get("colors", {"hull":"#75c9df", "lights":"#d7ffed", "trail":"#4a9cff"})
-	var hull=Color(colors.hull)
-	if screen=="game" and game.invulnerability>0 and int(clock*20)%2==0:hull.a=0.35
-	assets.sprite(self, "w01_ui_ship_%s_move" % skin, Rect2(pos - size / 2, size), clock, hull)
-	_pixel(Rect2(pos + Vector2(size.x * 0.18, -size.y * 0.1), Vector2(size.x * 0.12, size.y * 0.16)), Color(colors.lights))
-	assets.sprite(self, "w01_fx_trail_burst", Rect2(pos - Vector2(size.x * 0.65, 4), Vector2(size.x * 0.2, 8)), clock, Color(colors.trail))
+	var gameplay_view=screen in ["game","pause","confirm","results","dead"]
+	var tint=Color.WHITE if colors.hull=="#75c9df" else Color(colors.hull)
+	if gameplay_view and game.invulnerability>0:
+		tint.a=0.65 if options.reduce_flashes else (0.4 if int(clock*12)%2==0 else 1.0)
+	draw_set_transform(pos.round(),presentation.bank if gameplay_view else 0.0)
+	assets.sprite(self,"w01_ui_ship_%s_move"%skin,Rect2(-size/2,size),clock,tint)
+	var trail="w01_fx_trail_burst"
+	assets.sprite(self,trail,Rect2(Vector2(-size.x*0.85,-6),Vector2(size.x*0.45,12)),_loop_fx(trail,clock),Color(colors.trail))
+	if gameplay_view and presentation.muzzle>0:
+		assets.sprite(self,"w01_fx_muzzle_burst",Rect2(size.x/2-2,-8,20,16),Presentation.effect_time(presentation.muzzle,0.08,assets.animation_frames("w01_fx_muzzle_burst"),assets.animation_fps("w01_fx_muzzle_burst")),Color(1,1,1,0.25 if options.reduce_flashes else 1))
+	draw_set_transform(Vector2.ZERO)
 
 func _draw_game(world_id: int):
 	if world_id==15 and game.world_time<float(game.data.escape.fondo_transicion.desde_seg):
@@ -881,7 +899,7 @@ func _draw_game(world_id: int):
 			key=key.replace("_move","_hit")
 		if enemy.get("carrier","")!="":
 			var glow={"rojo":Color(1,0.3,0.3),"verde":Color(0.3,1,0.4),"azul":Color(0.3,0.5,1)}.get(enemy.carrier,Color.WHITE)
-			assets.sprite(self,"w01_fx_bubble_burst",Rect2(enemy.pos-size*0.6,size*1.2),clock,glow)
+			assets.sprite(self,"w01_fx_bubble_burst",Rect2(enemy.pos-size*0.6,size*1.2),_loop_fx("w01_fx_bubble_burst",clock),glow)
 		if enemy.get("warning",false):
 			assets.sprite(self,"w01_fx_spark_burst",Rect2(enemy.pos-size/2,size),clock,Color.YELLOW)
 		if float(enemy.get("lock",0))>0:
@@ -894,7 +912,11 @@ func _draw_game(world_id: int):
 			for snow in range(16):
 				assets.sprite(self,"w01_fx_spark_burst",Rect2(fmod(snow*41+clock*20,640),fmod(clock*55+snow*27,336),3,3),clock)
 		for layer in _enemy_visual_layers(enemy,key):
-			assets.sprite(self,layer.key,layer.rect,clock,tint)
+			var time=float(enemy.get("age",clock))+float(enemy.get("ordinal",0))*0.13
+			if world_id==1 and enemy.id in ["euphrosine","pision","lacy","syll","phyll"]:
+				assets.organic_sprite(self,layer.key,layer.rect,time,tint)
+			else:
+				assets.sprite(self,layer.key,layer.rect,time,tint)
 		if game.profile.equipment.get("ctd", false) and flags.get("weak_exposed", true):
 			for point in flags.get("weak_points", []):
 				assets.sprite(self, "w01_fx_spark_burst", Rect2(point - Vector2(6, 6), Vector2(12, 12)), clock, Color.CYAN)
@@ -902,6 +924,15 @@ func _draw_game(world_id: int):
 			var rectangles = game.enemy_hit_rects(enemy) if game.has_method("enemy_hit_rects") else [Rect2(enemy.pos - size / 2, size)]
 			for rect in rectangles:
 				draw_rect(rect, Color.RED, false, 1)
+	if game.state not in ["dead", "dying"]:
+		var pos = game.player.pos
+		if options.shake and not options.reduce_flashes and game.invulnerability > 0 and game.player.since_damage < 0.2:
+			pos += Vector2(sin(clock * 75), cos(clock * 80)) * 2
+		_draw_ship(pos, Vector2(48, 24))
+		if hitboxes:
+			var hb = game.data.combat.player.hitbox
+			var size = Vector2(hb[0], hb[1])
+			draw_rect(Rect2(game.player.pos - size / 2, size), Color.CYAN, false, 1)
 	for bullet in game.bullets:
 		var kind = "missile" if bullet.get("missile", false) else ("laser" if bullet.get("beam", false) else "shot")
 		_draw_bullet(bullet, kind)
@@ -915,17 +946,22 @@ func _draw_game(world_id: int):
 			kind = str(drop.get("weapon", "shot"))
 		assets.sprite(self, "w01_ui_item_%s_idle" % kind, Rect2(drop.pos - Vector2(8, 8), Vector2(16, 16)), clock)
 	for effect in game.effects:
-		var kind = str(effect.get("kind", "explosion"))
-		assets.sprite(self, "w01_fx_%s_burst" % ("bubble" if kind=="pulse" else kind), Rect2(effect.pos - Vector2(24, 24), Vector2(48, 48)), float(effect.get("age",0)), Color(1, 1, 1, 0.3 if options.reduce_flashes else 1))
-	if game.state not in ["dead", "dying"]:
-		var pos = game.player.pos
-		if options.shake and not options.reduce_flashes and game.invulnerability > 0 and game.player.since_damage < 0.2:
-			pos += Vector2(sin(clock * 75), cos(clock * 80)) * 2
-		_draw_ship(pos, Vector2(48, 24))
-		if hitboxes:
-			var hb = game.data.combat.player.hitbox
-			var size = Vector2(hb[0], hb[1])
-			draw_rect(Rect2(game.player.pos - size / 2, size), Color.CYAN, false, 1)
+		var kind=str(effect.get("kind","explosion"))
+		var remaining=float(effect.get("ttl",0.2))
+		var key="w01_fx_%s_burst"%("bubble" if kind=="pulse" else kind)
+		var size=Vector2(48,48)
+		if effect.has("radius"):
+			size=Vector2.ONE*float(effect.radius)*2
+			key="w01_fx_bubble_burst" if kind=="pulse" else "w01_fx_bomb_burst"
+		elif kind=="hit":
+			key="w01_fx_shield_burst"
+			size=Vector2(56,40)
+		var time=Presentation.effect_time(remaining,remaining+float(effect.get("age",0)),assets.animation_frames(key),assets.animation_fps(key))
+		assets.sprite(self,key,Rect2(effect.pos-size/2,size),time,Color(1,1,1,0.35 if options.reduce_flashes else 0.9))
+	for hit in presentation.hits:
+		assets.sprite(self,"w01_fx_spark_burst",Rect2(hit.pos-Vector2(12,12),Vector2(24,24)),Presentation.effect_time(hit.ttl,0.18,assets.animation_frames("w01_fx_spark_burst"),assets.animation_fps("w01_fx_spark_burst")),Color(1,1,1,0.45 if options.reduce_flashes else 1))
+	if presentation.collection>0:
+		assets.sprite(self,"w01_fx_collect_burst",Rect2(game.player.pos-Vector2(20,20),Vector2(40,40)),Presentation.effect_time(presentation.collection,0.3,assets.animation_frames("w01_fx_collect_burst"),assets.animation_fps("w01_fx_collect_burst")),Color(1,1,1,0.35 if options.reduce_flashes else 1))
 	if hitboxes:
 		for hazard in game.hazards:
 			draw_rect(hazard.rect, Color.YELLOW, false, 1)
@@ -936,6 +972,7 @@ func _draw_game(world_id: int):
 	if game.screen_blind>0:
 		_pixel(Rect2(0,0,640,336),Color(1,1,1,float(game.data.combat.ui.reduced_flash_alpha) if options.reduce_flashes else float(game.data.combat.ui.flash_alpha)))
 	_draw_hud()
+	_draw_equipment()
 	var boss_index = 0
 	for boss in game.enemies:
 		if not boss.get("boss", false) or float(boss.get("hp", 0)) <= 0:
@@ -944,7 +981,8 @@ func _draw_game(world_id: int):
 		var name_text = str(boss.get("name", boss.id)) + " / FASE %d" % int(boss.get("phase", 1))
 		if game.profile.equipment.get("ctd", false):
 			name_text += " %d/%d" % [ceili(boss.hp), int(boss.max_hp)]
-		_label(name_text, Vector2(80, y - 10))
+		assets.sprite(self,"w01_ui_panel_idle",Rect2(74,y-12,492,22),0,Color(1,1,1,0.85))
+		_label(name_text.left(78), Vector2(80, y - 10),Color(1,0.93,0.8))
 		_pixel(Rect2(80, y, 480, 6), Color(0.1, 0.1, 0.15))
 		_pixel(Rect2(80, y, 480 * clampf(float(boss.hp) / maxf(1, boss.max_hp), 0, 1), 6), Color(0.8, 0.25, 0.6))
 		for fraction in [0.33, 0.66]:
@@ -976,23 +1014,31 @@ func _enemy_visual_layers(enemy:Dictionary,key:String)->Array:
 	return layers
 
 func _draw_bullet(bullet: Dictionary, kind: String):
-	var size = bullet.get("size", Vector2(8, 4))
-	assets.sprite(self, "w01_bullet_%s_move" % kind, Rect2(bullet.pos - size / 2, size), clock)
+	var visual=Presentation.bullet_visual(bullet,kind)
+	if absf(visual.render_angle)<0.001:
+		# Keep the common straight shots/orbs batchable; changing the canvas
+		# transform per bullet splits batches on software and integrated GPUs.
+		assets.sprite(self,visual.key,Rect2(bullet.pos.round()-visual.size/2,visual.size),clock)
+	else:
+		draw_set_transform(bullet.pos.round(),visual.render_angle)
+		assets.sprite(self,visual.key,Rect2(-visual.size/2,visual.size),clock)
+		draw_set_transform(Vector2.ZERO)
 	if hitboxes:
-		draw_rect(Rect2(bullet.pos - size / 2, size), Color.YELLOW, false, 1)
+		var size=bullet.get("size",Vector2(8,4))
+		draw_rect(Rect2(bullet.pos-size/2,size),Color.YELLOW,false,1)
 
 func _draw_hud():
-	assets.panel(self, Rect2(0, 336, 640, 24))
+	assets.sprite(self,"w01_ui_hud_idle",Rect2(0,336,640,24))
 	_pixel(Rect2(8, 340, 120, 8), Color(0.15, 0.2, 0.26))
 	var ratio = clampf(float(game.player.shield) / float(game.stats.max_shield), 0, 1)
 	for index in range(12):
 		if ratio * 12 > index:
 			_pixel(Rect2(9 + index * 10, 341, 8, 6), Color(0.2, 0.85, 0.75))
-	_label("%d/%d" % [ceili(game.player.shield), int(game.stats.max_shield)], Vector2(40, 350))
+	_label("%d/%d" % [ceili(game.player.shield), int(game.stats.max_shield)], Vector2(40, 349))
 	var weapons = ["shot", "missile", "bomb"]
 	for index in range(3):
 		var x = 140 + index * 41
-		assets.sprite(self, "w01_ui_item_%s_idle" % weapons[index], Rect2(x, 338, 12, 12))
+		assets.sprite(self, "w01_ui_item_%s_idle" % weapons[index], Rect2(x, 338, 16, 16))
 		var effective=maxi(int(game.profile.weapons.missile),int(game.stats.min_missile)) if weapons[index]=="missile" else int(game.profile.weapons[weapons[index]])
 		_label(str(effective), Vector2(x + 17, 340))
 		for level in range(effective):
@@ -1000,7 +1046,7 @@ func _draw_hud():
 	for index in range(int(game.stats.max_bombs)):
 		assets.sprite(self, "w01_ui_item_bomb_idle", Rect2(270 + index * 14, 342, 12, 12), 0, Color.WHITE if index < int(game.profile.bombs) else Color(0.2, 0.3, 0.4))
 	assets.sprite(self, "w01_ui_item_coin_idle", Rect2(350, 342, 12, 12))
-	_label("INFINITO" if sandbox else str(int(game.profile.credits)), Vector2(365, 345))
+	_label("INFINITO" if sandbox else str(int(game.profile.credits)), Vector2(369, 344))
 	_pixel(Rect2(450, 343, 180, 6), Color(0.12, 0.2, 0.28))
 	var duration = maxf(1, float(game.world.get("duracion_hasta_jefe_seg", 300)))
 	_pixel(Rect2(450, 343, 180 * (1.0 if game.state=="boss" else clampf(game.world_time / duration, 0, 1)), 6), Color(0.35, 0.65, 0.9))
@@ -1008,7 +1054,19 @@ func _draw_hud():
 	if mini > 0:
 		_pixel(Rect2(450 + 180 * mini / duration, 341, 2, 10), Color.YELLOW)
 	_pixel(Rect2(628, 341, 2, 10), Color(1, 0.4, 0.5))
-	_label("M%d %s" % [game.profile.world, _time(game.world_time)], Vector2(485, 351))
+	_label("M%d %s" % [game.profile.world, _time(game.world_time)], Vector2(485, 349))
+
+func _draw_equipment():
+	var gear=["sonar","ctd","deflector"]
+	for index in range(gear.size()):
+		var id=gear[index]
+		var owned=game.profile.equipment.get(id,false)
+		var x=6+index*88
+		var color=[Color(0.5,0.95,0.9),Color(1,0.85,0.5),Color(0.8,0.65,1)][index]
+		assets.sprite(self,"w01_ui_panel_idle",Rect2(x,314,84,20),0,Color(1,1,1,0.72 if owned else 0.35))
+		assets.sprite(self,"w01_ui_equipment_%s_idle"%id,Rect2(x+2,316,16,16),clock,Color.WHITE if owned else Color(0.45,0.5,0.6))
+		_label(id.to_upper(),Vector2(x+21,315),color)
+		_label("LISTO" if owned else "NO INST.",Vector2(x+21,325),Color.WHITE if owned else Color(0.6,0.7,0.8))
 
 func _draw_shop():
 	for entry in shop_rows:

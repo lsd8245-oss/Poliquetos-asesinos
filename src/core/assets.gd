@@ -63,10 +63,33 @@ func get_texture(key: String, time: float = 0.0) -> Texture2D:
 	index = index % frames.size() if animation["loop"] else mini(index, frames.size() - 1)
 	return frames[index]
 
+func animation_frames(key:String)->int:
+	return _animations.get(key,{"frames":[]}).frames.size()
+
+func animation_fps(key:String)->float:
+	return maxf(1.0,float(_animations.get(key,{"fps":1}).fps))
+
+func animation_duration(key:String)->float:
+	return float(animation_frames(key))/animation_fps(key)
+
 func sprite(canvas: CanvasItem, key: String, rect: Rect2, time: float = 0.0, modulate: Color = Color.WHITE) -> void:
 	var texture: Texture2D = get_texture(key, time)
 	if texture != null:
 		canvas.draw_texture_rect(texture, rect, false, modulate)
+
+func organic_sprite(canvas:CanvasItem,key:String,rect:Rect2,time:float,modulate:Color)->void:
+	var texture=get_texture(key,time)
+	if texture==null:return
+	# Four PNG strips articulate existing anatomy; one logical pixel of sway,
+	# different phase per body section, without touching simulation geometry.
+	var width=float(texture.get_width())
+	for index in range(4):
+		var left=floorf(index*width/4.0)
+		var right=floorf((index+1)*width/4.0)
+		var sway=roundf(sin(time*6.0-index*1.2))
+		var source=Rect2(left,0,right-left,texture.get_height())
+		var dest=Rect2(rect.position+Vector2(left/width*rect.size.x,sway),Vector2((right-left)/width*rect.size.x,rect.size.y))
+		canvas.draw_texture_rect_region(texture,dest,source,modulate)
 
 func visible_regions(key:String,time:float=0.0)->Array:
 	var texture=get_texture(key,time)

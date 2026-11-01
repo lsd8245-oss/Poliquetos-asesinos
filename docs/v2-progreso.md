@@ -130,3 +130,11 @@ Se reprodujo el bloqueo del instalador anterior con el PCK y su EXE bajo Wine: M
 La suite actual pasa 27 controles con render (25 sin render). La regresión aislada sobre los dos payloads extraídos comprueba oleada a10s, tiempo20s, scroll1200px, movimiento, disparos enemigos y bajas. Se ejecutan además los PE Windows con ventana/teclado/grabación mediante Wine; no es Windows real ni una instalación NSIS completada. Los dos instaladores se reconstruyen y verifican por CRC, PE/PCK y SHA-256. [Informe, capturas, vídeos, comandos y pendientes](verificacion/rescate-w01/README.md).
 
 Se entrega únicamente la corrección A. La instalación/desinstalación Windows real, mando y aceptación del usuario siguen pendientes. No se declara finalizado mundo1 ni se inicia B1–B4 o mundo2.
+
+## Encargo03 — B1 visual W01 entregado para revisión
+
+Base d31d340, rama `pulido/w01-combate-vfx-b1`. Se integran50 animaciones/197PNG de proyectiles, FX, ítems, HUD/equipo, variantes cromáticas y ambiente; se conservan nave científica, criaturas, datos y sistemas. Cuatro profundidades y tres sectores, elementos ambientales con fases propias y respuesta visual a movimiento/daño. Se auditan las cuatro capturas del usuario y se corrige además un halo oscuro detectado solo al grabar el EXE, reconstruyendo el paquete después de la reparación.
+
+28 controles nativos aprobados,25 pruebas Python incluidas;174 archivos funcionales/sonoros/taxonómicos preservados por hash. Vídeos reales de ambos PE Windows bajo Wine,40s efectivos y aproximadamente50s de grabación, sinF3/invulnerabilidad/inyección;22 enemigos generados y14 bajas en cada edición. Fixtures de armas/bomba/minijefe/jefe a×1/×2/×3 etiquetados. Ambos payloads grabados coinciden con los extraídos de los instaladores finales y se verifican CRC/PE/PCK/licencias/hashes. [Informe y evidencia](verificacion/pulido-w01/README.md).
+
+La medición aislada llvmpipe da46,63FPS medios,21,44ms de media y29,76ms p95 bajo carga50enemigos/200balas/64aliadas. El objetivo60FPS no se acredita en este entorno; no se extrapola a Windows físico. Instalación Windows real, mando y aprobación visual/jugable del usuario siguen pendientes. Los PNG son `integrated-review`, no arte final aprobado. B1 no se declara aceptado por pasar tests; B2/B3/B4 y mundo2 no se inician.
