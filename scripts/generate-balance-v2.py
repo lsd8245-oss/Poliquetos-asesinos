@@ -48,7 +48,7 @@ def generate():
     columns = ["mundo", "acto", "enemigos", "duracion_hasta_jefe_seg", "jefe_objetivo_seg", "base_monedas", "bono_sin_morir", "acumulado", "equipo_desbloqueado", "vida_enemigo_pequeno", "vida_jefe", "vida_minijefe", "dps_ref", "acumulado_con_bono", "gasto_maximo_desbloqueado", "gasto_maximo_asequible"]
     for name, rows, fields in [("balance_sheet", balance, columns), ("shop_sheet", shop, list(shop[0]))]:
         with (ROOT / f"docs/{name}.csv").open("w", newline="", encoding="utf-8") as handle:
-            writer = csv.DictWriter(handle, fieldnames=fields)
+            writer = csv.DictWriter(handle, fieldnames=fields, lineterminator="\n")
             writer.writeheader()
             writer.writerows(rows)
     print(f"17 visits; income {cumulative}/21480; upgrades {all_upgrades}; shop {expense}")

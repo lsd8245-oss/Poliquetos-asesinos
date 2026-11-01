@@ -45,6 +45,6 @@ def main():
     (ROOT/'data/balance_report.json').write_text(json.dumps(result,ensure_ascii=False,indent=2)+'\n')
     with (ROOT/'docs/boss_balance.csv').open('w') as f:
         fields=['world','group','target_seconds','minimum_seconds','budget','weapon_level_bound','base_hp','tuned_hp','normal_continuous_lower_seconds']
-        writer=csv.DictWriter(f,fieldnames=fields,extrasaction='ignore');writer.writeheader();writer.writerows(reports)
+        writer=csv.DictWriter(f,fieldnames=fields,extrasaction='ignore',lineterminator='\n');writer.writeheader();writer.writerows(reports)
     print(f'{len(reports)} encounters calibrated; nominal base budget excludes optional coin bonuses; min-time tests required.')
 if __name__=='__main__':main()
