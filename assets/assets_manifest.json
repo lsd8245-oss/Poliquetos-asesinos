@@ -3772,6 +3772,110 @@
       "estado": "placeholder"
     },
     {
+      "nombre": "w01_ui_ship_batiscafo_amarillo_move",
+      "mundo": 1,
+      "tipo": "ui",
+      "ruta": "assets/ui/w01_ui_ship_batiscafo_amarillo_move_01.png",
+      "tamano": [
+        48,
+        24
+      ],
+      "cuadros": 4,
+      "fps": 10,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w01_ui_ship_coral_move",
+      "mundo": 1,
+      "tipo": "ui",
+      "ruta": "assets/ui/w01_ui_ship_coral_move_01.png",
+      "tamano": [
+        48,
+        24
+      ],
+      "cuadros": 4,
+      "fps": 10,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w01_ui_ship_abisal_move",
+      "mundo": 1,
+      "tipo": "ui",
+      "ruta": "assets/ui/w01_ui_ship_abisal_move_01.png",
+      "tamano": [
+        48,
+        24
+      ],
+      "cuadros": 4,
+      "fps": 10,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w01_ui_ship_bioluminiscente_move",
+      "mundo": 1,
+      "tipo": "ui",
+      "ruta": "assets/ui/w01_ui_ship_bioluminiscente_move_01.png",
+      "tamano": [
+        48,
+        24
+      ],
+      "cuadros": 4,
+      "fps": 10,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w01_ui_ship_magma_move",
+      "mundo": 1,
+      "tipo": "ui",
+      "ruta": "assets/ui/w01_ui_ship_magma_move_01.png",
+      "tamano": [
+        48,
+        24
+      ],
+      "cuadros": 4,
+      "fps": 10,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w01_ui_ship_laboratorio_move",
+      "mundo": 1,
+      "tipo": "ui",
+      "ruta": "assets/ui/w01_ui_ship_laboratorio_move_01.png",
+      "tamano": [
+        48,
+        24
+      ],
+      "cuadros": 4,
+      "fps": 10,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w01_ui_ship_fantasma_move",
+      "mundo": 1,
+      "tipo": "ui",
+      "ruta": "assets/ui/w01_ui_ship_fantasma_move_01.png",
+      "tamano": [
+        48,
+        24
+      ],
+      "cuadros": 4,
+      "fps": 10,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w01_ui_ship_dorado_move",
+      "mundo": 1,
+      "tipo": "ui",
+      "ruta": "assets/ui/w01_ui_ship_dorado_move_01.png",
+      "tamano": [
+        48,
+        24
+      ],
+      "cuadros": 4,
+      "fps": 10,
+      "estado": "placeholder"
+    },
+    {
       "nombre": "w01_ui_panel_idle",
       "mundo": 1,
       "tipo": "ui",

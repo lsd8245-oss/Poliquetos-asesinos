@@ -126,6 +126,8 @@ func start(p: Dictionary, restore_checkpoint: Dictionary = {}):
 		boss_spawned = false
 		scroll = world_time*float(world.get("scroll_px_s",60))
 	checkpoint = {"time":world_time,"cursor":cursor,"mini_defeated":mini_defeated,"regular_spawned":regular_spawned,"regular_kills":regular_kills,"world_collected":world_collected}
+	if stage_system != null:
+		stage_system.begin(self)
 	if int(profile.world)==14 and int(profile.get("lab_boss",0))>0:
 		world_time = float(world.duracion_hasta_jefe_seg)
 		mini_defeated = true
@@ -133,8 +135,6 @@ func start(p: Dictionary, restore_checkpoint: Dictionary = {}):
 		state = "alert"
 		phase_clock = 0.0
 		set_notice("SALA %d DEL LABORATORIO" % (int(profile.lab_boss)+1),2.0)
-	elif stage_system != null:
-		stage_system.begin(self)
 
 func world_config(id: int) -> Dictionary:
 	if id == 15:
@@ -207,6 +207,7 @@ func step(dt: float, input: Dictionary = {}):
 	step_hazards(dt)
 	step_drops(dt)
 	for i in range(effects.size()-1,-1,-1):
+		effects[i]["age"]=float(effects[i].get("age",0))+dt
 		effects[i].ttl -= dt
 		if effects[i].ttl<=0:
 			effects.remove_at(i)
@@ -558,6 +559,9 @@ func finish_encounter():
 	phase_clock=0.0
 
 func continue_campaign():
+	if profile.get("completed",false) and not replay:
+		state="victory"
+		return
 	profile.resume="playing"
 	if replay:
 		var money=float(profile.credits)

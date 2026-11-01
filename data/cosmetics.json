@@ -1,0 +1,56 @@
+[
+  {
+    "id": "original",
+    "nombre": "Casco original",
+    "desbloqueo": "inicio",
+    "sprite_set": "ui_ship_original"
+  },
+  {
+    "id": "batiscafo_amarillo",
+    "nombre": "Batiscafo amarillo",
+    "desbloqueo": "mundo4_completado",
+    "sprite_set": "ui_ship_batiscafo_amarillo"
+  },
+  {
+    "id": "coral",
+    "nombre": "Coral",
+    "desbloqueo": "objeto_jefe3",
+    "sprite_set": "ui_ship_coral"
+  },
+  {
+    "id": "abisal",
+    "nombre": "Abisal",
+    "desbloqueo": "objeto_jefe6",
+    "sprite_set": "ui_ship_abisal"
+  },
+  {
+    "id": "bioluminiscente",
+    "nombre": "Bioluminiscente",
+    "desbloqueo": "objeto_jefe9",
+    "sprite_set": "ui_ship_bioluminiscente"
+  },
+  {
+    "id": "magma",
+    "nombre": "Magma",
+    "desbloqueo": "objeto_jefe12",
+    "sprite_set": "ui_ship_magma"
+  },
+  {
+    "id": "laboratorio",
+    "nombre": "Laboratorio",
+    "desbloqueo": "eunice_derrotada",
+    "sprite_set": "ui_ship_laboratorio"
+  },
+  {
+    "id": "fantasma",
+    "nombre": "Fantasma",
+    "desbloqueo": "mundo_dificil_sin_muertes",
+    "sprite_set": "ui_ship_fantasma"
+  },
+  {
+    "id": "dorado",
+    "nombre": "Dorado",
+    "desbloqueo": "partida_sin_muertes",
+    "sprite_set": "ui_ship_dorado"
+  }
+]

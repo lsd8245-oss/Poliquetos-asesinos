@@ -1,0 +1,273 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://poliquetos.local/schemas/save.schema.json",
+  "title": "Native profile v2 (one edition-scoped slot)",
+  "type": "object",
+  "properties": {
+    "version": {
+      "const": 2
+    },
+    "edition": {
+      "enum": [
+        "normal",
+        "pruebas"
+      ]
+    },
+    "slot": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 3
+    },
+    "difficulty": {
+      "enum": [
+        "easy",
+        "normal",
+        "hard"
+      ]
+    },
+    "world": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 15
+    },
+    "lab_boss": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 4
+    },
+    "credits": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "upgrades": {
+      "type": "object",
+      "properties": {
+        "escudo_max": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 5
+        },
+        "dano": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 5
+        },
+        "cadencia": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 4
+        },
+        "misiles": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 4
+        },
+        "bombas": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 3
+        },
+        "regeneracion": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 3
+        },
+        "iman": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 3
+        },
+        "velocidad": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 3
+        }
+      },
+      "additionalProperties": false
+    },
+    "equipment": {
+      "type": "object",
+      "properties": {
+        "sonar": {
+          "type": "boolean"
+        },
+        "draga": {
+          "type": "boolean"
+        },
+        "red_arrastre": {
+          "type": "boolean"
+        },
+        "niskin": {
+          "type": "boolean"
+        },
+        "box_corer": {
+          "type": "boolean"
+        },
+        "ctd": {
+          "type": "boolean"
+        },
+        "multicorer": {
+          "type": "boolean"
+        },
+        "rov": {
+          "type": "boolean"
+        },
+        "lander": {
+          "type": "boolean"
+        },
+        "deflector": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "sonar"
+      ],
+      "additionalProperties": false
+    },
+    "weapons": {
+      "type": "object",
+      "properties": {
+        "shot": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 8
+        },
+        "missile": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 8
+        },
+        "bomb": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 8
+        }
+      },
+      "required": [
+        "shot",
+        "missile",
+        "bomb"
+      ],
+      "additionalProperties": false
+    },
+    "bombs": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 5
+    },
+    "skins": {
+      "type": "array",
+      "items": {
+        "enum": [
+          "original",
+          "batiscafo_amarillo",
+          "coral",
+          "abisal",
+          "bioluminiscente",
+          "magma",
+          "laboratorio",
+          "fantasma",
+          "dorado"
+        ]
+      },
+      "minItems": 1,
+      "uniqueItems": true
+    },
+    "skin": {
+      "enum": [
+        "original",
+        "batiscafo_amarillo",
+        "coral",
+        "abisal",
+        "bioluminiscente",
+        "magma",
+        "laboratorio",
+        "fantasma",
+        "dorado"
+      ]
+    },
+    "colors": {
+      "type": "object",
+      "properties": {
+        "hull": {
+          "type": "string",
+          "pattern": "^#?[0-9a-fA-F]{3,8}$"
+        },
+        "lights": {
+          "type": "string",
+          "pattern": "^#?[0-9a-fA-F]{3,8}$"
+        },
+        "trail": {
+          "type": "string",
+          "pattern": "^#?[0-9a-fA-F]{3,8}$"
+        }
+      },
+      "required": [
+        "hull",
+        "lights",
+        "trail"
+      ],
+      "additionalProperties": false
+    },
+    "deaths": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "integer",
+        "minimum": 0
+      }
+    },
+    "time": {
+      "type": "number",
+      "minimum": 0
+    },
+    "cleared": {
+      "type": "array",
+      "items": {
+        "type": "integer",
+        "minimum": 1,
+        "maximum": 15
+      }
+    },
+    "seed": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "completed": {
+      "type": "boolean"
+    },
+    "_integer_paths": {
+      "type": "array",
+      "items": {
+        "type": "array",
+        "items": {
+          "type": [
+            "string",
+            "integer"
+          ]
+        }
+      }
+    }
+  },
+  "required": [
+    "version",
+    "edition",
+    "slot",
+    "difficulty",
+    "world",
+    "lab_boss",
+    "credits",
+    "upgrades",
+    "equipment",
+    "weapons",
+    "bombs",
+    "skins",
+    "skin",
+    "colors",
+    "deaths",
+    "time",
+    "cleared",
+    "seed",
+    "completed"
+  ],
+  "additionalProperties": true
+}

@@ -71,3 +71,7 @@ Jefes por segmentos, puntos débiles, fases que no se saltan, invulnerabilidad3s
 ### Fase6
 
 HojasCSV generadas antes de programar la tienda. Totales17900base/21480bono/30450compras. Mejoras8familias y9equipos pasivos, compras por acto, reembolso100%soloenmisma visita con tokens invalidados al salir. Pruebas89comprobaciones de tienda/guardado pasan; ambos modos empiezan sin mejoras y solo con sonar.
+
+### Fase7
+
+Menús nativos de portada, dificultad, tres ranuras, pausa con cuenta atrás, muerte, resultados y descanso; astillero3zonas, skins por logros, remapeo teclado/mando, opciones y selector exclusivo dePruebas. Guardado JSONuser:// con .bak, importación/exportación, perfiles independientes y restauración del descanso.133comprobaciones deUI y89de tienda/guardado aprobadas.
