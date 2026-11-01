@@ -35,8 +35,9 @@ class CampaignDataTests(unittest.TestCase):
         hp = [1750,2100,2450,3300,3700,4100,5150,6300,6100,6550,7000,7500,9950,35750]
         minis = [975,1170,1365,1560,1755,1950,2145,2340,2535,2730,2925,3120,3315,3510]
         for w, expected, mini in zip(worlds,hp,minis):
-            self.assertEqual(sum(bosses[k]['vida'] for k in w['jefes']), expected)
+            self.assertEqual(sum(bosses[k].get('vida_base',bosses[k]['vida']) for k in w['jefes']), expected)
             self.assertEqual(bosses[w['minijefe']]['vida'], mini)
+            self.assertTrue(all(bosses[k]['vida']>=bosses[k].get('vida_base',bosses[k]['vida']) for k in w['jefes']))
             for key in w['jefes']:
                 b = bosses[key]
                 self.assertEqual(b['fases'][0]['desde_pct'],100)

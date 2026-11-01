@@ -1,0 +1,24 @@
+[
+  {
+    "edition": "Normal",
+    "installer_bytes": 26441739,
+    "installer_sha256": "d40a4872ebdfa2b0746b9d02434b805623987f0574a330600cce3988644a185d",
+    "payload_sha256": "97ba2a96b1eb0c1c58d627e12cc0f1b8f7d023482acbed296a87b65ca0e9eaf4",
+    "windows_pe_x64": true,
+    "embedded_pck": true,
+    "installer_crc_and_payload": true,
+    "packed_runtime_probe": "normal",
+    "probe_host": "Godot Linux 4.6.3, not native Windows"
+  },
+  {
+    "edition": "Pruebas",
+    "installer_bytes": 26437578,
+    "installer_sha256": "d1bdb90f61cc2a41ec127655413de0dd2bea65e278e80004f32b432c4481dfad",
+    "payload_sha256": "5e02c4e756b011a92a45afe1d99d0689159d59e5b4d46b73d6b249a3c7f3df7e",
+    "windows_pe_x64": true,
+    "embedded_pck": true,
+    "installer_crc_and_payload": true,
+    "packed_runtime_probe": "pruebas",
+    "probe_host": "Godot Linux 4.6.3, not native Windows"
+  }
+]

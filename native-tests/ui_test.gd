@@ -123,7 +123,14 @@ func run():
 		for button in ui.buttons:
 			check(button.rect.position.y >= 0 and button.rect.end.y <= 336 and button.rect.position.x >= 0 and button.rect.end.x <= 640, "button fits viewport: " + page)
 		await process_frame
+	var audio_refs=ui.audio._streams.values().map(func(value):return weakref(value))
 	ui.queue_free()
 	await process_frame
+	for poll in range(100):
+		var alive=false
+		for reference in audio_refs:
+			if reference.get_ref()!=null:alive=true
+		if not alive:break
+		await create_timer(0.01).timeout
 	print("UI TESTS PASS: %d checks" % checks)
 	quit()

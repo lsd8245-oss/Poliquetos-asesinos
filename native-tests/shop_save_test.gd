@@ -118,6 +118,74 @@ func run_tests() -> void:
 	malformed.weapons.shot = 9
 	check(not Saves.import_slot(3, JSON.stringify(malformed)).ok, "out of range weapon rejected")
 	check(Saves.load_slot(3).profile.credits == 456, "invalid imports preserve existing save")
+	var bad_optional := {
+		"claimed_drops": [[], {"drop": 1}],
+		"rewarded": [[], {"1:0": "true"}],
+		"world_entry_weapons": [[], {"shot": 9, "missile": 1, "bomb": 1}, {"shot": 1}],
+		"entry_world": [0, 16, "1"],
+		"lander_used_world": [-1, 16, true],
+		"coins_total": [-1, "100"],
+		"replay_mode": ["true", 1],
+		"replay_earned": [-1, []],
+		"replay_return": [[], {}, sandbox],
+		"resume": ["unknown", []]
+	}
+	for key in bad_optional:
+		for bad_value in bad_optional[key]:
+			malformed = p.duplicate(true)
+			malformed[key] = bad_value
+			check(not Saves.import_slot(3, JSON.stringify(malformed)).ok, "reject malformed optional " + key)
+			check(not Saves.save_slot(3, malformed).ok, "reject malformed native optional " + key)
+	var valid_optional: Dictionary = p.duplicate(true)
+	valid_optional.slot = 2
+	valid_optional.claimed_drops = {"1:0:carrier0": true}
+	valid_optional.rewarded = {"1:0": true}
+	valid_optional.world_entry_weapons = {"shot": 4, "missile": 2, "bomb": 1}
+	valid_optional.entry_world = 14
+	valid_optional.lander_used_world = 0
+	valid_optional.coins_total = 200.5
+	valid_optional.replay_earned = 12.5
+	valid_optional.replay_mode = true
+	valid_optional.replay_return = p.duplicate(true)
+	valid_optional.resume = "rest"
+	check(Saves.save_slot(2, valid_optional).ok, "valid optional replay state saved")
+	check(Saves.load_slot(2).profile == valid_optional, "optional replay state exact numeric round trip")
+	malformed = valid_optional.duplicate(true)
+	malformed.replay_return.claimed_drops = []
+	check(not Saves.import_slot(3, JSON.stringify(malformed)).ok, "nested replay profile validated recursively")
+	malformed = p.duplicate(true)
+	malformed.replay_mode = true
+	check(not Saves.import_slot(3, JSON.stringify(malformed)).ok, "replay mode requires return profile")
+	malformed = p.duplicate(true)
+	malformed.coins_total = INF
+	check(not Saves.save_slot(3, malformed).ok, "nonfinite optional number rejected")
+	malformed = p.duplicate(true)
+	malformed.replay_return = malformed
+	check(not Saves.save_slot(3, malformed).ok, "cyclic native replay profile rejected before duplication")
+	malformed.erase("replay_return")
+	var cyclic: Array = []
+	cyclic.append(cyclic)
+	malformed.optional_history = cyclic
+	check(not Saves.save_slot(3, malformed).ok, "cyclic optional native array rejected")
+	cyclic.clear()
+	malformed = p.duplicate(true)
+	malformed.replay_return = valid_optional.duplicate(true)
+	malformed.replay_return.replay_return.coins_total = -1
+	check(not Saves.import_slot(3, JSON.stringify(malformed)).ok, "deep replay return validated")
+	check(Saves.save_slot(2, valid_optional).ok, "valid optional backup generation")
+	malformed = valid_optional.duplicate(true)
+	malformed.claimed_drops = []
+	file = FileAccess.open(Saves.file_path(2), FileAccess.WRITE)
+	file.store_string(JSON.stringify(malformed))
+	file.close()
+	loaded = Saves.load_slot(2)
+	check(loaded.ok and loaded.recovered and loaded.profile == valid_optional, "semantic optional corruption recovers exact backup")
+	check(Saves.save_slot(2, valid_optional).ok, "overwrite semantic corruption without damaging backup")
+	file = FileAccess.open(Saves.file_path(2), FileAccess.WRITE)
+	file.store_string("{}")
+	file.close()
+	loaded = Saves.load_slot(2)
+	check(loaded.ok and loaded.recovered and loaded.profile == valid_optional, "semantic bad primary never promoted to backup")
 	var options := {"master": 8, "music": 4, "effects": 6, "screen": "window2", "autofire": true, "shake": false, "reduce_flashes": true, "bindings": {"fire": "Z"}}
 	check(Saves.save_options(options).ok, "save options")
 	check(Saves.load_options().options == options, "restore exact options")

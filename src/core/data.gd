@@ -21,8 +21,8 @@ static func read_json(relative: String, fallback = null):
 
 static func all() -> Dictionary:
 	var d = {}
-	for name in ["combat", "worlds", "enemies", "bosses", "shop", "cosmetics", "escape", "boss_patterns"]:
-		d[name] = read_json("data/%s.json" % name, {} if name in ["combat", "shop", "escape", "boss_patterns"] else [])
+	for name in ["combat", "worlds", "enemies", "bosses", "shop", "cosmetics", "escape", "boss_patterns", "balance_report"]:
+		d[name] = read_json("data/%s.json" % name, {} if name in ["combat", "shop", "escape", "boss_patterns", "balance_report"] else [])
 	d["waves"] = {}
 	for n in range(1, 15):
 		d.waves[n] = read_json("data/waves/world_%02d.json" % n, {"eventos":[]})

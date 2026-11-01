@@ -37,7 +37,8 @@
     "phase_x": 0.78,
     "burst_count": 3,
     "burst_gap": 0.12,
-    "bullet_base_speed": 90
+    "bullet_base_speed": 90,
+    "weak_radius": 16
   },
   "profiles": {
     "nereis": {
@@ -54,7 +55,13 @@
       "amplitude": 105,
       "frequency": 0.7,
       "fan_degrees": 46,
-      "split_gap": 52
+      "split_gap": 52,
+      "split_size_x": 0.52,
+      "split_size_y": 0.65,
+      "split_speed_a": 42,
+      "split_speed_b": 57,
+      "split_pursuit_x": 120,
+      "split_pursuit_gap_x": 40
     },
     "capit": {
       "intervals": [
@@ -411,7 +418,12 @@
       "jaw_height": 140,
       "debris_count": 6,
       "segment_height": 38,
-      "phase_x": 0.76
+      "phase_x": 0.76,
+      "antenna_count": 5,
+      "antenna_width": 14,
+      "antenna_height": 60,
+      "antenna_span": 0.7,
+      "antenna_inset": 16
     },
     "mini": {
       "intervals": [
@@ -430,5 +442,15 @@
       "entry_height": 65,
       "move_speed": 28
     }
+  },
+  "choreography": {
+    "robot_entry_gap": 3,
+    "robot_solo_turn": 6,
+    "robot_pair_turn": 5,
+    "robot_phase_thresholds": [
+      0.66,
+      0.33
+    ],
+    "robot_fused_scale": 1.65
   }
 }

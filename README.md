@@ -1,66 +1,48 @@
-# Poliquetos asesinos · PoliGames
+# Poliquetos Asesinos · Juego nativo para Windows
 
-Videojuego 2D de exploración y combate submarino. Abre **`poliquetos_asesinos_8_edicion_sonora (18).html`** en Chrome, Edge o Firefox. El juego completo, sus gráficos y sonidos están incluidos: el modo individual funciona sin internet.
+Nueva implementación en **Godot 4.6.3**, individual y sin conexión. Se instala y abre como aplicación de escritorio; no necesita navegador, Python ni Godot instalado para jugar.
 
-**Rediseño v2 en desarrollo:** la [nueva especificación](docs/specs/poliquetos-asesinos-v2.md) reemplaza al PDF como objetivo futuro. La fase 0 prepara el inventario y los contratos de datos; los HTML actuales todavía contienen la campaña descrita más abajo. Consulta [lo hecho y lo pendiente](docs/v2-progreso.md) y las [decisiones técnicas](docs/decisiones.md). Las canciones siguen pendientes.
+## Descargar
 
-Para actualizar conservando tus guardados, reemplaza el HTML anterior en su misma carpeta y usa el mismo navegador. No borres los datos del sitio. También puedes servir esta carpeta:
+- [Instalador Normal](https://github.com/lsd8245-oss/Poliquetos-asesinos/raw/refs/heads/juego-nativo-v2/entregas/Poliquetos-Normal-Instalar.exe).
+- [Instalador Pruebas](https://github.com/lsd8245-oss/Poliquetos-asesinos/raw/refs/heads/juego-nativo-v2/entregas/Poliquetos-Pruebas-Instalar.exe).
 
-```sh
-python3 -m http.server 8000 --bind 127.0.0.1
-```
+Windows 10/11 de 64 bits y OpenGL 3.3. Abre el instalador, elige la carpeta y usa el acceso directo del escritorio. Cada edición se instala por separado para tu usuario. Si el repositorio es privado, inicia sesión en GitHub con acceso antes de descargar. Los hashes están en [entregas/SHA256.json](entregas/SHA256.json).
 
-## Campaña del PDF
+**Arte provisional:** los PNG son rectángulos identificados, como exige la sección2.10 de la especificación para trabajar mientras se produce el arte aparte. El juego todavía necesita esos diseños definitivos. Las canciones siguen pendientes; hay 39 efectos de juego originales.
 
-| Acto | Mundos |
-|---|---|
-| 1 | Superficie marina, playas arenosas, costa rocosa, bosques de kelp |
-| 2 | Arrecifes tropicales, pastos marinos, estuarios y fango, sedimentos contaminados |
-| 3 | Zona planctónica, Antártica, restos de ballena, campos hidrotermales, zona hadal |
-| 4 | El laboratorio |
+## Campaña y controles
 
-Son **14 mundos y 144 sectores**. Los primeros 13 mundos tienen 9 sectores normales y un encuentro de jefe. Las cantidades y las familias/géneros siguen la distribución del PDF. El laboratorio tiene 9 oleadas, un cuarteto mecánico, epítoke, científico, Eunice anclada y un único rescate: sobrevive 180 segundos, con pausa efectiva y oleadas continuas.
+14 mundos con una etapa larga, minijefe y jefe; laboratorio con 250 enemigos y cuatro encuentros separados por tienda/guardado; escape final de cinco minutos. Ataques por fases, partes con colisiones propias, puntos débiles, portadoras de armas y peligros por hábitat.
 
-La pantalla de derrota permite reintentar desde el comienzo del sector actual, conservando el equipamiento y las monedas de ese punto. Los guardados de la campaña anterior se migran por hábitat, manteniendo las recompensas ya cobradas y el acceso a los mundos.
+| Acción | Teclado | Mando |
+|---|---|---|
+| Mover | WASD o flechas | Stick izquierdo/cruceta |
+| Disparo | Z o Espacio | A |
+| Bomba | X | B |
+| Pausa | P o Esc | Start |
+| Hitboxes de depuración | F3 | |
 
-## Descanso, tienda y aspecto
+Los misiles son automáticos. En Opciones puedes reasignar teclado/mando, activar disparo automático, cambiar escala entera/pantalla completa, audio, temblor y destellos. El descanso contiene tienda, astillero de tres colores, skins, guardado y repetición de mundos superados.
 
-Después de cada sector puedes continuar, comprar, visitar el **Astillero** o guardar y salir. El Astillero permite cambiar aspecto sin reanudar la misión. Algunas skins son trofeos y otras se compran; la colección cosmética permanece entre expediciones en este navegador.
+Normal mantiene progreso y dinero habituales. Pruebas tiene acceso a todos los mundos, al escape y a los cuatro encuentros del laboratorio, elección explícita de niveles de arma, todas las skins y dinero ilimitado. Empieza sin comprar equipo/mejoras, salvo el sonar; conserva las mismas estadísticas base y las reglas de daño.
 
-Los equipos se compran por acto:
+## Partidas
 
-- Acto 1: draga y arrastre. Sonar disponible desde el inicio.
-- Acto 2: Niskin, box corer y CTD.
-- Acto 3: multicorer, ROV y lander.
-- Acto 4: deflector.
+Tres ranuras JSON por edición, con copia `.bak` y recuperación si la principal está dañada. Se guardan automáticamente al descansar; también puedes guardar, exportar, importar y abrir la carpeta desde el juego. En Windows están bajo `%APPDATA%/Poliquetos Asesinos/normal` y `pruebas`. Desinstalar conserva las partidas.
 
-Las compras y los créditos se validan en el motor/anfitrión; la colección cosmética persistente se importa del perfil local y solo permite aplicar aspectos registrados como propios. No aporta estadísticas de combate.
+El juego HTML anterior permanece en el repositorio y sus guardados del navegador no se borran. La nueva campaña usa otro formato; no hay importación automática de sus 144 sectores al recorrido nativo. [Documentación del legado](docs/LEGADO-WEB.md).
 
-## Controles y opciones
+## Desarrollo y verificación
 
-WASD mueve; flechas o ratón disparan; F evade; H rescata al copiloto; 1 y 2 usan consumibles; P/Esc pausa. Los atajos de cada equipo se pueden cambiar en **Opciones**, con prevención de teclas duplicadas o reservadas.
-
-Los controles de audio se simplifican a música, efectos y sus respectivos volúmenes. **Las composiciones, canciones, instrumentos y muestras no se han sustituido**: quedan pendientes del trabajo musical del autor. El sonido comienza al interactuar con el juego.
-
-El modo ECO reduce partículas y luz; la preferencia de movimiento reducido desactiva desplazamientos y animaciones decorativas. El cooperativo requiere internet y PeerJS/WebRTC; ambos jugadores deben usar esta misma versión.
-
-## Pruebas
-
-Node.js, Playwright y Chromium están disponibles en el entorno cloud preparado; no son necesarios para jugar.
-
-La validación de datos v2 requiere Python 3 y `python3 -m pip install -r requirements-dev.txt`; tampoco son necesarios para jugar.
+Consulta [la especificación](docs/specs/poliquetos-asesinos-v2.md), [las decisiones](docs/decisiones.md), [el progreso y las limitaciones verificadas](docs/v2-progreso.md) y [la construcción nativa](docs/BUILD-NATIVE.md).
 
 ```sh
+python3 -m pip install -r requirements-dev.txt
+python3 scripts/test-native.py
 node --test
 ```
 
-Puedes indicar otro Chromium mediante `CHROMIUM_PATH`. Las pruebas usan copias instrumentadas exclusivamente dentro de los servidores/VM de test: el juego distribuido no expone una API de depuración. Se comprueban campaña, conteos, jefes, economía, migración, reintento, rescate, skins, astillero, atajos, audio y HUD.
+La suite nativa comprueba datos, assets, armas, colisiones, jefes, economía, guardado, UI, reintento, repetición, final y arranque de ambas ediciones. Detecta errores de scripts aunque Godot devuelva código 0. La campaña completa también se recorre con daño artificial de prueba; eso verifica el flujo, no el tiempo de una partida humana.
 
-## Dos ediciones, desde esta actualización
-
-- **Normal:** `versiones/poliquetos-normal.html`, con progresión y economía normales.
-- **Pruebas:** `versiones/poliquetos-pruebas.html`, con todos los mundos, niveles, armas y skins accesibles. Las habilidades/equipos y mejoras empiezan sin comprar, excepto el sonar inicial. Puedes comprarlos sin límite de dinero. No da invulnerabilidad ni sube estadísticas automáticamente.
-
-El selector de mundo y nivel de la edición de pruebas está en el menú principal. Las dos ediciones tienen guardados separados. La normal mantiene las claves de guardado anteriores; para actualizar una partida local, sustituye el HTML antiguo en su misma ubicación.
-
-Para futuras actualizaciones, modifica el HTML principal, ejecuta `python3 scripts/build-editions.py` y distribuye **ambas** ediciones. Cada HTML funciona por sí solo. No edites las copias generadas manualmente.
+Los objetivos de 90/70 min siguen necesitando partidas reales de ajuste. La herramienta de balance verifica el mínimo del 40% con las builds máximas del presupuesto nominal; las monedas adicionales y la repetición pueden financiar builds superiores. No se presenta esa simulación como garantía para todas las rutas posibles.

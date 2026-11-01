@@ -36,5 +36,10 @@ func _initialize():
 	g.retry()
 	assert(g.profile.weapons.shot==2)
 	assert(g.profile.weapons.bomb==3)
+	g.profile.upgrades.misiles=3
+	g.profile.weapons.missile=1
+	g.refresh_stats()
+	g.collect_drop({"uid":"floor-test","kind":"verde","value":0})
+	assert(g.profile.weapons.missile==5,"Green bubble upgrades effective purchased floor4 to5")
 	print("WEAPONS TESTS PASS: 16 DPS tables, bombs, max items, dedup, checkpoint weapon reset")
 	quit()

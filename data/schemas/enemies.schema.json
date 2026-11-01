@@ -124,6 +124,10 @@
           "cadena_intervalo_seg": {
             "type": "number",
             "minimum": 0
+          },
+          "carcasa_periodo_seg": {
+            "type": "number",
+            "exclusiveMinimum": 0
           }
         },
         "required": [

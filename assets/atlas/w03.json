@@ -29,291 +29,435 @@
       "w": 640,
       "h": 336
     },
-    "w03_boss_boss_w03_polyn_move_01": {
+    "w03_boss_boss_w03_polyn_hit_01": {
       "x": 640,
       "y": 336,
       "w": 240,
       "h": 160
     },
-    "w03_boss_boss_w03_polyn_move_02": {
+    "w03_boss_boss_w03_polyn_hit_02": {
       "x": 880,
       "y": 336,
       "w": 240,
       "h": 160
     },
-    "w03_boss_boss_w03_polyn_move_03": {
+    "w03_boss_boss_w03_polyn_move_01": {
       "x": 1120,
       "y": 336,
       "w": 240,
       "h": 160
     },
-    "w03_boss_boss_w03_polyn_move_04": {
+    "w03_boss_boss_w03_polyn_move_02": {
       "x": 1360,
       "y": 336,
       "w": 240,
       "h": 160
     },
-    "w03_mini_oenone_move_01": {
+    "w03_boss_boss_w03_polyn_move_03": {
       "x": 1600,
       "y": 336,
+      "w": 240,
+      "h": 160
+    },
+    "w03_boss_boss_w03_polyn_move_04": {
+      "x": 0,
+      "y": 672,
+      "w": 240,
+      "h": 160
+    },
+    "w03_mini_oenone_hit_01": {
+      "x": 240,
+      "y": 672,
+      "w": 112,
+      "h": 96
+    },
+    "w03_mini_oenone_hit_02": {
+      "x": 352,
+      "y": 672,
+      "w": 112,
+      "h": 96
+    },
+    "w03_mini_oenone_move_01": {
+      "x": 464,
+      "y": 672,
       "w": 112,
       "h": 96
     },
     "w03_mini_oenone_move_02": {
-      "x": 1712,
-      "y": 336,
+      "x": 576,
+      "y": 672,
       "w": 112,
       "h": 96
     },
     "w03_mini_oenone_move_03": {
-      "x": 1824,
-      "y": 336,
+      "x": 688,
+      "y": 672,
       "w": 112,
       "h": 96
     },
     "w03_mini_oenone_move_04": {
-      "x": 1936,
-      "y": 336,
+      "x": 800,
+      "y": 672,
       "w": 112,
       "h": 96
     },
+    "w03_enemy_arabella_hit_01": {
+      "x": 912,
+      "y": 672,
+      "w": 32,
+      "h": 32
+    },
+    "w03_enemy_arabella_hit_02": {
+      "x": 944,
+      "y": 672,
+      "w": 32,
+      "h": 32
+    },
     "w03_enemy_arabella_move_01": {
-      "x": 0,
+      "x": 976,
       "y": 672,
       "w": 32,
       "h": 32
     },
     "w03_enemy_arabella_move_02": {
-      "x": 32,
+      "x": 1008,
       "y": 672,
       "w": 32,
       "h": 32
     },
     "w03_enemy_arabella_move_03": {
-      "x": 64,
+      "x": 1040,
       "y": 672,
       "w": 32,
       "h": 32
     },
     "w03_enemy_arabella_move_04": {
-      "x": 96,
+      "x": 1072,
+      "y": 672,
+      "w": 32,
+      "h": 32
+    },
+    "w03_enemy_dodeca_hit_01": {
+      "x": 1104,
+      "y": 672,
+      "w": 32,
+      "h": 32
+    },
+    "w03_enemy_dodeca_hit_02": {
+      "x": 1136,
       "y": 672,
       "w": 32,
       "h": 32
     },
     "w03_enemy_dodeca_move_01": {
-      "x": 128,
+      "x": 1168,
       "y": 672,
       "w": 32,
       "h": 32
     },
     "w03_enemy_dodeca_move_02": {
-      "x": 160,
+      "x": 1200,
       "y": 672,
       "w": 32,
       "h": 32
     },
     "w03_enemy_dodeca_move_03": {
-      "x": 192,
+      "x": 1232,
       "y": 672,
       "w": 32,
       "h": 32
     },
     "w03_enemy_dodeca_move_04": {
-      "x": 224,
+      "x": 1264,
+      "y": 672,
+      "w": 32,
+      "h": 32
+    },
+    "w03_enemy_hesio_hit_01": {
+      "x": 1296,
+      "y": 672,
+      "w": 32,
+      "h": 32
+    },
+    "w03_enemy_hesio_hit_02": {
+      "x": 1328,
       "y": 672,
       "w": 32,
       "h": 32
     },
     "w03_enemy_hesio_move_01": {
-      "x": 256,
+      "x": 1360,
       "y": 672,
       "w": 32,
       "h": 32
     },
     "w03_enemy_hesio_move_02": {
-      "x": 288,
+      "x": 1392,
       "y": 672,
       "w": 32,
       "h": 32
     },
     "w03_enemy_hesio_move_03": {
-      "x": 320,
+      "x": 1424,
       "y": 672,
       "w": 32,
       "h": 32
     },
     "w03_enemy_hesio_move_04": {
-      "x": 352,
+      "x": 1456,
+      "y": 672,
+      "w": 32,
+      "h": 32
+    },
+    "w03_enemy_histrio_hit_01": {
+      "x": 1488,
+      "y": 672,
+      "w": 32,
+      "h": 32
+    },
+    "w03_enemy_histrio_hit_02": {
+      "x": 1520,
       "y": 672,
       "w": 32,
       "h": 32
     },
     "w03_enemy_histrio_move_01": {
-      "x": 384,
+      "x": 1552,
       "y": 672,
       "w": 32,
       "h": 32
     },
     "w03_enemy_histrio_move_02": {
-      "x": 416,
+      "x": 1584,
       "y": 672,
       "w": 32,
       "h": 32
     },
     "w03_enemy_histrio_move_03": {
-      "x": 448,
+      "x": 1616,
       "y": 672,
       "w": 32,
       "h": 32
     },
     "w03_enemy_histrio_move_04": {
-      "x": 480,
+      "x": 1648,
+      "y": 672,
+      "w": 32,
+      "h": 32
+    },
+    "w03_enemy_oenone_hit_01": {
+      "x": 1680,
+      "y": 672,
+      "w": 32,
+      "h": 32
+    },
+    "w03_enemy_oenone_hit_02": {
+      "x": 1712,
       "y": 672,
       "w": 32,
       "h": 32
     },
     "w03_enemy_oenone_move_01": {
-      "x": 512,
+      "x": 1744,
       "y": 672,
       "w": 32,
       "h": 32
     },
     "w03_enemy_oenone_move_02": {
-      "x": 544,
+      "x": 1776,
       "y": 672,
       "w": 32,
       "h": 32
     },
     "w03_enemy_oenone_move_03": {
-      "x": 576,
+      "x": 1808,
       "y": 672,
       "w": 32,
       "h": 32
     },
     "w03_enemy_oenone_move_04": {
-      "x": 608,
+      "x": 1840,
+      "y": 672,
+      "w": 32,
+      "h": 32
+    },
+    "w03_enemy_phyll_hit_01": {
+      "x": 1872,
+      "y": 672,
+      "w": 32,
+      "h": 32
+    },
+    "w03_enemy_phyll_hit_02": {
+      "x": 1904,
       "y": 672,
       "w": 32,
       "h": 32
     },
     "w03_enemy_phyll_move_01": {
-      "x": 640,
+      "x": 1936,
       "y": 672,
       "w": 32,
       "h": 32
     },
     "w03_enemy_phyll_move_02": {
-      "x": 672,
+      "x": 1968,
       "y": 672,
       "w": 32,
       "h": 32
     },
     "w03_enemy_phyll_move_03": {
-      "x": 704,
+      "x": 2000,
       "y": 672,
       "w": 32,
       "h": 32
     },
     "w03_enemy_phyll_move_04": {
-      "x": 736,
-      "y": 672,
+      "x": 0,
+      "y": 832,
+      "w": 32,
+      "h": 32
+    },
+    "w03_enemy_serp_hit_01": {
+      "x": 32,
+      "y": 832,
+      "w": 32,
+      "h": 32
+    },
+    "w03_enemy_serp_hit_02": {
+      "x": 64,
+      "y": 832,
       "w": 32,
       "h": 32
     },
     "w03_enemy_serp_move_01": {
-      "x": 768,
-      "y": 672,
+      "x": 96,
+      "y": 832,
       "w": 32,
       "h": 32
     },
     "w03_enemy_serp_move_02": {
-      "x": 800,
-      "y": 672,
+      "x": 128,
+      "y": 832,
       "w": 32,
       "h": 32
     },
     "w03_enemy_serp_move_03": {
-      "x": 832,
-      "y": 672,
+      "x": 160,
+      "y": 832,
       "w": 32,
       "h": 32
     },
     "w03_enemy_serp_move_04": {
-      "x": 864,
-      "y": 672,
+      "x": 192,
+      "y": 832,
+      "w": 32,
+      "h": 32
+    },
+    "w03_enemy_spha_hit_01": {
+      "x": 224,
+      "y": 832,
+      "w": 32,
+      "h": 32
+    },
+    "w03_enemy_spha_hit_02": {
+      "x": 256,
+      "y": 832,
       "w": 32,
       "h": 32
     },
     "w03_enemy_spha_move_01": {
-      "x": 896,
-      "y": 672,
+      "x": 288,
+      "y": 832,
       "w": 32,
       "h": 32
     },
     "w03_enemy_spha_move_02": {
-      "x": 928,
-      "y": 672,
+      "x": 320,
+      "y": 832,
       "w": 32,
       "h": 32
     },
     "w03_enemy_spha_move_03": {
-      "x": 960,
-      "y": 672,
+      "x": 352,
+      "y": 832,
       "w": 32,
       "h": 32
     },
     "w03_enemy_spha_move_04": {
-      "x": 992,
-      "y": 672,
+      "x": 384,
+      "y": 832,
+      "w": 32,
+      "h": 32
+    },
+    "w03_enemy_spio_hit_01": {
+      "x": 416,
+      "y": 832,
+      "w": 32,
+      "h": 32
+    },
+    "w03_enemy_spio_hit_02": {
+      "x": 448,
+      "y": 832,
       "w": 32,
       "h": 32
     },
     "w03_enemy_spio_move_01": {
-      "x": 1024,
-      "y": 672,
+      "x": 480,
+      "y": 832,
       "w": 32,
       "h": 32
     },
     "w03_enemy_spio_move_02": {
-      "x": 1056,
-      "y": 672,
+      "x": 512,
+      "y": 832,
       "w": 32,
       "h": 32
     },
     "w03_enemy_spio_move_03": {
-      "x": 1088,
-      "y": 672,
+      "x": 544,
+      "y": 832,
       "w": 32,
       "h": 32
     },
     "w03_enemy_spio_move_04": {
-      "x": 1120,
-      "y": 672,
+      "x": 576,
+      "y": 832,
+      "w": 32,
+      "h": 32
+    },
+    "w03_enemy_syll_hit_01": {
+      "x": 608,
+      "y": 832,
+      "w": 32,
+      "h": 32
+    },
+    "w03_enemy_syll_hit_02": {
+      "x": 640,
+      "y": 832,
       "w": 32,
       "h": 32
     },
     "w03_enemy_syll_move_01": {
-      "x": 1152,
-      "y": 672,
+      "x": 672,
+      "y": 832,
       "w": 32,
       "h": 32
     },
     "w03_enemy_syll_move_02": {
-      "x": 1184,
-      "y": 672,
+      "x": 704,
+      "y": 832,
       "w": 32,
       "h": 32
     },
     "w03_enemy_syll_move_03": {
-      "x": 1216,
-      "y": 672,
+      "x": 736,
+      "y": 832,
       "w": 32,
       "h": 32
     },
     "w03_enemy_syll_move_04": {
-      "x": 1248,
-      "y": 672,
+      "x": 768,
+      "y": 832,
       "w": 32,
       "h": 32
     }
@@ -465,6 +609,102 @@
         "w03_boss_boss_w03_polyn_move_04"
       ],
       "fps": 8,
+      "bucle": true
+    },
+    "w03_enemy_dodeca_hit": {
+      "frames": [
+        "w03_enemy_dodeca_hit_01",
+        "w03_enemy_dodeca_hit_02"
+      ],
+      "fps": 60,
+      "bucle": true
+    },
+    "w03_enemy_oenone_hit": {
+      "frames": [
+        "w03_enemy_oenone_hit_01",
+        "w03_enemy_oenone_hit_02"
+      ],
+      "fps": 60,
+      "bucle": true
+    },
+    "w03_enemy_arabella_hit": {
+      "frames": [
+        "w03_enemy_arabella_hit_01",
+        "w03_enemy_arabella_hit_02"
+      ],
+      "fps": 60,
+      "bucle": true
+    },
+    "w03_enemy_spha_hit": {
+      "frames": [
+        "w03_enemy_spha_hit_01",
+        "w03_enemy_spha_hit_02"
+      ],
+      "fps": 60,
+      "bucle": true
+    },
+    "w03_enemy_histrio_hit": {
+      "frames": [
+        "w03_enemy_histrio_hit_01",
+        "w03_enemy_histrio_hit_02"
+      ],
+      "fps": 60,
+      "bucle": true
+    },
+    "w03_enemy_syll_hit": {
+      "frames": [
+        "w03_enemy_syll_hit_01",
+        "w03_enemy_syll_hit_02"
+      ],
+      "fps": 60,
+      "bucle": true
+    },
+    "w03_enemy_spio_hit": {
+      "frames": [
+        "w03_enemy_spio_hit_01",
+        "w03_enemy_spio_hit_02"
+      ],
+      "fps": 60,
+      "bucle": true
+    },
+    "w03_enemy_phyll_hit": {
+      "frames": [
+        "w03_enemy_phyll_hit_01",
+        "w03_enemy_phyll_hit_02"
+      ],
+      "fps": 60,
+      "bucle": true
+    },
+    "w03_enemy_serp_hit": {
+      "frames": [
+        "w03_enemy_serp_hit_01",
+        "w03_enemy_serp_hit_02"
+      ],
+      "fps": 60,
+      "bucle": true
+    },
+    "w03_enemy_hesio_hit": {
+      "frames": [
+        "w03_enemy_hesio_hit_01",
+        "w03_enemy_hesio_hit_02"
+      ],
+      "fps": 60,
+      "bucle": true
+    },
+    "w03_mini_oenone_hit": {
+      "frames": [
+        "w03_mini_oenone_hit_01",
+        "w03_mini_oenone_hit_02"
+      ],
+      "fps": 60,
+      "bucle": true
+    },
+    "w03_boss_boss_w03_polyn_hit": {
+      "frames": [
+        "w03_boss_boss_w03_polyn_hit_01",
+        "w03_boss_boss_w03_polyn_hit_02"
+      ],
+      "fps": 60,
       "bucle": true
     }
   }

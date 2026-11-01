@@ -1,5 +1,8 @@
 # Progreso v2
 
+**Estado actual: entrega nativa de Windows.** Están implementados los sistemas de las fases 1–9 y la parte técnica de la fase 10. Hay dos instaladores en `entregas/`. La validación humana de duración/dificultad y el arte definitivo siguen pendientes; las canciones permanecen fuera por indicación del usuario. Las notas iniciales describen entregas anteriores.
+
+
 ## Fase 0 — Inventario y base
 
 Hecho:
@@ -83,3 +86,31 @@ Contenido completo de los mundos1–13 enJSON: familias únicas/recurrentes, con
 ### Fase9
 
 Laboratorio de250enemigos con140robots y110orgánicos seleccionados mediante semilla de partida. Cuatro encuentros con descanso entreellos y escape300s/90enemigos con checkpoints90s. Recorrido automatizado verifica14mundos/2424enemigos/17descansos, guardado de cada descanso,4encuentroslab y final; usa daño artificial de prueba y no representa una partida humana ni una medición del balance.
+
+### Fase 10 — implementación técnica y entrega
+
+- 39 efectos WAV originales, mono/44,1 kHz, reproducción con prioridades y máximo 16 voces. No se incorporan canciones ni pistas instrumentales.
+- Optimización de colisiones: rectángulos de partes calculados una vez por frame y descarte espacial de enemigos comunes. Se conservan los puntos débiles y cuerpos separados en la geometría real.
+- 557 animaciones/1.564 PNG provisionales, atlas w01–w15, impactos blancos de dos frames y paneles que dejan legible la interfaz. El arte continúa siendo provisional.
+- Corregidos todos los problemas críticos/importantes detectados en la revisión independiente: menús por frame, recogidas al reintentar, carga de campaña completada, apertura natural de armadura, puntas alcanzables, división/fusión físicas, validación de estado opcional y ocultación de jefes derrotados. Se añadieron regresiones para esos comportamientos.
+- Añadidos barriles destruibles con área de daño, peligros cíclicos definidos en JSON, destellos/oscurecimiento/nieve, escena de salida al mar, créditos y estadísticas finales. La tienda muestra efectos antes/después en español.
+- Exportaciones reales de Windows x64 con PCK incorporado, empaquetadas en dos instaladores NSIS en español. Instalan para el usuario actual y conservan sus partidas al desinstalar. Incluyen los avisos de licencia de Godot y sus dependencias.
+
+Verificación final:
+
+- 19 comprobaciones nativas ejecutadas por `scripts/test-native.py`: incluyen 15 pruebas Python, contratos JSON y las suites Godot de armas, fases, flujo, UI, guardado y arranque de las ediciones.
+- 35 pruebas del HTML legado aprobadas; sus archivos no han cambiado.
+- Recorrido automatizado: 14 mundos, 2.424 enemigos de etapa, 17 descansos, cuatro encuentros del laboratorio, escape de 300 s/90 enemigos y final. Utiliza daño de prueba, no una partida humana.
+- 17 simulaciones de jefes con daño continuo máximo del presupuesto nominal cumplen el mínimo del 40 %. Se conserva `vida_base` y la vida ajustada está en `vida`; [informe de balance](boss_balance.csv).
+- Render medido con 50 enemigos, 200 balas enemigas, 64 proyectiles aliados y disparo máximo: media de **85,09 FPS**, 11,75 ms por frame, p95 de 17 ms en Linux con OpenGL por software llvmpipe. No garantiza el mismo rendimiento en Windows u otro hardware. [Registro](verificacion/rendimiento.json).
+- Capturas reales del render: [portada](verificacion/portada.png), [partida](verificacion/partida.png), [tienda](verificacion/tienda.png), [jefes múltiples](verificacion/jefes-multiples.png).
+- Instaladores comprobados mediante CRC, extracción, comparación de payload, cabeceras PE x64/PCK y arranque del pack de cada edición con Godot. El arranque autónomo Linux también se comprueba como control del empaquetado. [Registro](verificacion/distribucion.json). Esto no equivale a ejecutar Windows real.
+
+Pendiente de validación final del producto:
+
+- Arte definitivo y sus variantes, a producir aparte según la sección 2.10.
+- Canciones, expresamente aplazadas por el usuario.
+- Partidas reales para validar/ajustar los objetivos 90/70 minutos y la dificultad.
+- Prueba en Windows real y con mando físico. El mínimo de tiempo se ha medido para builds del presupuesto nominal; no está demostrado para todas las builds financiadas con repetición/monedas extra.
+
+La fase 10 queda implementada técnicamente, pero sus criterios de duración humana y rendimiento del equipo destino siguen pendientes. No se declara terminada esa aceptación solo por pasar las simulaciones.

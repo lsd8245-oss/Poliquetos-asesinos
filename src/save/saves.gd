@@ -16,15 +16,22 @@ static func _load_result(ok: bool, profile: Dictionary = {}, recovered: bool = f
 static func _integer(value, minimum: int, maximum: int = 2147483647) -> bool:
 	return (value is int or value is float) and is_finite(float(value)) and float(value) == floor(float(value)) and value >= minimum and value <= maximum
 
-static func _json_value(value) -> bool:
+static func _json_value(value, ancestors: Array = [], depth: int = 0) -> bool:
+	if depth > 64:
+		return false
+	if value is Dictionary or value is Array:
+		for ancestor in ancestors:
+			if is_same(value, ancestor):
+				return false
+		ancestors = ancestors + [value]
 	if value is Dictionary:
 		for key in value:
-			if not (key is String or key is StringName) or not _json_value(value[key]):
+			if not (key is String or key is StringName) or not _json_value(value[key], ancestors, depth + 1):
 				return false
 		return true
 	if value is Array:
 		for item in value:
-			if not _json_value(item):
+			if not _json_value(item, ancestors, depth + 1):
 				return false
 		return true
 	return value == null or value is String or value is bool or value is int or (value is float and is_finite(value))
@@ -76,7 +83,54 @@ static func _restore_integer_paths(value: Dictionary) -> Dictionary:
 				parent[last] = int(number)
 	return value
 
+static func _boolean_map(value) -> bool:
+	if not value is Dictionary:
+		return false
+	for key in value:
+		if not (key is String or key is StringName) or not value[key] is bool:
+			return false
+	return true
+
+static func _weapon_levels(value) -> bool:
+	if not value is Dictionary or value.size() != 3:
+		return false
+	for key in ["shot", "missile", "bomb"]:
+		if not _integer(value.get(key), 1, 8):
+			return false
+	return true
+
+static func _validate_optional(profile: Dictionary, sandbox: bool) -> String:
+	for key in ["claimed_drops", "rewarded"]:
+		if profile.has(key) and not _boolean_map(profile[key]):
+			return "invalid_" + key
+	if profile.has("world_entry_weapons") and not _weapon_levels(profile.world_entry_weapons):
+		return "invalid_world_entry_weapons"
+	for key in ["entry_world", "lander_used_world"]:
+		if profile.has(key) and not _integer(profile[key], 1 if key == "entry_world" else 0, 15):
+			return "invalid_" + key
+	for key in ["coins_total", "replay_earned", "world_elapsed", "kills_total", "spawned_total"]:
+		if profile.has(key):
+			var value = profile[key]
+			if not (value is int or value is float) or not is_finite(float(value)) or value < 0:
+				return "invalid_" + key
+	if profile.has("replay_mode") and not profile.replay_mode is bool:
+		return "invalid_replay_mode"
+	if profile.get("replay_mode", false) and not profile.has("replay_return"):
+		return "missing_replay_return"
+	if profile.has("replay_return"):
+		if not profile.replay_return is Dictionary:
+			return "invalid_replay_return"
+		var nested_error := _validate(profile.replay_return, sandbox)
+		if not nested_error.is_empty():
+			return "invalid_replay_return_" + nested_error
+	if profile.has("resume") and profile.resume not in ["playing", "rest", "completed"]:
+		return "invalid_resume"
+	return ""
+
 static func _validate(profile: Dictionary, sandbox: bool) -> String:
+	# Reject native cycles/nonfinite values before duplication, traversal or JSON.
+	if not _json_value(profile):
+		return "invalid_profile_value"
 	for key in ["version", "edition", "slot", "difficulty", "world", "lab_boss", "credits", "upgrades", "equipment", "weapons", "bombs", "skins", "skin", "colors", "deaths", "time", "cleared", "seed", "completed"]:
 		if not profile.has(key):
 			return "missing_" + key
@@ -133,9 +187,9 @@ static func _validate(profile: Dictionary, sandbox: bool) -> String:
 			return "invalid_cleared_world"
 	if not (profile.time is int or profile.time is float) or not is_finite(float(profile.time)) or profile.time < 0:
 		return "invalid_time"
-	if not _integer(profile.seed, 0) or not profile.completed is bool or not _json_value(profile):
+	if not _integer(profile.seed, 0) or not profile.completed is bool:
 		return "invalid_profile_value"
-	return ""
+	return _validate_optional(profile, sandbox)
 
 static func _decode(text: String, sandbox: bool) -> Dictionary:
 	var parser := JSON.new()
@@ -193,6 +247,8 @@ static func _write(path: String, text: String, backup_valid: bool) -> Dictionary
 static func save_slot(slot: int, profile: Dictionary) -> Dictionary:
 	if not _valid_slot(slot):
 		return {"ok": false, "error": "invalid_slot"}
+	if not _json_value(profile):
+		return {"ok": false, "error": "invalid_profile_value"}
 	var sandbox: bool = profile.get("edition", "normal") == "pruebas"
 	var copy := profile.duplicate(true)
 	copy.slot = slot

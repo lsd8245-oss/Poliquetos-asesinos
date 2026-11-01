@@ -62,12 +62,39 @@ def body_profile(name):
     return 'otro','pequeno','M4','F1',32
 
 
+def hazard_data():
+    base={'damage':20,'width':48,'height':56,'duration':12,'telegraph':.5,'scroll':True,'effect':'damage','placement':'scroll','anchor_y':'event','spawn_offset':10,'push_x':0,'push_y':0,'slow':0,'cycle':0,'active_duration':12,'explosive':False}
+    overrides={
+        'solid':{},'boyas':{},'cascos':{'width':64,'height':48},
+        'conchas':{'anchor_y':'bottom','height':28},'rocas':{'anchor_y':'bottom','height':36},
+        'corriente_marea':{'damage':0,'width':640,'height':336,'push_y':30,'reverse_every':10,'duration':10,'scroll':False,'placement':'fixed','anchor_y':'top','effect':'push'},
+        'kelp':{'damage':0,'slow':.3,'effect':'slow'},
+        'corales':{'anchor_y':'bottom','height':76},
+        'corriente_hojas':{'damage':0,'width':640,'height':336,'push_x':-20,'duration':10,'scroll':False,'placement':'fixed','anchor_y':'top','effect':'push'},
+        'raices':{'anchor_y':'top','height':76},
+        'barriles':{'blast_radius':70,'enemy_damage':60,'explosive':True},
+        'petroleo':{'damage':0,'slow':.25,'effect':'slow'},
+        'medusas':{'width':40,'height':48},'icebergs':{'anchor_y':'bottom','height':76},
+        'granizo':{'damage':10,'width':10,'height':336,'duration':6,'active_duration':.5,'scroll':False,'placement':'random','anchor_y':'top','random_x':[0,600]},
+        'costillas':{'anchor_y':'bottom','height':76},
+        'geiseres':{'width':28,'height':106,'telegraph':1,'active_duration':3,'scroll':False,'placement':'random','anchor_y':'bottom','random_x':[60,600]},
+        'lava':{'width':640,'height':12,'telegraph':1,'scroll':False,'placement':'fixed','anchor_y':'bottom'},
+        'laseres':{'width':28,'height':336,'cycle':3,'active_duration':1,'scroll':False,'placement':'random','anchor_y':'top','random_x':[60,600]},
+        'compuertas':{'width':28,'height':240,'cycle':4,'active_duration':1.5,'scroll':False,'placement':'random','anchor_y':'top','random_x':[200,580]},
+        'cintas':{'damage':0,'width':640,'height':336,'push_x':-30,'duration':10,'scroll':False,'placement':'fixed','anchor_y':'top','effect':'push'},
+        'torretas':{'width':48,'height':48,'anchor_y':'top'},
+        'escombros':{'width':24,'height':336,'active_duration':.4,'scroll':False,'placement':'random','anchor_y':'top','random_x':[0,600]},
+        'corrientes':{'damage':0,'width':640,'height':336,'push_y':35,'duration':10,'scroll':False,'placement':'fixed','anchor_y':'top','effect':'push'},
+    }
+    return {key:base|values for key,values in overrides.items()}
+
+
 def combat_data():
     c = {'screen':{'width':640,'height':360,'play_height':336,'hud_height':24},
          'player':{'sprite_size':[48,24],'hitbox':[10,6],'speed':160,'shield':100,'damage_invulnerability':1,'respawn_invulnerability':2,'start_pos':[80,168],'initial_bombs':2,'max_bombs':5,'max_weapon_level':8,'magnet_radius':24},
          'timings':{'bomb_cooldown':1.5,'boss_entry':3,'boss_defeat':3,'phase_invulnerability':3,'strong_telegraph':.5,'alert':6,'death_explosion':1.2,'death_fade':.5,'pause_resume':3,'checkpoint_notice':2,'intro':2,'retry_fade':.5,'regen_delay':5,'lab_room_line':2},
          'enemy':{'bullet_pool':200,'bullet_size':[6,6],'bullet_speed_base':90,'bullet_speed_world_scale':.04,'dps_ref_base':30,'dps_ref_world_step':6,'bullet_damage_base':10,'bullet_damage_world_step':.5,'contact_damage_base':20,'contact_damage_world_step':1,'boss_contact_base':30,'boss_contact_world_step':2,'hazard_damage':20,'speed':70,'swarm_hp_divisor':20,'small_hp_divisor':10,'medium_hp_multiplier':3,'escort_hp_multiplier':2,'armored_hp_multiplier':1.5,'bullet_ttl':12,'max_active':50,'spawn_margin':32},
-         'items':{'speed':30,'shield_fraction':.25,'max_level_value':100,'small_coin':5,'large_coin':25,'radius':10,'magnet_speed':200},
+         'items':{'pickup_radius':18,'speed':30,'shield_fraction':.25,'max_level_value':100,'small_coin':5,'large_coin':25,'radius':10,'magnet_speed':200},
          'boss':{'minimum_time_fraction':.4,'weak_multiplier':2,'body_multiplier':.5,'bomb_multiplier':.5,'phase_thresholds':[66,33],'mini_thresholds':[50],'miniboss_target':50,'entry_x':750,'arena_x':500,'lane_y':[70,168,266]},
          'scroll':{'normal':60,'escape':120,'parallax':[.1,.3,.6,1]},
          'shot':[],'missile':[],'bomb':[],
@@ -75,11 +102,12 @@ def combat_data():
          'fire_patterns':{'F0':{'interval':0,'count':0},'F1':{'interval':2,'count':1,'spread':0},'F2':{'interval':2.5,'count':1,'spread':0},'F3':{'interval':3,'count':3,'spread':.55},'F4':{'interval':4,'count':8,'spread':math.tau},'F5':{'interval':3,'count':3,'spread':0,'burst_interval':.15}},
          'formations':{'spacing_px':32,'spacing_seg':.3,'vertical_bounds':[24,312],'circle_radius':64,'zigzag_amplitude':40},
          'difficulty':{'easy':{'damage':.7,'boss_hp':.85,'bullet_speed':.9,'shield_items':1.3,'alert_checkpoint':True},'normal':{'damage':1,'boss_hp':1,'bullet_speed':1,'shield_items':1,'alert_checkpoint':False},'hard':{'damage':1.3,'boss_hp':1.15,'bullet_speed':1.1,'shield_items':.8,'alert_checkpoint':False}},
-         'hazards':{'solid':{'damage':20,'width':48,'height':56,'duration':12},'corriente_marea':{'damage':0,'push_y':30,'duration':10},'kelp':{'damage':0,'slow':.3,'duration':12},'corriente_hojas':{'damage':0,'push_x':-20,'duration':10},'petroleo':{'damage':0,'slow':.25,'duration':12},'granizo':{'damage':10,'duration':6},'geiseres':{'damage':20,'telegraph':1,'duration':3},'laseres':{'damage':20,'cycle':3,'telegraph':.5,'duration':1},'compuertas':{'damage':20,'cycle':4,'telegraph':.5,'duration':1.5},'escombros':{'damage':20,'telegraph':.5,'duration':3},'cintas':{'damage':0,'push_x':-30,'duration':10},'corrientes':{'damage':0,'push_y':35,'duration':10},'barriles':{'damage':20,'blast_radius':70,'enemy_damage':60,'duration':12}},
+         'hazards':hazard_data(),
          'projectiles':{'shot_size':[8,4],'beam_size':[20,10],'missile_size':[12,6],'shot_ttl':2,'missile_ttl':4,'homing_turn_speed':4,'missile_floor_margin':10,'explosion_duration':.3,'pierce_damage_multiplier':1},
          'effects':{'damage_flash':.16,'large_shake':3,'small_shake':1,'shake_duration':.3,'escape_pulse_period':2,'escape_pulse_alpha':.18,'death_tip_count':20,'suggest_easy_deaths':5},
          'gear':{'net_capacity':5,'niskin_interval':20,'niskin_radius':140,'niskin_slow':.5,'niskin_boss_slow':.75,'niskin_duration':2,'multicorer_interval':6,'multicorer_count':4,'multicorer_damage':3,'rov_dps_fraction':.3,'rov_interval':.3,'lander_shield_fraction':.5,'deflector_width':32,'deflector_damage':5,'regen_delay':5,'grapple_speed':.25,'homing_turn':3,'enemy_homing_time':2,'magnet_speed':260},
-         'friendly_projectile':{'ttl':3,'size':[10,4],'beam_size':[24,8],'spawn_offset':20}}
+         'friendly_projectile':{'ttl':3,'size':[10,4],'beam_size':[24,8],'spawn_offset':20},
+         'ui':{'ending_seconds':4,'credits_seconds':8,'ending_rise':220,'flash_alpha':.55,'reduced_flash_alpha':.06}}
     for i,(dps,count,interval,pierce) in enumerate(zip([10,13,16,20,24,29,34,40],[1,2,3,3,4,4,5,6],[.25,.25,.25,.2,.2,.2,.2,.2],[0,0,0,0,1,2,2,3]),1):
         angles = [0] if count==1 else ([0,0] if count==2 else [(j-(count-1)/2)*.1 for j in range(count)])
         c['shot'].append({'level':i,'dps':dps,'count':count,'interval':interval,'damage':dps*interval/count,'speed':440,'angles':angles,'offsets_y':[-4,4] if count==2 else [0]*count,'pierce':pierce,'beam':i==8})
@@ -174,6 +202,7 @@ def build_campaign(seed=20261101):
             if key not in enemy_map:
                 enemy_map[key]={'id':key,'familia':name,'tipo':body,'categoria':category,'mundos':{},'movimiento':motion,'disparo':fire,'tamano':[size,size],'puntos':100,'drop':{'moneda_chica':.35,'moneda_grande':.05},'estado':'revisar','blindado':body=='escamoso' or code=='R6','parametros':{'carcasa_abierta_seg':1,'cadena_intervalo_seg':.15}}
                 if code: enemy_map[key]['robot_codigo']=code
+                if code=='R6': enemy_map[key]['parametros']['carcasa_periodo_seg']=5
             role='unico' if key in unique else 'recurrente'
             enemy_map[key]['mundos'][str(n)]={'rol':role,'sprite_set':f'w{n:02}_enemy_{key}'}
         w={'id':n,'nombre':source['name'],'acto':source['act'],'duracion_hasta_jefe_seg':t,'enemigos_total':COUNTS[n-1],'minijefe_inicio_seg':t/2-30,'minijefe_ventana_seg':60,'alerta_jefe_seg':t-10,'paleta':PALETTES[n-1],'scroll_px_s':60,'cancion_jefe':SONGS[n-1],'musica_etapa':f'w{n:02}_level_instr','musica_jefe':f'w{n:02}_boss_vocal','peligros':HAZARDS[n-1],'minijefe':f'mini_w{n:02}_{MINIS[n-1]}','mini_tipo':MINIS[n-1],'vida_minijefe':MINI_HP[n-1],'unicos':unique,'recurrentes':recur,'jefe_objetivo_seg':TARGETS[n-1],'base_monedas':(n+2)*100 if n<14 else 6200,'jefes':[],'sectores_jefes':[]}

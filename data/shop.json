@@ -117,63 +117,72 @@
       "nombre": "Draga",
       "acto": 1,
       "costo": 600,
-      "efecto": "autorecoger_96px"
+      "efecto": "autorecoger_96px",
+      "descripcion": "Recoge monedas a 96 píxeles; se aplica el mayor radio disponible."
     },
     {
       "id": "red_arrastre",
       "nombre": "Red de arrastre",
       "acto": 1,
       "costo": 800,
-      "efecto": "atrapa_5_balas_por_checkpoint"
+      "efecto": "atrapa_5_balas_por_checkpoint",
+      "descripcion": "Atrapa cinco balas frente a la nave. Se recarga en cada punto de control."
     },
     {
       "id": "niskin",
       "nombre": "Botella Niskin",
       "acto": 2,
       "costo": 900,
-      "efecto": "pulso_20s_radio140_lento50_duracion2"
+      "efecto": "pulso_20s_radio140_lento50_duracion2",
+      "descripcion": "Cada 20 segundos ralentiza enemigos durante dos segundos en un radio de 140 píxeles."
     },
     {
       "id": "box_corer",
       "nombre": "Box corer",
       "acto": 2,
       "costo": 1000,
-      "efecto": "perfora_1_enemigo_extra"
+      "efecto": "perfora_1_enemigo_extra",
+      "descripcion": "El disparo principal perfora un enemigo adicional."
     },
     {
       "id": "ctd",
       "nombre": "CTD",
       "acto": 2,
       "costo": 1100,
-      "efecto": "marca_vida_y_puntos_debiles"
+      "efecto": "marca_vida_y_puntos_debiles",
+      "descripcion": "Muestra la vida numérica del jefe y marca sus puntos débiles."
     },
     {
       "id": "multicorer",
       "nombre": "Multicorer",
       "acto": 3,
       "costo": 1300,
-      "efecto": "abanico4_cada6s_dano3x"
+      "efecto": "abanico4_cada6s_dano3x",
+      "descripcion": "Cada seis segundos dispara cuatro proyectiles con triple daño."
     },
     {
       "id": "rov",
       "nombre": "ROV",
       "acto": 3,
       "costo": 1500,
-      "efecto": "dron_30porciento_dps"
+      "efecto": "dron_30porciento_dps",
+      "descripcion": "Dron aliado que aporta un 30% del daño del disparo principal."
     },
     {
       "id": "lander",
       "nombre": "Lander",
       "acto": 3,
       "costo": 1400,
-      "efecto": "resurreccion_50porciento_una_por_mundo"
+      "efecto": "resurreccion_50porciento_una_por_mundo",
+      "descripcion": "Una resurrección por mundo con el 50% del escudo. No cuenta como muerte."
     },
     {
       "id": "deflector",
       "nombre": "Deflector",
       "acto": 4,
       "costo": 2000,
-      "efecto": "frontal32_refleja_balas_dano5"
+      "efecto": "frontal32_refleja_balas_dano5",
+      "descripcion": "Convierte las balas frente a la nave en disparos aliados de cinco de daño."
     }
   ],
   "reembolso_misma_visita": 1,

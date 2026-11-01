@@ -2704,7 +2704,8 @@
     "blindado": true,
     "parametros": {
       "carcasa_abierta_seg": 1,
-      "cadena_intervalo_seg": 0.15
+      "cadena_intervalo_seg": 0.15,
+      "carcasa_periodo_seg": 5
     },
     "robot_codigo": "R6"
   },

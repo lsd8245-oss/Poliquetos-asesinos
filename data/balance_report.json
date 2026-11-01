@@ -1,0 +1,488 @@
+{
+  "assumption": "Reachable build envelope from nominal no-death prior income; max-level/phase bonus coin income may permit stronger builds. Human playtime not measured.",
+  "nominal_target_seconds": 5400,
+  "nominal_minimum_seconds": 4212,
+  "encounters": [
+    {
+      "world": 1,
+      "group": 0,
+      "boss_ids": [
+        "boss_w01_nereis"
+      ],
+      "target_seconds": 90,
+      "minimum_seconds": 36.0,
+      "budget": 0,
+      "weapon_level_bound": 4,
+      "base_hp": 1750,
+      "tuned_hp": 2319,
+      "transition_gap": 6,
+      "max_build": {
+        "required_hp": 2317.6470588235293,
+        "dps": 30.0,
+        "bomb_burst": 170.0,
+        "ranks": {
+          "dano": 0,
+          "cadencia": 0,
+          "bombas": 0
+        },
+        "rov": false,
+        "multicorer": false,
+        "cost": 0
+      },
+      "normal_continuous_lower_seconds": 41.81666666666667
+    },
+    {
+      "world": 2,
+      "group": 0,
+      "boss_ids": [
+        "boss_w02_capit"
+      ],
+      "target_seconds": 90,
+      "minimum_seconds": 36.0,
+      "budget": 360.0,
+      "weapon_level_bound": 7,
+      "base_hp": 2100,
+      "tuned_hp": 4534,
+      "transition_gap": 6,
+      "max_build": {
+        "required_hp": 4532.705882352941,
+        "dps": 57.120000000000005,
+        "bomb_burst": 425.6,
+        "ranks": {
+          "dano": 1,
+          "cadencia": 0,
+          "bombas": 0
+        },
+        "rov": false,
+        "multicorer": false,
+        "cost": 300
+      },
+      "normal_continuous_lower_seconds": 41.96288515406162
+    },
+    {
+      "world": 3,
+      "group": 0,
+      "boss_ids": [
+        "boss_w03_polyn"
+      ],
+      "target_seconds": 90,
+      "minimum_seconds": 36.0,
+      "budget": 840.0,
+      "weapon_level_bound": 8,
+      "base_hp": 2450,
+      "tuned_hp": 5983,
+      "transition_gap": 6,
+      "max_build": {
+        "required_hp": 5981.176470588235,
+        "dps": 74.4,
+        "bomb_burst": 620.0,
+        "ranks": {
+          "dano": 2,
+          "cadencia": 0,
+          "bombas": 0
+        },
+        "rov": false,
+        "multicorer": false,
+        "cost": 800
+      },
+      "normal_continuous_lower_seconds": 42.041666666666664
+    },
+    {
+      "world": 4,
+      "group": 0,
+      "boss_ids": [
+        "boss_w04_tere"
+      ],
+      "target_seconds": 105,
+      "minimum_seconds": 42.0,
+      "budget": 1440.0,
+      "weapon_level_bound": 8,
+      "base_hp": 3300,
+      "tuned_hp": 8028,
+      "transition_gap": 6,
+      "max_build": {
+        "required_hp": 8026.447058823531,
+        "dps": 81.84000000000002,
+        "bomb_burst": 930.0,
+        "ranks": {
+          "dano": 2,
+          "cadencia": 1,
+          "bombas": 1
+        },
+        "rov": false,
+        "multicorer": false,
+        "cost": 1400
+      },
+      "normal_continuous_lower_seconds": 49.365102639296175
+    },
+    {
+      "world": 5,
+      "group": 0,
+      "boss_ids": [
+        "boss_w05_hermo"
+      ],
+      "target_seconds": 105,
+      "minimum_seconds": 42.0,
+      "budget": 2160.0,
+      "weapon_level_bound": 8,
+      "base_hp": 3700,
+      "tuned_hp": 8658,
+      "transition_gap": 6,
+      "max_build": {
+        "required_hp": 8656.658823529411,
+        "dps": 89.28,
+        "bomb_burst": 930.0,
+        "ranks": {
+          "dano": 2,
+          "cadencia": 2,
+          "bombas": 1
+        },
+        "rov": false,
+        "multicorer": false,
+        "cost": 1950
+      },
+      "normal_continuous_lower_seconds": 49.27956989247312
+    },
+    {
+      "world": 6,
+      "group": 0,
+      "boss_ids": [
+        "boss_w06_leafqueen"
+      ],
+      "target_seconds": 105,
+      "minimum_seconds": 42.0,
+      "budget": 3000.0,
+      "weapon_level_bound": 8,
+      "base_hp": 4100,
+      "tuned_hp": 9496,
+      "transition_gap": 6,
+      "max_build": {
+        "required_hp": 9494.4,
+        "dps": 97.91999999999999,
+        "bomb_burst": 1019.9999999999999,
+        "ranks": {
+          "dano": 3,
+          "cadencia": 2,
+          "bombas": 1
+        },
+        "rov": false,
+        "multicorer": false,
+        "cost": 2750
+      },
+      "normal_continuous_lower_seconds": 49.28022875816994
+    },
+    {
+      "world": 7,
+      "group": 0,
+      "boss_ids": [
+        "boss_w07_orbin"
+      ],
+      "target_seconds": 120,
+      "minimum_seconds": 48.0,
+      "budget": 3960.0,
+      "weapon_level_bound": 8,
+      "base_hp": 5150,
+      "tuned_hp": 11838,
+      "transition_gap": 6,
+      "max_build": {
+        "required_hp": 11836.517647058823,
+        "dps": 106.55999999999999,
+        "bomb_burst": 1110.0,
+        "ranks": {
+          "dano": 4,
+          "cadencia": 2,
+          "bombas": 1
+        },
+        "rov": false,
+        "multicorer": false,
+        "cost": 3950
+      },
+      "normal_continuous_lower_seconds": 56.337837837837846
+    },
+    {
+      "world": 8,
+      "group": 0,
+      "boss_ids": [
+        "boss_w08_pollution_capit",
+        "boss_w08_pollution_spio",
+        "boss_w08_pollution_cirrat"
+      ],
+      "target_seconds": 135,
+      "minimum_seconds": 54.0,
+      "budget": 5040.0,
+      "weapon_level_bound": 8,
+      "base_hp": 6300,
+      "tuned_hp": 15977,
+      "transition_gap": 0,
+      "max_build": {
+        "required_hp": 15973.552941176471,
+        "dps": 115.44,
+        "bomb_burst": 1110.0,
+        "ranks": {
+          "dano": 4,
+          "cadencia": 3,
+          "bombas": 1
+        },
+        "rov": false,
+        "multicorer": false,
+        "cost": 4850
+      },
+      "normal_continuous_lower_seconds": 64.39275814275814
+    },
+    {
+      "world": 9,
+      "group": 0,
+      "boss_ids": [
+        "boss_w09_tomo"
+      ],
+      "target_seconds": 120,
+      "minimum_seconds": 48.0,
+      "budget": 6240.0,
+      "weapon_level_bound": 8,
+      "base_hp": 6100,
+      "tuned_hp": 13593,
+      "transition_gap": 6,
+      "max_build": {
+        "required_hp": 13591.623529411763,
+        "dps": 124.32,
+        "bomb_burst": 1110.0,
+        "ranks": {
+          "dano": 4,
+          "cadencia": 4,
+          "bombas": 1
+        },
+        "rov": false,
+        "multicorer": false,
+        "cost": 6150
+      },
+      "normal_continuous_lower_seconds": 56.20511583011583
+    },
+    {
+      "world": 10,
+      "group": 0,
+      "boss_ids": [
+        "boss_w10_eulagisca"
+      ],
+      "target_seconds": 120,
+      "minimum_seconds": 48.0,
+      "budget": 7560.0,
+      "weapon_level_bound": 8,
+      "base_hp": 6550,
+      "tuned_hp": 15615,
+      "transition_gap": 6,
+      "max_build": {
+        "required_hp": 15613.477647058824,
+        "dps": 149.184,
+        "bomb_burst": 740.0,
+        "ranks": {
+          "dano": 4,
+          "cadencia": 4,
+          "bombas": 0
+        },
+        "rov": true,
+        "multicorer": false,
+        "cost": 7350
+      },
+      "normal_continuous_lower_seconds": 55.85454204204204
+    },
+    {
+      "world": 11,
+      "group": 0,
+      "boss_ids": [
+        "boss_w11_osedax"
+      ],
+      "target_seconds": 120,
+      "minimum_seconds": 48.0,
+      "budget": 9000.0,
+      "weapon_level_bound": 8,
+      "base_hp": 7000,
+      "tuned_hp": 16684,
+      "transition_gap": 6,
+      "max_build": {
+        "required_hp": 16682.164705882355,
+        "dps": 149.76000000000002,
+        "bomb_burst": 1600.0,
+        "ranks": {
+          "dano": 5,
+          "cadencia": 3,
+          "bombas": 2
+        },
+        "rov": true,
+        "multicorer": false,
+        "cost": 8600
+      },
+      "normal_continuous_lower_seconds": 56.36057692307692
+    },
+    {
+      "world": 12,
+      "group": 0,
+      "boss_ids": [
+        "boss_w12_alvinella"
+      ],
+      "target_seconds": 120,
+      "minimum_seconds": 48.0,
+      "budget": 10560.0,
+      "weapon_level_bound": 8,
+      "base_hp": 7500,
+      "tuned_hp": 17822,
+      "transition_gap": 6,
+      "max_build": {
+        "required_hp": 17820.611764705878,
+        "dps": 161.27999999999997,
+        "bomb_burst": 1600.0,
+        "ranks": {
+          "dano": 5,
+          "cadencia": 4,
+          "bombas": 2
+        },
+        "rov": true,
+        "multicorer": false,
+        "cost": 9900
+      },
+      "normal_continuous_lower_seconds": 56.29141865079366
+    },
+    {
+      "world": 13,
+      "group": 0,
+      "boss_ids": [
+        "boss_w13_hadalsovereign",
+        "boss_w13_riftia"
+      ],
+      "target_seconds": 150,
+      "minimum_seconds": 60.0,
+      "budget": 12240.0,
+      "weapon_level_bound": 8,
+      "base_hp": 9950,
+      "tuned_hp": 25727,
+      "transition_gap": 0,
+      "max_build": {
+        "required_hp": 25724.235294117647,
+        "dps": 165.54666666666665,
+        "bomb_burst": 2000.0,
+        "ranks": {
+          "dano": 5,
+          "cadencia": 4,
+          "bombas": 3
+        },
+        "rov": true,
+        "multicorer": true,
+        "cost": 12100
+      },
+      "normal_continuous_lower_seconds": 71.66257248711341
+    },
+    {
+      "world": 14,
+      "group": 1,
+      "boss_ids": [
+        "boss_w14_robot_pinza",
+        "boss_w14_robot_torreta",
+        "boss_w14_robot_taladro"
+      ],
+      "target_seconds": 90,
+      "minimum_seconds": 36.0,
+      "budget": 14040.0,
+      "weapon_level_bound": 8,
+      "base_hp": 6300,
+      "tuned_hp": 16379,
+      "transition_gap": 0,
+      "max_build": {
+        "required_hp": 16375.717647058822,
+        "dps": 165.54666666666665,
+        "bomb_burst": 2000.0,
+        "ranks": {
+          "dano": 5,
+          "cadencia": 4,
+          "bombas": 3
+        },
+        "rov": true,
+        "multicorer": true,
+        "cost": 12100
+      },
+      "normal_continuous_lower_seconds": 43.428841817010316
+    },
+    {
+      "world": 14,
+      "group": 2,
+      "boss_ids": [
+        "boss_w14_epitoke"
+      ],
+      "target_seconds": 120,
+      "minimum_seconds": 48.0,
+      "budget": 15480.0,
+      "weapon_level_bound": 8,
+      "base_hp": 8400,
+      "tuned_hp": 18714,
+      "transition_gap": 6,
+      "max_build": {
+        "required_hp": 18712.84705882353,
+        "dps": 165.54666666666665,
+        "bomb_burst": 2000.0,
+        "ranks": {
+          "dano": 5,
+          "cadencia": 4,
+          "bombas": 3
+        },
+        "rov": true,
+        "multicorer": true,
+        "cost": 12100
+      },
+      "normal_continuous_lower_seconds": 56.48123389175258
+    },
+    {
+      "world": 14,
+      "group": 3,
+      "boss_ids": [
+        "boss_w14_scientist"
+      ],
+      "target_seconds": 120,
+      "minimum_seconds": 48.0,
+      "budget": 17160.0,
+      "weapon_level_bound": 8,
+      "base_hp": 8400,
+      "tuned_hp": 18714,
+      "transition_gap": 6,
+      "max_build": {
+        "required_hp": 18712.84705882353,
+        "dps": 165.54666666666665,
+        "bomb_burst": 2000.0,
+        "ranks": {
+          "dano": 5,
+          "cadencia": 4,
+          "bombas": 3
+        },
+        "rov": true,
+        "multicorer": true,
+        "cost": 12100
+      },
+      "normal_continuous_lower_seconds": 56.48123389175258
+    },
+    {
+      "world": 14,
+      "group": 4,
+      "boss_ids": [
+        "boss_w14_eunice_titan"
+      ],
+      "target_seconds": 180,
+      "minimum_seconds": 72.0,
+      "budget": 19080.0,
+      "weapon_level_bound": 8,
+      "base_hp": 12650,
+      "tuned_hp": 26894,
+      "transition_gap": 9,
+      "max_build": {
+        "required_hp": 26892.8,
+        "dps": 165.54666666666665,
+        "bomb_burst": 2000.0,
+        "ranks": {
+          "dano": 5,
+          "cadencia": 4,
+          "bombas": 3
+        },
+        "rov": true,
+        "multicorer": true,
+        "cost": 12100
+      },
+      "normal_continuous_lower_seconds": 84.18725837628867
+    }
+  ]
+}

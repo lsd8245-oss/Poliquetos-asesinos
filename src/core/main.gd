@@ -1,5 +1,6 @@
 extends Node2D
 ## Native bitmap UI. Every visible element is composed from the PNG asset pack.
+const Sound=preload("res://src/audio/audio.gd")
 const Assets = preload("res://src/core/assets.gd")
 const Game = preload("res://src/core/game.gd")
 const Shop = preload("res://src/shop/shop.gd")
@@ -17,6 +18,7 @@ const TIPS = [
 	"Estudia los huecos antes de avanzar.", "La pausa permite cambiar los controles."
 ]
 const PALETTE = ["#75c9df", "#d7ffed", "#4a9cff", "#ffce58", "#ff7384", "#c28fff", "#ffffff", "#42637d"]
+var audio
 var assets
 var game
 var sandbox = false
@@ -41,6 +43,9 @@ var shop_page = 0
 var shop_item = ""
 var shop_rows: Array = []
 var result_clock = 0.0
+var ending_clock=0.0
+var credits_clock=0.0
+var finish_sequence=false
 var last_state = ""
 var pending_bomb = false
 var remap_action = ""
@@ -54,9 +59,26 @@ var import_dialog: FileDialog
 
 func _ready():
 	sandbox = OS.has_feature("pruebas") or OS.get_cmdline_user_args().has("--pruebas")
+	audio=Sound.new()
+	add_child(audio)
 	assets = Assets.new()
 	assets.load_all()
 	game = Game.new()
+	if OS.get_cmdline_user_args().has("--verify-export"):
+		var p=Shop.create_profile(sandbox)
+		game.start(p)
+		var ok=game.data.worlds.size()==14 and game.player.shield==100 and game.enemies.is_empty() and assets.has_sprite("w14_boss_boss_w14_eunice_titan_move")
+		ok=ok and p.equipment.size()==1 and p.equipment.get("sonar",false)
+		ok=ok and int(p.credits)==(999999999 if sandbox else 0)
+		var probe=FileAccess.open("user://export-verification.tmp",FileAccess.WRITE)
+		ok=ok and probe!=null
+		if probe!=null:
+			probe.store_string("ok")
+			probe.close()
+			DirAccess.remove_absolute("user://export-verification.tmp")
+		print("EXPORT_VERIFY_", "PASS" if ok else "FAIL", " edition=", "pruebas" if sandbox else "normal", " worlds=", game.data.worlds.size(), " shield=", game.player.shield)
+		get_tree().quit(0 if ok else 1)
+		return
 	options = Save.default_options()
 	var loaded = Save.load_options(sandbox)
 	for key in loaded.options:
@@ -66,7 +88,7 @@ func _ready():
 	_show("splash")
 
 func _apply_options():
-	AudioServer.set_bus_volume_db(0, linear_to_db(float(options.master) / 10.0) if int(options.master) > 0 else -80.0)
+	audio.configure(options)
 	if DisplayServer.get_name() == "headless":
 		return
 	var mode = str(options.get("screen", "window2"))
@@ -81,7 +103,7 @@ func _save_options():
 	options.show_hitbox = hitboxes
 	var result = Save.save_options(options, sandbox)
 	if not result.ok:
-		_toast("No se guardaron las opciones: " + str(result.error))
+		_toast("No se guardaron las opciones: " + _friendly_error(str(result.error)))
 	_apply_options()
 
 func _toast(text: String):
@@ -125,9 +147,9 @@ func _show(next: String):
 				var saved = Save.load_slot(slot, sandbox)
 				var summary = "vacía"
 				if saved.ok:
-					summary = "M%d / %s / %d monedas" % [saved.profile.world, saved.profile.difficulty, saved.profile.credits]
+					summary = "M%d / %s / %d monedas" % [saved.profile.world, _difficulty_name(saved.profile.difficulty), saved.profile.credits]
 				elif saved.error != "slot_empty":
-					summary = "archivo dañado: " + str(saved.error)
+					summary = "archivo dañado: copia de respaldo si existe"
 				_button("Ranura %d: %s" % [slot, summary], "slot:%d" % slot, Rect2(40, 82 + (slot - 1) * 32, 550, 26))
 			_button("Volver", "title", Rect2(40, 202, 220, 22))
 		"options":
@@ -135,13 +157,13 @@ func _show(next: String):
 			for key in ["master", "music", "effects"]:
 				var label = {"master":"Volumen general", "music":"Música", "effects":"Efectos"}[key]
 				_button("%s: %d / 10" % [label, options[key]], "option:" + key)
-			_button("Pantalla: " + str(options.screen), "option:screen")
+			_button("Pantalla: " + ("Pantalla completa" if options.screen=="fullscreen" else "Ventana x"+str(options.screen).trim_prefix("window")), "option:screen")
 			_button("Disparo automático: " + _yes(options.autofire), "option:autofire")
 			_button("Temblor: " + _yes(options.shake), "option:shake")
 			_button("Reducir destellos: " + _yes(options.reduce_flashes), "option:reduce_flashes")
 			_button("Teclado y mando", "controls")
 			if return_screen == "rest":
-				_button("Dificultad: " + str(game.profile.difficulty), "change_difficulty")
+				_button("Dificultad: " + _difficulty_name(game.profile.difficulty), "change_difficulty")
 			_button("Volver", "options_back")
 			lines = ["Izquierda / derecha: ajustar; Enter / A: cambiar", "F3: mostrar hitboxes | Música pendiente"]
 		"controls":
@@ -157,7 +179,12 @@ func _show(next: String):
 			_button("Restaurar controles", "reset_bindings", Rect2(35, 280, 275, 21))
 			_button("Volver", "options", Rect2(325, 280, 280, 21))
 			lines = ["Selecciona una acción y pulsa la nueva tecla o botón.", "Esc cancela. El stick izquierdo también mueve la nave."]
+		"ending":
+			heading="HAS ESCAPADO"
+			ending_clock=0.0
+			_button("Continuar a créditos","ending_skip",Rect2(200,292,260,22))
 		"credits":
+			credits_clock=0.0
 			heading = "CRÉDITOS"
 			lines = ["POLIQUETOS ASESINOS", "Campaña marina / edición nativa de Windows", "Motor Godot 4.6 · Gráficos PNG y fuente bitmap", "Arte provisional identificado; música pendiente.", "Diseño y proyecto: Poliquetos Asesinos"]
 			_button("Volver", "credits_back", Rect2(54, 230, 290, 22))
@@ -175,7 +202,7 @@ func _show(next: String):
 		"rest":
 			game.profile.resume = "rest"
 			var saved = Save.save_slot(active_slot, game.profile)
-			_toast("Guardado automático: ranura %d" % active_slot if saved.ok else "Error de guardado: " + str(saved.error))
+			_toast("Guardado automático: ranura %d" % active_slot if saved.ok else "Error de guardado: " + _friendly_error(str(saved.error)))
 			heading = "DESCANSO / ACTO %d / MUNDO %d" % [int(game.world.get("acto", 4)), int(game.profile.world)]
 			lines = ["%d monedas | Tiempo %s | Muertes %d" % [game.profile.credits, _time(game.total_time), _deaths()]]
 			for pair in [["Tienda", "shop"], ["Astillero", "shipyard"], ["Skins", "skins"], ["Guardar", "save"], ["Rejugar mundo", "replay"], ["Siguiente mundo", "next"], ["Opciones", "options"], ["Salir al título", "leave"]]:
@@ -206,7 +233,7 @@ func _show(next: String):
 			for zone in ["hull", "lights", "trail"]:
 				_button({"hull":"Casco", "lights":"Luces", "trail":"Estela"}[zone] + ": " + str(game.profile.colors[zone]), "color:" + zone)
 			_button("Volver", "rest")
-			lines = ["Solo cambia la apariencia. Equipo instalado:", ", ".join(game.profile.equipment.keys())]
+			lines = ["Solo cambia la apariencia. Equipo instalado:", _equipment_names()]
 		"skins":
 			heading = "SKINS / LOGROS Y OBJETOS DE JEFE"
 			for row in Shop.cosmetics():
@@ -234,7 +261,7 @@ func _show(next: String):
 			_button("Mundo: %d / %s" % [sandbox_world, game.world_config(sandbox_world).nombre], "dev_world")
 			_button("Laboratorio: encuentro %d de 4" % (sandbox_lab + 1), "dev_lab")
 			for weapon in ["shot", "missile", "bomb"]:
-				_button("%s: nivel %d" % [weapon, sandbox_weapons[weapon]], "dev_weapon:" + weapon)
+				_button("%s: nivel %d" % [{"shot":"Disparo","missile":"Misiles","bomb":"Bombas"}[weapon], sandbox_weapons[weapon]], "dev_weapon:" + weapon)
 			_button("Iniciar selección", "dev_start")
 			_button("Volver", "dev_back")
 		"dead":
@@ -251,11 +278,27 @@ func _show(next: String):
 			_button("Continuar / saltar recuento", "results_skip", Rect2(54, 292, 400, 25))
 		"victory":
 			heading = "¡LABORATORIO ATRÁS! / CAMPAÑA COMPLETADA"
-			lines = ["Tiempo total: " + _time(game.total_time), "Muertes: %d | Monedas: %d" % [_deaths(), game.profile.credits], "Skins: " + ", ".join(game.profile.skins), "Gracias por jugar a Poliquetos Asesinos."]
+			var defeated=float(game.profile.get("kills_total",0))
+			var encountered=maxf(1,float(game.profile.get("spawned_total",0)))
+			lines = ["Tiempo total: " + _time(game.total_time),"Muertes: %d | Monedas totales: %d"%[_deaths(),int(game.profile.get("coins_total",0))],"Escape: %d puntos"%int(game.profile.get("escape_score",0)),"Enemigos derrotados: %d/%d (%.1f%%)"%[int(defeated),int(encountered),100*defeated/encountered],"Gracias por jugar a Poliquetos Asesinos."]
+			_button("Rejugar mundo", "replay",Rect2(350,205,250,25))
 			_button("Créditos", "credits", Rect2(54, 205, 290, 25))
 			_button("Guardar", "save", Rect2(54, 240, 290, 25))
 			_button("Volver al título", "title", Rect2(54, 275, 290, 25))
 	queue_redraw()
+
+func _difficulty_name(value:String)->String:
+	return {"easy":"Fácil","normal":"Normal","hard":"Difícil"}.get(value,"Normal")
+
+func _equipment_names()->String:
+	var names=["Sonar"]
+	for item in Shop.catalog().equipo:
+		if game.profile.equipment.get(item.id,false):names.append(item.nombre)
+	return ", ".join(names)
+
+func _friendly_error(code:String)->String:
+	var messages={"insufficient_credits":"No tienes monedas suficientes","max_rank":"Has alcanzado el rango máximo","already_owned":"El equipo ya está instalado","act_locked":"Disponible en un acto posterior","not_purchased_this_visit":"Solo se reembolsa lo comprado en esta visita","visit_closed_or_invalid":"La visita a la tienda ha terminado","rank_changed":"Reembolsa primero el último rango","edition_mismatch":"El archivo pertenece a la otra edición","slot_empty":"La ranura está vacía"}
+	return messages.get(code,"Datos incompatibles o archivo no disponible")
 
 func _yes(value) -> String:
 	return "Sí" if value else "No"
@@ -278,7 +321,10 @@ func _start(profile: Dictionary, loaded: bool = false):
 	game.start(profile)
 	active_slot = int(profile.get("slot", 1))
 	last_state = ""
-	if loaded and profile.get("resume", "") == "rest":
+	if loaded and profile.get("completed",false):
+		game.state="victory"
+		_show("victory")
+	elif loaded and profile.get("resume", "") == "rest":
 		game.state = "rest"
 		_show("rest")
 	else:
@@ -292,6 +338,7 @@ func _enter_rest():
 	_show("rest")
 
 func _activate(action: String, direction: int = 1):
+	if audio!=null:audio.play("select")
 	if action.begins_with("difficulty:"):
 		difficulty = action.get_slice(":", 1)
 		slot_mode = "new"
@@ -307,9 +354,9 @@ func _activate(action: String, direction: int = 1):
 		elif saved.ok:
 			_start(saved.profile, true)
 			if saved.recovered:
-				_toast("Archivo dañado. Se recuperó la copia .bak: " + str(saved.error))
+				_toast("Archivo dañado. Se recuperó la copia .bak: " + _friendly_error(str(saved.error)))
 		else:
-			_toast("No se pudo cargar: " + str(saved.error))
+			_toast("No se pudo cargar: " + _friendly_error(str(saved.error)))
 	elif action.begins_with("option:"):
 		var key = action.get_slice(":", 1)
 		if key in ["master", "music", "effects"]:
@@ -349,7 +396,7 @@ func _activate(action: String, direction: int = 1):
 		if saved.ok:
 			active_slot = slot
 			game.profile.slot = slot
-		_toast("Guardado en ranura %d" % slot if saved.ok else "Error: " + str(saved.error))
+		_toast("Guardado en ranura %d" % slot if saved.ok else "Error: " + _friendly_error(str(saved.error)))
 	elif action.begins_with("export:"):
 		var slot = int(action.get_slice(":", 1))
 		var json = Save.export_slot(slot, sandbox)
@@ -383,6 +430,9 @@ func _activate(action: String, direction: int = 1):
 				if action == "credits":
 					return_screen = screen
 				_show(action)
+			"ending_skip":
+				finish_sequence=true
+				_show("credits")
 			"credits_back":
 				_show(return_screen)
 			"load":
@@ -433,13 +483,14 @@ func _activate(action: String, direction: int = 1):
 				game.profile.resume = "playing"
 				game.continue_campaign()
 				intro_clock = 2.0
-				_show("game")
+				_show("rest" if game.state=="rest" else ("victory" if game.state=="victory" else "game"))
 			"results_skip":
 				_enter_rest()
 			"buy", "refund":
 				var result = Shop.purchase(game.profile, shop_item, shop_visit) if action == "buy" else Shop.refund(game.profile, shop_item, shop_visit)
 				game.refresh_stats()
-				_toast("Compra realizada" if result.ok and action == "buy" else ("Reembolso realizado" if result.ok else "No disponible: " + str(result.error)))
+				audio.play("buy" if result.ok else "reject")
+				_toast("Compra realizada" if result.ok and action == "buy" else ("Reembolso realizado" if result.ok else "No disponible: " + _friendly_error(str(result.error))))
 				var current = selected
 				_show("shop")
 				selected = current
@@ -475,10 +526,11 @@ func _activate(action: String, direction: int = 1):
 func _new_profile():
 	var profile = Shop.create_profile(sandbox, difficulty)
 	profile.slot = active_slot
+	profile.seed=randi()
 	_start(profile)
 	var saved = Save.save_slot(active_slot, profile)
 	if not saved.ok:
-		_toast("No se pudo guardar: " + str(saved.error))
+		_toast("No se pudo guardar: " + _friendly_error(str(saved.error)))
 
 func _open_import(slot: int):
 	if import_dialog != null:
@@ -491,7 +543,7 @@ func _open_import(slot: int):
 	add_child(import_dialog)
 	import_dialog.file_selected.connect(func(path):
 		var result = Save.import_slot(slot, FileAccess.get_file_as_string(path), sandbox)
-		_toast("Importado en ranura %d" % slot if result.ok else "Importación rechazada: " + str(result.error))
+		_toast("Importado en ranura %d" % slot if result.ok else "Importación rechazada: " + _friendly_error(str(result.error)))
 	)
 	import_dialog.popup_centered(Vector2i(580, 320))
 
@@ -607,7 +659,9 @@ func _back():
 
 func _process(dt):
 	clock += dt
+	if audio!=null:audio.consume(game.sound_events)
 	message_time = maxf(0, message_time - dt)
+	position=Vector2(sin(clock*37),cos(clock*43)) if screen=="game" and int(game.profile.get("world",0))==15 and options.get("shake",true) and not options.get("reduce_flashes",false) else Vector2.ZERO
 	if screen == "game":
 		if intro_clock > 0:
 			intro_clock -= dt
@@ -630,7 +684,16 @@ func _process(dt):
 				"victory":
 					game.profile.resume = "completed"
 					Save.save_slot(active_slot, game.profile)
-					_show("victory")
+					finish_sequence=true
+					_show("ending")
+	elif screen == "ending":
+		ending_clock+=dt
+		if ending_clock>=float(game.data.combat.ui.ending_seconds):_show("credits")
+	elif screen=="credits" and finish_sequence:
+		credits_clock+=dt
+		if credits_clock>=float(game.data.combat.ui.credits_seconds):
+			finish_sequence=false
+			_show("victory")
 	elif screen == "results":
 		result_clock += dt
 		if result_clock >= 4.0:
@@ -651,6 +714,7 @@ func _draw():
 	if assets == null:
 		return
 	var world_id = int(game.profile.get("world", 1)) if game != null else 1
+	if screen=="ending":world_id=1
 	var playing = screen in ["game", "pause", "dead", "results", "confirm"] and not game.profile.is_empty()
 	_draw_background(world_id, game.scroll if playing else clock * 10)
 	if playing:
@@ -661,6 +725,11 @@ func _draw():
 			_label("MUNDO %d / %s" % [world_id, game.world.nombre], Vector2(115, 159))
 		if game.state == "countdown":
 			_label(str(ceili(game.resume_clock)), Vector2(308, 148), Color.WHITE, 3)
+	elif screen=="ending":
+		var fraction=clampf(ending_clock/float(game.data.combat.ui.ending_seconds),0,1)
+		_draw_ship(Vector2(320,320-fraction*float(game.data.combat.ui.ending_rise)),Vector2(72,36))
+		_label("HAS ESCAPADO",Vector2(244,55),Color.WHITE,2)
+		_label("El laboratorio se hunde. El mar vuelve a abrirse.",Vector2(180,87))
 	elif screen == "splash":
 		assets.panel(self, Rect2(50, 75, 540, 210))
 		_label("POLIQUETOS", Vector2(140, 104), Color.WHITE, 3)
@@ -697,27 +766,42 @@ func _draw():
 		_label("Esc cancela", Vector2(118, 180))
 
 func _draw_background(world_id: int, offset: float):
+	var fade=0.0
+	if world_id==15 and not game.profile.is_empty():
+		var transition=game.data.escape.fondo_transicion
+		fade=1.0 if game.profile.get("completed",false) else clampf((game.world_time-float(transition.desde_seg))/float(transition.hasta_seg-transition.desde_seg),0,1)
 	for layer in range(1, 5):
 		var factors = game.data.combat.get("scroll",{}).get("parallax",[0.1,0.3,0.6,1.0])
 		var x = -fmod(offset * float(factors[layer-1]), 640.0)
 		var key = "w%02d_bg_layer%d_idle" % [world_id, layer]
-		assets.sprite(self, key, Rect2(x, 0, 640, 336), clock)
-		assets.sprite(self, key, Rect2(x + 640, 0, 640, 336), clock)
+		assets.sprite(self, key, Rect2(x, 0, 640, 336), clock,Color(1,1,1,1-fade))
+		assets.sprite(self, key, Rect2(x + 640, 0, 640, 336), clock,Color(1,1,1,1-fade))
+		if fade>0:
+			var sea="w01_bg_layer%d_idle"%layer
+			assets.sprite(self,sea,Rect2(x,0,640,336),clock,Color(1,1,1,fade))
+			assets.sprite(self,sea,Rect2(x+640,0,640,336),clock,Color(1,1,1,fade))
 
 func _draw_ship(pos: Vector2, size: Vector2):
 	var skin = str(game.profile.get("skin", "original"))
 	var colors = game.profile.get("colors", {"hull":"#75c9df", "lights":"#d7ffed", "trail":"#4a9cff"})
-	assets.sprite(self, "w01_ui_ship_%s_move" % skin, Rect2(pos - size / 2, size), clock, Color(colors.hull))
+	var hull=Color(colors.hull)
+	if screen=="game" and game.invulnerability>0 and int(clock*20)%2==0:hull.a=0.35
+	assets.sprite(self, "w01_ui_ship_%s_move" % skin, Rect2(pos - size / 2, size), clock, hull)
 	_pixel(Rect2(pos + Vector2(size.x * 0.18, -size.y * 0.1), Vector2(size.x * 0.12, size.y * 0.16)), Color(colors.lights))
 	assets.sprite(self, "w01_fx_trail_burst", Rect2(pos - Vector2(size.x * 0.65, 4), Vector2(size.x * 0.2, 8)), clock, Color(colors.trail))
 
 func _draw_game(world_id: int):
+	if world_id==15 and game.world_time<float(game.data.escape.fondo_transicion.desde_seg):
+		_pixel(Rect2(0,0,640,336),Color(0.8,0,0,0.03 if options.reduce_flashes else 0.04+0.06*absf(sin(clock*3))))
 	for hazard in game.hazards:
 		var rect = hazard.get("rect", Rect2())
 		assets.sprite(self, "w01_ui_hazard_idle", rect, clock, Color(1, 0.6, 0.3, 0.22 if hazard.get("delay", 0) > 0 else 0.55))
 	for enemy in game.enemies:
-		if enemy.get("hidden", false):
+		if enemy.get("hidden",false):
+			if enemy.get("warning",false):
+				assets.sprite(self,"w01_fx_spark_burst",Rect2(enemy.pos.x-12,312,24,24),clock,Color.YELLOW)
 			continue
+		if float(enemy.get("hp",0))<=0 or enemy.get("inactive",false):continue
 		var size = enemy.get("size", Vector2(32, 24))
 		var key = "w%02d_enemy_%s_move" % [world_id, enemy.id]
 		if enemy.get("boss", false):
@@ -725,9 +809,25 @@ func _draw_game(world_id: int):
 		elif enemy.get("mini", false):
 			key = "w%02d_mini_%s_move" % [world_id, game.world.get("mini_tipo", enemy.id)]
 		var flags = enemy.get("flags", {})
-		var tint = Color.WHITE if enemy.get("flash", 0) > 0 and not options.reduce_flashes else Color.WHITE
-		tint.a = float(flags.get("opacity", 0.15 if flags.get("invisible", false) else 1.0))
-		assets.sprite(self, key, Rect2(enemy.pos - size / 2, size), clock, tint)
+		var tint = Color.WHITE
+		if enemy.get("flash",0)>0 and not options.reduce_flashes and assets.has_sprite(key.replace("_move","_hit")):
+			key=key.replace("_move","_hit")
+		if enemy.get("carrier","")!="":
+			var glow={"rojo":Color(1,0.3,0.3),"verde":Color(0.3,1,0.4),"azul":Color(0.3,0.5,1)}.get(enemy.carrier,Color.WHITE)
+			assets.sprite(self,"w01_fx_bubble_burst",Rect2(enemy.pos-size*0.6,size*1.2),clock,glow)
+		if enemy.get("warning",false):
+			assets.sprite(self,"w01_fx_spark_burst",Rect2(enemy.pos-size/2,size),clock,Color.YELLOW)
+		if float(enemy.get("lock",0))>0:
+			tint.a=0.35 if int(clock*12)%2==0 else 0.8
+		tint.a *= float(flags.get("opacity", 0.15 if flags.get("invisible", false) else 1.0))
+		if flags.get("screen_effect","")=="sandstorm":
+			_pixel(Rect2(0,0,40,336),Color(0.15,0.1,0,0.6))
+			_pixel(Rect2(600,0,40,336),Color(0.15,0.1,0,0.6))
+		elif flags.get("screen_effect","")=="snow" and not options.reduce_flashes:
+			for snow in range(16):
+				assets.sprite(self,"w01_fx_spark_burst",Rect2(fmod(snow*41+clock*20,640),fmod(clock*55+snow*27,336),3,3),clock)
+		for part in _enemy_draw_parts(enemy):
+			assets.sprite(self,key,Rect2(part.pos-part.size/2,part.size),clock,tint)
 		if game.profile.equipment.get("ctd", false) and flags.get("weak_exposed", true):
 			for point in flags.get("weak_points", []):
 				assets.sprite(self, "w01_fx_spark_burst", Rect2(point - Vector2(6, 6), Vector2(12, 12)), clock, Color.CYAN)
@@ -766,6 +866,8 @@ func _draw_game(world_id: int):
 		var fade_duration = float(game.data.combat.timings.get("death_fade", 0.5))
 		if game.death_timer < fade_duration:
 			_pixel(Rect2(0, 0, 640, 336), Color(0, 0, 0, 1.0 - maxf(0, game.death_timer) / fade_duration))
+	if game.screen_blind>0:
+		_pixel(Rect2(0,0,640,336),Color(1,1,1,float(game.data.combat.ui.reduced_flash_alpha) if options.reduce_flashes else float(game.data.combat.ui.flash_alpha)))
 	_draw_hud()
 	var boss_index = 0
 	for boss in game.enemies:
@@ -787,6 +889,10 @@ func _draw_game(world_id: int):
 	if hitboxes:
 		_label("F3 HITBOX | BALAS %d/%d | T %.1f" % [game.enemy_bullets.size(), int(game.data.combat.enemy.bullet_pool), game.world_time], Vector2(6, 320), Color.CYAN)
 
+func _enemy_draw_parts(enemy:Dictionary)->Array:
+	if float(enemy.get("hp",0))<=0 or enemy.get("inactive",false):return []
+	return enemy.parts if not enemy.get("parts",[]).is_empty() else [{"pos":enemy.pos,"size":enemy.get("size",Vector2(32,24))}]
+
 func _draw_bullet(bullet: Dictionary, kind: String):
 	var size = bullet.get("size", Vector2(8, 4))
 	assets.sprite(self, "w01_bullet_%s_move" % kind, Rect2(bullet.pos - size / 2, size), clock)
@@ -805,16 +911,17 @@ func _draw_hud():
 	for index in range(3):
 		var x = 140 + index * 41
 		assets.sprite(self, "w01_ui_item_%s_idle" % weapons[index], Rect2(x, 338, 12, 12))
-		_label(str(game.profile.weapons[weapons[index]]), Vector2(x + 17, 340))
-		for level in range(int(game.profile.weapons[weapons[index]])):
+		var effective=maxi(int(game.profile.weapons.missile),int(game.stats.min_missile)) if weapons[index]=="missile" else int(game.profile.weapons[weapons[index]])
+		_label(str(effective), Vector2(x + 17, 340))
+		for level in range(effective):
 			_pixel(Rect2(x + level * 4, 352, 3, 3), Color.CYAN)
 	for index in range(int(game.stats.max_bombs)):
 		assets.sprite(self, "w01_ui_item_bomb_idle", Rect2(270 + index * 14, 342, 12, 12), 0, Color.WHITE if index < int(game.profile.bombs) else Color(0.2, 0.3, 0.4))
 	assets.sprite(self, "w01_ui_item_coin_idle", Rect2(350, 342, 12, 12))
-	_label(str(int(game.profile.credits)), Vector2(365, 345))
+	_label("INFINITO" if sandbox else str(int(game.profile.credits)), Vector2(365, 345))
 	_pixel(Rect2(450, 343, 180, 6), Color(0.12, 0.2, 0.28))
 	var duration = maxf(1, float(game.world.get("duracion_hasta_jefe_seg", 300)))
-	_pixel(Rect2(450, 343, 180 * clampf(game.world_time / duration, 0, 1), 6), Color(0.35, 0.65, 0.9))
+	_pixel(Rect2(450, 343, 180 * (1.0 if game.state=="boss" else clampf(game.world_time / duration, 0, 1)), 6), Color(0.35, 0.65, 0.9))
 	var mini = float(game.world.get("minijefe_inicio_seg", -1))
 	if mini > 0:
 		_pixel(Rect2(450 + 180 * mini / duration, 341, 2, 10), Color.YELLOW)
@@ -832,13 +939,26 @@ func _draw_shop():
 			var rank = int(game.profile.upgrades.get(row.id, 0))
 			_label("Rango %d / %d" % [rank, int(row.rangos)], Vector2(300, 102))
 			_label("Coste: %d" % int(row.costos[rank]) if rank < int(row.rangos) else "RANGO MÁXIMO", Vector2(300, 120))
-			description = "Por rango: " + JSON.stringify(row.efecto_por_rango)
+			description = _upgrade_description(row)
 		else:
 			_label("Coste: %d | Acto: %d" % [int(row.costo), int(row.acto)], Vector2(300, 102))
 			_label("Instalado" if game.profile.equipment.get(row.id, false) else "Pendiente de compra", Vector2(300, 120))
 			description = str(row.get("descripcion", row.get("efecto", ""))).replace("_", " ")
 		_label(_wrap(description, 49), Vector2(300, 145))
 		_label("Reembolso: solo compras de esta visita.", Vector2(300, 205), Color(0.7, 0.85, 0.85))
+
+func _upgrade_description(row:Dictionary)->String:
+	var rank=int(game.profile.upgrades.get(row.id,0))
+	var next_profile=game.profile.duplicate(true)
+	next_profile.upgrades[row.id]=mini(rank+1,int(row.rangos))
+	var before=Shop.stats(game.profile)
+	var after=Shop.stats(next_profile)
+	var stat=String(row.efecto_por_rango.keys()[0])
+	var names={"max_shield":"Escudo máximo","damage_mult":"Daño de armas","rate_mult":"Cadencia","min_missile":"Nivel mínimo de misiles","max_bombs":"Capacidad de bombas","regen":"Escudo regenerado por segundo","magnet":"Radio de atracción","speed":"Velocidad de la nave"}
+	var percent=stat in ["damage_mult","rate_mult"]
+	var factor=100.0 if percent else 1.0
+	var suffix="%" if percent else (" px" if stat=="magnet" else (" px/s" if stat=="speed" else ""))
+	return "%s\nAntes: %.1f%s\nDespués: %.1f%s"%[names.get(stat,row.nombre),float(before[stat])*factor,suffix,float(after[stat])*factor,suffix]
 
 func _wrap(value: String, width: int) -> String:
 	var output = ""
@@ -852,7 +972,7 @@ func _wrap(value: String, width: int) -> String:
 	return output.strip_edges()
 
 func _draw_results():
-	var labels = {"kills":"Enemigos derrotados", "percentage":"Porcentaje", "collected":"Monedas recogidas", "reward":"Recompensa de mundo", "bonus":"Bono sin morir", "deaths":"Muertes", "time":"Tiempo de mundo", "unique":"Objeto único", "regular_kills":"Enemigos derrotados", "world_collected":"Monedas recogidas", "base":"Recompensa", "item":"Objeto único"}
+	var labels = {"mundo":"Mundo","nombre":"Hábitat","enemigos_derrotados":"Enemigos derrotados","enemigos_total":"Enemigos de la etapa","porcentaje":"Porcentaje","monedas_recogidas":"Monedas recogidas","recompensa":"Recompensa","bono":"Bono sin morir","muertes":"Muertes","tiempo":"Tiempo activo","objeto_unico":"Objeto único","kills":"Enemigos derrotados", "percentage":"Porcentaje", "collected":"Monedas recogidas", "reward":"Recompensa de mundo", "bonus":"Bono sin morir", "deaths":"Muertes", "time":"Tiempo de mundo", "unique":"Objeto único", "regular_kills":"Enemigos derrotados", "world_collected":"Monedas recogidas", "base":"Recompensa", "item":"Objeto único"}
 	var row = 0
 	var fraction = clampf(result_clock / 4.0, 0, 1)
 	for key in game.result:

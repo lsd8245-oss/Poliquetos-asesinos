@@ -120,8 +120,10 @@ def definitions():
     # Escape uses its own palette set, including the laboratory's robotic enemies.
     lab=next(w for w in worlds if w['id']==14)
     for enemy in lab.get('unicos',[]): add(15,'enemy',enemy,'move',(32,32),4)
-    add(1,'ui','ship_original','move',(48,24),4,10)
-    for name,size in [('panel',(16,16)),('panel_selected',(16,16)),('pixel',(1,1)),('hud',(640,24)),('cursor',(8,8)),('hitbox',(16,16)),('hazard',(64,16)),('title',(320,48))]:
+    cosmetics_path=ROOT/'data/cosmetics.json'
+    skins=json.loads(cosmetics_path.read_text()) if cosmetics_path.exists() else [{'id':'original'}]
+    for skin in skins: add(1,'ui','ship_'+skin['id'],'move',(48,24),4,10)
+    for name,size in [('panel',(640,360)),('panel_selected',(640,360)),('pixel',(1,1)),('hud',(640,24)),('cursor',(8,8)),('hitbox',(16,16)),('hazard',(64,16)),('title',(320,48))]:
         add(1,'ui',name,'idle',size,1,0)
     for name,size in [('shot',(12,4)),('enemy',(8,8)),('missile',(16,8)),('laser',(32,8)),('homing',(12,8)),('bounce',(8,8)),('bomb',(12,12))]:
         add(1,'bullet',name,'move',size,2,10)
@@ -129,6 +131,13 @@ def definitions():
         add(1,'ui',f'item_{name}','idle',(16,16),2,8)
     for name,size in [('explosion',(64,64)),('bomb',(128,128)),('hit',(32,32)),('bubble',(8,8)),('spark',(8,8)),('trail',(16,8)),('flash',(48,24))]:
         add(1,'fx',name,'burst',size,8,12)
+    # Damage flashes are actual white PNGs: white tinting a coloured PNG is a no-op.
+    for move in list(result):
+        if move['tipo'] in ('enemy','mini','boss') and move['nombre'].endswith('_move'):
+            hit=dict(move)
+            hit.update(nombre=move['nombre'].removesuffix('_move')+'_hit',
+                       ruta=move['ruta'].replace('_move_01.png','_hit_01.png'), cuadros=2, fps=60)
+            result.append(hit)
     return result
 
 def placeholder(asset,index):
@@ -137,7 +146,8 @@ def placeholder(asset,index):
     if kind=='bg':
         layer=int(key.split('layer')[1].split('_')[0]);world=asset['mundo']
         color=(24+world*5,35+layer*8,49+world*3,255 if layer==1 else 40)
-    if 'pixel_idle' in key: color=(255,255,255,255)
+    is_hit=kind in ('enemy','mini','boss') and key.endswith('_hit')
+    if is_hit or 'pixel_idle' in key: color=(255,255,255,255)
     if 'panel_selected' in key: color=(59,112,156,255)
     image=Image.new('RGBA',(w,h),color)
     # A tiny original bitmap label. Sub-pixel-sized bullets/pixel rely on PNG metadata.
@@ -150,6 +160,10 @@ def placeholder(asset,index):
             if y+cell_h>=h: break
             mark=glyph(char)
             if cell_w==4: mark=mark.resize((4,6),Image.Resampling.NEAREST)
+            if is_hit:
+                dark=Image.new('RGBA',mark.size,(24,24,24,255))
+                dark.putalpha(mark.getchannel('A'))
+                mark=dark
             image.paste(mark,(x,y),mark)
     meta=PngImagePlugin.PngInfo();meta.add_text('status','placeholder');meta.add_text('asset_name',key);meta.add_text('frame',str(index));meta.add_text('notice','Original flat labelled rectangle; replace with artist-produced final PNG.')
     return image,meta

@@ -49,13 +49,13 @@ Integrar datos exactos 14mundos, laboratorio 4jefes y escape. Debug explícito s
 
 ## Progreso
 
-- [ ] Fase 1 assets/resolución.
-- [ ] Fase 2 núcleo.
-- [ ] Fase 3 armas/ítems.
-- [ ] Fase 4 oleadas/mundo1.
-- [ ] Fase 5 jefes.
-- [ ] Fase 6 economía.
-- [ ] Fase 7 flujo/guardado.
-- [ ] Fase 8 mundos1–13.
-- [ ] Fase 9 laboratorio/escape.
-- [ ] Fase 10 pulido/medición/exportación (música pendiente).
+- [x] Fase 1 assets/resolución.
+- [x] Fase 2 núcleo.
+- [x] Fase 3 armas/ítems.
+- [x] Fase 4 oleadas/mundo1.
+- [x] Fase 5 jefes.
+- [x] Fase 6 economía.
+- [x] Fase 7 flujo/guardado.
+- [x] Fase 8 mundos1–13.
+- [x] Fase 9 laboratorio/escape.
+- [ ] Fase 10: implementación técnica de pulido/medición/exportación lista; aceptación de duración humana/hardware destino pendiente. Música aplazada por el usuario.

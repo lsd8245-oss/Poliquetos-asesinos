@@ -29,146 +29,218 @@
       "w": 640,
       "h": 336
     },
-    "w15_enemy_mech_chaet_move_01": {
+    "w15_enemy_mech_chaet_hit_01": {
       "x": 640,
       "y": 336,
       "w": 32,
       "h": 32
     },
-    "w15_enemy_mech_chaet_move_02": {
+    "w15_enemy_mech_chaet_hit_02": {
       "x": 672,
       "y": 336,
       "w": 32,
       "h": 32
     },
-    "w15_enemy_mech_chaet_move_03": {
+    "w15_enemy_mech_chaet_move_01": {
       "x": 704,
       "y": 336,
       "w": 32,
       "h": 32
     },
-    "w15_enemy_mech_chaet_move_04": {
+    "w15_enemy_mech_chaet_move_02": {
       "x": 736,
       "y": 336,
       "w": 32,
       "h": 32
     },
-    "w15_enemy_mech_nereis_move_01": {
+    "w15_enemy_mech_chaet_move_03": {
       "x": 768,
       "y": 336,
       "w": 32,
       "h": 32
     },
-    "w15_enemy_mech_nereis_move_02": {
+    "w15_enemy_mech_chaet_move_04": {
       "x": 800,
       "y": 336,
       "w": 32,
       "h": 32
     },
-    "w15_enemy_mech_nereis_move_03": {
+    "w15_enemy_mech_nereis_hit_01": {
       "x": 832,
       "y": 336,
       "w": 32,
       "h": 32
     },
-    "w15_enemy_mech_nereis_move_04": {
+    "w15_enemy_mech_nereis_hit_02": {
       "x": 864,
       "y": 336,
       "w": 32,
       "h": 32
     },
-    "w15_enemy_mech_polyn_move_01": {
+    "w15_enemy_mech_nereis_move_01": {
       "x": 896,
       "y": 336,
       "w": 32,
       "h": 32
     },
-    "w15_enemy_mech_polyn_move_02": {
+    "w15_enemy_mech_nereis_move_02": {
       "x": 928,
       "y": 336,
       "w": 32,
       "h": 32
     },
-    "w15_enemy_mech_polyn_move_03": {
+    "w15_enemy_mech_nereis_move_03": {
       "x": 960,
       "y": 336,
       "w": 32,
       "h": 32
     },
-    "w15_enemy_mech_polyn_move_04": {
+    "w15_enemy_mech_nereis_move_04": {
       "x": 992,
       "y": 336,
       "w": 32,
       "h": 32
     },
-    "w15_enemy_mech_riftia_move_01": {
+    "w15_enemy_mech_polyn_hit_01": {
       "x": 1024,
       "y": 336,
       "w": 32,
       "h": 32
     },
-    "w15_enemy_mech_riftia_move_02": {
+    "w15_enemy_mech_polyn_hit_02": {
       "x": 1056,
       "y": 336,
       "w": 32,
       "h": 32
     },
-    "w15_enemy_mech_riftia_move_03": {
+    "w15_enemy_mech_polyn_move_01": {
       "x": 1088,
       "y": 336,
       "w": 32,
       "h": 32
     },
-    "w15_enemy_mech_riftia_move_04": {
+    "w15_enemy_mech_polyn_move_02": {
       "x": 1120,
       "y": 336,
       "w": 32,
       "h": 32
     },
-    "w15_enemy_mech_sabel_move_01": {
+    "w15_enemy_mech_polyn_move_03": {
       "x": 1152,
       "y": 336,
       "w": 32,
       "h": 32
     },
-    "w15_enemy_mech_sabel_move_02": {
+    "w15_enemy_mech_polyn_move_04": {
       "x": 1184,
       "y": 336,
       "w": 32,
       "h": 32
     },
-    "w15_enemy_mech_sabel_move_03": {
+    "w15_enemy_mech_riftia_hit_01": {
       "x": 1216,
       "y": 336,
       "w": 32,
       "h": 32
     },
-    "w15_enemy_mech_sabel_move_04": {
+    "w15_enemy_mech_riftia_hit_02": {
       "x": 1248,
       "y": 336,
       "w": 32,
       "h": 32
     },
-    "w15_enemy_mech_syll_move_01": {
+    "w15_enemy_mech_riftia_move_01": {
       "x": 1280,
       "y": 336,
       "w": 32,
       "h": 32
     },
-    "w15_enemy_mech_syll_move_02": {
+    "w15_enemy_mech_riftia_move_02": {
       "x": 1312,
       "y": 336,
       "w": 32,
       "h": 32
     },
-    "w15_enemy_mech_syll_move_03": {
+    "w15_enemy_mech_riftia_move_03": {
       "x": 1344,
       "y": 336,
       "w": 32,
       "h": 32
     },
-    "w15_enemy_mech_syll_move_04": {
+    "w15_enemy_mech_riftia_move_04": {
       "x": 1376,
+      "y": 336,
+      "w": 32,
+      "h": 32
+    },
+    "w15_enemy_mech_sabel_hit_01": {
+      "x": 1408,
+      "y": 336,
+      "w": 32,
+      "h": 32
+    },
+    "w15_enemy_mech_sabel_hit_02": {
+      "x": 1440,
+      "y": 336,
+      "w": 32,
+      "h": 32
+    },
+    "w15_enemy_mech_sabel_move_01": {
+      "x": 1472,
+      "y": 336,
+      "w": 32,
+      "h": 32
+    },
+    "w15_enemy_mech_sabel_move_02": {
+      "x": 1504,
+      "y": 336,
+      "w": 32,
+      "h": 32
+    },
+    "w15_enemy_mech_sabel_move_03": {
+      "x": 1536,
+      "y": 336,
+      "w": 32,
+      "h": 32
+    },
+    "w15_enemy_mech_sabel_move_04": {
+      "x": 1568,
+      "y": 336,
+      "w": 32,
+      "h": 32
+    },
+    "w15_enemy_mech_syll_hit_01": {
+      "x": 1600,
+      "y": 336,
+      "w": 32,
+      "h": 32
+    },
+    "w15_enemy_mech_syll_hit_02": {
+      "x": 1632,
+      "y": 336,
+      "w": 32,
+      "h": 32
+    },
+    "w15_enemy_mech_syll_move_01": {
+      "x": 1664,
+      "y": 336,
+      "w": 32,
+      "h": 32
+    },
+    "w15_enemy_mech_syll_move_02": {
+      "x": 1696,
+      "y": 336,
+      "w": 32,
+      "h": 32
+    },
+    "w15_enemy_mech_syll_move_03": {
+      "x": 1728,
+      "y": 336,
+      "w": 32,
+      "h": 32
+    },
+    "w15_enemy_mech_syll_move_04": {
+      "x": 1760,
       "y": 336,
       "w": 32,
       "h": 32
@@ -261,6 +333,54 @@
         "w15_enemy_mech_polyn_move_04"
       ],
       "fps": 8,
+      "bucle": true
+    },
+    "w15_enemy_mech_syll_hit": {
+      "frames": [
+        "w15_enemy_mech_syll_hit_01",
+        "w15_enemy_mech_syll_hit_02"
+      ],
+      "fps": 60,
+      "bucle": true
+    },
+    "w15_enemy_mech_nereis_hit": {
+      "frames": [
+        "w15_enemy_mech_nereis_hit_01",
+        "w15_enemy_mech_nereis_hit_02"
+      ],
+      "fps": 60,
+      "bucle": true
+    },
+    "w15_enemy_mech_sabel_hit": {
+      "frames": [
+        "w15_enemy_mech_sabel_hit_01",
+        "w15_enemy_mech_sabel_hit_02"
+      ],
+      "fps": 60,
+      "bucle": true
+    },
+    "w15_enemy_mech_chaet_hit": {
+      "frames": [
+        "w15_enemy_mech_chaet_hit_01",
+        "w15_enemy_mech_chaet_hit_02"
+      ],
+      "fps": 60,
+      "bucle": true
+    },
+    "w15_enemy_mech_riftia_hit": {
+      "frames": [
+        "w15_enemy_mech_riftia_hit_01",
+        "w15_enemy_mech_riftia_hit_02"
+      ],
+      "fps": 60,
+      "bucle": true
+    },
+    "w15_enemy_mech_polyn_hit": {
+      "frames": [
+        "w15_enemy_mech_polyn_hit_01",
+        "w15_enemy_mech_polyn_hit_02"
+      ],
+      "fps": 60,
       "bucle": true
     }
   }

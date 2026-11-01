@@ -2,6 +2,7 @@ class_name PoliGame
 extends RefCounted
 
 const Data = preload("res://src/core/data.gd")
+var sound_events:Array=[]
 var data: Dictionary
 var profile: Dictionary
 var player: Dictionary
@@ -39,8 +40,10 @@ var checkpoint: Dictionary = {}
 var result: Dictionary = {}
 var replay = false
 var replay_return: Dictionary = {}
+var replay_earned=0.0
 var lander_used = false
 var net_stock = 5
+var screen_blind=0.0
 var slow_timer = 0.0
 var slow_factor = 1.0
 var death_streak = 0
@@ -75,6 +78,9 @@ func refresh_stats():
 
 func start(p: Dictionary, restore_checkpoint: Dictionary = {}):
 	profile = p
+	replay=bool(profile.get("replay_mode",false))
+	replay_return=profile.get("replay_return",{}).duplicate(true)
+	replay_earned=float(profile.get("replay_earned",0))
 	refresh_stats()
 	world = world_config(int(profile.get("world",1)))
 	world_time = 0.0
@@ -110,6 +116,7 @@ func start(p: Dictionary, restore_checkpoint: Dictionary = {}):
 	if not profile.has("world_entry_weapons") or int(profile.get("entry_world",0)) != int(profile.world):
 		profile.world_entry_weapons = profile.weapons.duplicate(true)
 		profile.entry_world = int(profile.world)
+		profile.world_elapsed=0.0
 	profile.weapons.missile = maxi(int(profile.weapons.missile),int(stats.min_missile))
 	profile.bombs = mini(int(profile.get("bombs",2)),int(stats.max_bombs))
 	state = "playing"
@@ -171,7 +178,9 @@ func step(dt: float, input: Dictionary = {}):
 		return
 	total_time += dt
 	profile.time = total_time
+	profile.world_elapsed=float(profile.get("world_elapsed",0))+dt
 	phase_clock += dt
+	screen_blind=maxf(0.0,screen_blind-dt)
 	if notice_time>0:
 		notice_time -= dt
 	invulnerability = maxf(0,invulnerability-dt)
@@ -189,8 +198,8 @@ func step(dt: float, input: Dictionary = {}):
 		speed *= float(data.combat.get("gear",{}).get("grapple_speed",0.25))
 	player.pos += movement*speed*dt
 	var hb = data.combat.player.hitbox
-	player.pos.x = clampf(player.pos.x,float(hb[0])/2.0,640.0-float(hb[0])/2.0)
-	player.pos.y = clampf(player.pos.y,float(hb[1])/2.0,336.0-float(hb[1])/2.0)
+	player.pos.x = clampf(player.pos.x,float(data.combat.player.sprite_size[0])/2.0,640.0-float(data.combat.player.sprite_size[0])/2.0)
+	player.pos.y = clampf(player.pos.y,float(data.combat.player.sprite_size[1])/2.0,336.0-float(data.combat.player.sprite_size[1])/2.0)
 	if stats.regen>0 and player.since_damage >= float(data.combat.get("gear",{}).get("regen_delay",5)):
 		player.shield = minf(stats.max_shield,player.shield+stats.regen*dt)
 	shot_clock -= dt
@@ -216,6 +225,7 @@ func shoot_primary():
 	var row: Dictionary = data.combat.shot[clampi(int(profile.weapons.shot)-1,0,7)]
 	var interval = float(row.interval)/float(stats.rate_mult)
 	shot_clock = interval
+	sound_events.append("shot_%d_%d"%[int(row.level),rng.randi_range(1,3)])
 	var count = int(row.count)-(1 if bool(row.get("beam",false)) else 0)
 	var beam = bool(row.get("beam",false))
 	var damage = float(row.dps)*float(row.interval)/float(count+(1 if beam else 0))*float(stats.damage_mult)
@@ -249,6 +259,10 @@ func recycle_bullet(index: int):
 	enemy_bullets.remove_at(index)
 
 func step_projectiles(dt: float):
+	# Compute body/part rectangles once per frame, instead of allocating them for
+	# every projectile/enemy pair. Weak tips and split bodies retain exact geometry.
+	for enemy in enemies:
+		enemy["hit_cache"]=enemy_hit_rects(enemy) if enemy.hp>0 else []
 	for i in range(bullets.size()-1,-1,-1):
 		var b: Dictionary = bullets[i]
 		b.ttl -= dt
@@ -266,11 +280,25 @@ func step_projectiles(dt: float):
 			b.pos.y = clampf(b.pos.y,8,328)
 			if b.pos.y in [8.0,328.0]:
 				b.velocity.y=0
+		for h in hazards:
+			if h.get("explosive",false) and h.duration>0 and h.rect.has_point(b.pos):
+				detonate_hazard(h)
+				b.ttl=0
+				break
 		for e in enemies:
-			if e.hp<=0 or b.hits.has(e.uid):
-				continue
-			var rect = Rect2(e.pos-e.size/2,e.size)
-			if rect.grow(maxf(b.size.x,b.size.y)/2).has_point(b.pos):
+			if b.ttl<=0:break
+			if e.hp<=0:continue
+			if not e.get("boss",false) and not e.get("mini",false):
+				var delta_x=absf(b.pos.x-e.pos.x)
+				var delta_y=absf(b.pos.y-e.pos.y)
+				if delta_x>(e.size.x+b.size.x)/2 or delta_y>(e.size.y+b.size.y)/2:continue
+			if b.hits.has(e.uid):continue
+			var hit=false
+			for rect in e.hit_cache:
+				if rect.grow_individual(b.size.x/2,b.size.y/2,b.size.x/2,b.size.y/2).has_point(b.pos):
+					hit=true
+					break
+			if hit:
 				b.hits[e.uid] = true
 				hit_enemy(e,float(b.damage),b.pos,b.get("beam",false))
 				if float(b.get("area",0))>0:
@@ -298,9 +326,10 @@ func step_projectiles(dt: float):
 			b.pos.y=clampf(b.pos.y,3,333)
 			b.bounce -= 1
 		var delta: Vector2 = b.pos-player.pos
-		if delta.x>0 and delta.x<32 and absf(delta.y)<16:
+		var deflector_width=float(data.combat.gear.deflector_width)
+		if delta.x>0 and delta.x<deflector_width and absf(delta.y)<deflector_width/2:
 			if equipment("deflector"):
-				friendly_bullet(b.pos,Vector2.RIGHT*350,5)
+				friendly_bullet(b.pos,Vector2.RIGHT*float(data.combat.shot[0].speed),float(data.combat.gear.deflector_damage))
 				b.ttl=0
 			elif equipment("red_arrastre") and net_stock>0:
 				net_stock -= 1
@@ -316,11 +345,12 @@ func step_projectiles(dt: float):
 			recycle_bullet(i)
 
 func damage_player(amount: float, source: String, boss: bool = false):
-	if invulnerability>0 or state in ["dying","dead","rest","results","victory"]:
+	if amount<=0 or invulnerability>0 or state in ["dying","dead","rest","results","victory"]:
 		return
 	var mult = float(difficulty().get("damage",difficulty().get("damage_mult",1.0)))
 	player.shield = maxf(0,player.shield-amount*mult)
 	player.since_damage=0.0
+	sound_events.append("damage")
 	invulnerability = float(data.combat.player.damage_invulnerability)
 	effects.append({"kind":"hit","pos":player.pos,"ttl":0.2})
 	if player.shield<=0:
@@ -341,15 +371,17 @@ func damage_player(amount: float, source: String, boss: bool = false):
 		effects.append({"kind":"explosion","pos":player.pos,"ttl":float(data.combat.timings.death_explosion)})
 
 func hit_enemy(e: Dictionary, amount: float, hit_pos: Vector2, bomb: bool = false):
-	if e.hp<=0 or float(e.get("lock",0))>0 or float(e.get("entry",0))>0:
+	if e.hp<=0 or e.get("inactive",false) or float(e.get("lock",0))>0 or float(e.get("entry",0))>0:
 		return
 	if bool(e.get("boss",false)) or bool(e.get("mini",false)):
 		if boss_system!=null:
+			sound_events.append("impact")
 			boss_system.damage(self,e,amount,hit_pos,bomb)
 		return
-	if e.get("id","")=="mech_polyn" and fmod(float(e.age),5)>1 and hit_pos.x<e.pos.x:
+	if e.get("id","")=="mech_polyn" and fmod(float(e.age),float(e.config.parametros.get("carcasa_periodo_seg",5)))>float(e.config.parametros.get("carcasa_abierta_seg",1)) and hit_pos.x<e.pos.x:
 		return
 	e.hp -= amount
+	sound_events.append("impact")
 	e.flash=0.04
 	if e.hp<=0:
 		kill_enemy(e)
@@ -358,9 +390,11 @@ func kill_enemy(e: Dictionary):
 	if e.get("counted_dead",false):
 		return
 	e.counted_dead=true
+	sound_events.append("explosion_large" if e.get("boss",false) else "explosion_small")
 	effects.append({"kind":"explosion","pos":e.pos,"ttl":0.5})
 	if not e.get("boss",false) and not e.get("mini",false) and not e.get("escort",false) and not e.get("summoned",false):
 		regular_kills += 1
+		profile.kills_total=int(profile.get("kills_total",0))+1
 		var key=str(e.get("wave",-1))
 		if wave_state.has(key):
 			wave_state[key].killed += 1
@@ -376,7 +410,7 @@ func kill_enemy(e: Dictionary):
 
 func spawn_drop(kind: String, pos: Vector2, uid: String, value: float = 0.0):
 	var key="%d:%s:%s" % [int(profile.world),str(profile.get("lab_boss",0)),uid]
-	if claimed_drops.has(key):
+	if claimed_drops.has(key) and kind=="coin":
 		return
 	drops.append({"kind":kind,"pos":pos,"uid":key,"value":value})
 
@@ -390,32 +424,45 @@ func step_drops(dt: float):
 			magnet=maxf(magnet,96)
 		if drop.kind=="coin" and dist<magnet:
 			drop.pos=drop.pos.move_toward(player.pos,float(data.combat.get("gear",{}).get("magnet_speed",260))*dt)
-		if dist<18:
+		if dist<float(data.combat.items.pickup_radius):
 			collect_drop(drop)
 			drops.remove_at(i)
 		elif drop.pos.x< -20:
 			drops.remove_at(i)
 
 func collect_drop(drop: Dictionary):
-	if claimed_drops.has(drop.uid):
+	var weapon_key={"rojo":"shot","verde":"missile","azul":"bomb"}.get(drop.kind,"")
+	var current_level=maxi(int(profile.weapons.missile),int(stats.min_missile)) if weapon_key=="missile" else int(profile.weapons.get(weapon_key,1))
+	var cash=drop.kind=="coin" or (weapon_key!="" and current_level>=8)
+	if cash and claimed_drops.has(drop.uid):
 		return
-	claimed_drops[drop.uid]=true
-	profile.claimed_drops=claimed_drops.duplicate(true)
+	sound_events.append("coin" if drop.kind=="coin" else "item")
+	if cash:
+		claimed_drops[drop.uid]=true
+		profile.claimed_drops=claimed_drops.duplicate(true)
 	if drop.kind=="coin":
 		add_coins(float(drop.value))
 	elif drop.kind in ["amarillo","shield"]:
 		player.shield=minf(stats.max_shield,player.shield+stats.max_shield*float(data.combat.items.shield_fraction)*float(difficulty().get("shield_items",1.0)))
 	else:
-		var weapon_key={"rojo":"shot","verde":"missile","azul":"bomb"}.get(drop.kind,"shot")
-		if int(profile.weapons[weapon_key])>=8:
+		weapon_key={"rojo":"shot","verde":"missile","azul":"bomb"}.get(drop.kind,"shot")
+		if current_level>=8:
 			add_coins(float(data.combat.items.max_level_value))
 		else:
-			profile.weapons[weapon_key] += 1
+			profile.weapons[weapon_key] = current_level+1
+			sound_events.append("level")
 			set_notice("NIVEL %d" % profile.weapons[weapon_key])
 		if weapon_key=="bomb":
 			profile.bombs=mini(int(stats.max_bombs),int(profile.bombs)+1)
 
 func add_coins(amount: float):
+	if replay:
+		var base=float(world.get("base_monedas",0))
+		if int(profile.world)==14:
+			base=float(world.sectores_jefes[clampi(int(profile.lab_boss),0,3)].base_monedas)
+		amount=minf(amount,maxf(0.0,base*0.5-replay_earned))
+		replay_earned+=amount
+		profile.replay_earned=replay_earned
 	world_collected += amount
 	profile["coins_total"]=float(profile.get("coins_total",0))+amount
 	if profile.get("edition","normal")=="pruebas":
@@ -425,7 +472,7 @@ func add_coins(amount: float):
 
 func make_checkpoint():
 	checkpoint={"time":world_time,"cursor":cursor,"mini_defeated":mini_defeated,"regular_spawned":regular_spawned,"regular_kills":regular_kills,"world_collected":world_collected}
-	net_stock=5
+	net_stock=int(data.combat.gear.net_capacity)
 	death_streak=0
 	set_notice("PUNTO DE CONTROL",float(data.combat.timings.checkpoint_notice))
 
@@ -461,7 +508,10 @@ func step_enemies(dt: float):
 			if not e.get("boss",false) and not e.get("mini",false):
 				enemies.remove_at(i)
 			continue
-		if Rect2(e.pos-e.size/2,e.size).grow(3).has_point(player.pos) and not e.get("hidden",false) and float(e.get("entry",0))<=0:
+		var contact_hit=false
+		for rect in enemy_hit_rects(e):
+			if rect.grow(3).has_point(player.pos):contact_hit=true
+		if contact_hit and not e.get("hidden",false) and float(e.get("entry",0))<=0:
 			var contact=float(data.combat.enemy.boss_contact_base)+float(data.combat.enemy.boss_contact_world_step)*(int(profile.world)-1) if e.get("boss",false) else float(data.combat.enemy.contact_damage_base)+float(data.combat.enemy.contact_damage_world_step)*(int(profile.world)-1)
 			damage_player(contact,str(e.get("name",e.get("id","Poliqueto"))),bool(e.get("boss",false)))
 		if not e.get("boss",false) and not e.get("mini",false) and (e.pos.x< -150 or e.age>40):
@@ -470,10 +520,20 @@ func step_enemies(dt: float):
 func step_hazards(dt: float):
 	for i in range(hazards.size()-1,-1,-1):
 		var h:Dictionary=hazards[i]
-		h.delay=float(h.get("delay",0))-dt
-		if h.delay>0:
-			continue
-		h.duration -= dt
+		if float(h.get("cycle",0))>0:
+			h.age=float(h.get("age",0))+dt
+			h.duration-=dt
+			if h.duration<=0:
+				hazards.remove_at(i)
+				continue
+			var cycle_age=fmod(float(h.age),float(h.cycle))
+			h.delay=maxf(0,float(h.telegraph)-cycle_age)
+			h["active"]=cycle_age>=float(h.telegraph) and cycle_age<float(h.telegraph)+float(h.active_duration)
+			if not h.active:continue
+		else:
+			h.delay=float(h.get("delay",0))-dt
+			if h.delay>0:continue
+			h.duration -= dt
 		if h.get("scroll",false):
 			h.rect.position.x-=float(world.get("scroll_px_s",60))*dt
 		if h.rect.has_point(player.pos):
@@ -487,6 +547,8 @@ func step_hazards(dt: float):
 					player.grapple=0.5
 					player.pos=player.pos.move_toward(h.rect.get_center(),dt*20)
 				"blind":
+					screen_blind=maxf(screen_blind,float(h.get("duration",0.3)))
+				"decoy":
 					pass
 				_:
 					damage_player(float(h.get("damage",data.combat.enemy.hazard_damage)),str(h.get("name","Peligro de escenario")),bool(h.get("boss",false)))
@@ -503,6 +565,8 @@ func clear_enemy_bullets(convert: bool, owner: String = "", phase: int = 0):
 func enemy_hit_rects(e: Dictionary) -> Array:
 	var result_rects:Array=[]
 	if e.get("boss",false) or e.get("mini",false):
+		if boss_system!=null and boss_system.has_method("hit_rects"):
+			return boss_system.hit_rects(self,e)
 		for part in e.config.segmentos:
 			var r=part.hitbox
 			result_rects.append(Rect2(e.pos-e.size/2+Vector2(r[0],r[1]),Vector2(r[2],r[3])))
@@ -539,7 +603,7 @@ func finish_encounter():
 		rewarded[reward_key]=true
 	profile.rewarded=rewarded
 	add_coins(reward+bonus)
-	result={"mundo":int(profile.world),"nombre":world.nombre,"enemigos_derrotados":regular_kills,"enemigos_total":int(world.enemigos_total),"porcentaje":100.0*regular_kills/maxi(1,int(world.enemigos_total)),"monedas_recogidas":world_collected-reward-bonus,"recompensa":reward,"bono":bonus,"muertes":deaths,"tiempo":world_time+encounter_time,"objeto_unico":""}
+	result={"mundo":int(profile.world),"nombre":world.nombre,"enemigos_derrotados":regular_kills,"enemigos_total":int(world.enemigos_total),"porcentaje":100.0*regular_kills/maxi(1,int(world.enemigos_total)),"monedas_recogidas":world_collected-reward-bonus,"recompensa":reward,"bono":bonus,"muertes":deaths,"tiempo":float(profile.get("world_elapsed",world_time+encounter_time)),"objeto_unico":""}
 	if not replay:
 		var skin={3:"coral",6:"abisal",9:"bioluminiscente",12:"magma"}.get(int(profile.world),"")
 		if skin!="":
@@ -554,6 +618,8 @@ func finish_encounter():
 				if not profile.cleared.has(14):profile.cleared.append(14)
 		elif not profile.cleared.has(int(profile.world)):
 			profile.cleared.append(int(profile.world))
+	if replay and int(profile.world)==14:
+		profile.lab_boss=encounter+1
 	profile.resume="rest"
 	state="results"
 	phase_clock=0.0
@@ -564,6 +630,10 @@ func continue_campaign():
 		return
 	profile.resume="playing"
 	if replay:
+		if int(profile.world)==14 and int(profile.lab_boss)<4:
+			profile.replay_earned=0
+			start(profile)
+			return
 		var money=float(profile.credits)
 		var progress=replay_return.duplicate(true)
 		progress.credits=money
@@ -571,6 +641,7 @@ func continue_campaign():
 		progress.upgrades=profile.upgrades
 		progress.equipment=profile.equipment
 		profile=progress
+		world=world_config(int(profile.world))
 		replay=false
 		state="rest"
 		profile.resume="rest"
@@ -591,6 +662,11 @@ func begin_replay(id: int):
 	p.world=id
 	p.lab_boss=0
 	p.claimed_drops={}
+	p.erase("entry_world")
+	p.erase("lander_used_world")
+	p.replay_mode=true
+	p.replay_return=replay_return.duplicate(true)
+	p.replay_earned=0
 	start(p)
 	replay=true
 
@@ -604,4 +680,17 @@ func finish_escape():
 	profile.resume="completed"
 	state="victory"
 	phase_clock=0.0
-	result={"tiempo_total":profile.time,"muertes_totales":deaths,"monedas_totales":profile.get("coins_total",0),"puntuacion_escape":int(data.escape.recompensa),"mundos_superados":profile.cleared.size()}
+	result={"tiempo_total":profile.time,"muertes_totales":deaths,"monedas_totales":profile.get("coins_total",0),"puntuacion_escape":int(data.escape.recompensa),"mundos_superados":profile.cleared.size(),"porcentaje_enemigos":100.0*float(profile.get("kills_total",0))/maxf(1,float(profile.get("spawned_total",0)))}
+
+func detonate_hazard(h:Dictionary):
+	if h.duration<=0:return
+	h.duration=0
+	var center:Vector2=h.rect.get_center()
+	var radius=float(h.blast_radius)
+	sound_events.append("explosion_large")
+	effects.append({"kind":"explosion","pos":center,"ttl":0.5,"radius":radius})
+	for enemy in enemies:
+		if enemy.hp>0 and enemy.pos.distance_to(center)<=radius:
+			hit_enemy(enemy,float(h.enemy_damage),enemy.pos)
+	if player.pos.distance_to(center)<=radius:
+		damage_player(float(h.damage),str(h.name))

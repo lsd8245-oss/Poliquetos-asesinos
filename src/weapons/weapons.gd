@@ -33,6 +33,7 @@ func step(g, dt: float, input: Dictionary):
 func fire_missiles(g):
 	var level=maxi(int(g.profile.weapons.missile),int(g.stats.min_missile))
 	var row:Dictionary=g.data.combat.missile[clampi(level-1,0,7)]
+	g.sound_events.append("missile")
 	g.player.missile_clock=float(row.interval)/float(g.stats.rate_mult)
 	for n in range(int(row.count)):
 		var sign_y=-1.0 if n%2==0 and int(row.count)>1 else 1.0
@@ -42,6 +43,7 @@ func bomb(g) -> bool:
 	if int(g.profile.bombs)<=0 or float(g.player.bomb_cd)>0:
 		return false
 	var row:Dictionary=g.data.combat.bomb[clampi(int(g.profile.weapons.bomb)-1,0,7)]
+	g.sound_events.append("bomb")
 	g.profile.bombs -= 1
 	g.player.bomb_cd=float(g.data.combat.timings.bomb_cooldown)
 	g.effects.append({"kind":"bomb","pos":g.player.pos,"ttl":0.5,"radius":float(row.radius)})

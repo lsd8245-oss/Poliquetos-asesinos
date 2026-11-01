@@ -1,0 +1,14 @@
+[
+  {
+    "file": "entregas/Poliquetos-Normal-Instalar.exe",
+    "bytes": 26441739,
+    "sha256": "d40a4872ebdfa2b0746b9d02434b805623987f0574a330600cce3988644a185d",
+    "preset": "Normal installer"
+  },
+  {
+    "file": "entregas/Poliquetos-Pruebas-Instalar.exe",
+    "bytes": 26437578,
+    "sha256": "d1bdb90f61cc2a41ec127655413de0dd2bea65e278e80004f32b432c4481dfad",
+    "preset": "Pruebas installer"
+  }
+]

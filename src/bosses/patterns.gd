@@ -24,6 +24,49 @@ static func _settings(profile: String, config: Dictionary) -> Dictionary:
 static func _v(settings: Dictionary, key: String) -> float:
 	return float(settings[key])
 
+static func balance(profile: String, config: Dictionary = {}) -> Dictionary:
+	return _settings(profile, config)
+
+static func choreography() -> Dictionary:
+	_settings("mini", {})
+	return _data.get("choreography", {}).duplicate(true)
+
+static func sync_parts(boss: Dictionary, context: Dictionary, dt: float = 0.0) -> void:
+	var profile = str(boss.config.get("arquetipo", "mini"))
+	var settings = _settings(profile, boss.config)
+	var phase = int(boss.get("phase", 1))
+	var size: Vector2 = boss.size
+	if not boss.has("flags"):
+		boss.flags = {}
+	if profile == "nereis" and phase == 3:
+		var part_size = size * Vector2(_v(settings, "split_size_x"), _v(settings, "split_size_y"))
+		if not boss.get("_pattern_parts", false):
+			boss.parts = [{"pos": boss.pos - Vector2(0, _v(settings, "split_gap")), "size": part_size}, {"pos": boss.pos + Vector2(0, _v(settings, "split_gap")), "size": part_size}]
+		boss.flags.weak_points = []
+		for index in range(boss.parts.size()):
+			var part: Dictionary = boss.parts[index]
+			var side = -1.0 if index == 0 else 1.0
+			var target: Vector2 = context.player + Vector2(_v(settings, "split_pursuit_x") + float(index) * _v(settings, "split_pursuit_gap_x"), side * _v(settings, "split_gap") * 0.5)
+			part.pos = part.pos.move_toward(target, _v(settings, "split_speed_a" if index == 0 else "split_speed_b") * dt)
+			part.size = part_size
+			boss.flags.weak_points.append(part.pos - Vector2(part_size.x * _v(settings, "weak_offset"), 0))
+		boss.pos = (boss.parts[0].pos + boss.parts[1].pos) * 0.5
+		boss._pattern_parts = true
+	elif profile == "euniceTitan" and phase == 1:
+		boss.parts = []
+		boss.flags.antennae_only = true
+		boss.flags.weak_points = []
+		var count = int(settings.antenna_count)
+		for index in range(count):
+			var y = boss.pos.y + (float(index) / float(count - 1) - 0.5) * size.y * _v(settings, "antenna_span")
+			var point = Vector2(boss.pos.x - size.x * 0.5 + _v(settings, "antenna_inset"), y)
+			boss.parts.append({"pos": point, "size": Vector2(_v(settings, "antenna_width"), _v(settings, "antenna_height"))})
+			boss.flags.weak_points.append(point)
+		boss._pattern_parts = true
+	elif boss.get("_pattern_parts", false):
+		boss.erase("parts")
+		boss.erase("_pattern_parts")
+
 static func _phase_value(settings: Dictionary, key: String, phase: int) -> float:
 	var values: Array = settings[key]
 	return float(values[clampi(phase - 1, 0, values.size() - 1)])
@@ -254,8 +297,8 @@ static func _attack(boss: Dictionary, context: Dictionary, settings: Dictionary,
 				_charge(out, boss, context, settings)
 				_fan(out, pos, player, count, speed, settings)
 			else:
-				for point in boss.flags.weak_points:
-					_ring(out, point, count, speed, settings, float(boss.age))
+				for part in boss.parts:
+					_ring(out, part.pos, count, speed, settings, float(boss.age))
 		"capit":
 			if phase == 1:
 				_columns(out, context, settings, count, false, "sand")
@@ -472,6 +515,7 @@ static func step(boss: Dictionary, context: Dictionary, dt: float) -> Array:
 		settings.charge_speed = _v(settings, "charge_speed") * fury
 	_movement(boss, context, settings, profile, phase, dt, fury)
 	_flags(boss, context, settings, profile, phase)
+	sync_parts(boss, context, dt)
 	boss.attack_clock = float(boss.get("attack_clock", 0.0)) + dt * fury
 	var interval = _phase_value(settings, "intervals", phase)
 	var actions: Array = []

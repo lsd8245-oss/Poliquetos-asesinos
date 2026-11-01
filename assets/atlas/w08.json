@@ -29,267 +29,399 @@
       "w": 640,
       "h": 336
     },
-    "w08_boss_boss_w08_pollution_capit_move_01": {
+    "w08_boss_boss_w08_pollution_capit_hit_01": {
       "x": 640,
       "y": 336,
       "w": 240,
       "h": 160
     },
-    "w08_boss_boss_w08_pollution_capit_move_02": {
+    "w08_boss_boss_w08_pollution_capit_hit_02": {
       "x": 880,
       "y": 336,
       "w": 240,
       "h": 160
     },
-    "w08_boss_boss_w08_pollution_capit_move_03": {
+    "w08_boss_boss_w08_pollution_capit_move_01": {
       "x": 1120,
       "y": 336,
       "w": 240,
       "h": 160
     },
-    "w08_boss_boss_w08_pollution_capit_move_04": {
+    "w08_boss_boss_w08_pollution_capit_move_02": {
       "x": 1360,
       "y": 336,
       "w": 240,
       "h": 160
     },
-    "w08_boss_boss_w08_pollution_cirrat_move_01": {
+    "w08_boss_boss_w08_pollution_capit_move_03": {
       "x": 1600,
       "y": 336,
       "w": 240,
       "h": 160
     },
-    "w08_boss_boss_w08_pollution_cirrat_move_02": {
+    "w08_boss_boss_w08_pollution_capit_move_04": {
       "x": 0,
       "y": 672,
       "w": 240,
       "h": 160
     },
-    "w08_boss_boss_w08_pollution_cirrat_move_03": {
+    "w08_boss_boss_w08_pollution_cirrat_hit_01": {
       "x": 240,
       "y": 672,
       "w": 240,
       "h": 160
     },
-    "w08_boss_boss_w08_pollution_cirrat_move_04": {
+    "w08_boss_boss_w08_pollution_cirrat_hit_02": {
       "x": 480,
       "y": 672,
       "w": 240,
       "h": 160
     },
-    "w08_boss_boss_w08_pollution_spio_move_01": {
+    "w08_boss_boss_w08_pollution_cirrat_move_01": {
       "x": 720,
       "y": 672,
       "w": 240,
       "h": 160
     },
-    "w08_boss_boss_w08_pollution_spio_move_02": {
+    "w08_boss_boss_w08_pollution_cirrat_move_02": {
       "x": 960,
       "y": 672,
       "w": 240,
       "h": 160
     },
-    "w08_boss_boss_w08_pollution_spio_move_03": {
+    "w08_boss_boss_w08_pollution_cirrat_move_03": {
       "x": 1200,
       "y": 672,
       "w": 240,
       "h": 160
     },
-    "w08_boss_boss_w08_pollution_spio_move_04": {
+    "w08_boss_boss_w08_pollution_cirrat_move_04": {
       "x": 1440,
       "y": 672,
       "w": 240,
       "h": 160
     },
-    "w08_mini_lumbrineris_move_01": {
+    "w08_boss_boss_w08_pollution_spio_hit_01": {
       "x": 1680,
       "y": 672,
-      "w": 112,
-      "h": 96
+      "w": 240,
+      "h": 160
     },
-    "w08_mini_lumbrineris_move_02": {
-      "x": 1792,
-      "y": 672,
-      "w": 112,
-      "h": 96
-    },
-    "w08_mini_lumbrineris_move_03": {
-      "x": 1904,
-      "y": 672,
-      "w": 112,
-      "h": 96
-    },
-    "w08_mini_lumbrineris_move_04": {
+    "w08_boss_boss_w08_pollution_spio_hit_02": {
       "x": 0,
+      "y": 832,
+      "w": 240,
+      "h": 160
+    },
+    "w08_boss_boss_w08_pollution_spio_move_01": {
+      "x": 240,
+      "y": 832,
+      "w": 240,
+      "h": 160
+    },
+    "w08_boss_boss_w08_pollution_spio_move_02": {
+      "x": 480,
+      "y": 832,
+      "w": 240,
+      "h": 160
+    },
+    "w08_boss_boss_w08_pollution_spio_move_03": {
+      "x": 720,
+      "y": 832,
+      "w": 240,
+      "h": 160
+    },
+    "w08_boss_boss_w08_pollution_spio_move_04": {
+      "x": 960,
+      "y": 832,
+      "w": 240,
+      "h": 160
+    },
+    "w08_mini_lumbrineris_hit_01": {
+      "x": 1200,
       "y": 832,
       "w": 112,
       "h": 96
     },
+    "w08_mini_lumbrineris_hit_02": {
+      "x": 1312,
+      "y": 832,
+      "w": 112,
+      "h": 96
+    },
+    "w08_mini_lumbrineris_move_01": {
+      "x": 1424,
+      "y": 832,
+      "w": 112,
+      "h": 96
+    },
+    "w08_mini_lumbrineris_move_02": {
+      "x": 1536,
+      "y": 832,
+      "w": 112,
+      "h": 96
+    },
+    "w08_mini_lumbrineris_move_03": {
+      "x": 1648,
+      "y": 832,
+      "w": 112,
+      "h": 96
+    },
+    "w08_mini_lumbrineris_move_04": {
+      "x": 1760,
+      "y": 832,
+      "w": 112,
+      "h": 96
+    },
+    "w08_enemy_cossura_hit_01": {
+      "x": 1872,
+      "y": 832,
+      "w": 32,
+      "h": 32
+    },
+    "w08_enemy_cossura_hit_02": {
+      "x": 1904,
+      "y": 832,
+      "w": 32,
+      "h": 32
+    },
     "w08_enemy_cossura_move_01": {
-      "x": 112,
+      "x": 1936,
       "y": 832,
       "w": 32,
       "h": 32
     },
     "w08_enemy_cossura_move_02": {
-      "x": 144,
+      "x": 1968,
       "y": 832,
       "w": 32,
       "h": 32
     },
     "w08_enemy_cossura_move_03": {
-      "x": 176,
+      "x": 2000,
       "y": 832,
       "w": 32,
       "h": 32
     },
     "w08_enemy_cossura_move_04": {
-      "x": 208,
-      "y": 832,
+      "x": 0,
+      "y": 992,
+      "w": 32,
+      "h": 32
+    },
+    "w08_enemy_dorville_hit_01": {
+      "x": 32,
+      "y": 992,
+      "w": 32,
+      "h": 32
+    },
+    "w08_enemy_dorville_hit_02": {
+      "x": 64,
+      "y": 992,
       "w": 32,
       "h": 32
     },
     "w08_enemy_dorville_move_01": {
-      "x": 240,
-      "y": 832,
+      "x": 96,
+      "y": 992,
       "w": 32,
       "h": 32
     },
     "w08_enemy_dorville_move_02": {
-      "x": 272,
-      "y": 832,
+      "x": 128,
+      "y": 992,
       "w": 32,
       "h": 32
     },
     "w08_enemy_dorville_move_03": {
-      "x": 304,
-      "y": 832,
+      "x": 160,
+      "y": 992,
       "w": 32,
       "h": 32
     },
     "w08_enemy_dorville_move_04": {
-      "x": 336,
-      "y": 832,
+      "x": 192,
+      "y": 992,
+      "w": 32,
+      "h": 32
+    },
+    "w08_enemy_glycer_hit_01": {
+      "x": 224,
+      "y": 992,
+      "w": 32,
+      "h": 32
+    },
+    "w08_enemy_glycer_hit_02": {
+      "x": 256,
+      "y": 992,
       "w": 32,
       "h": 32
     },
     "w08_enemy_glycer_move_01": {
-      "x": 368,
-      "y": 832,
+      "x": 288,
+      "y": 992,
       "w": 32,
       "h": 32
     },
     "w08_enemy_glycer_move_02": {
-      "x": 400,
-      "y": 832,
+      "x": 320,
+      "y": 992,
       "w": 32,
       "h": 32
     },
     "w08_enemy_glycer_move_03": {
-      "x": 432,
-      "y": 832,
+      "x": 352,
+      "y": 992,
       "w": 32,
       "h": 32
     },
     "w08_enemy_glycer_move_04": {
-      "x": 464,
-      "y": 832,
+      "x": 384,
+      "y": 992,
+      "w": 32,
+      "h": 32
+    },
+    "w08_enemy_lumbrineris_hit_01": {
+      "x": 416,
+      "y": 992,
+      "w": 32,
+      "h": 32
+    },
+    "w08_enemy_lumbrineris_hit_02": {
+      "x": 448,
+      "y": 992,
       "w": 32,
       "h": 32
     },
     "w08_enemy_lumbrineris_move_01": {
-      "x": 496,
-      "y": 832,
+      "x": 480,
+      "y": 992,
       "w": 32,
       "h": 32
     },
     "w08_enemy_lumbrineris_move_02": {
-      "x": 528,
-      "y": 832,
+      "x": 512,
+      "y": 992,
       "w": 32,
       "h": 32
     },
     "w08_enemy_lumbrineris_move_03": {
-      "x": 560,
-      "y": 832,
+      "x": 544,
+      "y": 992,
       "w": 32,
       "h": 32
     },
     "w08_enemy_lumbrineris_move_04": {
-      "x": 592,
-      "y": 832,
+      "x": 576,
+      "y": 992,
+      "w": 32,
+      "h": 32
+    },
+    "w08_enemy_ophelia_hit_01": {
+      "x": 608,
+      "y": 992,
+      "w": 32,
+      "h": 32
+    },
+    "w08_enemy_ophelia_hit_02": {
+      "x": 640,
+      "y": 992,
       "w": 32,
       "h": 32
     },
     "w08_enemy_ophelia_move_01": {
-      "x": 624,
-      "y": 832,
+      "x": 672,
+      "y": 992,
       "w": 32,
       "h": 32
     },
     "w08_enemy_ophelia_move_02": {
-      "x": 656,
-      "y": 832,
+      "x": 704,
+      "y": 992,
       "w": 32,
       "h": 32
     },
     "w08_enemy_ophelia_move_03": {
-      "x": 688,
-      "y": 832,
+      "x": 736,
+      "y": 992,
       "w": 32,
       "h": 32
     },
     "w08_enemy_ophelia_move_04": {
-      "x": 720,
-      "y": 832,
+      "x": 768,
+      "y": 992,
+      "w": 32,
+      "h": 32
+    },
+    "w08_enemy_owenia_hit_01": {
+      "x": 800,
+      "y": 992,
+      "w": 32,
+      "h": 32
+    },
+    "w08_enemy_owenia_hit_02": {
+      "x": 832,
+      "y": 992,
       "w": 32,
       "h": 32
     },
     "w08_enemy_owenia_move_01": {
-      "x": 752,
-      "y": 832,
+      "x": 864,
+      "y": 992,
       "w": 32,
       "h": 32
     },
     "w08_enemy_owenia_move_02": {
-      "x": 784,
-      "y": 832,
+      "x": 896,
+      "y": 992,
       "w": 32,
       "h": 32
     },
     "w08_enemy_owenia_move_03": {
-      "x": 816,
-      "y": 832,
+      "x": 928,
+      "y": 992,
       "w": 32,
       "h": 32
     },
     "w08_enemy_owenia_move_04": {
-      "x": 848,
-      "y": 832,
+      "x": 960,
+      "y": 992,
+      "w": 32,
+      "h": 32
+    },
+    "w08_enemy_pilarg_hit_01": {
+      "x": 992,
+      "y": 992,
+      "w": 32,
+      "h": 32
+    },
+    "w08_enemy_pilarg_hit_02": {
+      "x": 1024,
+      "y": 992,
       "w": 32,
       "h": 32
     },
     "w08_enemy_pilarg_move_01": {
-      "x": 880,
-      "y": 832,
+      "x": 1056,
+      "y": 992,
       "w": 32,
       "h": 32
     },
     "w08_enemy_pilarg_move_02": {
-      "x": 912,
-      "y": 832,
+      "x": 1088,
+      "y": 992,
       "w": 32,
       "h": 32
     },
     "w08_enemy_pilarg_move_03": {
-      "x": 944,
-      "y": 832,
+      "x": 1120,
+      "y": 992,
       "w": 32,
       "h": 32
     },
     "w08_enemy_pilarg_move_04": {
-      "x": 976,
-      "y": 832,
+      "x": 1152,
+      "y": 992,
       "w": 32,
       "h": 32
     }
@@ -431,6 +563,94 @@
         "w08_boss_boss_w08_pollution_cirrat_move_04"
       ],
       "fps": 8,
+      "bucle": true
+    },
+    "w08_enemy_ophelia_hit": {
+      "frames": [
+        "w08_enemy_ophelia_hit_01",
+        "w08_enemy_ophelia_hit_02"
+      ],
+      "fps": 60,
+      "bucle": true
+    },
+    "w08_enemy_cossura_hit": {
+      "frames": [
+        "w08_enemy_cossura_hit_01",
+        "w08_enemy_cossura_hit_02"
+      ],
+      "fps": 60,
+      "bucle": true
+    },
+    "w08_enemy_pilarg_hit": {
+      "frames": [
+        "w08_enemy_pilarg_hit_01",
+        "w08_enemy_pilarg_hit_02"
+      ],
+      "fps": 60,
+      "bucle": true
+    },
+    "w08_enemy_lumbrineris_hit": {
+      "frames": [
+        "w08_enemy_lumbrineris_hit_01",
+        "w08_enemy_lumbrineris_hit_02"
+      ],
+      "fps": 60,
+      "bucle": true
+    },
+    "w08_enemy_owenia_hit": {
+      "frames": [
+        "w08_enemy_owenia_hit_01",
+        "w08_enemy_owenia_hit_02"
+      ],
+      "fps": 60,
+      "bucle": true
+    },
+    "w08_enemy_glycer_hit": {
+      "frames": [
+        "w08_enemy_glycer_hit_01",
+        "w08_enemy_glycer_hit_02"
+      ],
+      "fps": 60,
+      "bucle": true
+    },
+    "w08_enemy_dorville_hit": {
+      "frames": [
+        "w08_enemy_dorville_hit_01",
+        "w08_enemy_dorville_hit_02"
+      ],
+      "fps": 60,
+      "bucle": true
+    },
+    "w08_mini_lumbrineris_hit": {
+      "frames": [
+        "w08_mini_lumbrineris_hit_01",
+        "w08_mini_lumbrineris_hit_02"
+      ],
+      "fps": 60,
+      "bucle": true
+    },
+    "w08_boss_boss_w08_pollution_capit_hit": {
+      "frames": [
+        "w08_boss_boss_w08_pollution_capit_hit_01",
+        "w08_boss_boss_w08_pollution_capit_hit_02"
+      ],
+      "fps": 60,
+      "bucle": true
+    },
+    "w08_boss_boss_w08_pollution_spio_hit": {
+      "frames": [
+        "w08_boss_boss_w08_pollution_spio_hit_01",
+        "w08_boss_boss_w08_pollution_spio_hit_02"
+      ],
+      "fps": 60,
+      "bucle": true
+    },
+    "w08_boss_boss_w08_pollution_cirrat_hit": {
+      "frames": [
+        "w08_boss_boss_w08_pollution_cirrat_hit_01",
+        "w08_boss_boss_w08_pollution_cirrat_hit_02"
+      ],
+      "fps": 60,
       "bucle": true
     }
   }

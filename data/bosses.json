@@ -5,7 +5,7 @@
     "mundo": 1,
     "arquetipo": "nereis",
     "tipo": "jefe",
-    "vida": 1750,
+    "vida": 2319,
     "objetivo_seg": 90,
     "minimo_seg": 36.0,
     "tamano": [
@@ -81,7 +81,8 @@
       "lava_subida_seg": 10,
       "hermo_anillo_seg": 5,
       "mucosidad_lento": 0.3
-    }
+    },
+    "vida_base": 1750
   },
   {
     "id": "mini_w01_pision",
@@ -151,7 +152,7 @@
     "mundo": 2,
     "arquetipo": "capit",
     "tipo": "jefe",
-    "vida": 2100,
+    "vida": 4534,
     "objetivo_seg": 90,
     "minimo_seg": 36.0,
     "tamano": [
@@ -225,7 +226,8 @@
       "lava_subida_seg": 10,
       "hermo_anillo_seg": 5,
       "mucosidad_lento": 0.3
-    }
+    },
+    "vida_base": 2100
   },
   {
     "id": "mini_w02_arenicola",
@@ -295,7 +297,7 @@
     "mundo": 3,
     "arquetipo": "polyn",
     "tipo": "jefe",
-    "vida": 2450,
+    "vida": 5983,
     "objetivo_seg": 90,
     "minimo_seg": 36.0,
     "tamano": [
@@ -369,7 +371,8 @@
       "lava_subida_seg": 10,
       "hermo_anillo_seg": 5,
       "mucosidad_lento": 0.3
-    }
+    },
+    "vida_base": 2450
   },
   {
     "id": "mini_w03_oenone",
@@ -439,7 +442,7 @@
     "mundo": 4,
     "arquetipo": "tere",
     "tipo": "jefe",
-    "vida": 3300,
+    "vida": 8028,
     "objetivo_seg": 105,
     "minimo_seg": 42.0,
     "tamano": [
@@ -513,7 +516,8 @@
       "lava_subida_seg": 10,
       "hermo_anillo_seg": 5,
       "mucosidad_lento": 0.3
-    }
+    },
+    "vida_base": 3300
   },
   {
     "id": "mini_w04_myxicola",
@@ -583,7 +587,7 @@
     "mundo": 5,
     "arquetipo": "hermo",
     "tipo": "jefe",
-    "vida": 3700,
+    "vida": 8658,
     "objetivo_seg": 105,
     "minimo_seg": 42.0,
     "tamano": [
@@ -658,7 +662,8 @@
       "lava_subida_seg": 10,
       "hermo_anillo_seg": 5,
       "mucosidad_lento": 0.3
-    }
+    },
+    "vida_base": 3700
   },
   {
     "id": "mini_w05_spirobranchus",
@@ -728,7 +733,7 @@
     "mundo": 6,
     "arquetipo": "leafqueen",
     "tipo": "jefe",
-    "vida": 4100,
+    "vida": 9496,
     "objetivo_seg": 105,
     "minimo_seg": 42.0,
     "tamano": [
@@ -803,7 +808,8 @@
       "lava_subida_seg": 10,
       "hermo_anillo_seg": 5,
       "mucosidad_lento": 0.3
-    }
+    },
+    "vida_base": 4100
   },
   {
     "id": "mini_w06_glycera",
@@ -873,7 +879,7 @@
     "mundo": 7,
     "arquetipo": "orbin",
     "tipo": "jefe",
-    "vida": 5150,
+    "vida": 11838,
     "objetivo_seg": 120,
     "minimo_seg": 48.0,
     "tamano": [
@@ -947,7 +953,8 @@
       "lava_subida_seg": 10,
       "hermo_anillo_seg": 5,
       "mucosidad_lento": 0.3
-    }
+    },
+    "vida_base": 5150
   },
   {
     "id": "mini_w07_terebellides",
@@ -1017,7 +1024,7 @@
     "mundo": 8,
     "arquetipo": "pollutionCapit",
     "tipo": "jefe",
-    "vida": 2100,
+    "vida": 5326,
     "objetivo_seg": 135,
     "minimo_seg": 54.0,
     "tamano": [
@@ -1091,7 +1098,8 @@
       "lava_subida_seg": 10,
       "hermo_anillo_seg": 5,
       "mucosidad_lento": 0.3
-    }
+    },
+    "vida_base": 2100
   },
   {
     "id": "boss_w08_pollution_spio",
@@ -1099,7 +1107,7 @@
     "mundo": 8,
     "arquetipo": "pollutionSpio",
     "tipo": "jefe",
-    "vida": 2100,
+    "vida": 5326,
     "objetivo_seg": 135,
     "minimo_seg": 54.0,
     "tamano": [
@@ -1173,7 +1181,8 @@
       "lava_subida_seg": 10,
       "hermo_anillo_seg": 5,
       "mucosidad_lento": 0.3
-    }
+    },
+    "vida_base": 2100
   },
   {
     "id": "boss_w08_pollution_cirrat",
@@ -1181,7 +1190,7 @@
     "mundo": 8,
     "arquetipo": "pollutionCirrat",
     "tipo": "jefe",
-    "vida": 2100,
+    "vida": 5325,
     "objetivo_seg": 135,
     "minimo_seg": 54.0,
     "tamano": [
@@ -1255,7 +1264,8 @@
       "lava_subida_seg": 10,
       "hermo_anillo_seg": 5,
       "mucosidad_lento": 0.3
-    }
+    },
+    "vida_base": 2100
   },
   {
     "id": "mini_w08_lumbrineris",
@@ -1325,7 +1335,7 @@
     "mundo": 9,
     "arquetipo": "tomo",
     "tipo": "jefe",
-    "vida": 6100,
+    "vida": 13593,
     "objetivo_seg": 120,
     "minimo_seg": 48.0,
     "tamano": [
@@ -1399,7 +1409,8 @@
       "lava_subida_seg": 10,
       "hermo_anillo_seg": 5,
       "mucosidad_lento": 0.3
-    }
+    },
+    "vida_base": 6100
   },
   {
     "id": "mini_w09_lopado",
@@ -1469,7 +1480,7 @@
     "mundo": 10,
     "arquetipo": "eulagisca",
     "tipo": "jefe",
-    "vida": 6550,
+    "vida": 15615,
     "objetivo_seg": 120,
     "minimo_seg": 48.0,
     "tamano": [
@@ -1543,7 +1554,8 @@
       "lava_subida_seg": 10,
       "hermo_anillo_seg": 5,
       "mucosidad_lento": 0.3
-    }
+    },
+    "vida_base": 6550
   },
   {
     "id": "mini_w10_flabegraviera",
@@ -1613,7 +1625,7 @@
     "mundo": 11,
     "arquetipo": "osedax",
     "tipo": "jefe",
-    "vida": 7000,
+    "vida": 16684,
     "objetivo_seg": 120,
     "minimo_seg": 48.0,
     "tamano": [
@@ -1686,7 +1698,8 @@
       "lava_subida_seg": 10,
       "hermo_anillo_seg": 5,
       "mucosidad_lento": 0.3
-    }
+    },
+    "vida_base": 7000
   },
   {
     "id": "mini_w11_chryso",
@@ -1756,7 +1769,7 @@
     "mundo": 12,
     "arquetipo": "alvinella",
     "tipo": "jefe",
-    "vida": 7500,
+    "vida": 17822,
     "objetivo_seg": 120,
     "minimo_seg": 48.0,
     "tamano": [
@@ -1830,7 +1843,8 @@
       "lava_subida_seg": 10,
       "hermo_anillo_seg": 5,
       "mucosidad_lento": 0.3
-    }
+    },
+    "vida_base": 7500
   },
   {
     "id": "mini_w12_paralvinella",
@@ -1900,7 +1914,7 @@
     "mundo": 13,
     "arquetipo": "hadalsovereign",
     "tipo": "jefe",
-    "vida": 5950,
+    "vida": 15385,
     "objetivo_seg": 150,
     "minimo_seg": 60.0,
     "tamano": [
@@ -1973,7 +1987,8 @@
       "lava_subida_seg": 10,
       "hermo_anillo_seg": 5,
       "mucosidad_lento": 0.3
-    }
+    },
+    "vida_base": 5950
   },
   {
     "id": "boss_w13_riftia",
@@ -1981,7 +1996,7 @@
     "mundo": 13,
     "arquetipo": "riftia",
     "tipo": "jefe",
-    "vida": 4000,
+    "vida": 10342,
     "objetivo_seg": 150,
     "minimo_seg": 60.0,
     "tamano": [
@@ -2054,7 +2069,8 @@
       "lava_subida_seg": 10,
       "hermo_anillo_seg": 5,
       "mucosidad_lento": 0.3
-    }
+    },
+    "vida_base": 4000
   },
   {
     "id": "mini_w13_aphro",
@@ -2124,7 +2140,7 @@
     "mundo": 14,
     "arquetipo": "robot_pinza",
     "tipo": "jefe",
-    "vida": 2100,
+    "vida": 5460,
     "objetivo_seg": 90,
     "minimo_seg": 36.0,
     "tamano": [
@@ -2197,7 +2213,8 @@
       "lava_subida_seg": 10,
       "hermo_anillo_seg": 5,
       "mucosidad_lento": 0.3
-    }
+    },
+    "vida_base": 2100
   },
   {
     "id": "boss_w14_robot_torreta",
@@ -2205,7 +2222,7 @@
     "mundo": 14,
     "arquetipo": "robot_torreta",
     "tipo": "jefe",
-    "vida": 2100,
+    "vida": 5460,
     "objetivo_seg": 90,
     "minimo_seg": 36.0,
     "tamano": [
@@ -2278,7 +2295,8 @@
       "lava_subida_seg": 10,
       "hermo_anillo_seg": 5,
       "mucosidad_lento": 0.3
-    }
+    },
+    "vida_base": 2100
   },
   {
     "id": "boss_w14_robot_taladro",
@@ -2286,7 +2304,7 @@
     "mundo": 14,
     "arquetipo": "robot_taladro",
     "tipo": "jefe",
-    "vida": 2100,
+    "vida": 5459,
     "objetivo_seg": 90,
     "minimo_seg": 36.0,
     "tamano": [
@@ -2359,7 +2377,8 @@
       "lava_subida_seg": 10,
       "hermo_anillo_seg": 5,
       "mucosidad_lento": 0.3
-    }
+    },
+    "vida_base": 2100
   },
   {
     "id": "boss_w14_epitoke",
@@ -2367,7 +2386,7 @@
     "mundo": 14,
     "arquetipo": "epitoke",
     "tipo": "jefe",
-    "vida": 8400,
+    "vida": 18714,
     "objetivo_seg": 120,
     "minimo_seg": 48.0,
     "tamano": [
@@ -2441,7 +2460,8 @@
       "lava_subida_seg": 10,
       "hermo_anillo_seg": 5,
       "mucosidad_lento": 0.3
-    }
+    },
+    "vida_base": 8400
   },
   {
     "id": "boss_w14_scientist",
@@ -2449,7 +2469,7 @@
     "mundo": 14,
     "arquetipo": "scientist",
     "tipo": "jefe",
-    "vida": 8400,
+    "vida": 18714,
     "objetivo_seg": 120,
     "minimo_seg": 48.0,
     "tamano": [
@@ -2523,7 +2543,8 @@
       "lava_subida_seg": 10,
       "hermo_anillo_seg": 5,
       "mucosidad_lento": 0.3
-    }
+    },
+    "vida_base": 8400
   },
   {
     "id": "boss_w14_eunice_titan",
@@ -2531,7 +2552,7 @@
     "mundo": 14,
     "arquetipo": "euniceTitan",
     "tipo": "jefe",
-    "vida": 12650,
+    "vida": 26894,
     "objetivo_seg": 180,
     "minimo_seg": 72.0,
     "tamano": [
@@ -2613,7 +2634,8 @@
       "lava_subida_seg": 10,
       "hermo_anillo_seg": 5,
       "mucosidad_lento": 0.3
-    }
+    },
+    "vida_base": 12650
   },
   {
     "id": "mini_w14_mech_nereis",

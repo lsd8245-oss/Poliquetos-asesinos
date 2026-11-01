@@ -46,7 +46,7 @@ class AssetsTest(unittest.TestCase):
             self.assertEqual(len(animation['frames']), asset['cuadros'])
             if asset['tipo'] in ('enemy', 'mini', 'boss'):
                 self.assertIn(asset['cuadros'], range(2, 5))
-                self.assertIn(asset['fps'], range(8, 13))
+                self.assertIn(asset['fps'], (30, 60) if key.endswith('_hit') else range(8, 13))
             if asset['tipo'] == 'fx':
                 self.assertIn(asset['cuadros'], range(6, 9))
             for index, frame_key in enumerate(animation['frames'], 1):
@@ -63,6 +63,29 @@ class AssetsTest(unittest.TestCase):
                     self.assertEqual(image.crop((0,0,1,image.height)).tobytes(), image.crop((image.width-1,0,image.width,image.height)).tobytes())
         for shared in ('ship_original_move', 'panel_idle', 'pixel_idle'):
             self.assertIn('w01_ui_' + shared, names)
+
+    def test_creature_damage_frames_are_white_and_match_geometry(self):
+        manifest = json.loads((ROOT / 'assets/assets_manifest.json').read_text())['assets']
+        by_key = {asset['nombre']: asset for asset in manifest}
+        creatures = [a for a in manifest if a['tipo'] in ('enemy','mini','boss') and a['nombre'].endswith('_move')]
+        self.assertTrue(creatures)
+        for move in creatures:
+            hit_key = move['nombre'].removesuffix('_move') + '_hit'
+            self.assertIn(hit_key, by_key, 'Missing damage frames: ' + hit_key)
+            hit = by_key[hit_key]
+            self.assertEqual(hit['cuadros'], 2)
+            self.assertEqual(hit['tamano'], move['tamano'])
+            self.assertEqual(hit['estado'], 'placeholder')
+            self.assertIn(hit['fps'], (30, 60))
+            source = read_image(ROOT / move['ruta']).convert('RGBA')
+            for index in (1,2):
+                image = read_image(ROOT / hit['ruta'].replace('_01.png', f'_{index:02}.png')).convert('RGBA')
+                self.assertEqual(image.getchannel('A').tobytes(), source.getchannel('A').tobytes(), hit_key)
+                self.assertEqual(image.getpixel((0,0)), (255,255,255,255), hit_key)
+                histogram = dict((color,count) for count,color in image.getcolors(image.width*image.height))
+                self.assertGreater(histogram.get((255,255,255,255),0), image.width*image.height*.7)
+                self.assertGreater(histogram.get((24,24,24,255),0), 0, 'Hit placeholder must keep a dark label')
+                self.assertEqual(set(histogram), {(255,255,255,255),(24,24,24,255)})
 
     def test_bitmap_font_covers_ascii_and_spanish(self):
         metadata = json.loads((ROOT / 'assets/ui/bitmap_font.json').read_text())
@@ -189,3 +212,12 @@ func _init():
 
 if __name__ == '__main__':
     unittest.main()
+
+class MenuReadabilityTests(unittest.TestCase):
+    def test_panel_labels_do_not_expand_into_button_text(self):
+        # A 16px labelled panel stretched to a menu turned glyphs into huge white bars.
+        # Native-size PNGs keep the placeholder label small when used as panels.
+        for name in ('panel','panel_selected'):
+            image=Image.open(ROOT/f'assets/ui/w01_ui_{name}_idle_01.png').convert('RGBA').resize((320,24),Image.Resampling.NEAREST)
+            white=sum(1 for r,g,b,a in (image.getpixel((x,y)) for y in range(image.height) for x in range(image.width)) if r>240 and g>240 and b>240 and a>0)
+            self.assertLess(white/(320*24),0.02)

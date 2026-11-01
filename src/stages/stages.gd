@@ -76,6 +76,7 @@ func spawn_wave(g,event:Dictionary,wave_id:int):
 		var pos=formation(str(event.formacion),n,int(event.cantidad),float(event.get("y",168)),float(event.get("separacion_px",32)))
 		spawn_enemy(g,str(event.enemigo),pos,wave_id,{"uid":"wave_%d_%d"%[wave_id,n],"ordinal":g.regular_spawned,"carrier":str(event.get("item","")) if event.get("portadora",false) else ""})
 		g.regular_spawned+=1
+		g.profile.spawned_total=int(g.profile.get("spawned_total",0))+1
 
 func formation(kind:String,n:int,count:int,y:float,gap:float)->Vector2:
 	var center=(count-1)/2.0
@@ -104,6 +105,8 @@ func spawn_enemy(g,id:String,pos:Vector2,wave:int=-1,extra:Dictionary={}):
 		push_error("Enemy not found: "+id)
 		return {}
 	var cfg:Dictionary=enemy_index[id]
+	if cfg.movimiento=="M4" and wave>=0:
+		pos.y=-float(cfg.tamano[1]) if g.serial%2==0 else 336+float(cfg.tamano[1])
 	var n=int(g.profile.world)
 	var ref=float(g.data.combat.enemy.dps_ref_base)+float(g.data.combat.enemy.dps_ref_world_step)*(mini(n,14)-1)
 	var hp=ceilf(ref/float(g.data.combat.enemy.small_hp_divisor))
@@ -149,7 +152,8 @@ func move_enemies(g,dt:float):
 			"M6":
 				e.pos.x-=float(g.world.scroll_px_s)*local_dt
 				var cycle=fmod(float(e.age),float(m.telegraph)+float(m.stay)+1.0)
-				e.hidden=cycle<float(m.telegraph)
+				e.hidden=cycle<float(m.telegraph) or cycle>=float(m.telegraph)+float(m.stay)
+				e["warning"]=cycle<float(m.telegraph)
 				e.pos.y=330 if e.hidden else 284
 			"M7":
 				if e.age<float(m.stop_after):
@@ -194,40 +198,27 @@ func bullet_speed(g)->float:
 
 func spawn_hazard(g,event:Dictionary):
 	var id=str(event.id)
-	var cfg:Dictionary=g.data.combat.get("hazards",{}).get(id,{})
-	var y=float(event.get("y",280))
-	var h={"name":id.capitalize(),"rect":Rect2(650,y,40,48),"delay":0.5,"duration":float(event.get("duracion_seg",12)),"damage":float(g.data.combat.enemy.hazard_damage),"effect":"damage","scroll":true,"id":id}
-	match id:
-		"corriente_marea":
-			h.merge({"rect":Rect2(0,0,640,336),"effect":"push","direction":Vector2(0,30 if int(g.world_time/10)%2==0 else -30),"scroll":false,"duration":10},true)
-		"corriente_hojas", "corrientes", "cintas":
-			h.merge({"rect":Rect2(0,0,640,336),"effect":"push","direction":Vector2(-20,0),"scroll":false},true)
-		"kelp","petroleo":
-			h.effect="slow"
-			h["slow"]=0.7 if id=="kelp" else 0.75
-		"granizo":
-			h.rect=Rect2(g.rng.randf_range(0,600),0,10,336)
-			h.damage=10
-			h.scroll=false
-			h.duration=0.5
-		"geiseres","laseres","lava":
-			h.rect=Rect2(g.rng.randf_range(60,600),230,28,106) if id!="lava" else Rect2(0,324,640,12)
-			h.delay=1.0
-			h.scroll=false
-			h.duration=2.0
-		"compuertas":
-			h.rect=Rect2(g.rng.randf_range(200,580),0,28,240)
-			h.scroll=false
-			h.delay=1.0
-			h.duration=3.0
-		"escombros":
-			h.rect=Rect2(g.rng.randf_range(0,600),0,24,336)
-			h.scroll=false
-			h.delay=0.5
-			h.duration=0.4
-		"corales","raices","costillas","icebergs":
-			h.rect=Rect2(650,0 if id=="raices" else 260,48,76)
-	if not cfg.is_empty():
-		for key in ["delay","duration","damage","slow"]:
-			if cfg.has(key):h[key]=cfg[key]
+	var defaults:Dictionary=g.data.combat.hazards.solid
+	var cfg:Dictionary=defaults.duplicate(true)
+	cfg.merge(g.data.combat.hazards.get(id,{}),true)
+	var viewport:Dictionary=g.data.combat.screen
+	var size=Vector2(float(cfg.width),float(cfg.height))
+	var pos=Vector2(0,float(event.get("y",float(viewport.play_height)-size.y)))
+	match str(cfg.placement):
+		"scroll":
+			pos.x=float(viewport.width)+float(cfg.spawn_offset)
+		"random":
+			pos.x=g.rng.randf_range(float(cfg.random_x[0]),float(cfg.random_x[1]))
+	match str(cfg.anchor_y):
+		"top":
+			pos.y=0
+		"bottom":
+			pos.y=float(viewport.play_height)-size.y
+	var direction=Vector2(float(cfg.push_x),float(cfg.push_y))
+	if float(cfg.get("reverse_every",0))>0 and int(g.world_time/float(cfg.reverse_every))%2==1:
+		direction=-direction
+	var h={"name":id.capitalize(),"rect":Rect2(pos,size),"delay":float(cfg.telegraph),"telegraph":float(cfg.telegraph),"duration":float(event.get("duracion_seg",cfg.duration)),"damage":float(cfg.damage),"effect":str(cfg.effect),"direction":direction,"slow":clampf(1.0-float(cfg.slow),0.0,1.0),"scroll":bool(cfg.scroll),"id":id,"age":0.0,"cycle":float(cfg.cycle),"active_duration":float(cfg.active_duration),"explosive":bool(cfg.explosive)}
+	if h.explosive:
+		h["blast_radius"]=float(cfg.blast_radius)
+		h["enemy_damage"]=float(cfg.enemy_damage)
 	g.hazards.append(h)

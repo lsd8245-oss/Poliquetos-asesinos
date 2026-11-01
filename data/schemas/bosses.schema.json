@@ -164,6 +164,10 @@
           "type": "number",
           "minimum": 0
         }
+      },
+      "vida_base": {
+        "type": "number",
+        "exclusiveMinimum": 0
       }
     },
     "required": [

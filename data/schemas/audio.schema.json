@@ -29,6 +29,18 @@
       "bpm": {
         "type": "number",
         "exclusiveMinimum": 0
+      },
+      "tipo": {
+        "type": "string",
+        "enum": [
+          "sfx",
+          "music"
+        ]
+      },
+      "prioridad": {
+        "type": "integer",
+        "minimum": 0,
+        "maximum": 100
       }
     },
     "required": [

@@ -40,3 +40,16 @@ Esta entrega implementa la **fase 0**, como exige la sección 13. No representa 
 - La sección 8 pide JSON en un directorio de usuario. Un HTML abierto en el navegador no puede escribir libremente en ese directorio. Para la fase 7 se propone conservar guardado local versionado y añadir exportación/importación JSON de tres ranuras con copia recuperable. Es una adaptación técnica pendiente de implementación, no una función ya disponible.
 - Preservar las partidas antiguas y separar el formato nuevo de ambos modos; no sobrescribir guardados del juego anterior con una campaña incompatible.
 - La sección 11 queda documentada, pero las composiciones, canciones y muestras continúan excluidas por la indicación directa previa. No producir pistas silenciosas ni sustituir audio existente en esta fase. El contrato `audio.schema.json` no modifica el sonido del juego.
+
+
+## Cambio solicitado el 1 de noviembre: Windows nativo
+
+El usuario pidió expresamente rehacer el resto de las fases como juego normal de computadora, sin versión web, y confirmó Windows. Se cambia a Godot 4.6.3 porque ahora el destino es una aplicación nativa. Esto sustituye la restricción anterior de mantener HTML/JavaScript; se explicó antes de implementar. Se preserva el HTML como legado y las dos ediciones pasan a ser ejecutables/instaladores.
+
+- Guardado real en user://, con tres ranuras y .bak, en lugar de la adaptación web propuesta anteriormente. Normal/Pruebas tienen subdirectorios independientes.
+- Instaladores NSIS con juego nativo y PCK incorporado, sin navegador ni ZIP. Los ejecutables grandes de desarrollo quedan en build/; solo se entregan los instaladores comprimidos y sus hashes.
+- Los efectos son sonidos originales de la nueva aplicación; no se han creado ni sustituido canciones. Audio de etapa/jefe y fundidos musicales se mantienen pendientes.
+- Se conservan las cifras originales de HP en vida_base; vida contiene el ajuste medido. Se publican las hipótesis de presupuesto y los resultados. La existencia de replays remunerados y burbujas de 100 monedas significa que 17.900/21.480 son ingresos nominales del recorrido principal, no un techo absoluto de toda partida. No se inventa una prohibición de esos ingresos para forzar el porcentaje de compras.
+- La medición automática no acredita una partida humana de 90/70 minutos ni todos los posibles presupuestos derivados de repetir mundos. Esos criterios quedan como validación pendiente, explícitamente.
+- Se utiliza la misma simulación y balance en ambas ediciones; Pruebas solo cambia acceso, selección, cosméticos y dinero. No hay estadísticas ni invulnerabilidad automáticas.
+- La interfaz del instalador es nativa de NSIS; el juego usa PNG y bitmap. Solo la visualización F3 dibuja rectángulos de depuración.
