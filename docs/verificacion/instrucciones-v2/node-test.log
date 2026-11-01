@@ -1,0 +1,43 @@
+✔ PDF campaign has14 worlds and144 unique sectors with correct act boundaries (128.152932ms)
+✔ all normal waves match PDF counts equally in solo and coop; every type can spawn (171.402172ms)
+✔ boss stages have no ordinary waves, pollution trio and hadal duo are actual separate bosses (333.548808ms)
+✔ old campaign7 saves migrate by habitat and preserve bought equipment and credits (186.860338ms)
+✔ last-sector retry restores each pilots purchases instead of resetting the expedition (124.641861ms)
+✔ one escape is endless for180 active seconds, freezes on pause, and finishes with enemies alive (5616.174833ms)
+✔ Eunice is anchored and mechanical gauntlet requires four distinct bosses (225.830954ms)
+✔ fixed waves complete after their exact budget, including a Syllid without extra offspring (288.677999ms)
+✔ all mechanical bosses must die, and grouped encounters wait for their final member (473.371824ms)
+✔ mechanical quartet bosses use telegraphed laboratory laser attacks (218.852382ms)
+✔ reordered-world migration preserves every already rewarded sector on restore (199.335894ms)
+✔ normal edition retains progression, starting money and unpurchased upgrades (161.037297ms)
+✔ sandbox unlocks weapons and cosmetics, leaves abilities/upgrades unbought, and pays unlimited credits (171.8214ms)
+✔ sandbox host can select every sector including final rescue without invulnerability (103.390233ms)
+✔ sandbox world selector includes all14 worlds and final14 local levels (9707.831741ms)
+✔ generated standalone editions keep normal and sandbox checkpoints separate on one origin (23251.47015ms)
+✔ ocean acoustics create a finite stereo decay, with no tail when the wet path is muted (6158.115223ms)
+✔ battle mix keeps attacks clearer than the exploration mix (3728.15505ms)
+✔ offline game renders, pauses, mutes the complete music mix, and restores its checkpoint (18467.807645ms)
+✔ submarine lighting preserves invulnerability transparency (5838.793568ms)
+✔ oceanographic tools are sold only in their PDF act (251.27562ms)
+✔ cosmetic purchase charges the authoritative price once and survives save/restore (240.020408ms)
+✔ failed or out-of-phase purchases never change credit or ownership (174.729957ms)
+✔ rewarding the same sector twice never manufactures credits (161.016493ms)
+✔ rest appearance cannot equip an unowned paid or boss skin (136.251202ms)
+✔ shipyard opens from rest, equips a skin, and returns to the same paused sector (12397.419007ms)
+✔ equipment shortcuts reject conflicts and persist across reload (14061.893229ms)
+✔ death menu retry continues the same sector (6315.892075ms)
+✔ wider playfield retains controls on screen at desktop and landscape-mobile sizes (6402.284453ms)
+✔ old destination unlocks migrate once without losing access to moved habitats (5271.085086ms)
+✔ a permanent paid skin remains owned in a new expedition after reloading (9209.320195ms)
+✔ audio options expose only music and effect switches with their volume controls (3944.124323ms)
+✔ v2 inventory preserves all legacy types, world roles and separate boss participants (522.040969ms)
+✔ v2 inventory generation is deterministic and does not alter either edition (561.417933ms)
+✔ v2 data contracts validate fixtures and reject invalid game data (1819.613099ms)
+ℹ tests 35
+ℹ suites 0
+ℹ pass 35
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 68655.303152

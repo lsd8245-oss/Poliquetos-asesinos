@@ -1,0 +1,72 @@
+{
+  "date": "2026-11-01",
+  "scope": "Documentation only; no phase started or accepted",
+  "base_branch": "juego-nativo-v2",
+  "base_commit": "ac29e2365202cba90dcf504c1913651aa6b5426d",
+  "work_branch": "docs/instrucciones-redisenio-v2",
+  "attachments_exact_copies": true,
+  "protected_files": [
+    {
+      "path": "docs/specs/poliquetos-asesinos-v2.md",
+      "sha256_before": "1f42e2dad262b02ad87d6eb53f0454a6a00890751f379e918e186de10fd68b2a",
+      "sha256_after": "1f42e2dad262b02ad87d6eb53f0454a6a00890751f379e918e186de10fd68b2a"
+    },
+    {
+      "path": "poliquetos_asesinos_8_edicion_sonora (18).html",
+      "sha256_before": "fbf5bbb4a721ed018ec05d81bc4643bdd55928f0936daf3032c5daa43b9c91f8",
+      "sha256_after": "fbf5bbb4a721ed018ec05d81bc4643bdd55928f0936daf3032c5daa43b9c91f8"
+    },
+    {
+      "path": "versiones/poliquetos-normal.html",
+      "sha256_before": "fbf5bbb4a721ed018ec05d81bc4643bdd55928f0936daf3032c5daa43b9c91f8",
+      "sha256_after": "fbf5bbb4a721ed018ec05d81bc4643bdd55928f0936daf3032c5daa43b9c91f8"
+    },
+    {
+      "path": "versiones/poliquetos-pruebas.html",
+      "sha256_before": "ef3f57a38c75fd8576740a6156e8996f1d10af29919096427e9954aafae08226",
+      "sha256_after": "ef3f57a38c75fd8576740a6156e8996f1d10af29919096427e9954aafae08226"
+    }
+  ],
+  "checks": [
+    {
+      "command": "node --test",
+      "exit_code": 0,
+      "tests": 35,
+      "pass": 35,
+      "fail": 0,
+      "log": "instrucciones-v2/node-test.log"
+    },
+    {
+      "command": "python3 scripts/validate-v2-data.py --self-test",
+      "exit_code": 0,
+      "output": "13 contracts verified; available campaign data and legacy inventory valid."
+    },
+    {
+      "command": "python3 scripts/build-editions.py",
+      "exit_code": 0,
+      "editions_unchanged": true
+    }
+  ],
+  "visual_review": {
+    "scope": "Legacy HTML menus only; newly captured and inspected",
+    "screenshots": [
+      "instrucciones-v2/normal-640x360.png",
+      "instrucciones-v2/normal-1920x1080.png",
+      "instrucciones-v2/pruebas-640x360.png",
+      "instrucciones-v2/pruebas-1920x1080.png"
+    ],
+    "observations": [
+      "1920x1080: both menu panels fit in viewport.",
+      "640x360: Normal shows five main buttons; Pruebas lower panel clipped and destination text abbreviated. Existing issue left unchanged."
+    ],
+    "not_tested": [
+      "Native visuals",
+      "Windows installation",
+      "Controller",
+      "Human full campaign duration",
+      "All menu interactions",
+      "Combat visuals"
+    ]
+  },
+  "phase_approved": false
+}
