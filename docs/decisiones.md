@@ -74,3 +74,13 @@ La instrucción directa de este encargo establece que la especificación v2 es l
 | Dependencias y comandos | Procedimientos menciona jsonschema como requisito actual, pero requirements-dev.txt también contiene Pillow. Los comandos HTML no prueban el motor Godot. | Consultar los requisitos reales. Ejecutar los comandos indicados para el legado y datos, sin presentarlos como validación nativa ni visual. Añadir pruebas específicas de la plataforma de la fase cuando se autorice implementarla. |
 
 Se mantienen Normal/Pruebas, compras pendientes salvo sonar, dinero ilimitado solo en Pruebas, ausencia de mejoras/invulnerabilidad automáticas, guardados/preferencias separados y protección de partidas incompatibles. Conservar las notas históricas anteriores permite auditar el cambio de instrucciones; esta sección describe el alcance documental actual.
+
+## Encargo 01 — conciliación nativa y piloto gráfico (posterior a f60abfb)
+
+La nueva instrucción adjunta confirma Godot 4.6.3 y Windows como producto activo. Sustituye los mandatos HTML/Canvas de AGENTS/procedimientos únicamente en plataforma, entregas, guardados y pruebas. Se conserva el historial anterior para auditoría y la especificación completa byte a byte. El informe documental de f60abfb es histórico; su alternativa de implementar fase1 HTML no es el próximo alcance vigente.
+
+Entrega final futura: `entregas/Poliquetos-Normal-Instalar.exe` y `entregas/Poliquetos-Pruebas-Instalar.exe`, con instalación/configuración/guardados independientes. El piloto actual solo concilia documentos y produce cuatro propuestas conceptuales en `docs/arte/piloto-w01/`; no reconstruye esos instaladores ni integra recursos. Los dos cambios se registran en commits separados.
+
+Hydroides: `data/enemies.json` define mediano 48×48, y `src/stages/stages.gd` usa esas dimensiones; el PNG y el manifiesto actuales son 32×32, escalados al actor por el renderizador. El boceto se prepara a 48×48 para la presentación real, sin modificar ninguno de esos datos ni hitboxes. La discrepancia queda para una futura integración aprobada.
+
+Herramienta autorizada disponible: imagegen, solo para conceptos originales; Pillow se limita a recorte, preparación de paleta, alfa, escalado nearest y hojas comparativas según autoriza el encargo. La reducción automática no acredita pixel art final. Se registrará procedencia y estado concepto/no aprobado, separado del manifiesto de producción. No se añaden mecánicas, mundo2, canciones ni efectos. No se acepta retrospectivamente ninguna fase. Se mantiene F3 para depuración sin cubrir el combate por instrucción expresa del piloto.

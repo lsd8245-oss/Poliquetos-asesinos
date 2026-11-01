@@ -21,8 +21,8 @@ Si hay conflicto: instrucciones directas actuales del usuario > `AGENTS.md` (ent
 
 ## 3. Reglas de arte y presentación (obligatorias)
 
-- El arte de producción es **PNG original** (sprites, atlas, fondos, tipografía, HUD, menú y efectos). JavaScript/Canvas **compone** los PNG; no dibuja como arte final criaturas con polígonos, curvas, rectángulos coloreados o SVG generados en código. Los placeholders son temporales, explícitos y rastreables mediante manifiesto.
-- **Resolución lógica 640×360**, área jugable 640×336 y HUD 640×24. Escala entera ×1/×2/×3 cuando corresponda, centrado con barras cuando sobre espacio, `imageSmoothingEnabled = false`, `image-rendering: pixelated` donde aplique, sin suavizado ni desenfoque de sprites.
+- El arte de producción es **PNG original** (sprites, atlas, fondos, tipografía, HUD, menú y efectos). Godot **compone** los PNG; no dibuja como arte final criaturas con polígonos, curvas, rectángulos coloreados o SVG generados en código. Los placeholders son temporales, explícitos y rastreables mediante manifiesto.
+- **Resolución lógica 640×360**, área jugable 640×336 y HUD 640×24. Escala entera ×1/×2/×3 cuando corresponda, centrado con barras cuando sobre espacio, filtro de texturas nearest-neighbor de Godot y escalado integer, sin suavizado ni desenfoque de sprites.
 - Estética de **16 bits con pixel art coherente**: siluetas distinguibles, contorno oscuro de 1 px, luz arriba a la izquierda, 3–5 tonos para sombreado, hasta 16 colores por sprite; balas claramente legibles sobre todos los fondos. Consultar biblia y paletas en `docs/procedimientos-v2.md`.
 - Generar y conservar `assets/assets_manifest.json`, atlas JSON y rutas PNG, con estado `placeholder`/`final` verificable. Reemplazar un PNG no debe exigir cambios en el motor. Placeholders y sus etiquetas no deben tapar controles; mostrar IDs/hitboxes de depuración **solo al pulsar F3**, nunca durante el juego normal.
 - No copiar assets, sprites, música, nombres o personajes de videojuegos de referencia. Darius Gaiden, Axelay, Bio-Hazard Battle, Thunder Force IV y otros son referencias de mecánica/composición, no bancos de recursos.
@@ -30,48 +30,47 @@ Si hay conflicto: instrucciones directas actuales del usuario > `AGENTS.md` (ent
 
 ## 4. Motor, datos y guardados
 
-- Mantener el stack JavaScript + Canvas actual, y los valores numéricos en `data/` conforme a los contratos JSON. No introducir otro motor, framework o empaquetador salvo que sea imprescindible, justificándolo antes de cambiarlo.
-- Desarrollo modular permitido en `src/`, pero las entregas serán **dos HTML autocontenidos** que funcionen sin internet en modo individual. Ningún PNG, tipografía o archivo esencial debe quedar dependiendo de una ruta externa tras generar la edición.
+- Mantener **Godot 4.6.3 / Windows nativo**, `project.godot`, `native/` y los módulos GDScript de `src/`. Los valores numéricos permanecen en `data/` conforme a los contratos JSON. No recrear el motor ni cambiar plataforma sin una instrucción expresa. JavaScript/Canvas y los HTML se conservan únicamente como legado.
+- Entrega final: **dos instaladores Windows independientes**, `entregas/Poliquetos-Normal-Instalar.exe` y `entregas/Poliquetos-Pruebas-Instalar.exe`, mediante el empaquetado nativo existente (NSIS). Ambas ediciones funcionan sin internet en modo individual; sus recursos esenciales viajan en el paquete. Los conceptos artísticos no equivalen a esa entrega final.
 - Edición **Normal**: progresión, créditos y compras habituales.
 - Edición **Pruebas**: mundos, etapas, armas y skins abiertos, selector de mundo y etapa; dinero ilimitado para **comprar** habilidades/equipos y mejoras. Estas compras empiezan **pendientes** salvo sonar inicial. No dar invulnerabilidad ni aumentar estadísticas automáticamente. La edición de pruebas no modifica la campaña normal.
-- Mantener **guardados y preferencias separados** entre Normal y Pruebas. La nueva v2 no debe sobrescribir partidas anteriores incompatibles. Para HTML local, adaptar guardado a almacenamiento local versionado + exportación/importación JSON donde corresponda; no afirmar acceso libre a carpetas del usuario desde el navegador.
+- Mantener **guardados y preferencias separados** entre Normal y Pruebas. La nueva v2 no debe sobrescribir partidas anteriores incompatibles. En Godot, conservar las tres ranuras JSON y respaldos `.bak` en `user://`, con subdirectorios independientes para Normal/Pruebas según la implementación existente. No reescribir partidas. Instalación y configuración también deben ser independientes.
 - No sustituir composiciones, canciones ni muestras musicales hasta que el usuario **reabra expresamente** ese trabajo. Mantener el audio existente mientras tanto, incluso cuando una fase toque audio: se puede implementar la infraestructura sin reemplazar pistas.
 
 ## 5. Fuente canónica y entregas
 
-El HTML de la raíz es la fuente canónica del juego anterior mientras se migra; **no editar manualmente** los HTML generados de `versiones/`. Tras cualquier cambio que afecte una edición, ejecutar:
+La fuente activa es `project.godot` con GDScript, datos y assets PNG. Conservar `scripts/build-native.py` y el empaquetado NSIS; el hito final exige los dos instaladores `.exe`, sumas SHA-256 e instrucciones de instalación/desinstalación. No reconstruir instaladores ni anunciar arte nuevo jugable durante un encargo de conceptos sin integración.
 
-```sh
-python3 scripts/build-editions.py
-```
+Los HTML de la raíz y de `versiones/` son legado conservado: no borrarlos ni editarlos por rutina. Solo si un encargo modifica ese legado, usar su fuente canónica y ejecutar `python3 scripts/build-editions.py`; nunca parchear los generados a mano. Sus pruebas Node corresponden a esa línea, no a la validación nativa.
 
-Comprobar que produjo:
-
-- `versiones/poliquetos-normal.html`
-- `versiones/poliquetos-pruebas.html`
-
-Preferir enlaces individuales a ambos HTML en GitHub y no ZIP para la entrega del juego. No afirmar que un enlace descarga sin verificarlo; en repositorios privados se requiere acceso autorizado.
+Preferir enlaces individuales verificables, sin ZIP. No afirmar descarga o arranque Windows sin comprobarlo. Firmar instaladores solo si se dispone de una firma válida y declarar su ausencia cuando corresponda.
 
 ## 6. Pruebas obligatorias y puerta de aceptación
 
-Antes de cerrar un encargo ejecutar y registrar el resultado real (no inventar):
+Antes de cerrar un encargo nativo ejecutar y registrar el resultado real (no inventar):
 
 ```sh
-node --test
-python3 scripts/validate-v2-data.py --self-test
-python3 scripts/build-editions.py
+python3 scripts/test-native.py
 ```
 
-En cambios de inventario, ejecutar también `node scripts/inventory-legacy.cjs` y comprobar que los cambios fueron intencionales. Revisar la edición de Pruebas manualmente en navegador, con capturas comparables a **640×360 y 1920×1080**. Para funciones interactivas, verificar con clic y teclado; para guardados, probar sin datos, con partida válida, con partida antigua y con datos corruptos. En fases de rendimiento medir FPS, no deducirlos de la ausencia de errores.
+Usar `python3 scripts/test-native.py --render` si hay pantalla/X display disponible; el modo headless no sustituye inspección visual. Conservar los registros y declarar cualquier limitación. No ejecutar `build-editions.py` por rutina en cambios exclusivamente nativos.
+
+En cambios del legado, ejecutar además sus pruebas `node --test`, el validador `python3 scripts/validate-v2-data.py --self-test` y el generador correspondiente. En cambios del inventario heredado, ejecutar `node scripts/inventory-legacy.cjs` y revisar las diferencias intencionales.
+
+Revisar Normal/Pruebas nativos con capturas reales a **640×360 y 1920×1080**; para la integración artística también a **1280×720**. Probar clics/teclado cuando haya cambios interactivos; guardados ausentes/válidos/antiguos/corruptos cuando se modifique persistencia. Medir FPS en encargos de rendimiento. En el hito final probar instalación/desinstalación, arranque, guardados y mando en Windows real; si no es posible, declararlo sin sustituir esa comprobación por Linux.
+
+Conceptos y mockups deben identificarse como tales: no son capturas de Godot ni arte final aprobado. Esperar aprobación explícita antes de integrarlos o avanzar al mundo 2.
 
 En cada entrega informar:
 
 1. Rama, commit y fase exacta; diferencias frente al estado inicial.
 2. Archivos cambiados y funciones implementadas; estado `placeholder` o `final` de cada asset incorporado.
 3. **Pruebas ejecutadas**, resultados y capturas reales. Si algo no se pudo probar, decirlo explícitamente.
-4. Pasos reproducibles para que el usuario abra Normal y Pruebas y compruebe la fase.
+4. Pasos reproducibles para que el usuario abra las dos ediciones nativas y compruebe la fase; para conceptos, enlaces a PNG y puntos que debe aprobar.
 5. Problemas conocidos, pendientes y **puntos que requieren aprobación** antes de la fase siguiente.
 
 ### Review guidelines (revisión de cada PR)
 
-Priorizar defectos de funcionamiento, corrupción de guardados, colisiones/hitboxes, pérdida de progresión y referencias de assets inexistentes. Verificar que no se introduzcan dependencias en red para jugar en modo individual, que el arte final sea PNG, que los controles sigan siendo accionables y que los HTML generados no se hayan editado manualmente. Una prueba de sintaxis o `node --test` **no reemplaza** las pruebas visuales e interactivas. No aprobar una fase si incumple un criterio del spec.
+Priorizar defectos de funcionamiento, corrupción de guardados, colisiones/hitboxes, pérdida de progresión y referencias de assets inexistentes. Verificar que no se introduzcan dependencias en red para jugar en modo individual, que el arte final sea PNG, que los controles sigan siendo accionables y que el empaquetado nativo y los perfiles separados se preserven; si se toca el legado, que sus HTML generados no se editen manualmente. Una prueba de sintaxis o `node --test` **no reemplaza** las pruebas visuales e interactivas. No aprobar una fase si incumple un criterio del spec.
+
+El encargo activo de conciliación y piloto artístico está en `docs/encargos/01-piloto-visual-godot-w01.md`: conceptos en `docs/arte/piloto-w01/`, dos commits separados, sin integración ni aprobación retrospectiva de fases.

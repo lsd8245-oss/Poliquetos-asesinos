@@ -1,0 +1,5 @@
+Godot Engine v4.6.3.stable.official.7d41c59c4 - https://godotengine.org
+
+stage1 time/state/budget 170.0 alert 90
+stage2 time/state/budget 125.0 playing 47
+STAGES TESTS PASS: exact90, timeline, mini checkpoint, pause, overlap

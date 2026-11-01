@@ -1,15 +1,15 @@
 # Poliquetos Asesinos — procedimientos de desarrollo v2 para Codex
 
-**Estado:** guía de ejecución, no sustituto de la especificación de diseño. **Repositorio:** `lsd8245-oss/Poliquetos-asesinos`. **Rama de referencia comprobada:** `rediseno-v2-fase-0`. **Base de diseño obligatoria:** [`docs/specs/poliquetos-asesinos-v2.md`](specs/poliquetos-asesinos-v2.md). **Reglas permanentes:** [`AGENTS.md`](../AGENTS.md).
+**Estado:** guía de ejecución, no sustituto de la especificación de diseño. **Repositorio:** `lsd8245-oss/Poliquetos-asesinos`. **Referencia histórica:** `rediseno-v2-fase-0`. **Base del piloto nativo:** `docs/instrucciones-redisenio-v2` (`f60abfb`), descendiente de `juego-nativo-v2` (`ac29e23`). **Plataforma activa:** Godot 4.6.3 / Windows. **Base de diseño obligatoria:** [`docs/specs/poliquetos-asesinos-v2.md`](specs/poliquetos-asesinos-v2.md). **Reglas permanentes:** [`AGENTS.md`](../AGENTS.md).
 
 Este archivo es la versión **recortada y operativa** del documento «Poliquetos Asesinos: procedimientos para crear el juego», especialmente sus apartados **3.2, 3.4, 4, 6 y 7**. Describe **cómo** ejecutar y aceptar cada fase. El spec establece **qué** juego hay que construir. Conservar los archivos de la v2 y los juegos anteriores hasta que cada reemplazo esté comprobado.
 
 ## 0. Diagnóstico y estado de partida (obligatorio antes de programar)
 
 - En la rama `rediseno-v2-fase-0` se registró **solo la fase 0**, con inventario heredado, contratos de datos, directorios de arte y el spec. El directorio `src/` del nuevo motor aún estaba vacío en el estado revisado. Revisar de nuevo el commit real antes de iniciar; un video mostrando otro motor debe provenir de una rama o un estado distintos.
-- `docs/v2-progreso.md` documenta las pruebas de la fase 0. **Volver a ejecutarlas**: no dar por verificado un resultado de una sesión anterior sin indicar esa limitación.
+- `docs/v2-progreso.md` documenta la fase 0 y la implementación nativa posterior. Releer el estado por rama/commit y ejecutar las pruebas nativas actuales: no presentar registros históricos como resultados nuevos ni sistemas implementados como arte aprobado.
 - La especificación v2 fusionada prevalece sobre el PDF introductorio incompleto: **mundo 14 = 250 enemigos, 5:30 hasta el jefe**, seguidos de cuatro jefes; campaña objetivo de **1 h 30 min** y escape final de **5 min**. No mezclar los 178 enemigos del PDF antiguo.
-- El producto final previsto son **dos HTML autocontenidos**, Normal y Pruebas. Solo una fase aprobada puede considerarse terminada; los rectángulos con etiquetas son un estado `placeholder`, no un juego artísticamente concluido.
+- El producto final son **dos instaladores Windows independientes**: `entregas/Poliquetos-Normal-Instalar.exe` y `entregas/Poliquetos-Pruebas-Instalar.exe`, mediante Godot/NSIS. El HTML anterior queda como legado conservado. Guardados/configuración separados en `user://`, con tres ranuras y `.bak` según la implementación actual; no reescribir partidas. Solo una fase aprobada puede considerarse terminada; los rectángulos con etiquetas son un estado `placeholder`, no un juego artísticamente concluido.
 - La música está **en pausa por decisión del usuario**. No sustituirla, reprocesarla ni crear nuevas pistas sin una nueva instrucción explícita.
 
 ## 1. Biblia de estilo aplicable a todo el proyecto (origen: §3.2)
@@ -52,17 +52,17 @@ Para peligro y alarma en todos los mundos usar **rojo `#FF3B30` y amarillo `#FFD
 
 ## 2. Especificación técnica y contrato de entrega de arte (origen: §3.4)
 
-Codex **no dibuja el arte final**. Construye el cargador, las reglas de animación, los atlas y el manifiesto para que un artista pueda sustituir los PNG sin editar JS.
+Codex **no dibuja el arte final**. Construye el cargador, las reglas de animación, los atlas y el manifiesto para que un artista pueda sustituir los PNG sin editar GDScript.
 
 1. **Formato y nombres:** recibir PNG con canal alfa real y sin antialiasing. Convención `w{NN}_{tipo}_{nombre}_{accion}_{NN}.png`. Ejemplo: `w01_enemy_serpulidae_idle_01.png`. Mantener correspondencia exacta con `assets/assets_manifest.json`.
 2. **Animaciones:** entregar cuadros individuales de dimensiones idénticas y el mismo punto de anclaje en la animación; idealmente el cuerpo ocupa ~70 % del cuadro. Ejemplo: `idle_01`, `idle_02`, `attack_01`, etc. Codex ensambla el atlas con un script reproducible; **el artista no debe empaquetar atlas a mano**.
-3. **Hitboxes:** se definen en JSON/JS de datos, **no quedan dibujadas dentro del sprite**. F3 activa hitboxes y, cuando corresponda, IDs técnicos, solo en modo de depuración.
+3. **Hitboxes:** se definen en JSON de datos, **no quedan dibujadas dentro del sprite**. F3 activa hitboxes y, cuando corresponda, IDs técnicos, solo en modo de depuración.
 4. **Fondos:** por mundo, **3 o 4 capas** repetibles sin costura, ancho de **640 px o múltiplo** y alto de **336 px como mínimo**. De la más lejana a la más cercana: `w01_bg_layer1_idle_01.png` … `w01_bg_layer4_idle_01.png`. Las capas cercanas pueden tener alfa.
 5. **Jefes articulados:** cabeza, cuerpo y apéndices/mandíbulas animables deben entregarse como piezas PNG separadas. Sus hitboxes y articulaciones se definen en datos; consultar el patrón de cada jefe en el spec.
 6. **Tipografía:** fuente bitmap con `á é í ó ú ü ñ Á É Í Ó Ú Ñ ¿ ¡` y ASCII. No mostrar un texto si queda fuera del sprite o del panel; etiquetas técnicas solo con F3.
 7. **Manifiesto:** `assets/assets_manifest.json` registra ID, mundo, tipo, dimensiones, frames, fps, ruta, estado `placeholder|final`, procedencia/licencia y observaciones. Cambiar el estado a `final` **solo si se ha revisado el PNG y se ve funcionando**.
 8. **Atlas:** crear `assets/atlas/wNN.json` y `wNN.png`, comprobar coordenadas y límites, evitar frames solapados y rutas ausentes. Incluir pruebas automáticas para referencias cruzadas del manifiesto.
-9. **Integración:** los PNG de producción se alojan en `assets/sprites/<mundo>/`, fondos en `assets/backgrounds/<mundo>/`; efectos e interfaz en `assets/fx/` y `assets/ui/`. El proceso de compilación debe incrustarlos en las dos ediciones HTML finales para juego individual offline.
+9. **Integración:** los PNG de producción se alojan en `assets/sprites/<mundo>/`, fondos en `assets/backgrounds/<mundo>/`; efectos e interfaz en `assets/fx/` y `assets/ui/`. El empaquetado Godot debe incluirlos en las dos ediciones nativas para juego individual offline. Los conceptos no se copian a `assets/` ni se integran hasta aprobación.
 
 **Ejemplo mínimo del encargo de un enemigo de prueba — Hydroides (Serpulidae), mundo 01:**
 
@@ -71,7 +71,7 @@ Codex **no dibuja el arte final**. Construye el cargador, las reglas de animaci�
 - Anatomía: tubo calcáreo, corona branquial, opérculo. Exageración monstruosa: penacho que se abre como una boca, sin perder la identificación de Serpulidae.
 - Paleta guía: `#0B3C5D`, `#1F8FC4`, `#BDF3FF`, acento interior `#FF7A59`; evitar penacho amarillo intenso que se confunda con balas.
 
-**Prueba de entrega:** sustituir un único PNG de prueba y ver que cambia en pantalla sin alterar JS; verificar en 640×360, atlas válido, anclaje sin saltos y F3 funcional. No declarar «arte final» si sigue siendo un rectángulo temporal.
+**Prueba de entrega:** sustituir un único PNG de prueba y ver que cambia en pantalla sin alterar GDScript; verificar en 640×360, atlas válido, anclaje sin saltos y F3 funcional. No declarar «arte final» si sigue siendo un rectángulo temporal.
 
 ## 3. Trabajo de Codex por fases (origen: §4)
 
@@ -82,17 +82,17 @@ Codex **no dibuja el arte final**. Construye el cargador, las reglas de animaci�
 1. Leer `AGENTS.md`, el spec completo, este archivo, `docs/decisiones.md` y `docs/v2-progreso.md`.
 2. Identificar el **commit y la rama** que realmente contienen el código a modificar. Comprobar cambios sin confirmar y partir de la última fase aprobada. Si el usuario adjunta un video de otra rama, localizar esa rama/commit antes de corregir nada.
 3. Seleccionar **solo la fase N** de la sección 13 del spec. Abrir una rama `rediseno-v2-fase-N`; no implementar la N+1.
-4. Enunciar entregables, archivos afectados, pruebas previstas y componentes expresamente fuera de alcance. Dejar los valores numéricos en datos JSON, no dispersos en JS.
+4. Enunciar entregables, archivos afectados, pruebas previstas y componentes expresamente fuera de alcance. Dejar los valores numéricos en datos JSON, no dispersos en GDScript.
 
 **DURANTE**
 
 5. Implementar pequeños cambios comprobables con tests. Mantener módulos, JSON, manifest y assets alineados; no inventar PNG definitivos ni sustituir audio. Si faltan assets, usar placeholders marcados como tales.
 6. Añadir pruebas de comportamiento, errores y regresión. Si una función guarda estado o compra, incluir test de la operación real, no solo de que el botón se renderiza.
-7. Reproducir manualmente el flujo correspondiente en navegador antes de decir «corregido». Comparar capturas a 640×360 y 1920×1080. Si se cambia el menú o la tienda, probar clics **en todas** las opciones.
+7. Reproducir manualmente el flujo correspondiente en Godot con render real antes de decir «corregido». Comparar capturas a 640×360 y 1920×1080. Si se cambia el menú o la tienda, probar clics **en todas** las opciones.
 
 **AL CERRAR**
 
-8. Ejecutar comandos de la sección 5 y conservar el resultado completo. Generar los HTML **desde la fuente canónica**, nunca parchear los generados a mano.
+8. Ejecutar comandos de la sección 5 y conservar el resultado completo. Construir las ediciones nativas solo cuando el alcance lo requiera con `scripts/build-native.py` y NSIS. No regenerar el legado HTML por rutina; si se modifica, usar su fuente canónica, nunca parchear los generados.
 9. Entregar referencia de rama/commit, archivos cambiados, capturas, instrucciones de prueba, pendientes, y las diferencias entre lo implementado y lo que aún es placeholder.
 10. Esperar aprobación del usuario antes de empezar la fase siguiente.
 
@@ -117,14 +117,13 @@ ENTREGABLES:
 FUERA DE ALCANCE: fases posteriores, música y sustitución de arte final
 no suministrado. No reinterpretar los valores del spec.
 
-REGLAS: PNG en el manifiesto, Canvas como compositor y no como artista;
+REGLAS: Godot 4.6.3 / Windows nativo; PNG en el manifiesto, Godot como compositor;
 lienzo 640×360, pixel perfect, sin suavizado; datos en JSON;
 Normal y Pruebas independientes, guardados separados, sin internet
 para jugar individualmente.
 
-VERIFICACIÓN: ejecuta node --test,
-python3 scripts/validate-v2-data.py --self-test y
-python3 scripts/build-editions.py. Abre el juego realmente en Chromium;
+VERIFICACIÓN: ejecuta python3 scripts/test-native.py; añade --render si hay
+pantalla/X display. Abre el juego realmente en Godot;
 prueba a 640×360 y 1920×1080, incluye capturas.
 
 RESPUESTA: rama, commit, lista de cambios, pruebas con resultados
@@ -189,10 +188,12 @@ Las cifras exactas y excepciones están en el spec. Esta tabla es una puerta de 
 ### 5.1 Comandos por entrega
 
 ```sh
-node --test
-python3 scripts/validate-v2-data.py --self-test
-python3 scripts/build-editions.py
+python3 scripts/test-native.py
+# Solo con pantalla/X display disponible:
+python3 scripts/test-native.py --render
 ```
+
+Solo si se modifica el legado HTML, ejecutar `node --test`, `python3 scripts/validate-v2-data.py --self-test` y `python3 scripts/build-editions.py`. No son un requisito rutinario de cambios exclusivamente nativos.
 
 Si la fase cambia el inventario heredado, ejecutar además:
 
@@ -200,7 +201,7 @@ Si la fase cambia el inventario heredado, ejecutar además:
 node scripts/inventory-legacy.cjs
 ```
 
-No ejecutar el extractor indiscriminadamente si ello sustituye un inventario modificado sin revisión. Si hay dependencias de pruebas pendientes, preparar el entorno con `python3 -m pip install -r requirements-dev.txt` (el requisito actual del repositorio es `jsonschema`). Las herramientas de desarrollo **no se incluyen en los HTML distribuidos**.
+No ejecutar el extractor indiscriminadamente si ello sustituye un inventario modificado sin revisión. Si hay dependencias de pruebas pendientes, preparar el entorno con `python3 -m pip install -r requirements-dev.txt` (consultar los requisitos reales: `jsonschema` y Pillow). Las herramientas de desarrollo **no se incluyen en los instaladores distribuidos**. Conservar registros completos. El render headless no prueba la presentación; para el hito final verificar Windows real, instalación/desinstalación, mando y guardados, o declarar lo no ejecutado.
 
 ### 5.2 Pruebas manuales innegociables
 
@@ -231,7 +232,7 @@ RAMA / COMMIT: [valor real]
 CAMBIOS: [archivos afectados y propósito]
 ASSETS: [cuántos final / placeholder; IDs relevantes]
 TESTS AUTOMÁTICOS: [comando -> resultado observado]
-PRUEBA MANUAL: [navegador, dimensiones, acciones y resultado]
+PRUEBA MANUAL: [Godot/Windows o Linux, dimensiones, acciones y resultado; conceptos como MOCKUP]
 CAPTURAS: [rutas/enlaces a capturas reales]
 CÓMO PROBAR: [pasos concretos para Normal y Pruebas]
 PENDIENTES / LIMITACIONES: [no ocultar]
