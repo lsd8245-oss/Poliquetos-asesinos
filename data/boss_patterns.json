@@ -1,0 +1,434 @@
+{
+  "version": 1,
+  "defaults": {
+    "intervals": [
+      2.0,
+      2.2,
+      1.8
+    ],
+    "counts": [
+      3,
+      5,
+      12
+    ],
+    "speed_scale": 1.0,
+    "ttl": 8.0,
+    "telegraph": 0.5,
+    "damage": 1.0,
+    "duration": 0.8,
+    "amplitude": 55.0,
+    "frequency": 0.9,
+    "orbit_x": 65.0,
+    "orbit_y": 65.0,
+    "fan_degrees": 60.0,
+    "charge_speed": 440.0,
+    "charge_duration": 0.85,
+    "hazard_width": 30.0,
+    "hazard_height": 100.0,
+    "slow": 0.7,
+    "slow_duration": 1.0,
+    "spawn_count": 2,
+    "angle_step": 0.48,
+    "return_after": 1.2,
+    "weak_offset": 0.35,
+    "body_margin": 0.2,
+    "max_catchup": 8,
+    "center_y": 0.5,
+    "phase_x": 0.78,
+    "burst_count": 3,
+    "burst_gap": 0.12,
+    "bullet_base_speed": 90
+  },
+  "profiles": {
+    "nereis": {
+      "intervals": [
+        2,
+        2.6,
+        2.5
+      ],
+      "counts": [
+        3,
+        5,
+        12
+      ],
+      "amplitude": 105,
+      "frequency": 0.7,
+      "fan_degrees": 46,
+      "split_gap": 52
+    },
+    "capit": {
+      "intervals": [
+        2.5,
+        2.2,
+        3.0
+      ],
+      "counts": [
+        3,
+        7,
+        4
+      ],
+      "hazard_width": 35,
+      "hazard_height": 155,
+      "charge_speed": 360,
+      "amplitude": 12
+    },
+    "polyn": {
+      "intervals": [
+        2.1,
+        2,
+        2.8
+      ],
+      "counts": [
+        4,
+        8,
+        5
+      ],
+      "amplitude": 32,
+      "frequency": 1.1,
+      "armor_closed": 4,
+      "armor_open": 1,
+      "fan_degrees": 85
+    },
+    "tere": {
+      "intervals": [
+        3,
+        2.8,
+        2.2
+      ],
+      "counts": [
+        8,
+        2,
+        5
+      ],
+      "amplitude": 18,
+      "hazard_width": 23,
+      "hazard_height": 112,
+      "grapple_duration": 2.5,
+      "grapple_speed": 24
+    },
+    "hermo": {
+      "intervals": [
+        2.3,
+        2.8,
+        1.5
+      ],
+      "counts": [
+        7,
+        3,
+        8
+      ],
+      "ring_interval": 5,
+      "ring_count": 16,
+      "amplitude": 44,
+      "frequency": 0.65
+    },
+    "leafqueen": {
+      "intervals": [
+        2.6,
+        2,
+        1.8
+      ],
+      "counts": [
+        3,
+        9,
+        7
+      ],
+      "amplitude": 88,
+      "frequency": 1.15,
+      "decoy_duration": 1.4,
+      "homing": 1.7
+    },
+    "orbin": {
+      "intervals": [
+        2.5,
+        2.8,
+        3.3
+      ],
+      "counts": [
+        3,
+        4,
+        5
+      ],
+      "amplitude": 8,
+      "hazard_width": 38,
+      "hazard_height": 105,
+      "gas_delay": 1.2,
+      "gas_duration": 2.5
+    },
+    "pollutionCapit": {
+      "intervals": [
+        3,
+        2.7,
+        2.5
+      ],
+      "counts": [
+        2,
+        3,
+        4
+      ],
+      "spawn_count": 2,
+      "amplitude": 15,
+      "frequency": 0.7,
+      "lane": 0.22,
+      "fury": 1.25,
+      "spawn_enemy": "ophelia"
+    },
+    "pollutionSpio": {
+      "intervals": [
+        2.2,
+        2,
+        1.9
+      ],
+      "counts": [
+        5,
+        7,
+        9
+      ],
+      "amplitude": 22,
+      "frequency": 0.95,
+      "lane": 0.5,
+      "fury": 1.25,
+      "return_after": 1.1
+    },
+    "pollutionCirrat": {
+      "intervals": [
+        2.8,
+        2.5,
+        2.3
+      ],
+      "counts": [
+        3,
+        4,
+        5
+      ],
+      "amplitude": 12,
+      "frequency": 0.8,
+      "lane": 0.78,
+      "fury": 1.25,
+      "hazard_width": 25,
+      "hazard_height": 130
+    },
+    "tomo": {
+      "intervals": [
+        2.4,
+        2.2,
+        3
+      ],
+      "counts": [
+        4,
+        8,
+        9
+      ],
+      "amplitude": 70,
+      "frequency": 0.6,
+      "visibility_period": 2,
+      "blind_duration": 0.3,
+      "homing": 1.25
+    },
+    "eulagisca": {
+      "intervals": [
+        2.4,
+        2.5,
+        3.0
+      ],
+      "counts": [
+        4,
+        10,
+        6
+      ],
+      "telegraph": 0.7,
+      "amplitude": 20,
+      "hazard_height": 155,
+      "charge_speed": 390,
+      "snow_duration": 1
+    },
+    "osedax": {
+      "intervals": [
+        2.8,
+        3,
+        2.3
+      ],
+      "counts": [
+        4,
+        5,
+        4
+      ],
+      "spawn_count": 5,
+      "spawn_enemy": "syll",
+      "amplitude": 6,
+      "hazard_height": 85,
+      "acid_duration": 3.5,
+      "acid_growth": 12
+    },
+    "alvinella": {
+      "intervals": [
+        2.8,
+        2.5,
+        2.6
+      ],
+      "counts": [
+        3,
+        4,
+        7
+      ],
+      "amplitude": 4,
+      "hazard_height": 220,
+      "lava_rise_duration": 10,
+      "lava_max_height": 115,
+      "lava_duration": 2.7
+    },
+    "hadalsovereign": {
+      "intervals": [
+        3,
+        2.3,
+        1.9
+      ],
+      "counts": [
+        3,
+        6,
+        10
+      ],
+      "orbit_x": 90,
+      "orbit_y": 85,
+      "frequency": 0.9,
+      "fury": 1.3,
+      "charge_speed": 420
+    },
+    "riftia": {
+      "intervals": [
+        2.5,
+        3,
+        2.2
+      ],
+      "counts": [
+        7,
+        12,
+        16
+      ],
+      "amplitude": 0,
+      "fan_degrees": 100,
+      "phase_x": 0.89
+    },
+    "robot_pinza": {
+      "intervals": [
+        2.6,
+        2.3,
+        2.8
+      ],
+      "counts": [
+        3,
+        5,
+        7
+      ],
+      "amplitude": 35,
+      "frequency": 0.8,
+      "hazard_height": 45,
+      "hazard_width": 180
+    },
+    "robot_torreta": {
+      "intervals": [
+        2.8,
+        2.5,
+        3.2
+      ],
+      "counts": [
+        5,
+        7,
+        9
+      ],
+      "amplitude": 0,
+      "hazard_height": 18,
+      "hazard_width": 200,
+      "fan_degrees": 110
+    },
+    "robot_taladro": {
+      "intervals": [
+        3,
+        2.7,
+        3.4
+      ],
+      "counts": [
+        2,
+        4,
+        6
+      ],
+      "amplitude": 16,
+      "frequency": 1.7,
+      "charge_speed": 490,
+      "hazard_height": 40
+    },
+    "epitoke": {
+      "intervals": [
+        3.0,
+        1.9,
+        2.1
+      ],
+      "counts": [
+        3,
+        5,
+        24
+      ],
+      "amplitude": 45,
+      "frequency": 0.5,
+      "fast_frequency": 1.7,
+      "orbit_x": 180,
+      "orbit_y": 110,
+      "gamete_speed": 0.7
+    },
+    "scientist": {
+      "intervals": [
+        3,
+        3.3,
+        2.7
+      ],
+      "counts": [
+        2,
+        3,
+        4
+      ],
+      "spawn_count": 2,
+      "spawn_enemy": "mech_syll",
+      "escort_enemy": "glycera",
+      "amplitude": 14,
+      "hazard_height": 28,
+      "hazard_width": 250
+    },
+    "euniceTitan": {
+      "intervals": [
+        2.7,
+        3,
+        2.8,
+        2.2
+      ],
+      "counts": [
+        1,
+        3,
+        2,
+        16
+      ],
+      "amplitude": 8,
+      "jaw_width": 62,
+      "jaw_height": 140,
+      "debris_count": 6,
+      "segment_height": 38,
+      "phase_x": 0.76
+    },
+    "mini": {
+      "intervals": [
+        2.5,
+        2.0
+      ],
+      "counts": [
+        3,
+        5
+      ],
+      "amplitude": 42,
+      "frequency": 0.85,
+      "charge_speed": 320,
+      "emerge_period": 6,
+      "emerge_stay": 3,
+      "entry_height": 65,
+      "move_speed": 28
+    }
+  }
+}

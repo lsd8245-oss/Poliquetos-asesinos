@@ -63,3 +63,7 @@ Misiles automáticos8niveles, bombas8niveles con cooldown y limpieza de proyecti
 ### Fase4
 
 Lector de oleadasJSON, formaciones, movimientosM1–M8 y disparosF0–F5, peligros y checkpoints. Mundo1 verificado con90enemigos, minijefe, alerta a170s y reanudación de oleadas aunque el minijefe siga vivo. Las cantidades son independientes de escoltas/invocaciones.
+
+### Fase5
+
+Jefes por segmentos, puntos débiles, fases que no se saltan, invulnerabilidad3s, telegráficos, entradas/derrotas y encuentros múltiples.22perfiles de jefe y14minijefes con patrones distintos;67combinaciones de fase probadas. Daño/cadencia/HP enJSON; el ajuste del mínimo40% y la medición máxima se completan en fase10.

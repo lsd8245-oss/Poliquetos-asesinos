@@ -109,6 +109,61 @@
             "type": "null"
           }
         ]
+      },
+      "mundo": {
+        "type": "integer",
+        "minimum": 1,
+        "maximum": 14
+      },
+      "arquetipo": {
+        "type": "string",
+        "pattern": "^[a-z][a-zA-Z0-9_]*$"
+      },
+      "tipo": {
+        "enum": [
+          "jefe",
+          "minijefe"
+        ]
+      },
+      "objetivo_seg": {
+        "type": "number",
+        "minimum": 0
+      },
+      "minimo_seg": {
+        "type": "number",
+        "minimum": 0
+      },
+      "movimiento": {
+        "enum": [
+          "M1",
+          "M2",
+          "M3",
+          "M4",
+          "M5",
+          "M6",
+          "M7",
+          "M8"
+        ]
+      },
+      "disparo": {
+        "enum": [
+          "F0",
+          "F1",
+          "F2",
+          "F3",
+          "F4",
+          "F5"
+        ]
+      },
+      "drop_item": {
+        "const": "arma_mas_baja"
+      },
+      "parametros": {
+        "type": "object",
+        "additionalProperties": {
+          "type": "number",
+          "minimum": 0
+        }
       }
     },
     "required": [

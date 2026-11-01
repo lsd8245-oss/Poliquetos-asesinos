@@ -1,0 +1,2680 @@
+[
+  {
+    "id": "boss_w01_nereis",
+    "nombre": "Nereidae",
+    "mundo": 1,
+    "arquetipo": "nereis",
+    "tipo": "jefe",
+    "vida": 1750,
+    "objetivo_seg": 90,
+    "minimo_seg": 36.0,
+    "tamano": [
+      180,
+      120
+    ],
+    "segmentos": [
+      {
+        "id": "cabeza",
+        "hitbox": [
+          0,
+          36.0,
+          45.0,
+          48.0
+        ],
+        "debil": true,
+        "mult_dano": 2
+      },
+      {
+        "id": "cuerpo",
+        "hitbox": [
+          45.0,
+          0,
+          135.0,
+          120
+        ],
+        "debil": false,
+        "mult_dano": 0.5
+      }
+    ],
+    "fases": [
+      {
+        "desde_pct": 100,
+        "hasta_pct": 66,
+        "patrones": [
+          "ondular_vertical",
+          "balas_apuntadas_3"
+        ]
+      },
+      {
+        "desde_pct": 66,
+        "hasta_pct": 33,
+        "patrones": [
+          "faringe_embestida",
+          "abanico_5"
+        ]
+      },
+      {
+        "desde_pct": 33,
+        "hasta_pct": 0,
+        "patrones": [
+          "dividir_en_dos",
+          "anillo_12"
+        ]
+      }
+    ],
+    "recompensa_extra": 0,
+    "objeto_unico": null,
+    "parametros": {
+      "intervalo": 2,
+      "telegraph": 0.5,
+      "velocidad": 80,
+      "entrada_seg": 3,
+      "derrota_seg": 3,
+      "invulnerabilidad_fase_seg": 3,
+      "furia_cadencia": 1.3,
+      "furia_velocidad": 1.3,
+      "polyn_apertura_seg": 4,
+      "tomo_visibilidad_seg": 2,
+      "destello_seg": 0.3,
+      "estalactita_aviso_seg": 0.7,
+      "congelacion_seg": 1,
+      "lava_subida_seg": 10,
+      "hermo_anillo_seg": 5,
+      "mucosidad_lento": 0.3
+    }
+  },
+  {
+    "id": "mini_w01_pision",
+    "nombre": "Pisionidae gigante",
+    "mundo": 1,
+    "arquetipo": "mini_m4",
+    "tipo": "minijefe",
+    "vida": 975,
+    "objetivo_seg": 50,
+    "minimo_seg": 0,
+    "tamano": [
+      128,
+      96
+    ],
+    "segmentos": [
+      {
+        "id": "cabeza",
+        "hitbox": [
+          0,
+          24,
+          32,
+          48
+        ],
+        "debil": true,
+        "mult_dano": 2
+      },
+      {
+        "id": "cuerpo",
+        "hitbox": [
+          32,
+          0,
+          96,
+          96
+        ],
+        "debil": false,
+        "mult_dano": 0.5
+      }
+    ],
+    "fases": [
+      {
+        "desde_pct": 100,
+        "hasta_pct": 50,
+        "patrones": [
+          "m4",
+          "f1"
+        ]
+      },
+      {
+        "desde_pct": 50,
+        "hasta_pct": 0,
+        "patrones": [
+          "m4",
+          "f1",
+          "embestida_telegrafiada"
+        ]
+      }
+    ],
+    "recompensa_extra": 0,
+    "objeto_unico": null,
+    "movimiento": "M4",
+    "disparo": "F1",
+    "drop_item": "arma_mas_baja"
+  },
+  {
+    "id": "boss_w02_capit",
+    "nombre": "Capitelidae",
+    "mundo": 2,
+    "arquetipo": "capit",
+    "tipo": "jefe",
+    "vida": 2100,
+    "objetivo_seg": 90,
+    "minimo_seg": 36.0,
+    "tamano": [
+      200,
+      140
+    ],
+    "segmentos": [
+      {
+        "id": "cabeza",
+        "hitbox": [
+          0,
+          42.0,
+          50.0,
+          56.0
+        ],
+        "debil": true,
+        "mult_dano": 2
+      },
+      {
+        "id": "cuerpo",
+        "hitbox": [
+          50.0,
+          0,
+          150.0,
+          140
+        ],
+        "debil": false,
+        "mult_dano": 0.5
+      }
+    ],
+    "fases": [
+      {
+        "desde_pct": 100,
+        "hasta_pct": 66,
+        "patrones": [
+          "columnas_arena"
+        ]
+      },
+      {
+        "desde_pct": 66,
+        "hasta_pct": 33,
+        "patrones": [
+          "cabeza_ganchos_abanico"
+        ]
+      },
+      {
+        "desde_pct": 33,
+        "hasta_pct": 0,
+        "patrones": [
+          "tormenta_arena",
+          "embestida_diagonal"
+        ]
+      }
+    ],
+    "recompensa_extra": 0,
+    "objeto_unico": null,
+    "parametros": {
+      "intervalo": 2,
+      "telegraph": 0.5,
+      "velocidad": 80,
+      "entrada_seg": 3,
+      "derrota_seg": 3,
+      "invulnerabilidad_fase_seg": 3,
+      "furia_cadencia": 1.3,
+      "furia_velocidad": 1.3,
+      "polyn_apertura_seg": 4,
+      "tomo_visibilidad_seg": 2,
+      "destello_seg": 0.3,
+      "estalactita_aviso_seg": 0.7,
+      "congelacion_seg": 1,
+      "lava_subida_seg": 10,
+      "hermo_anillo_seg": 5,
+      "mucosidad_lento": 0.3
+    }
+  },
+  {
+    "id": "mini_w02_arenicola",
+    "nombre": "Arenicola · Arenicolidae gigante",
+    "mundo": 2,
+    "arquetipo": "mini_m6",
+    "tipo": "minijefe",
+    "vida": 1170,
+    "objetivo_seg": 50,
+    "minimo_seg": 0,
+    "tamano": [
+      128,
+      96
+    ],
+    "segmentos": [
+      {
+        "id": "cabeza",
+        "hitbox": [
+          0,
+          24,
+          32,
+          48
+        ],
+        "debil": true,
+        "mult_dano": 2
+      },
+      {
+        "id": "cuerpo",
+        "hitbox": [
+          32,
+          0,
+          96,
+          96
+        ],
+        "debil": false,
+        "mult_dano": 0.5
+      }
+    ],
+    "fases": [
+      {
+        "desde_pct": 100,
+        "hasta_pct": 50,
+        "patrones": [
+          "m6",
+          "f5"
+        ]
+      },
+      {
+        "desde_pct": 50,
+        "hasta_pct": 0,
+        "patrones": [
+          "m6",
+          "f5",
+          "embestida_telegrafiada"
+        ]
+      }
+    ],
+    "recompensa_extra": 0,
+    "objeto_unico": null,
+    "movimiento": "M6",
+    "disparo": "F5",
+    "drop_item": "arma_mas_baja"
+  },
+  {
+    "id": "boss_w03_polyn",
+    "nombre": "Polinoidae",
+    "mundo": 3,
+    "arquetipo": "polyn",
+    "tipo": "jefe",
+    "vida": 2450,
+    "objetivo_seg": 90,
+    "minimo_seg": 36.0,
+    "tamano": [
+      200,
+      140
+    ],
+    "segmentos": [
+      {
+        "id": "cabeza",
+        "hitbox": [
+          0,
+          42.0,
+          50.0,
+          56.0
+        ],
+        "debil": true,
+        "mult_dano": 2
+      },
+      {
+        "id": "cuerpo",
+        "hitbox": [
+          50.0,
+          0,
+          150.0,
+          140
+        ],
+        "debil": false,
+        "mult_dano": 0.5
+      }
+    ],
+    "fases": [
+      {
+        "desde_pct": 100,
+        "hasta_pct": 66,
+        "patrones": [
+          "escamas_rebote"
+        ]
+      },
+      {
+        "desde_pct": 66,
+        "hasta_pct": 33,
+        "patrones": [
+          "elitros_bloquean"
+        ]
+      },
+      {
+        "desde_pct": 33,
+        "hasta_pct": 0,
+        "patrones": [
+          "carga_blindada",
+          "lluvia_piedras"
+        ]
+      }
+    ],
+    "recompensa_extra": 0,
+    "objeto_unico": "coral",
+    "parametros": {
+      "intervalo": 2,
+      "telegraph": 0.5,
+      "velocidad": 80,
+      "entrada_seg": 3,
+      "derrota_seg": 3,
+      "invulnerabilidad_fase_seg": 3,
+      "furia_cadencia": 1.3,
+      "furia_velocidad": 1.3,
+      "polyn_apertura_seg": 4,
+      "tomo_visibilidad_seg": 2,
+      "destello_seg": 0.3,
+      "estalactita_aviso_seg": 0.7,
+      "congelacion_seg": 1,
+      "lava_subida_seg": 10,
+      "hermo_anillo_seg": 5,
+      "mucosidad_lento": 0.3
+    }
+  },
+  {
+    "id": "mini_w03_oenone",
+    "nombre": "Oenone · Oenonidae gigante",
+    "mundo": 3,
+    "arquetipo": "mini_m3",
+    "tipo": "minijefe",
+    "vida": 1365,
+    "objetivo_seg": 50,
+    "minimo_seg": 0,
+    "tamano": [
+      128,
+      96
+    ],
+    "segmentos": [
+      {
+        "id": "cabeza",
+        "hitbox": [
+          0,
+          24,
+          32,
+          48
+        ],
+        "debil": true,
+        "mult_dano": 2
+      },
+      {
+        "id": "cuerpo",
+        "hitbox": [
+          32,
+          0,
+          96,
+          96
+        ],
+        "debil": false,
+        "mult_dano": 0.5
+      }
+    ],
+    "fases": [
+      {
+        "desde_pct": 100,
+        "hasta_pct": 50,
+        "patrones": [
+          "m3",
+          "f2"
+        ]
+      },
+      {
+        "desde_pct": 50,
+        "hasta_pct": 0,
+        "patrones": [
+          "m3",
+          "f2",
+          "embestida_telegrafiada"
+        ]
+      }
+    ],
+    "recompensa_extra": 0,
+    "objeto_unico": null,
+    "movimiento": "M3",
+    "disparo": "F2",
+    "drop_item": "arma_mas_baja"
+  },
+  {
+    "id": "boss_w04_tere",
+    "nombre": "Terebellidae",
+    "mundo": 4,
+    "arquetipo": "tere",
+    "tipo": "jefe",
+    "vida": 3300,
+    "objetivo_seg": 105,
+    "minimo_seg": 42.0,
+    "tamano": [
+      240,
+      180
+    ],
+    "segmentos": [
+      {
+        "id": "cabeza",
+        "hitbox": [
+          0,
+          54.0,
+          60.0,
+          72.0
+        ],
+        "debil": true,
+        "mult_dano": 2
+      },
+      {
+        "id": "cuerpo",
+        "hitbox": [
+          60.0,
+          0,
+          180.0,
+          180
+        ],
+        "debil": false,
+        "mult_dano": 0.5
+      }
+    ],
+    "fases": [
+      {
+        "desde_pct": 100,
+        "hasta_pct": 66,
+        "patrones": [
+          "tentaculos_barrido_8"
+        ]
+      },
+      {
+        "desde_pct": 66,
+        "hasta_pct": 33,
+        "patrones": [
+          "tentaculos_agarre"
+        ]
+      },
+      {
+        "desde_pct": 33,
+        "hasta_pct": 0,
+        "patrones": [
+          "mucosidad",
+          "rafaga_boca"
+        ]
+      }
+    ],
+    "recompensa_extra": 0,
+    "objeto_unico": null,
+    "parametros": {
+      "intervalo": 2,
+      "telegraph": 0.5,
+      "velocidad": 80,
+      "entrada_seg": 3,
+      "derrota_seg": 3,
+      "invulnerabilidad_fase_seg": 3,
+      "furia_cadencia": 1.3,
+      "furia_velocidad": 1.3,
+      "polyn_apertura_seg": 4,
+      "tomo_visibilidad_seg": 2,
+      "destello_seg": 0.3,
+      "estalactita_aviso_seg": 0.7,
+      "congelacion_seg": 1,
+      "lava_subida_seg": 10,
+      "hermo_anillo_seg": 5,
+      "mucosidad_lento": 0.3
+    }
+  },
+  {
+    "id": "mini_w04_myxicola",
+    "nombre": "Myxicola · Sabellidae gigante",
+    "mundo": 4,
+    "arquetipo": "mini_m5",
+    "tipo": "minijefe",
+    "vida": 1560,
+    "objetivo_seg": 50,
+    "minimo_seg": 0,
+    "tamano": [
+      128,
+      96
+    ],
+    "segmentos": [
+      {
+        "id": "cabeza",
+        "hitbox": [
+          0,
+          24,
+          32,
+          48
+        ],
+        "debil": true,
+        "mult_dano": 2
+      },
+      {
+        "id": "cuerpo",
+        "hitbox": [
+          32,
+          0,
+          96,
+          96
+        ],
+        "debil": false,
+        "mult_dano": 0.5
+      }
+    ],
+    "fases": [
+      {
+        "desde_pct": 100,
+        "hasta_pct": 50,
+        "patrones": [
+          "m5",
+          "f3"
+        ]
+      },
+      {
+        "desde_pct": 50,
+        "hasta_pct": 0,
+        "patrones": [
+          "m5",
+          "f3",
+          "embestida_telegrafiada"
+        ]
+      }
+    ],
+    "recompensa_extra": 0,
+    "objeto_unico": null,
+    "movimiento": "M5",
+    "disparo": "F3",
+    "drop_item": "arma_mas_baja"
+  },
+  {
+    "id": "boss_w05_hermo",
+    "nombre": "Hermodice carunculata",
+    "mundo": 5,
+    "arquetipo": "hermo",
+    "tipo": "jefe",
+    "vida": 3700,
+    "objetivo_seg": 105,
+    "minimo_seg": 42.0,
+    "tamano": [
+      220,
+      140
+    ],
+    "segmentos": [
+      {
+        "id": "cabeza",
+        "hitbox": [
+          0,
+          42.0,
+          55.0,
+          56.0
+        ],
+        "debil": true,
+        "mult_dano": 2
+      },
+      {
+        "id": "cuerpo",
+        "hitbox": [
+          55.0,
+          0,
+          165.0,
+          140
+        ],
+        "debil": false,
+        "mult_dano": 0.5
+      }
+    ],
+    "fases": [
+      {
+        "desde_pct": 100,
+        "hasta_pct": 66,
+        "patrones": [
+          "cerdas_abanico_7"
+        ]
+      },
+      {
+        "desde_pct": 66,
+        "hasta_pct": 33,
+        "patrones": [
+          "enroscar_coral",
+          "embestida"
+        ]
+      },
+      {
+        "desde_pct": 33,
+        "hasta_pct": 0,
+        "patrones": [
+          "lluvia_cerdas",
+          "anillo_expansivo"
+        ]
+      }
+    ],
+    "recompensa_extra": 0,
+    "objeto_unico": null,
+    "parametros": {
+      "intervalo": 2,
+      "telegraph": 0.5,
+      "velocidad": 80,
+      "entrada_seg": 3,
+      "derrota_seg": 3,
+      "invulnerabilidad_fase_seg": 3,
+      "furia_cadencia": 1.3,
+      "furia_velocidad": 1.3,
+      "polyn_apertura_seg": 4,
+      "tomo_visibilidad_seg": 2,
+      "destello_seg": 0.3,
+      "estalactita_aviso_seg": 0.7,
+      "congelacion_seg": 1,
+      "lava_subida_seg": 10,
+      "hermo_anillo_seg": 5,
+      "mucosidad_lento": 0.3
+    }
+  },
+  {
+    "id": "mini_w05_spirobranchus",
+    "nombre": "Spirobranchus giganteus · Serpulidae gigante",
+    "mundo": 5,
+    "arquetipo": "mini_m5",
+    "tipo": "minijefe",
+    "vida": 1755,
+    "objetivo_seg": 50,
+    "minimo_seg": 0,
+    "tamano": [
+      128,
+      96
+    ],
+    "segmentos": [
+      {
+        "id": "cabeza",
+        "hitbox": [
+          0,
+          24,
+          32,
+          48
+        ],
+        "debil": true,
+        "mult_dano": 2
+      },
+      {
+        "id": "cuerpo",
+        "hitbox": [
+          32,
+          0,
+          96,
+          96
+        ],
+        "debil": false,
+        "mult_dano": 0.5
+      }
+    ],
+    "fases": [
+      {
+        "desde_pct": 100,
+        "hasta_pct": 50,
+        "patrones": [
+          "m5",
+          "f3"
+        ]
+      },
+      {
+        "desde_pct": 50,
+        "hasta_pct": 0,
+        "patrones": [
+          "m5",
+          "f3",
+          "embestida_telegrafiada"
+        ]
+      }
+    ],
+    "recompensa_extra": 0,
+    "objeto_unico": null,
+    "movimiento": "M5",
+    "disparo": "F3",
+    "drop_item": "arma_mas_baja"
+  },
+  {
+    "id": "boss_w06_leafqueen",
+    "nombre": "Phyllodocidae",
+    "mundo": 6,
+    "arquetipo": "leafqueen",
+    "tipo": "jefe",
+    "vida": 4100,
+    "objetivo_seg": 105,
+    "minimo_seg": 42.0,
+    "tamano": [
+      220,
+      140
+    ],
+    "segmentos": [
+      {
+        "id": "cabeza",
+        "hitbox": [
+          0,
+          42.0,
+          55.0,
+          56.0
+        ],
+        "debil": true,
+        "mult_dano": 2
+      },
+      {
+        "id": "cuerpo",
+        "hitbox": [
+          55.0,
+          0,
+          165.0,
+          140
+        ],
+        "debil": false,
+        "mult_dano": 0.5
+      }
+    ],
+    "fases": [
+      {
+        "desde_pct": 100,
+        "hasta_pct": 66,
+        "patrones": [
+          "camuflaje_hojas",
+          "falsos_blancos"
+        ]
+      },
+      {
+        "desde_pct": 66,
+        "hasta_pct": 33,
+        "patrones": [
+          "hojas_cortantes"
+        ]
+      },
+      {
+        "desde_pct": 33,
+        "hasta_pct": 0,
+        "patrones": [
+          "hojas_guiadas",
+          "ondulacion_total"
+        ]
+      }
+    ],
+    "recompensa_extra": 0,
+    "objeto_unico": "abisal",
+    "parametros": {
+      "intervalo": 2,
+      "telegraph": 0.5,
+      "velocidad": 80,
+      "entrada_seg": 3,
+      "derrota_seg": 3,
+      "invulnerabilidad_fase_seg": 3,
+      "furia_cadencia": 1.3,
+      "furia_velocidad": 1.3,
+      "polyn_apertura_seg": 4,
+      "tomo_visibilidad_seg": 2,
+      "destello_seg": 0.3,
+      "estalactita_aviso_seg": 0.7,
+      "congelacion_seg": 1,
+      "lava_subida_seg": 10,
+      "hermo_anillo_seg": 5,
+      "mucosidad_lento": 0.3
+    }
+  },
+  {
+    "id": "mini_w06_glycera",
+    "nombre": "Glycera · Glyceridae gigante",
+    "mundo": 6,
+    "arquetipo": "mini_m3",
+    "tipo": "minijefe",
+    "vida": 1950,
+    "objetivo_seg": 50,
+    "minimo_seg": 0,
+    "tamano": [
+      128,
+      96
+    ],
+    "segmentos": [
+      {
+        "id": "cabeza",
+        "hitbox": [
+          0,
+          24,
+          32,
+          48
+        ],
+        "debil": true,
+        "mult_dano": 2
+      },
+      {
+        "id": "cuerpo",
+        "hitbox": [
+          32,
+          0,
+          96,
+          96
+        ],
+        "debil": false,
+        "mult_dano": 0.5
+      }
+    ],
+    "fases": [
+      {
+        "desde_pct": 100,
+        "hasta_pct": 50,
+        "patrones": [
+          "m3",
+          "f2"
+        ]
+      },
+      {
+        "desde_pct": 50,
+        "hasta_pct": 0,
+        "patrones": [
+          "m3",
+          "f2",
+          "embestida_telegrafiada"
+        ]
+      }
+    ],
+    "recompensa_extra": 0,
+    "objeto_unico": null,
+    "movimiento": "M3",
+    "disparo": "F2",
+    "drop_item": "arma_mas_baja"
+  },
+  {
+    "id": "boss_w07_orbin",
+    "nombre": "Orbiniidae",
+    "mundo": 7,
+    "arquetipo": "orbin",
+    "tipo": "jefe",
+    "vida": 5150,
+    "objetivo_seg": 120,
+    "minimo_seg": 48.0,
+    "tamano": [
+      240,
+      160
+    ],
+    "segmentos": [
+      {
+        "id": "cabeza",
+        "hitbox": [
+          0,
+          48.0,
+          60.0,
+          64.0
+        ],
+        "debil": true,
+        "mult_dano": 2
+      },
+      {
+        "id": "cuerpo",
+        "hitbox": [
+          60.0,
+          0,
+          180.0,
+          160
+        ],
+        "debil": false,
+        "mult_dano": 0.5
+      }
+    ],
+    "fases": [
+      {
+        "desde_pct": 100,
+        "hasta_pct": 66,
+        "patrones": [
+          "brotes_fango"
+        ]
+      },
+      {
+        "desde_pct": 66,
+        "hasta_pct": 33,
+        "patrones": [
+          "gas_toxico"
+        ]
+      },
+      {
+        "desde_pct": 33,
+        "hasta_pct": 0,
+        "patrones": [
+          "embestida",
+          "raices_caen"
+        ]
+      }
+    ],
+    "recompensa_extra": 0,
+    "objeto_unico": null,
+    "parametros": {
+      "intervalo": 2,
+      "telegraph": 0.5,
+      "velocidad": 80,
+      "entrada_seg": 3,
+      "derrota_seg": 3,
+      "invulnerabilidad_fase_seg": 3,
+      "furia_cadencia": 1.3,
+      "furia_velocidad": 1.3,
+      "polyn_apertura_seg": 4,
+      "tomo_visibilidad_seg": 2,
+      "destello_seg": 0.3,
+      "estalactita_aviso_seg": 0.7,
+      "congelacion_seg": 1,
+      "lava_subida_seg": 10,
+      "hermo_anillo_seg": 5,
+      "mucosidad_lento": 0.3
+    }
+  },
+  {
+    "id": "mini_w07_terebellides",
+    "nombre": "Terebellides · Trichobranchidae gigante",
+    "mundo": 7,
+    "arquetipo": "mini_m5",
+    "tipo": "minijefe",
+    "vida": 2145,
+    "objetivo_seg": 50,
+    "minimo_seg": 0,
+    "tamano": [
+      128,
+      96
+    ],
+    "segmentos": [
+      {
+        "id": "cabeza",
+        "hitbox": [
+          0,
+          24,
+          32,
+          48
+        ],
+        "debil": true,
+        "mult_dano": 2
+      },
+      {
+        "id": "cuerpo",
+        "hitbox": [
+          32,
+          0,
+          96,
+          96
+        ],
+        "debil": false,
+        "mult_dano": 0.5
+      }
+    ],
+    "fases": [
+      {
+        "desde_pct": 100,
+        "hasta_pct": 50,
+        "patrones": [
+          "m5",
+          "f3"
+        ]
+      },
+      {
+        "desde_pct": 50,
+        "hasta_pct": 0,
+        "patrones": [
+          "m5",
+          "f3",
+          "embestida_telegrafiada"
+        ]
+      }
+    ],
+    "recompensa_extra": 0,
+    "objeto_unico": null,
+    "movimiento": "M5",
+    "disparo": "F3",
+    "drop_item": "arma_mas_baja"
+  },
+  {
+    "id": "boss_w08_pollution_capit",
+    "nombre": "Capitella capitata",
+    "mundo": 8,
+    "arquetipo": "pollutionCapit",
+    "tipo": "jefe",
+    "vida": 2100,
+    "objetivo_seg": 135,
+    "minimo_seg": 54.0,
+    "tamano": [
+      120,
+      80
+    ],
+    "segmentos": [
+      {
+        "id": "cabeza",
+        "hitbox": [
+          0,
+          24.0,
+          30.0,
+          32.0
+        ],
+        "debil": true,
+        "mult_dano": 2
+      },
+      {
+        "id": "cuerpo",
+        "hitbox": [
+          30.0,
+          0,
+          90.0,
+          80
+        ],
+        "debil": false,
+        "mult_dano": 0.5
+      }
+    ],
+    "fases": [
+      {
+        "desde_pct": 100,
+        "hasta_pct": 66,
+        "patrones": [
+          "crias_carril"
+        ]
+      },
+      {
+        "desde_pct": 66,
+        "hasta_pct": 33,
+        "patrones": [
+          "parejas_cruzadas"
+        ]
+      },
+      {
+        "desde_pct": 33,
+        "hasta_pct": 0,
+        "patrones": [
+          "furia_contaminacion",
+          "patrones_tres"
+        ]
+      }
+    ],
+    "recompensa_extra": 0,
+    "objeto_unico": null,
+    "parametros": {
+      "intervalo": 2,
+      "telegraph": 0.5,
+      "velocidad": 80,
+      "entrada_seg": 3,
+      "derrota_seg": 3,
+      "invulnerabilidad_fase_seg": 3,
+      "furia_cadencia": 1.25,
+      "furia_velocidad": 1.3,
+      "polyn_apertura_seg": 4,
+      "tomo_visibilidad_seg": 2,
+      "destello_seg": 0.3,
+      "estalactita_aviso_seg": 0.7,
+      "congelacion_seg": 1,
+      "lava_subida_seg": 10,
+      "hermo_anillo_seg": 5,
+      "mucosidad_lento": 0.3
+    }
+  },
+  {
+    "id": "boss_w08_pollution_spio",
+    "nombre": "Streblospio benedicti",
+    "mundo": 8,
+    "arquetipo": "pollutionSpio",
+    "tipo": "jefe",
+    "vida": 2100,
+    "objetivo_seg": 135,
+    "minimo_seg": 54.0,
+    "tamano": [
+      140,
+      90
+    ],
+    "segmentos": [
+      {
+        "id": "cabeza",
+        "hitbox": [
+          0,
+          27.0,
+          35.0,
+          36.0
+        ],
+        "debil": true,
+        "mult_dano": 2
+      },
+      {
+        "id": "cuerpo",
+        "hitbox": [
+          35.0,
+          0,
+          105.0,
+          90
+        ],
+        "debil": false,
+        "mult_dano": 0.5
+      }
+    ],
+    "fases": [
+      {
+        "desde_pct": 100,
+        "hasta_pct": 66,
+        "patrones": [
+          "palpos_bumeran"
+        ]
+      },
+      {
+        "desde_pct": 66,
+        "hasta_pct": 33,
+        "patrones": [
+          "parejas_cruzadas"
+        ]
+      },
+      {
+        "desde_pct": 33,
+        "hasta_pct": 0,
+        "patrones": [
+          "furia_contaminacion",
+          "patrones_tres"
+        ]
+      }
+    ],
+    "recompensa_extra": 0,
+    "objeto_unico": null,
+    "parametros": {
+      "intervalo": 2,
+      "telegraph": 0.5,
+      "velocidad": 80,
+      "entrada_seg": 3,
+      "derrota_seg": 3,
+      "invulnerabilidad_fase_seg": 3,
+      "furia_cadencia": 1.25,
+      "furia_velocidad": 1.3,
+      "polyn_apertura_seg": 4,
+      "tomo_visibilidad_seg": 2,
+      "destello_seg": 0.3,
+      "estalactita_aviso_seg": 0.7,
+      "congelacion_seg": 1,
+      "lava_subida_seg": 10,
+      "hermo_anillo_seg": 5,
+      "mucosidad_lento": 0.3
+    }
+  },
+  {
+    "id": "boss_w08_pollution_cirrat",
+    "nombre": "Cirriformia tentaculata",
+    "mundo": 8,
+    "arquetipo": "pollutionCirrat",
+    "tipo": "jefe",
+    "vida": 2100,
+    "objetivo_seg": 135,
+    "minimo_seg": 54.0,
+    "tamano": [
+      160,
+      100
+    ],
+    "segmentos": [
+      {
+        "id": "cabeza",
+        "hitbox": [
+          0,
+          30.0,
+          40.0,
+          40.0
+        ],
+        "debil": true,
+        "mult_dano": 2
+      },
+      {
+        "id": "cuerpo",
+        "hitbox": [
+          40.0,
+          0,
+          120.0,
+          100
+        ],
+        "debil": false,
+        "mult_dano": 0.5
+      }
+    ],
+    "fases": [
+      {
+        "desde_pct": 100,
+        "hasta_pct": 66,
+        "patrones": [
+          "cirros_barrido"
+        ]
+      },
+      {
+        "desde_pct": 66,
+        "hasta_pct": 33,
+        "patrones": [
+          "parejas_cruzadas"
+        ]
+      },
+      {
+        "desde_pct": 33,
+        "hasta_pct": 0,
+        "patrones": [
+          "furia_contaminacion",
+          "patrones_tres"
+        ]
+      }
+    ],
+    "recompensa_extra": 0,
+    "objeto_unico": null,
+    "parametros": {
+      "intervalo": 2,
+      "telegraph": 0.5,
+      "velocidad": 80,
+      "entrada_seg": 3,
+      "derrota_seg": 3,
+      "invulnerabilidad_fase_seg": 3,
+      "furia_cadencia": 1.25,
+      "furia_velocidad": 1.3,
+      "polyn_apertura_seg": 4,
+      "tomo_visibilidad_seg": 2,
+      "destello_seg": 0.3,
+      "estalactita_aviso_seg": 0.7,
+      "congelacion_seg": 1,
+      "lava_subida_seg": 10,
+      "hermo_anillo_seg": 5,
+      "mucosidad_lento": 0.3
+    }
+  },
+  {
+    "id": "mini_w08_lumbrineris",
+    "nombre": "Lumbrineris · Lumbrineridae gigante",
+    "mundo": 8,
+    "arquetipo": "mini_m3",
+    "tipo": "minijefe",
+    "vida": 2340,
+    "objetivo_seg": 50,
+    "minimo_seg": 0,
+    "tamano": [
+      128,
+      96
+    ],
+    "segmentos": [
+      {
+        "id": "cabeza",
+        "hitbox": [
+          0,
+          24,
+          32,
+          48
+        ],
+        "debil": true,
+        "mult_dano": 2
+      },
+      {
+        "id": "cuerpo",
+        "hitbox": [
+          32,
+          0,
+          96,
+          96
+        ],
+        "debil": false,
+        "mult_dano": 0.5
+      }
+    ],
+    "fases": [
+      {
+        "desde_pct": 100,
+        "hasta_pct": 50,
+        "patrones": [
+          "m3",
+          "f2"
+        ]
+      },
+      {
+        "desde_pct": 50,
+        "hasta_pct": 0,
+        "patrones": [
+          "m3",
+          "f2",
+          "embestida_telegrafiada"
+        ]
+      }
+    ],
+    "recompensa_extra": 0,
+    "objeto_unico": null,
+    "movimiento": "M3",
+    "disparo": "F2",
+    "drop_item": "arma_mas_baja"
+  },
+  {
+    "id": "boss_w09_tomo",
+    "nombre": "Tomopteridae",
+    "mundo": 9,
+    "arquetipo": "tomo",
+    "tipo": "jefe",
+    "vida": 6100,
+    "objetivo_seg": 120,
+    "minimo_seg": 48.0,
+    "tamano": [
+      260,
+      140
+    ],
+    "segmentos": [
+      {
+        "id": "cabeza",
+        "hitbox": [
+          0,
+          42.0,
+          65.0,
+          56.0
+        ],
+        "debil": true,
+        "mult_dano": 2
+      },
+      {
+        "id": "cuerpo",
+        "hitbox": [
+          65.0,
+          0,
+          195.0,
+          140
+        ],
+        "debil": false,
+        "mult_dano": 0.5
+      }
+    ],
+    "fases": [
+      {
+        "desde_pct": 100,
+        "hasta_pct": 66,
+        "patrones": [
+          "luces_guiadas"
+        ]
+      },
+      {
+        "desde_pct": 66,
+        "hasta_pct": 33,
+        "patrones": [
+          "semitransparencia"
+        ]
+      },
+      {
+        "desde_pct": 33,
+        "hasta_pct": 0,
+        "patrones": [
+          "destello",
+          "rayos_cian"
+        ]
+      }
+    ],
+    "recompensa_extra": 0,
+    "objeto_unico": "bioluminiscente",
+    "parametros": {
+      "intervalo": 2,
+      "telegraph": 0.5,
+      "velocidad": 80,
+      "entrada_seg": 3,
+      "derrota_seg": 3,
+      "invulnerabilidad_fase_seg": 3,
+      "furia_cadencia": 1.3,
+      "furia_velocidad": 1.3,
+      "polyn_apertura_seg": 4,
+      "tomo_visibilidad_seg": 2,
+      "destello_seg": 0.3,
+      "estalactita_aviso_seg": 0.7,
+      "congelacion_seg": 1,
+      "lava_subida_seg": 10,
+      "hermo_anillo_seg": 5,
+      "mucosidad_lento": 0.3
+    }
+  },
+  {
+    "id": "mini_w09_lopado",
+    "nombre": "Lopadorrhynchidae gigante",
+    "mundo": 9,
+    "arquetipo": "mini_m8",
+    "tipo": "minijefe",
+    "vida": 2535,
+    "objetivo_seg": 50,
+    "minimo_seg": 0,
+    "tamano": [
+      128,
+      96
+    ],
+    "segmentos": [
+      {
+        "id": "cabeza",
+        "hitbox": [
+          0,
+          24,
+          32,
+          48
+        ],
+        "debil": true,
+        "mult_dano": 2
+      },
+      {
+        "id": "cuerpo",
+        "hitbox": [
+          32,
+          0,
+          96,
+          96
+        ],
+        "debil": false,
+        "mult_dano": 0.5
+      }
+    ],
+    "fases": [
+      {
+        "desde_pct": 100,
+        "hasta_pct": 50,
+        "patrones": [
+          "m8",
+          "f4"
+        ]
+      },
+      {
+        "desde_pct": 50,
+        "hasta_pct": 0,
+        "patrones": [
+          "m8",
+          "f4",
+          "embestida_telegrafiada"
+        ]
+      }
+    ],
+    "recompensa_extra": 0,
+    "objeto_unico": null,
+    "movimiento": "M8",
+    "disparo": "F4",
+    "drop_item": "arma_mas_baja"
+  },
+  {
+    "id": "boss_w10_eulagisca",
+    "nombre": "Eulagisca gigantea",
+    "mundo": 10,
+    "arquetipo": "eulagisca",
+    "tipo": "jefe",
+    "vida": 6550,
+    "objetivo_seg": 120,
+    "minimo_seg": 48.0,
+    "tamano": [
+      260,
+      160
+    ],
+    "segmentos": [
+      {
+        "id": "cabeza",
+        "hitbox": [
+          0,
+          48.0,
+          65.0,
+          64.0
+        ],
+        "debil": true,
+        "mult_dano": 2
+      },
+      {
+        "id": "cuerpo",
+        "hitbox": [
+          65.0,
+          0,
+          195.0,
+          160
+        ],
+        "debil": false,
+        "mult_dano": 0.5
+      }
+    ],
+    "fases": [
+      {
+        "desde_pct": 100,
+        "hasta_pct": 66,
+        "patrones": [
+          "estalactitas"
+        ]
+      },
+      {
+        "desde_pct": 66,
+        "hasta_pct": 33,
+        "patrones": [
+          "escamas_orbita"
+        ]
+      },
+      {
+        "desde_pct": 33,
+        "hasta_pct": 0,
+        "patrones": [
+          "tormenta_nieve",
+          "embestida_congelante"
+        ]
+      }
+    ],
+    "recompensa_extra": 0,
+    "objeto_unico": null,
+    "parametros": {
+      "intervalo": 2,
+      "telegraph": 0.5,
+      "velocidad": 80,
+      "entrada_seg": 3,
+      "derrota_seg": 3,
+      "invulnerabilidad_fase_seg": 3,
+      "furia_cadencia": 1.3,
+      "furia_velocidad": 1.3,
+      "polyn_apertura_seg": 4,
+      "tomo_visibilidad_seg": 2,
+      "destello_seg": 0.3,
+      "estalactita_aviso_seg": 0.7,
+      "congelacion_seg": 1,
+      "lava_subida_seg": 10,
+      "hermo_anillo_seg": 5,
+      "mucosidad_lento": 0.3
+    }
+  },
+  {
+    "id": "mini_w10_flabegraviera",
+    "nombre": "Flabegraviera · Flabelligeridae gigante",
+    "mundo": 10,
+    "arquetipo": "mini_m4",
+    "tipo": "minijefe",
+    "vida": 2730,
+    "objetivo_seg": 50,
+    "minimo_seg": 0,
+    "tamano": [
+      128,
+      96
+    ],
+    "segmentos": [
+      {
+        "id": "cabeza",
+        "hitbox": [
+          0,
+          24,
+          32,
+          48
+        ],
+        "debil": true,
+        "mult_dano": 2
+      },
+      {
+        "id": "cuerpo",
+        "hitbox": [
+          32,
+          0,
+          96,
+          96
+        ],
+        "debil": false,
+        "mult_dano": 0.5
+      }
+    ],
+    "fases": [
+      {
+        "desde_pct": 100,
+        "hasta_pct": 50,
+        "patrones": [
+          "m4",
+          "f1"
+        ]
+      },
+      {
+        "desde_pct": 50,
+        "hasta_pct": 0,
+        "patrones": [
+          "m4",
+          "f1",
+          "embestida_telegrafiada"
+        ]
+      }
+    ],
+    "recompensa_extra": 0,
+    "objeto_unico": null,
+    "movimiento": "M4",
+    "disparo": "F1",
+    "drop_item": "arma_mas_baja"
+  },
+  {
+    "id": "boss_w11_osedax",
+    "nombre": "Osedax",
+    "mundo": 11,
+    "arquetipo": "osedax",
+    "tipo": "jefe",
+    "vida": 7000,
+    "objetivo_seg": 120,
+    "minimo_seg": 48.0,
+    "tamano": [
+      300,
+      200
+    ],
+    "segmentos": [
+      {
+        "id": "cabeza",
+        "hitbox": [
+          0,
+          60.0,
+          75.0,
+          80.0
+        ],
+        "debil": true,
+        "mult_dano": 2
+      },
+      {
+        "id": "cuerpo",
+        "hitbox": [
+          75.0,
+          0,
+          225.0,
+          200
+        ],
+        "debil": false,
+        "mult_dano": 0.5
+      }
+    ],
+    "fases": [
+      {
+        "desde_pct": 100,
+        "hasta_pct": 66,
+        "patrones": [
+          "raices_hueso"
+        ]
+      },
+      {
+        "desde_pct": 66,
+        "hasta_pct": 33,
+        "patrones": [
+          "machos_enjambre"
+        ]
+      },
+      {
+        "desde_pct": 33,
+        "hasta_pct": 0,
+        "patrones": [
+          "acido_expansivo"
+        ]
+      }
+    ],
+    "recompensa_extra": 0,
+    "objeto_unico": null,
+    "parametros": {
+      "intervalo": 2,
+      "telegraph": 0.5,
+      "velocidad": 80,
+      "entrada_seg": 3,
+      "derrota_seg": 3,
+      "invulnerabilidad_fase_seg": 3,
+      "furia_cadencia": 1.3,
+      "furia_velocidad": 1.3,
+      "polyn_apertura_seg": 4,
+      "tomo_visibilidad_seg": 2,
+      "destello_seg": 0.3,
+      "estalactita_aviso_seg": 0.7,
+      "congelacion_seg": 1,
+      "lava_subida_seg": 10,
+      "hermo_anillo_seg": 5,
+      "mucosidad_lento": 0.3
+    }
+  },
+  {
+    "id": "mini_w11_chryso",
+    "nombre": "Chrysopetalidae gigante",
+    "mundo": 11,
+    "arquetipo": "mini_m7",
+    "tipo": "minijefe",
+    "vida": 2925,
+    "objetivo_seg": 50,
+    "minimo_seg": 0,
+    "tamano": [
+      128,
+      96
+    ],
+    "segmentos": [
+      {
+        "id": "cabeza",
+        "hitbox": [
+          0,
+          24,
+          32,
+          48
+        ],
+        "debil": true,
+        "mult_dano": 2
+      },
+      {
+        "id": "cuerpo",
+        "hitbox": [
+          32,
+          0,
+          96,
+          96
+        ],
+        "debil": false,
+        "mult_dano": 0.5
+      }
+    ],
+    "fases": [
+      {
+        "desde_pct": 100,
+        "hasta_pct": 50,
+        "patrones": [
+          "m7",
+          "f2"
+        ]
+      },
+      {
+        "desde_pct": 50,
+        "hasta_pct": 0,
+        "patrones": [
+          "m7",
+          "f2",
+          "embestida_telegrafiada"
+        ]
+      }
+    ],
+    "recompensa_extra": 0,
+    "objeto_unico": null,
+    "movimiento": "M7",
+    "disparo": "F2",
+    "drop_item": "arma_mas_baja"
+  },
+  {
+    "id": "boss_w12_alvinella",
+    "nombre": "Alvinella pompejana",
+    "mundo": 12,
+    "arquetipo": "alvinella",
+    "tipo": "jefe",
+    "vida": 7500,
+    "objetivo_seg": 120,
+    "minimo_seg": 48.0,
+    "tamano": [
+      300,
+      200
+    ],
+    "segmentos": [
+      {
+        "id": "cabeza",
+        "hitbox": [
+          0,
+          60.0,
+          75.0,
+          80.0
+        ],
+        "debil": true,
+        "mult_dano": 2
+      },
+      {
+        "id": "cuerpo",
+        "hitbox": [
+          75.0,
+          0,
+          225.0,
+          200
+        ],
+        "debil": false,
+        "mult_dano": 0.5
+      }
+    ],
+    "fases": [
+      {
+        "desde_pct": 100,
+        "hasta_pct": 66,
+        "patrones": [
+          "geiseres_fuego"
+        ]
+      },
+      {
+        "desde_pct": 66,
+        "hasta_pct": 33,
+        "patrones": [
+          "lava_ascendente"
+        ]
+      },
+      {
+        "desde_pct": 33,
+        "hasta_pct": 0,
+        "patrones": [
+          "columnas_magma",
+          "abanico_brasas"
+        ]
+      }
+    ],
+    "recompensa_extra": 0,
+    "objeto_unico": "magma",
+    "parametros": {
+      "intervalo": 2,
+      "telegraph": 0.5,
+      "velocidad": 80,
+      "entrada_seg": 3,
+      "derrota_seg": 3,
+      "invulnerabilidad_fase_seg": 3,
+      "furia_cadencia": 1.3,
+      "furia_velocidad": 1.3,
+      "polyn_apertura_seg": 4,
+      "tomo_visibilidad_seg": 2,
+      "destello_seg": 0.3,
+      "estalactita_aviso_seg": 0.7,
+      "congelacion_seg": 1,
+      "lava_subida_seg": 10,
+      "hermo_anillo_seg": 5,
+      "mucosidad_lento": 0.3
+    }
+  },
+  {
+    "id": "mini_w12_paralvinella",
+    "nombre": "Paralvinella · Alvinellidae gigante",
+    "mundo": 12,
+    "arquetipo": "mini_m5",
+    "tipo": "minijefe",
+    "vida": 3120,
+    "objetivo_seg": 50,
+    "minimo_seg": 0,
+    "tamano": [
+      128,
+      96
+    ],
+    "segmentos": [
+      {
+        "id": "cabeza",
+        "hitbox": [
+          0,
+          24,
+          32,
+          48
+        ],
+        "debil": true,
+        "mult_dano": 2
+      },
+      {
+        "id": "cuerpo",
+        "hitbox": [
+          32,
+          0,
+          96,
+          96
+        ],
+        "debil": false,
+        "mult_dano": 0.5
+      }
+    ],
+    "fases": [
+      {
+        "desde_pct": 100,
+        "hasta_pct": 50,
+        "patrones": [
+          "m5",
+          "f3"
+        ]
+      },
+      {
+        "desde_pct": 50,
+        "hasta_pct": 0,
+        "patrones": [
+          "m5",
+          "f3",
+          "embestida_telegrafiada"
+        ]
+      }
+    ],
+    "recompensa_extra": 0,
+    "objeto_unico": null,
+    "movimiento": "M5",
+    "disparo": "F3",
+    "drop_item": "arma_mas_baja"
+  },
+  {
+    "id": "boss_w13_hadalsovereign",
+    "nombre": "Macellicephaloides grandicirra",
+    "mundo": 13,
+    "arquetipo": "hadalsovereign",
+    "tipo": "jefe",
+    "vida": 5950,
+    "objetivo_seg": 150,
+    "minimo_seg": 60.0,
+    "tamano": [
+      200,
+      120
+    ],
+    "segmentos": [
+      {
+        "id": "cabeza",
+        "hitbox": [
+          0,
+          36.0,
+          50.0,
+          48.0
+        ],
+        "debil": true,
+        "mult_dano": 2
+      },
+      {
+        "id": "cuerpo",
+        "hitbox": [
+          50.0,
+          0,
+          150.0,
+          120
+        ],
+        "debil": false,
+        "mult_dano": 0.5
+      }
+    ],
+    "fases": [
+      {
+        "desde_pct": 100,
+        "hasta_pct": 66,
+        "patrones": [
+          "orbita_embestida"
+        ]
+      },
+      {
+        "desde_pct": 66,
+        "hasta_pct": 33,
+        "patrones": [
+          "escamas"
+        ]
+      },
+      {
+        "desde_pct": 33,
+        "hasta_pct": 0,
+        "patrones": [
+          "furia_hadal"
+        ]
+      }
+    ],
+    "recompensa_extra": 0,
+    "objeto_unico": null,
+    "parametros": {
+      "intervalo": 2,
+      "telegraph": 0.5,
+      "velocidad": 80,
+      "entrada_seg": 3,
+      "derrota_seg": 3,
+      "invulnerabilidad_fase_seg": 3,
+      "furia_cadencia": 1.3,
+      "furia_velocidad": 1.3,
+      "polyn_apertura_seg": 4,
+      "tomo_visibilidad_seg": 2,
+      "destello_seg": 0.3,
+      "estalactita_aviso_seg": 0.7,
+      "congelacion_seg": 1,
+      "lava_subida_seg": 10,
+      "hermo_anillo_seg": 5,
+      "mucosidad_lento": 0.3
+    }
+  },
+  {
+    "id": "boss_w13_riftia",
+    "nombre": "Riftia pachyptila",
+    "mundo": 13,
+    "arquetipo": "riftia",
+    "tipo": "jefe",
+    "vida": 4000,
+    "objetivo_seg": 150,
+    "minimo_seg": 60.0,
+    "tamano": [
+      160,
+      300
+    ],
+    "segmentos": [
+      {
+        "id": "cabeza",
+        "hitbox": [
+          0,
+          90.0,
+          40.0,
+          120.0
+        ],
+        "debil": true,
+        "mult_dano": 2
+      },
+      {
+        "id": "cuerpo",
+        "hitbox": [
+          40.0,
+          0,
+          120.0,
+          300
+        ],
+        "debil": false,
+        "mult_dano": 0.5
+      }
+    ],
+    "fases": [
+      {
+        "desde_pct": 100,
+        "hasta_pct": 66,
+        "patrones": [
+          "penacho_abanico"
+        ]
+      },
+      {
+        "desde_pct": 66,
+        "hasta_pct": 33,
+        "patrones": [
+          "anillos"
+        ]
+      },
+      {
+        "desde_pct": 33,
+        "hasta_pct": 0,
+        "patrones": [
+          "penacho_furia"
+        ]
+      }
+    ],
+    "recompensa_extra": 0,
+    "objeto_unico": null,
+    "parametros": {
+      "intervalo": 2,
+      "telegraph": 0.5,
+      "velocidad": 80,
+      "entrada_seg": 3,
+      "derrota_seg": 3,
+      "invulnerabilidad_fase_seg": 3,
+      "furia_cadencia": 1.3,
+      "furia_velocidad": 1.3,
+      "polyn_apertura_seg": 4,
+      "tomo_visibilidad_seg": 2,
+      "destello_seg": 0.3,
+      "estalactita_aviso_seg": 0.7,
+      "congelacion_seg": 1,
+      "lava_subida_seg": 10,
+      "hermo_anillo_seg": 5,
+      "mucosidad_lento": 0.3
+    }
+  },
+  {
+    "id": "mini_w13_aphro",
+    "nombre": "Aphroditidae gigante",
+    "mundo": 13,
+    "arquetipo": "mini_m7",
+    "tipo": "minijefe",
+    "vida": 3315,
+    "objetivo_seg": 50,
+    "minimo_seg": 0,
+    "tamano": [
+      128,
+      96
+    ],
+    "segmentos": [
+      {
+        "id": "cabeza",
+        "hitbox": [
+          0,
+          24,
+          32,
+          48
+        ],
+        "debil": true,
+        "mult_dano": 2
+      },
+      {
+        "id": "cuerpo",
+        "hitbox": [
+          32,
+          0,
+          96,
+          96
+        ],
+        "debil": false,
+        "mult_dano": 0.5
+      }
+    ],
+    "fases": [
+      {
+        "desde_pct": 100,
+        "hasta_pct": 50,
+        "patrones": [
+          "m7",
+          "f2"
+        ]
+      },
+      {
+        "desde_pct": 50,
+        "hasta_pct": 0,
+        "patrones": [
+          "m7",
+          "f2",
+          "embestida_telegrafiada"
+        ]
+      }
+    ],
+    "recompensa_extra": 0,
+    "objeto_unico": null,
+    "movimiento": "M7",
+    "disparo": "F2",
+    "drop_item": "arma_mas_baja"
+  },
+  {
+    "id": "boss_w14_robot_pinza",
+    "nombre": "Robot Pinza",
+    "mundo": 14,
+    "arquetipo": "robot_pinza",
+    "tipo": "jefe",
+    "vida": 2100,
+    "objetivo_seg": 90,
+    "minimo_seg": 36.0,
+    "tamano": [
+      140,
+      140
+    ],
+    "segmentos": [
+      {
+        "id": "cabeza",
+        "hitbox": [
+          0,
+          42.0,
+          35.0,
+          56.0
+        ],
+        "debil": true,
+        "mult_dano": 2
+      },
+      {
+        "id": "cuerpo",
+        "hitbox": [
+          35.0,
+          0,
+          105.0,
+          140
+        ],
+        "debil": false,
+        "mult_dano": 0.5
+      }
+    ],
+    "fases": [
+      {
+        "desde_pct": 100,
+        "hasta_pct": 66,
+        "patrones": [
+          "pinza_individual"
+        ]
+      },
+      {
+        "desde_pct": 66,
+        "hasta_pct": 33,
+        "patrones": [
+          "robots_parejas"
+        ]
+      },
+      {
+        "desde_pct": 33,
+        "hasta_pct": 0,
+        "patrones": [
+          "fusion_robot"
+        ]
+      }
+    ],
+    "recompensa_extra": 0,
+    "objeto_unico": null,
+    "parametros": {
+      "intervalo": 2,
+      "telegraph": 0.5,
+      "velocidad": 80,
+      "entrada_seg": 3,
+      "derrota_seg": 3,
+      "invulnerabilidad_fase_seg": 3,
+      "furia_cadencia": 1.3,
+      "furia_velocidad": 1.3,
+      "polyn_apertura_seg": 4,
+      "tomo_visibilidad_seg": 2,
+      "destello_seg": 0.3,
+      "estalactita_aviso_seg": 0.7,
+      "congelacion_seg": 1,
+      "lava_subida_seg": 10,
+      "hermo_anillo_seg": 5,
+      "mucosidad_lento": 0.3
+    }
+  },
+  {
+    "id": "boss_w14_robot_torreta",
+    "nombre": "Robot Torreta",
+    "mundo": 14,
+    "arquetipo": "robot_torreta",
+    "tipo": "jefe",
+    "vida": 2100,
+    "objetivo_seg": 90,
+    "minimo_seg": 36.0,
+    "tamano": [
+      140,
+      140
+    ],
+    "segmentos": [
+      {
+        "id": "cabeza",
+        "hitbox": [
+          0,
+          42.0,
+          35.0,
+          56.0
+        ],
+        "debil": true,
+        "mult_dano": 2
+      },
+      {
+        "id": "cuerpo",
+        "hitbox": [
+          35.0,
+          0,
+          105.0,
+          140
+        ],
+        "debil": false,
+        "mult_dano": 0.5
+      }
+    ],
+    "fases": [
+      {
+        "desde_pct": 100,
+        "hasta_pct": 66,
+        "patrones": [
+          "torreta_individual"
+        ]
+      },
+      {
+        "desde_pct": 66,
+        "hasta_pct": 33,
+        "patrones": [
+          "robots_parejas"
+        ]
+      },
+      {
+        "desde_pct": 33,
+        "hasta_pct": 0,
+        "patrones": [
+          "fusion_robot"
+        ]
+      }
+    ],
+    "recompensa_extra": 0,
+    "objeto_unico": null,
+    "parametros": {
+      "intervalo": 2,
+      "telegraph": 0.5,
+      "velocidad": 80,
+      "entrada_seg": 3,
+      "derrota_seg": 3,
+      "invulnerabilidad_fase_seg": 3,
+      "furia_cadencia": 1.3,
+      "furia_velocidad": 1.3,
+      "polyn_apertura_seg": 4,
+      "tomo_visibilidad_seg": 2,
+      "destello_seg": 0.3,
+      "estalactita_aviso_seg": 0.7,
+      "congelacion_seg": 1,
+      "lava_subida_seg": 10,
+      "hermo_anillo_seg": 5,
+      "mucosidad_lento": 0.3
+    }
+  },
+  {
+    "id": "boss_w14_robot_taladro",
+    "nombre": "Robot Taladro",
+    "mundo": 14,
+    "arquetipo": "robot_taladro",
+    "tipo": "jefe",
+    "vida": 2100,
+    "objetivo_seg": 90,
+    "minimo_seg": 36.0,
+    "tamano": [
+      140,
+      140
+    ],
+    "segmentos": [
+      {
+        "id": "cabeza",
+        "hitbox": [
+          0,
+          42.0,
+          35.0,
+          56.0
+        ],
+        "debil": true,
+        "mult_dano": 2
+      },
+      {
+        "id": "cuerpo",
+        "hitbox": [
+          35.0,
+          0,
+          105.0,
+          140
+        ],
+        "debil": false,
+        "mult_dano": 0.5
+      }
+    ],
+    "fases": [
+      {
+        "desde_pct": 100,
+        "hasta_pct": 66,
+        "patrones": [
+          "taladro_individual"
+        ]
+      },
+      {
+        "desde_pct": 66,
+        "hasta_pct": 33,
+        "patrones": [
+          "robots_parejas"
+        ]
+      },
+      {
+        "desde_pct": 33,
+        "hasta_pct": 0,
+        "patrones": [
+          "fusion_robot"
+        ]
+      }
+    ],
+    "recompensa_extra": 0,
+    "objeto_unico": null,
+    "parametros": {
+      "intervalo": 2,
+      "telegraph": 0.5,
+      "velocidad": 80,
+      "entrada_seg": 3,
+      "derrota_seg": 3,
+      "invulnerabilidad_fase_seg": 3,
+      "furia_cadencia": 1.3,
+      "furia_velocidad": 1.3,
+      "polyn_apertura_seg": 4,
+      "tomo_visibilidad_seg": 2,
+      "destello_seg": 0.3,
+      "estalactita_aviso_seg": 0.7,
+      "congelacion_seg": 1,
+      "lava_subida_seg": 10,
+      "hermo_anillo_seg": 5,
+      "mucosidad_lento": 0.3
+    }
+  },
+  {
+    "id": "boss_w14_epitoke",
+    "nombre": "Epitoca",
+    "mundo": 14,
+    "arquetipo": "epitoke",
+    "tipo": "jefe",
+    "vida": 8400,
+    "objetivo_seg": 120,
+    "minimo_seg": 48.0,
+    "tamano": [
+      220,
+      140
+    ],
+    "segmentos": [
+      {
+        "id": "cabeza",
+        "hitbox": [
+          0,
+          42.0,
+          55.0,
+          56.0
+        ],
+        "debil": true,
+        "mult_dano": 2
+      },
+      {
+        "id": "cuerpo",
+        "hitbox": [
+          55.0,
+          0,
+          165.0,
+          140
+        ],
+        "debil": false,
+        "mult_dano": 0.5
+      }
+    ],
+    "fases": [
+      {
+        "desde_pct": 100,
+        "hasta_pct": 66,
+        "patrones": [
+          "gusano_ondas"
+        ]
+      },
+      {
+        "desde_pct": 66,
+        "hasta_pct": 33,
+        "patrones": [
+          "transformacion_epitoca"
+        ]
+      },
+      {
+        "desde_pct": 33,
+        "hasta_pct": 0,
+        "patrones": [
+          "nubes_gametos",
+          "orbita"
+        ]
+      }
+    ],
+    "recompensa_extra": 0,
+    "objeto_unico": null,
+    "parametros": {
+      "intervalo": 2,
+      "telegraph": 0.5,
+      "velocidad": 80,
+      "entrada_seg": 3,
+      "derrota_seg": 3,
+      "invulnerabilidad_fase_seg": 3,
+      "furia_cadencia": 1.3,
+      "furia_velocidad": 1.3,
+      "polyn_apertura_seg": 4,
+      "tomo_visibilidad_seg": 2,
+      "destello_seg": 0.3,
+      "estalactita_aviso_seg": 0.7,
+      "congelacion_seg": 1,
+      "lava_subida_seg": 10,
+      "hermo_anillo_seg": 5,
+      "mucosidad_lento": 0.3
+    }
+  },
+  {
+    "id": "boss_w14_scientist",
+    "nombre": "Científico",
+    "mundo": 14,
+    "arquetipo": "scientist",
+    "tipo": "jefe",
+    "vida": 8400,
+    "objetivo_seg": 120,
+    "minimo_seg": 48.0,
+    "tamano": [
+      200,
+      200
+    ],
+    "segmentos": [
+      {
+        "id": "cabeza",
+        "hitbox": [
+          0,
+          60.0,
+          50.0,
+          80.0
+        ],
+        "debil": true,
+        "mult_dano": 2
+      },
+      {
+        "id": "cuerpo",
+        "hitbox": [
+          50.0,
+          0,
+          150.0,
+          200
+        ],
+        "debil": false,
+        "mult_dano": 0.5
+      }
+    ],
+    "fases": [
+      {
+        "desde_pct": 100,
+        "hasta_pct": 66,
+        "patrones": [
+          "drones",
+          "laseres_sala"
+        ]
+      },
+      {
+        "desde_pct": 66,
+        "hasta_pct": 33,
+        "patrones": [
+          "criaturas_tanques"
+        ]
+      },
+      {
+        "desde_pct": 33,
+        "hasta_pct": 0,
+        "patrones": [
+          "mecha_brazos"
+        ]
+      }
+    ],
+    "recompensa_extra": 0,
+    "objeto_unico": null,
+    "parametros": {
+      "intervalo": 2,
+      "telegraph": 0.5,
+      "velocidad": 80,
+      "entrada_seg": 3,
+      "derrota_seg": 3,
+      "invulnerabilidad_fase_seg": 3,
+      "furia_cadencia": 1.3,
+      "furia_velocidad": 1.3,
+      "polyn_apertura_seg": 4,
+      "tomo_visibilidad_seg": 2,
+      "destello_seg": 0.3,
+      "estalactita_aviso_seg": 0.7,
+      "congelacion_seg": 1,
+      "lava_subida_seg": 10,
+      "hermo_anillo_seg": 5,
+      "mucosidad_lento": 0.3
+    }
+  },
+  {
+    "id": "boss_w14_eunice_titan",
+    "nombre": "Eunice aphroditois",
+    "mundo": 14,
+    "arquetipo": "euniceTitan",
+    "tipo": "jefe",
+    "vida": 12650,
+    "objetivo_seg": 180,
+    "minimo_seg": 72.0,
+    "tamano": [
+      320,
+      300
+    ],
+    "segmentos": [
+      {
+        "id": "cabeza",
+        "hitbox": [
+          0,
+          90.0,
+          80.0,
+          120.0
+        ],
+        "debil": true,
+        "mult_dano": 2
+      },
+      {
+        "id": "cuerpo",
+        "hitbox": [
+          80.0,
+          0,
+          240.0,
+          300
+        ],
+        "debil": false,
+        "mult_dano": 0.5
+      }
+    ],
+    "fases": [
+      {
+        "desde_pct": 100,
+        "hasta_pct": 66,
+        "patrones": [
+          "antenas",
+          "mandibulas_suelo"
+        ]
+      },
+      {
+        "desde_pct": 66,
+        "hasta_pct": 33,
+        "patrones": [
+          "segmentos_horizontales"
+        ]
+      },
+      {
+        "desde_pct": 33,
+        "hasta_pct": 15,
+        "patrones": [
+          "mandibulas_dobles",
+          "escombros"
+        ]
+      },
+      {
+        "desde_pct": 15,
+        "hasta_pct": 0,
+        "patrones": [
+          "furia_anillos_mandibulas"
+        ]
+      }
+    ],
+    "recompensa_extra": 0,
+    "objeto_unico": null,
+    "parametros": {
+      "intervalo": 2,
+      "telegraph": 0.5,
+      "velocidad": 80,
+      "entrada_seg": 3,
+      "derrota_seg": 3,
+      "invulnerabilidad_fase_seg": 3,
+      "furia_cadencia": 1.3,
+      "furia_velocidad": 1.3,
+      "polyn_apertura_seg": 4,
+      "tomo_visibilidad_seg": 2,
+      "destello_seg": 0.3,
+      "estalactita_aviso_seg": 0.7,
+      "congelacion_seg": 1,
+      "lava_subida_seg": 10,
+      "hermo_anillo_seg": 5,
+      "mucosidad_lento": 0.3
+    }
+  },
+  {
+    "id": "mini_w14_mech_nereis",
+    "nombre": "Nereis Mk1 gigante",
+    "mundo": 14,
+    "arquetipo": "mini_robot",
+    "tipo": "minijefe",
+    "vida": 3510,
+    "objetivo_seg": 50,
+    "minimo_seg": 0,
+    "tamano": [
+      128,
+      96
+    ],
+    "segmentos": [
+      {
+        "id": "cabeza",
+        "hitbox": [
+          0,
+          24,
+          32,
+          48
+        ],
+        "debil": true,
+        "mult_dano": 2
+      },
+      {
+        "id": "cuerpo",
+        "hitbox": [
+          32,
+          0,
+          96,
+          96
+        ],
+        "debil": false,
+        "mult_dano": 0.5
+      }
+    ],
+    "fases": [
+      {
+        "desde_pct": 100,
+        "hasta_pct": 50,
+        "patrones": [
+          "m3",
+          "f2"
+        ]
+      },
+      {
+        "desde_pct": 50,
+        "hasta_pct": 0,
+        "patrones": [
+          "m3",
+          "f2",
+          "embestida_telegrafiada"
+        ]
+      }
+    ],
+    "recompensa_extra": 0,
+    "objeto_unico": null,
+    "movimiento": "M3",
+    "disparo": "F2",
+    "drop_item": "arma_mas_baja"
+  }
+]
