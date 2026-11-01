@@ -55,3 +55,7 @@ Proyecto Godot, resolución640×360 con escalado entero y nearest; generador de 
 ### Fase2
 
 Simulación nativa separada del renderizado: movimiento8direcciones160px/s, hitbox10×6, disparo principal8niveles, escudo, colisiones, pool200proyectiles, pausa y reaparición. Valores compartidos encombat.json y lectorJSON permite sustituir datos juntoalEXE. Prueba headless core aprobada; las mediciones de rendimiento visibles pertenecen a fase10.
+
+### Fase3
+
+Misiles automáticos8niveles, bombas8niveles con cooldown y limpieza de proyectiles, burbujas de arma/escudo, conversión de nivel máximo, equipo pasivo y reintento con armas de entrada. Prueba headless verifica las16tablas deDPS, bombas, duplicación de burbujas y restauración de armas.
