@@ -43,3 +43,11 @@ La regeneración del inventario no debe modificar los HTML. Los contratos compru
 - Documento recibido comparado byte a byte; HTML canónico y ambas ediciones sin diferencias respecto a la base.
 - Revisión independiente: ningún hallazgo crítico o importante. Aspectos de fases posteriores (juego lateral, balance, carga PNG, rendimiento, guardado y música) todavía no se pueden verificar y no se declaran implementados.
 - Mejora menor pendiente: el validador independiente del inventario no comprueba todas las referencias en ambos sentidos ni todos los duplicados de participantes. La comparación completa contra el extractor y las pruebas de listas de especies/jefes sí detectan alteraciones del inventario guardado. Ampliar esas comprobaciones independientes cuando se amplíe el catálogo.
+
+## Implementación nativa — 1 de noviembre
+
+El usuario pide rehacer todas las fases como juego nativo de Windows, sin navegador. Esto sustituye la plataforma HTML del plan anterior. Godot 4.6.3 conserva el renderizado 2D con PNG y permite JSON real en el directorio de datos del usuario. Se mantienen Normal/Pruebas, todas las propuestas de sección14 aceptadas y canciones excluidas.
+
+### Fase1
+
+Proyecto Godot, resolución640×360 con escalado entero y nearest; generador de PNG provisionales, atlas w01–w15, manifiesto y bitmap con caracteres españoles. Renderizador carga PNG individuales reemplazables, atlas como respaldo. F3 muestra la hitbox de10×6. Arte final pendiente según documento. Verificado con cuatro pruebas Python y prueba Godot de assets.

@@ -1,0 +1,403 @@
+{
+  "imagen": "w07.png",
+  "tamano": [
+    2048,
+    1024
+  ],
+  "frames": {
+    "w07_bg_layer1_idle_01": {
+      "x": 0,
+      "y": 0,
+      "w": 640,
+      "h": 336
+    },
+    "w07_bg_layer2_idle_01": {
+      "x": 640,
+      "y": 0,
+      "w": 640,
+      "h": 336
+    },
+    "w07_bg_layer3_idle_01": {
+      "x": 1280,
+      "y": 0,
+      "w": 640,
+      "h": 336
+    },
+    "w07_bg_layer4_idle_01": {
+      "x": 0,
+      "y": 336,
+      "w": 640,
+      "h": 336
+    },
+    "w07_boss_boss_w07_orbin_move_01": {
+      "x": 640,
+      "y": 336,
+      "w": 240,
+      "h": 160
+    },
+    "w07_boss_boss_w07_orbin_move_02": {
+      "x": 880,
+      "y": 336,
+      "w": 240,
+      "h": 160
+    },
+    "w07_boss_boss_w07_orbin_move_03": {
+      "x": 1120,
+      "y": 336,
+      "w": 240,
+      "h": 160
+    },
+    "w07_boss_boss_w07_orbin_move_04": {
+      "x": 1360,
+      "y": 336,
+      "w": 240,
+      "h": 160
+    },
+    "w07_mini_terebellides_move_01": {
+      "x": 1600,
+      "y": 336,
+      "w": 112,
+      "h": 96
+    },
+    "w07_mini_terebellides_move_02": {
+      "x": 1712,
+      "y": 336,
+      "w": 112,
+      "h": 96
+    },
+    "w07_mini_terebellides_move_03": {
+      "x": 1824,
+      "y": 336,
+      "w": 112,
+      "h": 96
+    },
+    "w07_mini_terebellides_move_04": {
+      "x": 1936,
+      "y": 336,
+      "w": 112,
+      "h": 96
+    },
+    "w07_enemy_aricidea_move_01": {
+      "x": 0,
+      "y": 672,
+      "w": 32,
+      "h": 32
+    },
+    "w07_enemy_aricidea_move_02": {
+      "x": 32,
+      "y": 672,
+      "w": 32,
+      "h": 32
+    },
+    "w07_enemy_aricidea_move_03": {
+      "x": 64,
+      "y": 672,
+      "w": 32,
+      "h": 32
+    },
+    "w07_enemy_aricidea_move_04": {
+      "x": 96,
+      "y": 672,
+      "w": 32,
+      "h": 32
+    },
+    "w07_enemy_fauvel_move_01": {
+      "x": 128,
+      "y": 672,
+      "w": 32,
+      "h": 32
+    },
+    "w07_enemy_fauvel_move_02": {
+      "x": 160,
+      "y": 672,
+      "w": 32,
+      "h": 32
+    },
+    "w07_enemy_fauvel_move_03": {
+      "x": 192,
+      "y": 672,
+      "w": 32,
+      "h": 32
+    },
+    "w07_enemy_fauvel_move_04": {
+      "x": 224,
+      "y": 672,
+      "w": 32,
+      "h": 32
+    },
+    "w07_enemy_glycer_move_01": {
+      "x": 256,
+      "y": 672,
+      "w": 32,
+      "h": 32
+    },
+    "w07_enemy_glycer_move_02": {
+      "x": 288,
+      "y": 672,
+      "w": 32,
+      "h": 32
+    },
+    "w07_enemy_glycer_move_03": {
+      "x": 320,
+      "y": 672,
+      "w": 32,
+      "h": 32
+    },
+    "w07_enemy_glycer_move_04": {
+      "x": 352,
+      "y": 672,
+      "w": 32,
+      "h": 32
+    },
+    "w07_enemy_nepht_move_01": {
+      "x": 384,
+      "y": 672,
+      "w": 32,
+      "h": 32
+    },
+    "w07_enemy_nepht_move_02": {
+      "x": 416,
+      "y": 672,
+      "w": 32,
+      "h": 32
+    },
+    "w07_enemy_nepht_move_03": {
+      "x": 448,
+      "y": 672,
+      "w": 32,
+      "h": 32
+    },
+    "w07_enemy_nepht_move_04": {
+      "x": 480,
+      "y": 672,
+      "w": 32,
+      "h": 32
+    },
+    "w07_enemy_protod_move_01": {
+      "x": 512,
+      "y": 672,
+      "w": 32,
+      "h": 32
+    },
+    "w07_enemy_protod_move_02": {
+      "x": 544,
+      "y": 672,
+      "w": 32,
+      "h": 32
+    },
+    "w07_enemy_protod_move_03": {
+      "x": 576,
+      "y": 672,
+      "w": 32,
+      "h": 32
+    },
+    "w07_enemy_protod_move_04": {
+      "x": 608,
+      "y": 672,
+      "w": 32,
+      "h": 32
+    },
+    "w07_enemy_questa_move_01": {
+      "x": 640,
+      "y": 672,
+      "w": 32,
+      "h": 32
+    },
+    "w07_enemy_questa_move_02": {
+      "x": 672,
+      "y": 672,
+      "w": 32,
+      "h": 32
+    },
+    "w07_enemy_questa_move_03": {
+      "x": 704,
+      "y": 672,
+      "w": 32,
+      "h": 32
+    },
+    "w07_enemy_questa_move_04": {
+      "x": 736,
+      "y": 672,
+      "w": 32,
+      "h": 32
+    },
+    "w07_enemy_spio_move_01": {
+      "x": 768,
+      "y": 672,
+      "w": 32,
+      "h": 32
+    },
+    "w07_enemy_spio_move_02": {
+      "x": 800,
+      "y": 672,
+      "w": 32,
+      "h": 32
+    },
+    "w07_enemy_spio_move_03": {
+      "x": 832,
+      "y": 672,
+      "w": 32,
+      "h": 32
+    },
+    "w07_enemy_spio_move_04": {
+      "x": 864,
+      "y": 672,
+      "w": 32,
+      "h": 32
+    },
+    "w07_enemy_terebellides_move_01": {
+      "x": 896,
+      "y": 672,
+      "w": 32,
+      "h": 32
+    },
+    "w07_enemy_terebellides_move_02": {
+      "x": 928,
+      "y": 672,
+      "w": 32,
+      "h": 32
+    },
+    "w07_enemy_terebellides_move_03": {
+      "x": 960,
+      "y": 672,
+      "w": 32,
+      "h": 32
+    },
+    "w07_enemy_terebellides_move_04": {
+      "x": 992,
+      "y": 672,
+      "w": 32,
+      "h": 32
+    }
+  },
+  "animaciones": {
+    "w07_bg_layer1_idle": {
+      "frames": [
+        "w07_bg_layer1_idle_01"
+      ],
+      "fps": 1,
+      "bucle": true
+    },
+    "w07_bg_layer2_idle": {
+      "frames": [
+        "w07_bg_layer2_idle_01"
+      ],
+      "fps": 1,
+      "bucle": true
+    },
+    "w07_bg_layer3_idle": {
+      "frames": [
+        "w07_bg_layer3_idle_01"
+      ],
+      "fps": 1,
+      "bucle": true
+    },
+    "w07_bg_layer4_idle": {
+      "frames": [
+        "w07_bg_layer4_idle_01"
+      ],
+      "fps": 1,
+      "bucle": true
+    },
+    "w07_enemy_aricidea_move": {
+      "frames": [
+        "w07_enemy_aricidea_move_01",
+        "w07_enemy_aricidea_move_02",
+        "w07_enemy_aricidea_move_03",
+        "w07_enemy_aricidea_move_04"
+      ],
+      "fps": 8,
+      "bucle": true
+    },
+    "w07_enemy_terebellides_move": {
+      "frames": [
+        "w07_enemy_terebellides_move_01",
+        "w07_enemy_terebellides_move_02",
+        "w07_enemy_terebellides_move_03",
+        "w07_enemy_terebellides_move_04"
+      ],
+      "fps": 8,
+      "bucle": true
+    },
+    "w07_enemy_questa_move": {
+      "frames": [
+        "w07_enemy_questa_move_01",
+        "w07_enemy_questa_move_02",
+        "w07_enemy_questa_move_03",
+        "w07_enemy_questa_move_04"
+      ],
+      "fps": 8,
+      "bucle": true
+    },
+    "w07_enemy_fauvel_move": {
+      "frames": [
+        "w07_enemy_fauvel_move_01",
+        "w07_enemy_fauvel_move_02",
+        "w07_enemy_fauvel_move_03",
+        "w07_enemy_fauvel_move_04"
+      ],
+      "fps": 8,
+      "bucle": true
+    },
+    "w07_enemy_protod_move": {
+      "frames": [
+        "w07_enemy_protod_move_01",
+        "w07_enemy_protod_move_02",
+        "w07_enemy_protod_move_03",
+        "w07_enemy_protod_move_04"
+      ],
+      "fps": 8,
+      "bucle": true
+    },
+    "w07_enemy_spio_move": {
+      "frames": [
+        "w07_enemy_spio_move_01",
+        "w07_enemy_spio_move_02",
+        "w07_enemy_spio_move_03",
+        "w07_enemy_spio_move_04"
+      ],
+      "fps": 8,
+      "bucle": true
+    },
+    "w07_enemy_nepht_move": {
+      "frames": [
+        "w07_enemy_nepht_move_01",
+        "w07_enemy_nepht_move_02",
+        "w07_enemy_nepht_move_03",
+        "w07_enemy_nepht_move_04"
+      ],
+      "fps": 8,
+      "bucle": true
+    },
+    "w07_enemy_glycer_move": {
+      "frames": [
+        "w07_enemy_glycer_move_01",
+        "w07_enemy_glycer_move_02",
+        "w07_enemy_glycer_move_03",
+        "w07_enemy_glycer_move_04"
+      ],
+      "fps": 8,
+      "bucle": true
+    },
+    "w07_mini_terebellides_move": {
+      "frames": [
+        "w07_mini_terebellides_move_01",
+        "w07_mini_terebellides_move_02",
+        "w07_mini_terebellides_move_03",
+        "w07_mini_terebellides_move_04"
+      ],
+      "fps": 8,
+      "bucle": true
+    },
+    "w07_boss_boss_w07_orbin_move": {
+      "frames": [
+        "w07_boss_boss_w07_orbin_move_01",
+        "w07_boss_boss_w07_orbin_move_02",
+        "w07_boss_boss_w07_orbin_move_03",
+        "w07_boss_boss_w07_orbin_move_04"
+      ],
+      "fps": 8,
+      "bucle": true
+    }
+  }
+}

@@ -1,0 +1,267 @@
+{
+  "imagen": "w15.png",
+  "tamano": [
+    2048,
+    1024
+  ],
+  "frames": {
+    "w15_bg_layer1_idle_01": {
+      "x": 0,
+      "y": 0,
+      "w": 640,
+      "h": 336
+    },
+    "w15_bg_layer2_idle_01": {
+      "x": 640,
+      "y": 0,
+      "w": 640,
+      "h": 336
+    },
+    "w15_bg_layer3_idle_01": {
+      "x": 1280,
+      "y": 0,
+      "w": 640,
+      "h": 336
+    },
+    "w15_bg_layer4_idle_01": {
+      "x": 0,
+      "y": 336,
+      "w": 640,
+      "h": 336
+    },
+    "w15_enemy_mech_chaet_move_01": {
+      "x": 640,
+      "y": 336,
+      "w": 32,
+      "h": 32
+    },
+    "w15_enemy_mech_chaet_move_02": {
+      "x": 672,
+      "y": 336,
+      "w": 32,
+      "h": 32
+    },
+    "w15_enemy_mech_chaet_move_03": {
+      "x": 704,
+      "y": 336,
+      "w": 32,
+      "h": 32
+    },
+    "w15_enemy_mech_chaet_move_04": {
+      "x": 736,
+      "y": 336,
+      "w": 32,
+      "h": 32
+    },
+    "w15_enemy_mech_nereis_move_01": {
+      "x": 768,
+      "y": 336,
+      "w": 32,
+      "h": 32
+    },
+    "w15_enemy_mech_nereis_move_02": {
+      "x": 800,
+      "y": 336,
+      "w": 32,
+      "h": 32
+    },
+    "w15_enemy_mech_nereis_move_03": {
+      "x": 832,
+      "y": 336,
+      "w": 32,
+      "h": 32
+    },
+    "w15_enemy_mech_nereis_move_04": {
+      "x": 864,
+      "y": 336,
+      "w": 32,
+      "h": 32
+    },
+    "w15_enemy_mech_polyn_move_01": {
+      "x": 896,
+      "y": 336,
+      "w": 32,
+      "h": 32
+    },
+    "w15_enemy_mech_polyn_move_02": {
+      "x": 928,
+      "y": 336,
+      "w": 32,
+      "h": 32
+    },
+    "w15_enemy_mech_polyn_move_03": {
+      "x": 960,
+      "y": 336,
+      "w": 32,
+      "h": 32
+    },
+    "w15_enemy_mech_polyn_move_04": {
+      "x": 992,
+      "y": 336,
+      "w": 32,
+      "h": 32
+    },
+    "w15_enemy_mech_riftia_move_01": {
+      "x": 1024,
+      "y": 336,
+      "w": 32,
+      "h": 32
+    },
+    "w15_enemy_mech_riftia_move_02": {
+      "x": 1056,
+      "y": 336,
+      "w": 32,
+      "h": 32
+    },
+    "w15_enemy_mech_riftia_move_03": {
+      "x": 1088,
+      "y": 336,
+      "w": 32,
+      "h": 32
+    },
+    "w15_enemy_mech_riftia_move_04": {
+      "x": 1120,
+      "y": 336,
+      "w": 32,
+      "h": 32
+    },
+    "w15_enemy_mech_sabel_move_01": {
+      "x": 1152,
+      "y": 336,
+      "w": 32,
+      "h": 32
+    },
+    "w15_enemy_mech_sabel_move_02": {
+      "x": 1184,
+      "y": 336,
+      "w": 32,
+      "h": 32
+    },
+    "w15_enemy_mech_sabel_move_03": {
+      "x": 1216,
+      "y": 336,
+      "w": 32,
+      "h": 32
+    },
+    "w15_enemy_mech_sabel_move_04": {
+      "x": 1248,
+      "y": 336,
+      "w": 32,
+      "h": 32
+    },
+    "w15_enemy_mech_syll_move_01": {
+      "x": 1280,
+      "y": 336,
+      "w": 32,
+      "h": 32
+    },
+    "w15_enemy_mech_syll_move_02": {
+      "x": 1312,
+      "y": 336,
+      "w": 32,
+      "h": 32
+    },
+    "w15_enemy_mech_syll_move_03": {
+      "x": 1344,
+      "y": 336,
+      "w": 32,
+      "h": 32
+    },
+    "w15_enemy_mech_syll_move_04": {
+      "x": 1376,
+      "y": 336,
+      "w": 32,
+      "h": 32
+    }
+  },
+  "animaciones": {
+    "w15_bg_layer1_idle": {
+      "frames": [
+        "w15_bg_layer1_idle_01"
+      ],
+      "fps": 1,
+      "bucle": true
+    },
+    "w15_bg_layer2_idle": {
+      "frames": [
+        "w15_bg_layer2_idle_01"
+      ],
+      "fps": 1,
+      "bucle": true
+    },
+    "w15_bg_layer3_idle": {
+      "frames": [
+        "w15_bg_layer3_idle_01"
+      ],
+      "fps": 1,
+      "bucle": true
+    },
+    "w15_bg_layer4_idle": {
+      "frames": [
+        "w15_bg_layer4_idle_01"
+      ],
+      "fps": 1,
+      "bucle": true
+    },
+    "w15_enemy_mech_syll_move": {
+      "frames": [
+        "w15_enemy_mech_syll_move_01",
+        "w15_enemy_mech_syll_move_02",
+        "w15_enemy_mech_syll_move_03",
+        "w15_enemy_mech_syll_move_04"
+      ],
+      "fps": 8,
+      "bucle": true
+    },
+    "w15_enemy_mech_nereis_move": {
+      "frames": [
+        "w15_enemy_mech_nereis_move_01",
+        "w15_enemy_mech_nereis_move_02",
+        "w15_enemy_mech_nereis_move_03",
+        "w15_enemy_mech_nereis_move_04"
+      ],
+      "fps": 8,
+      "bucle": true
+    },
+    "w15_enemy_mech_sabel_move": {
+      "frames": [
+        "w15_enemy_mech_sabel_move_01",
+        "w15_enemy_mech_sabel_move_02",
+        "w15_enemy_mech_sabel_move_03",
+        "w15_enemy_mech_sabel_move_04"
+      ],
+      "fps": 8,
+      "bucle": true
+    },
+    "w15_enemy_mech_chaet_move": {
+      "frames": [
+        "w15_enemy_mech_chaet_move_01",
+        "w15_enemy_mech_chaet_move_02",
+        "w15_enemy_mech_chaet_move_03",
+        "w15_enemy_mech_chaet_move_04"
+      ],
+      "fps": 8,
+      "bucle": true
+    },
+    "w15_enemy_mech_riftia_move": {
+      "frames": [
+        "w15_enemy_mech_riftia_move_01",
+        "w15_enemy_mech_riftia_move_02",
+        "w15_enemy_mech_riftia_move_03",
+        "w15_enemy_mech_riftia_move_04"
+      ],
+      "fps": 8,
+      "bucle": true
+    },
+    "w15_enemy_mech_polyn_move": {
+      "frames": [
+        "w15_enemy_mech_polyn_move_01",
+        "w15_enemy_mech_polyn_move_02",
+        "w15_enemy_mech_polyn_move_03",
+        "w15_enemy_mech_polyn_move_04"
+      ],
+      "fps": 8,
+      "bucle": true
+    }
+  }
+}

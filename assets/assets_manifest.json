@@ -1,0 +1,4165 @@
+{
+  "version": 2,
+  "assets": [
+    {
+      "nombre": "w01_bg_layer1_idle",
+      "mundo": 1,
+      "tipo": "bg",
+      "ruta": "assets/backgrounds/w01/w01_bg_layer1_idle_01.png",
+      "tamano": [
+        640,
+        336
+      ],
+      "cuadros": 1,
+      "fps": 0,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w01_bg_layer2_idle",
+      "mundo": 1,
+      "tipo": "bg",
+      "ruta": "assets/backgrounds/w01/w01_bg_layer2_idle_01.png",
+      "tamano": [
+        640,
+        336
+      ],
+      "cuadros": 1,
+      "fps": 0,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w01_bg_layer3_idle",
+      "mundo": 1,
+      "tipo": "bg",
+      "ruta": "assets/backgrounds/w01/w01_bg_layer3_idle_01.png",
+      "tamano": [
+        640,
+        336
+      ],
+      "cuadros": 1,
+      "fps": 0,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w01_bg_layer4_idle",
+      "mundo": 1,
+      "tipo": "bg",
+      "ruta": "assets/backgrounds/w01/w01_bg_layer4_idle_01.png",
+      "tamano": [
+        640,
+        336
+      ],
+      "cuadros": 1,
+      "fps": 0,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w02_bg_layer1_idle",
+      "mundo": 2,
+      "tipo": "bg",
+      "ruta": "assets/backgrounds/w02/w02_bg_layer1_idle_01.png",
+      "tamano": [
+        640,
+        336
+      ],
+      "cuadros": 1,
+      "fps": 0,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w02_bg_layer2_idle",
+      "mundo": 2,
+      "tipo": "bg",
+      "ruta": "assets/backgrounds/w02/w02_bg_layer2_idle_01.png",
+      "tamano": [
+        640,
+        336
+      ],
+      "cuadros": 1,
+      "fps": 0,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w02_bg_layer3_idle",
+      "mundo": 2,
+      "tipo": "bg",
+      "ruta": "assets/backgrounds/w02/w02_bg_layer3_idle_01.png",
+      "tamano": [
+        640,
+        336
+      ],
+      "cuadros": 1,
+      "fps": 0,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w02_bg_layer4_idle",
+      "mundo": 2,
+      "tipo": "bg",
+      "ruta": "assets/backgrounds/w02/w02_bg_layer4_idle_01.png",
+      "tamano": [
+        640,
+        336
+      ],
+      "cuadros": 1,
+      "fps": 0,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w03_bg_layer1_idle",
+      "mundo": 3,
+      "tipo": "bg",
+      "ruta": "assets/backgrounds/w03/w03_bg_layer1_idle_01.png",
+      "tamano": [
+        640,
+        336
+      ],
+      "cuadros": 1,
+      "fps": 0,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w03_bg_layer2_idle",
+      "mundo": 3,
+      "tipo": "bg",
+      "ruta": "assets/backgrounds/w03/w03_bg_layer2_idle_01.png",
+      "tamano": [
+        640,
+        336
+      ],
+      "cuadros": 1,
+      "fps": 0,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w03_bg_layer3_idle",
+      "mundo": 3,
+      "tipo": "bg",
+      "ruta": "assets/backgrounds/w03/w03_bg_layer3_idle_01.png",
+      "tamano": [
+        640,
+        336
+      ],
+      "cuadros": 1,
+      "fps": 0,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w03_bg_layer4_idle",
+      "mundo": 3,
+      "tipo": "bg",
+      "ruta": "assets/backgrounds/w03/w03_bg_layer4_idle_01.png",
+      "tamano": [
+        640,
+        336
+      ],
+      "cuadros": 1,
+      "fps": 0,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w04_bg_layer1_idle",
+      "mundo": 4,
+      "tipo": "bg",
+      "ruta": "assets/backgrounds/w04/w04_bg_layer1_idle_01.png",
+      "tamano": [
+        640,
+        336
+      ],
+      "cuadros": 1,
+      "fps": 0,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w04_bg_layer2_idle",
+      "mundo": 4,
+      "tipo": "bg",
+      "ruta": "assets/backgrounds/w04/w04_bg_layer2_idle_01.png",
+      "tamano": [
+        640,
+        336
+      ],
+      "cuadros": 1,
+      "fps": 0,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w04_bg_layer3_idle",
+      "mundo": 4,
+      "tipo": "bg",
+      "ruta": "assets/backgrounds/w04/w04_bg_layer3_idle_01.png",
+      "tamano": [
+        640,
+        336
+      ],
+      "cuadros": 1,
+      "fps": 0,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w04_bg_layer4_idle",
+      "mundo": 4,
+      "tipo": "bg",
+      "ruta": "assets/backgrounds/w04/w04_bg_layer4_idle_01.png",
+      "tamano": [
+        640,
+        336
+      ],
+      "cuadros": 1,
+      "fps": 0,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w05_bg_layer1_idle",
+      "mundo": 5,
+      "tipo": "bg",
+      "ruta": "assets/backgrounds/w05/w05_bg_layer1_idle_01.png",
+      "tamano": [
+        640,
+        336
+      ],
+      "cuadros": 1,
+      "fps": 0,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w05_bg_layer2_idle",
+      "mundo": 5,
+      "tipo": "bg",
+      "ruta": "assets/backgrounds/w05/w05_bg_layer2_idle_01.png",
+      "tamano": [
+        640,
+        336
+      ],
+      "cuadros": 1,
+      "fps": 0,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w05_bg_layer3_idle",
+      "mundo": 5,
+      "tipo": "bg",
+      "ruta": "assets/backgrounds/w05/w05_bg_layer3_idle_01.png",
+      "tamano": [
+        640,
+        336
+      ],
+      "cuadros": 1,
+      "fps": 0,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w05_bg_layer4_idle",
+      "mundo": 5,
+      "tipo": "bg",
+      "ruta": "assets/backgrounds/w05/w05_bg_layer4_idle_01.png",
+      "tamano": [
+        640,
+        336
+      ],
+      "cuadros": 1,
+      "fps": 0,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w06_bg_layer1_idle",
+      "mundo": 6,
+      "tipo": "bg",
+      "ruta": "assets/backgrounds/w06/w06_bg_layer1_idle_01.png",
+      "tamano": [
+        640,
+        336
+      ],
+      "cuadros": 1,
+      "fps": 0,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w06_bg_layer2_idle",
+      "mundo": 6,
+      "tipo": "bg",
+      "ruta": "assets/backgrounds/w06/w06_bg_layer2_idle_01.png",
+      "tamano": [
+        640,
+        336
+      ],
+      "cuadros": 1,
+      "fps": 0,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w06_bg_layer3_idle",
+      "mundo": 6,
+      "tipo": "bg",
+      "ruta": "assets/backgrounds/w06/w06_bg_layer3_idle_01.png",
+      "tamano": [
+        640,
+        336
+      ],
+      "cuadros": 1,
+      "fps": 0,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w06_bg_layer4_idle",
+      "mundo": 6,
+      "tipo": "bg",
+      "ruta": "assets/backgrounds/w06/w06_bg_layer4_idle_01.png",
+      "tamano": [
+        640,
+        336
+      ],
+      "cuadros": 1,
+      "fps": 0,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w07_bg_layer1_idle",
+      "mundo": 7,
+      "tipo": "bg",
+      "ruta": "assets/backgrounds/w07/w07_bg_layer1_idle_01.png",
+      "tamano": [
+        640,
+        336
+      ],
+      "cuadros": 1,
+      "fps": 0,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w07_bg_layer2_idle",
+      "mundo": 7,
+      "tipo": "bg",
+      "ruta": "assets/backgrounds/w07/w07_bg_layer2_idle_01.png",
+      "tamano": [
+        640,
+        336
+      ],
+      "cuadros": 1,
+      "fps": 0,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w07_bg_layer3_idle",
+      "mundo": 7,
+      "tipo": "bg",
+      "ruta": "assets/backgrounds/w07/w07_bg_layer3_idle_01.png",
+      "tamano": [
+        640,
+        336
+      ],
+      "cuadros": 1,
+      "fps": 0,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w07_bg_layer4_idle",
+      "mundo": 7,
+      "tipo": "bg",
+      "ruta": "assets/backgrounds/w07/w07_bg_layer4_idle_01.png",
+      "tamano": [
+        640,
+        336
+      ],
+      "cuadros": 1,
+      "fps": 0,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w08_bg_layer1_idle",
+      "mundo": 8,
+      "tipo": "bg",
+      "ruta": "assets/backgrounds/w08/w08_bg_layer1_idle_01.png",
+      "tamano": [
+        640,
+        336
+      ],
+      "cuadros": 1,
+      "fps": 0,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w08_bg_layer2_idle",
+      "mundo": 8,
+      "tipo": "bg",
+      "ruta": "assets/backgrounds/w08/w08_bg_layer2_idle_01.png",
+      "tamano": [
+        640,
+        336
+      ],
+      "cuadros": 1,
+      "fps": 0,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w08_bg_layer3_idle",
+      "mundo": 8,
+      "tipo": "bg",
+      "ruta": "assets/backgrounds/w08/w08_bg_layer3_idle_01.png",
+      "tamano": [
+        640,
+        336
+      ],
+      "cuadros": 1,
+      "fps": 0,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w08_bg_layer4_idle",
+      "mundo": 8,
+      "tipo": "bg",
+      "ruta": "assets/backgrounds/w08/w08_bg_layer4_idle_01.png",
+      "tamano": [
+        640,
+        336
+      ],
+      "cuadros": 1,
+      "fps": 0,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w09_bg_layer1_idle",
+      "mundo": 9,
+      "tipo": "bg",
+      "ruta": "assets/backgrounds/w09/w09_bg_layer1_idle_01.png",
+      "tamano": [
+        640,
+        336
+      ],
+      "cuadros": 1,
+      "fps": 0,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w09_bg_layer2_idle",
+      "mundo": 9,
+      "tipo": "bg",
+      "ruta": "assets/backgrounds/w09/w09_bg_layer2_idle_01.png",
+      "tamano": [
+        640,
+        336
+      ],
+      "cuadros": 1,
+      "fps": 0,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w09_bg_layer3_idle",
+      "mundo": 9,
+      "tipo": "bg",
+      "ruta": "assets/backgrounds/w09/w09_bg_layer3_idle_01.png",
+      "tamano": [
+        640,
+        336
+      ],
+      "cuadros": 1,
+      "fps": 0,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w09_bg_layer4_idle",
+      "mundo": 9,
+      "tipo": "bg",
+      "ruta": "assets/backgrounds/w09/w09_bg_layer4_idle_01.png",
+      "tamano": [
+        640,
+        336
+      ],
+      "cuadros": 1,
+      "fps": 0,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w10_bg_layer1_idle",
+      "mundo": 10,
+      "tipo": "bg",
+      "ruta": "assets/backgrounds/w10/w10_bg_layer1_idle_01.png",
+      "tamano": [
+        640,
+        336
+      ],
+      "cuadros": 1,
+      "fps": 0,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w10_bg_layer2_idle",
+      "mundo": 10,
+      "tipo": "bg",
+      "ruta": "assets/backgrounds/w10/w10_bg_layer2_idle_01.png",
+      "tamano": [
+        640,
+        336
+      ],
+      "cuadros": 1,
+      "fps": 0,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w10_bg_layer3_idle",
+      "mundo": 10,
+      "tipo": "bg",
+      "ruta": "assets/backgrounds/w10/w10_bg_layer3_idle_01.png",
+      "tamano": [
+        640,
+        336
+      ],
+      "cuadros": 1,
+      "fps": 0,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w10_bg_layer4_idle",
+      "mundo": 10,
+      "tipo": "bg",
+      "ruta": "assets/backgrounds/w10/w10_bg_layer4_idle_01.png",
+      "tamano": [
+        640,
+        336
+      ],
+      "cuadros": 1,
+      "fps": 0,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w11_bg_layer1_idle",
+      "mundo": 11,
+      "tipo": "bg",
+      "ruta": "assets/backgrounds/w11/w11_bg_layer1_idle_01.png",
+      "tamano": [
+        640,
+        336
+      ],
+      "cuadros": 1,
+      "fps": 0,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w11_bg_layer2_idle",
+      "mundo": 11,
+      "tipo": "bg",
+      "ruta": "assets/backgrounds/w11/w11_bg_layer2_idle_01.png",
+      "tamano": [
+        640,
+        336
+      ],
+      "cuadros": 1,
+      "fps": 0,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w11_bg_layer3_idle",
+      "mundo": 11,
+      "tipo": "bg",
+      "ruta": "assets/backgrounds/w11/w11_bg_layer3_idle_01.png",
+      "tamano": [
+        640,
+        336
+      ],
+      "cuadros": 1,
+      "fps": 0,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w11_bg_layer4_idle",
+      "mundo": 11,
+      "tipo": "bg",
+      "ruta": "assets/backgrounds/w11/w11_bg_layer4_idle_01.png",
+      "tamano": [
+        640,
+        336
+      ],
+      "cuadros": 1,
+      "fps": 0,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w12_bg_layer1_idle",
+      "mundo": 12,
+      "tipo": "bg",
+      "ruta": "assets/backgrounds/w12/w12_bg_layer1_idle_01.png",
+      "tamano": [
+        640,
+        336
+      ],
+      "cuadros": 1,
+      "fps": 0,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w12_bg_layer2_idle",
+      "mundo": 12,
+      "tipo": "bg",
+      "ruta": "assets/backgrounds/w12/w12_bg_layer2_idle_01.png",
+      "tamano": [
+        640,
+        336
+      ],
+      "cuadros": 1,
+      "fps": 0,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w12_bg_layer3_idle",
+      "mundo": 12,
+      "tipo": "bg",
+      "ruta": "assets/backgrounds/w12/w12_bg_layer3_idle_01.png",
+      "tamano": [
+        640,
+        336
+      ],
+      "cuadros": 1,
+      "fps": 0,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w12_bg_layer4_idle",
+      "mundo": 12,
+      "tipo": "bg",
+      "ruta": "assets/backgrounds/w12/w12_bg_layer4_idle_01.png",
+      "tamano": [
+        640,
+        336
+      ],
+      "cuadros": 1,
+      "fps": 0,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w13_bg_layer1_idle",
+      "mundo": 13,
+      "tipo": "bg",
+      "ruta": "assets/backgrounds/w13/w13_bg_layer1_idle_01.png",
+      "tamano": [
+        640,
+        336
+      ],
+      "cuadros": 1,
+      "fps": 0,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w13_bg_layer2_idle",
+      "mundo": 13,
+      "tipo": "bg",
+      "ruta": "assets/backgrounds/w13/w13_bg_layer2_idle_01.png",
+      "tamano": [
+        640,
+        336
+      ],
+      "cuadros": 1,
+      "fps": 0,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w13_bg_layer3_idle",
+      "mundo": 13,
+      "tipo": "bg",
+      "ruta": "assets/backgrounds/w13/w13_bg_layer3_idle_01.png",
+      "tamano": [
+        640,
+        336
+      ],
+      "cuadros": 1,
+      "fps": 0,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w13_bg_layer4_idle",
+      "mundo": 13,
+      "tipo": "bg",
+      "ruta": "assets/backgrounds/w13/w13_bg_layer4_idle_01.png",
+      "tamano": [
+        640,
+        336
+      ],
+      "cuadros": 1,
+      "fps": 0,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w14_bg_layer1_idle",
+      "mundo": 14,
+      "tipo": "bg",
+      "ruta": "assets/backgrounds/w14/w14_bg_layer1_idle_01.png",
+      "tamano": [
+        640,
+        336
+      ],
+      "cuadros": 1,
+      "fps": 0,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w14_bg_layer2_idle",
+      "mundo": 14,
+      "tipo": "bg",
+      "ruta": "assets/backgrounds/w14/w14_bg_layer2_idle_01.png",
+      "tamano": [
+        640,
+        336
+      ],
+      "cuadros": 1,
+      "fps": 0,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w14_bg_layer3_idle",
+      "mundo": 14,
+      "tipo": "bg",
+      "ruta": "assets/backgrounds/w14/w14_bg_layer3_idle_01.png",
+      "tamano": [
+        640,
+        336
+      ],
+      "cuadros": 1,
+      "fps": 0,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w14_bg_layer4_idle",
+      "mundo": 14,
+      "tipo": "bg",
+      "ruta": "assets/backgrounds/w14/w14_bg_layer4_idle_01.png",
+      "tamano": [
+        640,
+        336
+      ],
+      "cuadros": 1,
+      "fps": 0,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w15_bg_layer1_idle",
+      "mundo": 15,
+      "tipo": "bg",
+      "ruta": "assets/backgrounds/w15/w15_bg_layer1_idle_01.png",
+      "tamano": [
+        640,
+        336
+      ],
+      "cuadros": 1,
+      "fps": 0,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w15_bg_layer2_idle",
+      "mundo": 15,
+      "tipo": "bg",
+      "ruta": "assets/backgrounds/w15/w15_bg_layer2_idle_01.png",
+      "tamano": [
+        640,
+        336
+      ],
+      "cuadros": 1,
+      "fps": 0,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w15_bg_layer3_idle",
+      "mundo": 15,
+      "tipo": "bg",
+      "ruta": "assets/backgrounds/w15/w15_bg_layer3_idle_01.png",
+      "tamano": [
+        640,
+        336
+      ],
+      "cuadros": 1,
+      "fps": 0,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w15_bg_layer4_idle",
+      "mundo": 15,
+      "tipo": "bg",
+      "ruta": "assets/backgrounds/w15/w15_bg_layer4_idle_01.png",
+      "tamano": [
+        640,
+        336
+      ],
+      "cuadros": 1,
+      "fps": 0,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w01_enemy_hydroides_move",
+      "mundo": 1,
+      "tipo": "enemy",
+      "ruta": "assets/sprites/w01/w01_enemy_hydroides_move_01.png",
+      "tamano": [
+        32,
+        32
+      ],
+      "cuadros": 4,
+      "fps": 8,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w01_enemy_euphrosine_move",
+      "mundo": 1,
+      "tipo": "enemy",
+      "ruta": "assets/sprites/w01/w01_enemy_euphrosine_move_01.png",
+      "tamano": [
+        32,
+        32
+      ],
+      "cuadros": 4,
+      "fps": 8,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w01_enemy_fabric_move",
+      "mundo": 1,
+      "tipo": "enemy",
+      "ruta": "assets/sprites/w01/w01_enemy_fabric_move_01.png",
+      "tamano": [
+        32,
+        32
+      ],
+      "cuadros": 4,
+      "fps": 8,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w01_enemy_pision_move",
+      "mundo": 1,
+      "tipo": "enemy",
+      "ruta": "assets/sprites/w01/w01_enemy_pision_move_01.png",
+      "tamano": [
+        32,
+        32
+      ],
+      "cuadros": 4,
+      "fps": 8,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w01_enemy_lacy_move",
+      "mundo": 1,
+      "tipo": "enemy",
+      "ruta": "assets/sprites/w01/w01_enemy_lacy_move_01.png",
+      "tamano": [
+        32,
+        32
+      ],
+      "cuadros": 4,
+      "fps": 8,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w01_enemy_syll_move",
+      "mundo": 1,
+      "tipo": "enemy",
+      "ruta": "assets/sprites/w01/w01_enemy_syll_move_01.png",
+      "tamano": [
+        32,
+        32
+      ],
+      "cuadros": 4,
+      "fps": 8,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w01_enemy_phyll_move",
+      "mundo": 1,
+      "tipo": "enemy",
+      "ruta": "assets/sprites/w01/w01_enemy_phyll_move_01.png",
+      "tamano": [
+        32,
+        32
+      ],
+      "cuadros": 4,
+      "fps": 8,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w01_mini_pision_move",
+      "mundo": 1,
+      "tipo": "mini",
+      "ruta": "assets/sprites/w01/w01_mini_pision_move_01.png",
+      "tamano": [
+        112,
+        96
+      ],
+      "cuadros": 4,
+      "fps": 8,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w02_enemy_arenicola_move",
+      "mundo": 2,
+      "tipo": "enemy",
+      "ruta": "assets/sprites/w02/w02_enemy_arenicola_move_01.png",
+      "tamano": [
+        32,
+        32
+      ],
+      "cuadros": 4,
+      "fps": 8,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w02_enemy_magelona_move",
+      "mundo": 2,
+      "tipo": "enemy",
+      "ruta": "assets/sprites/w02/w02_enemy_magelona_move_01.png",
+      "tamano": [
+        32,
+        32
+      ],
+      "cuadros": 4,
+      "fps": 8,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w02_enemy_sthenelais_move",
+      "mundo": 2,
+      "tipo": "enemy",
+      "ruta": "assets/sprites/w02/w02_enemy_sthenelais_move_01.png",
+      "tamano": [
+        32,
+        32
+      ],
+      "cuadros": 4,
+      "fps": 8,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w02_enemy_sacco_move",
+      "mundo": 2,
+      "tipo": "enemy",
+      "ruta": "assets/sprites/w02/w02_enemy_sacco_move_01.png",
+      "tamano": [
+        32,
+        32
+      ],
+      "cuadros": 4,
+      "fps": 8,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w02_enemy_goniada_move",
+      "mundo": 2,
+      "tipo": "enemy",
+      "ruta": "assets/sprites/w02/w02_enemy_goniada_move_01.png",
+      "tamano": [
+        32,
+        32
+      ],
+      "cuadros": 4,
+      "fps": 8,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w02_enemy_spio_move",
+      "mundo": 2,
+      "tipo": "enemy",
+      "ruta": "assets/sprites/w02/w02_enemy_spio_move_01.png",
+      "tamano": [
+        32,
+        32
+      ],
+      "cuadros": 4,
+      "fps": 8,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w02_enemy_nepht_move",
+      "mundo": 2,
+      "tipo": "enemy",
+      "ruta": "assets/sprites/w02/w02_enemy_nepht_move_01.png",
+      "tamano": [
+        32,
+        32
+      ],
+      "cuadros": 4,
+      "fps": 8,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w02_enemy_glycer_move",
+      "mundo": 2,
+      "tipo": "enemy",
+      "ruta": "assets/sprites/w02/w02_enemy_glycer_move_01.png",
+      "tamano": [
+        32,
+        32
+      ],
+      "cuadros": 4,
+      "fps": 8,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w02_mini_arenicola_move",
+      "mundo": 2,
+      "tipo": "mini",
+      "ruta": "assets/sprites/w02/w02_mini_arenicola_move_01.png",
+      "tamano": [
+        112,
+        96
+      ],
+      "cuadros": 4,
+      "fps": 8,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w03_enemy_dodeca_move",
+      "mundo": 3,
+      "tipo": "enemy",
+      "ruta": "assets/sprites/w03/w03_enemy_dodeca_move_01.png",
+      "tamano": [
+        32,
+        32
+      ],
+      "cuadros": 4,
+      "fps": 8,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w03_enemy_oenone_move",
+      "mundo": 3,
+      "tipo": "enemy",
+      "ruta": "assets/sprites/w03/w03_enemy_oenone_move_01.png",
+      "tamano": [
+        32,
+        32
+      ],
+      "cuadros": 4,
+      "fps": 8,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w03_enemy_arabella_move",
+      "mundo": 3,
+      "tipo": "enemy",
+      "ruta": "assets/sprites/w03/w03_enemy_arabella_move_01.png",
+      "tamano": [
+        32,
+        32
+      ],
+      "cuadros": 4,
+      "fps": 8,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w03_enemy_spha_move",
+      "mundo": 3,
+      "tipo": "enemy",
+      "ruta": "assets/sprites/w03/w03_enemy_spha_move_01.png",
+      "tamano": [
+        32,
+        32
+      ],
+      "cuadros": 4,
+      "fps": 8,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w03_enemy_histrio_move",
+      "mundo": 3,
+      "tipo": "enemy",
+      "ruta": "assets/sprites/w03/w03_enemy_histrio_move_01.png",
+      "tamano": [
+        32,
+        32
+      ],
+      "cuadros": 4,
+      "fps": 8,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w03_enemy_syll_move",
+      "mundo": 3,
+      "tipo": "enemy",
+      "ruta": "assets/sprites/w03/w03_enemy_syll_move_01.png",
+      "tamano": [
+        32,
+        32
+      ],
+      "cuadros": 4,
+      "fps": 8,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w03_enemy_spio_move",
+      "mundo": 3,
+      "tipo": "enemy",
+      "ruta": "assets/sprites/w03/w03_enemy_spio_move_01.png",
+      "tamano": [
+        32,
+        32
+      ],
+      "cuadros": 4,
+      "fps": 8,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w03_enemy_phyll_move",
+      "mundo": 3,
+      "tipo": "enemy",
+      "ruta": "assets/sprites/w03/w03_enemy_phyll_move_01.png",
+      "tamano": [
+        32,
+        32
+      ],
+      "cuadros": 4,
+      "fps": 8,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w03_enemy_serp_move",
+      "mundo": 3,
+      "tipo": "enemy",
+      "ruta": "assets/sprites/w03/w03_enemy_serp_move_01.png",
+      "tamano": [
+        32,
+        32
+      ],
+      "cuadros": 4,
+      "fps": 8,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w03_enemy_hesio_move",
+      "mundo": 3,
+      "tipo": "enemy",
+      "ruta": "assets/sprites/w03/w03_enemy_hesio_move_01.png",
+      "tamano": [
+        32,
+        32
+      ],
+      "cuadros": 4,
+      "fps": 8,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w03_mini_oenone_move",
+      "mundo": 3,
+      "tipo": "mini",
+      "ruta": "assets/sprites/w03/w03_mini_oenone_move_01.png",
+      "tamano": [
+        112,
+        96
+      ],
+      "cuadros": 4,
+      "fps": 8,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w04_enemy_spirorbis_move",
+      "mundo": 4,
+      "tipo": "enemy",
+      "ruta": "assets/sprites/w04/w04_enemy_spirorbis_move_01.png",
+      "tamano": [
+        32,
+        32
+      ],
+      "cuadros": 4,
+      "fps": 8,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w04_enemy_myxicola_move",
+      "mundo": 4,
+      "tipo": "enemy",
+      "ruta": "assets/sprites/w04/w04_enemy_myxicola_move_01.png",
+      "tamano": [
+        32,
+        32
+      ],
+      "cuadros": 4,
+      "fps": 8,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w04_enemy_spinther_move",
+      "mundo": 4,
+      "tipo": "enemy",
+      "ruta": "assets/sprites/w04/w04_enemy_spinther_move_01.png",
+      "tamano": [
+        32,
+        32
+      ],
+      "cuadros": 4,
+      "fps": 8,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w04_enemy_trocho_move",
+      "mundo": 4,
+      "tipo": "enemy",
+      "ruta": "assets/sprites/w04/w04_enemy_trocho_move_01.png",
+      "tamano": [
+        32,
+        32
+      ],
+      "cuadros": 4,
+      "fps": 8,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w04_enemy_cteno_move",
+      "mundo": 4,
+      "tipo": "enemy",
+      "ruta": "assets/sprites/w04/w04_enemy_cteno_move_01.png",
+      "tamano": [
+        32,
+        32
+      ],
+      "cuadros": 4,
+      "fps": 8,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w04_enemy_syll_move",
+      "mundo": 4,
+      "tipo": "enemy",
+      "ruta": "assets/sprites/w04/w04_enemy_syll_move_01.png",
+      "tamano": [
+        32,
+        32
+      ],
+      "cuadros": 4,
+      "fps": 8,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w04_enemy_phyll_move",
+      "mundo": 4,
+      "tipo": "enemy",
+      "ruta": "assets/sprites/w04/w04_enemy_phyll_move_01.png",
+      "tamano": [
+        32,
+        32
+      ],
+      "cuadros": 4,
+      "fps": 8,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w04_enemy_cirrat_move",
+      "mundo": 4,
+      "tipo": "enemy",
+      "ruta": "assets/sprites/w04/w04_enemy_cirrat_move_01.png",
+      "tamano": [
+        32,
+        32
+      ],
+      "cuadros": 4,
+      "fps": 8,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w04_mini_myxicola_move",
+      "mundo": 4,
+      "tipo": "mini",
+      "ruta": "assets/sprites/w04/w04_mini_myxicola_move_01.png",
+      "tamano": [
+        112,
+        96
+      ],
+      "cuadros": 4,
+      "fps": 8,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w05_enemy_spirobranchus_move",
+      "mundo": 5,
+      "tipo": "enemy",
+      "ruta": "assets/sprites/w05/w05_enemy_spirobranchus_move_01.png",
+      "tamano": [
+        32,
+        32
+      ],
+      "cuadros": 4,
+      "fps": 8,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w05_enemy_sabellastarte_move",
+      "mundo": 5,
+      "tipo": "enemy",
+      "ruta": "assets/sprites/w05/w05_enemy_sabellastarte_move_01.png",
+      "tamano": [
+        32,
+        32
+      ],
+      "cuadros": 4,
+      "fps": 8,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w05_enemy_eulepeth_move",
+      "mundo": 5,
+      "tipo": "enemy",
+      "ruta": "assets/sprites/w05/w05_enemy_eulepeth_move_01.png",
+      "tamano": [
+        32,
+        32
+      ],
+      "cuadros": 4,
+      "fps": 8,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w05_enemy_acoet_move",
+      "mundo": 5,
+      "tipo": "enemy",
+      "ruta": "assets/sprites/w05/w05_enemy_acoet_move_01.png",
+      "tamano": [
+        32,
+        32
+      ],
+      "cuadros": 4,
+      "fps": 8,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w05_enemy_pholoe_move",
+      "mundo": 5,
+      "tipo": "enemy",
+      "ruta": "assets/sprites/w05/w05_enemy_pholoe_move_01.png",
+      "tamano": [
+        32,
+        32
+      ],
+      "cuadros": 4,
+      "fps": 8,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w05_enemy_syll_move",
+      "mundo": 5,
+      "tipo": "enemy",
+      "ruta": "assets/sprites/w05/w05_enemy_syll_move_01.png",
+      "tamano": [
+        32,
+        32
+      ],
+      "cuadros": 4,
+      "fps": 8,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w05_enemy_phyll_move",
+      "mundo": 5,
+      "tipo": "enemy",
+      "ruta": "assets/sprites/w05/w05_enemy_phyll_move_01.png",
+      "tamano": [
+        32,
+        32
+      ],
+      "cuadros": 4,
+      "fps": 8,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w05_enemy_hesio_move",
+      "mundo": 5,
+      "tipo": "enemy",
+      "ruta": "assets/sprites/w05/w05_enemy_hesio_move_01.png",
+      "tamano": [
+        32,
+        32
+      ],
+      "cuadros": 4,
+      "fps": 8,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w05_mini_spirobranchus_move",
+      "mundo": 5,
+      "tipo": "mini",
+      "ruta": "assets/sprites/w05/w05_mini_spirobranchus_move_01.png",
+      "tamano": [
+        112,
+        96
+      ],
+      "cuadros": 4,
+      "fps": 8,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w06_enemy_glycera_move",
+      "mundo": 6,
+      "tipo": "enemy",
+      "ruta": "assets/sprites/w06/w06_enemy_glycera_move_01.png",
+      "tamano": [
+        32,
+        32
+      ],
+      "cuadros": 4,
+      "fps": 8,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w06_enemy_diopatra_move",
+      "mundo": 6,
+      "tipo": "enemy",
+      "ruta": "assets/sprites/w06/w06_enemy_diopatra_move_01.png",
+      "tamano": [
+        32,
+        32
+      ],
+      "cuadros": 4,
+      "fps": 8,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w06_enemy_chaetopterus_move",
+      "mundo": 6,
+      "tipo": "enemy",
+      "ruta": "assets/sprites/w06/w06_enemy_chaetopterus_move_01.png",
+      "tamano": [
+        32,
+        32
+      ],
+      "cuadros": 4,
+      "fps": 8,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w06_enemy_sabellaria_move",
+      "mundo": 6,
+      "tipo": "enemy",
+      "ruta": "assets/sprites/w06/w06_enemy_sabellaria_move_01.png",
+      "tamano": [
+        32,
+        32
+      ],
+      "cuadros": 4,
+      "fps": 8,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w06_enemy_pectinaria_move",
+      "mundo": 6,
+      "tipo": "enemy",
+      "ruta": "assets/sprites/w06/w06_enemy_pectinaria_move_01.png",
+      "tamano": [
+        32,
+        32
+      ],
+      "cuadros": 4,
+      "fps": 8,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w06_enemy_syll_move",
+      "mundo": 6,
+      "tipo": "enemy",
+      "ruta": "assets/sprites/w06/w06_enemy_syll_move_01.png",
+      "tamano": [
+        32,
+        32
+      ],
+      "cuadros": 4,
+      "fps": 8,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w06_enemy_nepht_move",
+      "mundo": 6,
+      "tipo": "enemy",
+      "ruta": "assets/sprites/w06/w06_enemy_nepht_move_01.png",
+      "tamano": [
+        32,
+        32
+      ],
+      "cuadros": 4,
+      "fps": 8,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w06_enemy_hesio_move",
+      "mundo": 6,
+      "tipo": "enemy",
+      "ruta": "assets/sprites/w06/w06_enemy_hesio_move_01.png",
+      "tamano": [
+        32,
+        32
+      ],
+      "cuadros": 4,
+      "fps": 8,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w06_mini_glycera_move",
+      "mundo": 6,
+      "tipo": "mini",
+      "ruta": "assets/sprites/w06/w06_mini_glycera_move_01.png",
+      "tamano": [
+        112,
+        96
+      ],
+      "cuadros": 4,
+      "fps": 8,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w07_enemy_aricidea_move",
+      "mundo": 7,
+      "tipo": "enemy",
+      "ruta": "assets/sprites/w07/w07_enemy_aricidea_move_01.png",
+      "tamano": [
+        32,
+        32
+      ],
+      "cuadros": 4,
+      "fps": 8,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w07_enemy_terebellides_move",
+      "mundo": 7,
+      "tipo": "enemy",
+      "ruta": "assets/sprites/w07/w07_enemy_terebellides_move_01.png",
+      "tamano": [
+        32,
+        32
+      ],
+      "cuadros": 4,
+      "fps": 8,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w07_enemy_questa_move",
+      "mundo": 7,
+      "tipo": "enemy",
+      "ruta": "assets/sprites/w07/w07_enemy_questa_move_01.png",
+      "tamano": [
+        32,
+        32
+      ],
+      "cuadros": 4,
+      "fps": 8,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w07_enemy_fauvel_move",
+      "mundo": 7,
+      "tipo": "enemy",
+      "ruta": "assets/sprites/w07/w07_enemy_fauvel_move_01.png",
+      "tamano": [
+        32,
+        32
+      ],
+      "cuadros": 4,
+      "fps": 8,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w07_enemy_protod_move",
+      "mundo": 7,
+      "tipo": "enemy",
+      "ruta": "assets/sprites/w07/w07_enemy_protod_move_01.png",
+      "tamano": [
+        32,
+        32
+      ],
+      "cuadros": 4,
+      "fps": 8,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w07_enemy_spio_move",
+      "mundo": 7,
+      "tipo": "enemy",
+      "ruta": "assets/sprites/w07/w07_enemy_spio_move_01.png",
+      "tamano": [
+        32,
+        32
+      ],
+      "cuadros": 4,
+      "fps": 8,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w07_enemy_nepht_move",
+      "mundo": 7,
+      "tipo": "enemy",
+      "ruta": "assets/sprites/w07/w07_enemy_nepht_move_01.png",
+      "tamano": [
+        32,
+        32
+      ],
+      "cuadros": 4,
+      "fps": 8,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w07_enemy_glycer_move",
+      "mundo": 7,
+      "tipo": "enemy",
+      "ruta": "assets/sprites/w07/w07_enemy_glycer_move_01.png",
+      "tamano": [
+        32,
+        32
+      ],
+      "cuadros": 4,
+      "fps": 8,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w07_mini_terebellides_move",
+      "mundo": 7,
+      "tipo": "mini",
+      "ruta": "assets/sprites/w07/w07_mini_terebellides_move_01.png",
+      "tamano": [
+        112,
+        96
+      ],
+      "cuadros": 4,
+      "fps": 8,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w08_enemy_ophelia_move",
+      "mundo": 8,
+      "tipo": "enemy",
+      "ruta": "assets/sprites/w08/w08_enemy_ophelia_move_01.png",
+      "tamano": [
+        32,
+        32
+      ],
+      "cuadros": 4,
+      "fps": 8,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w08_enemy_cossura_move",
+      "mundo": 8,
+      "tipo": "enemy",
+      "ruta": "assets/sprites/w08/w08_enemy_cossura_move_01.png",
+      "tamano": [
+        32,
+        32
+      ],
+      "cuadros": 4,
+      "fps": 8,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w08_enemy_pilarg_move",
+      "mundo": 8,
+      "tipo": "enemy",
+      "ruta": "assets/sprites/w08/w08_enemy_pilarg_move_01.png",
+      "tamano": [
+        32,
+        32
+      ],
+      "cuadros": 4,
+      "fps": 8,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w08_enemy_lumbrineris_move",
+      "mundo": 8,
+      "tipo": "enemy",
+      "ruta": "assets/sprites/w08/w08_enemy_lumbrineris_move_01.png",
+      "tamano": [
+        32,
+        32
+      ],
+      "cuadros": 4,
+      "fps": 8,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w08_enemy_owenia_move",
+      "mundo": 8,
+      "tipo": "enemy",
+      "ruta": "assets/sprites/w08/w08_enemy_owenia_move_01.png",
+      "tamano": [
+        32,
+        32
+      ],
+      "cuadros": 4,
+      "fps": 8,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w08_enemy_glycer_move",
+      "mundo": 8,
+      "tipo": "enemy",
+      "ruta": "assets/sprites/w08/w08_enemy_glycer_move_01.png",
+      "tamano": [
+        32,
+        32
+      ],
+      "cuadros": 4,
+      "fps": 8,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w08_enemy_dorville_move",
+      "mundo": 8,
+      "tipo": "enemy",
+      "ruta": "assets/sprites/w08/w08_enemy_dorville_move_01.png",
+      "tamano": [
+        32,
+        32
+      ],
+      "cuadros": 4,
+      "fps": 8,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w08_mini_lumbrineris_move",
+      "mundo": 8,
+      "tipo": "mini",
+      "ruta": "assets/sprites/w08/w08_mini_lumbrineris_move_01.png",
+      "tamano": [
+        112,
+        96
+      ],
+      "cuadros": 4,
+      "fps": 8,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w09_enemy_pontod_move",
+      "mundo": 9,
+      "tipo": "enemy",
+      "ruta": "assets/sprites/w09/w09_enemy_pontod_move_01.png",
+      "tamano": [
+        32,
+        32
+      ],
+      "cuadros": 4,
+      "fps": 8,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w09_enemy_lopado_move",
+      "mundo": 9,
+      "tipo": "enemy",
+      "ruta": "assets/sprites/w09/w09_enemy_lopado_move_01.png",
+      "tamano": [
+        32,
+        32
+      ],
+      "cuadros": 4,
+      "fps": 8,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w09_enemy_typhlo_move",
+      "mundo": 9,
+      "tipo": "enemy",
+      "ruta": "assets/sprites/w09/w09_enemy_typhlo_move_01.png",
+      "tamano": [
+        32,
+        32
+      ],
+      "cuadros": 4,
+      "fps": 8,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w09_enemy_poeo_move",
+      "mundo": 9,
+      "tipo": "enemy",
+      "ruta": "assets/sprites/w09/w09_enemy_poeo_move_01.png",
+      "tamano": [
+        32,
+        32
+      ],
+      "cuadros": 4,
+      "fps": 8,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w09_enemy_iospil_move",
+      "mundo": 9,
+      "tipo": "enemy",
+      "ruta": "assets/sprites/w09/w09_enemy_iospil_move_01.png",
+      "tamano": [
+        32,
+        32
+      ],
+      "cuadros": 4,
+      "fps": 8,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w09_enemy_syll_stolon_move",
+      "mundo": 9,
+      "tipo": "enemy",
+      "ruta": "assets/sprites/w09/w09_enemy_syll_stolon_move_01.png",
+      "tamano": [
+        32,
+        32
+      ],
+      "cuadros": 4,
+      "fps": 8,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w09_enemy_alciop_move",
+      "mundo": 9,
+      "tipo": "enemy",
+      "ruta": "assets/sprites/w09/w09_enemy_alciop_move_01.png",
+      "tamano": [
+        32,
+        32
+      ],
+      "cuadros": 4,
+      "fps": 8,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w09_mini_lopado_move",
+      "mundo": 9,
+      "tipo": "mini",
+      "ruta": "assets/sprites/w09/w09_mini_lopado_move_01.png",
+      "tamano": [
+        112,
+        96
+      ],
+      "cuadros": 4,
+      "fps": 8,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w10_enemy_flabegraviera_move",
+      "mundo": 10,
+      "tipo": "enemy",
+      "ruta": "assets/sprites/w10/w10_enemy_flabegraviera_move_01.png",
+      "tamano": [
+        32,
+        32
+      ],
+      "cuadros": 4,
+      "fps": 8,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w10_enemy_aphelochaeta_move",
+      "mundo": 10,
+      "tipo": "enemy",
+      "ruta": "assets/sprites/w10/w10_enemy_aphelochaeta_move_01.png",
+      "tamano": [
+        32,
+        32
+      ],
+      "cuadros": 4,
+      "fps": 8,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w10_enemy_mald_move",
+      "mundo": 10,
+      "tipo": "enemy",
+      "ruta": "assets/sprites/w10/w10_enemy_mald_move_01.png",
+      "tamano": [
+        32,
+        32
+      ],
+      "cuadros": 4,
+      "fps": 8,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w10_enemy_perkinsiana_move",
+      "mundo": 10,
+      "tipo": "enemy",
+      "ruta": "assets/sprites/w10/w10_enemy_perkinsiana_move_01.png",
+      "tamano": [
+        32,
+        32
+      ],
+      "cuadros": 4,
+      "fps": 8,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w10_enemy_amphar_move",
+      "mundo": 10,
+      "tipo": "enemy",
+      "ruta": "assets/sprites/w10/w10_enemy_amphar_move_01.png",
+      "tamano": [
+        32,
+        32
+      ],
+      "cuadros": 4,
+      "fps": 8,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w10_enemy_spio_move",
+      "mundo": 10,
+      "tipo": "enemy",
+      "ruta": "assets/sprites/w10/w10_enemy_spio_move_01.png",
+      "tamano": [
+        32,
+        32
+      ],
+      "cuadros": 4,
+      "fps": 8,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w10_enemy_serp_move",
+      "mundo": 10,
+      "tipo": "enemy",
+      "ruta": "assets/sprites/w10/w10_enemy_serp_move_01.png",
+      "tamano": [
+        32,
+        32
+      ],
+      "cuadros": 4,
+      "fps": 8,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w10_enemy_alciop_move",
+      "mundo": 10,
+      "tipo": "enemy",
+      "ruta": "assets/sprites/w10/w10_enemy_alciop_move_01.png",
+      "tamano": [
+        32,
+        32
+      ],
+      "cuadros": 4,
+      "fps": 8,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w10_mini_flabegraviera_move",
+      "mundo": 10,
+      "tipo": "mini",
+      "ruta": "assets/sprites/w10/w10_mini_flabegraviera_move_01.png",
+      "tamano": [
+        112,
+        96
+      ],
+      "cuadros": 4,
+      "fps": 8,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w11_enemy_hesiocaeca_move",
+      "mundo": 11,
+      "tipo": "enemy",
+      "ruta": "assets/sprites/w11/w11_enemy_hesiocaeca_move_01.png",
+      "tamano": [
+        32,
+        32
+      ],
+      "cuadros": 4,
+      "fps": 8,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w11_enemy_nautil_move",
+      "mundo": 11,
+      "tipo": "enemy",
+      "ruta": "assets/sprites/w11/w11_enemy_nautil_move_01.png",
+      "tamano": [
+        32,
+        32
+      ],
+      "cuadros": 4,
+      "fps": 8,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w11_enemy_chryso_move",
+      "mundo": 11,
+      "tipo": "enemy",
+      "ruta": "assets/sprites/w11/w11_enemy_chryso_move_01.png",
+      "tamano": [
+        32,
+        32
+      ],
+      "cuadros": 4,
+      "fps": 8,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w11_enemy_brada_move",
+      "mundo": 11,
+      "tipo": "enemy",
+      "ruta": "assets/sprites/w11/w11_enemy_brada_move_01.png",
+      "tamano": [
+        32,
+        32
+      ],
+      "cuadros": 4,
+      "fps": 8,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w11_enemy_bathykurila_move",
+      "mundo": 11,
+      "tipo": "enemy",
+      "ruta": "assets/sprites/w11/w11_enemy_bathykurila_move_01.png",
+      "tamano": [
+        32,
+        32
+      ],
+      "cuadros": 4,
+      "fps": 8,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w11_enemy_cirrat_move",
+      "mundo": 11,
+      "tipo": "enemy",
+      "ruta": "assets/sprites/w11/w11_enemy_cirrat_move_01.png",
+      "tamano": [
+        32,
+        32
+      ],
+      "cuadros": 4,
+      "fps": 8,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w11_enemy_ophryotrocha_move",
+      "mundo": 11,
+      "tipo": "enemy",
+      "ruta": "assets/sprites/w11/w11_enemy_ophryotrocha_move_01.png",
+      "tamano": [
+        32,
+        32
+      ],
+      "cuadros": 4,
+      "fps": 8,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w11_mini_chryso_move",
+      "mundo": 11,
+      "tipo": "mini",
+      "ruta": "assets/sprites/w11/w11_mini_chryso_move_01.png",
+      "tamano": [
+        112,
+        96
+      ],
+      "cuadros": 4,
+      "fps": 8,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w12_enemy_riftia_move",
+      "mundo": 12,
+      "tipo": "enemy",
+      "ruta": "assets/sprites/w12/w12_enemy_riftia_move_01.png",
+      "tamano": [
+        32,
+        32
+      ],
+      "cuadros": 4,
+      "fps": 8,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w12_enemy_paralvinella_move",
+      "mundo": 12,
+      "tipo": "enemy",
+      "ruta": "assets/sprites/w12/w12_enemy_paralvinella_move_01.png",
+      "tamano": [
+        32,
+        32
+      ],
+      "cuadros": 4,
+      "fps": 8,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w12_enemy_branchinotogluma_move",
+      "mundo": 12,
+      "tipo": "enemy",
+      "ruta": "assets/sprites/w12/w12_enemy_branchinotogluma_move_01.png",
+      "tamano": [
+        32,
+        32
+      ],
+      "cuadros": 4,
+      "fps": 8,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w12_enemy_amphisamytha_move",
+      "mundo": 12,
+      "tipo": "enemy",
+      "ruta": "assets/sprites/w12/w12_enemy_amphisamytha_move_01.png",
+      "tamano": [
+        32,
+        32
+      ],
+      "cuadros": 4,
+      "fps": 8,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w12_enemy_hesiolyra_move",
+      "mundo": 12,
+      "tipo": "enemy",
+      "ruta": "assets/sprites/w12/w12_enemy_hesiolyra_move_01.png",
+      "tamano": [
+        32,
+        32
+      ],
+      "cuadros": 4,
+      "fps": 8,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w12_enemy_serp_move",
+      "mundo": 12,
+      "tipo": "enemy",
+      "ruta": "assets/sprites/w12/w12_enemy_serp_move_01.png",
+      "tamano": [
+        32,
+        32
+      ],
+      "cuadros": 4,
+      "fps": 8,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w12_enemy_cirrat_move",
+      "mundo": 12,
+      "tipo": "enemy",
+      "ruta": "assets/sprites/w12/w12_enemy_cirrat_move_01.png",
+      "tamano": [
+        32,
+        32
+      ],
+      "cuadros": 4,
+      "fps": 8,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w12_enemy_dorville_move",
+      "mundo": 12,
+      "tipo": "enemy",
+      "ruta": "assets/sprites/w12/w12_enemy_dorville_move_01.png",
+      "tamano": [
+        32,
+        32
+      ],
+      "cuadros": 4,
+      "fps": 8,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w12_mini_paralvinella_move",
+      "mundo": 12,
+      "tipo": "mini",
+      "ruta": "assets/sprites/w12/w12_mini_paralvinella_move_01.png",
+      "tamano": [
+        112,
+        96
+      ],
+      "cuadros": 4,
+      "fps": 8,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w13_enemy_swima_move",
+      "mundo": 13,
+      "tipo": "enemy",
+      "ruta": "assets/sprites/w13/w13_enemy_swima_move_01.png",
+      "tamano": [
+        32,
+        32
+      ],
+      "cuadros": 4,
+      "fps": 8,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w13_enemy_aphro_move",
+      "mundo": 13,
+      "tipo": "enemy",
+      "ruta": "assets/sprites/w13/w13_enemy_aphro_move_01.png",
+      "tamano": [
+        32,
+        32
+      ],
+      "cuadros": 4,
+      "fps": 8,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w13_enemy_scali_move",
+      "mundo": 13,
+      "tipo": "enemy",
+      "ruta": "assets/sprites/w13/w13_enemy_scali_move_01.png",
+      "tamano": [
+        32,
+        32
+      ],
+      "cuadros": 4,
+      "fps": 8,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w13_enemy_stern_move",
+      "mundo": 13,
+      "tipo": "enemy",
+      "ruta": "assets/sprites/w13/w13_enemy_stern_move_01.png",
+      "tamano": [
+        32,
+        32
+      ],
+      "cuadros": 4,
+      "fps": 8,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w13_enemy_macellicephaloides_move",
+      "mundo": 13,
+      "tipo": "enemy",
+      "ruta": "assets/sprites/w13/w13_enemy_macellicephaloides_move_01.png",
+      "tamano": [
+        32,
+        32
+      ],
+      "cuadros": 4,
+      "fps": 8,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w13_enemy_nepht_move",
+      "mundo": 13,
+      "tipo": "enemy",
+      "ruta": "assets/sprites/w13/w13_enemy_nepht_move_01.png",
+      "tamano": [
+        32,
+        32
+      ],
+      "cuadros": 4,
+      "fps": 8,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w13_enemy_glycer_move",
+      "mundo": 13,
+      "tipo": "enemy",
+      "ruta": "assets/sprites/w13/w13_enemy_glycer_move_01.png",
+      "tamano": [
+        32,
+        32
+      ],
+      "cuadros": 4,
+      "fps": 8,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w13_enemy_dorville_move",
+      "mundo": 13,
+      "tipo": "enemy",
+      "ruta": "assets/sprites/w13/w13_enemy_dorville_move_01.png",
+      "tamano": [
+        32,
+        32
+      ],
+      "cuadros": 4,
+      "fps": 8,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w13_enemy_alciop_move",
+      "mundo": 13,
+      "tipo": "enemy",
+      "ruta": "assets/sprites/w13/w13_enemy_alciop_move_01.png",
+      "tamano": [
+        32,
+        32
+      ],
+      "cuadros": 4,
+      "fps": 8,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w13_enemy_cirrat_move",
+      "mundo": 13,
+      "tipo": "enemy",
+      "ruta": "assets/sprites/w13/w13_enemy_cirrat_move_01.png",
+      "tamano": [
+        32,
+        32
+      ],
+      "cuadros": 4,
+      "fps": 8,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w13_mini_aphro_move",
+      "mundo": 13,
+      "tipo": "mini",
+      "ruta": "assets/sprites/w13/w13_mini_aphro_move_01.png",
+      "tamano": [
+        112,
+        96
+      ],
+      "cuadros": 4,
+      "fps": 8,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w14_enemy_mech_syll_move",
+      "mundo": 14,
+      "tipo": "enemy",
+      "ruta": "assets/sprites/w14/w14_enemy_mech_syll_move_01.png",
+      "tamano": [
+        32,
+        32
+      ],
+      "cuadros": 4,
+      "fps": 8,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w14_enemy_mech_nereis_move",
+      "mundo": 14,
+      "tipo": "enemy",
+      "ruta": "assets/sprites/w14/w14_enemy_mech_nereis_move_01.png",
+      "tamano": [
+        32,
+        32
+      ],
+      "cuadros": 4,
+      "fps": 8,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w14_enemy_mech_sabel_move",
+      "mundo": 14,
+      "tipo": "enemy",
+      "ruta": "assets/sprites/w14/w14_enemy_mech_sabel_move_01.png",
+      "tamano": [
+        32,
+        32
+      ],
+      "cuadros": 4,
+      "fps": 8,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w14_enemy_mech_chaet_move",
+      "mundo": 14,
+      "tipo": "enemy",
+      "ruta": "assets/sprites/w14/w14_enemy_mech_chaet_move_01.png",
+      "tamano": [
+        32,
+        32
+      ],
+      "cuadros": 4,
+      "fps": 8,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w14_enemy_mech_riftia_move",
+      "mundo": 14,
+      "tipo": "enemy",
+      "ruta": "assets/sprites/w14/w14_enemy_mech_riftia_move_01.png",
+      "tamano": [
+        32,
+        32
+      ],
+      "cuadros": 4,
+      "fps": 8,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w14_enemy_mech_polyn_move",
+      "mundo": 14,
+      "tipo": "enemy",
+      "ruta": "assets/sprites/w14/w14_enemy_mech_polyn_move_01.png",
+      "tamano": [
+        32,
+        32
+      ],
+      "cuadros": 4,
+      "fps": 8,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w14_enemy_hydroides_move",
+      "mundo": 14,
+      "tipo": "enemy",
+      "ruta": "assets/sprites/w14/w14_enemy_hydroides_move_01.png",
+      "tamano": [
+        32,
+        32
+      ],
+      "cuadros": 4,
+      "fps": 8,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w14_enemy_euphrosine_move",
+      "mundo": 14,
+      "tipo": "enemy",
+      "ruta": "assets/sprites/w14/w14_enemy_euphrosine_move_01.png",
+      "tamano": [
+        32,
+        32
+      ],
+      "cuadros": 4,
+      "fps": 8,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w14_enemy_fabric_move",
+      "mundo": 14,
+      "tipo": "enemy",
+      "ruta": "assets/sprites/w14/w14_enemy_fabric_move_01.png",
+      "tamano": [
+        32,
+        32
+      ],
+      "cuadros": 4,
+      "fps": 8,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w14_enemy_pision_move",
+      "mundo": 14,
+      "tipo": "enemy",
+      "ruta": "assets/sprites/w14/w14_enemy_pision_move_01.png",
+      "tamano": [
+        32,
+        32
+      ],
+      "cuadros": 4,
+      "fps": 8,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w14_enemy_lacy_move",
+      "mundo": 14,
+      "tipo": "enemy",
+      "ruta": "assets/sprites/w14/w14_enemy_lacy_move_01.png",
+      "tamano": [
+        32,
+        32
+      ],
+      "cuadros": 4,
+      "fps": 8,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w14_enemy_syll_move",
+      "mundo": 14,
+      "tipo": "enemy",
+      "ruta": "assets/sprites/w14/w14_enemy_syll_move_01.png",
+      "tamano": [
+        32,
+        32
+      ],
+      "cuadros": 4,
+      "fps": 8,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w14_enemy_phyll_move",
+      "mundo": 14,
+      "tipo": "enemy",
+      "ruta": "assets/sprites/w14/w14_enemy_phyll_move_01.png",
+      "tamano": [
+        32,
+        32
+      ],
+      "cuadros": 4,
+      "fps": 8,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w14_enemy_arenicola_move",
+      "mundo": 14,
+      "tipo": "enemy",
+      "ruta": "assets/sprites/w14/w14_enemy_arenicola_move_01.png",
+      "tamano": [
+        32,
+        32
+      ],
+      "cuadros": 4,
+      "fps": 8,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w14_enemy_magelona_move",
+      "mundo": 14,
+      "tipo": "enemy",
+      "ruta": "assets/sprites/w14/w14_enemy_magelona_move_01.png",
+      "tamano": [
+        32,
+        32
+      ],
+      "cuadros": 4,
+      "fps": 8,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w14_enemy_sthenelais_move",
+      "mundo": 14,
+      "tipo": "enemy",
+      "ruta": "assets/sprites/w14/w14_enemy_sthenelais_move_01.png",
+      "tamano": [
+        32,
+        32
+      ],
+      "cuadros": 4,
+      "fps": 8,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w14_enemy_sacco_move",
+      "mundo": 14,
+      "tipo": "enemy",
+      "ruta": "assets/sprites/w14/w14_enemy_sacco_move_01.png",
+      "tamano": [
+        32,
+        32
+      ],
+      "cuadros": 4,
+      "fps": 8,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w14_enemy_goniada_move",
+      "mundo": 14,
+      "tipo": "enemy",
+      "ruta": "assets/sprites/w14/w14_enemy_goniada_move_01.png",
+      "tamano": [
+        32,
+        32
+      ],
+      "cuadros": 4,
+      "fps": 8,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w14_enemy_spio_move",
+      "mundo": 14,
+      "tipo": "enemy",
+      "ruta": "assets/sprites/w14/w14_enemy_spio_move_01.png",
+      "tamano": [
+        32,
+        32
+      ],
+      "cuadros": 4,
+      "fps": 8,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w14_enemy_nepht_move",
+      "mundo": 14,
+      "tipo": "enemy",
+      "ruta": "assets/sprites/w14/w14_enemy_nepht_move_01.png",
+      "tamano": [
+        32,
+        32
+      ],
+      "cuadros": 4,
+      "fps": 8,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w14_enemy_glycer_move",
+      "mundo": 14,
+      "tipo": "enemy",
+      "ruta": "assets/sprites/w14/w14_enemy_glycer_move_01.png",
+      "tamano": [
+        32,
+        32
+      ],
+      "cuadros": 4,
+      "fps": 8,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w14_enemy_dodeca_move",
+      "mundo": 14,
+      "tipo": "enemy",
+      "ruta": "assets/sprites/w14/w14_enemy_dodeca_move_01.png",
+      "tamano": [
+        32,
+        32
+      ],
+      "cuadros": 4,
+      "fps": 8,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w14_enemy_oenone_move",
+      "mundo": 14,
+      "tipo": "enemy",
+      "ruta": "assets/sprites/w14/w14_enemy_oenone_move_01.png",
+      "tamano": [
+        32,
+        32
+      ],
+      "cuadros": 4,
+      "fps": 8,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w14_enemy_arabella_move",
+      "mundo": 14,
+      "tipo": "enemy",
+      "ruta": "assets/sprites/w14/w14_enemy_arabella_move_01.png",
+      "tamano": [
+        32,
+        32
+      ],
+      "cuadros": 4,
+      "fps": 8,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w14_enemy_spha_move",
+      "mundo": 14,
+      "tipo": "enemy",
+      "ruta": "assets/sprites/w14/w14_enemy_spha_move_01.png",
+      "tamano": [
+        32,
+        32
+      ],
+      "cuadros": 4,
+      "fps": 8,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w14_enemy_histrio_move",
+      "mundo": 14,
+      "tipo": "enemy",
+      "ruta": "assets/sprites/w14/w14_enemy_histrio_move_01.png",
+      "tamano": [
+        32,
+        32
+      ],
+      "cuadros": 4,
+      "fps": 8,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w14_enemy_serp_move",
+      "mundo": 14,
+      "tipo": "enemy",
+      "ruta": "assets/sprites/w14/w14_enemy_serp_move_01.png",
+      "tamano": [
+        32,
+        32
+      ],
+      "cuadros": 4,
+      "fps": 8,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w14_enemy_hesio_move",
+      "mundo": 14,
+      "tipo": "enemy",
+      "ruta": "assets/sprites/w14/w14_enemy_hesio_move_01.png",
+      "tamano": [
+        32,
+        32
+      ],
+      "cuadros": 4,
+      "fps": 8,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w14_enemy_spirorbis_move",
+      "mundo": 14,
+      "tipo": "enemy",
+      "ruta": "assets/sprites/w14/w14_enemy_spirorbis_move_01.png",
+      "tamano": [
+        32,
+        32
+      ],
+      "cuadros": 4,
+      "fps": 8,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w14_enemy_myxicola_move",
+      "mundo": 14,
+      "tipo": "enemy",
+      "ruta": "assets/sprites/w14/w14_enemy_myxicola_move_01.png",
+      "tamano": [
+        32,
+        32
+      ],
+      "cuadros": 4,
+      "fps": 8,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w14_enemy_spinther_move",
+      "mundo": 14,
+      "tipo": "enemy",
+      "ruta": "assets/sprites/w14/w14_enemy_spinther_move_01.png",
+      "tamano": [
+        32,
+        32
+      ],
+      "cuadros": 4,
+      "fps": 8,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w14_enemy_trocho_move",
+      "mundo": 14,
+      "tipo": "enemy",
+      "ruta": "assets/sprites/w14/w14_enemy_trocho_move_01.png",
+      "tamano": [
+        32,
+        32
+      ],
+      "cuadros": 4,
+      "fps": 8,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w14_enemy_cteno_move",
+      "mundo": 14,
+      "tipo": "enemy",
+      "ruta": "assets/sprites/w14/w14_enemy_cteno_move_01.png",
+      "tamano": [
+        32,
+        32
+      ],
+      "cuadros": 4,
+      "fps": 8,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w14_enemy_cirrat_move",
+      "mundo": 14,
+      "tipo": "enemy",
+      "ruta": "assets/sprites/w14/w14_enemy_cirrat_move_01.png",
+      "tamano": [
+        32,
+        32
+      ],
+      "cuadros": 4,
+      "fps": 8,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w14_enemy_spirobranchus_move",
+      "mundo": 14,
+      "tipo": "enemy",
+      "ruta": "assets/sprites/w14/w14_enemy_spirobranchus_move_01.png",
+      "tamano": [
+        32,
+        32
+      ],
+      "cuadros": 4,
+      "fps": 8,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w14_enemy_sabellastarte_move",
+      "mundo": 14,
+      "tipo": "enemy",
+      "ruta": "assets/sprites/w14/w14_enemy_sabellastarte_move_01.png",
+      "tamano": [
+        32,
+        32
+      ],
+      "cuadros": 4,
+      "fps": 8,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w14_enemy_eulepeth_move",
+      "mundo": 14,
+      "tipo": "enemy",
+      "ruta": "assets/sprites/w14/w14_enemy_eulepeth_move_01.png",
+      "tamano": [
+        32,
+        32
+      ],
+      "cuadros": 4,
+      "fps": 8,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w14_enemy_acoet_move",
+      "mundo": 14,
+      "tipo": "enemy",
+      "ruta": "assets/sprites/w14/w14_enemy_acoet_move_01.png",
+      "tamano": [
+        32,
+        32
+      ],
+      "cuadros": 4,
+      "fps": 8,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w14_enemy_pholoe_move",
+      "mundo": 14,
+      "tipo": "enemy",
+      "ruta": "assets/sprites/w14/w14_enemy_pholoe_move_01.png",
+      "tamano": [
+        32,
+        32
+      ],
+      "cuadros": 4,
+      "fps": 8,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w14_enemy_glycera_move",
+      "mundo": 14,
+      "tipo": "enemy",
+      "ruta": "assets/sprites/w14/w14_enemy_glycera_move_01.png",
+      "tamano": [
+        32,
+        32
+      ],
+      "cuadros": 4,
+      "fps": 8,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w14_enemy_diopatra_move",
+      "mundo": 14,
+      "tipo": "enemy",
+      "ruta": "assets/sprites/w14/w14_enemy_diopatra_move_01.png",
+      "tamano": [
+        32,
+        32
+      ],
+      "cuadros": 4,
+      "fps": 8,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w14_enemy_chaetopterus_move",
+      "mundo": 14,
+      "tipo": "enemy",
+      "ruta": "assets/sprites/w14/w14_enemy_chaetopterus_move_01.png",
+      "tamano": [
+        32,
+        32
+      ],
+      "cuadros": 4,
+      "fps": 8,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w14_enemy_sabellaria_move",
+      "mundo": 14,
+      "tipo": "enemy",
+      "ruta": "assets/sprites/w14/w14_enemy_sabellaria_move_01.png",
+      "tamano": [
+        32,
+        32
+      ],
+      "cuadros": 4,
+      "fps": 8,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w14_enemy_pectinaria_move",
+      "mundo": 14,
+      "tipo": "enemy",
+      "ruta": "assets/sprites/w14/w14_enemy_pectinaria_move_01.png",
+      "tamano": [
+        32,
+        32
+      ],
+      "cuadros": 4,
+      "fps": 8,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w14_enemy_aricidea_move",
+      "mundo": 14,
+      "tipo": "enemy",
+      "ruta": "assets/sprites/w14/w14_enemy_aricidea_move_01.png",
+      "tamano": [
+        32,
+        32
+      ],
+      "cuadros": 4,
+      "fps": 8,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w14_enemy_terebellides_move",
+      "mundo": 14,
+      "tipo": "enemy",
+      "ruta": "assets/sprites/w14/w14_enemy_terebellides_move_01.png",
+      "tamano": [
+        32,
+        32
+      ],
+      "cuadros": 4,
+      "fps": 8,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w14_enemy_questa_move",
+      "mundo": 14,
+      "tipo": "enemy",
+      "ruta": "assets/sprites/w14/w14_enemy_questa_move_01.png",
+      "tamano": [
+        32,
+        32
+      ],
+      "cuadros": 4,
+      "fps": 8,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w14_enemy_fauvel_move",
+      "mundo": 14,
+      "tipo": "enemy",
+      "ruta": "assets/sprites/w14/w14_enemy_fauvel_move_01.png",
+      "tamano": [
+        32,
+        32
+      ],
+      "cuadros": 4,
+      "fps": 8,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w14_enemy_protod_move",
+      "mundo": 14,
+      "tipo": "enemy",
+      "ruta": "assets/sprites/w14/w14_enemy_protod_move_01.png",
+      "tamano": [
+        32,
+        32
+      ],
+      "cuadros": 4,
+      "fps": 8,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w14_enemy_ophelia_move",
+      "mundo": 14,
+      "tipo": "enemy",
+      "ruta": "assets/sprites/w14/w14_enemy_ophelia_move_01.png",
+      "tamano": [
+        32,
+        32
+      ],
+      "cuadros": 4,
+      "fps": 8,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w14_enemy_cossura_move",
+      "mundo": 14,
+      "tipo": "enemy",
+      "ruta": "assets/sprites/w14/w14_enemy_cossura_move_01.png",
+      "tamano": [
+        32,
+        32
+      ],
+      "cuadros": 4,
+      "fps": 8,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w14_enemy_pilarg_move",
+      "mundo": 14,
+      "tipo": "enemy",
+      "ruta": "assets/sprites/w14/w14_enemy_pilarg_move_01.png",
+      "tamano": [
+        32,
+        32
+      ],
+      "cuadros": 4,
+      "fps": 8,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w14_enemy_lumbrineris_move",
+      "mundo": 14,
+      "tipo": "enemy",
+      "ruta": "assets/sprites/w14/w14_enemy_lumbrineris_move_01.png",
+      "tamano": [
+        32,
+        32
+      ],
+      "cuadros": 4,
+      "fps": 8,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w14_enemy_owenia_move",
+      "mundo": 14,
+      "tipo": "enemy",
+      "ruta": "assets/sprites/w14/w14_enemy_owenia_move_01.png",
+      "tamano": [
+        32,
+        32
+      ],
+      "cuadros": 4,
+      "fps": 8,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w14_enemy_dorville_move",
+      "mundo": 14,
+      "tipo": "enemy",
+      "ruta": "assets/sprites/w14/w14_enemy_dorville_move_01.png",
+      "tamano": [
+        32,
+        32
+      ],
+      "cuadros": 4,
+      "fps": 8,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w14_enemy_pontod_move",
+      "mundo": 14,
+      "tipo": "enemy",
+      "ruta": "assets/sprites/w14/w14_enemy_pontod_move_01.png",
+      "tamano": [
+        32,
+        32
+      ],
+      "cuadros": 4,
+      "fps": 8,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w14_enemy_lopado_move",
+      "mundo": 14,
+      "tipo": "enemy",
+      "ruta": "assets/sprites/w14/w14_enemy_lopado_move_01.png",
+      "tamano": [
+        32,
+        32
+      ],
+      "cuadros": 4,
+      "fps": 8,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w14_enemy_typhlo_move",
+      "mundo": 14,
+      "tipo": "enemy",
+      "ruta": "assets/sprites/w14/w14_enemy_typhlo_move_01.png",
+      "tamano": [
+        32,
+        32
+      ],
+      "cuadros": 4,
+      "fps": 8,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w14_enemy_poeo_move",
+      "mundo": 14,
+      "tipo": "enemy",
+      "ruta": "assets/sprites/w14/w14_enemy_poeo_move_01.png",
+      "tamano": [
+        32,
+        32
+      ],
+      "cuadros": 4,
+      "fps": 8,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w14_enemy_iospil_move",
+      "mundo": 14,
+      "tipo": "enemy",
+      "ruta": "assets/sprites/w14/w14_enemy_iospil_move_01.png",
+      "tamano": [
+        32,
+        32
+      ],
+      "cuadros": 4,
+      "fps": 8,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w14_enemy_syll_stolon_move",
+      "mundo": 14,
+      "tipo": "enemy",
+      "ruta": "assets/sprites/w14/w14_enemy_syll_stolon_move_01.png",
+      "tamano": [
+        32,
+        32
+      ],
+      "cuadros": 4,
+      "fps": 8,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w14_enemy_alciop_move",
+      "mundo": 14,
+      "tipo": "enemy",
+      "ruta": "assets/sprites/w14/w14_enemy_alciop_move_01.png",
+      "tamano": [
+        32,
+        32
+      ],
+      "cuadros": 4,
+      "fps": 8,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w14_enemy_flabegraviera_move",
+      "mundo": 14,
+      "tipo": "enemy",
+      "ruta": "assets/sprites/w14/w14_enemy_flabegraviera_move_01.png",
+      "tamano": [
+        32,
+        32
+      ],
+      "cuadros": 4,
+      "fps": 8,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w14_enemy_aphelochaeta_move",
+      "mundo": 14,
+      "tipo": "enemy",
+      "ruta": "assets/sprites/w14/w14_enemy_aphelochaeta_move_01.png",
+      "tamano": [
+        32,
+        32
+      ],
+      "cuadros": 4,
+      "fps": 8,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w14_enemy_mald_move",
+      "mundo": 14,
+      "tipo": "enemy",
+      "ruta": "assets/sprites/w14/w14_enemy_mald_move_01.png",
+      "tamano": [
+        32,
+        32
+      ],
+      "cuadros": 4,
+      "fps": 8,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w14_enemy_perkinsiana_move",
+      "mundo": 14,
+      "tipo": "enemy",
+      "ruta": "assets/sprites/w14/w14_enemy_perkinsiana_move_01.png",
+      "tamano": [
+        32,
+        32
+      ],
+      "cuadros": 4,
+      "fps": 8,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w14_enemy_amphar_move",
+      "mundo": 14,
+      "tipo": "enemy",
+      "ruta": "assets/sprites/w14/w14_enemy_amphar_move_01.png",
+      "tamano": [
+        32,
+        32
+      ],
+      "cuadros": 4,
+      "fps": 8,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w14_enemy_hesiocaeca_move",
+      "mundo": 14,
+      "tipo": "enemy",
+      "ruta": "assets/sprites/w14/w14_enemy_hesiocaeca_move_01.png",
+      "tamano": [
+        32,
+        32
+      ],
+      "cuadros": 4,
+      "fps": 8,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w14_enemy_nautil_move",
+      "mundo": 14,
+      "tipo": "enemy",
+      "ruta": "assets/sprites/w14/w14_enemy_nautil_move_01.png",
+      "tamano": [
+        32,
+        32
+      ],
+      "cuadros": 4,
+      "fps": 8,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w14_enemy_chryso_move",
+      "mundo": 14,
+      "tipo": "enemy",
+      "ruta": "assets/sprites/w14/w14_enemy_chryso_move_01.png",
+      "tamano": [
+        32,
+        32
+      ],
+      "cuadros": 4,
+      "fps": 8,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w14_enemy_brada_move",
+      "mundo": 14,
+      "tipo": "enemy",
+      "ruta": "assets/sprites/w14/w14_enemy_brada_move_01.png",
+      "tamano": [
+        32,
+        32
+      ],
+      "cuadros": 4,
+      "fps": 8,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w14_enemy_bathykurila_move",
+      "mundo": 14,
+      "tipo": "enemy",
+      "ruta": "assets/sprites/w14/w14_enemy_bathykurila_move_01.png",
+      "tamano": [
+        32,
+        32
+      ],
+      "cuadros": 4,
+      "fps": 8,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w14_enemy_ophryotrocha_move",
+      "mundo": 14,
+      "tipo": "enemy",
+      "ruta": "assets/sprites/w14/w14_enemy_ophryotrocha_move_01.png",
+      "tamano": [
+        32,
+        32
+      ],
+      "cuadros": 4,
+      "fps": 8,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w14_enemy_riftia_move",
+      "mundo": 14,
+      "tipo": "enemy",
+      "ruta": "assets/sprites/w14/w14_enemy_riftia_move_01.png",
+      "tamano": [
+        32,
+        32
+      ],
+      "cuadros": 4,
+      "fps": 8,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w14_enemy_paralvinella_move",
+      "mundo": 14,
+      "tipo": "enemy",
+      "ruta": "assets/sprites/w14/w14_enemy_paralvinella_move_01.png",
+      "tamano": [
+        32,
+        32
+      ],
+      "cuadros": 4,
+      "fps": 8,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w14_enemy_branchinotogluma_move",
+      "mundo": 14,
+      "tipo": "enemy",
+      "ruta": "assets/sprites/w14/w14_enemy_branchinotogluma_move_01.png",
+      "tamano": [
+        32,
+        32
+      ],
+      "cuadros": 4,
+      "fps": 8,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w14_enemy_amphisamytha_move",
+      "mundo": 14,
+      "tipo": "enemy",
+      "ruta": "assets/sprites/w14/w14_enemy_amphisamytha_move_01.png",
+      "tamano": [
+        32,
+        32
+      ],
+      "cuadros": 4,
+      "fps": 8,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w14_enemy_hesiolyra_move",
+      "mundo": 14,
+      "tipo": "enemy",
+      "ruta": "assets/sprites/w14/w14_enemy_hesiolyra_move_01.png",
+      "tamano": [
+        32,
+        32
+      ],
+      "cuadros": 4,
+      "fps": 8,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w14_enemy_swima_move",
+      "mundo": 14,
+      "tipo": "enemy",
+      "ruta": "assets/sprites/w14/w14_enemy_swima_move_01.png",
+      "tamano": [
+        32,
+        32
+      ],
+      "cuadros": 4,
+      "fps": 8,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w14_enemy_aphro_move",
+      "mundo": 14,
+      "tipo": "enemy",
+      "ruta": "assets/sprites/w14/w14_enemy_aphro_move_01.png",
+      "tamano": [
+        32,
+        32
+      ],
+      "cuadros": 4,
+      "fps": 8,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w14_enemy_scali_move",
+      "mundo": 14,
+      "tipo": "enemy",
+      "ruta": "assets/sprites/w14/w14_enemy_scali_move_01.png",
+      "tamano": [
+        32,
+        32
+      ],
+      "cuadros": 4,
+      "fps": 8,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w14_enemy_stern_move",
+      "mundo": 14,
+      "tipo": "enemy",
+      "ruta": "assets/sprites/w14/w14_enemy_stern_move_01.png",
+      "tamano": [
+        32,
+        32
+      ],
+      "cuadros": 4,
+      "fps": 8,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w14_enemy_macellicephaloides_move",
+      "mundo": 14,
+      "tipo": "enemy",
+      "ruta": "assets/sprites/w14/w14_enemy_macellicephaloides_move_01.png",
+      "tamano": [
+        32,
+        32
+      ],
+      "cuadros": 4,
+      "fps": 8,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w14_mini_mech_nereis_move",
+      "mundo": 14,
+      "tipo": "mini",
+      "ruta": "assets/sprites/w14/w14_mini_mech_nereis_move_01.png",
+      "tamano": [
+        112,
+        96
+      ],
+      "cuadros": 4,
+      "fps": 8,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w01_boss_boss_w01_nereis_move",
+      "mundo": 1,
+      "tipo": "boss",
+      "ruta": "assets/sprites/w01/w01_boss_boss_w01_nereis_move_01.png",
+      "tamano": [
+        240,
+        160
+      ],
+      "cuadros": 4,
+      "fps": 8,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w02_boss_boss_w02_capit_move",
+      "mundo": 2,
+      "tipo": "boss",
+      "ruta": "assets/sprites/w02/w02_boss_boss_w02_capit_move_01.png",
+      "tamano": [
+        240,
+        160
+      ],
+      "cuadros": 4,
+      "fps": 8,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w03_boss_boss_w03_polyn_move",
+      "mundo": 3,
+      "tipo": "boss",
+      "ruta": "assets/sprites/w03/w03_boss_boss_w03_polyn_move_01.png",
+      "tamano": [
+        240,
+        160
+      ],
+      "cuadros": 4,
+      "fps": 8,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w04_boss_boss_w04_tere_move",
+      "mundo": 4,
+      "tipo": "boss",
+      "ruta": "assets/sprites/w04/w04_boss_boss_w04_tere_move_01.png",
+      "tamano": [
+        240,
+        160
+      ],
+      "cuadros": 4,
+      "fps": 8,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w05_boss_boss_w05_hermo_move",
+      "mundo": 5,
+      "tipo": "boss",
+      "ruta": "assets/sprites/w05/w05_boss_boss_w05_hermo_move_01.png",
+      "tamano": [
+        240,
+        160
+      ],
+      "cuadros": 4,
+      "fps": 8,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w06_boss_boss_w06_leafqueen_move",
+      "mundo": 6,
+      "tipo": "boss",
+      "ruta": "assets/sprites/w06/w06_boss_boss_w06_leafqueen_move_01.png",
+      "tamano": [
+        240,
+        160
+      ],
+      "cuadros": 4,
+      "fps": 8,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w07_boss_boss_w07_orbin_move",
+      "mundo": 7,
+      "tipo": "boss",
+      "ruta": "assets/sprites/w07/w07_boss_boss_w07_orbin_move_01.png",
+      "tamano": [
+        240,
+        160
+      ],
+      "cuadros": 4,
+      "fps": 8,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w08_boss_boss_w08_pollution_capit_move",
+      "mundo": 8,
+      "tipo": "boss",
+      "ruta": "assets/sprites/w08/w08_boss_boss_w08_pollution_capit_move_01.png",
+      "tamano": [
+        240,
+        160
+      ],
+      "cuadros": 4,
+      "fps": 8,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w08_boss_boss_w08_pollution_spio_move",
+      "mundo": 8,
+      "tipo": "boss",
+      "ruta": "assets/sprites/w08/w08_boss_boss_w08_pollution_spio_move_01.png",
+      "tamano": [
+        240,
+        160
+      ],
+      "cuadros": 4,
+      "fps": 8,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w08_boss_boss_w08_pollution_cirrat_move",
+      "mundo": 8,
+      "tipo": "boss",
+      "ruta": "assets/sprites/w08/w08_boss_boss_w08_pollution_cirrat_move_01.png",
+      "tamano": [
+        240,
+        160
+      ],
+      "cuadros": 4,
+      "fps": 8,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w09_boss_boss_w09_tomo_move",
+      "mundo": 9,
+      "tipo": "boss",
+      "ruta": "assets/sprites/w09/w09_boss_boss_w09_tomo_move_01.png",
+      "tamano": [
+        240,
+        160
+      ],
+      "cuadros": 4,
+      "fps": 8,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w10_boss_boss_w10_eulagisca_move",
+      "mundo": 10,
+      "tipo": "boss",
+      "ruta": "assets/sprites/w10/w10_boss_boss_w10_eulagisca_move_01.png",
+      "tamano": [
+        240,
+        160
+      ],
+      "cuadros": 4,
+      "fps": 8,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w11_boss_boss_w11_osedax_move",
+      "mundo": 11,
+      "tipo": "boss",
+      "ruta": "assets/sprites/w11/w11_boss_boss_w11_osedax_move_01.png",
+      "tamano": [
+        240,
+        160
+      ],
+      "cuadros": 4,
+      "fps": 8,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w12_boss_boss_w12_alvinella_move",
+      "mundo": 12,
+      "tipo": "boss",
+      "ruta": "assets/sprites/w12/w12_boss_boss_w12_alvinella_move_01.png",
+      "tamano": [
+        240,
+        160
+      ],
+      "cuadros": 4,
+      "fps": 8,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w13_boss_boss_w13_hadalsovereign_move",
+      "mundo": 13,
+      "tipo": "boss",
+      "ruta": "assets/sprites/w13/w13_boss_boss_w13_hadalsovereign_move_01.png",
+      "tamano": [
+        240,
+        160
+      ],
+      "cuadros": 4,
+      "fps": 8,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w13_boss_boss_w13_riftia_move",
+      "mundo": 13,
+      "tipo": "boss",
+      "ruta": "assets/sprites/w13/w13_boss_boss_w13_riftia_move_01.png",
+      "tamano": [
+        240,
+        160
+      ],
+      "cuadros": 4,
+      "fps": 8,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w14_boss_boss_w14_robot_pinza_move",
+      "mundo": 14,
+      "tipo": "boss",
+      "ruta": "assets/sprites/w14/w14_boss_boss_w14_robot_pinza_move_01.png",
+      "tamano": [
+        240,
+        160
+      ],
+      "cuadros": 4,
+      "fps": 8,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w14_boss_boss_w14_robot_torreta_move",
+      "mundo": 14,
+      "tipo": "boss",
+      "ruta": "assets/sprites/w14/w14_boss_boss_w14_robot_torreta_move_01.png",
+      "tamano": [
+        240,
+        160
+      ],
+      "cuadros": 4,
+      "fps": 8,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w14_boss_boss_w14_robot_taladro_move",
+      "mundo": 14,
+      "tipo": "boss",
+      "ruta": "assets/sprites/w14/w14_boss_boss_w14_robot_taladro_move_01.png",
+      "tamano": [
+        240,
+        160
+      ],
+      "cuadros": 4,
+      "fps": 8,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w14_boss_boss_w14_epitoke_move",
+      "mundo": 14,
+      "tipo": "boss",
+      "ruta": "assets/sprites/w14/w14_boss_boss_w14_epitoke_move_01.png",
+      "tamano": [
+        240,
+        160
+      ],
+      "cuadros": 4,
+      "fps": 8,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w14_boss_boss_w14_scientist_move",
+      "mundo": 14,
+      "tipo": "boss",
+      "ruta": "assets/sprites/w14/w14_boss_boss_w14_scientist_move_01.png",
+      "tamano": [
+        240,
+        160
+      ],
+      "cuadros": 4,
+      "fps": 8,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w14_boss_boss_w14_eunice_titan_move",
+      "mundo": 14,
+      "tipo": "boss",
+      "ruta": "assets/sprites/w14/w14_boss_boss_w14_eunice_titan_move_01.png",
+      "tamano": [
+        320,
+        192
+      ],
+      "cuadros": 4,
+      "fps": 8,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w15_enemy_mech_syll_move",
+      "mundo": 15,
+      "tipo": "enemy",
+      "ruta": "assets/sprites/w15/w15_enemy_mech_syll_move_01.png",
+      "tamano": [
+        32,
+        32
+      ],
+      "cuadros": 4,
+      "fps": 8,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w15_enemy_mech_nereis_move",
+      "mundo": 15,
+      "tipo": "enemy",
+      "ruta": "assets/sprites/w15/w15_enemy_mech_nereis_move_01.png",
+      "tamano": [
+        32,
+        32
+      ],
+      "cuadros": 4,
+      "fps": 8,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w15_enemy_mech_sabel_move",
+      "mundo": 15,
+      "tipo": "enemy",
+      "ruta": "assets/sprites/w15/w15_enemy_mech_sabel_move_01.png",
+      "tamano": [
+        32,
+        32
+      ],
+      "cuadros": 4,
+      "fps": 8,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w15_enemy_mech_chaet_move",
+      "mundo": 15,
+      "tipo": "enemy",
+      "ruta": "assets/sprites/w15/w15_enemy_mech_chaet_move_01.png",
+      "tamano": [
+        32,
+        32
+      ],
+      "cuadros": 4,
+      "fps": 8,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w15_enemy_mech_riftia_move",
+      "mundo": 15,
+      "tipo": "enemy",
+      "ruta": "assets/sprites/w15/w15_enemy_mech_riftia_move_01.png",
+      "tamano": [
+        32,
+        32
+      ],
+      "cuadros": 4,
+      "fps": 8,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w15_enemy_mech_polyn_move",
+      "mundo": 15,
+      "tipo": "enemy",
+      "ruta": "assets/sprites/w15/w15_enemy_mech_polyn_move_01.png",
+      "tamano": [
+        32,
+        32
+      ],
+      "cuadros": 4,
+      "fps": 8,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w01_ui_ship_original_move",
+      "mundo": 1,
+      "tipo": "ui",
+      "ruta": "assets/ui/w01_ui_ship_original_move_01.png",
+      "tamano": [
+        48,
+        24
+      ],
+      "cuadros": 4,
+      "fps": 10,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w01_ui_panel_idle",
+      "mundo": 1,
+      "tipo": "ui",
+      "ruta": "assets/ui/w01_ui_panel_idle_01.png",
+      "tamano": [
+        16,
+        16
+      ],
+      "cuadros": 1,
+      "fps": 0,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w01_ui_panel_selected_idle",
+      "mundo": 1,
+      "tipo": "ui",
+      "ruta": "assets/ui/w01_ui_panel_selected_idle_01.png",
+      "tamano": [
+        16,
+        16
+      ],
+      "cuadros": 1,
+      "fps": 0,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w01_ui_pixel_idle",
+      "mundo": 1,
+      "tipo": "ui",
+      "ruta": "assets/ui/w01_ui_pixel_idle_01.png",
+      "tamano": [
+        1,
+        1
+      ],
+      "cuadros": 1,
+      "fps": 0,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w01_ui_hud_idle",
+      "mundo": 1,
+      "tipo": "ui",
+      "ruta": "assets/ui/w01_ui_hud_idle_01.png",
+      "tamano": [
+        640,
+        24
+      ],
+      "cuadros": 1,
+      "fps": 0,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w01_ui_cursor_idle",
+      "mundo": 1,
+      "tipo": "ui",
+      "ruta": "assets/ui/w01_ui_cursor_idle_01.png",
+      "tamano": [
+        8,
+        8
+      ],
+      "cuadros": 1,
+      "fps": 0,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w01_ui_hitbox_idle",
+      "mundo": 1,
+      "tipo": "ui",
+      "ruta": "assets/ui/w01_ui_hitbox_idle_01.png",
+      "tamano": [
+        16,
+        16
+      ],
+      "cuadros": 1,
+      "fps": 0,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w01_ui_hazard_idle",
+      "mundo": 1,
+      "tipo": "ui",
+      "ruta": "assets/ui/w01_ui_hazard_idle_01.png",
+      "tamano": [
+        64,
+        16
+      ],
+      "cuadros": 1,
+      "fps": 0,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w01_ui_title_idle",
+      "mundo": 1,
+      "tipo": "ui",
+      "ruta": "assets/ui/w01_ui_title_idle_01.png",
+      "tamano": [
+        320,
+        48
+      ],
+      "cuadros": 1,
+      "fps": 0,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w01_bullet_shot_move",
+      "mundo": 1,
+      "tipo": "bullet",
+      "ruta": "assets/sprites/w01/w01_bullet_shot_move_01.png",
+      "tamano": [
+        12,
+        4
+      ],
+      "cuadros": 2,
+      "fps": 10,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w01_bullet_enemy_move",
+      "mundo": 1,
+      "tipo": "bullet",
+      "ruta": "assets/sprites/w01/w01_bullet_enemy_move_01.png",
+      "tamano": [
+        8,
+        8
+      ],
+      "cuadros": 2,
+      "fps": 10,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w01_bullet_missile_move",
+      "mundo": 1,
+      "tipo": "bullet",
+      "ruta": "assets/sprites/w01/w01_bullet_missile_move_01.png",
+      "tamano": [
+        16,
+        8
+      ],
+      "cuadros": 2,
+      "fps": 10,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w01_bullet_laser_move",
+      "mundo": 1,
+      "tipo": "bullet",
+      "ruta": "assets/sprites/w01/w01_bullet_laser_move_01.png",
+      "tamano": [
+        32,
+        8
+      ],
+      "cuadros": 2,
+      "fps": 10,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w01_bullet_homing_move",
+      "mundo": 1,
+      "tipo": "bullet",
+      "ruta": "assets/sprites/w01/w01_bullet_homing_move_01.png",
+      "tamano": [
+        12,
+        8
+      ],
+      "cuadros": 2,
+      "fps": 10,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w01_bullet_bounce_move",
+      "mundo": 1,
+      "tipo": "bullet",
+      "ruta": "assets/sprites/w01/w01_bullet_bounce_move_01.png",
+      "tamano": [
+        8,
+        8
+      ],
+      "cuadros": 2,
+      "fps": 10,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w01_bullet_bomb_move",
+      "mundo": 1,
+      "tipo": "bullet",
+      "ruta": "assets/sprites/w01/w01_bullet_bomb_move_01.png",
+      "tamano": [
+        12,
+        12
+      ],
+      "cuadros": 2,
+      "fps": 10,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w01_ui_item_coin_idle",
+      "mundo": 1,
+      "tipo": "ui",
+      "ruta": "assets/ui/w01_ui_item_coin_idle_01.png",
+      "tamano": [
+        16,
+        16
+      ],
+      "cuadros": 2,
+      "fps": 8,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w01_ui_item_shot_idle",
+      "mundo": 1,
+      "tipo": "ui",
+      "ruta": "assets/ui/w01_ui_item_shot_idle_01.png",
+      "tamano": [
+        16,
+        16
+      ],
+      "cuadros": 2,
+      "fps": 8,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w01_ui_item_missile_idle",
+      "mundo": 1,
+      "tipo": "ui",
+      "ruta": "assets/ui/w01_ui_item_missile_idle_01.png",
+      "tamano": [
+        16,
+        16
+      ],
+      "cuadros": 2,
+      "fps": 8,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w01_ui_item_bomb_idle",
+      "mundo": 1,
+      "tipo": "ui",
+      "ruta": "assets/ui/w01_ui_item_bomb_idle_01.png",
+      "tamano": [
+        16,
+        16
+      ],
+      "cuadros": 2,
+      "fps": 8,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w01_ui_item_shield_idle",
+      "mundo": 1,
+      "tipo": "ui",
+      "ruta": "assets/ui/w01_ui_item_shield_idle_01.png",
+      "tamano": [
+        16,
+        16
+      ],
+      "cuadros": 2,
+      "fps": 8,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w01_ui_item_score_idle",
+      "mundo": 1,
+      "tipo": "ui",
+      "ruta": "assets/ui/w01_ui_item_score_idle_01.png",
+      "tamano": [
+        16,
+        16
+      ],
+      "cuadros": 2,
+      "fps": 8,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w01_ui_item_life_idle",
+      "mundo": 1,
+      "tipo": "ui",
+      "ruta": "assets/ui/w01_ui_item_life_idle_01.png",
+      "tamano": [
+        16,
+        16
+      ],
+      "cuadros": 2,
+      "fps": 8,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w01_ui_item_magnet_idle",
+      "mundo": 1,
+      "tipo": "ui",
+      "ruta": "assets/ui/w01_ui_item_magnet_idle_01.png",
+      "tamano": [
+        16,
+        16
+      ],
+      "cuadros": 2,
+      "fps": 8,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w01_fx_explosion_burst",
+      "mundo": 1,
+      "tipo": "fx",
+      "ruta": "assets/fx/w01_fx_explosion_burst_01.png",
+      "tamano": [
+        64,
+        64
+      ],
+      "cuadros": 8,
+      "fps": 12,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w01_fx_bomb_burst",
+      "mundo": 1,
+      "tipo": "fx",
+      "ruta": "assets/fx/w01_fx_bomb_burst_01.png",
+      "tamano": [
+        128,
+        128
+      ],
+      "cuadros": 8,
+      "fps": 12,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w01_fx_hit_burst",
+      "mundo": 1,
+      "tipo": "fx",
+      "ruta": "assets/fx/w01_fx_hit_burst_01.png",
+      "tamano": [
+        32,
+        32
+      ],
+      "cuadros": 8,
+      "fps": 12,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w01_fx_bubble_burst",
+      "mundo": 1,
+      "tipo": "fx",
+      "ruta": "assets/fx/w01_fx_bubble_burst_01.png",
+      "tamano": [
+        8,
+        8
+      ],
+      "cuadros": 8,
+      "fps": 12,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w01_fx_spark_burst",
+      "mundo": 1,
+      "tipo": "fx",
+      "ruta": "assets/fx/w01_fx_spark_burst_01.png",
+      "tamano": [
+        8,
+        8
+      ],
+      "cuadros": 8,
+      "fps": 12,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w01_fx_trail_burst",
+      "mundo": 1,
+      "tipo": "fx",
+      "ruta": "assets/fx/w01_fx_trail_burst_01.png",
+      "tamano": [
+        16,
+        8
+      ],
+      "cuadros": 8,
+      "fps": 12,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w01_fx_flash_burst",
+      "mundo": 1,
+      "tipo": "fx",
+      "ruta": "assets/fx/w01_fx_flash_burst_01.png",
+      "tamano": [
+        48,
+        24
+      ],
+      "cuadros": 8,
+      "fps": 12,
+      "estado": "placeholder"
+    }
+  ]
+}

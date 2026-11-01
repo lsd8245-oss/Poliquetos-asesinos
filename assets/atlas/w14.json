@@ -1,0 +1,3123 @@
+{
+  "imagen": "w14.png",
+  "tamano": [
+    2048,
+    2048
+  ],
+  "frames": {
+    "w14_bg_layer1_idle_01": {
+      "x": 0,
+      "y": 0,
+      "w": 640,
+      "h": 336
+    },
+    "w14_bg_layer2_idle_01": {
+      "x": 640,
+      "y": 0,
+      "w": 640,
+      "h": 336
+    },
+    "w14_bg_layer3_idle_01": {
+      "x": 1280,
+      "y": 0,
+      "w": 640,
+      "h": 336
+    },
+    "w14_bg_layer4_idle_01": {
+      "x": 0,
+      "y": 336,
+      "w": 640,
+      "h": 336
+    },
+    "w14_boss_boss_w14_eunice_titan_move_01": {
+      "x": 640,
+      "y": 336,
+      "w": 320,
+      "h": 192
+    },
+    "w14_boss_boss_w14_eunice_titan_move_02": {
+      "x": 960,
+      "y": 336,
+      "w": 320,
+      "h": 192
+    },
+    "w14_boss_boss_w14_eunice_titan_move_03": {
+      "x": 1280,
+      "y": 336,
+      "w": 320,
+      "h": 192
+    },
+    "w14_boss_boss_w14_eunice_titan_move_04": {
+      "x": 1600,
+      "y": 336,
+      "w": 320,
+      "h": 192
+    },
+    "w14_boss_boss_w14_epitoke_move_01": {
+      "x": 0,
+      "y": 672,
+      "w": 240,
+      "h": 160
+    },
+    "w14_boss_boss_w14_epitoke_move_02": {
+      "x": 240,
+      "y": 672,
+      "w": 240,
+      "h": 160
+    },
+    "w14_boss_boss_w14_epitoke_move_03": {
+      "x": 480,
+      "y": 672,
+      "w": 240,
+      "h": 160
+    },
+    "w14_boss_boss_w14_epitoke_move_04": {
+      "x": 720,
+      "y": 672,
+      "w": 240,
+      "h": 160
+    },
+    "w14_boss_boss_w14_robot_pinza_move_01": {
+      "x": 960,
+      "y": 672,
+      "w": 240,
+      "h": 160
+    },
+    "w14_boss_boss_w14_robot_pinza_move_02": {
+      "x": 1200,
+      "y": 672,
+      "w": 240,
+      "h": 160
+    },
+    "w14_boss_boss_w14_robot_pinza_move_03": {
+      "x": 1440,
+      "y": 672,
+      "w": 240,
+      "h": 160
+    },
+    "w14_boss_boss_w14_robot_pinza_move_04": {
+      "x": 1680,
+      "y": 672,
+      "w": 240,
+      "h": 160
+    },
+    "w14_boss_boss_w14_robot_taladro_move_01": {
+      "x": 0,
+      "y": 832,
+      "w": 240,
+      "h": 160
+    },
+    "w14_boss_boss_w14_robot_taladro_move_02": {
+      "x": 240,
+      "y": 832,
+      "w": 240,
+      "h": 160
+    },
+    "w14_boss_boss_w14_robot_taladro_move_03": {
+      "x": 480,
+      "y": 832,
+      "w": 240,
+      "h": 160
+    },
+    "w14_boss_boss_w14_robot_taladro_move_04": {
+      "x": 720,
+      "y": 832,
+      "w": 240,
+      "h": 160
+    },
+    "w14_boss_boss_w14_robot_torreta_move_01": {
+      "x": 960,
+      "y": 832,
+      "w": 240,
+      "h": 160
+    },
+    "w14_boss_boss_w14_robot_torreta_move_02": {
+      "x": 1200,
+      "y": 832,
+      "w": 240,
+      "h": 160
+    },
+    "w14_boss_boss_w14_robot_torreta_move_03": {
+      "x": 1440,
+      "y": 832,
+      "w": 240,
+      "h": 160
+    },
+    "w14_boss_boss_w14_robot_torreta_move_04": {
+      "x": 1680,
+      "y": 832,
+      "w": 240,
+      "h": 160
+    },
+    "w14_boss_boss_w14_scientist_move_01": {
+      "x": 0,
+      "y": 992,
+      "w": 240,
+      "h": 160
+    },
+    "w14_boss_boss_w14_scientist_move_02": {
+      "x": 240,
+      "y": 992,
+      "w": 240,
+      "h": 160
+    },
+    "w14_boss_boss_w14_scientist_move_03": {
+      "x": 480,
+      "y": 992,
+      "w": 240,
+      "h": 160
+    },
+    "w14_boss_boss_w14_scientist_move_04": {
+      "x": 720,
+      "y": 992,
+      "w": 240,
+      "h": 160
+    },
+    "w14_mini_mech_nereis_move_01": {
+      "x": 960,
+      "y": 992,
+      "w": 112,
+      "h": 96
+    },
+    "w14_mini_mech_nereis_move_02": {
+      "x": 1072,
+      "y": 992,
+      "w": 112,
+      "h": 96
+    },
+    "w14_mini_mech_nereis_move_03": {
+      "x": 1184,
+      "y": 992,
+      "w": 112,
+      "h": 96
+    },
+    "w14_mini_mech_nereis_move_04": {
+      "x": 1296,
+      "y": 992,
+      "w": 112,
+      "h": 96
+    },
+    "w14_enemy_acoet_move_01": {
+      "x": 1408,
+      "y": 992,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_acoet_move_02": {
+      "x": 1440,
+      "y": 992,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_acoet_move_03": {
+      "x": 1472,
+      "y": 992,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_acoet_move_04": {
+      "x": 1504,
+      "y": 992,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_alciop_move_01": {
+      "x": 1536,
+      "y": 992,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_alciop_move_02": {
+      "x": 1568,
+      "y": 992,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_alciop_move_03": {
+      "x": 1600,
+      "y": 992,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_alciop_move_04": {
+      "x": 1632,
+      "y": 992,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_amphar_move_01": {
+      "x": 1664,
+      "y": 992,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_amphar_move_02": {
+      "x": 1696,
+      "y": 992,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_amphar_move_03": {
+      "x": 1728,
+      "y": 992,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_amphar_move_04": {
+      "x": 1760,
+      "y": 992,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_amphisamytha_move_01": {
+      "x": 1792,
+      "y": 992,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_amphisamytha_move_02": {
+      "x": 1824,
+      "y": 992,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_amphisamytha_move_03": {
+      "x": 1856,
+      "y": 992,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_amphisamytha_move_04": {
+      "x": 1888,
+      "y": 992,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_aphelochaeta_move_01": {
+      "x": 1920,
+      "y": 992,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_aphelochaeta_move_02": {
+      "x": 1952,
+      "y": 992,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_aphelochaeta_move_03": {
+      "x": 1984,
+      "y": 992,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_aphelochaeta_move_04": {
+      "x": 2016,
+      "y": 992,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_aphro_move_01": {
+      "x": 0,
+      "y": 1152,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_aphro_move_02": {
+      "x": 32,
+      "y": 1152,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_aphro_move_03": {
+      "x": 64,
+      "y": 1152,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_aphro_move_04": {
+      "x": 96,
+      "y": 1152,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_arabella_move_01": {
+      "x": 128,
+      "y": 1152,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_arabella_move_02": {
+      "x": 160,
+      "y": 1152,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_arabella_move_03": {
+      "x": 192,
+      "y": 1152,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_arabella_move_04": {
+      "x": 224,
+      "y": 1152,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_arenicola_move_01": {
+      "x": 256,
+      "y": 1152,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_arenicola_move_02": {
+      "x": 288,
+      "y": 1152,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_arenicola_move_03": {
+      "x": 320,
+      "y": 1152,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_arenicola_move_04": {
+      "x": 352,
+      "y": 1152,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_aricidea_move_01": {
+      "x": 384,
+      "y": 1152,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_aricidea_move_02": {
+      "x": 416,
+      "y": 1152,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_aricidea_move_03": {
+      "x": 448,
+      "y": 1152,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_aricidea_move_04": {
+      "x": 480,
+      "y": 1152,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_bathykurila_move_01": {
+      "x": 512,
+      "y": 1152,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_bathykurila_move_02": {
+      "x": 544,
+      "y": 1152,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_bathykurila_move_03": {
+      "x": 576,
+      "y": 1152,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_bathykurila_move_04": {
+      "x": 608,
+      "y": 1152,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_brada_move_01": {
+      "x": 640,
+      "y": 1152,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_brada_move_02": {
+      "x": 672,
+      "y": 1152,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_brada_move_03": {
+      "x": 704,
+      "y": 1152,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_brada_move_04": {
+      "x": 736,
+      "y": 1152,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_branchinotogluma_move_01": {
+      "x": 768,
+      "y": 1152,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_branchinotogluma_move_02": {
+      "x": 800,
+      "y": 1152,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_branchinotogluma_move_03": {
+      "x": 832,
+      "y": 1152,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_branchinotogluma_move_04": {
+      "x": 864,
+      "y": 1152,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_chaetopterus_move_01": {
+      "x": 896,
+      "y": 1152,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_chaetopterus_move_02": {
+      "x": 928,
+      "y": 1152,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_chaetopterus_move_03": {
+      "x": 960,
+      "y": 1152,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_chaetopterus_move_04": {
+      "x": 992,
+      "y": 1152,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_chryso_move_01": {
+      "x": 1024,
+      "y": 1152,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_chryso_move_02": {
+      "x": 1056,
+      "y": 1152,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_chryso_move_03": {
+      "x": 1088,
+      "y": 1152,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_chryso_move_04": {
+      "x": 1120,
+      "y": 1152,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_cirrat_move_01": {
+      "x": 1152,
+      "y": 1152,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_cirrat_move_02": {
+      "x": 1184,
+      "y": 1152,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_cirrat_move_03": {
+      "x": 1216,
+      "y": 1152,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_cirrat_move_04": {
+      "x": 1248,
+      "y": 1152,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_cossura_move_01": {
+      "x": 1280,
+      "y": 1152,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_cossura_move_02": {
+      "x": 1312,
+      "y": 1152,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_cossura_move_03": {
+      "x": 1344,
+      "y": 1152,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_cossura_move_04": {
+      "x": 1376,
+      "y": 1152,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_cteno_move_01": {
+      "x": 1408,
+      "y": 1152,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_cteno_move_02": {
+      "x": 1440,
+      "y": 1152,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_cteno_move_03": {
+      "x": 1472,
+      "y": 1152,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_cteno_move_04": {
+      "x": 1504,
+      "y": 1152,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_diopatra_move_01": {
+      "x": 1536,
+      "y": 1152,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_diopatra_move_02": {
+      "x": 1568,
+      "y": 1152,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_diopatra_move_03": {
+      "x": 1600,
+      "y": 1152,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_diopatra_move_04": {
+      "x": 1632,
+      "y": 1152,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_dodeca_move_01": {
+      "x": 1664,
+      "y": 1152,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_dodeca_move_02": {
+      "x": 1696,
+      "y": 1152,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_dodeca_move_03": {
+      "x": 1728,
+      "y": 1152,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_dodeca_move_04": {
+      "x": 1760,
+      "y": 1152,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_dorville_move_01": {
+      "x": 1792,
+      "y": 1152,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_dorville_move_02": {
+      "x": 1824,
+      "y": 1152,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_dorville_move_03": {
+      "x": 1856,
+      "y": 1152,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_dorville_move_04": {
+      "x": 1888,
+      "y": 1152,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_eulepeth_move_01": {
+      "x": 1920,
+      "y": 1152,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_eulepeth_move_02": {
+      "x": 1952,
+      "y": 1152,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_eulepeth_move_03": {
+      "x": 1984,
+      "y": 1152,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_eulepeth_move_04": {
+      "x": 2016,
+      "y": 1152,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_euphrosine_move_01": {
+      "x": 0,
+      "y": 1184,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_euphrosine_move_02": {
+      "x": 32,
+      "y": 1184,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_euphrosine_move_03": {
+      "x": 64,
+      "y": 1184,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_euphrosine_move_04": {
+      "x": 96,
+      "y": 1184,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_fabric_move_01": {
+      "x": 128,
+      "y": 1184,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_fabric_move_02": {
+      "x": 160,
+      "y": 1184,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_fabric_move_03": {
+      "x": 192,
+      "y": 1184,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_fabric_move_04": {
+      "x": 224,
+      "y": 1184,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_fauvel_move_01": {
+      "x": 256,
+      "y": 1184,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_fauvel_move_02": {
+      "x": 288,
+      "y": 1184,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_fauvel_move_03": {
+      "x": 320,
+      "y": 1184,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_fauvel_move_04": {
+      "x": 352,
+      "y": 1184,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_flabegraviera_move_01": {
+      "x": 384,
+      "y": 1184,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_flabegraviera_move_02": {
+      "x": 416,
+      "y": 1184,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_flabegraviera_move_03": {
+      "x": 448,
+      "y": 1184,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_flabegraviera_move_04": {
+      "x": 480,
+      "y": 1184,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_glycer_move_01": {
+      "x": 512,
+      "y": 1184,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_glycer_move_02": {
+      "x": 544,
+      "y": 1184,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_glycer_move_03": {
+      "x": 576,
+      "y": 1184,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_glycer_move_04": {
+      "x": 608,
+      "y": 1184,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_glycera_move_01": {
+      "x": 640,
+      "y": 1184,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_glycera_move_02": {
+      "x": 672,
+      "y": 1184,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_glycera_move_03": {
+      "x": 704,
+      "y": 1184,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_glycera_move_04": {
+      "x": 736,
+      "y": 1184,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_goniada_move_01": {
+      "x": 768,
+      "y": 1184,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_goniada_move_02": {
+      "x": 800,
+      "y": 1184,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_goniada_move_03": {
+      "x": 832,
+      "y": 1184,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_goniada_move_04": {
+      "x": 864,
+      "y": 1184,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_hesio_move_01": {
+      "x": 896,
+      "y": 1184,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_hesio_move_02": {
+      "x": 928,
+      "y": 1184,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_hesio_move_03": {
+      "x": 960,
+      "y": 1184,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_hesio_move_04": {
+      "x": 992,
+      "y": 1184,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_hesiocaeca_move_01": {
+      "x": 1024,
+      "y": 1184,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_hesiocaeca_move_02": {
+      "x": 1056,
+      "y": 1184,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_hesiocaeca_move_03": {
+      "x": 1088,
+      "y": 1184,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_hesiocaeca_move_04": {
+      "x": 1120,
+      "y": 1184,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_hesiolyra_move_01": {
+      "x": 1152,
+      "y": 1184,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_hesiolyra_move_02": {
+      "x": 1184,
+      "y": 1184,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_hesiolyra_move_03": {
+      "x": 1216,
+      "y": 1184,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_hesiolyra_move_04": {
+      "x": 1248,
+      "y": 1184,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_histrio_move_01": {
+      "x": 1280,
+      "y": 1184,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_histrio_move_02": {
+      "x": 1312,
+      "y": 1184,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_histrio_move_03": {
+      "x": 1344,
+      "y": 1184,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_histrio_move_04": {
+      "x": 1376,
+      "y": 1184,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_hydroides_move_01": {
+      "x": 1408,
+      "y": 1184,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_hydroides_move_02": {
+      "x": 1440,
+      "y": 1184,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_hydroides_move_03": {
+      "x": 1472,
+      "y": 1184,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_hydroides_move_04": {
+      "x": 1504,
+      "y": 1184,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_iospil_move_01": {
+      "x": 1536,
+      "y": 1184,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_iospil_move_02": {
+      "x": 1568,
+      "y": 1184,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_iospil_move_03": {
+      "x": 1600,
+      "y": 1184,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_iospil_move_04": {
+      "x": 1632,
+      "y": 1184,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_lacy_move_01": {
+      "x": 1664,
+      "y": 1184,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_lacy_move_02": {
+      "x": 1696,
+      "y": 1184,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_lacy_move_03": {
+      "x": 1728,
+      "y": 1184,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_lacy_move_04": {
+      "x": 1760,
+      "y": 1184,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_lopado_move_01": {
+      "x": 1792,
+      "y": 1184,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_lopado_move_02": {
+      "x": 1824,
+      "y": 1184,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_lopado_move_03": {
+      "x": 1856,
+      "y": 1184,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_lopado_move_04": {
+      "x": 1888,
+      "y": 1184,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_lumbrineris_move_01": {
+      "x": 1920,
+      "y": 1184,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_lumbrineris_move_02": {
+      "x": 1952,
+      "y": 1184,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_lumbrineris_move_03": {
+      "x": 1984,
+      "y": 1184,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_lumbrineris_move_04": {
+      "x": 2016,
+      "y": 1184,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_macellicephaloides_move_01": {
+      "x": 0,
+      "y": 1216,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_macellicephaloides_move_02": {
+      "x": 32,
+      "y": 1216,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_macellicephaloides_move_03": {
+      "x": 64,
+      "y": 1216,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_macellicephaloides_move_04": {
+      "x": 96,
+      "y": 1216,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_magelona_move_01": {
+      "x": 128,
+      "y": 1216,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_magelona_move_02": {
+      "x": 160,
+      "y": 1216,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_magelona_move_03": {
+      "x": 192,
+      "y": 1216,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_magelona_move_04": {
+      "x": 224,
+      "y": 1216,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_mald_move_01": {
+      "x": 256,
+      "y": 1216,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_mald_move_02": {
+      "x": 288,
+      "y": 1216,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_mald_move_03": {
+      "x": 320,
+      "y": 1216,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_mald_move_04": {
+      "x": 352,
+      "y": 1216,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_mech_chaet_move_01": {
+      "x": 384,
+      "y": 1216,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_mech_chaet_move_02": {
+      "x": 416,
+      "y": 1216,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_mech_chaet_move_03": {
+      "x": 448,
+      "y": 1216,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_mech_chaet_move_04": {
+      "x": 480,
+      "y": 1216,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_mech_nereis_move_01": {
+      "x": 512,
+      "y": 1216,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_mech_nereis_move_02": {
+      "x": 544,
+      "y": 1216,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_mech_nereis_move_03": {
+      "x": 576,
+      "y": 1216,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_mech_nereis_move_04": {
+      "x": 608,
+      "y": 1216,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_mech_polyn_move_01": {
+      "x": 640,
+      "y": 1216,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_mech_polyn_move_02": {
+      "x": 672,
+      "y": 1216,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_mech_polyn_move_03": {
+      "x": 704,
+      "y": 1216,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_mech_polyn_move_04": {
+      "x": 736,
+      "y": 1216,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_mech_riftia_move_01": {
+      "x": 768,
+      "y": 1216,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_mech_riftia_move_02": {
+      "x": 800,
+      "y": 1216,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_mech_riftia_move_03": {
+      "x": 832,
+      "y": 1216,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_mech_riftia_move_04": {
+      "x": 864,
+      "y": 1216,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_mech_sabel_move_01": {
+      "x": 896,
+      "y": 1216,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_mech_sabel_move_02": {
+      "x": 928,
+      "y": 1216,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_mech_sabel_move_03": {
+      "x": 960,
+      "y": 1216,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_mech_sabel_move_04": {
+      "x": 992,
+      "y": 1216,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_mech_syll_move_01": {
+      "x": 1024,
+      "y": 1216,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_mech_syll_move_02": {
+      "x": 1056,
+      "y": 1216,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_mech_syll_move_03": {
+      "x": 1088,
+      "y": 1216,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_mech_syll_move_04": {
+      "x": 1120,
+      "y": 1216,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_myxicola_move_01": {
+      "x": 1152,
+      "y": 1216,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_myxicola_move_02": {
+      "x": 1184,
+      "y": 1216,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_myxicola_move_03": {
+      "x": 1216,
+      "y": 1216,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_myxicola_move_04": {
+      "x": 1248,
+      "y": 1216,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_nautil_move_01": {
+      "x": 1280,
+      "y": 1216,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_nautil_move_02": {
+      "x": 1312,
+      "y": 1216,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_nautil_move_03": {
+      "x": 1344,
+      "y": 1216,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_nautil_move_04": {
+      "x": 1376,
+      "y": 1216,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_nepht_move_01": {
+      "x": 1408,
+      "y": 1216,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_nepht_move_02": {
+      "x": 1440,
+      "y": 1216,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_nepht_move_03": {
+      "x": 1472,
+      "y": 1216,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_nepht_move_04": {
+      "x": 1504,
+      "y": 1216,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_oenone_move_01": {
+      "x": 1536,
+      "y": 1216,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_oenone_move_02": {
+      "x": 1568,
+      "y": 1216,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_oenone_move_03": {
+      "x": 1600,
+      "y": 1216,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_oenone_move_04": {
+      "x": 1632,
+      "y": 1216,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_ophelia_move_01": {
+      "x": 1664,
+      "y": 1216,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_ophelia_move_02": {
+      "x": 1696,
+      "y": 1216,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_ophelia_move_03": {
+      "x": 1728,
+      "y": 1216,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_ophelia_move_04": {
+      "x": 1760,
+      "y": 1216,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_ophryotrocha_move_01": {
+      "x": 1792,
+      "y": 1216,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_ophryotrocha_move_02": {
+      "x": 1824,
+      "y": 1216,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_ophryotrocha_move_03": {
+      "x": 1856,
+      "y": 1216,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_ophryotrocha_move_04": {
+      "x": 1888,
+      "y": 1216,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_owenia_move_01": {
+      "x": 1920,
+      "y": 1216,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_owenia_move_02": {
+      "x": 1952,
+      "y": 1216,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_owenia_move_03": {
+      "x": 1984,
+      "y": 1216,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_owenia_move_04": {
+      "x": 2016,
+      "y": 1216,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_paralvinella_move_01": {
+      "x": 0,
+      "y": 1248,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_paralvinella_move_02": {
+      "x": 32,
+      "y": 1248,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_paralvinella_move_03": {
+      "x": 64,
+      "y": 1248,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_paralvinella_move_04": {
+      "x": 96,
+      "y": 1248,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_pectinaria_move_01": {
+      "x": 128,
+      "y": 1248,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_pectinaria_move_02": {
+      "x": 160,
+      "y": 1248,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_pectinaria_move_03": {
+      "x": 192,
+      "y": 1248,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_pectinaria_move_04": {
+      "x": 224,
+      "y": 1248,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_perkinsiana_move_01": {
+      "x": 256,
+      "y": 1248,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_perkinsiana_move_02": {
+      "x": 288,
+      "y": 1248,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_perkinsiana_move_03": {
+      "x": 320,
+      "y": 1248,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_perkinsiana_move_04": {
+      "x": 352,
+      "y": 1248,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_pholoe_move_01": {
+      "x": 384,
+      "y": 1248,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_pholoe_move_02": {
+      "x": 416,
+      "y": 1248,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_pholoe_move_03": {
+      "x": 448,
+      "y": 1248,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_pholoe_move_04": {
+      "x": 480,
+      "y": 1248,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_phyll_move_01": {
+      "x": 512,
+      "y": 1248,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_phyll_move_02": {
+      "x": 544,
+      "y": 1248,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_phyll_move_03": {
+      "x": 576,
+      "y": 1248,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_phyll_move_04": {
+      "x": 608,
+      "y": 1248,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_pilarg_move_01": {
+      "x": 640,
+      "y": 1248,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_pilarg_move_02": {
+      "x": 672,
+      "y": 1248,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_pilarg_move_03": {
+      "x": 704,
+      "y": 1248,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_pilarg_move_04": {
+      "x": 736,
+      "y": 1248,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_pision_move_01": {
+      "x": 768,
+      "y": 1248,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_pision_move_02": {
+      "x": 800,
+      "y": 1248,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_pision_move_03": {
+      "x": 832,
+      "y": 1248,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_pision_move_04": {
+      "x": 864,
+      "y": 1248,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_poeo_move_01": {
+      "x": 896,
+      "y": 1248,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_poeo_move_02": {
+      "x": 928,
+      "y": 1248,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_poeo_move_03": {
+      "x": 960,
+      "y": 1248,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_poeo_move_04": {
+      "x": 992,
+      "y": 1248,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_pontod_move_01": {
+      "x": 1024,
+      "y": 1248,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_pontod_move_02": {
+      "x": 1056,
+      "y": 1248,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_pontod_move_03": {
+      "x": 1088,
+      "y": 1248,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_pontod_move_04": {
+      "x": 1120,
+      "y": 1248,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_protod_move_01": {
+      "x": 1152,
+      "y": 1248,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_protod_move_02": {
+      "x": 1184,
+      "y": 1248,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_protod_move_03": {
+      "x": 1216,
+      "y": 1248,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_protod_move_04": {
+      "x": 1248,
+      "y": 1248,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_questa_move_01": {
+      "x": 1280,
+      "y": 1248,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_questa_move_02": {
+      "x": 1312,
+      "y": 1248,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_questa_move_03": {
+      "x": 1344,
+      "y": 1248,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_questa_move_04": {
+      "x": 1376,
+      "y": 1248,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_riftia_move_01": {
+      "x": 1408,
+      "y": 1248,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_riftia_move_02": {
+      "x": 1440,
+      "y": 1248,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_riftia_move_03": {
+      "x": 1472,
+      "y": 1248,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_riftia_move_04": {
+      "x": 1504,
+      "y": 1248,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_sabellaria_move_01": {
+      "x": 1536,
+      "y": 1248,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_sabellaria_move_02": {
+      "x": 1568,
+      "y": 1248,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_sabellaria_move_03": {
+      "x": 1600,
+      "y": 1248,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_sabellaria_move_04": {
+      "x": 1632,
+      "y": 1248,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_sabellastarte_move_01": {
+      "x": 1664,
+      "y": 1248,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_sabellastarte_move_02": {
+      "x": 1696,
+      "y": 1248,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_sabellastarte_move_03": {
+      "x": 1728,
+      "y": 1248,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_sabellastarte_move_04": {
+      "x": 1760,
+      "y": 1248,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_sacco_move_01": {
+      "x": 1792,
+      "y": 1248,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_sacco_move_02": {
+      "x": 1824,
+      "y": 1248,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_sacco_move_03": {
+      "x": 1856,
+      "y": 1248,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_sacco_move_04": {
+      "x": 1888,
+      "y": 1248,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_scali_move_01": {
+      "x": 1920,
+      "y": 1248,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_scali_move_02": {
+      "x": 1952,
+      "y": 1248,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_scali_move_03": {
+      "x": 1984,
+      "y": 1248,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_scali_move_04": {
+      "x": 2016,
+      "y": 1248,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_serp_move_01": {
+      "x": 0,
+      "y": 1280,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_serp_move_02": {
+      "x": 32,
+      "y": 1280,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_serp_move_03": {
+      "x": 64,
+      "y": 1280,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_serp_move_04": {
+      "x": 96,
+      "y": 1280,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_spha_move_01": {
+      "x": 128,
+      "y": 1280,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_spha_move_02": {
+      "x": 160,
+      "y": 1280,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_spha_move_03": {
+      "x": 192,
+      "y": 1280,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_spha_move_04": {
+      "x": 224,
+      "y": 1280,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_spinther_move_01": {
+      "x": 256,
+      "y": 1280,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_spinther_move_02": {
+      "x": 288,
+      "y": 1280,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_spinther_move_03": {
+      "x": 320,
+      "y": 1280,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_spinther_move_04": {
+      "x": 352,
+      "y": 1280,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_spio_move_01": {
+      "x": 384,
+      "y": 1280,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_spio_move_02": {
+      "x": 416,
+      "y": 1280,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_spio_move_03": {
+      "x": 448,
+      "y": 1280,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_spio_move_04": {
+      "x": 480,
+      "y": 1280,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_spirobranchus_move_01": {
+      "x": 512,
+      "y": 1280,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_spirobranchus_move_02": {
+      "x": 544,
+      "y": 1280,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_spirobranchus_move_03": {
+      "x": 576,
+      "y": 1280,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_spirobranchus_move_04": {
+      "x": 608,
+      "y": 1280,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_spirorbis_move_01": {
+      "x": 640,
+      "y": 1280,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_spirorbis_move_02": {
+      "x": 672,
+      "y": 1280,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_spirorbis_move_03": {
+      "x": 704,
+      "y": 1280,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_spirorbis_move_04": {
+      "x": 736,
+      "y": 1280,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_stern_move_01": {
+      "x": 768,
+      "y": 1280,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_stern_move_02": {
+      "x": 800,
+      "y": 1280,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_stern_move_03": {
+      "x": 832,
+      "y": 1280,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_stern_move_04": {
+      "x": 864,
+      "y": 1280,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_sthenelais_move_01": {
+      "x": 896,
+      "y": 1280,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_sthenelais_move_02": {
+      "x": 928,
+      "y": 1280,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_sthenelais_move_03": {
+      "x": 960,
+      "y": 1280,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_sthenelais_move_04": {
+      "x": 992,
+      "y": 1280,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_swima_move_01": {
+      "x": 1024,
+      "y": 1280,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_swima_move_02": {
+      "x": 1056,
+      "y": 1280,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_swima_move_03": {
+      "x": 1088,
+      "y": 1280,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_swima_move_04": {
+      "x": 1120,
+      "y": 1280,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_syll_move_01": {
+      "x": 1152,
+      "y": 1280,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_syll_move_02": {
+      "x": 1184,
+      "y": 1280,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_syll_move_03": {
+      "x": 1216,
+      "y": 1280,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_syll_move_04": {
+      "x": 1248,
+      "y": 1280,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_syll_stolon_move_01": {
+      "x": 1280,
+      "y": 1280,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_syll_stolon_move_02": {
+      "x": 1312,
+      "y": 1280,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_syll_stolon_move_03": {
+      "x": 1344,
+      "y": 1280,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_syll_stolon_move_04": {
+      "x": 1376,
+      "y": 1280,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_terebellides_move_01": {
+      "x": 1408,
+      "y": 1280,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_terebellides_move_02": {
+      "x": 1440,
+      "y": 1280,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_terebellides_move_03": {
+      "x": 1472,
+      "y": 1280,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_terebellides_move_04": {
+      "x": 1504,
+      "y": 1280,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_trocho_move_01": {
+      "x": 1536,
+      "y": 1280,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_trocho_move_02": {
+      "x": 1568,
+      "y": 1280,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_trocho_move_03": {
+      "x": 1600,
+      "y": 1280,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_trocho_move_04": {
+      "x": 1632,
+      "y": 1280,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_typhlo_move_01": {
+      "x": 1664,
+      "y": 1280,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_typhlo_move_02": {
+      "x": 1696,
+      "y": 1280,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_typhlo_move_03": {
+      "x": 1728,
+      "y": 1280,
+      "w": 32,
+      "h": 32
+    },
+    "w14_enemy_typhlo_move_04": {
+      "x": 1760,
+      "y": 1280,
+      "w": 32,
+      "h": 32
+    }
+  },
+  "animaciones": {
+    "w14_bg_layer1_idle": {
+      "frames": [
+        "w14_bg_layer1_idle_01"
+      ],
+      "fps": 1,
+      "bucle": true
+    },
+    "w14_bg_layer2_idle": {
+      "frames": [
+        "w14_bg_layer2_idle_01"
+      ],
+      "fps": 1,
+      "bucle": true
+    },
+    "w14_bg_layer3_idle": {
+      "frames": [
+        "w14_bg_layer3_idle_01"
+      ],
+      "fps": 1,
+      "bucle": true
+    },
+    "w14_bg_layer4_idle": {
+      "frames": [
+        "w14_bg_layer4_idle_01"
+      ],
+      "fps": 1,
+      "bucle": true
+    },
+    "w14_enemy_mech_syll_move": {
+      "frames": [
+        "w14_enemy_mech_syll_move_01",
+        "w14_enemy_mech_syll_move_02",
+        "w14_enemy_mech_syll_move_03",
+        "w14_enemy_mech_syll_move_04"
+      ],
+      "fps": 8,
+      "bucle": true
+    },
+    "w14_enemy_mech_nereis_move": {
+      "frames": [
+        "w14_enemy_mech_nereis_move_01",
+        "w14_enemy_mech_nereis_move_02",
+        "w14_enemy_mech_nereis_move_03",
+        "w14_enemy_mech_nereis_move_04"
+      ],
+      "fps": 8,
+      "bucle": true
+    },
+    "w14_enemy_mech_sabel_move": {
+      "frames": [
+        "w14_enemy_mech_sabel_move_01",
+        "w14_enemy_mech_sabel_move_02",
+        "w14_enemy_mech_sabel_move_03",
+        "w14_enemy_mech_sabel_move_04"
+      ],
+      "fps": 8,
+      "bucle": true
+    },
+    "w14_enemy_mech_chaet_move": {
+      "frames": [
+        "w14_enemy_mech_chaet_move_01",
+        "w14_enemy_mech_chaet_move_02",
+        "w14_enemy_mech_chaet_move_03",
+        "w14_enemy_mech_chaet_move_04"
+      ],
+      "fps": 8,
+      "bucle": true
+    },
+    "w14_enemy_mech_riftia_move": {
+      "frames": [
+        "w14_enemy_mech_riftia_move_01",
+        "w14_enemy_mech_riftia_move_02",
+        "w14_enemy_mech_riftia_move_03",
+        "w14_enemy_mech_riftia_move_04"
+      ],
+      "fps": 8,
+      "bucle": true
+    },
+    "w14_enemy_mech_polyn_move": {
+      "frames": [
+        "w14_enemy_mech_polyn_move_01",
+        "w14_enemy_mech_polyn_move_02",
+        "w14_enemy_mech_polyn_move_03",
+        "w14_enemy_mech_polyn_move_04"
+      ],
+      "fps": 8,
+      "bucle": true
+    },
+    "w14_enemy_hydroides_move": {
+      "frames": [
+        "w14_enemy_hydroides_move_01",
+        "w14_enemy_hydroides_move_02",
+        "w14_enemy_hydroides_move_03",
+        "w14_enemy_hydroides_move_04"
+      ],
+      "fps": 8,
+      "bucle": true
+    },
+    "w14_enemy_euphrosine_move": {
+      "frames": [
+        "w14_enemy_euphrosine_move_01",
+        "w14_enemy_euphrosine_move_02",
+        "w14_enemy_euphrosine_move_03",
+        "w14_enemy_euphrosine_move_04"
+      ],
+      "fps": 8,
+      "bucle": true
+    },
+    "w14_enemy_fabric_move": {
+      "frames": [
+        "w14_enemy_fabric_move_01",
+        "w14_enemy_fabric_move_02",
+        "w14_enemy_fabric_move_03",
+        "w14_enemy_fabric_move_04"
+      ],
+      "fps": 8,
+      "bucle": true
+    },
+    "w14_enemy_pision_move": {
+      "frames": [
+        "w14_enemy_pision_move_01",
+        "w14_enemy_pision_move_02",
+        "w14_enemy_pision_move_03",
+        "w14_enemy_pision_move_04"
+      ],
+      "fps": 8,
+      "bucle": true
+    },
+    "w14_enemy_lacy_move": {
+      "frames": [
+        "w14_enemy_lacy_move_01",
+        "w14_enemy_lacy_move_02",
+        "w14_enemy_lacy_move_03",
+        "w14_enemy_lacy_move_04"
+      ],
+      "fps": 8,
+      "bucle": true
+    },
+    "w14_enemy_syll_move": {
+      "frames": [
+        "w14_enemy_syll_move_01",
+        "w14_enemy_syll_move_02",
+        "w14_enemy_syll_move_03",
+        "w14_enemy_syll_move_04"
+      ],
+      "fps": 8,
+      "bucle": true
+    },
+    "w14_enemy_phyll_move": {
+      "frames": [
+        "w14_enemy_phyll_move_01",
+        "w14_enemy_phyll_move_02",
+        "w14_enemy_phyll_move_03",
+        "w14_enemy_phyll_move_04"
+      ],
+      "fps": 8,
+      "bucle": true
+    },
+    "w14_enemy_arenicola_move": {
+      "frames": [
+        "w14_enemy_arenicola_move_01",
+        "w14_enemy_arenicola_move_02",
+        "w14_enemy_arenicola_move_03",
+        "w14_enemy_arenicola_move_04"
+      ],
+      "fps": 8,
+      "bucle": true
+    },
+    "w14_enemy_magelona_move": {
+      "frames": [
+        "w14_enemy_magelona_move_01",
+        "w14_enemy_magelona_move_02",
+        "w14_enemy_magelona_move_03",
+        "w14_enemy_magelona_move_04"
+      ],
+      "fps": 8,
+      "bucle": true
+    },
+    "w14_enemy_sthenelais_move": {
+      "frames": [
+        "w14_enemy_sthenelais_move_01",
+        "w14_enemy_sthenelais_move_02",
+        "w14_enemy_sthenelais_move_03",
+        "w14_enemy_sthenelais_move_04"
+      ],
+      "fps": 8,
+      "bucle": true
+    },
+    "w14_enemy_sacco_move": {
+      "frames": [
+        "w14_enemy_sacco_move_01",
+        "w14_enemy_sacco_move_02",
+        "w14_enemy_sacco_move_03",
+        "w14_enemy_sacco_move_04"
+      ],
+      "fps": 8,
+      "bucle": true
+    },
+    "w14_enemy_goniada_move": {
+      "frames": [
+        "w14_enemy_goniada_move_01",
+        "w14_enemy_goniada_move_02",
+        "w14_enemy_goniada_move_03",
+        "w14_enemy_goniada_move_04"
+      ],
+      "fps": 8,
+      "bucle": true
+    },
+    "w14_enemy_spio_move": {
+      "frames": [
+        "w14_enemy_spio_move_01",
+        "w14_enemy_spio_move_02",
+        "w14_enemy_spio_move_03",
+        "w14_enemy_spio_move_04"
+      ],
+      "fps": 8,
+      "bucle": true
+    },
+    "w14_enemy_nepht_move": {
+      "frames": [
+        "w14_enemy_nepht_move_01",
+        "w14_enemy_nepht_move_02",
+        "w14_enemy_nepht_move_03",
+        "w14_enemy_nepht_move_04"
+      ],
+      "fps": 8,
+      "bucle": true
+    },
+    "w14_enemy_glycer_move": {
+      "frames": [
+        "w14_enemy_glycer_move_01",
+        "w14_enemy_glycer_move_02",
+        "w14_enemy_glycer_move_03",
+        "w14_enemy_glycer_move_04"
+      ],
+      "fps": 8,
+      "bucle": true
+    },
+    "w14_enemy_dodeca_move": {
+      "frames": [
+        "w14_enemy_dodeca_move_01",
+        "w14_enemy_dodeca_move_02",
+        "w14_enemy_dodeca_move_03",
+        "w14_enemy_dodeca_move_04"
+      ],
+      "fps": 8,
+      "bucle": true
+    },
+    "w14_enemy_oenone_move": {
+      "frames": [
+        "w14_enemy_oenone_move_01",
+        "w14_enemy_oenone_move_02",
+        "w14_enemy_oenone_move_03",
+        "w14_enemy_oenone_move_04"
+      ],
+      "fps": 8,
+      "bucle": true
+    },
+    "w14_enemy_arabella_move": {
+      "frames": [
+        "w14_enemy_arabella_move_01",
+        "w14_enemy_arabella_move_02",
+        "w14_enemy_arabella_move_03",
+        "w14_enemy_arabella_move_04"
+      ],
+      "fps": 8,
+      "bucle": true
+    },
+    "w14_enemy_spha_move": {
+      "frames": [
+        "w14_enemy_spha_move_01",
+        "w14_enemy_spha_move_02",
+        "w14_enemy_spha_move_03",
+        "w14_enemy_spha_move_04"
+      ],
+      "fps": 8,
+      "bucle": true
+    },
+    "w14_enemy_histrio_move": {
+      "frames": [
+        "w14_enemy_histrio_move_01",
+        "w14_enemy_histrio_move_02",
+        "w14_enemy_histrio_move_03",
+        "w14_enemy_histrio_move_04"
+      ],
+      "fps": 8,
+      "bucle": true
+    },
+    "w14_enemy_serp_move": {
+      "frames": [
+        "w14_enemy_serp_move_01",
+        "w14_enemy_serp_move_02",
+        "w14_enemy_serp_move_03",
+        "w14_enemy_serp_move_04"
+      ],
+      "fps": 8,
+      "bucle": true
+    },
+    "w14_enemy_hesio_move": {
+      "frames": [
+        "w14_enemy_hesio_move_01",
+        "w14_enemy_hesio_move_02",
+        "w14_enemy_hesio_move_03",
+        "w14_enemy_hesio_move_04"
+      ],
+      "fps": 8,
+      "bucle": true
+    },
+    "w14_enemy_spirorbis_move": {
+      "frames": [
+        "w14_enemy_spirorbis_move_01",
+        "w14_enemy_spirorbis_move_02",
+        "w14_enemy_spirorbis_move_03",
+        "w14_enemy_spirorbis_move_04"
+      ],
+      "fps": 8,
+      "bucle": true
+    },
+    "w14_enemy_myxicola_move": {
+      "frames": [
+        "w14_enemy_myxicola_move_01",
+        "w14_enemy_myxicola_move_02",
+        "w14_enemy_myxicola_move_03",
+        "w14_enemy_myxicola_move_04"
+      ],
+      "fps": 8,
+      "bucle": true
+    },
+    "w14_enemy_spinther_move": {
+      "frames": [
+        "w14_enemy_spinther_move_01",
+        "w14_enemy_spinther_move_02",
+        "w14_enemy_spinther_move_03",
+        "w14_enemy_spinther_move_04"
+      ],
+      "fps": 8,
+      "bucle": true
+    },
+    "w14_enemy_trocho_move": {
+      "frames": [
+        "w14_enemy_trocho_move_01",
+        "w14_enemy_trocho_move_02",
+        "w14_enemy_trocho_move_03",
+        "w14_enemy_trocho_move_04"
+      ],
+      "fps": 8,
+      "bucle": true
+    },
+    "w14_enemy_cteno_move": {
+      "frames": [
+        "w14_enemy_cteno_move_01",
+        "w14_enemy_cteno_move_02",
+        "w14_enemy_cteno_move_03",
+        "w14_enemy_cteno_move_04"
+      ],
+      "fps": 8,
+      "bucle": true
+    },
+    "w14_enemy_cirrat_move": {
+      "frames": [
+        "w14_enemy_cirrat_move_01",
+        "w14_enemy_cirrat_move_02",
+        "w14_enemy_cirrat_move_03",
+        "w14_enemy_cirrat_move_04"
+      ],
+      "fps": 8,
+      "bucle": true
+    },
+    "w14_enemy_spirobranchus_move": {
+      "frames": [
+        "w14_enemy_spirobranchus_move_01",
+        "w14_enemy_spirobranchus_move_02",
+        "w14_enemy_spirobranchus_move_03",
+        "w14_enemy_spirobranchus_move_04"
+      ],
+      "fps": 8,
+      "bucle": true
+    },
+    "w14_enemy_sabellastarte_move": {
+      "frames": [
+        "w14_enemy_sabellastarte_move_01",
+        "w14_enemy_sabellastarte_move_02",
+        "w14_enemy_sabellastarte_move_03",
+        "w14_enemy_sabellastarte_move_04"
+      ],
+      "fps": 8,
+      "bucle": true
+    },
+    "w14_enemy_eulepeth_move": {
+      "frames": [
+        "w14_enemy_eulepeth_move_01",
+        "w14_enemy_eulepeth_move_02",
+        "w14_enemy_eulepeth_move_03",
+        "w14_enemy_eulepeth_move_04"
+      ],
+      "fps": 8,
+      "bucle": true
+    },
+    "w14_enemy_acoet_move": {
+      "frames": [
+        "w14_enemy_acoet_move_01",
+        "w14_enemy_acoet_move_02",
+        "w14_enemy_acoet_move_03",
+        "w14_enemy_acoet_move_04"
+      ],
+      "fps": 8,
+      "bucle": true
+    },
+    "w14_enemy_pholoe_move": {
+      "frames": [
+        "w14_enemy_pholoe_move_01",
+        "w14_enemy_pholoe_move_02",
+        "w14_enemy_pholoe_move_03",
+        "w14_enemy_pholoe_move_04"
+      ],
+      "fps": 8,
+      "bucle": true
+    },
+    "w14_enemy_glycera_move": {
+      "frames": [
+        "w14_enemy_glycera_move_01",
+        "w14_enemy_glycera_move_02",
+        "w14_enemy_glycera_move_03",
+        "w14_enemy_glycera_move_04"
+      ],
+      "fps": 8,
+      "bucle": true
+    },
+    "w14_enemy_diopatra_move": {
+      "frames": [
+        "w14_enemy_diopatra_move_01",
+        "w14_enemy_diopatra_move_02",
+        "w14_enemy_diopatra_move_03",
+        "w14_enemy_diopatra_move_04"
+      ],
+      "fps": 8,
+      "bucle": true
+    },
+    "w14_enemy_chaetopterus_move": {
+      "frames": [
+        "w14_enemy_chaetopterus_move_01",
+        "w14_enemy_chaetopterus_move_02",
+        "w14_enemy_chaetopterus_move_03",
+        "w14_enemy_chaetopterus_move_04"
+      ],
+      "fps": 8,
+      "bucle": true
+    },
+    "w14_enemy_sabellaria_move": {
+      "frames": [
+        "w14_enemy_sabellaria_move_01",
+        "w14_enemy_sabellaria_move_02",
+        "w14_enemy_sabellaria_move_03",
+        "w14_enemy_sabellaria_move_04"
+      ],
+      "fps": 8,
+      "bucle": true
+    },
+    "w14_enemy_pectinaria_move": {
+      "frames": [
+        "w14_enemy_pectinaria_move_01",
+        "w14_enemy_pectinaria_move_02",
+        "w14_enemy_pectinaria_move_03",
+        "w14_enemy_pectinaria_move_04"
+      ],
+      "fps": 8,
+      "bucle": true
+    },
+    "w14_enemy_aricidea_move": {
+      "frames": [
+        "w14_enemy_aricidea_move_01",
+        "w14_enemy_aricidea_move_02",
+        "w14_enemy_aricidea_move_03",
+        "w14_enemy_aricidea_move_04"
+      ],
+      "fps": 8,
+      "bucle": true
+    },
+    "w14_enemy_terebellides_move": {
+      "frames": [
+        "w14_enemy_terebellides_move_01",
+        "w14_enemy_terebellides_move_02",
+        "w14_enemy_terebellides_move_03",
+        "w14_enemy_terebellides_move_04"
+      ],
+      "fps": 8,
+      "bucle": true
+    },
+    "w14_enemy_questa_move": {
+      "frames": [
+        "w14_enemy_questa_move_01",
+        "w14_enemy_questa_move_02",
+        "w14_enemy_questa_move_03",
+        "w14_enemy_questa_move_04"
+      ],
+      "fps": 8,
+      "bucle": true
+    },
+    "w14_enemy_fauvel_move": {
+      "frames": [
+        "w14_enemy_fauvel_move_01",
+        "w14_enemy_fauvel_move_02",
+        "w14_enemy_fauvel_move_03",
+        "w14_enemy_fauvel_move_04"
+      ],
+      "fps": 8,
+      "bucle": true
+    },
+    "w14_enemy_protod_move": {
+      "frames": [
+        "w14_enemy_protod_move_01",
+        "w14_enemy_protod_move_02",
+        "w14_enemy_protod_move_03",
+        "w14_enemy_protod_move_04"
+      ],
+      "fps": 8,
+      "bucle": true
+    },
+    "w14_enemy_ophelia_move": {
+      "frames": [
+        "w14_enemy_ophelia_move_01",
+        "w14_enemy_ophelia_move_02",
+        "w14_enemy_ophelia_move_03",
+        "w14_enemy_ophelia_move_04"
+      ],
+      "fps": 8,
+      "bucle": true
+    },
+    "w14_enemy_cossura_move": {
+      "frames": [
+        "w14_enemy_cossura_move_01",
+        "w14_enemy_cossura_move_02",
+        "w14_enemy_cossura_move_03",
+        "w14_enemy_cossura_move_04"
+      ],
+      "fps": 8,
+      "bucle": true
+    },
+    "w14_enemy_pilarg_move": {
+      "frames": [
+        "w14_enemy_pilarg_move_01",
+        "w14_enemy_pilarg_move_02",
+        "w14_enemy_pilarg_move_03",
+        "w14_enemy_pilarg_move_04"
+      ],
+      "fps": 8,
+      "bucle": true
+    },
+    "w14_enemy_lumbrineris_move": {
+      "frames": [
+        "w14_enemy_lumbrineris_move_01",
+        "w14_enemy_lumbrineris_move_02",
+        "w14_enemy_lumbrineris_move_03",
+        "w14_enemy_lumbrineris_move_04"
+      ],
+      "fps": 8,
+      "bucle": true
+    },
+    "w14_enemy_owenia_move": {
+      "frames": [
+        "w14_enemy_owenia_move_01",
+        "w14_enemy_owenia_move_02",
+        "w14_enemy_owenia_move_03",
+        "w14_enemy_owenia_move_04"
+      ],
+      "fps": 8,
+      "bucle": true
+    },
+    "w14_enemy_dorville_move": {
+      "frames": [
+        "w14_enemy_dorville_move_01",
+        "w14_enemy_dorville_move_02",
+        "w14_enemy_dorville_move_03",
+        "w14_enemy_dorville_move_04"
+      ],
+      "fps": 8,
+      "bucle": true
+    },
+    "w14_enemy_pontod_move": {
+      "frames": [
+        "w14_enemy_pontod_move_01",
+        "w14_enemy_pontod_move_02",
+        "w14_enemy_pontod_move_03",
+        "w14_enemy_pontod_move_04"
+      ],
+      "fps": 8,
+      "bucle": true
+    },
+    "w14_enemy_lopado_move": {
+      "frames": [
+        "w14_enemy_lopado_move_01",
+        "w14_enemy_lopado_move_02",
+        "w14_enemy_lopado_move_03",
+        "w14_enemy_lopado_move_04"
+      ],
+      "fps": 8,
+      "bucle": true
+    },
+    "w14_enemy_typhlo_move": {
+      "frames": [
+        "w14_enemy_typhlo_move_01",
+        "w14_enemy_typhlo_move_02",
+        "w14_enemy_typhlo_move_03",
+        "w14_enemy_typhlo_move_04"
+      ],
+      "fps": 8,
+      "bucle": true
+    },
+    "w14_enemy_poeo_move": {
+      "frames": [
+        "w14_enemy_poeo_move_01",
+        "w14_enemy_poeo_move_02",
+        "w14_enemy_poeo_move_03",
+        "w14_enemy_poeo_move_04"
+      ],
+      "fps": 8,
+      "bucle": true
+    },
+    "w14_enemy_iospil_move": {
+      "frames": [
+        "w14_enemy_iospil_move_01",
+        "w14_enemy_iospil_move_02",
+        "w14_enemy_iospil_move_03",
+        "w14_enemy_iospil_move_04"
+      ],
+      "fps": 8,
+      "bucle": true
+    },
+    "w14_enemy_syll_stolon_move": {
+      "frames": [
+        "w14_enemy_syll_stolon_move_01",
+        "w14_enemy_syll_stolon_move_02",
+        "w14_enemy_syll_stolon_move_03",
+        "w14_enemy_syll_stolon_move_04"
+      ],
+      "fps": 8,
+      "bucle": true
+    },
+    "w14_enemy_alciop_move": {
+      "frames": [
+        "w14_enemy_alciop_move_01",
+        "w14_enemy_alciop_move_02",
+        "w14_enemy_alciop_move_03",
+        "w14_enemy_alciop_move_04"
+      ],
+      "fps": 8,
+      "bucle": true
+    },
+    "w14_enemy_flabegraviera_move": {
+      "frames": [
+        "w14_enemy_flabegraviera_move_01",
+        "w14_enemy_flabegraviera_move_02",
+        "w14_enemy_flabegraviera_move_03",
+        "w14_enemy_flabegraviera_move_04"
+      ],
+      "fps": 8,
+      "bucle": true
+    },
+    "w14_enemy_aphelochaeta_move": {
+      "frames": [
+        "w14_enemy_aphelochaeta_move_01",
+        "w14_enemy_aphelochaeta_move_02",
+        "w14_enemy_aphelochaeta_move_03",
+        "w14_enemy_aphelochaeta_move_04"
+      ],
+      "fps": 8,
+      "bucle": true
+    },
+    "w14_enemy_mald_move": {
+      "frames": [
+        "w14_enemy_mald_move_01",
+        "w14_enemy_mald_move_02",
+        "w14_enemy_mald_move_03",
+        "w14_enemy_mald_move_04"
+      ],
+      "fps": 8,
+      "bucle": true
+    },
+    "w14_enemy_perkinsiana_move": {
+      "frames": [
+        "w14_enemy_perkinsiana_move_01",
+        "w14_enemy_perkinsiana_move_02",
+        "w14_enemy_perkinsiana_move_03",
+        "w14_enemy_perkinsiana_move_04"
+      ],
+      "fps": 8,
+      "bucle": true
+    },
+    "w14_enemy_amphar_move": {
+      "frames": [
+        "w14_enemy_amphar_move_01",
+        "w14_enemy_amphar_move_02",
+        "w14_enemy_amphar_move_03",
+        "w14_enemy_amphar_move_04"
+      ],
+      "fps": 8,
+      "bucle": true
+    },
+    "w14_enemy_hesiocaeca_move": {
+      "frames": [
+        "w14_enemy_hesiocaeca_move_01",
+        "w14_enemy_hesiocaeca_move_02",
+        "w14_enemy_hesiocaeca_move_03",
+        "w14_enemy_hesiocaeca_move_04"
+      ],
+      "fps": 8,
+      "bucle": true
+    },
+    "w14_enemy_nautil_move": {
+      "frames": [
+        "w14_enemy_nautil_move_01",
+        "w14_enemy_nautil_move_02",
+        "w14_enemy_nautil_move_03",
+        "w14_enemy_nautil_move_04"
+      ],
+      "fps": 8,
+      "bucle": true
+    },
+    "w14_enemy_chryso_move": {
+      "frames": [
+        "w14_enemy_chryso_move_01",
+        "w14_enemy_chryso_move_02",
+        "w14_enemy_chryso_move_03",
+        "w14_enemy_chryso_move_04"
+      ],
+      "fps": 8,
+      "bucle": true
+    },
+    "w14_enemy_brada_move": {
+      "frames": [
+        "w14_enemy_brada_move_01",
+        "w14_enemy_brada_move_02",
+        "w14_enemy_brada_move_03",
+        "w14_enemy_brada_move_04"
+      ],
+      "fps": 8,
+      "bucle": true
+    },
+    "w14_enemy_bathykurila_move": {
+      "frames": [
+        "w14_enemy_bathykurila_move_01",
+        "w14_enemy_bathykurila_move_02",
+        "w14_enemy_bathykurila_move_03",
+        "w14_enemy_bathykurila_move_04"
+      ],
+      "fps": 8,
+      "bucle": true
+    },
+    "w14_enemy_ophryotrocha_move": {
+      "frames": [
+        "w14_enemy_ophryotrocha_move_01",
+        "w14_enemy_ophryotrocha_move_02",
+        "w14_enemy_ophryotrocha_move_03",
+        "w14_enemy_ophryotrocha_move_04"
+      ],
+      "fps": 8,
+      "bucle": true
+    },
+    "w14_enemy_riftia_move": {
+      "frames": [
+        "w14_enemy_riftia_move_01",
+        "w14_enemy_riftia_move_02",
+        "w14_enemy_riftia_move_03",
+        "w14_enemy_riftia_move_04"
+      ],
+      "fps": 8,
+      "bucle": true
+    },
+    "w14_enemy_paralvinella_move": {
+      "frames": [
+        "w14_enemy_paralvinella_move_01",
+        "w14_enemy_paralvinella_move_02",
+        "w14_enemy_paralvinella_move_03",
+        "w14_enemy_paralvinella_move_04"
+      ],
+      "fps": 8,
+      "bucle": true
+    },
+    "w14_enemy_branchinotogluma_move": {
+      "frames": [
+        "w14_enemy_branchinotogluma_move_01",
+        "w14_enemy_branchinotogluma_move_02",
+        "w14_enemy_branchinotogluma_move_03",
+        "w14_enemy_branchinotogluma_move_04"
+      ],
+      "fps": 8,
+      "bucle": true
+    },
+    "w14_enemy_amphisamytha_move": {
+      "frames": [
+        "w14_enemy_amphisamytha_move_01",
+        "w14_enemy_amphisamytha_move_02",
+        "w14_enemy_amphisamytha_move_03",
+        "w14_enemy_amphisamytha_move_04"
+      ],
+      "fps": 8,
+      "bucle": true
+    },
+    "w14_enemy_hesiolyra_move": {
+      "frames": [
+        "w14_enemy_hesiolyra_move_01",
+        "w14_enemy_hesiolyra_move_02",
+        "w14_enemy_hesiolyra_move_03",
+        "w14_enemy_hesiolyra_move_04"
+      ],
+      "fps": 8,
+      "bucle": true
+    },
+    "w14_enemy_swima_move": {
+      "frames": [
+        "w14_enemy_swima_move_01",
+        "w14_enemy_swima_move_02",
+        "w14_enemy_swima_move_03",
+        "w14_enemy_swima_move_04"
+      ],
+      "fps": 8,
+      "bucle": true
+    },
+    "w14_enemy_aphro_move": {
+      "frames": [
+        "w14_enemy_aphro_move_01",
+        "w14_enemy_aphro_move_02",
+        "w14_enemy_aphro_move_03",
+        "w14_enemy_aphro_move_04"
+      ],
+      "fps": 8,
+      "bucle": true
+    },
+    "w14_enemy_scali_move": {
+      "frames": [
+        "w14_enemy_scali_move_01",
+        "w14_enemy_scali_move_02",
+        "w14_enemy_scali_move_03",
+        "w14_enemy_scali_move_04"
+      ],
+      "fps": 8,
+      "bucle": true
+    },
+    "w14_enemy_stern_move": {
+      "frames": [
+        "w14_enemy_stern_move_01",
+        "w14_enemy_stern_move_02",
+        "w14_enemy_stern_move_03",
+        "w14_enemy_stern_move_04"
+      ],
+      "fps": 8,
+      "bucle": true
+    },
+    "w14_enemy_macellicephaloides_move": {
+      "frames": [
+        "w14_enemy_macellicephaloides_move_01",
+        "w14_enemy_macellicephaloides_move_02",
+        "w14_enemy_macellicephaloides_move_03",
+        "w14_enemy_macellicephaloides_move_04"
+      ],
+      "fps": 8,
+      "bucle": true
+    },
+    "w14_mini_mech_nereis_move": {
+      "frames": [
+        "w14_mini_mech_nereis_move_01",
+        "w14_mini_mech_nereis_move_02",
+        "w14_mini_mech_nereis_move_03",
+        "w14_mini_mech_nereis_move_04"
+      ],
+      "fps": 8,
+      "bucle": true
+    },
+    "w14_boss_boss_w14_robot_pinza_move": {
+      "frames": [
+        "w14_boss_boss_w14_robot_pinza_move_01",
+        "w14_boss_boss_w14_robot_pinza_move_02",
+        "w14_boss_boss_w14_robot_pinza_move_03",
+        "w14_boss_boss_w14_robot_pinza_move_04"
+      ],
+      "fps": 8,
+      "bucle": true
+    },
+    "w14_boss_boss_w14_robot_torreta_move": {
+      "frames": [
+        "w14_boss_boss_w14_robot_torreta_move_01",
+        "w14_boss_boss_w14_robot_torreta_move_02",
+        "w14_boss_boss_w14_robot_torreta_move_03",
+        "w14_boss_boss_w14_robot_torreta_move_04"
+      ],
+      "fps": 8,
+      "bucle": true
+    },
+    "w14_boss_boss_w14_robot_taladro_move": {
+      "frames": [
+        "w14_boss_boss_w14_robot_taladro_move_01",
+        "w14_boss_boss_w14_robot_taladro_move_02",
+        "w14_boss_boss_w14_robot_taladro_move_03",
+        "w14_boss_boss_w14_robot_taladro_move_04"
+      ],
+      "fps": 8,
+      "bucle": true
+    },
+    "w14_boss_boss_w14_epitoke_move": {
+      "frames": [
+        "w14_boss_boss_w14_epitoke_move_01",
+        "w14_boss_boss_w14_epitoke_move_02",
+        "w14_boss_boss_w14_epitoke_move_03",
+        "w14_boss_boss_w14_epitoke_move_04"
+      ],
+      "fps": 8,
+      "bucle": true
+    },
+    "w14_boss_boss_w14_scientist_move": {
+      "frames": [
+        "w14_boss_boss_w14_scientist_move_01",
+        "w14_boss_boss_w14_scientist_move_02",
+        "w14_boss_boss_w14_scientist_move_03",
+        "w14_boss_boss_w14_scientist_move_04"
+      ],
+      "fps": 8,
+      "bucle": true
+    },
+    "w14_boss_boss_w14_eunice_titan_move": {
+      "frames": [
+        "w14_boss_boss_w14_eunice_titan_move_01",
+        "w14_boss_boss_w14_eunice_titan_move_02",
+        "w14_boss_boss_w14_eunice_titan_move_03",
+        "w14_boss_boss_w14_eunice_titan_move_04"
+      ],
+      "fps": 8,
+      "bucle": true
+    }
+  }
+}
