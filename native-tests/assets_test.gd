@@ -15,6 +15,24 @@ func _init() -> void:
 	# The actual texture pixels come from individually replaceable PNGs.
 	var source := Image.new()
 	assert(source.load_png_from_buffer(FileAccess.get_file_as_bytes("res://assets/ui/w01_ui_ship_original_move_01.png")) == OK)
-	assert(assets.get_texture("w01_ui_ship_original_move").get_image().get_data() == source.get_data())
+	var loaded=assets.get_texture("w01_ui_ship_original_move").get_image()
+	assert(loaded.get_size()==source.get_size())
+	for y in range(source.get_height()):
+		for x in range(source.get_width()):
+			var expected=source.get_pixel(x,y)
+			var actual=loaded.get_pixel(x,y)
+			assert(actual.a==expected.a)
+			# Godot's imported fix_alpha_border may change invisible RGB only.
+			if expected.a>0:assert(actual==expected)
+	assert(assets.has_method("visible_regions"),"Transparent scenery must expose cached nonempty regions")
+	var bg=assets.get_texture("w01_bg_layer2_idle").get_image()
+	var regions=assets.visible_regions("w01_bg_layer2_idle")
+	var rebuilt=Image.create(bg.get_width(),bg.get_height(),false,Image.FORMAT_RGBA8)
+	for region in regions:rebuilt.blit_rect(bg,region,region.position)
+	for y in range(0,bg.get_height(),4):
+		for x in range(0,bg.get_width(),4):
+			var expected=bg.get_pixel(x,y)
+			assert(rebuilt.get_pixel(x,y).a==expected.a)
+			if expected.a>0:assert(rebuilt.get_pixel(x,y)==expected)
 	print("Native assets: PNG loading, animation, unknown keys and Spanish bitmap metrics passed")
 	quit(0)

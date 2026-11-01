@@ -1,9 +1,9 @@
 [
   {
     "edition": "Normal",
-    "installer_bytes": 26441739,
-    "installer_sha256": "d40a4872ebdfa2b0746b9d02434b805623987f0574a330600cce3988644a185d",
-    "payload_sha256": "97ba2a96b1eb0c1c58d627e12cc0f1b8f7d023482acbed296a87b65ca0e9eaf4",
+    "installer_bytes": 29226683,
+    "installer_sha256": "f9d6b6e556abb06be8e0e7ddae034d3a9581b1bd5f5992173da6c5e5c9d580ef",
+    "payload_sha256": "89326bff2dfebf01da18d78df401063037720a0ac39c488f4d2d21e26150f3fd",
     "windows_pe_x64": true,
     "embedded_pck": true,
     "installer_crc_and_payload": true,
@@ -12,9 +12,9 @@
   },
   {
     "edition": "Pruebas",
-    "installer_bytes": 26437578,
-    "installer_sha256": "d1bdb90f61cc2a41ec127655413de0dd2bea65e278e80004f32b432c4481dfad",
-    "payload_sha256": "5e02c4e756b011a92a45afe1d99d0689159d59e5b4d46b73d6b249a3c7f3df7e",
+    "installer_bytes": 29224031,
+    "installer_sha256": "3f4c94471009d3007c9c3e03999560b68c9b5e74d1584698a695d70b9b94e711",
+    "payload_sha256": "6f7b0a97eed983b10c9313141b1e224ae844b1e05cfec2430a03aee25887b75b",
     "windows_pe_x64": true,
     "embedded_pck": true,
     "installer_crc_and_payload": true,

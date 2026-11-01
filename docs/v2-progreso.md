@@ -114,3 +114,11 @@ Pendiente de validación final del producto:
 - Prueba en Windows real y con mando físico. El mínimo de tiempo se ha medido para builds del presupuesto nominal; no está demostrado para todas las builds financiadas con repetición/monedas extra.
 
 La fase 10 queda implementada técnicamente, pero sus criterios de duración humana y rendimiento del equipo destino siguen pendientes. No se declara terminada esa aceptación solo por pasar las simulaciones.
+
+## Lote artístico W01 — integración en revisión
+
+Tras aceptar la dirección del piloto y reiterar el catálogo completo, el usuario autorizó continuar. En la rama `arte/integracion-godot-w01` se integran100PNG: nave científica/industrial, las siete familiasW01, Pisionidae gigante, Nereidae por piezas, cuatro capas luminosas1280×336 y portada con controles reales. Las poses errantes fueron corregidas tras revisión independiente para ocupar mejor el rectángulo existente. No se modificaron datos de combate, economía, guardados, sonidos ni otros mundos.
+
+Se comprobaron25 controles nativos (incluyen19 pruebas Python), carga/importación y atlas, entrada y salida de ambas ediciones y render. Capturas reales de fixtures del motor a640×360,1280×720,1920×1080. Los dos instaladores fueron reconstruidos y verificados medianteCRC, payload, PE/PCK, hashes y arranque del pack con Godot Linux, no medianteWindows real.
+
+El lote sigue `integrated-review`/`placeholder`; quedan HUD, efectos, otras skins y acabado artístico. La última carga de50enemigos/200balas/64proyectiles aliados mide50,37FPS medios con llvmpipe (p95 33,89ms), y una medición aislada56,54FPS. No se acredita60FPS estables, aprobación final del mundo1 ni fase10 terminada. Windows real, mando y partida humana siguen pendientes. Detalles y límites: `docs/arte/integracion-w01/README.md`.

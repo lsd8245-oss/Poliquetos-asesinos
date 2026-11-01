@@ -1,0 +1,7 @@
+{
+  "base": "d6beb99",
+  "protected_files_checked": 95,
+  "changed": [],
+  "spec_sha256": "1f42e2dad262b02ad87d6eb53f0454a6a00890751f379e918e186de10fd68b2a",
+  "scope": "Design spec, all data/contracts, legacy HTML, audio files and save/shop/stage/boss logic unchanged"
+}

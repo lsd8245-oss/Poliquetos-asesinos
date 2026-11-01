@@ -10,6 +10,7 @@ var _font: Texture2D
 var _glyphs: Dictionary = {}
 var _loaded := false
 var _atlas_textures: Dictionary = {}
+var _visible_regions: Dictionary = {}
 
 func load_all() -> void:
 	if _loaded:
@@ -66,6 +67,35 @@ func sprite(canvas: CanvasItem, key: String, rect: Rect2, time: float = 0.0, mod
 	var texture: Texture2D = get_texture(key, time)
 	if texture != null:
 		canvas.draw_texture_rect(texture, rect, false, modulate)
+
+func visible_regions(key:String,time:float=0.0)->Array:
+	var texture=get_texture(key,time)
+	if texture==null:return []
+	var id=texture.get_instance_id()
+	if _visible_regions.has(id):return _visible_regions[id]
+	var image=texture.get_image()
+	var regions=[]
+	if image.detect_alpha()==Image.ALPHA_NONE:
+		regions.append(Rect2i(Vector2i.ZERO,image.get_size()))
+	else:
+		# Scenery is mostly transparent water; cache tight rectangles once.
+		for y in range(0,image.get_height(),64):
+			for x in range(0,image.get_width(),256):
+				var cell=Rect2i(x,y,mini(256,image.get_width()-x),mini(64,image.get_height()-y))
+				var used=image.get_region(cell).get_used_rect()
+				if used.has_area():regions.append(Rect2i(cell.position+used.position,used.size))
+	_visible_regions[id]=regions
+	return regions
+
+func background_sprite(canvas:CanvasItem,key:String,rect:Rect2,time:float=0.0,modulate:Color=Color.WHITE)->void:
+	var texture=get_texture(key,time)
+	if texture==null or modulate.a<=0:return
+	var scale=rect.size/Vector2(texture.get_size())
+	var viewport=Rect2(0,0,640,336)
+	for region in visible_regions(key,time):
+		var destination=Rect2(rect.position+Vector2(region.position)*scale,Vector2(region.size)*scale)
+		if viewport.intersects(destination):
+			canvas.draw_texture_rect_region(texture,destination,Rect2(region),modulate)
 
 func text(canvas: CanvasItem, value: String, pos: Vector2, color: Color = Color.WHITE, scale: float = 1.0) -> void:
 	if _font == null:

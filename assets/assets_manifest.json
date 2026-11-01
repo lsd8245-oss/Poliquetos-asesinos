@@ -7,7 +7,7 @@
       "tipo": "bg",
       "ruta": "assets/backgrounds/w01/w01_bg_layer1_idle_01.png",
       "tamano": [
-        640,
+        1280,
         336
       ],
       "cuadros": 1,
@@ -20,7 +20,7 @@
       "tipo": "bg",
       "ruta": "assets/backgrounds/w01/w01_bg_layer2_idle_01.png",
       "tamano": [
-        640,
+        1280,
         336
       ],
       "cuadros": 1,
@@ -33,7 +33,7 @@
       "tipo": "bg",
       "ruta": "assets/backgrounds/w01/w01_bg_layer3_idle_01.png",
       "tamano": [
-        640,
+        1280,
         336
       ],
       "cuadros": 1,
@@ -46,7 +46,7 @@
       "tipo": "bg",
       "ruta": "assets/backgrounds/w01/w01_bg_layer4_idle_01.png",
       "tamano": [
-        640,
+        1280,
         336
       ],
       "cuadros": 1,
@@ -787,8 +787,8 @@
       "tipo": "enemy",
       "ruta": "assets/sprites/w01/w01_enemy_hydroides_move_01.png",
       "tamano": [
-        32,
-        32
+        48,
+        48
       ],
       "cuadros": 4,
       "fps": 8,
@@ -800,8 +800,8 @@
       "tipo": "enemy",
       "ruta": "assets/sprites/w01/w01_enemy_euphrosine_move_01.png",
       "tamano": [
-        32,
-        32
+        48,
+        48
       ],
       "cuadros": 4,
       "fps": 8,
@@ -813,8 +813,8 @@
       "tipo": "enemy",
       "ruta": "assets/sprites/w01/w01_enemy_fabric_move_01.png",
       "tamano": [
-        32,
-        32
+        48,
+        48
       ],
       "cuadros": 4,
       "fps": 8,
@@ -852,8 +852,8 @@
       "tipo": "enemy",
       "ruta": "assets/sprites/w01/w01_enemy_syll_move_01.png",
       "tamano": [
-        32,
-        32
+        24,
+        24
       ],
       "cuadros": 4,
       "fps": 8,
@@ -878,7 +878,7 @@
       "tipo": "mini",
       "ruta": "assets/sprites/w01/w01_mini_pision_move_01.png",
       "tamano": [
-        112,
+        128,
         96
       ],
       "cuadros": 4,
@@ -3400,8 +3400,8 @@
       "tipo": "boss",
       "ruta": "assets/sprites/w01/w01_boss_boss_w01_nereis_move_01.png",
       "tamano": [
-        240,
-        160
+        180,
+        120
       ],
       "cuadros": 4,
       "fps": 8,
@@ -4271,8 +4271,8 @@
       "tipo": "enemy",
       "ruta": "assets/sprites/w01/w01_enemy_hydroides_hit_01.png",
       "tamano": [
-        32,
-        32
+        48,
+        48
       ],
       "cuadros": 2,
       "fps": 60,
@@ -4284,8 +4284,8 @@
       "tipo": "enemy",
       "ruta": "assets/sprites/w01/w01_enemy_euphrosine_hit_01.png",
       "tamano": [
-        32,
-        32
+        48,
+        48
       ],
       "cuadros": 2,
       "fps": 60,
@@ -4297,8 +4297,8 @@
       "tipo": "enemy",
       "ruta": "assets/sprites/w01/w01_enemy_fabric_hit_01.png",
       "tamano": [
-        32,
-        32
+        48,
+        48
       ],
       "cuadros": 2,
       "fps": 60,
@@ -4336,8 +4336,8 @@
       "tipo": "enemy",
       "ruta": "assets/sprites/w01/w01_enemy_syll_hit_01.png",
       "tamano": [
-        32,
-        32
+        24,
+        24
       ],
       "cuadros": 2,
       "fps": 60,
@@ -4362,7 +4362,7 @@
       "tipo": "mini",
       "ruta": "assets/sprites/w01/w01_mini_pision_hit_01.png",
       "tamano": [
-        112,
+        128,
         96
       ],
       "cuadros": 2,
@@ -6884,8 +6884,8 @@
       "tipo": "boss",
       "ruta": "assets/sprites/w01/w01_boss_boss_w01_nereis_hit_01.png",
       "tamano": [
-        240,
-        160
+        180,
+        120
       ],
       "cuadros": 2,
       "fps": 60,
@@ -7240,6 +7240,188 @@
       ],
       "cuadros": 2,
       "fps": 60,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w01_ui_cover_idle",
+      "mundo": 1,
+      "tipo": "ui",
+      "ruta": "assets/ui/w01_ui_cover_idle_01.png",
+      "tamano": [
+        640,
+        360
+      ],
+      "cuadros": 1,
+      "fps": 1,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w01_ui_cover_panel_idle",
+      "mundo": 1,
+      "tipo": "ui",
+      "ruta": "assets/ui/w01_ui_cover_panel_idle_01.png",
+      "tamano": [
+        348,
+        316
+      ],
+      "cuadros": 1,
+      "fps": 1,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w01_boss_boss_w01_nereis_body_move",
+      "mundo": 1,
+      "tipo": "boss",
+      "ruta": "assets/sprites/w01/w01_boss_boss_w01_nereis_body_move_01.png",
+      "tamano": [
+        135,
+        120
+      ],
+      "cuadros": 4,
+      "fps": 8,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w01_boss_boss_w01_nereis_body_hit",
+      "mundo": 1,
+      "tipo": "boss",
+      "ruta": "assets/sprites/w01/w01_boss_boss_w01_nereis_body_hit_01.png",
+      "tamano": [
+        135,
+        120
+      ],
+      "cuadros": 2,
+      "fps": 60,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w01_boss_boss_w01_nereis_head_move",
+      "mundo": 1,
+      "tipo": "boss",
+      "ruta": "assets/sprites/w01/w01_boss_boss_w01_nereis_head_move_01.png",
+      "tamano": [
+        45,
+        120
+      ],
+      "cuadros": 4,
+      "fps": 8,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w01_boss_boss_w01_nereis_head_hit",
+      "mundo": 1,
+      "tipo": "boss",
+      "ruta": "assets/sprites/w01/w01_boss_boss_w01_nereis_head_hit_01.png",
+      "tamano": [
+        45,
+        120
+      ],
+      "cuadros": 2,
+      "fps": 60,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w01_boss_boss_w01_nereis_jaws_move",
+      "mundo": 1,
+      "tipo": "boss",
+      "ruta": "assets/sprites/w01/w01_boss_boss_w01_nereis_jaws_move_01.png",
+      "tamano": [
+        45,
+        120
+      ],
+      "cuadros": 4,
+      "fps": 8,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w01_boss_boss_w01_nereis_jaws_hit",
+      "mundo": 1,
+      "tipo": "boss",
+      "ruta": "assets/sprites/w01/w01_boss_boss_w01_nereis_jaws_hit_01.png",
+      "tamano": [
+        45,
+        120
+      ],
+      "cuadros": 2,
+      "fps": 60,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w01_boss_boss_w01_nereis_front_move",
+      "mundo": 1,
+      "tipo": "boss",
+      "ruta": "assets/sprites/w01/w01_boss_boss_w01_nereis_front_move_01.png",
+      "tamano": [
+        90,
+        120
+      ],
+      "cuadros": 4,
+      "fps": 8,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w01_boss_boss_w01_nereis_front_hit",
+      "mundo": 1,
+      "tipo": "boss",
+      "ruta": "assets/sprites/w01/w01_boss_boss_w01_nereis_front_hit_01.png",
+      "tamano": [
+        90,
+        120
+      ],
+      "cuadros": 2,
+      "fps": 60,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w01_boss_boss_w01_nereis_tail_move",
+      "mundo": 1,
+      "tipo": "boss",
+      "ruta": "assets/sprites/w01/w01_boss_boss_w01_nereis_tail_move_01.png",
+      "tamano": [
+        90,
+        120
+      ],
+      "cuadros": 4,
+      "fps": 8,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w01_boss_boss_w01_nereis_tail_hit",
+      "mundo": 1,
+      "tipo": "boss",
+      "ruta": "assets/sprites/w01/w01_boss_boss_w01_nereis_tail_hit_01.png",
+      "tamano": [
+        90,
+        120
+      ],
+      "cuadros": 2,
+      "fps": 60,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w01_ui_cover_button_idle",
+      "mundo": 1,
+      "tipo": "ui",
+      "ruta": "assets/ui/w01_ui_cover_button_idle_01.png",
+      "tamano": [
+        246,
+        19
+      ],
+      "cuadros": 1,
+      "fps": 1,
+      "estado": "placeholder"
+    },
+    {
+      "nombre": "w01_ui_cover_button_selected_idle",
+      "mundo": 1,
+      "tipo": "ui",
+      "ruta": "assets/ui/w01_ui_cover_button_selected_idle_01.png",
+      "tamano": [
+        246,
+        19
+      ],
+      "cuadros": 1,
+      "fps": 1,
       "estado": "placeholder"
     }
   ]

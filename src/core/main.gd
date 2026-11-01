@@ -135,6 +135,9 @@ func _show(next: String):
 			_button("Salir", "quit")
 			if sandbox:
 				_button("PRUEBAS: elegir mundo / armas", "sandbox")
+			for button in buttons:
+				button.rect.position+=Vector2(-26,30)
+				button.rect.size.x=246
 		"new":
 			heading = "NUEVA PARTIDA / DIFICULTAD"
 			_button("Fácil", "difficulty:easy")
@@ -463,7 +466,7 @@ func _activate(action: String, direction: int = 1):
 				_show(confirm_return)
 			"accept_confirm":
 				if confirm_action == "Salir del juego":
-					get_tree().quit()
+					_quit_game()
 				elif confirm_action == "Salir al título":
 					_show("title")
 				elif confirm_action == "Reiniciar punto de control":
@@ -522,6 +525,25 @@ func _activate(action: String, direction: int = 1):
 					profile.resume = "playing"
 					_start(profile)
 	queue_redraw()
+
+func _quit_game():
+	# Let the audio server release the menu click before closing the engine.
+	set_process_input(false)
+	var references=[]
+	if audio!=null:
+		for stream in audio._streams.values():references.append(weakref(stream))
+		for player in audio.get_children():
+			if player is AudioStreamPlayer:
+				player.stop()
+				player.stream=null
+		audio._streams.clear()
+	for attempt in range(100):
+		var alive=false
+		for reference in references:
+			if reference.get_ref()!=null:alive=true
+		if not alive:break
+		await get_tree().create_timer(0.01).timeout
+	get_tree().quit()
 
 func _new_profile():
 	var profile = Shop.create_profile(sandbox, difficulty)
@@ -716,7 +738,10 @@ func _draw():
 	var world_id = int(game.profile.get("world", 1)) if game != null else 1
 	if screen=="ending":world_id=1
 	var playing = screen in ["game", "pause", "dead", "results", "confirm"] and not game.profile.is_empty()
-	_draw_background(world_id, game.scroll if playing else clock * 10)
+	if screen in ["splash", "title"] and assets.has_sprite("w01_ui_cover_idle"):
+		assets.sprite(self, "w01_ui_cover_idle", Rect2(0,0,640,360))
+	else:
+		_draw_background(world_id, game.scroll if playing else clock * 10)
 	if playing:
 		_draw_game(world_id)
 	if screen == "game":
@@ -731,16 +756,22 @@ func _draw():
 		_label("HAS ESCAPADO",Vector2(244,55),Color.WHITE,2)
 		_label("El laboratorio se hunde. El mar vuelve a abrirse.",Vector2(180,87))
 	elif screen == "splash":
-		assets.panel(self, Rect2(50, 75, 540, 210))
-		_label("POLIQUETOS", Vector2(140, 104), Color.WHITE, 3)
-		_label("ASESINOS", Vector2(176, 140), Color.WHITE, 3)
-		assets.sprite(self, "w01_ui_ship_original_move", Rect2(290, 190, 64, 32), clock)
+		assets.sprite(self,"w01_ui_cover_panel_idle",Rect2(12,20,332,178))
+		_label("POLIQUETOS", Vector2(30, 45), Color.WHITE, 3)
+		_label("ASESINOS", Vector2(30, 80), Color.WHITE, 3)
 		if int(clock * 2) % 2 == 0:
-			_label("PULSA START / ENTER", Vector2(260 - 12, 245))
-		_label("EDICIÓN PRUEBAS" if sandbox else "EDICIÓN NORMAL", Vector2(266, 273), Color.CYAN)
+			_label("PULSA START / ENTER", Vector2(30, 145))
+		_label("EDICIÓN PRUEBAS" if sandbox else "EDICIÓN NORMAL", Vector2(30, 173), Color.CYAN)
 	else:
-		assets.panel(self, Rect2(12, 12, 616, 316))
-		_label(heading, Vector2(30, 26), Color(0.65, 0.92, 1))
+		if screen=="title":
+			assets.sprite(self,"w01_ui_cover_panel_idle",Rect2(12,12,278,260))
+		else:
+			assets.panel(self, Rect2(12,12,616,316))
+		if screen=="title":
+			_label("POLIQUETOS",Vector2(30,30),Color.WHITE,3)
+			_label("ASESINOS",Vector2(30,64),Color(0.65,0.95,0.87),3)
+		else:
+			_label(heading, Vector2(30,26), Color(0.65,0.92,1))
 		for index in range(lines.size()):
 			_label(str(lines[index]), Vector2(30, 46 + index * 14))
 		if screen == "results":
@@ -753,10 +784,13 @@ func _draw():
 				_label("Vista previa cosmética", Vector2(408, 204))
 		for index in range(buttons.size()):
 			var button = buttons[index]
-			assets.panel(self, button.rect, index == selected)
+			if screen=="title":
+				assets.sprite(self,"w01_ui_cover_button_selected_idle" if index==selected else "w01_ui_cover_button_idle",button.rect)
+			else:
+				assets.panel(self,button.rect,index==selected)
 			_label(button.label, button.rect.position + Vector2(6, (button.rect.size.y - 9) / 2), Color.WHITE if index == selected else Color(0.75, 0.86, 0.9))
 		if screen == "title":
-			_label("EDICIÓN PRUEBAS" if sandbox else "EDICIÓN NORMAL", Vector2(400, 288), Color.CYAN)
+			_label("EDICIÓN PRUEBAS" if sandbox else "EDICIÓN NORMAL", Vector2(30, 288), Color.CYAN)
 	if message_time > 0:
 		assets.panel(self, Rect2(6, 328, 628, 28))
 		_label(_wrap(message, 101), Vector2(14, 334), Color(1, 0.88, 0.5))
@@ -765,6 +799,14 @@ func _draw():
 		_label("Esperando " + ("tecla" if remap_kind == "key" else "botón de mando") + " para: " + remap_action, Vector2(118, 156))
 		_label("Esc cancela", Vector2(118, 180))
 
+func _background_tiles(texture_size:Vector2, offset:float, factor:float)->Array:
+	var width=maxf(1.0,texture_size.x)
+	var first=-fposmod(offset*factor,width)
+	var result=[]
+	for index in range(int(ceil(640.0/width))+1):
+		result.append(Rect2(first+index*width,0,width,336))
+	return result
+
 func _draw_background(world_id: int, offset: float):
 	var fade=0.0
 	if world_id==15 and not game.profile.is_empty():
@@ -772,14 +814,17 @@ func _draw_background(world_id: int, offset: float):
 		fade=1.0 if game.profile.get("completed",false) else clampf((game.world_time-float(transition.desde_seg))/float(transition.hasta_seg-transition.desde_seg),0,1)
 	for layer in range(1, 5):
 		var factors = game.data.combat.get("scroll",{}).get("parallax",[0.1,0.3,0.6,1.0])
-		var x = -fmod(offset * float(factors[layer-1]), 640.0)
 		var key = "w%02d_bg_layer%d_idle" % [world_id, layer]
-		assets.sprite(self, key, Rect2(x, 0, 640, 336), clock,Color(1,1,1,1-fade))
-		assets.sprite(self, key, Rect2(x + 640, 0, 640, 336), clock,Color(1,1,1,1-fade))
+		var texture=assets.get_texture(key,clock)
+		if texture!=null:
+			for rect in _background_tiles(texture.get_size(),offset,float(factors[layer-1])):
+				assets.background_sprite(self,key,rect,clock,Color(1,1,1,1-fade))
 		if fade>0:
 			var sea="w01_bg_layer%d_idle"%layer
-			assets.sprite(self,sea,Rect2(x,0,640,336),clock,Color(1,1,1,fade))
-			assets.sprite(self,sea,Rect2(x+640,0,640,336),clock,Color(1,1,1,fade))
+			var sea_texture=assets.get_texture(sea,clock)
+			if sea_texture!=null:
+				for rect in _background_tiles(sea_texture.get_size(),offset,float(factors[layer-1])):
+					assets.background_sprite(self,sea,rect,clock,Color(1,1,1,fade))
 
 func _draw_ship(pos: Vector2, size: Vector2):
 	var skin = str(game.profile.get("skin", "original"))
@@ -826,8 +871,8 @@ func _draw_game(world_id: int):
 		elif flags.get("screen_effect","")=="snow" and not options.reduce_flashes:
 			for snow in range(16):
 				assets.sprite(self,"w01_fx_spark_burst",Rect2(fmod(snow*41+clock*20,640),fmod(clock*55+snow*27,336),3,3),clock)
-		for part in _enemy_draw_parts(enemy):
-			assets.sprite(self,key,Rect2(part.pos-part.size/2,part.size),clock,tint)
+		for layer in _enemy_visual_layers(enemy,key):
+			assets.sprite(self,layer.key,layer.rect,clock,tint)
 		if game.profile.equipment.get("ctd", false) and flags.get("weak_exposed", true):
 			for point in flags.get("weak_points", []):
 				assets.sprite(self, "w01_fx_spark_burst", Rect2(point - Vector2(6, 6), Vector2(12, 12)), clock, Color.CYAN)
@@ -892,6 +937,21 @@ func _draw_game(world_id: int):
 func _enemy_draw_parts(enemy:Dictionary)->Array:
 	if float(enemy.get("hp",0))<=0 or enemy.get("inactive",false):return []
 	return enemy.parts if not enemy.get("parts",[]).is_empty() else [{"pos":enemy.pos,"size":enemy.get("size",Vector2(32,24))}]
+
+func _enemy_visual_layers(enemy:Dictionary,key:String)->Array:
+	var parts=_enemy_draw_parts(enemy)
+	if parts.is_empty():return []
+	var root_key=key.trim_suffix("_move").trim_suffix("_hit")
+	var action="hit" if key.ends_with("_hit") else "move"
+	if enemy.get("id","")=="boss_w01_nereis" and assets.has_sprite(root_key+"_head_"+action):
+		if parts.size()==2:
+			return [{"key":root_key+"_front_"+action,"rect":Rect2(parts[0].pos-parts[0].size/2,parts[0].size)}, {"key":root_key+"_tail_"+action,"rect":Rect2(parts[1].pos-parts[1].size/2,parts[1].size)}]
+		var rect=Rect2(enemy.pos-enemy.size/2,enemy.size)
+		var quarter=Vector2(rect.size.x*0.25,rect.size.y)
+		return [{"key":root_key+"_body_"+action,"rect":Rect2(rect.position+Vector2(quarter.x,0),Vector2(rect.size.x-quarter.x,rect.size.y))}, {"key":root_key+"_head_"+action,"rect":Rect2(rect.position,quarter)}, {"key":root_key+"_jaws_"+action,"rect":Rect2(rect.position,quarter)}]
+	var layers=[]
+	for part in parts:layers.append({"key":key,"rect":Rect2(part.pos-part.size/2,part.size)})
+	return layers
 
 func _draw_bullet(bullet: Dictionary, kind: String):
 	var size = bullet.get("size", Vector2(8, 4))

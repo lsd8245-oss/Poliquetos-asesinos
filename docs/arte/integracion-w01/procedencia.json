@@ -1,0 +1,1306 @@
+{
+  "state": "integrated-review",
+  "approval": "Style accepted; individual finished assets pending review in native game",
+  "records": [
+    {
+      "path": "assets/ui/w01_ui_ship_original_move_01.png",
+      "asset": "w01_ui_ship_original_move",
+      "size": [
+        48,
+        24
+      ],
+      "sha256": "36ae247956e4ac505e1c298971529b936ddfafb00badda5af0268f251d80dfba",
+      "source": "docs/arte/piloto-w01/A_variantes.png",
+      "state": "integrated-review",
+      "author": "OpenAI imagegen / Codex Pillow preparation",
+      "date": "2026-11-01"
+    },
+    {
+      "path": "assets/ui/w01_ui_ship_original_move_02.png",
+      "asset": "w01_ui_ship_original_move",
+      "size": [
+        48,
+        24
+      ],
+      "sha256": "36ae247956e4ac505e1c298971529b936ddfafb00badda5af0268f251d80dfba",
+      "source": "docs/arte/piloto-w01/A_variantes.png",
+      "state": "integrated-review",
+      "author": "OpenAI imagegen / Codex Pillow preparation",
+      "date": "2026-11-01"
+    },
+    {
+      "path": "assets/ui/w01_ui_ship_original_move_03.png",
+      "asset": "w01_ui_ship_original_move",
+      "size": [
+        48,
+        24
+      ],
+      "sha256": "36ae247956e4ac505e1c298971529b936ddfafb00badda5af0268f251d80dfba",
+      "source": "docs/arte/piloto-w01/A_variantes.png",
+      "state": "integrated-review",
+      "author": "OpenAI imagegen / Codex Pillow preparation",
+      "date": "2026-11-01"
+    },
+    {
+      "path": "assets/ui/w01_ui_ship_original_move_04.png",
+      "asset": "w01_ui_ship_original_move",
+      "size": [
+        48,
+        24
+      ],
+      "sha256": "36ae247956e4ac505e1c298971529b936ddfafb00badda5af0268f251d80dfba",
+      "source": "docs/arte/piloto-w01/A_variantes.png",
+      "state": "integrated-review",
+      "author": "OpenAI imagegen / Codex Pillow preparation",
+      "date": "2026-11-01"
+    },
+    {
+      "path": "assets/ui/w01_ui_ship_batiscafo_amarillo_move_01.png",
+      "asset": "w01_ui_ship_batiscafo_amarillo_move",
+      "size": [
+        48,
+        24
+      ],
+      "sha256": "e7332050dae3d8e5de46cdf80aa1e8054760910836a468e4a73a0333ad703855",
+      "source": "docs/arte/piloto-w01/A_variantes.png",
+      "state": "integrated-review",
+      "author": "OpenAI imagegen / Codex Pillow preparation",
+      "date": "2026-11-01"
+    },
+    {
+      "path": "assets/ui/w01_ui_ship_batiscafo_amarillo_move_02.png",
+      "asset": "w01_ui_ship_batiscafo_amarillo_move",
+      "size": [
+        48,
+        24
+      ],
+      "sha256": "e7332050dae3d8e5de46cdf80aa1e8054760910836a468e4a73a0333ad703855",
+      "source": "docs/arte/piloto-w01/A_variantes.png",
+      "state": "integrated-review",
+      "author": "OpenAI imagegen / Codex Pillow preparation",
+      "date": "2026-11-01"
+    },
+    {
+      "path": "assets/ui/w01_ui_ship_batiscafo_amarillo_move_03.png",
+      "asset": "w01_ui_ship_batiscafo_amarillo_move",
+      "size": [
+        48,
+        24
+      ],
+      "sha256": "e7332050dae3d8e5de46cdf80aa1e8054760910836a468e4a73a0333ad703855",
+      "source": "docs/arte/piloto-w01/A_variantes.png",
+      "state": "integrated-review",
+      "author": "OpenAI imagegen / Codex Pillow preparation",
+      "date": "2026-11-01"
+    },
+    {
+      "path": "assets/ui/w01_ui_ship_batiscafo_amarillo_move_04.png",
+      "asset": "w01_ui_ship_batiscafo_amarillo_move",
+      "size": [
+        48,
+        24
+      ],
+      "sha256": "e7332050dae3d8e5de46cdf80aa1e8054760910836a468e4a73a0333ad703855",
+      "source": "docs/arte/piloto-w01/A_variantes.png",
+      "state": "integrated-review",
+      "author": "OpenAI imagegen / Codex Pillow preparation",
+      "date": "2026-11-01"
+    },
+    {
+      "path": "assets/sprites/w01/w01_enemy_hydroides_move_01.png",
+      "asset": "w01_enemy_hydroides_move",
+      "size": [
+        48,
+        48
+      ],
+      "sha256": "f5dccd61fa70f2268bc5675609f2cbbe15b49edaeeaa3e5d089ce990a8b28f7c",
+      "source": "docs/arte/piloto-w01/originales/B_hydroides.png",
+      "state": "integrated-review",
+      "author": "OpenAI imagegen / Codex Pillow preparation",
+      "date": "2026-11-01"
+    },
+    {
+      "path": "assets/sprites/w01/w01_enemy_hydroides_move_02.png",
+      "asset": "w01_enemy_hydroides_move",
+      "size": [
+        48,
+        48
+      ],
+      "sha256": "b8e28190bc650a4332cf8a378dc9687595d6aab019cc1671e54dac1886d4df56",
+      "source": "docs/arte/piloto-w01/originales/B_hydroides.png",
+      "state": "integrated-review",
+      "author": "OpenAI imagegen / Codex Pillow preparation",
+      "date": "2026-11-01"
+    },
+    {
+      "path": "assets/sprites/w01/w01_enemy_hydroides_move_03.png",
+      "asset": "w01_enemy_hydroides_move",
+      "size": [
+        48,
+        48
+      ],
+      "sha256": "7b20be2b096d06ee5cd935b27a61d176c73d2dec6aad18497feb482e42ef4daf",
+      "source": "docs/arte/piloto-w01/originales/B_hydroides.png",
+      "state": "integrated-review",
+      "author": "OpenAI imagegen / Codex Pillow preparation",
+      "date": "2026-11-01"
+    },
+    {
+      "path": "assets/sprites/w01/w01_enemy_hydroides_move_04.png",
+      "asset": "w01_enemy_hydroides_move",
+      "size": [
+        48,
+        48
+      ],
+      "sha256": "b8e28190bc650a4332cf8a378dc9687595d6aab019cc1671e54dac1886d4df56",
+      "source": "docs/arte/piloto-w01/originales/B_hydroides.png",
+      "state": "integrated-review",
+      "author": "OpenAI imagegen / Codex Pillow preparation",
+      "date": "2026-11-01"
+    },
+    {
+      "path": "assets/sprites/w01/w01_enemy_hydroides_hit_01.png",
+      "asset": "w01_enemy_hydroides_hit",
+      "size": [
+        48,
+        48
+      ],
+      "sha256": "781273fa2f8759baecc8459ceee31a677e9f09788af8bb4dc76cfd75388c9172",
+      "source": "docs/arte/piloto-w01/originales/B_hydroides.png",
+      "state": "integrated-review",
+      "author": "OpenAI imagegen / Codex Pillow preparation",
+      "date": "2026-11-01"
+    },
+    {
+      "path": "assets/sprites/w01/w01_enemy_hydroides_hit_02.png",
+      "asset": "w01_enemy_hydroides_hit",
+      "size": [
+        48,
+        48
+      ],
+      "sha256": "781273fa2f8759baecc8459ceee31a677e9f09788af8bb4dc76cfd75388c9172",
+      "source": "docs/arte/piloto-w01/originales/B_hydroides.png",
+      "state": "integrated-review",
+      "author": "OpenAI imagegen / Codex Pillow preparation",
+      "date": "2026-11-01"
+    },
+    {
+      "path": "assets/backgrounds/w01/w01_bg_layer1_idle_01.png",
+      "asset": "w01_bg_layer1_idle",
+      "size": [
+        1280,
+        336
+      ],
+      "sha256": "d751e8e505d283860fb85b022c993f2b4bc24a5cfb263e2782dfe8ae54613118",
+      "source": "docs/arte/piloto-w01/originales/C1_agua.png",
+      "state": "integrated-review",
+      "author": "OpenAI imagegen / Codex Pillow preparation",
+      "date": "2026-11-01"
+    },
+    {
+      "path": "assets/backgrounds/w01/w01_bg_layer2_idle_01.png",
+      "asset": "w01_bg_layer2_idle",
+      "size": [
+        1280,
+        336
+      ],
+      "sha256": "70ee979c05a35b7929159b8c34f63d4ba4aedd5bb14d7ab17426c000cb303066",
+      "source": "docs/arte/piloto-w01/originales/C2_puerto.png",
+      "state": "integrated-review",
+      "author": "OpenAI imagegen / Codex Pillow preparation",
+      "date": "2026-11-01"
+    },
+    {
+      "path": "assets/backgrounds/w01/w01_bg_layer3_idle_01.png",
+      "asset": "w01_bg_layer3_idle",
+      "size": [
+        1280,
+        336
+      ],
+      "sha256": "69dcd93b1532ee095ab1eba124287527cf4e3d2627c70644137b0e5aef06ac18",
+      "source": "docs/arte/piloto-w01/originales/C3_corrientes.png",
+      "state": "integrated-review",
+      "author": "OpenAI imagegen / Codex Pillow preparation",
+      "date": "2026-11-01"
+    },
+    {
+      "path": "assets/backgrounds/w01/w01_bg_layer4_idle_01.png",
+      "asset": "w01_bg_layer4_idle",
+      "size": [
+        1280,
+        336
+      ],
+      "sha256": "b60eb9de274c4de4b8e949a6a5da7ed9235cea0680da03cca2c2093a21b9970a",
+      "source": "docs/arte/piloto-w01/originales/C4_boyas.png",
+      "state": "integrated-review",
+      "author": "OpenAI imagegen / Codex Pillow preparation",
+      "date": "2026-11-01"
+    },
+    {
+      "path": "assets/ui/w01_ui_cover_idle_01.png",
+      "asset": "w01_ui_cover_idle",
+      "size": [
+        640,
+        360
+      ],
+      "sha256": "e0ad7ab6218823f9766d114897f5b5c9ca5d050ae71439460a1f8c842dcd1e62",
+      "source": "docs/arte/piloto-w01/originales/D_portada.png",
+      "state": "integrated-review",
+      "author": "OpenAI imagegen / Codex Pillow preparation",
+      "date": "2026-11-01"
+    },
+    {
+      "path": "assets/ui/w01_ui_cover_panel_idle_01.png",
+      "asset": "w01_ui_cover_panel_idle",
+      "size": [
+        348,
+        316
+      ],
+      "sha256": "69bbbe74cdd804e78548f34721bd4123a32500cb3bc6e5f56300ad525822e108",
+      "source": "assets/ui/w01_ui_panel_idle_01.png (translucent derivative)",
+      "state": "integrated-review",
+      "author": "OpenAI imagegen / Codex Pillow preparation",
+      "date": "2026-11-01"
+    },
+    {
+      "path": "assets/ui/w01_ui_cover_button_idle_01.png",
+      "asset": "w01_ui_cover_button_idle",
+      "size": [
+        246,
+        19
+      ],
+      "sha256": "c96ba8b3dfb777ab961a4c1f523a7c543f853cb592bd78019c0ebcb7d8b68ab8",
+      "source": "assets/ui/w01_ui_panel_idle_01.png (label-free derivative)",
+      "state": "integrated-review",
+      "author": "OpenAI imagegen / Codex Pillow preparation",
+      "date": "2026-11-01"
+    },
+    {
+      "path": "assets/ui/w01_ui_cover_button_selected_idle_01.png",
+      "asset": "w01_ui_cover_button_selected_idle",
+      "size": [
+        246,
+        19
+      ],
+      "sha256": "2c50325842fdecbe616592bf80b51eeae450671fba87f601a7090f6891b817a7",
+      "source": "assets/ui/w01_ui_panel_selected_idle_01.png (label-free derivative)",
+      "state": "integrated-review",
+      "author": "OpenAI imagegen / Codex Pillow preparation",
+      "date": "2026-11-01"
+    },
+    {
+      "path": "assets/sprites/w01/w01_enemy_euphrosine_move_01.png",
+      "asset": "w01_enemy_euphrosine_move",
+      "size": [
+        48,
+        48
+      ],
+      "sha256": "35eb3db46d78397e038e6c6d6c8bc1544342fd883595b1442a2e9c8367bf2958",
+      "source": "docs/arte/integracion-w01/originales/euphrosine.png",
+      "state": "integrated-review",
+      "author": "OpenAI imagegen / Codex Pillow preparation",
+      "date": "2026-11-01"
+    },
+    {
+      "path": "assets/sprites/w01/w01_enemy_euphrosine_move_02.png",
+      "asset": "w01_enemy_euphrosine_move",
+      "size": [
+        48,
+        48
+      ],
+      "sha256": "4af09fe53b8b649dc04ce08f4263ea53ef35321a93b58a67281632e17665ab56",
+      "source": "docs/arte/integracion-w01/originales/euphrosine.png",
+      "state": "integrated-review",
+      "author": "OpenAI imagegen / Codex Pillow preparation",
+      "date": "2026-11-01"
+    },
+    {
+      "path": "assets/sprites/w01/w01_enemy_euphrosine_move_03.png",
+      "asset": "w01_enemy_euphrosine_move",
+      "size": [
+        48,
+        48
+      ],
+      "sha256": "35eb3db46d78397e038e6c6d6c8bc1544342fd883595b1442a2e9c8367bf2958",
+      "source": "docs/arte/integracion-w01/originales/euphrosine.png",
+      "state": "integrated-review",
+      "author": "OpenAI imagegen / Codex Pillow preparation",
+      "date": "2026-11-01"
+    },
+    {
+      "path": "assets/sprites/w01/w01_enemy_euphrosine_move_04.png",
+      "asset": "w01_enemy_euphrosine_move",
+      "size": [
+        48,
+        48
+      ],
+      "sha256": "4af09fe53b8b649dc04ce08f4263ea53ef35321a93b58a67281632e17665ab56",
+      "source": "docs/arte/integracion-w01/originales/euphrosine.png",
+      "state": "integrated-review",
+      "author": "OpenAI imagegen / Codex Pillow preparation",
+      "date": "2026-11-01"
+    },
+    {
+      "path": "assets/sprites/w01/w01_enemy_euphrosine_hit_01.png",
+      "asset": "w01_enemy_euphrosine_hit",
+      "size": [
+        48,
+        48
+      ],
+      "sha256": "fe13c365720cebac3bc818ec9dba5cdff714523fb93d4745cf72a816a49aaa20",
+      "source": "docs/arte/integracion-w01/originales/euphrosine.png",
+      "state": "integrated-review",
+      "author": "OpenAI imagegen / Codex Pillow preparation",
+      "date": "2026-11-01"
+    },
+    {
+      "path": "assets/sprites/w01/w01_enemy_euphrosine_hit_02.png",
+      "asset": "w01_enemy_euphrosine_hit",
+      "size": [
+        48,
+        48
+      ],
+      "sha256": "fe13c365720cebac3bc818ec9dba5cdff714523fb93d4745cf72a816a49aaa20",
+      "source": "docs/arte/integracion-w01/originales/euphrosine.png",
+      "state": "integrated-review",
+      "author": "OpenAI imagegen / Codex Pillow preparation",
+      "date": "2026-11-01"
+    },
+    {
+      "path": "assets/sprites/w01/w01_enemy_fabric_move_01.png",
+      "asset": "w01_enemy_fabric_move",
+      "size": [
+        48,
+        48
+      ],
+      "sha256": "c4f24b67c9a13bcc2650d614b426b6a626e3ab96dab45f5b0f12fe57a911ab2d",
+      "source": "docs/arte/integracion-w01/originales/fabric.png",
+      "state": "integrated-review",
+      "author": "OpenAI imagegen / Codex Pillow preparation",
+      "date": "2026-11-01"
+    },
+    {
+      "path": "assets/sprites/w01/w01_enemy_fabric_move_02.png",
+      "asset": "w01_enemy_fabric_move",
+      "size": [
+        48,
+        48
+      ],
+      "sha256": "1a73e2a29a85c8f3fded80f4ab240ea01af98aa088449bde37b950c15bb69b11",
+      "source": "docs/arte/integracion-w01/originales/fabric.png",
+      "state": "integrated-review",
+      "author": "OpenAI imagegen / Codex Pillow preparation",
+      "date": "2026-11-01"
+    },
+    {
+      "path": "assets/sprites/w01/w01_enemy_fabric_move_03.png",
+      "asset": "w01_enemy_fabric_move",
+      "size": [
+        48,
+        48
+      ],
+      "sha256": "c4f24b67c9a13bcc2650d614b426b6a626e3ab96dab45f5b0f12fe57a911ab2d",
+      "source": "docs/arte/integracion-w01/originales/fabric.png",
+      "state": "integrated-review",
+      "author": "OpenAI imagegen / Codex Pillow preparation",
+      "date": "2026-11-01"
+    },
+    {
+      "path": "assets/sprites/w01/w01_enemy_fabric_move_04.png",
+      "asset": "w01_enemy_fabric_move",
+      "size": [
+        48,
+        48
+      ],
+      "sha256": "1a73e2a29a85c8f3fded80f4ab240ea01af98aa088449bde37b950c15bb69b11",
+      "source": "docs/arte/integracion-w01/originales/fabric.png",
+      "state": "integrated-review",
+      "author": "OpenAI imagegen / Codex Pillow preparation",
+      "date": "2026-11-01"
+    },
+    {
+      "path": "assets/sprites/w01/w01_enemy_fabric_hit_01.png",
+      "asset": "w01_enemy_fabric_hit",
+      "size": [
+        48,
+        48
+      ],
+      "sha256": "9ba7d52478b3d3eea16e2bfe8536506e63352d782347b1b9e2cee5c692c1ec6c",
+      "source": "docs/arte/integracion-w01/originales/fabric.png",
+      "state": "integrated-review",
+      "author": "OpenAI imagegen / Codex Pillow preparation",
+      "date": "2026-11-01"
+    },
+    {
+      "path": "assets/sprites/w01/w01_enemy_fabric_hit_02.png",
+      "asset": "w01_enemy_fabric_hit",
+      "size": [
+        48,
+        48
+      ],
+      "sha256": "9ba7d52478b3d3eea16e2bfe8536506e63352d782347b1b9e2cee5c692c1ec6c",
+      "source": "docs/arte/integracion-w01/originales/fabric.png",
+      "state": "integrated-review",
+      "author": "OpenAI imagegen / Codex Pillow preparation",
+      "date": "2026-11-01"
+    },
+    {
+      "path": "assets/sprites/w01/w01_enemy_pision_move_01.png",
+      "asset": "w01_enemy_pision_move",
+      "size": [
+        32,
+        32
+      ],
+      "sha256": "0e48fad94c196dca68b6882f1f8eafa88ce8c68a8fcd59342aa98b873fae7d20",
+      "source": "docs/arte/integracion-w01/originales/pision.png",
+      "state": "integrated-review",
+      "author": "OpenAI imagegen / Codex Pillow preparation",
+      "date": "2026-11-01"
+    },
+    {
+      "path": "assets/sprites/w01/w01_enemy_pision_move_02.png",
+      "asset": "w01_enemy_pision_move",
+      "size": [
+        32,
+        32
+      ],
+      "sha256": "18167d678090c7528e42760fd6878a87bb564eec19db36b86582aa08ea2ba25b",
+      "source": "docs/arte/integracion-w01/originales/pision.png",
+      "state": "integrated-review",
+      "author": "OpenAI imagegen / Codex Pillow preparation",
+      "date": "2026-11-01"
+    },
+    {
+      "path": "assets/sprites/w01/w01_enemy_pision_move_03.png",
+      "asset": "w01_enemy_pision_move",
+      "size": [
+        32,
+        32
+      ],
+      "sha256": "0e48fad94c196dca68b6882f1f8eafa88ce8c68a8fcd59342aa98b873fae7d20",
+      "source": "docs/arte/integracion-w01/originales/pision.png",
+      "state": "integrated-review",
+      "author": "OpenAI imagegen / Codex Pillow preparation",
+      "date": "2026-11-01"
+    },
+    {
+      "path": "assets/sprites/w01/w01_enemy_pision_move_04.png",
+      "asset": "w01_enemy_pision_move",
+      "size": [
+        32,
+        32
+      ],
+      "sha256": "18167d678090c7528e42760fd6878a87bb564eec19db36b86582aa08ea2ba25b",
+      "source": "docs/arte/integracion-w01/originales/pision.png",
+      "state": "integrated-review",
+      "author": "OpenAI imagegen / Codex Pillow preparation",
+      "date": "2026-11-01"
+    },
+    {
+      "path": "assets/sprites/w01/w01_enemy_pision_hit_01.png",
+      "asset": "w01_enemy_pision_hit",
+      "size": [
+        32,
+        32
+      ],
+      "sha256": "34c670c66e35ed8b99a9b411d2b83b8fdcf1af19ecf024f848a5f8e8ffadcf16",
+      "source": "docs/arte/integracion-w01/originales/pision.png",
+      "state": "integrated-review",
+      "author": "OpenAI imagegen / Codex Pillow preparation",
+      "date": "2026-11-01"
+    },
+    {
+      "path": "assets/sprites/w01/w01_enemy_pision_hit_02.png",
+      "asset": "w01_enemy_pision_hit",
+      "size": [
+        32,
+        32
+      ],
+      "sha256": "34c670c66e35ed8b99a9b411d2b83b8fdcf1af19ecf024f848a5f8e8ffadcf16",
+      "source": "docs/arte/integracion-w01/originales/pision.png",
+      "state": "integrated-review",
+      "author": "OpenAI imagegen / Codex Pillow preparation",
+      "date": "2026-11-01"
+    },
+    {
+      "path": "assets/sprites/w01/w01_enemy_lacy_move_01.png",
+      "asset": "w01_enemy_lacy_move",
+      "size": [
+        32,
+        32
+      ],
+      "sha256": "f91f132befdad0b3314e13be07078756894bf93c42345843574d6595dd9caeff",
+      "source": "docs/arte/integracion-w01/originales/lacy.png",
+      "state": "integrated-review",
+      "author": "OpenAI imagegen / Codex Pillow preparation",
+      "date": "2026-11-01"
+    },
+    {
+      "path": "assets/sprites/w01/w01_enemy_lacy_move_02.png",
+      "asset": "w01_enemy_lacy_move",
+      "size": [
+        32,
+        32
+      ],
+      "sha256": "491e81f12bc8568bb23ffe44ead54a4aeeade5e2eed008a4008429b10435e397",
+      "source": "docs/arte/integracion-w01/originales/lacy.png",
+      "state": "integrated-review",
+      "author": "OpenAI imagegen / Codex Pillow preparation",
+      "date": "2026-11-01"
+    },
+    {
+      "path": "assets/sprites/w01/w01_enemy_lacy_move_03.png",
+      "asset": "w01_enemy_lacy_move",
+      "size": [
+        32,
+        32
+      ],
+      "sha256": "f91f132befdad0b3314e13be07078756894bf93c42345843574d6595dd9caeff",
+      "source": "docs/arte/integracion-w01/originales/lacy.png",
+      "state": "integrated-review",
+      "author": "OpenAI imagegen / Codex Pillow preparation",
+      "date": "2026-11-01"
+    },
+    {
+      "path": "assets/sprites/w01/w01_enemy_lacy_move_04.png",
+      "asset": "w01_enemy_lacy_move",
+      "size": [
+        32,
+        32
+      ],
+      "sha256": "491e81f12bc8568bb23ffe44ead54a4aeeade5e2eed008a4008429b10435e397",
+      "source": "docs/arte/integracion-w01/originales/lacy.png",
+      "state": "integrated-review",
+      "author": "OpenAI imagegen / Codex Pillow preparation",
+      "date": "2026-11-01"
+    },
+    {
+      "path": "assets/sprites/w01/w01_enemy_lacy_hit_01.png",
+      "asset": "w01_enemy_lacy_hit",
+      "size": [
+        32,
+        32
+      ],
+      "sha256": "7681c42610b93ef0541bfa32f5693b4cfb7a1cdd02c52807be57d765fb807b3c",
+      "source": "docs/arte/integracion-w01/originales/lacy.png",
+      "state": "integrated-review",
+      "author": "OpenAI imagegen / Codex Pillow preparation",
+      "date": "2026-11-01"
+    },
+    {
+      "path": "assets/sprites/w01/w01_enemy_lacy_hit_02.png",
+      "asset": "w01_enemy_lacy_hit",
+      "size": [
+        32,
+        32
+      ],
+      "sha256": "7681c42610b93ef0541bfa32f5693b4cfb7a1cdd02c52807be57d765fb807b3c",
+      "source": "docs/arte/integracion-w01/originales/lacy.png",
+      "state": "integrated-review",
+      "author": "OpenAI imagegen / Codex Pillow preparation",
+      "date": "2026-11-01"
+    },
+    {
+      "path": "assets/sprites/w01/w01_enemy_syll_move_01.png",
+      "asset": "w01_enemy_syll_move",
+      "size": [
+        24,
+        24
+      ],
+      "sha256": "d8150b9a9c4967527258c9f1ded8387a2034793f260d160c9e4f97142589d7fd",
+      "source": "docs/arte/integracion-w01/originales/syll.png",
+      "state": "integrated-review",
+      "author": "OpenAI imagegen / Codex Pillow preparation",
+      "date": "2026-11-01"
+    },
+    {
+      "path": "assets/sprites/w01/w01_enemy_syll_move_02.png",
+      "asset": "w01_enemy_syll_move",
+      "size": [
+        24,
+        24
+      ],
+      "sha256": "0eae6b19160aecf9a8f2fdea2693b0234ea5f256b4b9c119d423ebfac788fa79",
+      "source": "docs/arte/integracion-w01/originales/syll.png",
+      "state": "integrated-review",
+      "author": "OpenAI imagegen / Codex Pillow preparation",
+      "date": "2026-11-01"
+    },
+    {
+      "path": "assets/sprites/w01/w01_enemy_syll_move_03.png",
+      "asset": "w01_enemy_syll_move",
+      "size": [
+        24,
+        24
+      ],
+      "sha256": "d8150b9a9c4967527258c9f1ded8387a2034793f260d160c9e4f97142589d7fd",
+      "source": "docs/arte/integracion-w01/originales/syll.png",
+      "state": "integrated-review",
+      "author": "OpenAI imagegen / Codex Pillow preparation",
+      "date": "2026-11-01"
+    },
+    {
+      "path": "assets/sprites/w01/w01_enemy_syll_move_04.png",
+      "asset": "w01_enemy_syll_move",
+      "size": [
+        24,
+        24
+      ],
+      "sha256": "0eae6b19160aecf9a8f2fdea2693b0234ea5f256b4b9c119d423ebfac788fa79",
+      "source": "docs/arte/integracion-w01/originales/syll.png",
+      "state": "integrated-review",
+      "author": "OpenAI imagegen / Codex Pillow preparation",
+      "date": "2026-11-01"
+    },
+    {
+      "path": "assets/sprites/w01/w01_enemy_syll_hit_01.png",
+      "asset": "w01_enemy_syll_hit",
+      "size": [
+        24,
+        24
+      ],
+      "sha256": "d84260cb546900d9a3218062e3f2b9b6cf8c8e9e4ffcf34f3a20b67251de9ac0",
+      "source": "docs/arte/integracion-w01/originales/syll.png",
+      "state": "integrated-review",
+      "author": "OpenAI imagegen / Codex Pillow preparation",
+      "date": "2026-11-01"
+    },
+    {
+      "path": "assets/sprites/w01/w01_enemy_syll_hit_02.png",
+      "asset": "w01_enemy_syll_hit",
+      "size": [
+        24,
+        24
+      ],
+      "sha256": "d84260cb546900d9a3218062e3f2b9b6cf8c8e9e4ffcf34f3a20b67251de9ac0",
+      "source": "docs/arte/integracion-w01/originales/syll.png",
+      "state": "integrated-review",
+      "author": "OpenAI imagegen / Codex Pillow preparation",
+      "date": "2026-11-01"
+    },
+    {
+      "path": "assets/sprites/w01/w01_enemy_phyll_move_01.png",
+      "asset": "w01_enemy_phyll_move",
+      "size": [
+        32,
+        32
+      ],
+      "sha256": "e99f9aab4beede5fc604d8a44e7bc2bd382d49bb7e8b3d3db9a7345ba4a04af2",
+      "source": "docs/arte/integracion-w01/originales/phyll.png",
+      "state": "integrated-review",
+      "author": "OpenAI imagegen / Codex Pillow preparation",
+      "date": "2026-11-01"
+    },
+    {
+      "path": "assets/sprites/w01/w01_enemy_phyll_move_02.png",
+      "asset": "w01_enemy_phyll_move",
+      "size": [
+        32,
+        32
+      ],
+      "sha256": "fd51dde369c41cb59a3a12c3ee0167b0ad978919406e703b4c1c618360007f84",
+      "source": "docs/arte/integracion-w01/originales/phyll.png",
+      "state": "integrated-review",
+      "author": "OpenAI imagegen / Codex Pillow preparation",
+      "date": "2026-11-01"
+    },
+    {
+      "path": "assets/sprites/w01/w01_enemy_phyll_move_03.png",
+      "asset": "w01_enemy_phyll_move",
+      "size": [
+        32,
+        32
+      ],
+      "sha256": "e99f9aab4beede5fc604d8a44e7bc2bd382d49bb7e8b3d3db9a7345ba4a04af2",
+      "source": "docs/arte/integracion-w01/originales/phyll.png",
+      "state": "integrated-review",
+      "author": "OpenAI imagegen / Codex Pillow preparation",
+      "date": "2026-11-01"
+    },
+    {
+      "path": "assets/sprites/w01/w01_enemy_phyll_move_04.png",
+      "asset": "w01_enemy_phyll_move",
+      "size": [
+        32,
+        32
+      ],
+      "sha256": "fd51dde369c41cb59a3a12c3ee0167b0ad978919406e703b4c1c618360007f84",
+      "source": "docs/arte/integracion-w01/originales/phyll.png",
+      "state": "integrated-review",
+      "author": "OpenAI imagegen / Codex Pillow preparation",
+      "date": "2026-11-01"
+    },
+    {
+      "path": "assets/sprites/w01/w01_enemy_phyll_hit_01.png",
+      "asset": "w01_enemy_phyll_hit",
+      "size": [
+        32,
+        32
+      ],
+      "sha256": "5c69ed3bff4b9269198056ec59b3a45b95cf15be6d516ac4f82969ebb65260fc",
+      "source": "docs/arte/integracion-w01/originales/phyll.png",
+      "state": "integrated-review",
+      "author": "OpenAI imagegen / Codex Pillow preparation",
+      "date": "2026-11-01"
+    },
+    {
+      "path": "assets/sprites/w01/w01_enemy_phyll_hit_02.png",
+      "asset": "w01_enemy_phyll_hit",
+      "size": [
+        32,
+        32
+      ],
+      "sha256": "5c69ed3bff4b9269198056ec59b3a45b95cf15be6d516ac4f82969ebb65260fc",
+      "source": "docs/arte/integracion-w01/originales/phyll.png",
+      "state": "integrated-review",
+      "author": "OpenAI imagegen / Codex Pillow preparation",
+      "date": "2026-11-01"
+    },
+    {
+      "path": "assets/sprites/w01/w01_mini_pision_move_01.png",
+      "asset": "w01_mini_pision_move",
+      "size": [
+        128,
+        96
+      ],
+      "sha256": "e375f08a79c31e541dedbccdad13e57a326132e3af7e3582390c649d3bbb01c1",
+      "source": "docs/arte/integracion-w01/originales/mini_pision.png",
+      "state": "integrated-review",
+      "author": "OpenAI imagegen / Codex Pillow preparation",
+      "date": "2026-11-01"
+    },
+    {
+      "path": "assets/sprites/w01/w01_mini_pision_move_02.png",
+      "asset": "w01_mini_pision_move",
+      "size": [
+        128,
+        96
+      ],
+      "sha256": "ba342d9df3693ed2495f43ff1dd0ba1a45382b40ed09fd2684e7a1b6da9090bf",
+      "source": "docs/arte/integracion-w01/originales/mini_pision.png",
+      "state": "integrated-review",
+      "author": "OpenAI imagegen / Codex Pillow preparation",
+      "date": "2026-11-01"
+    },
+    {
+      "path": "assets/sprites/w01/w01_mini_pision_move_03.png",
+      "asset": "w01_mini_pision_move",
+      "size": [
+        128,
+        96
+      ],
+      "sha256": "e375f08a79c31e541dedbccdad13e57a326132e3af7e3582390c649d3bbb01c1",
+      "source": "docs/arte/integracion-w01/originales/mini_pision.png",
+      "state": "integrated-review",
+      "author": "OpenAI imagegen / Codex Pillow preparation",
+      "date": "2026-11-01"
+    },
+    {
+      "path": "assets/sprites/w01/w01_mini_pision_move_04.png",
+      "asset": "w01_mini_pision_move",
+      "size": [
+        128,
+        96
+      ],
+      "sha256": "ba342d9df3693ed2495f43ff1dd0ba1a45382b40ed09fd2684e7a1b6da9090bf",
+      "source": "docs/arte/integracion-w01/originales/mini_pision.png",
+      "state": "integrated-review",
+      "author": "OpenAI imagegen / Codex Pillow preparation",
+      "date": "2026-11-01"
+    },
+    {
+      "path": "assets/sprites/w01/w01_mini_pision_hit_01.png",
+      "asset": "w01_mini_pision_hit",
+      "size": [
+        128,
+        96
+      ],
+      "sha256": "62f1e21f847853402907a9a8ceb74dec32c2859169661563e02681b24ef68777",
+      "source": "docs/arte/integracion-w01/originales/mini_pision.png",
+      "state": "integrated-review",
+      "author": "OpenAI imagegen / Codex Pillow preparation",
+      "date": "2026-11-01"
+    },
+    {
+      "path": "assets/sprites/w01/w01_mini_pision_hit_02.png",
+      "asset": "w01_mini_pision_hit",
+      "size": [
+        128,
+        96
+      ],
+      "sha256": "62f1e21f847853402907a9a8ceb74dec32c2859169661563e02681b24ef68777",
+      "source": "docs/arte/integracion-w01/originales/mini_pision.png",
+      "state": "integrated-review",
+      "author": "OpenAI imagegen / Codex Pillow preparation",
+      "date": "2026-11-01"
+    },
+    {
+      "path": "assets/sprites/w01/w01_boss_boss_w01_nereis_move_01.png",
+      "asset": "w01_boss_boss_w01_nereis_move",
+      "size": [
+        180,
+        120
+      ],
+      "sha256": "2ac3cdadafe50402c21a552cfb08d7b53de9f44f882714b3a6ad25d0e460b81d",
+      "source": "docs/arte/integracion-w01/originales/nereis.png",
+      "state": "integrated-review",
+      "author": "OpenAI imagegen / Codex Pillow preparation",
+      "date": "2026-11-01"
+    },
+    {
+      "path": "assets/sprites/w01/w01_boss_boss_w01_nereis_move_02.png",
+      "asset": "w01_boss_boss_w01_nereis_move",
+      "size": [
+        180,
+        120
+      ],
+      "sha256": "d15bea9eb4057ef26a830b703a6b0b332ad6b6323295eeba7225e2a475da211f",
+      "source": "docs/arte/integracion-w01/originales/nereis.png",
+      "state": "integrated-review",
+      "author": "OpenAI imagegen / Codex Pillow preparation",
+      "date": "2026-11-01"
+    },
+    {
+      "path": "assets/sprites/w01/w01_boss_boss_w01_nereis_move_03.png",
+      "asset": "w01_boss_boss_w01_nereis_move",
+      "size": [
+        180,
+        120
+      ],
+      "sha256": "2ac3cdadafe50402c21a552cfb08d7b53de9f44f882714b3a6ad25d0e460b81d",
+      "source": "docs/arte/integracion-w01/originales/nereis.png",
+      "state": "integrated-review",
+      "author": "OpenAI imagegen / Codex Pillow preparation",
+      "date": "2026-11-01"
+    },
+    {
+      "path": "assets/sprites/w01/w01_boss_boss_w01_nereis_move_04.png",
+      "asset": "w01_boss_boss_w01_nereis_move",
+      "size": [
+        180,
+        120
+      ],
+      "sha256": "d15bea9eb4057ef26a830b703a6b0b332ad6b6323295eeba7225e2a475da211f",
+      "source": "docs/arte/integracion-w01/originales/nereis.png",
+      "state": "integrated-review",
+      "author": "OpenAI imagegen / Codex Pillow preparation",
+      "date": "2026-11-01"
+    },
+    {
+      "path": "assets/sprites/w01/w01_boss_boss_w01_nereis_hit_01.png",
+      "asset": "w01_boss_boss_w01_nereis_hit",
+      "size": [
+        180,
+        120
+      ],
+      "sha256": "3b547d51a8912236dd2ac259cd331e1cb95debccaa74a274257616f264151f2d",
+      "source": "docs/arte/integracion-w01/originales/nereis.png",
+      "state": "integrated-review",
+      "author": "OpenAI imagegen / Codex Pillow preparation",
+      "date": "2026-11-01"
+    },
+    {
+      "path": "assets/sprites/w01/w01_boss_boss_w01_nereis_hit_02.png",
+      "asset": "w01_boss_boss_w01_nereis_hit",
+      "size": [
+        180,
+        120
+      ],
+      "sha256": "3b547d51a8912236dd2ac259cd331e1cb95debccaa74a274257616f264151f2d",
+      "source": "docs/arte/integracion-w01/originales/nereis.png",
+      "state": "integrated-review",
+      "author": "OpenAI imagegen / Codex Pillow preparation",
+      "date": "2026-11-01"
+    },
+    {
+      "path": "assets/sprites/w01/w01_boss_boss_w01_nereis_body_move_01.png",
+      "asset": "w01_boss_boss_w01_nereis_body_move",
+      "size": [
+        135,
+        120
+      ],
+      "sha256": "878a61df128e2ea23b46a8a0190cb148248e6003f046c56332974283abe3cf1b",
+      "source": "docs/arte/integracion-w01/originales/nereis.png (independent cropped piece)",
+      "state": "integrated-review",
+      "author": "OpenAI imagegen / Codex Pillow preparation",
+      "date": "2026-11-01"
+    },
+    {
+      "path": "assets/sprites/w01/w01_boss_boss_w01_nereis_body_move_02.png",
+      "asset": "w01_boss_boss_w01_nereis_body_move",
+      "size": [
+        135,
+        120
+      ],
+      "sha256": "9ada77f7889dc9d3f9c462c8a865831db2e26c164d2b7333262ce7da8bef1ea7",
+      "source": "docs/arte/integracion-w01/originales/nereis.png (independent cropped piece)",
+      "state": "integrated-review",
+      "author": "OpenAI imagegen / Codex Pillow preparation",
+      "date": "2026-11-01"
+    },
+    {
+      "path": "assets/sprites/w01/w01_boss_boss_w01_nereis_body_move_03.png",
+      "asset": "w01_boss_boss_w01_nereis_body_move",
+      "size": [
+        135,
+        120
+      ],
+      "sha256": "878a61df128e2ea23b46a8a0190cb148248e6003f046c56332974283abe3cf1b",
+      "source": "docs/arte/integracion-w01/originales/nereis.png (independent cropped piece)",
+      "state": "integrated-review",
+      "author": "OpenAI imagegen / Codex Pillow preparation",
+      "date": "2026-11-01"
+    },
+    {
+      "path": "assets/sprites/w01/w01_boss_boss_w01_nereis_body_move_04.png",
+      "asset": "w01_boss_boss_w01_nereis_body_move",
+      "size": [
+        135,
+        120
+      ],
+      "sha256": "9ada77f7889dc9d3f9c462c8a865831db2e26c164d2b7333262ce7da8bef1ea7",
+      "source": "docs/arte/integracion-w01/originales/nereis.png (independent cropped piece)",
+      "state": "integrated-review",
+      "author": "OpenAI imagegen / Codex Pillow preparation",
+      "date": "2026-11-01"
+    },
+    {
+      "path": "assets/sprites/w01/w01_boss_boss_w01_nereis_body_hit_01.png",
+      "asset": "w01_boss_boss_w01_nereis_body_hit",
+      "size": [
+        135,
+        120
+      ],
+      "sha256": "828090b9d5ba405ff4fa4592b8737e0a8eae888cf5ad6a393bfe2c8c777bf6d7",
+      "source": "docs/arte/integracion-w01/originales/nereis.png (independent cropped piece)",
+      "state": "integrated-review",
+      "author": "OpenAI imagegen / Codex Pillow preparation",
+      "date": "2026-11-01"
+    },
+    {
+      "path": "assets/sprites/w01/w01_boss_boss_w01_nereis_body_hit_02.png",
+      "asset": "w01_boss_boss_w01_nereis_body_hit",
+      "size": [
+        135,
+        120
+      ],
+      "sha256": "828090b9d5ba405ff4fa4592b8737e0a8eae888cf5ad6a393bfe2c8c777bf6d7",
+      "source": "docs/arte/integracion-w01/originales/nereis.png (independent cropped piece)",
+      "state": "integrated-review",
+      "author": "OpenAI imagegen / Codex Pillow preparation",
+      "date": "2026-11-01"
+    },
+    {
+      "path": "assets/sprites/w01/w01_boss_boss_w01_nereis_head_move_01.png",
+      "asset": "w01_boss_boss_w01_nereis_head_move",
+      "size": [
+        45,
+        120
+      ],
+      "sha256": "b058a42d7b8ed5850e8d9b86c1a791fa6b49f1df9a3abcc11c2a0a5b2c3825c1",
+      "source": "docs/arte/integracion-w01/originales/nereis.png (independent cropped piece)",
+      "state": "integrated-review",
+      "author": "OpenAI imagegen / Codex Pillow preparation",
+      "date": "2026-11-01"
+    },
+    {
+      "path": "assets/sprites/w01/w01_boss_boss_w01_nereis_head_move_02.png",
+      "asset": "w01_boss_boss_w01_nereis_head_move",
+      "size": [
+        45,
+        120
+      ],
+      "sha256": "f8c4eb65d0504d361224c93f78e1c59c57743c9eb43576622185c1e79462d190",
+      "source": "docs/arte/integracion-w01/originales/nereis.png (independent cropped piece)",
+      "state": "integrated-review",
+      "author": "OpenAI imagegen / Codex Pillow preparation",
+      "date": "2026-11-01"
+    },
+    {
+      "path": "assets/sprites/w01/w01_boss_boss_w01_nereis_head_move_03.png",
+      "asset": "w01_boss_boss_w01_nereis_head_move",
+      "size": [
+        45,
+        120
+      ],
+      "sha256": "b058a42d7b8ed5850e8d9b86c1a791fa6b49f1df9a3abcc11c2a0a5b2c3825c1",
+      "source": "docs/arte/integracion-w01/originales/nereis.png (independent cropped piece)",
+      "state": "integrated-review",
+      "author": "OpenAI imagegen / Codex Pillow preparation",
+      "date": "2026-11-01"
+    },
+    {
+      "path": "assets/sprites/w01/w01_boss_boss_w01_nereis_head_move_04.png",
+      "asset": "w01_boss_boss_w01_nereis_head_move",
+      "size": [
+        45,
+        120
+      ],
+      "sha256": "f8c4eb65d0504d361224c93f78e1c59c57743c9eb43576622185c1e79462d190",
+      "source": "docs/arte/integracion-w01/originales/nereis.png (independent cropped piece)",
+      "state": "integrated-review",
+      "author": "OpenAI imagegen / Codex Pillow preparation",
+      "date": "2026-11-01"
+    },
+    {
+      "path": "assets/sprites/w01/w01_boss_boss_w01_nereis_head_hit_01.png",
+      "asset": "w01_boss_boss_w01_nereis_head_hit",
+      "size": [
+        45,
+        120
+      ],
+      "sha256": "77502968fdb2d3f966efc51d120e7069cd0dc0d27b73c76cb7d7a29be394d524",
+      "source": "docs/arte/integracion-w01/originales/nereis.png (independent cropped piece)",
+      "state": "integrated-review",
+      "author": "OpenAI imagegen / Codex Pillow preparation",
+      "date": "2026-11-01"
+    },
+    {
+      "path": "assets/sprites/w01/w01_boss_boss_w01_nereis_head_hit_02.png",
+      "asset": "w01_boss_boss_w01_nereis_head_hit",
+      "size": [
+        45,
+        120
+      ],
+      "sha256": "77502968fdb2d3f966efc51d120e7069cd0dc0d27b73c76cb7d7a29be394d524",
+      "source": "docs/arte/integracion-w01/originales/nereis.png (independent cropped piece)",
+      "state": "integrated-review",
+      "author": "OpenAI imagegen / Codex Pillow preparation",
+      "date": "2026-11-01"
+    },
+    {
+      "path": "assets/sprites/w01/w01_boss_boss_w01_nereis_jaws_move_01.png",
+      "asset": "w01_boss_boss_w01_nereis_jaws_move",
+      "size": [
+        45,
+        120
+      ],
+      "sha256": "9aebee64c842423eca1091759a4319e6c032a58d400f72cd7401b7c51e33a14c",
+      "source": "docs/arte/integracion-w01/originales/nereis.png (independent cropped piece)",
+      "state": "integrated-review",
+      "author": "OpenAI imagegen / Codex Pillow preparation",
+      "date": "2026-11-01"
+    },
+    {
+      "path": "assets/sprites/w01/w01_boss_boss_w01_nereis_jaws_move_02.png",
+      "asset": "w01_boss_boss_w01_nereis_jaws_move",
+      "size": [
+        45,
+        120
+      ],
+      "sha256": "d2ea1b498c9aba39a3b9388d62a92fe76fa65ec99e38e3c26878695864a12d75",
+      "source": "docs/arte/integracion-w01/originales/nereis.png (independent cropped piece)",
+      "state": "integrated-review",
+      "author": "OpenAI imagegen / Codex Pillow preparation",
+      "date": "2026-11-01"
+    },
+    {
+      "path": "assets/sprites/w01/w01_boss_boss_w01_nereis_jaws_move_03.png",
+      "asset": "w01_boss_boss_w01_nereis_jaws_move",
+      "size": [
+        45,
+        120
+      ],
+      "sha256": "9aebee64c842423eca1091759a4319e6c032a58d400f72cd7401b7c51e33a14c",
+      "source": "docs/arte/integracion-w01/originales/nereis.png (independent cropped piece)",
+      "state": "integrated-review",
+      "author": "OpenAI imagegen / Codex Pillow preparation",
+      "date": "2026-11-01"
+    },
+    {
+      "path": "assets/sprites/w01/w01_boss_boss_w01_nereis_jaws_move_04.png",
+      "asset": "w01_boss_boss_w01_nereis_jaws_move",
+      "size": [
+        45,
+        120
+      ],
+      "sha256": "d2ea1b498c9aba39a3b9388d62a92fe76fa65ec99e38e3c26878695864a12d75",
+      "source": "docs/arte/integracion-w01/originales/nereis.png (independent cropped piece)",
+      "state": "integrated-review",
+      "author": "OpenAI imagegen / Codex Pillow preparation",
+      "date": "2026-11-01"
+    },
+    {
+      "path": "assets/sprites/w01/w01_boss_boss_w01_nereis_jaws_hit_01.png",
+      "asset": "w01_boss_boss_w01_nereis_jaws_hit",
+      "size": [
+        45,
+        120
+      ],
+      "sha256": "541cda59072d82a5298c7864bd8fb548d288e800cebd8d7aa886589b14349895",
+      "source": "docs/arte/integracion-w01/originales/nereis.png (independent cropped piece)",
+      "state": "integrated-review",
+      "author": "OpenAI imagegen / Codex Pillow preparation",
+      "date": "2026-11-01"
+    },
+    {
+      "path": "assets/sprites/w01/w01_boss_boss_w01_nereis_jaws_hit_02.png",
+      "asset": "w01_boss_boss_w01_nereis_jaws_hit",
+      "size": [
+        45,
+        120
+      ],
+      "sha256": "541cda59072d82a5298c7864bd8fb548d288e800cebd8d7aa886589b14349895",
+      "source": "docs/arte/integracion-w01/originales/nereis.png (independent cropped piece)",
+      "state": "integrated-review",
+      "author": "OpenAI imagegen / Codex Pillow preparation",
+      "date": "2026-11-01"
+    },
+    {
+      "path": "assets/sprites/w01/w01_boss_boss_w01_nereis_front_move_01.png",
+      "asset": "w01_boss_boss_w01_nereis_front_move",
+      "size": [
+        90,
+        120
+      ],
+      "sha256": "39f2ff9e55f49f398ffb63f01c956998118e69836a336fed860a2fdd4fef3e9f",
+      "source": "docs/arte/integracion-w01/originales/nereis.png (independent cropped piece)",
+      "state": "integrated-review",
+      "author": "OpenAI imagegen / Codex Pillow preparation",
+      "date": "2026-11-01"
+    },
+    {
+      "path": "assets/sprites/w01/w01_boss_boss_w01_nereis_front_move_02.png",
+      "asset": "w01_boss_boss_w01_nereis_front_move",
+      "size": [
+        90,
+        120
+      ],
+      "sha256": "4b361f88963050fe35c84f8eaef10b55865c959d13c89bc07750a731ac156f28",
+      "source": "docs/arte/integracion-w01/originales/nereis.png (independent cropped piece)",
+      "state": "integrated-review",
+      "author": "OpenAI imagegen / Codex Pillow preparation",
+      "date": "2026-11-01"
+    },
+    {
+      "path": "assets/sprites/w01/w01_boss_boss_w01_nereis_front_move_03.png",
+      "asset": "w01_boss_boss_w01_nereis_front_move",
+      "size": [
+        90,
+        120
+      ],
+      "sha256": "39f2ff9e55f49f398ffb63f01c956998118e69836a336fed860a2fdd4fef3e9f",
+      "source": "docs/arte/integracion-w01/originales/nereis.png (independent cropped piece)",
+      "state": "integrated-review",
+      "author": "OpenAI imagegen / Codex Pillow preparation",
+      "date": "2026-11-01"
+    },
+    {
+      "path": "assets/sprites/w01/w01_boss_boss_w01_nereis_front_move_04.png",
+      "asset": "w01_boss_boss_w01_nereis_front_move",
+      "size": [
+        90,
+        120
+      ],
+      "sha256": "4b361f88963050fe35c84f8eaef10b55865c959d13c89bc07750a731ac156f28",
+      "source": "docs/arte/integracion-w01/originales/nereis.png (independent cropped piece)",
+      "state": "integrated-review",
+      "author": "OpenAI imagegen / Codex Pillow preparation",
+      "date": "2026-11-01"
+    },
+    {
+      "path": "assets/sprites/w01/w01_boss_boss_w01_nereis_front_hit_01.png",
+      "asset": "w01_boss_boss_w01_nereis_front_hit",
+      "size": [
+        90,
+        120
+      ],
+      "sha256": "5055ded7e2cfb4d3c9733a89ac7ce60544c6510d5e2c18f3431ca732f0725ce2",
+      "source": "docs/arte/integracion-w01/originales/nereis.png (independent cropped piece)",
+      "state": "integrated-review",
+      "author": "OpenAI imagegen / Codex Pillow preparation",
+      "date": "2026-11-01"
+    },
+    {
+      "path": "assets/sprites/w01/w01_boss_boss_w01_nereis_front_hit_02.png",
+      "asset": "w01_boss_boss_w01_nereis_front_hit",
+      "size": [
+        90,
+        120
+      ],
+      "sha256": "5055ded7e2cfb4d3c9733a89ac7ce60544c6510d5e2c18f3431ca732f0725ce2",
+      "source": "docs/arte/integracion-w01/originales/nereis.png (independent cropped piece)",
+      "state": "integrated-review",
+      "author": "OpenAI imagegen / Codex Pillow preparation",
+      "date": "2026-11-01"
+    },
+    {
+      "path": "assets/sprites/w01/w01_boss_boss_w01_nereis_tail_move_01.png",
+      "asset": "w01_boss_boss_w01_nereis_tail_move",
+      "size": [
+        90,
+        120
+      ],
+      "sha256": "a7b9c2f3ace4a8d2e45cd5238acf0caf7961b7fbad3d8b3ca3baac2d7799a148",
+      "source": "docs/arte/integracion-w01/originales/nereis.png (independent cropped piece)",
+      "state": "integrated-review",
+      "author": "OpenAI imagegen / Codex Pillow preparation",
+      "date": "2026-11-01"
+    },
+    {
+      "path": "assets/sprites/w01/w01_boss_boss_w01_nereis_tail_move_02.png",
+      "asset": "w01_boss_boss_w01_nereis_tail_move",
+      "size": [
+        90,
+        120
+      ],
+      "sha256": "0712aa960a9e5a0bc73926d8f8aa158878f4aeac4fdae6fffd9a121bf1019104",
+      "source": "docs/arte/integracion-w01/originales/nereis.png (independent cropped piece)",
+      "state": "integrated-review",
+      "author": "OpenAI imagegen / Codex Pillow preparation",
+      "date": "2026-11-01"
+    },
+    {
+      "path": "assets/sprites/w01/w01_boss_boss_w01_nereis_tail_move_03.png",
+      "asset": "w01_boss_boss_w01_nereis_tail_move",
+      "size": [
+        90,
+        120
+      ],
+      "sha256": "a7b9c2f3ace4a8d2e45cd5238acf0caf7961b7fbad3d8b3ca3baac2d7799a148",
+      "source": "docs/arte/integracion-w01/originales/nereis.png (independent cropped piece)",
+      "state": "integrated-review",
+      "author": "OpenAI imagegen / Codex Pillow preparation",
+      "date": "2026-11-01"
+    },
+    {
+      "path": "assets/sprites/w01/w01_boss_boss_w01_nereis_tail_move_04.png",
+      "asset": "w01_boss_boss_w01_nereis_tail_move",
+      "size": [
+        90,
+        120
+      ],
+      "sha256": "0712aa960a9e5a0bc73926d8f8aa158878f4aeac4fdae6fffd9a121bf1019104",
+      "source": "docs/arte/integracion-w01/originales/nereis.png (independent cropped piece)",
+      "state": "integrated-review",
+      "author": "OpenAI imagegen / Codex Pillow preparation",
+      "date": "2026-11-01"
+    },
+    {
+      "path": "assets/sprites/w01/w01_boss_boss_w01_nereis_tail_hit_01.png",
+      "asset": "w01_boss_boss_w01_nereis_tail_hit",
+      "size": [
+        90,
+        120
+      ],
+      "sha256": "2e9424adf4a63502da5f162d8ac56e5bfa50786e161c97851879e742dd28ea4a",
+      "source": "docs/arte/integracion-w01/originales/nereis.png (independent cropped piece)",
+      "state": "integrated-review",
+      "author": "OpenAI imagegen / Codex Pillow preparation",
+      "date": "2026-11-01"
+    },
+    {
+      "path": "assets/sprites/w01/w01_boss_boss_w01_nereis_tail_hit_02.png",
+      "asset": "w01_boss_boss_w01_nereis_tail_hit",
+      "size": [
+        90,
+        120
+      ],
+      "sha256": "2e9424adf4a63502da5f162d8ac56e5bfa50786e161c97851879e742dd28ea4a",
+      "source": "docs/arte/integracion-w01/originales/nereis.png (independent cropped piece)",
+      "state": "integrated-review",
+      "author": "OpenAI imagegen / Codex Pillow preparation",
+      "date": "2026-11-01"
+    }
+  ]
+}

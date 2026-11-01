@@ -1,0 +1,13 @@
+/workspace/Poliquetos-asesinos/native-tests/test_art_w01.py:32: DeprecationWarning: Image.Image.getdata is deprecated and will be removed in Pillow 14 (2027-10-15). Use get_flattened_data instead.
+  colors = {p[:3] for p in rgba.getdata() if p[3]}
+/workspace/Poliquetos-asesinos/native-tests/test_art_w01.py:35: DeprecationWarning: Image.Image.getdata is deprecated and will be removed in Pillow 14 (2027-10-15). Use get_flattened_data instead.
+  self.assertEqual({p[3] for p in rgba.getdata()}, {0,255}, key)
+......./workspace/Poliquetos-asesinos/native-tests/test_assets.py:85: DeprecationWarning: Image.Image.getdata is deprecated and will be removed in Pillow 14 (2027-10-15). Use get_flattened_data instead.
+  self.assertEqual({p[:3] for p in image.getdata() if p[3]}, {(255,255,255)}, hit_key)
+/workspace/Poliquetos-asesinos/native-tests/test_assets.py:86: DeprecationWarning: Image.Image.getdata is deprecated and will be removed in Pillow 14 (2027-10-15). Use get_flattened_data instead.
+  self.assertEqual({p[3] for p in image.getdata()}, {0,255}, hit_key)
+............
+----------------------------------------------------------------------
+Ran 19 tests in 18.255s
+
+OK

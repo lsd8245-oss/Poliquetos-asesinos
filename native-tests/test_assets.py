@@ -81,6 +81,10 @@ class AssetsTest(unittest.TestCase):
             for index in (1,2):
                 image = read_image(ROOT / hit['ruta'].replace('_01.png', f'_{index:02}.png')).convert('RGBA')
                 self.assertEqual(image.getchannel('A').tobytes(), source.getchannel('A').tobytes(), hit_key)
+                if source.info.get('art_stage') == 'integrated-review':
+                    self.assertEqual({p[:3] for p in image.getdata() if p[3]}, {(255,255,255)}, hit_key)
+                    self.assertEqual({p[3] for p in image.getdata()}, {0,255}, hit_key)
+                    continue
                 self.assertEqual(image.getpixel((0,0)), (255,255,255,255), hit_key)
                 histogram = dict((color,count) for count,color in image.getcolors(image.width*image.height))
                 self.assertGreater(histogram.get((255,255,255,255),0), image.width*image.height*.7)
@@ -167,6 +171,7 @@ func _init():
             (fixture / 'assets/assets_manifest.json').write_text(json.dumps({'version':2,'assets':[ship]}))
             (fixture / 'project.godot').write_text('config_version=5\n[application]\nconfig/name="Asset contract fixture"\n')
             # A same-size artist replacement with no PNG metadata or code change.
+            shutil.copy2(ROOT / ship['ruta'], fixture / 'assets/reference.png')
             replacement = fixture / ship['ruta']
             Image.new('RGBA', (48,24), (12,34,56,255)).save(replacement)
             (fixture / 'check.gd').write_text('''extends SceneTree
@@ -182,7 +187,8 @@ func _init():
     var fallback = assets.get_texture("w01_ui_ship_original_move")
     assert(fallback is AtlasTexture)
     assert(fallback.region.size == Vector2(48,24))
-    assert(fallback.get_image().get_pixel(0,0) == Color8(61,116,139,255))
+    var expected = Image.load_from_file("res://assets/reference.png")
+    assert(fallback.get_image().get_data() == expected.get_data())
     print("Replacement and atlas fallback passed")
     quit(0)
 ''')

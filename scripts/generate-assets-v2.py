@@ -177,15 +177,21 @@ def pack_atlas(world,assets):
             path=ROOT/asset['ruta'].replace('_01.png',f'_{index:02}.png')
             items.append((frame,Image.open(path).convert('RGBA')))
     items.sort(key=lambda item:(-item[1].height,-item[1].width,item[0]))
-    atlas=Image.new('RGBA',(2048,2048));frames={};x=y=row_h=0
+    atlas=Image.new('RGBA',(2048,2048));frames={};rows=[];used=0
     for key,image in items:
-        if x+image.width>atlas.width: x=0;y+=row_h;row_h=0
-        if y+image.height>atlas.height: raise ValueError(f'w{world:02} exceeds bounded atlas; split into pages before adding more assets')
+        # Reuse the space to the right of wide scenery for smaller actor pieces.
+        candidates=[r for r in rows if image.height<=r['h'] and r['x']+image.width<=atlas.width]
+        if candidates:
+            row=min(candidates,key=lambda r:atlas.width-r['x']-image.width)
+        else:
+            row={'x':0,'y':used,'h':image.height};rows.append(row);used+=image.height
+        x,y=row['x'],row['y']
+        if image.width>atlas.width or y+image.height>atlas.height: raise ValueError(f'w{world:02} exceeds bounded atlas; split into pages before adding more assets')
         atlas.paste(image,(x,y))
         frames[key]={'x':x,'y':y,'w':image.width,'h':image.height}
-        x+=image.width;row_h=max(row_h,image.height)
+        row['x']+=image.width
     # Keep width2048; crop height to nearest power of two while retaining all bounds.
-    used=y+row_h; height=next(v for v in (512,1024,2048) if v>=used)
+    height=next(v for v in (512,1024,2048) if v>=used)
     atlas=atlas.crop((0,0,2048,height))
     atlas.save(ROOT/f'assets/atlas/w{world:02}.png')
     animations={a['nombre']:{'frames':[a['nombre']+f'_{i:02}' for i in range(1,a['cuadros']+1)],'fps':max(1,a['fps']),'bucle':a['tipo']!='fx'} for a in assets}

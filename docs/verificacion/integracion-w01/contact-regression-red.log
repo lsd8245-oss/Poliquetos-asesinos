@@ -1,0 +1,17 @@
+/workspace/Poliquetos-asesinos/native-tests/test_art_w01.py:32: DeprecationWarning: Image.Image.getdata is deprecated and will be removed in Pillow 14 (2027-10-15). Use get_flattened_data instead.
+  colors = {p[:3] for p in rgba.getdata() if p[3]}
+/workspace/Poliquetos-asesinos/native-tests/test_art_w01.py:35: DeprecationWarning: Image.Image.getdata is deprecated and will be removed in Pillow 14 (2027-10-15). Use get_flattened_data instead.
+  self.assertEqual({p[3] for p in rgba.getdata()}, {0,255}, key)
+..F.
+======================================================================
+FAIL: test_errant_poses_fill_the_existing_square_collision_dimensions (test_art_w01.WorldOneArtTests.test_errant_poses_fill_the_existing_square_collision_dimensions)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/Poliquetos-asesinos/native-tests/test_art_w01.py", line 17, in test_errant_poses_fill_the_existing_square_collision_dimensions
+    self.assertGreaterEqual(bottom-y,size*0.7,name+' leaves invisible collision bands')
+AssertionError: 8 not greater than or equal to 22.4 : pision leaves invisible collision bands
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.075s
+
+FAILED (failures=1)

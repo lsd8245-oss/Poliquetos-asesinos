@@ -1,0 +1,93 @@
+.3.stable.official.7d41c59c4 - https://godotengine.org
+
+[   0% ] [90m[1mfirst_scan_filesystem[22m | Started Project initialization (5 steps)[39m[0m
+[   0% ] [90m[1mfirst_scan_filesystem[22m | Scanning file structure...[39m[0m
+[  16% ] [90m[1mfirst_scan_filesystem[22m | Loading global class names...[39m[0m
+[  33% ] [90m[1mfirst_scan_filesystem[22m | Verifying GDExtensions...[39m[0m
+[  50% ] [90m[1mfirst_scan_filesystem[22m | Creating autoload scripts...[39m[0m
+[  66% ] [90m[1mfirst_scan_filesystem[22m | Initializing plugins...[39m[0m
+[  83% ] [90m[1mfirst_scan_filesystem[22m | Starting file scan...[39m[0m
+[92m[ DONE ][39m [1mfirst_scan_filesystem[22m
+[0m
+[   0% ] [90m[1mloading_editor_layout[22m | Started Loading editor (5 steps)[39m[0m
+[   0% ] [90m[1mloading_editor_layout[22m | Loading editor layout...[39m[0m
+[  16% ] [90m[1mloading_editor_layout[22m | Loading docks...[39m[0m
+[92m[ DONE ][39m [1mloading_editor_layout[22m
+[0m
+
+m[1msavepack[22m | Storing File: res://src/core/data.gd.remap[39m[0m
+[  98% ] [90m[1msavepack[22m | Storing File: res://src/core/assets.gd.remap[39m[0m
+[  98% ] [90m[1msavepack[22m | Storing File: res://src/bosses/patterns.gd.remap[39m[0m
+[  98% ] [90m[1msavepack[22m | Storing File: res://src/bosses/bosses.gd.remap[39m[0m
+[  98% ] [90m[1msavepack[22m | Storing File: res://src/audio/audio.gd.remap[39m[0m
+[  98% ] [90m[1msavepack[22m | Storing File: res://src/core/game.gd.remap[39m[0m
+[  98% ] [90m[1msavepack[22m | Storing File: res://src/save/saves.gd.remap[39m[0m
+[  98% ] [90m[1msavepack[22m | Storing File: res://src/weapons/weapons.gd.remap[39m[0m
+[  98% ] [90m[1msavepack[22m | Storing File: res://.godot/global_script_class_cache.cfg[39m[0m
+[  98% ] [90m[1msavepack[22m | Storing File: res://.godot/uid_cache.bin[39m[0m
+[  98% ] [90m[1msavepack[22m | Storing File: res://project.binary[39m[0m
+[92m[ DONE ][39m [1msavepack[22m
+[0m
+
+m[1msavepack[22m | Storing File: res://src/core/data.gd.remap[39m[0m
+[  98% ] [90m[1msavepack[22m | Storing File: res://src/core/assets.gd.remap[39m[0m
+[  98% ] [90m[1msavepack[22m | Storing File: res://src/bosses/patterns.gd.remap[39m[0m
+[  98% ] [90m[1msavepack[22m | Storing File: res://src/bosses/bosses.gd.remap[39m[0m
+[  98% ] [90m[1msavepack[22m | Storing File: res://src/audio/audio.gd.remap[39m[0m
+[  98% ] [90m[1msavepack[22m | Storing File: res://src/core/game.gd.remap[39m[0m
+[  98% ] [90m[1msavepack[22m | Storing File: res://src/save/saves.gd.remap[39m[0m
+[  98% ] [90m[1msavepack[22m | Storing File: res://src/weapons/weapons.gd.remap[39m[0m
+[  98% ] [90m[1msavepack[22m | Storing File: res://.godot/global_script_class_cache.cfg[39m[0m
+[  98% ] [90m[1msavepack[22m | Storing File: res://.godot/uid_cache.bin[39m[0m
+[  98% ] [90m[1msavepack[22m | Storing File: res://project.binary[39m[0m
+[92m[ DONE ][39m [1msavepack[22m
+[0m
+
+m[1msavepack[22m | Storing File: res://src/core/data.gd.remap[39m[0m
+[  98% ] [90m[1msavepack[22m | Storing File: res://src/core/assets.gd.remap[39m[0m
+[  98% ] [90m[1msavepack[22m | Storing File: res://src/bosses/patterns.gd.remap[39m[0m
+[  98% ] [90m[1msavepack[22m | Storing File: res://src/bosses/bosses.gd.remap[39m[0m
+[  98% ] [90m[1msavepack[22m | Storing File: res://src/audio/audio.gd.remap[39m[0m
+[  98% ] [90m[1msavepack[22m | Storing File: res://src/core/game.gd.remap[39m[0m
+[  98% ] [90m[1msavepack[22m | Storing File: res://src/save/saves.gd.remap[39m[0m
+[  98% ] [90m[1msavepack[22m | Storing File: res://src/weapons/weapons.gd.remap[39m[0m
+[  98% ] [90m[1msavepack[22m | Storing File: res://.godot/global_script_class_cache.cfg[39m[0m
+[  98% ] [90m[1msavepack[22m | Storing File: res://.godot/uid_cache.bin[39m[0m
+[  98% ] [90m[1msavepack[22m | Storing File: res://project.binary[39m[0m
+[92m[ DONE ][39m [1msavepack[22m
+[0m
+
+
+
+[
+  {
+    "file": "Poliquetos-Normal.exe",
+    "bytes": 109757792,
+    "sha256": "89326bff2dfebf01da18d78df401063037720a0ac39c488f4d2d21e26150f3fd",
+    "preset": "Windows Normal"
+  },
+  {
+    "file": "Poliquetos-Pruebas.exe",
+    "bytes": 109757840,
+    "sha256": "6f7b0a97eed983b10c9313141b1e224ae844b1e05cfec2430a03aee25887b75b",
+    "preset": "Windows Pruebas"
+  },
+  {
+    "file": "poliquetos-linux.x86_64",
+    "bytes": 76174192,
+    "sha256": "7cd7b46d8d263f6658dcec8db9b242dc20f757d51bc86987796f71cf4b9a8012",
+    "preset": "Linux Verification"
+  },
+  {
+    "file": "entregas/Poliquetos-Normal-Instalar.exe",
+    "bytes": 29226683,
+    "sha256": "f9d6b6e556abb06be8e0e7ddae034d3a9581b1bd5f5992173da6c5e5c9d580ef",
+    "preset": "Normal installer"
+  },
+  {
+    "file": "entregas/Poliquetos-Pruebas-Instalar.exe",
+    "bytes": 29224031,
+    "sha256": "3f4c94471009d3007c9c3e03999560b68c9b5e74d1584698a695d70b9b94e711",
+    "preset": "Pruebas installer"
+  }
+]

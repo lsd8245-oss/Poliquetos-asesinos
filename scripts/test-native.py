@@ -20,6 +20,9 @@ def main():
         print(('PASS ' if passed else 'FAIL ')+name,flush=True)
         if not passed:
             print(text[-6000:]);raise RuntimeError(name+' failed')
+    # Refresh changed PNG imports before comparing artist files with loaded pixels.
+    # Without an editor watching files, an old .godot cache can show old artwork.
+    run('import',['godot','--headless','--editor','--path',str(ROOT),'--import','--quit'],timeout=180)
     run('python-contracts',[sys.executable,'-m','unittest','discover','-s','native-tests','-p','test_*.py'])
     run('schemas',[sys.executable,'scripts/validate-v2-data.py','--self-test'])
     for path in sorted((ROOT/'native-tests').glob('*test.gd')):
@@ -27,6 +30,10 @@ def main():
         run(path.stem,['godot','--headless','--path',str(ROOT),'--script',str(path)],expected='0 failures' if path.stem=='shop_save_test' else 'pass')
     run('normal-start',['godot','--headless','--path',str(ROOT),'--','--verify-export'],expected='EXPORT_VERIFY_PASS')
     run('pruebas-start',['godot','--headless','--path',str(ROOT),'--','--pruebas','--verify-export'],expected='EXPORT_VERIFY_PASS')
+    for edition in ('normal','pruebas'):
+        command=['godot','--headless','--path',str(ROOT),'--script','native-tests/art_w01_quit.gd','--']
+        if edition=='pruebas':command.append('--pruebas')
+        run(edition+'-quit',command,timeout=20,expected='W01 QUIT PASS')
     if args.render:
         if not env.get('DISPLAY'):raise RuntimeError('--render requires a real/dummyX display')
         for name in ['visual','performance']:
