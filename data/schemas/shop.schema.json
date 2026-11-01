@@ -30,6 +30,9 @@
               "minimum": 0
             },
             "minItems": 1
+          },
+          "nombre": {
+            "type": "string"
           }
         },
         "required": [
@@ -63,6 +66,9 @@
           "efecto": {
             "type": "string",
             "minLength": 1
+          },
+          "nombre": {
+            "type": "string"
           }
         },
         "required": [
@@ -79,6 +85,112 @@
       "type": "number",
       "minimum": 0,
       "maximum": 1
+    },
+    "base_stats": {
+      "type": "object",
+      "properties": {
+        "max_shield": {
+          "type": "number",
+          "minimum": 0
+        },
+        "damage_mult": {
+          "type": "number",
+          "minimum": 0
+        },
+        "rate_mult": {
+          "type": "number",
+          "minimum": 0
+        },
+        "min_missile": {
+          "type": "number",
+          "minimum": 0
+        },
+        "max_bombs": {
+          "type": "number",
+          "minimum": 0
+        },
+        "regen": {
+          "type": "number",
+          "minimum": 0
+        },
+        "magnet": {
+          "type": "number",
+          "minimum": 0
+        },
+        "speed": {
+          "type": "number",
+          "minimum": 0
+        }
+      },
+      "required": [
+        "max_shield",
+        "damage_mult",
+        "rate_mult",
+        "min_missile",
+        "max_bombs",
+        "regen",
+        "magnet",
+        "speed"
+      ],
+      "additionalProperties": false
+    },
+    "economia": {
+      "type": "array",
+      "minItems": 17,
+      "maxItems": 17,
+      "items": {
+        "type": "object",
+        "properties": {
+          "mundo": {
+            "type": "string",
+            "minLength": 1
+          },
+          "acto": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "enemigos": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "duracion_hasta_jefe_seg": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "jefe_objetivo_seg": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "base_monedas": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "vida_jefe": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "vida_minijefe": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "dps_ref": {
+            "type": "integer",
+            "minimum": 0
+          }
+        },
+        "required": [
+          "mundo",
+          "acto",
+          "enemigos",
+          "duracion_hasta_jefe_seg",
+          "jefe_objetivo_seg",
+          "base_monedas",
+          "vida_jefe",
+          "vida_minijefe",
+          "dps_ref"
+        ],
+        "additionalProperties": false
+      }
     }
   },
   "required": [

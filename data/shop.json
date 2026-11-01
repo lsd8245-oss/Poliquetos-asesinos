@@ -1,0 +1,379 @@
+{
+  "mejoras": [
+    {
+      "id": "escudo_max",
+      "nombre": "Escudo máximo",
+      "rangos": 5,
+      "efecto_por_rango": {
+        "max_shield": 20
+      },
+      "costos": [
+        250,
+        450,
+        700,
+        1000,
+        1400
+      ]
+    },
+    {
+      "id": "dano",
+      "nombre": "Daño",
+      "rangos": 5,
+      "efecto_por_rango": {
+        "damage_mult": 0.12
+      },
+      "costos": [
+        300,
+        500,
+        800,
+        1200,
+        1700
+      ]
+    },
+    {
+      "id": "cadencia",
+      "nombre": "Cadencia",
+      "rangos": 4,
+      "efecto_por_rango": {
+        "rate_mult": 0.1
+      },
+      "costos": [
+        300,
+        550,
+        900,
+        1300
+      ]
+    },
+    {
+      "id": "misiles",
+      "nombre": "Misiles",
+      "rangos": 4,
+      "efecto_por_rango": {
+        "min_missile": 1
+      },
+      "costos": [
+        350,
+        600,
+        950,
+        1400
+      ]
+    },
+    {
+      "id": "bombas",
+      "nombre": "Bombas",
+      "rangos": 3,
+      "efecto_por_rango": {
+        "max_bombs": 1
+      },
+      "costos": [
+        300,
+        550,
+        900
+      ]
+    },
+    {
+      "id": "regeneracion",
+      "nombre": "Regeneración de escudo",
+      "rangos": 3,
+      "efecto_por_rango": {
+        "regen": 1
+      },
+      "costos": [
+        250,
+        500,
+        800
+      ]
+    },
+    {
+      "id": "iman",
+      "nombre": "Imán de monedas",
+      "rangos": 3,
+      "efecto_por_rango": {
+        "magnet": 40
+      },
+      "costos": [
+        150,
+        300,
+        500
+      ]
+    },
+    {
+      "id": "velocidad",
+      "nombre": "Velocidad",
+      "rangos": 3,
+      "efecto_por_rango": {
+        "speed": 12.8
+      },
+      "costos": [
+        150,
+        300,
+        500
+      ]
+    }
+  ],
+  "equipo": [
+    {
+      "id": "draga",
+      "nombre": "Draga",
+      "acto": 1,
+      "costo": 600,
+      "efecto": "autorecoger_96px"
+    },
+    {
+      "id": "red_arrastre",
+      "nombre": "Red de arrastre",
+      "acto": 1,
+      "costo": 800,
+      "efecto": "atrapa_5_balas_por_checkpoint"
+    },
+    {
+      "id": "niskin",
+      "nombre": "Botella Niskin",
+      "acto": 2,
+      "costo": 900,
+      "efecto": "pulso_20s_radio140_lento50_duracion2"
+    },
+    {
+      "id": "box_corer",
+      "nombre": "Box corer",
+      "acto": 2,
+      "costo": 1000,
+      "efecto": "perfora_1_enemigo_extra"
+    },
+    {
+      "id": "ctd",
+      "nombre": "CTD",
+      "acto": 2,
+      "costo": 1100,
+      "efecto": "marca_vida_y_puntos_debiles"
+    },
+    {
+      "id": "multicorer",
+      "nombre": "Multicorer",
+      "acto": 3,
+      "costo": 1300,
+      "efecto": "abanico4_cada6s_dano3x"
+    },
+    {
+      "id": "rov",
+      "nombre": "ROV",
+      "acto": 3,
+      "costo": 1500,
+      "efecto": "dron_30porciento_dps"
+    },
+    {
+      "id": "lander",
+      "nombre": "Lander",
+      "acto": 3,
+      "costo": 1400,
+      "efecto": "resurreccion_50porciento_una_por_mundo"
+    },
+    {
+      "id": "deflector",
+      "nombre": "Deflector",
+      "acto": 4,
+      "costo": 2000,
+      "efecto": "frontal32_refleja_balas_dano5"
+    }
+  ],
+  "reembolso_misma_visita": 1,
+  "base_stats": {
+    "max_shield": 100,
+    "damage_mult": 1,
+    "rate_mult": 1,
+    "min_missile": 1,
+    "max_bombs": 2,
+    "regen": 0,
+    "magnet": 24,
+    "speed": 160
+  },
+  "economia": [
+    {
+      "mundo": "1",
+      "acto": 1,
+      "enemigos": 90,
+      "duracion_hasta_jefe_seg": 180,
+      "jefe_objetivo_seg": 90,
+      "base_monedas": 300,
+      "vida_jefe": 1750,
+      "vida_minijefe": 975,
+      "dps_ref": 30
+    },
+    {
+      "mundo": "2",
+      "acto": 1,
+      "enemigos": 125,
+      "duracion_hasta_jefe_seg": 180,
+      "jefe_objetivo_seg": 90,
+      "base_monedas": 400,
+      "vida_jefe": 2100,
+      "vida_minijefe": 1170,
+      "dps_ref": 36
+    },
+    {
+      "mundo": "3",
+      "acto": 1,
+      "enemigos": 135,
+      "duracion_hasta_jefe_seg": 180,
+      "jefe_objetivo_seg": 90,
+      "base_monedas": 500,
+      "vida_jefe": 2450,
+      "vida_minijefe": 1365,
+      "dps_ref": 42
+    },
+    {
+      "mundo": "4",
+      "acto": 1,
+      "enemigos": 135,
+      "duracion_hasta_jefe_seg": 180,
+      "jefe_objetivo_seg": 105,
+      "base_monedas": 600,
+      "vida_jefe": 3300,
+      "vida_minijefe": 1560,
+      "dps_ref": 48
+    },
+    {
+      "mundo": "5",
+      "acto": 2,
+      "enemigos": 135,
+      "duracion_hasta_jefe_seg": 210,
+      "jefe_objetivo_seg": 105,
+      "base_monedas": 700,
+      "vida_jefe": 3700,
+      "vida_minijefe": 1755,
+      "dps_ref": 54
+    },
+    {
+      "mundo": "6",
+      "acto": 2,
+      "enemigos": 150,
+      "duracion_hasta_jefe_seg": 210,
+      "jefe_objetivo_seg": 105,
+      "base_monedas": 800,
+      "vida_jefe": 4100,
+      "vida_minijefe": 1950,
+      "dps_ref": 60
+    },
+    {
+      "mundo": "7",
+      "acto": 2,
+      "enemigos": 150,
+      "duracion_hasta_jefe_seg": 210,
+      "jefe_objetivo_seg": 120,
+      "base_monedas": 900,
+      "vida_jefe": 5150,
+      "vida_minijefe": 2145,
+      "dps_ref": 66
+    },
+    {
+      "mundo": "8",
+      "acto": 2,
+      "enemigos": 162,
+      "duracion_hasta_jefe_seg": 210,
+      "jefe_objetivo_seg": 135,
+      "base_monedas": 1000,
+      "vida_jefe": 6300,
+      "vida_minijefe": 2340,
+      "dps_ref": 72
+    },
+    {
+      "mundo": "9",
+      "acto": 3,
+      "enemigos": 162,
+      "duracion_hasta_jefe_seg": 240,
+      "jefe_objetivo_seg": 120,
+      "base_monedas": 1100,
+      "vida_jefe": 6100,
+      "vida_minijefe": 2535,
+      "dps_ref": 78
+    },
+    {
+      "mundo": "10",
+      "acto": 3,
+      "enemigos": 200,
+      "duracion_hasta_jefe_seg": 240,
+      "jefe_objetivo_seg": 120,
+      "base_monedas": 1200,
+      "vida_jefe": 6550,
+      "vida_minijefe": 2730,
+      "dps_ref": 84
+    },
+    {
+      "mundo": "11",
+      "acto": 3,
+      "enemigos": 200,
+      "duracion_hasta_jefe_seg": 240,
+      "jefe_objetivo_seg": 120,
+      "base_monedas": 1300,
+      "vida_jefe": 7000,
+      "vida_minijefe": 2925,
+      "dps_ref": 90
+    },
+    {
+      "mundo": "12",
+      "acto": 3,
+      "enemigos": 245,
+      "duracion_hasta_jefe_seg": 240,
+      "jefe_objetivo_seg": 120,
+      "base_monedas": 1400,
+      "vida_jefe": 7500,
+      "vida_minijefe": 3120,
+      "dps_ref": 96
+    },
+    {
+      "mundo": "13",
+      "acto": 3,
+      "enemigos": 285,
+      "duracion_hasta_jefe_seg": 270,
+      "jefe_objetivo_seg": 150,
+      "base_monedas": 1500,
+      "vida_jefe": 9950,
+      "vida_minijefe": 3315,
+      "dps_ref": 102
+    },
+    {
+      "mundo": "14 (4.1)",
+      "acto": 4,
+      "enemigos": 250,
+      "duracion_hasta_jefe_seg": 330,
+      "jefe_objetivo_seg": 90,
+      "base_monedas": 1200,
+      "vida_jefe": 6300,
+      "vida_minijefe": 3510,
+      "dps_ref": 108
+    },
+    {
+      "mundo": "14 (4.2)",
+      "acto": 4,
+      "enemigos": 0,
+      "duracion_hasta_jefe_seg": 0,
+      "jefe_objetivo_seg": 120,
+      "base_monedas": 1400,
+      "vida_jefe": 8400,
+      "vida_minijefe": 0,
+      "dps_ref": 108
+    },
+    {
+      "mundo": "14 (4.3)",
+      "acto": 4,
+      "enemigos": 0,
+      "duracion_hasta_jefe_seg": 0,
+      "jefe_objetivo_seg": 120,
+      "base_monedas": 1600,
+      "vida_jefe": 8400,
+      "vida_minijefe": 0,
+      "dps_ref": 108
+    },
+    {
+      "mundo": "14 (4.4)",
+      "acto": 4,
+      "enemigos": 0,
+      "duracion_hasta_jefe_seg": 0,
+      "jefe_objetivo_seg": 180,
+      "base_monedas": 2000,
+      "vida_jefe": 12650,
+      "vida_minijefe": 0,
+      "dps_ref": 108
+    }
+  ]
+}

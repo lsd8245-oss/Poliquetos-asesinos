@@ -67,3 +67,7 @@ Lector de oleadasJSON, formaciones, movimientosM1–M8 y disparosF0–F5, peligr
 ### Fase5
 
 Jefes por segmentos, puntos débiles, fases que no se saltan, invulnerabilidad3s, telegráficos, entradas/derrotas y encuentros múltiples.22perfiles de jefe y14minijefes con patrones distintos;67combinaciones de fase probadas. Daño/cadencia/HP enJSON; el ajuste del mínimo40% y la medición máxima se completan en fase10.
+
+### Fase6
+
+HojasCSV generadas antes de programar la tienda. Totales17900base/21480bono/30450compras. Mejoras8familias y9equipos pasivos, compras por acto, reembolso100%soloenmisma visita con tokens invalidados al salir. Pruebas89comprobaciones de tienda/guardado pasan; ambos modos empiezan sin mejoras y solo con sonar.

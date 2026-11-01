@@ -1,0 +1,40 @@
+tipo,id,rango,costo,acumulado,acto,efecto
+mejora,escudo_max,1,250,250,1,"{""max_shield"": 20}"
+mejora,escudo_max,2,450,700,1,"{""max_shield"": 20}"
+mejora,escudo_max,3,700,1400,1,"{""max_shield"": 20}"
+mejora,escudo_max,4,1000,2400,1,"{""max_shield"": 20}"
+mejora,escudo_max,5,1400,3800,1,"{""max_shield"": 20}"
+mejora,dano,1,300,4100,1,"{""damage_mult"": 0.12}"
+mejora,dano,2,500,4600,1,"{""damage_mult"": 0.12}"
+mejora,dano,3,800,5400,1,"{""damage_mult"": 0.12}"
+mejora,dano,4,1200,6600,1,"{""damage_mult"": 0.12}"
+mejora,dano,5,1700,8300,1,"{""damage_mult"": 0.12}"
+mejora,cadencia,1,300,8600,1,"{""rate_mult"": 0.1}"
+mejora,cadencia,2,550,9150,1,"{""rate_mult"": 0.1}"
+mejora,cadencia,3,900,10050,1,"{""rate_mult"": 0.1}"
+mejora,cadencia,4,1300,11350,1,"{""rate_mult"": 0.1}"
+mejora,misiles,1,350,11700,1,"{""min_missile"": 1}"
+mejora,misiles,2,600,12300,1,"{""min_missile"": 1}"
+mejora,misiles,3,950,13250,1,"{""min_missile"": 1}"
+mejora,misiles,4,1400,14650,1,"{""min_missile"": 1}"
+mejora,bombas,1,300,14950,1,"{""max_bombs"": 1}"
+mejora,bombas,2,550,15500,1,"{""max_bombs"": 1}"
+mejora,bombas,3,900,16400,1,"{""max_bombs"": 1}"
+mejora,regeneracion,1,250,16650,1,"{""regen"": 1}"
+mejora,regeneracion,2,500,17150,1,"{""regen"": 1}"
+mejora,regeneracion,3,800,17950,1,"{""regen"": 1}"
+mejora,iman,1,150,18100,1,"{""magnet"": 40}"
+mejora,iman,2,300,18400,1,"{""magnet"": 40}"
+mejora,iman,3,500,18900,1,"{""magnet"": 40}"
+mejora,velocidad,1,150,19050,1,"{""speed"": 12.8}"
+mejora,velocidad,2,300,19350,1,"{""speed"": 12.8}"
+mejora,velocidad,3,500,19850,1,"{""speed"": 12.8}"
+equipo,draga,1,600,20450,1,autorecoger_96px
+equipo,red_arrastre,1,800,21250,1,atrapa_5_balas_por_checkpoint
+equipo,niskin,1,900,22150,2,pulso_20s_radio140_lento50_duracion2
+equipo,box_corer,1,1000,23150,2,perfora_1_enemigo_extra
+equipo,ctd,1,1100,24250,2,marca_vida_y_puntos_debiles
+equipo,multicorer,1,1300,25550,3,abanico4_cada6s_dano3x
+equipo,rov,1,1500,27050,3,dron_30porciento_dps
+equipo,lander,1,1400,28450,3,resurreccion_50porciento_una_por_mundo
+equipo,deflector,1,2000,30450,4,frontal32_refleja_balas_dano5
