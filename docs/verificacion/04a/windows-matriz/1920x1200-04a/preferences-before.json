@@ -1,0 +1,4 @@
+{
+  "path": "/workspace/rescue-qa/wine-ready/drive_c/users/agent/AppData/Roaming/Poliquetos Asesinos/normal/options.json",
+  "content": "{\n\t\"_integer_paths\": [\n\t\t[\n\t\t\t\"master\"\n\t\t],\n\t\t[\n\t\t\t\"music\"\n\t\t],\n\t\t[\n\t\t\t\"effects\"\n\t\t]\n\t],\n\t\"autofire\": false,\n\t\"bindings\": {\n\n\t},\n\t\"effects\": 8,\n\t\"master\": 10,\n\t\"music\": 7,\n\t\"reduce_flashes\": false,\n\t\"screen\": \"window2\",\n\t\"shake\": true,\n\t\"show_hitbox\": false\n}"
+}

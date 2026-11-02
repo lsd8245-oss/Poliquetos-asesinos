@@ -1,0 +1,666 @@
+[
+	{
+		"bars": [
+			0,
+			0,
+			0,
+			0
+		],
+		"borderless": false,
+		"capture": "auras-window1",
+		"clipped": false,
+		"content_position": [
+			0,
+			0
+		],
+		"content_scale_aspect": 1,
+		"content_scale_factor": 1.0,
+		"content_scale_mode": 2,
+		"content_scale_stretch": 1,
+		"content_size": [
+			640,
+			360
+		],
+		"display_backend": "X11",
+		"dpi": 96,
+		"effective_window_scale": 1,
+		"factor": 1.0,
+		"fixture": true,
+		"integer": true,
+		"logical_size": [
+			640,
+			360
+		],
+		"observed_origin": [
+			0.0,
+			0.0
+		],
+		"observed_scale": [
+			1.0,
+			1.0
+		],
+		"requested_mode": "window1",
+		"requested_window_scale": 1,
+		"scale_xy": [
+			1.0,
+			1.0
+		],
+		"screen": 0,
+		"screen_position": [
+			0,
+			0
+		],
+		"screen_scale": 1.0,
+		"screen_size": [
+			1600,
+			900
+		],
+		"usable_position": [
+			0,
+			0
+		],
+		"usable_size": [
+			1600,
+			900
+		],
+		"viewport_size": [
+			640.0,
+			360.0
+		],
+		"window_adjusted": false,
+		"window_mode": 0,
+		"window_position": [
+			479,
+			256
+		],
+		"window_size": [
+			640,
+			360
+		],
+		"window_with_decorations": [
+			642,
+			387
+		]
+	},
+	{
+		"bars": [
+			0,
+			0,
+			0,
+			0
+		],
+		"borderless": false,
+		"capture": "auras-fullscreen_fill",
+		"clipped": false,
+		"content_position": [
+			0,
+			0
+		],
+		"content_scale_aspect": 1,
+		"content_scale_factor": 1.0,
+		"content_scale_mode": 2,
+		"content_scale_stretch": 0,
+		"content_size": [
+			1600,
+			900
+		],
+		"display_backend": "X11",
+		"dpi": 96,
+		"effective_window_scale": 0,
+		"factor": 2.5,
+		"fixture": true,
+		"integer": false,
+		"logical_size": [
+			640,
+			360
+		],
+		"observed_origin": [
+			0.0,
+			0.0
+		],
+		"observed_scale": [
+			2.5,
+			2.5
+		],
+		"requested_mode": "fullscreen_fill",
+		"requested_window_scale": 0,
+		"scale_xy": [
+			2.5,
+			2.5
+		],
+		"screen": 0,
+		"screen_position": [
+			0,
+			0
+		],
+		"screen_scale": 1.0,
+		"screen_size": [
+			1600,
+			900
+		],
+		"usable_position": [
+			0,
+			0
+		],
+		"usable_size": [
+			1600,
+			900
+		],
+		"viewport_size": [
+			640.0,
+			360.0
+		],
+		"window_adjusted": false,
+		"window_mode": 4,
+		"window_position": [
+			0,
+			0
+		],
+		"window_size": [
+			1600,
+			900
+		],
+		"window_with_decorations": [
+			1600,
+			900
+		]
+	},
+	{
+		"bars": [
+			160,
+			90,
+			160,
+			90
+		],
+		"borderless": false,
+		"capture": "auras-fullscreen_pixel",
+		"clipped": false,
+		"content_position": [
+			160,
+			90
+		],
+		"content_scale_aspect": 1,
+		"content_scale_factor": 1.0,
+		"content_scale_mode": 2,
+		"content_scale_stretch": 1,
+		"content_size": [
+			1280,
+			720
+		],
+		"display_backend": "X11",
+		"dpi": 96,
+		"effective_window_scale": 0,
+		"factor": 2.0,
+		"fixture": true,
+		"integer": true,
+		"logical_size": [
+			640,
+			360
+		],
+		"observed_origin": [
+			160.0,
+			90.0
+		],
+		"observed_scale": [
+			2.0,
+			2.0
+		],
+		"requested_mode": "fullscreen_pixel",
+		"requested_window_scale": 0,
+		"scale_xy": [
+			2.0,
+			2.0
+		],
+		"screen": 0,
+		"screen_position": [
+			0,
+			0
+		],
+		"screen_scale": 1.0,
+		"screen_size": [
+			1600,
+			900
+		],
+		"usable_position": [
+			0,
+			0
+		],
+		"usable_size": [
+			1600,
+			900
+		],
+		"viewport_size": [
+			640.0,
+			360.0
+		],
+		"window_adjusted": false,
+		"window_mode": 4,
+		"window_position": [
+			0,
+			0
+		],
+		"window_size": [
+			1600,
+			900
+		],
+		"window_with_decorations": [
+			1600,
+			900
+		]
+	},
+	{
+		"bars": [
+			0,
+			0,
+			0,
+			0
+		],
+		"borderless": false,
+		"capture": "sonar-sin-ctd",
+		"clipped": false,
+		"content_position": [
+			0,
+			0
+		],
+		"content_scale_aspect": 1,
+		"content_scale_factor": 1.0,
+		"content_scale_mode": 2,
+		"content_scale_stretch": 0,
+		"content_size": [
+			1600,
+			900
+		],
+		"display_backend": "X11",
+		"dpi": 96,
+		"effective_window_scale": 0,
+		"factor": 2.5,
+		"fixture": true,
+		"integer": false,
+		"logical_size": [
+			640,
+			360
+		],
+		"observed_origin": [
+			0.0,
+			0.0
+		],
+		"observed_scale": [
+			2.5,
+			2.5
+		],
+		"requested_mode": "fullscreen_fill",
+		"requested_window_scale": 0,
+		"scale_xy": [
+			2.5,
+			2.5
+		],
+		"screen": 0,
+		"screen_position": [
+			0,
+			0
+		],
+		"screen_scale": 1.0,
+		"screen_size": [
+			1600,
+			900
+		],
+		"usable_position": [
+			0,
+			0
+		],
+		"usable_size": [
+			1600,
+			900
+		],
+		"viewport_size": [
+			640.0,
+			360.0
+		],
+		"window_adjusted": false,
+		"window_mode": 4,
+		"window_position": [
+			0,
+			0
+		],
+		"window_size": [
+			1600,
+			900
+		],
+		"window_with_decorations": [
+			1600,
+			900
+		]
+	},
+	{
+		"bars": [
+			0,
+			0,
+			0,
+			0
+		],
+		"borderless": false,
+		"capture": "sonar-recarga-08",
+		"clipped": false,
+		"content_position": [
+			0,
+			0
+		],
+		"content_scale_aspect": 1,
+		"content_scale_factor": 1.0,
+		"content_scale_mode": 2,
+		"content_scale_stretch": 0,
+		"content_size": [
+			1600,
+			900
+		],
+		"display_backend": "X11",
+		"dpi": 96,
+		"effective_window_scale": 0,
+		"factor": 2.5,
+		"fixture": true,
+		"integer": false,
+		"logical_size": [
+			640,
+			360
+		],
+		"observed_origin": [
+			0.0,
+			0.0
+		],
+		"observed_scale": [
+			2.5,
+			2.5
+		],
+		"requested_mode": "fullscreen_fill",
+		"requested_window_scale": 0,
+		"scale_xy": [
+			2.5,
+			2.5
+		],
+		"screen": 0,
+		"screen_position": [
+			0,
+			0
+		],
+		"screen_scale": 1.0,
+		"screen_size": [
+			1600,
+			900
+		],
+		"usable_position": [
+			0,
+			0
+		],
+		"usable_size": [
+			1600,
+			900
+		],
+		"viewport_size": [
+			640.0,
+			360.0
+		],
+		"window_adjusted": false,
+		"window_mode": 4,
+		"window_position": [
+			0,
+			0
+		],
+		"window_size": [
+			1600,
+			900
+		],
+		"window_with_decorations": [
+			1600,
+			900
+		]
+	},
+	{
+		"bars": [
+			0,
+			0,
+			0,
+			0
+		],
+		"borderless": false,
+		"capture": "restaurar-ventana",
+		"clipped": false,
+		"content_position": [
+			0,
+			0
+		],
+		"content_scale_aspect": 1,
+		"content_scale_factor": 1.0,
+		"content_scale_mode": 2,
+		"content_scale_stretch": 1,
+		"content_size": [
+			1280,
+			720
+		],
+		"display_backend": "X11",
+		"dpi": 96,
+		"effective_window_scale": 2,
+		"factor": 2.0,
+		"fixture": true,
+		"integer": true,
+		"logical_size": [
+			640,
+			360
+		],
+		"observed_origin": [
+			0.0,
+			0.0
+		],
+		"observed_scale": [
+			2.0,
+			2.0
+		],
+		"requested_mode": "window2",
+		"requested_window_scale": 2,
+		"scale_xy": [
+			2.0,
+			2.0
+		],
+		"screen": 0,
+		"screen_position": [
+			0,
+			0
+		],
+		"screen_scale": 1.0,
+		"screen_size": [
+			1600,
+			900
+		],
+		"usable_position": [
+			0,
+			0
+		],
+		"usable_size": [
+			1600,
+			900
+		],
+		"viewport_size": [
+			640.0,
+			360.0
+		],
+		"window_adjusted": false,
+		"window_mode": 0,
+		"window_position": [
+			160,
+			90
+		],
+		"window_size": [
+			1280,
+			720
+		],
+		"window_with_decorations": [
+			1282,
+			747
+		]
+	},
+	{
+		"bars": [
+			0,
+			0,
+			0,
+			0
+		],
+		"borderless": false,
+		"capture": "jefe-fullscreen_fill",
+		"clipped": false,
+		"content_position": [
+			0,
+			0
+		],
+		"content_scale_aspect": 1,
+		"content_scale_factor": 1.0,
+		"content_scale_mode": 2,
+		"content_scale_stretch": 0,
+		"content_size": [
+			1600,
+			900
+		],
+		"display_backend": "X11",
+		"dpi": 96,
+		"effective_window_scale": 0,
+		"factor": 2.5,
+		"fixture": true,
+		"integer": false,
+		"logical_size": [
+			640,
+			360
+		],
+		"observed_origin": [
+			0.0,
+			0.0
+		],
+		"observed_scale": [
+			2.5,
+			2.5
+		],
+		"requested_mode": "fullscreen_fill",
+		"requested_window_scale": 0,
+		"scale_xy": [
+			2.5,
+			2.5
+		],
+		"screen": 0,
+		"screen_position": [
+			0,
+			0
+		],
+		"screen_scale": 1.0,
+		"screen_size": [
+			1600,
+			900
+		],
+		"usable_position": [
+			0,
+			0
+		],
+		"usable_size": [
+			1600,
+			900
+		],
+		"viewport_size": [
+			640.0,
+			360.0
+		],
+		"window_adjusted": false,
+		"window_mode": 4,
+		"window_position": [
+			0,
+			0
+		],
+		"window_size": [
+			1600,
+			900
+		],
+		"window_with_decorations": [
+			1600,
+			900
+		]
+	},
+	{
+		"bars": [
+			160,
+			90,
+			160,
+			90
+		],
+		"borderless": false,
+		"capture": "jefe-fullscreen_pixel",
+		"clipped": false,
+		"content_position": [
+			160,
+			90
+		],
+		"content_scale_aspect": 1,
+		"content_scale_factor": 1.0,
+		"content_scale_mode": 2,
+		"content_scale_stretch": 1,
+		"content_size": [
+			1280,
+			720
+		],
+		"display_backend": "X11",
+		"dpi": 96,
+		"effective_window_scale": 0,
+		"factor": 2.0,
+		"fixture": true,
+		"integer": true,
+		"logical_size": [
+			640,
+			360
+		],
+		"observed_origin": [
+			160.0,
+			90.0
+		],
+		"observed_scale": [
+			2.0,
+			2.0
+		],
+		"requested_mode": "fullscreen_pixel",
+		"requested_window_scale": 0,
+		"scale_xy": [
+			2.0,
+			2.0
+		],
+		"screen": 0,
+		"screen_position": [
+			0,
+			0
+		],
+		"screen_scale": 1.0,
+		"screen_size": [
+			1600,
+			900
+		],
+		"usable_position": [
+			0,
+			0
+		],
+		"usable_size": [
+			1600,
+			900
+		],
+		"viewport_size": [
+			640.0,
+			360.0
+		],
+		"window_adjusted": false,
+		"window_mode": 4,
+		"window_position": [
+			0,
+			0
+		],
+		"window_size": [
+			1600,
+			900
+		],
+		"window_with_decorations": [
+			1600,
+			900
+		]
+	}
+]

@@ -10,7 +10,7 @@ const TIPS = [
 	"Mueve la nave en pasos cortos entre proyectiles.", "Observa la señal antes de cada ataque del jefe.",
 	"Las compras se conservan al reintentar.", "Las monedas recogidas se conservan al morir.",
 	"El punto de control evita repetir todo el mundo.", "Visita la tienda entre mundos.",
-	"El sonar viene instalado desde el principio.", "El astillero cambia el aspecto de tu nave.",
+	"Sonar: consulta su tecla y recarga en el HUD.", "El astillero cambia el aspecto de tu nave.",
 	"Las skins se desbloquean con logros.", "Puedes reasignar teclas y mando en Opciones.",
 	"El disparo automático se activa en Opciones.", "Rejugar mundos conserva el progreso de campaña.",
 	"Prueba otra ruta si te rodean los enemigos.", "Puedes reducir los destellos en Opciones.",
@@ -48,6 +48,11 @@ var credits_clock=0.0
 var finish_sequence=false
 var last_state = ""
 var pending_bomb = false
+var pending_sonar=false
+var sonar
+var sonar_hint=0.0
+var sonar_explained=false
+var sonar_trace_cooldown=-1
 var remap_action = ""
 var remap_kind = "key"
 var sandbox_world = 1
@@ -56,6 +61,9 @@ var sandbox_weapons = {"shot": 1, "missile": 1, "bomb": 1}
 var intro_clock = 0.0
 var smoke_frames = 0
 var import_dialog: FileDialog
+const DisplayPolicy=preload("res://src/visuals/display_policy.gd")
+const Indicators=preload("res://src/visuals/state_indicators.gd")
+const Sonar=preload("res://src/equipment/sonar.gd")
 const Presentation=preload("res://src/visuals/combat_presentation.gd")
 const W01Environment=preload("res://src/visuals/w01_environment.gd")
 var presentation=Presentation.new()
@@ -72,6 +80,7 @@ func _ready():
 	assets = Assets.new()
 	assets.load_all()
 	game = Game.new()
+	sonar=Sonar.new(game.data.combat.sonar)
 	if OS.get_cmdline_user_args().has("--verify-export"):
 		set_process(false)
 		var p=Shop.create_profile(sandbox)
@@ -102,15 +111,29 @@ func _ready():
 
 func _apply_options():
 	audio.configure(options)
-	if DisplayServer.get_name() == "headless":
-		return
-	var mode = str(options.get("screen", "window2"))
-	if mode == "fullscreen":
-		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_FULLSCREEN)
-	else:
-		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_WINDOWED)
-		var factor = int(mode.trim_prefix("window"))
-		DisplayServer.window_set_size(Vector2i(640, 360) * clampi(factor, 1, 3))
+	DisplayPolicy.apply(get_window(),str(options.get("screen","window2")))
+	if runtime_trace:call_deferred("_trace_display")
+
+func _trace_display():
+	await get_tree().process_frame
+	await get_tree().process_frame
+	print("DISPLAY_TRACE ",JSON.stringify(DisplayPolicy.metrics(get_window(),str(options.get("screen","window2")))))
+
+func _display_mode_label()->String:
+	var mode=DisplayPolicy.normalize(str(options.screen))
+	var label=DisplayPolicy.label(mode)
+	if DisplayServer.get_name()!="headless" and mode.begins_with("window"):
+		var actual=int(DisplayPolicy.content_metrics(get_window().size,mode).factor)
+		var wanted=int(mode.trim_prefix("window"))
+		if actual!=wanted:label+=" (ajustada x%d)"%actual
+	return label
+
+func _reset_sonar():
+	sonar.reset()
+	pending_sonar=false
+	sonar_hint=0.0
+	sonar_explained=false
+	sonar_trace_cooldown=-1
 
 func _save_options():
 	options.show_hitbox = hitboxes
@@ -173,7 +196,7 @@ func _show(next: String):
 			for key in ["master", "music", "effects"]:
 				var label = {"master":"Volumen general", "music":"Música", "effects":"Efectos"}[key]
 				_button("%s: %d / 10" % [label, options[key]], "option:" + key)
-			_button("Pantalla: " + ("Pantalla completa" if options.screen=="fullscreen" else "Ventana x"+str(options.screen).trim_prefix("window")), "option:screen")
+			_button("Pantalla: " + _display_mode_label(), "option:screen")
 			_button("Disparo automático: " + _yes(options.autofire), "option:autofire")
 			_button("Temblor: " + _yes(options.shake), "option:shake")
 			_button("Reducir destellos: " + _yes(options.reduce_flashes), "option:reduce_flashes")
@@ -181,11 +204,11 @@ func _show(next: String):
 			if return_screen == "rest":
 				_button("Dificultad: " + _difficulty_name(game.profile.difficulty), "change_difficulty")
 			_button("Volver", "options_back")
-			lines = ["Izquierda / derecha: ajustar; Enter / A: cambiar", "F3: mostrar hitboxes | Música pendiente"]
+			lines = ["Izquierda / derecha: ajustar; Enter / A: cambiar", "Píxel perfecto: escala entera con bordes; Rellenar: ajuste proporcional."]
 		"controls":
 			heading = "REASIGNAR CONTROLES"
-			for action in ["left", "right", "up", "down", "fire", "bomb", "pause"]:
-				var names = {"left":"Izquierda", "right":"Derecha", "up":"Arriba", "down":"Abajo", "fire":"Disparo", "bomb":"Bomba", "pause":"Pausa"}
+			for action in ["left", "right", "up", "down", "fire", "bomb", "pause", "sonar"]:
+				var names = {"left":"Izquierda", "right":"Derecha", "up":"Arriba", "down":"Abajo", "fire":"Disparo", "bomb":"Bomba", "pause":"Pausa", "sonar":"Sonar"}
 				var row = buttons.size()
 				_button(names[action] + ": " + _binding_name(action, "key"), "bind:key:" + action, Rect2(35, 82 + row * 25, 275, 21))
 				_button("Mando: " + _binding_name(action, "joy"), "bind:joy:" + action, Rect2(325, 82 + row * 25, 280, 21))
@@ -336,6 +359,7 @@ func _confirm(action: String):
 func _start(profile: Dictionary, loaded: bool = false):
 	game.start(profile)
 	presentation.reset()
+	_reset_sonar()
 	runtime_trace_index=0
 	runtime_trace_start=game.total_time
 	active_slot = int(profile.get("slot", 1))
@@ -390,8 +414,8 @@ func _activate(action: String, direction: int = 1):
 		if key in ["master", "music", "effects"]:
 			options[key] = posmod(int(options[key]) + direction, 11)
 		elif key == "screen":
-			var modes = ["window1", "window2", "window3", "fullscreen"]
-			options.screen = modes[posmod(modes.find(options.screen) + direction, 4)]
+			var modes = DisplayPolicy.modes()
+			options.screen = modes[posmod(modes.find(DisplayPolicy.normalize(str(options.screen))) + direction, modes.size())]
 		else:
 			options[key] = not options[key]
 		var current = selected
@@ -496,6 +520,7 @@ func _activate(action: String, direction: int = 1):
 					_show("title")
 				elif confirm_action == "Reiniciar punto de control":
 					game.retry()
+					_reset_sonar()
 					_show("game")
 				elif confirm_action.begins_with("Sobrescribir"):
 					_new_profile()
@@ -506,10 +531,12 @@ func _activate(action: String, direction: int = 1):
 				if action == "easy_retry":
 					game.profile.difficulty = "easy"
 				game.retry()
+				_reset_sonar()
 				_show("game")
 			"next":
 				game.profile.resume = "playing"
 				game.continue_campaign()
+				_reset_sonar()
 				intro_clock = 2.0
 				_show("rest" if game.state=="rest" else ("victory" if game.state=="victory" else "game"))
 			"results_skip":
@@ -597,13 +624,13 @@ func _open_import(slot: int):
 func _binding_name(action: String, kind: String) -> String:
 	var value = options.bindings.get(kind + ":" + action, -1)
 	if int(value) < 0:
-		return "predeterminado"
+		return ("Q" if kind=="key" else "Y (predet.)") if action=="sonar" else "predeterminado"
 	return OS.get_keycode_string(int(value)) if kind == "key" else "botón %d" % int(value)
 
 func _held(action: String) -> bool:
 	var key = int(options.bindings.get("key:" + action, -1))
 	var joy = int(options.bindings.get("joy:" + action, -1))
-	var defaults = {"left":[KEY_LEFT, KEY_A], "right":[KEY_RIGHT, KEY_D], "up":[KEY_UP, KEY_W], "down":[KEY_DOWN, KEY_S], "fire":[KEY_Z, KEY_SPACE], "bomb":[KEY_X], "pause":[KEY_ESCAPE, KEY_P]}
+	var defaults = {"left":[KEY_LEFT, KEY_A], "right":[KEY_RIGHT, KEY_D], "up":[KEY_UP, KEY_W], "down":[KEY_DOWN, KEY_S], "fire":[KEY_Z, KEY_SPACE], "bomb":[KEY_X], "pause":[KEY_ESCAPE, KEY_P], "sonar":[KEY_Q]}
 	if key >= 0:
 		if Input.is_physical_key_pressed(key):
 			return true
@@ -611,7 +638,7 @@ func _held(action: String) -> bool:
 		for code in defaults.get(action, []):
 			if Input.is_physical_key_pressed(code):
 				return true
-	var joy_defaults = {"left":JOY_BUTTON_DPAD_LEFT, "right":JOY_BUTTON_DPAD_RIGHT, "up":JOY_BUTTON_DPAD_UP, "down":JOY_BUTTON_DPAD_DOWN, "fire":JOY_BUTTON_A, "bomb":JOY_BUTTON_B, "pause":JOY_BUTTON_START}
+	var joy_defaults = {"left":JOY_BUTTON_DPAD_LEFT, "right":JOY_BUTTON_DPAD_RIGHT, "up":JOY_BUTTON_DPAD_UP, "down":JOY_BUTTON_DPAD_DOWN, "fire":JOY_BUTTON_A, "bomb":JOY_BUTTON_B, "pause":JOY_BUTTON_START, "sonar":JOY_BUTTON_Y}
 	for device in Input.get_connected_joypads():
 		if Input.is_joy_button_pressed(device, joy if joy >= 0 else joy_defaults.get(action, JOY_BUTTON_INVALID)):
 			return true
@@ -622,9 +649,9 @@ func _event_action(event, action: String) -> bool:
 		var custom = int(options.bindings.get("key:" + action, -1))
 		if custom >= 0:
 			return event.physical_keycode == custom or event.keycode == custom
-		return event.keycode in {"fire":[KEY_Z, KEY_SPACE], "bomb":[KEY_X], "pause":[KEY_ESCAPE, KEY_P]}.get(action, [])
+		return event.keycode in {"fire":[KEY_Z, KEY_SPACE], "bomb":[KEY_X], "pause":[KEY_ESCAPE, KEY_P], "sonar":[KEY_Q]}.get(action, [])
 	if event is InputEventJoypadButton:
-		return event.button_index == int(options.bindings.get("joy:" + action, {"fire":JOY_BUTTON_A, "bomb":JOY_BUTTON_B, "pause":JOY_BUTTON_START}.get(action, -1)))
+		return event.button_index == int(options.bindings.get("joy:" + action, {"fire":JOY_BUTTON_A, "bomb":JOY_BUTTON_B, "pause":JOY_BUTTON_START, "sonar":JOY_BUTTON_Y}.get(action, -1)))
 	return false
 
 func _input(event):
@@ -669,6 +696,8 @@ func _input(event):
 				_show("pause")
 		elif _event_action(event, "bomb"):
 			pending_bomb = true
+		elif _event_action(event,"sonar"):
+			pending_sonar=true
 		return
 	var key = event.keycode if event is InputEventKey else -1
 	var joy = event.button_index if event is InputEventJoypadButton else -1
@@ -720,7 +749,18 @@ func _process(dt):
 					movement += stick
 			var before_time=game.total_time
 			game.step(minf(dt, 0.05), {"move": movement.limit_length(), "fire": _held("fire") or options.autofire, "bomb": pending_bomb})
-			if game.total_time>before_time:presentation.step(game,game.total_time-before_time)
+			if game.total_time>before_time:
+				var effective_dt=game.total_time-before_time
+				presentation.step(game,effective_dt)
+				sonar.advance(effective_dt)
+				sonar_hint=maxf(0,sonar_hint-effective_dt)
+				if pending_sonar and sonar.activate(game.profile,game.player.pos):
+					if not sonar_explained:sonar_hint=float(sonar.config.reveal_seconds);sonar_explained=true
+					if runtime_trace:print("SONAR_TRACE ",JSON.stringify({"world_time":game.world_time,"cooldown":sonar.cooldown,"remaining":sonar.remaining,"key":_sonar_key_name(),"shield":game.player.shield,"informational_only":true,"ctd":game.equipment("ctd")}))
+				if runtime_trace and ceili(sonar.cooldown)!=sonar_trace_cooldown:
+					sonar_trace_cooldown=ceili(sonar.cooldown)
+					print("SONAR_STATE ",JSON.stringify({"world_time":game.world_time,"cooldown":sonar.cooldown,"remaining":sonar.remaining,"key":_sonar_key_name(),"text":sonar.status()}))
+			pending_sonar=false
 			_trace_runtime()
 			pending_bomb = false
 		if game.state != last_state:
@@ -770,12 +810,15 @@ func _draw():
 		assets.sprite(self, "w01_ui_cover_idle", Rect2(0,0,640,360))
 	else:
 		_draw_background(world_id, game.scroll if playing else clock * 10)
+		if not playing:assets.sprite(self,"w01_ui_hud_idle",Rect2(0,336,640,24))
 	if playing:
 		_draw_game(world_id)
 	if screen == "game":
 		if intro_clock > 0:
-			assets.panel(self, Rect2(100, 140, 440, 50))
-			_label("MUNDO %d / %s" % [world_id, game.world.nombre], Vector2(115, 159))
+			assets.panel(self, Rect2(90,132,460,64))
+			_label("MUNDO %d / %s" % [world_id, game.world.nombre], Vector2(104,140))
+			_label("%s SONAR: revela peligros, sin daño; recarga %d s"%[_sonar_key_name(),ceili(sonar.config.cooldown_seconds)],Vector2(104,157))
+			_label("Icono de arma: botín de grupo. Destello ámbar: ataque.",Vector2(104,175))
 		if game.state == "countdown":
 			_label(str(ceili(game.resume_clock)), Vector2(308, 148), Color.WHITE, 3)
 	elif screen=="ending":
@@ -876,15 +919,19 @@ func _draw_ship(pos: Vector2, size: Vector2):
 	draw_set_transform(Vector2.ZERO)
 
 func _draw_game(world_id: int):
+	sonar.draw_pulse(self,assets,bool(options.reduce_flashes))
 	if world_id==15 and game.world_time<float(game.data.escape.fondo_transicion.desde_seg):
 		_pixel(Rect2(0,0,640,336),Color(0.8,0,0,0.03 if options.reduce_flashes else 0.04+0.06*absf(sin(clock*3))))
 	for hazard in game.hazards:
 		var rect = hazard.get("rect", Rect2())
 		assets.sprite(self, "w01_ui_hazard_idle", rect, clock, Color(1, 0.6, 0.3, 0.22 if hazard.get("delay", 0) > 0 else 0.55))
+		if sonar.reveals(rect.get_center()):
+			assets.sprite(self,"w01_fx_bubble_burst",rect.grow(4),0,Color(0.5,1,1,0.35 if options.reduce_flashes else 0.6))
 	for enemy in game.enemies:
 		if enemy.get("hidden",false):
-			if enemy.get("warning",false):
-				assets.sprite(self,"w01_fx_spark_burst",Rect2(enemy.pos.x-12,312,24,24),clock,Color.YELLOW)
+			Indicators.draw(self,assets,Indicators.describe(enemy,bool(game.profile.equipment.get("ctd",false)),game.total_time,bool(options.reduce_flashes)))
+			if sonar.reveals(enemy.pos):
+				assets.sprite(self,"w01_ui_equipment_sonar_idle",Rect2(enemy.pos-Vector2(6,6),Vector2(12,12)),game.total_time,Color(0.5,1,1,0.7))
 			continue
 		if float(enemy.get("hp",0))<=0 or enemy.get("inactive",false):continue
 		var size = enemy.get("size", Vector2(32, 24))
@@ -894,17 +941,9 @@ func _draw_game(world_id: int):
 		elif enemy.get("mini", false):
 			key = "w%02d_mini_%s_move" % [world_id, game.world.get("mini_tipo", enemy.id)]
 		var flags = enemy.get("flags", {})
-		var tint = Color.WHITE
+		var tint=Indicators.actor_tint(enemy,game.total_time,bool(options.reduce_flashes))
 		if enemy.get("flash",0)>0 and not options.reduce_flashes and assets.has_sprite(key.replace("_move","_hit")):
 			key=key.replace("_move","_hit")
-		if enemy.get("carrier","")!="":
-			var glow={"rojo":Color(1,0.3,0.3),"verde":Color(0.3,1,0.4),"azul":Color(0.3,0.5,1)}.get(enemy.carrier,Color.WHITE)
-			assets.sprite(self,"w01_fx_bubble_burst",Rect2(enemy.pos-size*0.6,size*1.2),_loop_fx("w01_fx_bubble_burst",clock),glow)
-		if enemy.get("warning",false):
-			assets.sprite(self,"w01_fx_spark_burst",Rect2(enemy.pos-size/2,size),clock,Color.YELLOW)
-		if float(enemy.get("lock",0))>0:
-			tint.a=0.35 if int(clock*12)%2==0 else 0.8
-		tint.a *= float(flags.get("opacity", 0.15 if flags.get("invisible", false) else 1.0))
 		if flags.get("screen_effect","")=="sandstorm":
 			_pixel(Rect2(0,0,40,336),Color(0.15,0.1,0,0.6))
 			_pixel(Rect2(600,0,40,336),Color(0.15,0.1,0,0.6))
@@ -917,9 +956,9 @@ func _draw_game(world_id: int):
 				assets.organic_sprite(self,layer.key,layer.rect,time,tint)
 			else:
 				assets.sprite(self,layer.key,layer.rect,time,tint)
-		if game.profile.equipment.get("ctd", false) and flags.get("weak_exposed", true):
-			for point in flags.get("weak_points", []):
-				assets.sprite(self, "w01_fx_spark_burst", Rect2(point - Vector2(6, 6), Vector2(12, 12)), clock, Color.CYAN)
+		Indicators.draw(self,assets,Indicators.describe(enemy,bool(game.profile.equipment.get("ctd",false)),game.total_time,bool(options.reduce_flashes)))
+		if str(enemy.get("config",{}).get("tipo",""))=="tubicola" and sonar.reveals(enemy.pos):
+			assets.sprite(self,"w01_ui_equipment_sonar_idle",Rect2(enemy.pos+Vector2(-6,size.y/2-3),Vector2(12,12)),0,Color(0.6,1,1,0.65))
 		if hitboxes:
 			var rectangles = game.enemy_hit_rects(enemy) if game.has_method("enemy_hit_rects") else [Rect2(enemy.pos - size / 2, size)]
 			for rect in rectangles:
@@ -973,6 +1012,9 @@ func _draw_game(world_id: int):
 		_pixel(Rect2(0,0,640,336),Color(1,1,1,float(game.data.combat.ui.reduced_flash_alpha) if options.reduce_flashes else float(game.data.combat.ui.flash_alpha)))
 	_draw_hud()
 	_draw_equipment()
+	if sonar_hint>0:
+		assets.sprite(self,"w01_ui_panel_idle",Rect2(6,292,628,18),0,Color(1,1,1,0.72))
+		_label("Sonar: resalta peligros y organismos cercanos; no causa daño.",Vector2(12,297),Color(0.7,1,1))
 	var boss_index = 0
 	for boss in game.enemies:
 		if not boss.get("boss", false) or float(boss.get("hp", 0)) <= 0:
@@ -1056,17 +1098,24 @@ func _draw_hud():
 	_pixel(Rect2(628, 341, 2, 10), Color(1, 0.4, 0.5))
 	_label("M%d %s" % [game.profile.world, _time(game.world_time)], Vector2(485, 349))
 
+func _sonar_key_name()->String:
+	var custom=int(options.get("bindings",{}).get("key:sonar",-1))
+	return OS.get_keycode_string(custom) if custom>=0 else "Q"
+
 func _draw_equipment():
 	var gear=["sonar","ctd","deflector"]
 	for index in range(gear.size()):
 		var id=gear[index]
 		var owned=game.profile.equipment.get(id,false)
-		var x=6+index*88
+		var x=[6,166,254][index]
+		var width=154 if index==0 else 84
 		var color=[Color(0.5,0.95,0.9),Color(1,0.85,0.5),Color(0.8,0.65,1)][index]
-		assets.sprite(self,"w01_ui_panel_idle",Rect2(x,314,84,20),0,Color(1,1,1,0.72 if owned else 0.35))
-		assets.sprite(self,"w01_ui_equipment_%s_idle"%id,Rect2(x+2,316,16,16),clock,Color.WHITE if owned else Color(0.45,0.5,0.6))
-		_label(id.to_upper(),Vector2(x+21,315),color)
-		_label("LISTO" if owned else "NO INST.",Vector2(x+21,325),Color.WHITE if owned else Color(0.6,0.7,0.8))
+		assets.sprite(self,"w01_ui_panel_idle",Rect2(x,314,width,20),0,Color(1,1,1,0.72 if owned else 0.35))
+		assets.sprite(self,"w01_ui_equipment_%s_idle"%id,Rect2(x+2,316,16,16),game.total_time,Color.WHITE if owned else Color(0.45,0.5,0.6))
+		var title=(_sonar_key_name()+" SONAR").left(21) if index==0 else id.to_upper()
+		var status=(sonar.status() if index==0 else "PASIVO") if owned else "NO INST."
+		_label(title,Vector2(x+21,315),color)
+		_label(status,Vector2(x+21,325),Color.WHITE if owned else Color(0.6,0.7,0.8))
 
 func _draw_shop():
 	for entry in shop_rows:

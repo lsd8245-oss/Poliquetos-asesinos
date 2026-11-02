@@ -1,0 +1,13 @@
+{
+	"bullet_count": 200,
+	"enemy_count": 50,
+	"frames": 220,
+	"friendly_count": 64,
+	"mean_fps": 55.320652331074,
+	"mean_ms": 18.0764318181818,
+	"os": "Linux",
+	"p95_ms": 25.066,
+	"player_firing": true,
+	"renderer": "llvmpipe (LLVM 19.1.7, 256 bits)",
+	"scope": "Local Linux software OpenGL renderer; Windows hardware may differ."
+}

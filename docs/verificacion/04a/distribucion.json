@@ -1,0 +1,192 @@
+[
+  {
+    "edition": "Normal",
+    "installer_bytes": 29698179,
+    "installer_sha256": "2f920e3c408cd171b13cc96c49f33d406e75b8b1e0a6687b8d5f8b16598485b4",
+    "payload_sha256": "f8ad9b55a75448ca8a524c5208aabba36ef4338a5eac8eb9f29bace30202d513",
+    "windows_pe_x64": true,
+    "embedded_pck": true,
+    "installer_crc_and_payload": true,
+    "packed_runtime_probe": "normal",
+    "stage_probe": {
+      "edition": "normal",
+      "enemy_distance": 305.0,
+      "executable": "/opt/godot/4.6.3/Godot_v4.6.3-stable_linux.x86_64",
+      "first_wave_time": 10.0000000000001,
+      "kills": 5,
+      "os": "Linux",
+      "passed": true,
+      "peak_enemy_bullets": 27,
+      "resources": {
+        "res://src/bosses/bosses.gd": {
+          "file_access": false,
+          "loaded": true,
+          "resource_loader": true
+        },
+        "res://src/shop/shop.gd": {
+          "file_access": false,
+          "loaded": true,
+          "resource_loader": true
+        },
+        "res://src/stages/stages.gd": {
+          "file_access": false,
+          "loaded": true,
+          "resource_loader": true
+        },
+        "res://src/weapons/weapons.gd": {
+          "file_access": false,
+          "loaded": true,
+          "resource_loader": true
+        }
+      },
+      "samples": [
+        {
+          "boss_system": true,
+          "elapsed": 0.0,
+          "enemies": 0,
+          "regular_kills": 0,
+          "regular_spawned": 0,
+          "scroll": 0.0,
+          "stage_system": true,
+          "state": "playing",
+          "weapon_system": true,
+          "world_time": 0.0
+        },
+        {
+          "boss_system": true,
+          "elapsed": 5.0,
+          "enemies": 0,
+          "regular_kills": 0,
+          "regular_spawned": 0,
+          "scroll": 300.0,
+          "stage_system": true,
+          "state": "playing",
+          "weapon_system": true,
+          "world_time": 4.99999999999999
+        },
+        {
+          "boss_system": true,
+          "elapsed": 12.0,
+          "enemies": 4,
+          "regular_kills": 0,
+          "regular_spawned": 4,
+          "scroll": 720.0,
+          "stage_system": true,
+          "state": "playing",
+          "weapon_system": true,
+          "world_time": 12.0000000000002
+        },
+        {
+          "boss_system": true,
+          "elapsed": 20.0,
+          "enemies": 3,
+          "regular_kills": 5,
+          "regular_spawned": 8,
+          "scroll": 1200.0,
+          "stage_system": true,
+          "state": "playing",
+          "weapon_system": true,
+          "world_time": 20.0000000000001
+        }
+      ],
+      "shield": 90.0,
+      "shop_stats_match": true
+    },
+    "probe_host": "Godot Linux 4.6.3, not native Windows"
+  },
+  {
+    "edition": "Pruebas",
+    "installer_bytes": 29699095,
+    "installer_sha256": "75057a26d8a6f5cf6b409cecd99c9d8bb3abb0075f4f829a9742f985f39cbbee",
+    "payload_sha256": "e1ef1a5e1cb0c5c65eac1f323a13dfb22e5865b26798cd74b1c1abbfc38a1538",
+    "windows_pe_x64": true,
+    "embedded_pck": true,
+    "installer_crc_and_payload": true,
+    "packed_runtime_probe": "pruebas",
+    "stage_probe": {
+      "edition": "pruebas",
+      "enemy_distance": 305.0,
+      "executable": "/opt/godot/4.6.3/Godot_v4.6.3-stable_linux.x86_64",
+      "first_wave_time": 10.0000000000001,
+      "kills": 5,
+      "os": "Linux",
+      "passed": true,
+      "peak_enemy_bullets": 27,
+      "resources": {
+        "res://src/bosses/bosses.gd": {
+          "file_access": false,
+          "loaded": true,
+          "resource_loader": true
+        },
+        "res://src/shop/shop.gd": {
+          "file_access": false,
+          "loaded": true,
+          "resource_loader": true
+        },
+        "res://src/stages/stages.gd": {
+          "file_access": false,
+          "loaded": true,
+          "resource_loader": true
+        },
+        "res://src/weapons/weapons.gd": {
+          "file_access": false,
+          "loaded": true,
+          "resource_loader": true
+        }
+      },
+      "samples": [
+        {
+          "boss_system": true,
+          "elapsed": 0.0,
+          "enemies": 0,
+          "regular_kills": 0,
+          "regular_spawned": 0,
+          "scroll": 0.0,
+          "stage_system": true,
+          "state": "playing",
+          "weapon_system": true,
+          "world_time": 0.0
+        },
+        {
+          "boss_system": true,
+          "elapsed": 5.0,
+          "enemies": 0,
+          "regular_kills": 0,
+          "regular_spawned": 0,
+          "scroll": 300.0,
+          "stage_system": true,
+          "state": "playing",
+          "weapon_system": true,
+          "world_time": 4.99999999999999
+        },
+        {
+          "boss_system": true,
+          "elapsed": 12.0,
+          "enemies": 4,
+          "regular_kills": 0,
+          "regular_spawned": 4,
+          "scroll": 720.0,
+          "stage_system": true,
+          "state": "playing",
+          "weapon_system": true,
+          "world_time": 12.0000000000002
+        },
+        {
+          "boss_system": true,
+          "elapsed": 20.0,
+          "enemies": 3,
+          "regular_kills": 5,
+          "regular_spawned": 8,
+          "scroll": 1200.0,
+          "stage_system": true,
+          "state": "playing",
+          "weapon_system": true,
+          "world_time": 20.0000000000001
+        }
+      ],
+      "shield": 90.0,
+      "shop_stats_match": true
+    },
+    "probe_host": "Godot Linux 4.6.3, not native Windows"
+  }
+]

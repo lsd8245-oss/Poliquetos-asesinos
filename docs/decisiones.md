@@ -108,3 +108,15 @@ Base d31d340 de `fix/w01-export-stage-runtime`; trabajo en `pulido/w01-combate-v
 El render y el estado visual se separan de la simulación. Se preservan datos, música, tienda, guardados, daño, cadencia, oleadas y jefes. Los misiles alargados limitan el giro visual para mantener el cuerpo alrededor del AABB existente; la trayectoria física no cambia. Los FX recorren todos sus cuadros durante el TTL real. Las pruebas distinguen tiles de fondo y módulos transparentes. El nuevo empaquetado MaxRects mantiene atlasW01≤2048×2048; no se reconstruyen otros atlas.
 
 Revisión de B1 pendiente del usuario; B2, B3, B4 y mundo2 no se inician. [Auditoría](arte/pulido-w01/auditoria.md), [informe y límites](verificacion/pulido-w01/README.md).
+
+## Encargo 04A — pantalla, sonar y semántica de señales
+
+La instrucción actual establece B1 `7dcad1c5a864305803d96aeddfeaeea8182c6a01` como base aceptada para continuar, sin convertir las mediciones ni pendientes históricos en criterios retrospectivamente superados. Rama `fix/w01-04a-pantalla-sonar-auras`. Se incorpora literalmente el Encargo04 y sus cuatro capturas. Solo04A está autorizado;04B/C/D son diseño documental y mundo2 sigue detenido.
+
+El usuario confirmó explícitamente «Sí, aplica la propuesta Q / 12 s / 4 s»: sonar informativo sin daño ni CTD, tecla/botón configurables. Predeterminado mandoY; rango320px y expansión1,2s como decisiones técnicas en `data/combat.json`. Mantiene propiedad inicial en ambas ediciones y reloj transitorio separado del perfil. No se inventan anclajes para demostrarlo. [Contrato](diseno/encargo04/sonar.md).
+
+El §2.1 autoriza explícitamente una opción fraccional `Rellenar pantalla` para conservar aspecto y superficie; `Píxel perfecto` y ventanas×1/2/3 conservan escala entera. Ambas variantes fullscreen solicitan modo exclusivo real; viewport640×360 invariable. El ajuste fraccional puede alternar anchuras físicas de píxel; pixel-perfect conserva uniformidad a costa de márgenes. Ventana×3 se limita al entero que cabe contando decoraciones disponibles. Preferencia antigua `fullscreen` se interpreta en memoria como rellenar; no migra partidas.
+
+Los halos permanentes de botín se sustituyen por insignias PNG pequeñas TIRO/MISIL/BOMBA: indican grupo portador, no un objeto por miembro. Carga, bloqueo y punto débil CTD usan señales distintas y reloj de simulación. Se reutiliza exclusivamente arte B1, con su estado de revisión original; no se declara ningún PNG final ni se cambia la música. [Inventario](diseno/encargo04/auras.md).
+
+La auditoría documenta que M5 sobrescribeY con32/304 sin soporte, la selección efectiva de escoltas y la discrepancia de relojes170/180. No se corrige ninguno en04A porque tocaría anclajes/oleadas/dificultad. Se proponen mapa/rutas/arte/colisiones, balance y persistencia en [diseño de siguientes bloques](diseno/encargo04/siguientes-bloques.md), pendientes de aprobación posterior.

@@ -43,8 +43,22 @@ class B1VisualContracts(unittest.TestCase):
         self.assertEqual(fixture['baseline'], 'd31d3406f07868942bbd3f594bee78d0f12d63b7')
         for path, expected in fixture['sha256'].items():
             with self.subTest(path=path):
-                self.assertEqual(hashlib.sha256((ROOT / path).read_bytes()).hexdigest(), expected,
-                                 'B1 changed preserved gameplay/data/audio/creature asset: ' + path)
+                if path in ('data/combat.json', 'data/schemas/combat.schema.json'):
+                    # 04A adds only the explicitly approved informational sonar.
+                    name='04a_combat_baseline.json' if path=='data/combat.json' else '04a_combat_schema_baseline.json'
+                    baseline=(ROOT/'native-tests'/name).read_bytes()
+                    self.assertEqual(hashlib.sha256(baseline).hexdigest(),expected)
+                    current=json.loads((ROOT/path).read_text())
+                    if path=='data/combat.json':
+                        self.assertEqual(current.pop('sonar'),{'cooldown_seconds':12.0,'reveal_seconds':4.0,'range_px':320.0,'sweep_seconds':1.2})
+                    else:
+                        current['properties'].pop('sonar')
+                        current['required'].remove('sonar')
+                        for example in current.get('examples',[]):example.pop('sonar')
+                    self.assertEqual(current,json.loads(baseline))
+                else:
+                    self.assertEqual(hashlib.sha256((ROOT / path).read_bytes()).hexdigest(), expected,
+                                     'Changed preserved gameplay/data/audio/creature asset: ' + path)
         # Adding a second data/audio source is also a scope change.
         for folder in ('data', 'assets/audio'):
             actual = {str(p.relative_to(ROOT)) for p in (ROOT / folder).rglob('*')

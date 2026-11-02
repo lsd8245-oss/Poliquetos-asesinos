@@ -1,0 +1,1994 @@
+{
+  "passed": true,
+  "executable": "/workspace/04a-qa/final-pruebas/Poliquetos-Pruebas.exe",
+  "host": "Linux/Wine compatibility layer; NOT physical Windows",
+  "capture": "Entire virtual XRandR desktop; actual Windows PE under Wine and X11 keyboard input",
+  "visual_review_required": "Review full-screen t12/t15/t20 and sonar pulse images for ordinary groups versus loot badges; no visual classifier is claimed.",
+  "sha256": "e1ef1a5e1cb0c5c65eac1f323a13dfb22e5865b26798cd74b1c1abbfc38a1538",
+  "desktop_size": [
+    1920,
+    1080
+  ],
+  "preferences": "/workspace/rescue-qa/wine-ready/drive_c/users/agent/AppData/Roaming/Poliquetos Asesinos/pruebas/options.json",
+  "command": [
+    "/workspace/tools/wine/usr/lib/wine/wine64",
+    "/workspace/04a-qa/final-pruebas/Poliquetos-Pruebas.exe",
+    "--rendering-method",
+    "gl_compatibility",
+    "--rendering-driver",
+    "opengl3",
+    "--audio-driver",
+    "Dummy",
+    "--log-file",
+    "Z:/workspace/Poliquetos-asesinos/docs/verificacion/04a/windows-pruebas/game.log",
+    "--",
+    "--runtime-trace"
+  ],
+  "screenshots": {
+    "title": [
+      1920,
+      1080
+    ],
+    "window3-options": [
+      1920,
+      1080
+    ],
+    "fill-options": [
+      1920,
+      1080
+    ],
+    "pixel-options": [
+      1920,
+      1080
+    ],
+    "t00": [
+      1920,
+      1080
+    ],
+    "t05": [
+      1920,
+      1080
+    ],
+    "t12": [
+      1920,
+      1080
+    ],
+    "t15": [
+      1920,
+      1080
+    ],
+    "sonar-Q-pulse": [
+      1920,
+      1080
+    ],
+    "t20": [
+      1920,
+      1080
+    ],
+    "sonar-cooldown-08": [
+      1920,
+      1080
+    ],
+    "sonar-ready": [
+      1920,
+      1080
+    ],
+    "sonar-bindings-E": [
+      1920,
+      1080
+    ],
+    "t30": [
+      1920,
+      1080
+    ],
+    "sonar-E-pulse": [
+      1920,
+      1080
+    ],
+    "t40": [
+      1920,
+      1080
+    ],
+    "window2-options": [
+      1920,
+      1080
+    ],
+    "title-after-play": [
+      1920,
+      1080
+    ]
+  },
+  "display_checks": {
+    "window3": {
+      "bars": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "borderless": false,
+      "clipped": false,
+      "content_position": [
+        0,
+        0
+      ],
+      "content_scale_aspect": 1,
+      "content_scale_factor": 1.0,
+      "content_scale_mode": 2,
+      "content_scale_stretch": 1,
+      "content_size": [
+        1280,
+        720
+      ],
+      "display_backend": "Windows",
+      "dpi": 96,
+      "effective_window_scale": 2,
+      "factor": 2.0,
+      "integer": true,
+      "logical_size": [
+        640,
+        360
+      ],
+      "observed_origin": [
+        0.0,
+        0.0
+      ],
+      "observed_scale": [
+        2.0,
+        2.0
+      ],
+      "requested_mode": "window3",
+      "requested_window_scale": 3,
+      "scale_xy": [
+        2.0,
+        2.0
+      ],
+      "screen": 0,
+      "screen_position": [
+        0,
+        0
+      ],
+      "screen_scale": 1.0,
+      "screen_size": [
+        1920,
+        1080
+      ],
+      "usable_position": [
+        0,
+        0
+      ],
+      "usable_size": [
+        1920,
+        1080
+      ],
+      "viewport_size": [
+        640.0,
+        360.0
+      ],
+      "window_adjusted": true,
+      "window_mode": 0,
+      "window_position": [
+        320,
+        180
+      ],
+      "window_size": [
+        1280,
+        720
+      ],
+      "window_with_decorations": [
+        1288,
+        754
+      ]
+    },
+    "fill": {
+      "bars": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "borderless": false,
+      "clipped": false,
+      "content_position": [
+        0,
+        0
+      ],
+      "content_scale_aspect": 1,
+      "content_scale_factor": 1.0,
+      "content_scale_mode": 2,
+      "content_scale_stretch": 0,
+      "content_size": [
+        1920,
+        1080
+      ],
+      "display_backend": "Windows",
+      "dpi": 96,
+      "effective_window_scale": 0,
+      "factor": 3.0,
+      "integer": false,
+      "logical_size": [
+        640,
+        360
+      ],
+      "observed_origin": [
+        0.0,
+        0.0
+      ],
+      "observed_scale": [
+        3.0,
+        3.0
+      ],
+      "requested_mode": "fullscreen_fill",
+      "requested_window_scale": 0,
+      "scale_xy": [
+        3.0,
+        3.0
+      ],
+      "screen": 0,
+      "screen_position": [
+        0,
+        0
+      ],
+      "screen_scale": 1.0,
+      "screen_size": [
+        1920,
+        1080
+      ],
+      "usable_position": [
+        0,
+        0
+      ],
+      "usable_size": [
+        1920,
+        1080
+      ],
+      "viewport_size": [
+        640.0,
+        360.0
+      ],
+      "window_adjusted": false,
+      "window_mode": 4,
+      "window_position": [
+        0,
+        0
+      ],
+      "window_size": [
+        1920,
+        1080
+      ],
+      "window_with_decorations": [
+        1920,
+        1080
+      ]
+    },
+    "pixel": {
+      "bars": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "borderless": false,
+      "clipped": false,
+      "content_position": [
+        0,
+        0
+      ],
+      "content_scale_aspect": 1,
+      "content_scale_factor": 1.0,
+      "content_scale_mode": 2,
+      "content_scale_stretch": 1,
+      "content_size": [
+        1920,
+        1080
+      ],
+      "display_backend": "Windows",
+      "dpi": 96,
+      "effective_window_scale": 0,
+      "factor": 3.0,
+      "integer": true,
+      "logical_size": [
+        640,
+        360
+      ],
+      "observed_origin": [
+        0.0,
+        0.0
+      ],
+      "observed_scale": [
+        3.0,
+        3.0
+      ],
+      "requested_mode": "fullscreen_pixel",
+      "requested_window_scale": 0,
+      "scale_xy": [
+        3.0,
+        3.0
+      ],
+      "screen": 0,
+      "screen_position": [
+        0,
+        0
+      ],
+      "screen_scale": 1.0,
+      "screen_size": [
+        1920,
+        1080
+      ],
+      "usable_position": [
+        0,
+        0
+      ],
+      "usable_size": [
+        1920,
+        1080
+      ],
+      "viewport_size": [
+        640.0,
+        360.0
+      ],
+      "window_adjusted": false,
+      "window_mode": 4,
+      "window_position": [
+        0,
+        0
+      ],
+      "window_size": [
+        1920,
+        1080
+      ],
+      "window_with_decorations": [
+        1920,
+        1080
+      ]
+    },
+    "window2": {
+      "bars": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "borderless": false,
+      "clipped": false,
+      "content_position": [
+        0,
+        0
+      ],
+      "content_scale_aspect": 1,
+      "content_scale_factor": 1.0,
+      "content_scale_mode": 2,
+      "content_scale_stretch": 1,
+      "content_size": [
+        1280,
+        720
+      ],
+      "display_backend": "Windows",
+      "dpi": 96,
+      "effective_window_scale": 2,
+      "factor": 2.0,
+      "integer": true,
+      "logical_size": [
+        640,
+        360
+      ],
+      "observed_origin": [
+        0.0,
+        0.0
+      ],
+      "observed_scale": [
+        2.0,
+        2.0
+      ],
+      "requested_mode": "window2",
+      "requested_window_scale": 2,
+      "scale_xy": [
+        2.0,
+        2.0
+      ],
+      "screen": 0,
+      "screen_position": [
+        0,
+        0
+      ],
+      "screen_scale": 1.0,
+      "screen_size": [
+        1920,
+        1080
+      ],
+      "usable_position": [
+        0,
+        0
+      ],
+      "usable_size": [
+        1920,
+        1080
+      ],
+      "viewport_size": [
+        640.0,
+        360.0
+      ],
+      "window_adjusted": false,
+      "window_mode": 0,
+      "window_position": [
+        316,
+        163
+      ],
+      "window_size": [
+        1280,
+        720
+      ],
+      "window_with_decorations": [
+        1288,
+        754
+      ]
+    }
+  },
+  "sonar_checks": {
+    "Q": {
+      "cooldown": 12.0,
+      "ctd": false,
+      "informational_only": true,
+      "key": "Q",
+      "remaining": 4.0,
+      "shield": 100.0,
+      "world_time": 16.6764255555556
+    },
+    "cooldown_08": {
+      "cooldown": 7.99218511111111,
+      "key": "Q",
+      "remaining": 0.0,
+      "text": "08 s",
+      "world_time": 20.6842404444445
+    },
+    "ready": {
+      "cooldown": 0.0,
+      "key": "Q",
+      "remaining": 0.0,
+      "text": "LISTO",
+      "world_time": 28.6766246666667
+    },
+    "E": {
+      "cooldown": 12.0,
+      "ctd": false,
+      "informational_only": true,
+      "key": "E",
+      "remaining": 4.0,
+      "shield": 50.0,
+      "world_time": 30.7847818888889
+    },
+    "cooldown_retrigger_rejected": true,
+    "binding_persisted": true
+  },
+  "events": {
+    "DISPLAY_TRACE": [
+      {
+        "wall_seconds": 3.2566657709976425,
+        "data": {
+          "bars": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "borderless": false,
+          "clipped": false,
+          "content_position": [
+            0,
+            0
+          ],
+          "content_scale_aspect": 1,
+          "content_scale_factor": 1.0,
+          "content_scale_mode": 2,
+          "content_scale_stretch": 1,
+          "content_size": [
+            1280,
+            720
+          ],
+          "display_backend": "Windows",
+          "dpi": 96,
+          "effective_window_scale": 2,
+          "factor": 2.0,
+          "integer": true,
+          "logical_size": [
+            640,
+            360
+          ],
+          "observed_origin": [
+            0.0,
+            0.0
+          ],
+          "observed_scale": [
+            2.0,
+            2.0
+          ],
+          "requested_mode": "window2",
+          "requested_window_scale": 2,
+          "scale_xy": [
+            2.0,
+            2.0
+          ],
+          "screen": 0,
+          "screen_position": [
+            0,
+            0
+          ],
+          "screen_scale": 1.0,
+          "screen_size": [
+            1920,
+            1080
+          ],
+          "usable_position": [
+            0,
+            0
+          ],
+          "usable_size": [
+            1920,
+            1080
+          ],
+          "viewport_size": [
+            640.0,
+            360.0
+          ],
+          "window_adjusted": false,
+          "window_mode": 0,
+          "window_position": [
+            320,
+            180
+          ],
+          "window_size": [
+            1280,
+            720
+          ],
+          "window_with_decorations": [
+            1288,
+            754
+          ]
+        }
+      },
+      {
+        "wall_seconds": 6.029548688005889,
+        "data": {
+          "bars": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "borderless": false,
+          "clipped": false,
+          "content_position": [
+            0,
+            0
+          ],
+          "content_scale_aspect": 1,
+          "content_scale_factor": 1.0,
+          "content_scale_mode": 2,
+          "content_scale_stretch": 1,
+          "content_size": [
+            1280,
+            720
+          ],
+          "display_backend": "Windows",
+          "dpi": 96,
+          "effective_window_scale": 2,
+          "factor": 2.0,
+          "integer": true,
+          "logical_size": [
+            640,
+            360
+          ],
+          "observed_origin": [
+            0.0,
+            0.0
+          ],
+          "observed_scale": [
+            2.0,
+            2.0
+          ],
+          "requested_mode": "window3",
+          "requested_window_scale": 3,
+          "scale_xy": [
+            2.0,
+            2.0
+          ],
+          "screen": 0,
+          "screen_position": [
+            0,
+            0
+          ],
+          "screen_scale": 1.0,
+          "screen_size": [
+            1920,
+            1080
+          ],
+          "usable_position": [
+            0,
+            0
+          ],
+          "usable_size": [
+            1920,
+            1080
+          ],
+          "viewport_size": [
+            640.0,
+            360.0
+          ],
+          "window_adjusted": true,
+          "window_mode": 0,
+          "window_position": [
+            320,
+            180
+          ],
+          "window_size": [
+            1280,
+            720
+          ],
+          "window_with_decorations": [
+            1288,
+            754
+          ]
+        }
+      },
+      {
+        "wall_seconds": 7.534167311998317,
+        "data": {
+          "bars": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "borderless": false,
+          "clipped": false,
+          "content_position": [
+            0,
+            0
+          ],
+          "content_scale_aspect": 1,
+          "content_scale_factor": 1.0,
+          "content_scale_mode": 2,
+          "content_scale_stretch": 0,
+          "content_size": [
+            1920,
+            1080
+          ],
+          "display_backend": "Windows",
+          "dpi": 96,
+          "effective_window_scale": 0,
+          "factor": 3.0,
+          "integer": false,
+          "logical_size": [
+            640,
+            360
+          ],
+          "observed_origin": [
+            0.0,
+            0.0
+          ],
+          "observed_scale": [
+            3.0,
+            3.0
+          ],
+          "requested_mode": "fullscreen_fill",
+          "requested_window_scale": 0,
+          "scale_xy": [
+            3.0,
+            3.0
+          ],
+          "screen": 0,
+          "screen_position": [
+            0,
+            0
+          ],
+          "screen_scale": 1.0,
+          "screen_size": [
+            1920,
+            1080
+          ],
+          "usable_position": [
+            0,
+            0
+          ],
+          "usable_size": [
+            1920,
+            1080
+          ],
+          "viewport_size": [
+            640.0,
+            360.0
+          ],
+          "window_adjusted": false,
+          "window_mode": 4,
+          "window_position": [
+            0,
+            0
+          ],
+          "window_size": [
+            1920,
+            1080
+          ],
+          "window_with_decorations": [
+            1920,
+            1080
+          ]
+        }
+      },
+      {
+        "wall_seconds": 8.841446354999789,
+        "data": {
+          "bars": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "borderless": false,
+          "clipped": false,
+          "content_position": [
+            0,
+            0
+          ],
+          "content_scale_aspect": 1,
+          "content_scale_factor": 1.0,
+          "content_scale_mode": 2,
+          "content_scale_stretch": 1,
+          "content_size": [
+            1920,
+            1080
+          ],
+          "display_backend": "Windows",
+          "dpi": 96,
+          "effective_window_scale": 0,
+          "factor": 3.0,
+          "integer": true,
+          "logical_size": [
+            640,
+            360
+          ],
+          "observed_origin": [
+            0.0,
+            0.0
+          ],
+          "observed_scale": [
+            3.0,
+            3.0
+          ],
+          "requested_mode": "fullscreen_pixel",
+          "requested_window_scale": 0,
+          "scale_xy": [
+            3.0,
+            3.0
+          ],
+          "screen": 0,
+          "screen_position": [
+            0,
+            0
+          ],
+          "screen_scale": 1.0,
+          "screen_size": [
+            1920,
+            1080
+          ],
+          "usable_position": [
+            0,
+            0
+          ],
+          "usable_size": [
+            1920,
+            1080
+          ],
+          "viewport_size": [
+            640.0,
+            360.0
+          ],
+          "window_adjusted": false,
+          "window_mode": 4,
+          "window_position": [
+            0,
+            0
+          ],
+          "window_size": [
+            1920,
+            1080
+          ],
+          "window_with_decorations": [
+            1920,
+            1080
+          ]
+        }
+      },
+      {
+        "wall_seconds": 10.253985179995652,
+        "data": {
+          "bars": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "borderless": false,
+          "clipped": false,
+          "content_position": [
+            0,
+            0
+          ],
+          "content_scale_aspect": 1,
+          "content_scale_factor": 1.0,
+          "content_scale_mode": 2,
+          "content_scale_stretch": 0,
+          "content_size": [
+            1920,
+            1080
+          ],
+          "display_backend": "Windows",
+          "dpi": 96,
+          "effective_window_scale": 0,
+          "factor": 3.0,
+          "integer": false,
+          "logical_size": [
+            640,
+            360
+          ],
+          "observed_origin": [
+            0.0,
+            0.0
+          ],
+          "observed_scale": [
+            3.0,
+            3.0
+          ],
+          "requested_mode": "fullscreen_fill",
+          "requested_window_scale": 0,
+          "scale_xy": [
+            3.0,
+            3.0
+          ],
+          "screen": 0,
+          "screen_position": [
+            0,
+            0
+          ],
+          "screen_scale": 1.0,
+          "screen_size": [
+            1920,
+            1080
+          ],
+          "usable_position": [
+            0,
+            0
+          ],
+          "usable_size": [
+            1920,
+            1080
+          ],
+          "viewport_size": [
+            640.0,
+            360.0
+          ],
+          "window_adjusted": false,
+          "window_mode": 4,
+          "window_position": [
+            0,
+            0
+          ],
+          "window_size": [
+            1920,
+            1080
+          ],
+          "window_with_decorations": [
+            1920,
+            1080
+          ]
+        }
+      },
+      {
+        "wall_seconds": 11.545767449002597,
+        "data": {
+          "bars": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "borderless": false,
+          "clipped": false,
+          "content_position": [
+            0,
+            0
+          ],
+          "content_scale_aspect": 1,
+          "content_scale_factor": 1.0,
+          "content_scale_mode": 2,
+          "content_scale_stretch": 0,
+          "content_size": [
+            1920,
+            1080
+          ],
+          "display_backend": "Windows",
+          "dpi": 96,
+          "effective_window_scale": 0,
+          "factor": 3.0,
+          "integer": false,
+          "logical_size": [
+            640,
+            360
+          ],
+          "observed_origin": [
+            0.0,
+            0.0
+          ],
+          "observed_scale": [
+            3.0,
+            3.0
+          ],
+          "requested_mode": "fullscreen_fill",
+          "requested_window_scale": 0,
+          "scale_xy": [
+            3.0,
+            3.0
+          ],
+          "screen": 0,
+          "screen_position": [
+            0,
+            0
+          ],
+          "screen_scale": 1.0,
+          "screen_size": [
+            1920,
+            1080
+          ],
+          "usable_position": [
+            0,
+            0
+          ],
+          "usable_size": [
+            1920,
+            1080
+          ],
+          "viewport_size": [
+            640.0,
+            360.0
+          ],
+          "window_adjusted": false,
+          "window_mode": 4,
+          "window_position": [
+            0,
+            0
+          ],
+          "window_size": [
+            1920,
+            1080
+          ],
+          "window_with_decorations": [
+            1920,
+            1080
+          ]
+        }
+      },
+      {
+        "wall_seconds": 54.036313432996394,
+        "data": {
+          "bars": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "borderless": false,
+          "clipped": false,
+          "content_position": [
+            0,
+            0
+          ],
+          "content_scale_aspect": 1,
+          "content_scale_factor": 1.0,
+          "content_scale_mode": 2,
+          "content_scale_stretch": 0,
+          "content_size": [
+            1920,
+            1080
+          ],
+          "display_backend": "Windows",
+          "dpi": 96,
+          "effective_window_scale": 0,
+          "factor": 3.0,
+          "integer": false,
+          "logical_size": [
+            640,
+            360
+          ],
+          "observed_origin": [
+            0.0,
+            0.0
+          ],
+          "observed_scale": [
+            3.0,
+            3.0
+          ],
+          "requested_mode": "fullscreen_fill",
+          "requested_window_scale": 0,
+          "scale_xy": [
+            3.0,
+            3.0
+          ],
+          "screen": 0,
+          "screen_position": [
+            0,
+            0
+          ],
+          "screen_scale": 1.0,
+          "screen_size": [
+            1920,
+            1080
+          ],
+          "usable_position": [
+            0,
+            0
+          ],
+          "usable_size": [
+            1920,
+            1080
+          ],
+          "viewport_size": [
+            640.0,
+            360.0
+          ],
+          "window_adjusted": false,
+          "window_mode": 4,
+          "window_position": [
+            0,
+            0
+          ],
+          "window_size": [
+            1920,
+            1080
+          ],
+          "window_with_decorations": [
+            1920,
+            1080
+          ]
+        }
+      },
+      {
+        "wall_seconds": 54.71430859800603,
+        "data": {
+          "bars": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "borderless": false,
+          "clipped": false,
+          "content_position": [
+            0,
+            0
+          ],
+          "content_scale_aspect": 1,
+          "content_scale_factor": 1.0,
+          "content_scale_mode": 2,
+          "content_scale_stretch": 0,
+          "content_size": [
+            1920,
+            1080
+          ],
+          "display_backend": "Windows",
+          "dpi": 96,
+          "effective_window_scale": 0,
+          "factor": 3.0,
+          "integer": false,
+          "logical_size": [
+            640,
+            360
+          ],
+          "observed_origin": [
+            0.0,
+            0.0
+          ],
+          "observed_scale": [
+            3.0,
+            3.0
+          ],
+          "requested_mode": "fullscreen_fill",
+          "requested_window_scale": 0,
+          "scale_xy": [
+            3.0,
+            3.0
+          ],
+          "screen": 0,
+          "screen_position": [
+            0,
+            0
+          ],
+          "screen_scale": 1.0,
+          "screen_size": [
+            1920,
+            1080
+          ],
+          "usable_position": [
+            0,
+            0
+          ],
+          "usable_size": [
+            1920,
+            1080
+          ],
+          "viewport_size": [
+            640.0,
+            360.0
+          ],
+          "window_adjusted": false,
+          "window_mode": 4,
+          "window_position": [
+            0,
+            0
+          ],
+          "window_size": [
+            1920,
+            1080
+          ],
+          "window_with_decorations": [
+            1920,
+            1080
+          ]
+        }
+      },
+      {
+        "wall_seconds": 71.40630468299787,
+        "data": {
+          "bars": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "borderless": false,
+          "clipped": false,
+          "content_position": [
+            0,
+            0
+          ],
+          "content_scale_aspect": 1,
+          "content_scale_factor": 1.0,
+          "content_scale_mode": 2,
+          "content_scale_stretch": 1,
+          "content_size": [
+            1920,
+            1080
+          ],
+          "display_backend": "Windows",
+          "dpi": 96,
+          "effective_window_scale": 0,
+          "factor": 3.0,
+          "integer": true,
+          "logical_size": [
+            640,
+            360
+          ],
+          "observed_origin": [
+            0.0,
+            0.0
+          ],
+          "observed_scale": [
+            3.0,
+            3.0
+          ],
+          "requested_mode": "fullscreen_pixel",
+          "requested_window_scale": 0,
+          "scale_xy": [
+            3.0,
+            3.0
+          ],
+          "screen": 0,
+          "screen_position": [
+            0,
+            0
+          ],
+          "screen_scale": 1.0,
+          "screen_size": [
+            1920,
+            1080
+          ],
+          "usable_position": [
+            0,
+            0
+          ],
+          "usable_size": [
+            1920,
+            1080
+          ],
+          "viewport_size": [
+            640.0,
+            360.0
+          ],
+          "window_adjusted": false,
+          "window_mode": 4,
+          "window_position": [
+            0,
+            0
+          ],
+          "window_size": [
+            1920,
+            1080
+          ],
+          "window_with_decorations": [
+            1920,
+            1080
+          ]
+        }
+      },
+      {
+        "wall_seconds": 72.70520615999703,
+        "data": {
+          "bars": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "borderless": false,
+          "clipped": false,
+          "content_position": [
+            0,
+            0
+          ],
+          "content_scale_aspect": 1,
+          "content_scale_factor": 1.0,
+          "content_scale_mode": 2,
+          "content_scale_stretch": 1,
+          "content_size": [
+            640,
+            360
+          ],
+          "display_backend": "Windows",
+          "dpi": 96,
+          "effective_window_scale": 1,
+          "factor": 1.0,
+          "integer": true,
+          "logical_size": [
+            640,
+            360
+          ],
+          "observed_origin": [
+            0.0,
+            0.0
+          ],
+          "observed_scale": [
+            1.0,
+            1.0
+          ],
+          "requested_mode": "window1",
+          "requested_window_scale": 1,
+          "scale_xy": [
+            1.0,
+            1.0
+          ],
+          "screen": 0,
+          "screen_position": [
+            0,
+            0
+          ],
+          "screen_scale": 1.0,
+          "screen_size": [
+            1920,
+            1080
+          ],
+          "usable_position": [
+            0,
+            0
+          ],
+          "usable_size": [
+            1920,
+            1080
+          ],
+          "viewport_size": [
+            640.0,
+            360.0
+          ],
+          "window_adjusted": false,
+          "window_mode": 0,
+          "window_position": [
+            636,
+            343
+          ],
+          "window_size": [
+            640,
+            360
+          ],
+          "window_with_decorations": [
+            648,
+            394
+          ]
+        }
+      },
+      {
+        "wall_seconds": 73.99787030600419,
+        "data": {
+          "bars": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "borderless": false,
+          "clipped": false,
+          "content_position": [
+            0,
+            0
+          ],
+          "content_scale_aspect": 1,
+          "content_scale_factor": 1.0,
+          "content_scale_mode": 2,
+          "content_scale_stretch": 1,
+          "content_size": [
+            1280,
+            720
+          ],
+          "display_backend": "Windows",
+          "dpi": 96,
+          "effective_window_scale": 2,
+          "factor": 2.0,
+          "integer": true,
+          "logical_size": [
+            640,
+            360
+          ],
+          "observed_origin": [
+            0.0,
+            0.0
+          ],
+          "observed_scale": [
+            2.0,
+            2.0
+          ],
+          "requested_mode": "window2",
+          "requested_window_scale": 2,
+          "scale_xy": [
+            2.0,
+            2.0
+          ],
+          "screen": 0,
+          "screen_position": [
+            0,
+            0
+          ],
+          "screen_scale": 1.0,
+          "screen_size": [
+            1920,
+            1080
+          ],
+          "usable_position": [
+            0,
+            0
+          ],
+          "usable_size": [
+            1920,
+            1080
+          ],
+          "viewport_size": [
+            640.0,
+            360.0
+          ],
+          "window_adjusted": false,
+          "window_mode": 0,
+          "window_position": [
+            316,
+            163
+          ],
+          "window_size": [
+            1280,
+            720
+          ],
+          "window_with_decorations": [
+            1288,
+            754
+          ]
+        }
+      },
+      {
+        "wall_seconds": 75.37765760799812,
+        "data": {
+          "bars": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "borderless": false,
+          "clipped": false,
+          "content_position": [
+            0,
+            0
+          ],
+          "content_scale_aspect": 1,
+          "content_scale_factor": 1.0,
+          "content_scale_mode": 2,
+          "content_scale_stretch": 1,
+          "content_size": [
+            1280,
+            720
+          ],
+          "display_backend": "Windows",
+          "dpi": 96,
+          "effective_window_scale": 2,
+          "factor": 2.0,
+          "integer": true,
+          "logical_size": [
+            640,
+            360
+          ],
+          "observed_origin": [
+            0.0,
+            0.0
+          ],
+          "observed_scale": [
+            2.0,
+            2.0
+          ],
+          "requested_mode": "window2",
+          "requested_window_scale": 2,
+          "scale_xy": [
+            2.0,
+            2.0
+          ],
+          "screen": 0,
+          "screen_position": [
+            0,
+            0
+          ],
+          "screen_scale": 1.0,
+          "screen_size": [
+            1920,
+            1080
+          ],
+          "usable_position": [
+            0,
+            0
+          ],
+          "usable_size": [
+            1920,
+            1080
+          ],
+          "viewport_size": [
+            640.0,
+            360.0
+          ],
+          "window_adjusted": false,
+          "window_mode": 0,
+          "window_position": [
+            316,
+            163
+          ],
+          "window_size": [
+            1280,
+            720
+          ],
+          "window_with_decorations": [
+            1288,
+            754
+          ]
+        }
+      }
+    ],
+    "SONAR_TRACE": [
+      {
+        "wall_seconds": 33.9464099080069,
+        "data": {
+          "cooldown": 12.0,
+          "ctd": false,
+          "informational_only": true,
+          "key": "Q",
+          "remaining": 4.0,
+          "shield": 100.0,
+          "world_time": 16.6764255555556
+        }
+      },
+      {
+        "wall_seconds": 60.276798891005456,
+        "data": {
+          "cooldown": 12.0,
+          "ctd": false,
+          "informational_only": true,
+          "key": "E",
+          "remaining": 4.0,
+          "shield": 50.0,
+          "world_time": 30.7847818888889
+        }
+      }
+    ],
+    "SONAR_STATE": [
+      {
+        "wall_seconds": 17.248659439006587,
+        "data": {
+          "cooldown": 0.0,
+          "key": "Q",
+          "remaining": 0.0,
+          "text": "LISTO",
+          "world_time": 0.0194444444444444
+        }
+      },
+      {
+        "wall_seconds": 33.94641872700595,
+        "data": {
+          "cooldown": 12.0,
+          "key": "Q",
+          "remaining": 4.0,
+          "text": "12 s",
+          "world_time": 16.6764255555556
+        }
+      },
+      {
+        "wall_seconds": 34.936627962000784,
+        "data": {
+          "cooldown": 10.9991282222222,
+          "key": "Q",
+          "remaining": 2.99912822222222,
+          "text": "11 s",
+          "world_time": 17.6772973333334
+        }
+      },
+      {
+        "wall_seconds": 35.96013263800705,
+        "data": {
+          "cooldown": 9.99654822222221,
+          "key": "Q",
+          "remaining": 1.99654822222221,
+          "text": "10 s",
+          "world_time": 18.6798773333334
+        }
+      },
+      {
+        "wall_seconds": 37.42986622000171,
+        "data": {
+          "cooldown": 8.97815955555554,
+          "key": "Q",
+          "remaining": 0.978159555555543,
+          "text": "09 s",
+          "world_time": 19.698266
+        }
+      },
+      {
+        "wall_seconds": 38.41310231499665,
+        "data": {
+          "cooldown": 7.99218511111111,
+          "key": "Q",
+          "remaining": 0.0,
+          "text": "08 s",
+          "world_time": 20.6842404444445
+        }
+      },
+      {
+        "wall_seconds": 39.41028611100046,
+        "data": {
+          "cooldown": 6.99208152525255,
+          "key": "Q",
+          "remaining": 0.0,
+          "text": "07 s",
+          "world_time": 21.684344030303
+        }
+      },
+      {
+        "wall_seconds": 40.42802663700422,
+        "data": {
+          "cooldown": 5.99286655555556,
+          "key": "Q",
+          "remaining": 0.0,
+          "text": "06 s",
+          "world_time": 22.683559
+        }
+      },
+      {
+        "wall_seconds": 41.39597918299842,
+        "data": {
+          "cooldown": 4.99426122222226,
+          "key": "Q",
+          "remaining": 0.0,
+          "text": "05 s",
+          "world_time": 23.6821643333333
+        }
+      },
+      {
+        "wall_seconds": 42.4088001580094,
+        "data": {
+          "cooldown": 3.99675688888891,
+          "key": "Q",
+          "remaining": 0.0,
+          "text": "04 s",
+          "world_time": 24.6796686666667
+        }
+      },
+      {
+        "wall_seconds": 43.42140983699937,
+        "data": {
+          "cooldown": 2.99744517460318,
+          "key": "Q",
+          "remaining": 0.0,
+          "text": "03 s",
+          "world_time": 25.6789803809524
+        }
+      },
+      {
+        "wall_seconds": 44.44135175200063,
+        "data": {
+          "cooldown": 1.99610722222221,
+          "key": "Q",
+          "remaining": 0.0,
+          "text": "02 s",
+          "world_time": 26.6803183333334
+        }
+      },
+      {
+        "wall_seconds": 45.40576670500741,
+        "data": {
+          "cooldown": 0.995064222222226,
+          "key": "Q",
+          "remaining": 0.0,
+          "text": "01 s",
+          "world_time": 27.6813613333333
+        }
+      },
+      {
+        "wall_seconds": 46.42144394200295,
+        "data": {
+          "cooldown": 0.0,
+          "key": "Q",
+          "remaining": 0.0,
+          "text": "LISTO",
+          "world_time": 28.6766246666667
+        }
+      },
+      {
+        "wall_seconds": 60.27680748500279,
+        "data": {
+          "cooldown": 12.0,
+          "key": "E",
+          "remaining": 4.0,
+          "text": "12 s",
+          "world_time": 30.7847818888889
+        }
+      },
+      {
+        "wall_seconds": 61.27198242400482,
+        "data": {
+          "cooldown": 10.983159030303,
+          "key": "E",
+          "remaining": 2.98315903030304,
+          "text": "11 s",
+          "world_time": 31.8016228585859
+        }
+      },
+      {
+        "wall_seconds": 62.28845970600378,
+        "data": {
+          "cooldown": 9.99418633333338,
+          "key": "E",
+          "remaining": 1.99418633333338,
+          "text": "10 s",
+          "world_time": 32.7905955555555
+        }
+      },
+      {
+        "wall_seconds": 63.25837118200434,
+        "data": {
+          "cooldown": 8.98910058585865,
+          "key": "E",
+          "remaining": 0.989100585858647,
+          "text": "09 s",
+          "world_time": 33.7956813030303
+        }
+      },
+      {
+        "wall_seconds": 64.28697301400825,
+        "data": {
+          "cooldown": 7.98549733333346,
+          "key": "E",
+          "remaining": 0.0,
+          "text": "08 s",
+          "world_time": 34.7992845555555
+        }
+      },
+      {
+        "wall_seconds": 65.25275994400727,
+        "data": {
+          "cooldown": 6.99809544444463,
+          "key": "E",
+          "remaining": 0.0,
+          "text": "07 s",
+          "world_time": 35.7866864444443
+        }
+      },
+      {
+        "wall_seconds": 66.27269968300243,
+        "data": {
+          "cooldown": 5.99038266666691,
+          "key": "E",
+          "remaining": 0.0,
+          "text": "06 s",
+          "world_time": 36.794399222222
+        }
+      },
+      {
+        "wall_seconds": 67.2868670290045,
+        "data": {
+          "cooldown": 4.99086977777806,
+          "key": "E",
+          "remaining": 0.0,
+          "text": "05 s",
+          "world_time": 37.7939121111109
+        }
+      },
+      {
+        "wall_seconds": 68.25336393700854,
+        "data": {
+          "cooldown": 3.99741866666703,
+          "key": "E",
+          "remaining": 0.0,
+          "text": "04 s",
+          "world_time": 38.7873632222219
+        }
+      },
+      {
+        "wall_seconds": 69.26838250999572,
+        "data": {
+          "cooldown": 2.98318033333365,
+          "key": "E",
+          "remaining": 0.0,
+          "text": "03 s",
+          "world_time": 39.8016015555553
+        }
+      }
+    ],
+    "RUNTIME_STAGE_TRACE": [
+      {
+        "wall_seconds": 15.239788892999059,
+        "data": {
+          "boss_system": true,
+          "edition": "pruebas",
+          "elapsed": 0.0,
+          "enemies": 0,
+          "enemy_bullets": 0,
+          "os": "Windows",
+          "regular_kills": 0,
+          "regular_spawned": 0,
+          "scroll": 0.0,
+          "stage_system": true,
+          "state": "playing",
+          "target_elapsed": 0.0,
+          "weapon_system": true,
+          "world_time": 0.0
+        }
+      },
+      {
+        "wall_seconds": 22.239607447001617,
+        "data": {
+          "boss_system": true,
+          "edition": "pruebas",
+          "elapsed": 5.01620733333333,
+          "enemies": 0,
+          "enemy_bullets": 0,
+          "os": "Windows",
+          "regular_kills": 0,
+          "regular_spawned": 0,
+          "scroll": 300.97244,
+          "stage_system": true,
+          "state": "playing",
+          "target_elapsed": 5.0,
+          "weapon_system": true,
+          "world_time": 5.01620733333333
+        }
+      },
+      {
+        "wall_seconds": 29.23019255499821,
+        "data": {
+          "boss_system": true,
+          "edition": "pruebas",
+          "elapsed": 12.0156263333333,
+          "enemies": 4,
+          "enemy_bullets": 12,
+          "os": "Windows",
+          "regular_kills": 0,
+          "regular_spawned": 4,
+          "scroll": 720.937580000002,
+          "stage_system": true,
+          "state": "playing",
+          "target_elapsed": 12.0,
+          "weapon_system": true,
+          "world_time": 12.0156263333333
+        }
+      },
+      {
+        "wall_seconds": 32.2487616110011,
+        "data": {
+          "boss_system": true,
+          "edition": "pruebas",
+          "elapsed": 15.0136843333333,
+          "enemies": 4,
+          "enemy_bullets": 24,
+          "os": "Windows",
+          "regular_kills": 0,
+          "regular_spawned": 4,
+          "scroll": 900.821060000001,
+          "stage_system": true,
+          "state": "playing",
+          "target_elapsed": 15.0,
+          "weapon_system": true,
+          "world_time": 15.0136843333333
+        }
+      },
+      {
+        "wall_seconds": 37.73604790499667,
+        "data": {
+          "boss_system": true,
+          "edition": "pruebas",
+          "elapsed": 20.0054354074074,
+          "enemies": 5,
+          "enemy_bullets": 8,
+          "os": "Windows",
+          "regular_kills": 3,
+          "regular_spawned": 8,
+          "scroll": 1200.32612444444,
+          "stage_system": true,
+          "state": "playing",
+          "target_elapsed": 20.0,
+          "weapon_system": true,
+          "world_time": 20.0054354074074
+        }
+      },
+      {
+        "wall_seconds": 59.457978229998844,
+        "data": {
+          "boss_system": true,
+          "edition": "pruebas",
+          "elapsed": 30.0083245555556,
+          "enemies": 2,
+          "enemy_bullets": 21,
+          "os": "Windows",
+          "regular_kills": 6,
+          "regular_spawned": 13,
+          "scroll": 1800.49947333333,
+          "stage_system": true,
+          "state": "playing",
+          "target_elapsed": 30.0,
+          "weapon_system": true,
+          "world_time": 30.0083245555556
+        }
+      },
+      {
+        "wall_seconds": 69.47317189100431,
+        "data": {
+          "boss_system": true,
+          "edition": "pruebas",
+          "elapsed": 40.0049938888886,
+          "enemies": 3,
+          "enemy_bullets": 7,
+          "os": "Windows",
+          "regular_kills": 13,
+          "regular_spawned": 22,
+          "scroll": 2400.29963333332,
+          "stage_system": true,
+          "state": "playing",
+          "target_elapsed": 40.0,
+          "weapon_system": true,
+          "world_time": 40.0049938888886
+        }
+      }
+    ]
+  },
+  "samples": {
+    "0": {
+      "boss_system": true,
+      "edition": "pruebas",
+      "elapsed": 0.0,
+      "enemies": 0,
+      "enemy_bullets": 0,
+      "os": "Windows",
+      "regular_kills": 0,
+      "regular_spawned": 0,
+      "scroll": 0.0,
+      "stage_system": true,
+      "state": "playing",
+      "target_elapsed": 0.0,
+      "weapon_system": true,
+      "world_time": 0.0
+    },
+    "5": {
+      "boss_system": true,
+      "edition": "pruebas",
+      "elapsed": 5.01620733333333,
+      "enemies": 0,
+      "enemy_bullets": 0,
+      "os": "Windows",
+      "regular_kills": 0,
+      "regular_spawned": 0,
+      "scroll": 300.97244,
+      "stage_system": true,
+      "state": "playing",
+      "target_elapsed": 5.0,
+      "weapon_system": true,
+      "world_time": 5.01620733333333
+    },
+    "12": {
+      "boss_system": true,
+      "edition": "pruebas",
+      "elapsed": 12.0156263333333,
+      "enemies": 4,
+      "enemy_bullets": 12,
+      "os": "Windows",
+      "regular_kills": 0,
+      "regular_spawned": 4,
+      "scroll": 720.937580000002,
+      "stage_system": true,
+      "state": "playing",
+      "target_elapsed": 12.0,
+      "weapon_system": true,
+      "world_time": 12.0156263333333
+    },
+    "15": {
+      "boss_system": true,
+      "edition": "pruebas",
+      "elapsed": 15.0136843333333,
+      "enemies": 4,
+      "enemy_bullets": 24,
+      "os": "Windows",
+      "regular_kills": 0,
+      "regular_spawned": 4,
+      "scroll": 900.821060000001,
+      "stage_system": true,
+      "state": "playing",
+      "target_elapsed": 15.0,
+      "weapon_system": true,
+      "world_time": 15.0136843333333
+    },
+    "20": {
+      "boss_system": true,
+      "edition": "pruebas",
+      "elapsed": 20.0054354074074,
+      "enemies": 5,
+      "enemy_bullets": 8,
+      "os": "Windows",
+      "regular_kills": 3,
+      "regular_spawned": 8,
+      "scroll": 1200.32612444444,
+      "stage_system": true,
+      "state": "playing",
+      "target_elapsed": 20.0,
+      "weapon_system": true,
+      "world_time": 20.0054354074074
+    },
+    "30": {
+      "boss_system": true,
+      "edition": "pruebas",
+      "elapsed": 30.0083245555556,
+      "enemies": 2,
+      "enemy_bullets": 21,
+      "os": "Windows",
+      "regular_kills": 6,
+      "regular_spawned": 13,
+      "scroll": 1800.49947333333,
+      "stage_system": true,
+      "state": "playing",
+      "target_elapsed": 30.0,
+      "weapon_system": true,
+      "world_time": 30.0083245555556
+    },
+    "40": {
+      "boss_system": true,
+      "edition": "pruebas",
+      "elapsed": 40.0049938888886,
+      "enemies": 3,
+      "enemy_bullets": 7,
+      "os": "Windows",
+      "regular_kills": 13,
+      "regular_spawned": 22,
+      "scroll": 2400.29963333332,
+      "stage_system": true,
+      "state": "playing",
+      "target_elapsed": 40.0,
+      "weapon_system": true,
+      "world_time": 40.0049938888886
+    }
+  },
+  "wall_seconds": 79.62864729500143,
+  "exit_code": 0
+}

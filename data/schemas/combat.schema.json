@@ -3050,6 +3050,34 @@
         "reduced_flash_alpha"
       ],
       "additionalProperties": false
+    },
+    "sonar": {
+      "type": "object",
+      "properties": {
+        "cooldown_seconds": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "reveal_seconds": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "range_px": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "sweep_seconds": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        }
+      },
+      "required": [
+        "cooldown_seconds",
+        "reveal_seconds",
+        "range_px",
+        "sweep_seconds"
+      ],
+      "additionalProperties": false
     }
   },
   "required": [
@@ -3072,7 +3100,8 @@
     "effects",
     "gear",
     "friendly_projectile",
-    "ui"
+    "ui",
+    "sonar"
   ],
   "additionalProperties": false,
   "$schema": "https://json-schema.org/draft/2020-12/schema",
@@ -4171,6 +4200,12 @@
         "ending_rise": 220,
         "flash_alpha": 0.55,
         "reduced_flash_alpha": 0.06
+      },
+      "sonar": {
+        "cooldown_seconds": 12.0,
+        "reveal_seconds": 4.0,
+        "range_px": 320.0,
+        "sweep_seconds": 1.2
       }
     }
   ]

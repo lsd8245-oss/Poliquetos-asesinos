@@ -1,0 +1,14 @@
+[
+  {
+    "edition": "Normal",
+    "installer_exit": 1,
+    "silent_install_confirmed": false,
+    "host": "Wine10, missing 32-bit NSIS runtime; not physical Windows"
+  },
+  {
+    "edition": "Pruebas",
+    "installer_exit": 1,
+    "silent_install_confirmed": false,
+    "host": "Wine10, missing 32-bit NSIS runtime; not physical Windows"
+  }
+]
