@@ -1,0 +1,103 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://poliquetos.local/schemas/assets_manifest.schema.json",
+  "type": "object",
+  "properties": {
+    "version": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "assets": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "nombre": {
+            "type": "string",
+            "pattern": "^[a-z][a-z0-9_]*$"
+          },
+          "mundo": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 15
+          },
+          "tipo": {
+            "enum": [
+              "enemy",
+              "mini",
+              "boss",
+              "bullet",
+              "bg",
+              "fx",
+              "ui"
+            ]
+          },
+          "ruta": {
+            "type": "string",
+            "pattern": "^assets/.+\\.png$"
+          },
+          "tamano": {
+            "type": "array",
+            "items": {
+              "type": "integer",
+              "minimum": 1
+            },
+            "minItems": 2,
+            "maxItems": 2
+          },
+          "cuadros": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "fps": {
+            "type": "number",
+            "minimum": 0
+          },
+          "estado": {
+            "enum": [
+              "placeholder",
+              "final"
+            ]
+          }
+        },
+        "required": [
+          "nombre",
+          "mundo",
+          "tipo",
+          "ruta",
+          "tamano",
+          "cuadros",
+          "fps",
+          "estado"
+        ],
+        "additionalProperties": false
+      },
+      "minItems": 1
+    }
+  },
+  "required": [
+    "version",
+    "assets"
+  ],
+  "additionalProperties": false,
+  "examples": [
+    {
+      "version": 1,
+      "assets": [
+        {
+          "nombre": "w01_enemy_serpulidae_move",
+          "mundo": 1,
+          "tipo": "enemy",
+          "ruta": "assets/sprites/w01/w01_enemy_serpulidae_move_01.png",
+          "tamano": [
+            32,
+            32
+          ],
+          "cuadros": 4,
+          "fps": 8,
+          "estado": "placeholder"
+        }
+      ]
+    }
+  ]
+}

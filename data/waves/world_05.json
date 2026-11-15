@@ -5,238 +5,246 @@
     {
       "t": 10.0,
       "tipo": "oleada",
-      "enemigo": "spirobranchus",
+      "enemigo": "aricidea",
       "cantidad": 7,
       "formacion": "linea_vertical",
       "y": 60,
       "portadora": true,
       "separacion_px": 32,
       "separacion_seg": 0.3,
-      "item": "rojo"
+      "item": "rojo",
+      "legacy_index": 0
     },
     {
-      "t": 18.0,
+      "t": 22.0667,
       "tipo": "oleada",
-      "enemigo": "sabellastarte",
-      "cantidad": 6,
+      "enemigo": "terebellides",
+      "cantidad": 8,
       "formacion": "linea_horizontal",
       "y": 110,
       "portadora": false,
       "separacion_px": 32,
-      "separacion_seg": 0.3
+      "separacion_seg": 0.3,
+      "legacy_index": 1
     },
     {
       "t": 25,
       "tipo": "peligro",
-      "id": "corales",
+      "id": "raices",
       "duracion_seg": 10,
-      "y": 280
+      "y": 280,
+      "legacy_index": 2
     },
     {
-      "t": 26.0,
+      "t": 34.1333,
       "tipo": "oleada",
-      "enemigo": "eulepeth",
+      "enemigo": "questa",
       "cantidad": 7,
       "formacion": "v",
       "y": 168,
       "portadora": false,
       "separacion_px": 32,
-      "separacion_seg": 0.3
-    },
-    {
-      "t": 34.0,
-      "tipo": "oleada",
-      "enemigo": "acoet",
-      "cantidad": 6,
-      "formacion": "v_invertida",
-      "y": 220,
-      "portadora": true,
-      "separacion_px": 32,
       "separacion_seg": 0.3,
-      "item": "verde"
-    },
-    {
-      "t": 42.0,
-      "tipo": "oleada",
-      "enemigo": "pholoe",
-      "cantidad": 7,
-      "formacion": "zigzag",
-      "y": 276,
-      "portadora": false,
-      "separacion_px": 32,
-      "separacion_seg": 0.3
+      "legacy_index": 3
     },
     {
       "t": 45.0,
       "tipo": "escudo",
       "item": "amarillo",
-      "y": 168
+      "y": 168,
+      "legacy_index": 6
     },
     {
-      "t": 52.5,
+      "t": 46.2,
       "tipo": "oleada",
-      "enemigo": "syll",
+      "enemigo": "fauvel",
       "cantidad": 7,
+      "formacion": "v_invertida",
+      "y": 220,
+      "portadora": true,
+      "separacion_px": 32,
+      "separacion_seg": 0.3,
+      "item": "verde",
+      "legacy_index": 4
+    },
+    {
+      "t": 58.2667,
+      "tipo": "oleada",
+      "enemigo": "protod",
+      "cantidad": 7,
+      "formacion": "zigzag",
+      "y": 276,
+      "portadora": false,
+      "separacion_px": 32,
+      "separacion_seg": 0.3,
+      "legacy_index": 5
+    },
+    {
+      "t": 70.3333,
+      "tipo": "oleada",
+      "enemigo": "spio",
+      "cantidad": 8,
       "formacion": "circulo",
       "y": 60,
       "portadora": false,
       "separacion_px": 32,
-      "separacion_seg": 0.3
+      "separacion_seg": 0.3,
+      "legacy_index": 7
     },
     {
-      "t": 58.0,
+      "t": 82.4,
       "tipo": "oleada",
-      "enemigo": "phyll",
-      "cantidad": 7,
+      "enemigo": "nepht",
+      "cantidad": 8,
       "formacion": "doble_columna",
       "y": 110,
       "portadora": true,
       "separacion_px": 32,
       "separacion_seg": 0.3,
-      "item": "azul"
+      "item": "azul",
+      "legacy_index": 8
     },
     {
-      "t": 66.0,
+      "t": 94.4667,
       "tipo": "oleada",
-      "enemigo": "hesio",
-      "cantidad": 7,
+      "enemigo": "glycer",
+      "cantidad": 8,
       "formacion": "ambos_lados",
       "y": 168,
       "portadora": false,
       "separacion_px": 32,
-      "separacion_seg": 0.3
+      "separacion_seg": 0.3,
+      "legacy_index": 9
     },
     {
-      "t": 75.0,
-      "tipo": "minijefe",
-      "id": "mini_w05_spirobranchus",
-      "escoltas": {
-        "enemigo": "sabellastarte",
-        "cantidad": 2,
-        "vida": 12,
-        "tamano": [
-          40,
-          32
-        ]
-      }
-    },
-    {
-      "t": 135.0,
+      "t": 106.5333,
       "tipo": "oleada",
-      "enemigo": "phyll",
+      "enemigo": "questa",
       "cantidad": 11,
       "formacion": "v_invertida",
       "y": 60,
       "portadora": false,
       "separacion_px": 32,
-      "separacion_seg": 0.3
+      "separacion_seg": 0.3,
+      "legacy_index": 11
     },
     {
-      "t": 140.0,
-      "tipo": "escudo",
-      "item": "amarillo",
-      "y": 168
-    },
-    {
-      "t": 143.0,
+      "t": 118.6,
       "tipo": "oleada",
-      "enemigo": "pholoe",
-      "cantidad": 9,
+      "enemigo": "terebellides",
+      "cantidad": 10,
       "formacion": "zigzag",
       "y": 110,
       "portadora": true,
       "separacion_px": 32,
       "separacion_seg": 0.3,
-      "item": "rojo"
+      "item": "rojo",
+      "legacy_index": 13
     },
     {
-      "t": 145.0,
-      "tipo": "peligro",
-      "id": "corales",
-      "duracion_seg": 10,
-      "y": 280
-    },
-    {
-      "t": 151.0,
+      "t": 130.6667,
       "tipo": "oleada",
-      "enemigo": "hesio",
-      "cantidad": 11,
+      "enemigo": "glycer",
+      "cantidad": 12,
       "formacion": "circulo",
       "y": 168,
       "portadora": false,
       "separacion_px": 32,
-      "separacion_seg": 0.3
+      "separacion_seg": 0.3,
+      "legacy_index": 15
     },
     {
-      "t": 159.0,
+      "t": 140.0,
+      "tipo": "escudo",
+      "item": "amarillo",
+      "y": 168,
+      "legacy_index": 12
+    },
+    {
+      "t": 142.7333,
       "tipo": "oleada",
-      "enemigo": "sabellastarte",
-      "cantidad": 10,
+      "enemigo": "spio",
+      "cantidad": 12,
       "formacion": "doble_columna",
       "y": 220,
       "portadora": false,
       "separacion_px": 32,
-      "separacion_seg": 0.3
+      "separacion_seg": 0.3,
+      "legacy_index": 16
     },
     {
-      "t": 167.0,
+      "t": 145.0,
+      "tipo": "peligro",
+      "id": "raices",
+      "duracion_seg": 10,
+      "y": 280,
+      "legacy_index": 14
+    },
+    {
+      "t": 154.8,
       "tipo": "oleada",
-      "enemigo": "spirobranchus",
-      "cantidad": 10,
+      "enemigo": "nepht",
+      "cantidad": 12,
       "formacion": "ambos_lados",
       "y": 276,
       "portadora": true,
       "separacion_px": 32,
       "separacion_seg": 0.3,
-      "item": "verde"
+      "item": "verde",
+      "legacy_index": 17
     },
     {
-      "t": 175.0,
+      "t": 166.8667,
       "tipo": "oleada",
-      "enemigo": "syll",
+      "enemigo": "aricidea",
       "cantidad": 11,
       "formacion": "diagonal",
       "y": 60,
       "portadora": false,
       "separacion_px": 32,
-      "separacion_seg": 0.3
+      "separacion_seg": 0.3,
+      "legacy_index": 18
     },
     {
-      "t": 183.0,
+      "t": 178.9333,
       "tipo": "oleada",
-      "enemigo": "acoet",
-      "cantidad": 10,
+      "enemigo": "fauvel",
+      "cantidad": 11,
       "formacion": "linea_vertical",
       "y": 110,
       "portadora": false,
       "separacion_px": 32,
-      "separacion_seg": 0.3
+      "separacion_seg": 0.3,
+      "legacy_index": 19
     },
     {
       "t": 191.0,
       "tipo": "oleada",
-      "enemigo": "eulepeth",
-      "cantidad": 9,
+      "enemigo": "protod",
+      "cantidad": 11,
       "formacion": "linea_horizontal",
       "y": 168,
       "portadora": true,
       "separacion_px": 32,
       "separacion_seg": 0.3,
-      "item": "azul"
+      "item": "azul",
+      "legacy_index": 20
     },
     {
       "t": 198,
       "tipo": "escudo",
       "item": "amarillo",
-      "y": 168
+      "y": 168,
+      "legacy_index": 21
     },
     {
       "t": 200,
       "tipo": "alerta_jefe",
-      "id": "boss_w05_hermo",
+      "id": "boss_w05_orbin",
       "jefes": [
-        "boss_w05_hermo"
-      ]
+        "boss_w05_orbin"
+      ],
+      "legacy_index": 22
     }
   ]
 }

@@ -17,7 +17,8 @@ class WorldOneArtTests(unittest.TestCase):
                 self.assertGreaterEqual(bottom-y,size*0.7,name+' leaves invisible collision bands')
 
     def test_all_seven_actor_sprites_are_reviewed_pngs_at_actual_size(self):
-        enemies = json.loads((ROOT / 'data/enemies.json').read_text())
+        # The seven integrated PNGs are preserved art, not the expanded 05A catalogue.
+        enemies = json.loads((ROOT / 'data/archive/04a/enemies.json').read_text())
         roster = [e for e in enemies if '1' in e['mundos']]
         self.assertEqual({e['id'] for e in roster}, {'hydroides','euphrosine','fabric','pision','lacy','syll','phyll'})
         manifest = {a['nombre']: a for a in json.loads((ROOT/'assets/assets_manifest.json').read_text())['assets']}

@@ -1,0 +1,32 @@
+[
+  {
+    "file": "Poliquetos-Normal.exe",
+    "bytes": 111076040,
+    "sha256": "d0eba82cf9fffc1d62b0b9cdaff02dd5c45e8b329374e818e55e99c0a4d8c322",
+    "preset": "Windows Normal"
+  },
+  {
+    "file": "Poliquetos-Pruebas.exe",
+    "bytes": 111076088,
+    "sha256": "8cf2b2b5cd73615283be15a16aa6a0f08d535d0c598edf3f32749478798889eb",
+    "preset": "Windows Pruebas"
+  },
+  {
+    "file": "poliquetos-linux.x86_64",
+    "bytes": 77492440,
+    "sha256": "d3a8b4349698ffc63271f2c6e670e23da4f3c980ca68bccadacf78545c935fe9",
+    "preset": "Linux Verification"
+  },
+  {
+    "file": "entregas/Poliquetos-Normal-Instalar.exe",
+    "bytes": 29745519,
+    "sha256": "16f04be5830208480deacffaeac2bea8d7b3b755684074e7e8019546a217fcda",
+    "preset": "Normal installer"
+  },
+  {
+    "file": "entregas/Poliquetos-Pruebas-Instalar.exe",
+    "bytes": 29746368,
+    "sha256": "f4b92554a70665644a81b4b658a296df263025c3ba6a1c554445ea7209afe4ca",
+    "preset": "Pruebas installer"
+  }
+]

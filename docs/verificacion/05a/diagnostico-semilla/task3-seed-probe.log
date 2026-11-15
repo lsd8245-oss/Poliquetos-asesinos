@@ -1,0 +1,6 @@
+Godot Engine v4.6.3.stable.official.7d41c59c4 - https://godotengine.org
+
+SEED_PROBE seed=147001 validation= save={ "ok": true, "error": "" }
+SEED_PROBE seed=2147483647 validation= save={ "ok": true, "error": "" }
+SEED_PROBE seed=2147483648 validation=invalid_profile_value save={ "ok": false, "error": "invalid_profile_value" }
+SEED_PROBE seed=4294967295 validation=invalid_profile_value save={ "ok": false, "error": "invalid_profile_value" }

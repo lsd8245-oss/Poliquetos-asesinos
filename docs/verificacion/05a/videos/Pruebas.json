@@ -1,0 +1,25 @@
+{
+  "edition": "Pruebas",
+  "raw_sha256": "ed3c287f6838fa48f01958c9fadf72023feb80c7d169cbeccabcc95b5ed9493c",
+  "raw_bytes": 212708912,
+  "published_sha256": "5d69996c3a9ed04db2472f0748461f1625d6abc58bd356f8ae2be57f81882cd6",
+  "published_bytes": 49452014,
+  "raw_probe": {
+    "width": 1366,
+    "height": 768,
+    "avg_frame_rate": "34235/1713",
+    "duration": "342.600000",
+    "nb_read_frames": "6847"
+  },
+  "published_probe": {
+    "width": 1366,
+    "height": 768,
+    "avg_frame_rate": "34235/1713",
+    "duration": "342.600000",
+    "nb_read_frames": "6847"
+  },
+  "all_frames_preserved": true,
+  "full_decode_errors": 0,
+  "transcode": "libx264 veryfast CRF27, 2threads, fps_mode passthrough, +faststart; no cropping/resizing/cuts; silent recording (Dummy audio driver)",
+  "capture_warning": "One XShm warning during display setup; capture continued through the full game and restart."
+}

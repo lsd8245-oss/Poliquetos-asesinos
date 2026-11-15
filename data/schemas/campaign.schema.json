@@ -1,0 +1,240 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "version": {
+      "const": 3
+    },
+    "world_count": {
+      "const": 12
+    },
+    "escape_id": {
+      "const": 13
+    },
+    "laboratory_id": {
+      "const": 12
+    },
+    "lab_encounters": {
+      "const": 3
+    },
+    "source_commit": {
+      "const": "9871b5a997408cd4ffec45b8a2b2b0593435537c"
+    },
+    "old_to_new": {
+      "const": {
+        "1": 1,
+        "2": 2,
+        "4": 3,
+        "5": 4,
+        "7": 5,
+        "8": 6,
+        "9": 7,
+        "10": 8,
+        "11": 9,
+        "12": 10,
+        "13": 11,
+        "14": 12,
+        "15": 13
+      }
+    },
+    "removed_world_destinations": {
+      "const": {
+        "3": 2,
+        "6": 4
+      }
+    },
+    "legacy_lab_to_new": {
+      "const": {
+        "0": 0,
+        "1": 1,
+        "2": 1,
+        "3": 2,
+        "4": 3
+      }
+    },
+    "legacy_boss_to_current": {
+      "const": {
+        "boss_w01_nereis": "boss_w01_nereis",
+        "boss_w02_capit": "boss_w02_capit",
+        "boss_w04_tere": "boss_w03_tere",
+        "boss_w05_hermo": "boss_w04_hermo",
+        "boss_w07_orbin": "boss_w05_orbin",
+        "boss_w08_pollution_capit": "boss_w06_pollution_capit",
+        "boss_w08_pollution_spio": "boss_w06_pollution_spio",
+        "boss_w08_pollution_cirrat": "boss_w06_pollution_cirrat",
+        "boss_w09_tomo": "boss_w07_tomo",
+        "boss_w10_eulagisca": "boss_w08_eulagisca",
+        "boss_w11_osedax": "boss_w09_osedax",
+        "boss_w12_alvinella": "boss_w10_alvinella",
+        "boss_w13_hadalsovereign": "boss_w11_hadalsovereign",
+        "boss_w13_riftia": "boss_w11_riftia",
+        "boss_w14_robot_pinza": "boss_w12_robot_pinza",
+        "boss_w14_robot_torreta": "boss_w12_robot_torreta",
+        "boss_w14_robot_taladro": "boss_w12_robot_taladro",
+        "boss_w14_scientist": "boss_w12_scientist",
+        "boss_w14_eunice_titan": "boss_w12_eunice_titan"
+      }
+    },
+    "asset_sources": {
+      "const": {
+        "1": 1,
+        "2": 2,
+        "3": 4,
+        "4": 5,
+        "5": 7,
+        "6": 8,
+        "7": 9,
+        "8": 10,
+        "9": 11,
+        "10": 12,
+        "11": 13,
+        "12": 14,
+        "13": 15
+      }
+    },
+    "skin_world_rewards": {
+      "const": {
+        "7": "bioluminiscente",
+        "10": "magma"
+      }
+    },
+    "act_worlds": {
+      "const": {
+        "1": [
+          1,
+          2,
+          3
+        ],
+        "2": [
+          4,
+          5,
+          6
+        ],
+        "3": [
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "4": [
+          12
+        ]
+      }
+    }
+  },
+  "required": [
+    "version",
+    "world_count",
+    "escape_id",
+    "laboratory_id",
+    "lab_encounters",
+    "source_commit",
+    "old_to_new",
+    "removed_world_destinations",
+    "legacy_lab_to_new",
+    "legacy_boss_to_current",
+    "asset_sources",
+    "skin_world_rewards",
+    "act_worlds"
+  ],
+  "additionalProperties": false,
+  "examples": [
+    {
+      "version": 3,
+      "world_count": 12,
+      "escape_id": 13,
+      "laboratory_id": 12,
+      "lab_encounters": 3,
+      "source_commit": "9871b5a997408cd4ffec45b8a2b2b0593435537c",
+      "old_to_new": {
+        "1": 1,
+        "2": 2,
+        "4": 3,
+        "5": 4,
+        "7": 5,
+        "8": 6,
+        "9": 7,
+        "10": 8,
+        "11": 9,
+        "12": 10,
+        "13": 11,
+        "14": 12,
+        "15": 13
+      },
+      "removed_world_destinations": {
+        "3": 2,
+        "6": 4
+      },
+      "legacy_lab_to_new": {
+        "0": 0,
+        "1": 1,
+        "2": 1,
+        "3": 2,
+        "4": 3
+      },
+      "legacy_boss_to_current": {
+        "boss_w01_nereis": "boss_w01_nereis",
+        "boss_w02_capit": "boss_w02_capit",
+        "boss_w04_tere": "boss_w03_tere",
+        "boss_w05_hermo": "boss_w04_hermo",
+        "boss_w07_orbin": "boss_w05_orbin",
+        "boss_w08_pollution_capit": "boss_w06_pollution_capit",
+        "boss_w08_pollution_spio": "boss_w06_pollution_spio",
+        "boss_w08_pollution_cirrat": "boss_w06_pollution_cirrat",
+        "boss_w09_tomo": "boss_w07_tomo",
+        "boss_w10_eulagisca": "boss_w08_eulagisca",
+        "boss_w11_osedax": "boss_w09_osedax",
+        "boss_w12_alvinella": "boss_w10_alvinella",
+        "boss_w13_hadalsovereign": "boss_w11_hadalsovereign",
+        "boss_w13_riftia": "boss_w11_riftia",
+        "boss_w14_robot_pinza": "boss_w12_robot_pinza",
+        "boss_w14_robot_torreta": "boss_w12_robot_torreta",
+        "boss_w14_robot_taladro": "boss_w12_robot_taladro",
+        "boss_w14_scientist": "boss_w12_scientist",
+        "boss_w14_eunice_titan": "boss_w12_eunice_titan"
+      },
+      "asset_sources": {
+        "1": 1,
+        "2": 2,
+        "3": 4,
+        "4": 5,
+        "5": 7,
+        "6": 8,
+        "7": 9,
+        "8": 10,
+        "9": 11,
+        "10": 12,
+        "11": 13,
+        "12": 14,
+        "13": 15
+      },
+      "skin_world_rewards": {
+        "7": "bioluminiscente",
+        "10": "magma"
+      },
+      "act_worlds": {
+        "1": [
+          1,
+          2,
+          3
+        ],
+        "2": [
+          4,
+          5,
+          6
+        ],
+        "3": [
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "4": [
+          12
+        ]
+      }
+    }
+  ]
+}

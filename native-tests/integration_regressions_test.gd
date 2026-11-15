@@ -2,21 +2,26 @@ extends SceneTree
 const Game=preload("res://src/core/game.gd")
 const Shop=preload("res://src/shop/shop.gd")
 const Save=preload("res://src/save/saves.gd")
+const Combat=preload("res://native-tests/fixtures/campaign_combat.gd")
 func _initialize():
 	var g=Game.new()
 	var p=Shop.create_profile()
 	p.world=3
 	p.cleared=[1,2,3]
+	p.resume="rest"
 	g.start(p)
 	g.begin_replay(1)
 	g.add_coins(10000)
-	g.finish_encounter()
+	Combat.enter_final(g)
+	assert(Combat.defeat(g),"Replay results require a real final defeated by projectiles")
 	assert(g.profile.credits==150,"Replay total capped at half base")
 	g.profile.resume="rest"
 	assert(Save.save_slot(2,g.profile).ok)
 	var loaded=Save.load_slot(2,false)
 	var restored=Game.new()
 	restored.start(loaded.profile)
+	assert(loaded.profile.resume=="rest")
+	restored.state="rest" # Same loaded-rest transition performed by Main._start.
 	restored.continue_campaign()
 	assert(restored.profile.world==3,"Replay survives save/reload without changing progression")
 	assert(restored.world.id==3)
@@ -33,8 +38,8 @@ func _initialize():
 	g.damage_player(1000,"test")
 	assert(g.state=="dying","Lander only once per world across retries")
 	p=Shop.create_profile()
-	p.world=14
-	p.lab_boss=2
+	p.world=12
+	p.lab_boss=1
 	g.start(p)
 	assert(not g.stage_system.enemy_index.is_empty(),"Loaded lab room initializes spawn catalog")
 	p=Shop.create_profile()

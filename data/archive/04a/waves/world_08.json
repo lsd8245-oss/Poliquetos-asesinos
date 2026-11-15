@@ -1,0 +1,280 @@
+{
+  "mundo": 8,
+  "semilla": 0,
+  "eventos": [
+    {
+      "t": 10.0,
+      "tipo": "oleada",
+      "enemigo": "ophelia",
+      "cantidad": 8,
+      "formacion": "linea_vertical",
+      "y": 60,
+      "portadora": true,
+      "separacion_px": 32,
+      "separacion_seg": 0.3,
+      "item": "rojo"
+    },
+    {
+      "t": 17.111,
+      "tipo": "oleada",
+      "enemigo": "cossura",
+      "cantidad": 8,
+      "formacion": "linea_horizontal",
+      "y": 110,
+      "portadora": false,
+      "separacion_px": 32,
+      "separacion_seg": 0.3
+    },
+    {
+      "t": 24.222,
+      "tipo": "oleada",
+      "enemigo": "pilarg",
+      "cantidad": 7,
+      "formacion": "v",
+      "y": 168,
+      "portadora": false,
+      "separacion_px": 32,
+      "separacion_seg": 0.3
+    },
+    {
+      "t": 25,
+      "tipo": "peligro",
+      "id": "barriles",
+      "duracion_seg": 10,
+      "y": 280
+    },
+    {
+      "t": 31.333,
+      "tipo": "oleada",
+      "enemigo": "lumbrineris",
+      "cantidad": 8,
+      "formacion": "v_invertida",
+      "y": 220,
+      "portadora": true,
+      "separacion_px": 32,
+      "separacion_seg": 0.3,
+      "item": "verde"
+    },
+    {
+      "t": 37,
+      "tipo": "peligro",
+      "id": "petroleo",
+      "duracion_seg": 10,
+      "y": 40
+    },
+    {
+      "t": 38.444,
+      "tipo": "oleada",
+      "enemigo": "owenia",
+      "cantidad": 8,
+      "formacion": "zigzag",
+      "y": 276,
+      "portadora": false,
+      "separacion_px": 32,
+      "separacion_seg": 0.3
+    },
+    {
+      "t": 45.0,
+      "tipo": "escudo",
+      "item": "amarillo",
+      "y": 168
+    },
+    {
+      "t": 52.5,
+      "tipo": "oleada",
+      "enemigo": "glycer",
+      "cantidad": 7,
+      "formacion": "circulo",
+      "y": 60,
+      "portadora": false,
+      "separacion_px": 32,
+      "separacion_seg": 0.3
+    },
+    {
+      "t": 52.667,
+      "tipo": "oleada",
+      "enemigo": "glycer",
+      "cantidad": 6,
+      "formacion": "doble_columna",
+      "y": 110,
+      "portadora": false,
+      "separacion_px": 32,
+      "separacion_seg": 0.3
+    },
+    {
+      "t": 59.778,
+      "tipo": "oleada",
+      "enemigo": "dorville",
+      "cantidad": 7,
+      "formacion": "ambos_lados",
+      "y": 168,
+      "portadora": true,
+      "separacion_px": 32,
+      "separacion_seg": 0.3,
+      "item": "azul"
+    },
+    {
+      "t": 66.889,
+      "tipo": "oleada",
+      "enemigo": "dorville",
+      "cantidad": 6,
+      "formacion": "diagonal",
+      "y": 220,
+      "portadora": false,
+      "separacion_px": 32,
+      "separacion_seg": 0.3
+    },
+    {
+      "t": 75.0,
+      "tipo": "minijefe",
+      "id": "mini_w08_lumbrineris",
+      "escoltas": {
+        "enemigo": "cossura",
+        "cantidad": 2,
+        "vida": 16,
+        "tamano": [
+          40,
+          32
+        ]
+      }
+    },
+    {
+      "t": 135.0,
+      "tipo": "oleada",
+      "enemigo": "glycer",
+      "cantidad": 10,
+      "formacion": "v_invertida",
+      "y": 60,
+      "portadora": false,
+      "separacion_px": 32,
+      "separacion_seg": 0.3
+    },
+    {
+      "t": 140.0,
+      "tipo": "escudo",
+      "item": "amarillo",
+      "y": 168
+    },
+    {
+      "t": 142.111,
+      "tipo": "oleada",
+      "enemigo": "glycer",
+      "cantidad": 10,
+      "formacion": "zigzag",
+      "y": 110,
+      "portadora": true,
+      "separacion_px": 32,
+      "separacion_seg": 0.3,
+      "item": "rojo"
+    },
+    {
+      "t": 145.0,
+      "tipo": "peligro",
+      "id": "barriles",
+      "duracion_seg": 10,
+      "y": 280
+    },
+    {
+      "t": 149.222,
+      "tipo": "oleada",
+      "enemigo": "pilarg",
+      "cantidad": 12,
+      "formacion": "circulo",
+      "y": 168,
+      "portadora": false,
+      "separacion_px": 32,
+      "separacion_seg": 0.3
+    },
+    {
+      "t": 153.0,
+      "tipo": "peligro",
+      "id": "petroleo",
+      "duracion_seg": 10,
+      "y": 40
+    },
+    {
+      "t": 156.333,
+      "tipo": "oleada",
+      "enemigo": "ophelia",
+      "cantidad": 12,
+      "formacion": "doble_columna",
+      "y": 220,
+      "portadora": false,
+      "separacion_px": 32,
+      "separacion_seg": 0.3
+    },
+    {
+      "t": 163.444,
+      "tipo": "oleada",
+      "enemigo": "dorville",
+      "cantidad": 10,
+      "formacion": "ambos_lados",
+      "y": 276,
+      "portadora": false,
+      "separacion_px": 32,
+      "separacion_seg": 0.3
+    },
+    {
+      "t": 170.556,
+      "tipo": "oleada",
+      "enemigo": "dorville",
+      "cantidad": 9,
+      "formacion": "diagonal",
+      "y": 60,
+      "portadora": true,
+      "separacion_px": 32,
+      "separacion_seg": 0.3,
+      "item": "verde"
+    },
+    {
+      "t": 177.667,
+      "tipo": "oleada",
+      "enemigo": "cossura",
+      "cantidad": 12,
+      "formacion": "linea_vertical",
+      "y": 110,
+      "portadora": false,
+      "separacion_px": 32,
+      "separacion_seg": 0.3
+    },
+    {
+      "t": 184.778,
+      "tipo": "oleada",
+      "enemigo": "lumbrineris",
+      "cantidad": 11,
+      "formacion": "linea_horizontal",
+      "y": 168,
+      "portadora": false,
+      "separacion_px": 32,
+      "separacion_seg": 0.3
+    },
+    {
+      "t": 191.889,
+      "tipo": "oleada",
+      "enemigo": "owenia",
+      "cantidad": 11,
+      "formacion": "v",
+      "y": 220,
+      "portadora": true,
+      "separacion_px": 32,
+      "separacion_seg": 0.3,
+      "item": "azul"
+    },
+    {
+      "t": 198,
+      "tipo": "escudo",
+      "item": "amarillo",
+      "y": 168
+    },
+    {
+      "t": 200,
+      "tipo": "alerta_jefe",
+      "id": "boss_w08_pollution_capit",
+      "jefes": [
+        "boss_w08_pollution_capit",
+        "boss_w08_pollution_spio",
+        "boss_w08_pollution_cirrat"
+      ]
+    }
+  ]
+}

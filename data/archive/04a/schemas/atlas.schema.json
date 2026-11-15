@@ -1,0 +1,114 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://poliquetos.local/schemas/atlas.schema.json",
+  "type": "object",
+  "properties": {
+    "imagen": {
+      "type": "string",
+      "pattern": "^w\\d{2}\\.png$"
+    },
+    "tamano": {
+      "type": "array",
+      "items": {
+        "type": "integer",
+        "minimum": 1
+      },
+      "minItems": 2,
+      "maxItems": 2
+    },
+    "frames": {
+      "type": "object",
+      "minProperties": 1,
+      "additionalProperties": {
+        "type": "object",
+        "properties": {
+          "x": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "y": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "w": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "h": {
+            "type": "integer",
+            "minimum": 1
+          }
+        },
+        "required": [
+          "x",
+          "y",
+          "w",
+          "h"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "animaciones": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "properties": {
+          "frames": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "pattern": "^[a-z][a-z0-9_]*$"
+            },
+            "minItems": 1
+          },
+          "fps": {
+            "type": "number",
+            "exclusiveMinimum": 0
+          },
+          "bucle": {
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "frames",
+          "fps",
+          "bucle"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  "required": [
+    "imagen",
+    "tamano",
+    "frames",
+    "animaciones"
+  ],
+  "additionalProperties": false,
+  "examples": [
+    {
+      "imagen": "w01.png",
+      "tamano": [
+        1024,
+        1024
+      ],
+      "frames": {
+        "w01_enemy_serpulidae_move_01": {
+          "x": 0,
+          "y": 0,
+          "w": 32,
+          "h": 32
+        }
+      },
+      "animaciones": {
+        "move": {
+          "frames": [
+            "w01_enemy_serpulidae_move_01"
+          ],
+          "fps": 8,
+          "bucle": true
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "passed": true,
+  "exit": 0,
+  "host": "Windows PE under Wine/Linux, not physical Windows",
+  "scope": "Isolated save tests; not a gameplay video or installer test",
+  "user_folder": "Poliquetos Save Probe 05A",
+  "test_sha256": "b9068075d18c29a42b41b40c99ff2ceeeb7f8d9a6cb80a8468a36bd9c136aab6",
+  "save_sha256": "388d7da54a4cb890db0076805d636809e5806363478eeede55a03c92809e8e76",
+  "exe_sha256": "71db958ace9c3c89cefe9c722cf6a672f3a7ab0db82ffa65a3778c356319e955"
+}

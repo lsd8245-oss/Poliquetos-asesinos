@@ -1,0 +1,303 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://poliquetos.local/schemas/legacy_inventory.schema.json",
+  "type": "object",
+  "properties": {
+    "version": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "source": {
+      "type": "object",
+      "properties": {
+        "file": {
+          "type": "string",
+          "minLength": 1
+        },
+        "sha256": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        },
+        "campaign": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "statsNote": {
+          "type": "string",
+          "minLength": 1
+        },
+        "spritesNote": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "file",
+        "sha256",
+        "campaign",
+        "statsNote",
+        "spritesNote"
+      ],
+      "additionalProperties": false
+    },
+    "worlds": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 14
+          },
+          "act": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 4
+          },
+          "name": {
+            "type": "string",
+            "minLength": 1
+          },
+          "unique": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "pattern": "^[a-zA-Z][a-zA-Z0-9]*$"
+            },
+            "minItems": 1,
+            "uniqueItems": true
+          },
+          "recurrent": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "pattern": "^[a-zA-Z][a-zA-Z0-9]*$"
+            },
+            "minItems": 1,
+            "uniqueItems": true
+          },
+          "legacyStageCount": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "bosses": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string",
+                  "pattern": "^[a-zA-Z][a-zA-Z0-9]*$"
+                },
+                "type": {
+                  "type": "string",
+                  "pattern": "^[a-zA-Z][a-zA-Z0-9]*$"
+                },
+                "name": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "sprite": {
+                  "type": "object",
+                  "properties": {
+                    "format": {
+                      "const": "canvas_procedural"
+                    },
+                    "key": {
+                      "type": "string",
+                      "pattern": "^[a-zA-Z][a-zA-Z0-9]*$"
+                    },
+                    "renderer": {
+                      "enum": [
+                        "getWormSprite",
+                        "getBossSprite"
+                      ]
+                    },
+                    "png": {
+                      "type": "null"
+                    }
+                  },
+                  "required": [
+                    "format",
+                    "key",
+                    "renderer",
+                    "png"
+                  ],
+                  "additionalProperties": false
+                }
+              },
+              "required": [
+                "id",
+                "type",
+                "name",
+                "sprite"
+              ],
+              "additionalProperties": false
+            },
+            "minItems": 1
+          }
+        },
+        "required": [
+          "id",
+          "act",
+          "name",
+          "unique",
+          "recurrent",
+          "legacyStageCount",
+          "bosses"
+        ],
+        "additionalProperties": false
+      },
+      "minItems": 14,
+      "maxItems": 14
+    },
+    "entities": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[a-zA-Z][a-zA-Z0-9]*$"
+          },
+          "name": {
+            "type": "string",
+            "minLength": 1
+          },
+          "stats": {
+            "type": "object",
+            "properties": {
+              "color": {
+                "type": "string",
+                "pattern": "^#[0-9a-fA-F]{6}$"
+              },
+              "radius": {
+                "type": "number",
+                "exclusiveMinimum": 0
+              },
+              "baseHp": {
+                "type": "number",
+                "exclusiveMinimum": 0
+              },
+              "baseSpeed": {
+                "type": "number",
+                "minimum": 0
+              },
+              "attack": {
+                "type": "string",
+                "minLength": 1
+              }
+            },
+            "required": [
+              "color",
+              "radius",
+              "baseHp",
+              "baseSpeed",
+              "attack"
+            ],
+            "additionalProperties": false
+          },
+          "appearances": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "world": {
+                  "type": "integer",
+                  "minimum": 1,
+                  "maximum": 15
+                },
+                "role": {
+                  "enum": [
+                    "unique",
+                    "recurrent"
+                  ]
+                }
+              },
+              "required": [
+                "world",
+                "role"
+              ],
+              "additionalProperties": false
+            },
+            "minItems": 0
+          },
+          "bossAppearances": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "world": {
+                  "type": "integer",
+                  "minimum": 1,
+                  "maximum": 15
+                },
+                "id": {
+                  "type": "string",
+                  "pattern": "^[a-zA-Z][a-zA-Z0-9]*$"
+                },
+                "name": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              },
+              "required": [
+                "world",
+                "id",
+                "name"
+              ],
+              "additionalProperties": false
+            },
+            "minItems": 0
+          },
+          "sprite": {
+            "type": "object",
+            "properties": {
+              "format": {
+                "const": "canvas_procedural"
+              },
+              "key": {
+                "type": "string",
+                "pattern": "^[a-zA-Z][a-zA-Z0-9]*$"
+              },
+              "renderer": {
+                "enum": [
+                  "getWormSprite",
+                  "getBossSprite"
+                ]
+              },
+              "png": {
+                "type": "null"
+              }
+            },
+            "required": [
+              "format",
+              "key",
+              "renderer",
+              "png"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "required": [
+          "id",
+          "name",
+          "stats",
+          "appearances",
+          "bossAppearances",
+          "sprite"
+        ],
+        "additionalProperties": false
+      },
+      "minItems": 1
+    }
+  },
+  "required": [
+    "version",
+    "source",
+    "worlds",
+    "entities"
+  ],
+  "additionalProperties": false
+}

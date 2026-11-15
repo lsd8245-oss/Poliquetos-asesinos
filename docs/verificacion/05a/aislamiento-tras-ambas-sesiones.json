@@ -1,0 +1,38 @@
+{
+  "normal": {
+    "sha256": "64d9f25a2c13b7dfb1d4d8971977a345b3dc9c424465848732225002b25c85a7",
+    "edition": "normal",
+    "version": 3,
+    "world": 1,
+    "seed": 3789403639,
+    "credits": 140,
+    "upgrades": {
+      "bombas": 0,
+      "cadencia": 0,
+      "dano": 0,
+      "escudo_max": 1,
+      "iman": 0,
+      "misiles": 0,
+      "regeneracion": 0,
+      "velocidad": 0
+    }
+  },
+  "pruebas": {
+    "sha256": "ecd59cf0827a37efad9c5ac074abe5c305ee3208545c8b3796f66ef7a085909c",
+    "edition": "pruebas",
+    "version": 3,
+    "world": 1,
+    "seed": 147001,
+    "credits": 999999999,
+    "upgrades": {
+      "bombas": 0,
+      "cadencia": 0,
+      "dano": 0,
+      "escudo_max": 1,
+      "iman": 0,
+      "misiles": 0,
+      "regeneracion": 0,
+      "velocidad": 0
+    }
+  }
+}

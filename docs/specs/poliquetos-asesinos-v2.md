@@ -1,5 +1,7 @@
 # Poliquetos Asesinos: especificación de rediseño completo (v2, fusionada)
 
+> **Actualización vigente — Encargo 05A (campaña de 12 mundos).** La petición actual del usuario y [el encargo corregido](../encargos/05-campana-12-mundos-rescate-jugabilidad-w01.md) sustituyen las tablas históricas incompatibles de este documento: 12 mundos principales, escape especial ID13, laboratorio ID12 con robots→científico→Eunice; minijefes temporalmente inactivos, jefes finales obligatorios y Epitoka archivado. [Catálogo adjunto](../planificacion/lista_12_mundos_propuesta.md), [matriz explícita de migración](../diseno/encargo05/matriz-migracion.md) y [análisis económico](../diseno/encargo05/economia.md). La excepción explícita sobre Epitoka prevalece sobre su entrada aún presente en el catálogo adjunto. El contenido original se conserva debajo como referencia histórica; sus14 mundos,17visitas y minijefes no son el contrato activo. Solo05A está autorizado; geometría,160enemigos/Nereidae rediseñado y sonar táctico esperan05B/C/D y aprobación del usuario. Música y arte integrados se conservan.
+
 Versión del 31 de octubre de 2026. Autor: Diego. Documento único que reemplaza al PDF anterior y a la especificación base. Contiene las secciones 1 a 4 del PDF (con los tiempos actualizados) y las secciones 5 a 15, que antes faltaban.
 
 ---

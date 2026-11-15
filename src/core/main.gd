@@ -5,6 +5,7 @@ const Assets = preload("res://src/core/assets.gd")
 const Game = preload("res://src/core/game.gd")
 const Shop = preload("res://src/shop/shop.gd")
 const Save = preload("res://src/save/saves.gd")
+const Campaign = preload("res://src/core/campaign.gd")
 const TIPS = [
 	"Las bombas limpian balas.", "Los misiles se disparan automáticamente.",
 	"Mueve la nave en pasos cortos entre proyectiles.", "Observa la señal antes de cada ataque del jefe.",
@@ -61,6 +62,13 @@ var sandbox_weapons = {"shot": 1, "missile": 1, "bomb": 1}
 var intro_clock = 0.0
 var smoke_frames = 0
 var import_dialog: FileDialog
+var pending_migration_profile: Dictionary = {}
+var pending_migration_notice = ""
+var migration_return_screen = "slots"
+var pending_import_slot = 0
+var pending_import_text = ""
+var campaign_trace_clock = -1.0
+var campaign_trace_screen = ""
 const DisplayPolicy=preload("res://src/visuals/display_policy.gd")
 const Indicators=preload("res://src/visuals/state_indicators.gd")
 const Sonar=preload("res://src/equipment/sonar.gd")
@@ -85,7 +93,7 @@ func _ready():
 		set_process(false)
 		var p=Shop.create_profile(sandbox)
 		game.start(p)
-		var ok=game.data.worlds.size()==14 and game.player.shield==100 and game.enemies.is_empty() and assets.has_sprite("w14_boss_boss_w14_eunice_titan_move")
+		var ok=game.data.worlds.size()==Campaign.world_count() and game.player.shield==100 and game.enemies.is_empty() and assets.has_sprite(Campaign.asset_key(Campaign.laboratory_id(),"boss","boss_w12_eunice_titan"))
 		ok=ok and p.equipment.size()==1 and p.equipment.get("sonar",false)
 		ok=ok and int(p.credits)==(999999999 if sandbox else 0)
 		ok=ok and game.stage_system!=null and game.weapon_system!=null and game.boss_system!=null
@@ -186,11 +194,18 @@ func _show(next: String):
 				var saved = Save.load_slot(slot, sandbox)
 				var summary = "vacía"
 				if saved.ok:
-					summary = "M%d / %s / %d monedas" % [saved.profile.world, _difficulty_name(saved.profile.difficulty), saved.profile.credits]
+					summary = "%s / %s / %d monedas" % [_world_label(int(saved.profile.world)), _difficulty_name(saved.profile.difficulty), saved.profile.credits]
+					if saved.get("migrated",false):summary+=" [antigua]"
 				elif saved.error != "slot_empty":
 					summary = "archivo dañado: copia de respaldo si existe"
 				_button("Ranura %d: %s" % [slot, summary], "slot:%d" % slot, Rect2(40, 82 + (slot - 1) * 32, 550, 26))
 			_button("Volver", "title", Rect2(40, 202, 220, 22))
+		"migration":
+			heading = "PARTIDA ANTIGUA / CAMPAÑA DE 12 MUNDOS"
+			for line in _wrap(pending_migration_notice,94).split("\n"):lines.append(line)
+			lines.append("El original se conserva. Los nuevos guardados usan otra carpeta.")
+			_button("Continuar con la partida migrada", "migration_accept",Rect2(30,222,570,27))
+			_button("Cancelar y volver a las ranuras", "migration_cancel",Rect2(30,260,570,27))
 		"options":
 			heading = "OPCIONES"
 			for key in ["master", "music", "effects"]:
@@ -241,6 +256,7 @@ func _show(next: String):
 		"rest":
 			game.profile.resume = "rest"
 			var saved = Save.save_slot(active_slot, game.profile)
+			_trace_save_result(saved,game.profile)
 			_toast("Guardado automático: ranura %d" % active_slot if saved.ok else "Error de guardado: " + _friendly_error(str(saved.error)))
 			heading = "DESCANSO / ACTO %d / MUNDO %d" % [int(game.world.get("acto", 4)), int(game.profile.world)]
 			lines = ["%d monedas | Tiempo %s | Muertes %d" % [game.profile.credits, _time(game.total_time), _deaths()]]
@@ -297,8 +313,8 @@ func _show(next: String):
 		"sandbox":
 			heading = "PRUEBAS / SELECCIÓN EXPLÍCITA"
 			lines = ["Compras pendientes salvo sonar. Sin escudo extra ni invulnerabilidad.", "Izquierda / derecha ajustan mundo, sala y niveles de arma."]
-			_button("Mundo: %d / %s" % [sandbox_world, game.world_config(sandbox_world).nombre], "dev_world")
-			_button("Laboratorio: encuentro %d de 4" % (sandbox_lab + 1), "dev_lab")
+			_button("%s / %s" % [_world_label(sandbox_world), game.world_config(sandbox_world).nombre], "dev_world")
+			_button("Laboratorio: encuentro %d de %d" % [sandbox_lab + 1,Campaign.lab_encounter_count()], "dev_lab")
 			for weapon in ["shot", "missile", "bomb"]:
 				_button("%s: nivel %d" % [{"shot":"Disparo","missile":"Misiles","bomb":"Bombas"}[weapon], sandbox_weapons[weapon]], "dev_weapon:" + weapon)
 			_button("Iniciar selección", "dev_start")
@@ -345,6 +361,9 @@ func _yes(value) -> String:
 func _time(seconds: float) -> String:
 	return "%02d:%02d" % [int(seconds) / 60, int(seconds) % 60]
 
+func _world_label(id:int)->String:
+	return "Escape especial" if id==Campaign.escape_id() else "Mundo %d"%id
+
 func _deaths() -> int:
 	var total = 0
 	for value in game.profile.get("deaths", {}).values():
@@ -364,7 +383,7 @@ func _start(profile: Dictionary, loaded: bool = false):
 	runtime_trace_start=game.total_time
 	active_slot = int(profile.get("slot", 1))
 	last_state = ""
-	if loaded and profile.get("completed",false):
+	if loaded and profile.get("completed",false) and not profile.get("replay_mode",false):
 		game.state="victory"
 		_show("victory")
 	elif loaded and profile.get("resume", "") == "rest":
@@ -376,6 +395,11 @@ func _start(profile: Dictionary, loaded: bool = false):
 		_show("game")
 	_trace_runtime()
 
+func _trace_save_result(result:Dictionary,profile:Dictionary):
+	# Opt-in diagnostics only; never change a profile to make it pass validation.
+	if runtime_trace and not result.ok:
+		print("SAVE_DIAGNOSTIC ",JSON.stringify({"error":result.error,"profile":profile},"",true,true))
+
 func _trace_runtime():
 	if not runtime_trace or runtime_trace_index>=7:return
 	var targets=[0.0,5.0,12.0,15.0,20.0,30.0,40.0]
@@ -383,6 +407,31 @@ func _trace_runtime():
 	if elapsed<targets[runtime_trace_index]:return
 	print("RUNTIME_STAGE_TRACE ",JSON.stringify({"target_elapsed":targets[runtime_trace_index],"elapsed":elapsed,"state":game.state,"world_time":game.world_time,"scroll":game.scroll,"enemies":game.enemies.size(),"regular_spawned":game.regular_spawned,"regular_kills":game.regular_kills,"enemy_bullets":game.enemy_bullets.size(),"stage_system":game.stage_system!=null,"weapon_system":game.weapon_system!=null,"boss_system":game.boss_system!=null,"edition":"pruebas" if sandbox else "normal","os":OS.get_name()}))
 	runtime_trace_index+=1
+
+func _campaign_trace_payload()->Dictionary:
+	# Opt-in observations for exported-runtime QA; never feed state back to Game.
+	var pos:Vector2=game.player.get("pos",Vector2.ZERO)
+	var mini_count=game.get("mini_spawn_count")
+	var boss_count=game.get("boss_spawn_count")
+	var payload={"screen":screen,"state":game.state,"world":int(game.profile.get("world",0)),"lab":int(game.profile.get("lab_boss",0)),"world_time":game.world_time,"elapsed":game.total_time,"player":[pos.x,pos.y],"shield":game.player.get("shield",0),"minis":int(mini_count) if mini_count!=null else 0,"boss_spawns":int(boss_count) if boss_count!=null else 0,"regular_spawned":game.regular_spawned,"regular_kills":game.regular_kills,"credits":game.profile.get("credits",0),"bombs":game.profile.get("bombs",0),"weapons":game.profile.get("weapons",{}).duplicate(true),"upgrades":game.profile.get("upgrades",{}).duplicate(true),"resume":game.profile.get("resume",""),"completed":game.profile.get("completed",false),"buttons":buttons.map(func(b):return b.action),"selected":selected,"selector_world":sandbox_world,"selector_lab":sandbox_lab,"shop_item":shop_item,"seed":game.profile.get("seed",0),"profile_version":game.profile.get("version",0),"enemies":[],"bullets":[],"drops":[],"edition":"pruebas" if sandbox else "normal","os":OS.get_name()}
+	for enemy in game.enemies:
+		if float(enemy.get("hp",0))<=0 or enemy.get("inactive",false) or enemy.get("hidden",false):continue
+		var rectangles=[]
+		for rect in game.enemy_hit_rects(enemy):rectangles.append([rect.position.x,rect.position.y,rect.size.x,rect.size.y])
+		payload.enemies.append({"id":enemy.id,"uid":enemy.uid,"pos":[enemy.pos.x,enemy.pos.y],"size":[enemy.size.x,enemy.size.y],"rects":rectangles,"boss":enemy.get("boss",false),"mini":enemy.get("mini",false),"hp":enemy.hp,"phase":enemy.get("phase",0),"entry":enemy.get("entry",0),"lock":enemy.get("lock",0)})
+	for bullet in game.enemy_bullets:
+		var size:Vector2=bullet.get("size",Vector2(6,6))
+		payload.bullets.append([bullet.pos.x,bullet.pos.y,bullet.velocity.x,bullet.velocity.y,size.x,size.y])
+	for drop in game.drops:payload.drops.append({"kind":drop.kind,"pos":[drop.pos.x,drop.pos.y]})
+	return payload
+
+func _trace_campaign():
+	if not runtime_trace:return
+	var state_key=screen+":"+game.state
+	if clock-campaign_trace_clock<0.12 and state_key==campaign_trace_screen:return
+	campaign_trace_clock=clock
+	campaign_trace_screen=state_key
+	print("CAMPAIGN_QA_TRACE ",JSON.stringify(_campaign_trace_payload()))
 
 func _enter_rest():
 	game.state = "rest"
@@ -404,9 +453,18 @@ func _activate(action: String, direction: int = 1):
 			else:
 				_new_profile()
 		elif saved.ok:
-			_start(saved.profile, true)
-			if saved.recovered:
-				_toast("Archivo dañado. Se recuperó la copia .bak: " + _friendly_error(str(saved.error)))
+			if saved.get("migrated",false):
+				migration_return_screen="slots"
+				pending_import_slot=0
+				pending_import_text=""
+				pending_migration_profile=saved.profile.duplicate(true)
+				pending_migration_notice=str(saved.get("migration_notice","Partida adaptada a la campaña de 12 mundos."))
+				if saved.recovered:pending_migration_notice+=" Se ha leído la copia de respaldo .bak."
+				_show("migration")
+			else:
+				_start(saved.profile, true)
+				if saved.recovered:
+					_toast("Archivo dañado. Se recuperó la copia .bak: " + _friendly_error(str(saved.error)))
 		else:
 			_toast("No se pudo cargar: " + _friendly_error(str(saved.error)))
 	elif action.begins_with("option:"):
@@ -445,6 +503,7 @@ func _activate(action: String, direction: int = 1):
 	elif action.begins_with("manual:"):
 		var slot = int(action.get_slice(":", 1))
 		var saved = Save.save_slot(slot, game.profile)
+		_trace_save_result(saved,game.profile)
 		if saved.ok:
 			active_slot = slot
 			game.profile.slot = slot
@@ -466,7 +525,6 @@ func _activate(action: String, direction: int = 1):
 	elif action.begins_with("import:"):
 		_open_import(int(action.get_slice(":", 1)))
 	elif action.begins_with("replay:"):
-		game.profile.resume = "playing"
 		game.begin_replay(int(action.get_slice(":", 1)))
 		intro_clock = 2.0
 		_show("game")
@@ -478,6 +536,26 @@ func _activate(action: String, direction: int = 1):
 		selected = current
 	else:
 		match action:
+			"migration_accept":
+				if pending_import_slot>0:
+					var slot=pending_import_slot
+					var text=pending_import_text
+					pending_import_slot=0
+					pending_import_text=""
+					pending_migration_profile={}
+					pending_migration_notice=""
+					_commit_import(slot,text)
+				elif not pending_migration_profile.is_empty():
+					var migrated_profile=pending_migration_profile
+					pending_migration_profile={}
+					pending_migration_notice=""
+					_start(migrated_profile,true)
+			"migration_cancel":
+				pending_migration_profile={}
+				pending_migration_notice=""
+				pending_import_slot=0
+				pending_import_text=""
+				_show(migration_return_screen)
 			"new", "title", "credits", "controls", "rest", "shipyard", "skins", "save", "replay", "shop":
 				if action == "credits":
 					return_screen = screen
@@ -534,7 +612,6 @@ func _activate(action: String, direction: int = 1):
 				_reset_sonar()
 				_show("game")
 			"next":
-				game.profile.resume = "playing"
 				game.continue_campaign()
 				_reset_sonar()
 				intro_clock = 2.0
@@ -561,17 +638,17 @@ func _activate(action: String, direction: int = 1):
 			"dev_back":
 				_show(return_screen)
 			"dev_world":
-				sandbox_world = posmod(sandbox_world - 1 + direction, 15) + 1
+				sandbox_world = posmod(sandbox_world - 1 + direction, Campaign.escape_id()) + 1
 				_show("sandbox")
 			"dev_lab":
-				sandbox_lab = posmod(sandbox_lab + direction, 4)
+				sandbox_lab = posmod(sandbox_lab + direction, Campaign.lab_encounter_count())
 				_show("sandbox")
 				selected = 1
 			"dev_start":
 				if sandbox:
 					var profile = game.profile if not game.profile.is_empty() else Shop.create_profile(true)
 					profile.world = sandbox_world
-					profile.lab_boss = sandbox_lab if sandbox_world == 14 else 0
+					profile.lab_boss = sandbox_lab if sandbox_world == Campaign.laboratory_id() else 0
 					profile.weapons = sandbox_weapons.duplicate(true)
 					profile.erase("world_entry_weapons")
 					profile.resume = "playing"
@@ -603,6 +680,7 @@ func _new_profile():
 	profile.seed=randi()
 	_start(profile)
 	var saved = Save.save_slot(active_slot, profile)
+	_trace_save_result(saved,profile)
 	if not saved.ok:
 		_toast("No se pudo guardar: " + _friendly_error(str(saved.error)))
 
@@ -616,10 +694,34 @@ func _open_import(slot: int):
 	import_dialog.title = "Importar ranura %d" % slot
 	add_child(import_dialog)
 	import_dialog.file_selected.connect(func(path):
-		var result = Save.import_slot(slot, FileAccess.get_file_as_string(path), sandbox)
-		_toast("Importado en ranura %d" % slot if result.ok else "Importación rechazada: " + _friendly_error(str(result.error)))
+		_prepare_import(slot,FileAccess.get_file_as_string(path))
 	)
 	import_dialog.popup_centered(Vector2i(580, 320))
+
+func _prepare_import(slot:int,text:String):
+	var preview=Save.preview_import(slot,text,sandbox)
+	if not preview.ok:
+		_toast("Importación rechazada: "+_friendly_error(str(preview.error)))
+		return
+	if preview.get("migrated",false):
+		migration_return_screen=screen
+		pending_import_slot=slot
+		pending_import_text=text
+		pending_migration_profile=preview.profile.duplicate(true)
+		pending_migration_notice=str(preview.migration_notice)
+		_show("migration")
+	else:
+		_commit_import(slot,text)
+
+func _commit_import(slot:int,text:String):
+	var result=Save.import_slot(slot,text,sandbox)
+	if result.ok:
+		# Switch to the imported campaign before rest autosave can run again.
+		_start(result.profile,true)
+		_toast("Importado en ranura %d"%slot)
+	else:
+		_show("save")
+		_toast("Importación rechazada: "+_friendly_error(str(result.error)))
 
 func _binding_name(action: String, kind: String) -> String:
 	var value = options.bindings.get(kind + ":" + action, -1)
@@ -722,6 +824,7 @@ func _input(event):
 
 func _back():
 	match screen:
+		"migration": _activate("migration_cancel")
 		"pause": _activate("resume")
 		"options": _activate("options_back")
 		"controls": _show("options")
@@ -737,7 +840,7 @@ func _process(dt):
 	clock += dt
 	if audio!=null:audio.consume(game.sound_events)
 	message_time = maxf(0, message_time - dt)
-	position=Vector2(sin(clock*37),cos(clock*43)) if screen=="game" and int(game.profile.get("world",0))==15 and options.get("shake",true) and not options.get("reduce_flashes",false) else Vector2.ZERO
+	position=Vector2(sin(clock*37),cos(clock*43)) if screen=="game" and int(game.profile.get("world",0))==Campaign.escape_id() and options.get("shake",true) and not options.get("reduce_flashes",false) else Vector2.ZERO
 	if screen == "game":
 		if intro_clock > 0:
 			intro_clock -= dt
@@ -773,7 +876,7 @@ func _process(dt):
 				"rest": _enter_rest()
 				"victory":
 					game.profile.resume = "completed"
-					Save.save_slot(active_slot, game.profile)
+					_trace_save_result(Save.save_slot(active_slot, game.profile),game.profile)
 					finish_sequence=true
 					_show("ending")
 	elif screen == "ending":
@@ -789,6 +892,7 @@ func _process(dt):
 		if result_clock >= 4.0:
 			_enter_rest()
 	queue_redraw()
+	_trace_campaign()
 	if OS.get_cmdline_user_args().has("--smoke-test"):
 		smoke_frames += 1
 		if smoke_frames >= 5:
@@ -816,7 +920,7 @@ func _draw():
 	if screen == "game":
 		if intro_clock > 0:
 			assets.panel(self, Rect2(90,132,460,64))
-			_label("MUNDO %d / %s" % [world_id, game.world.nombre], Vector2(104,140))
+			_label("%s / %s" % [_world_label(world_id), game.world.nombre], Vector2(104,140))
 			_label("%s SONAR: revela peligros, sin daño; recarga %d s"%[_sonar_key_name(),ceili(sonar.config.cooldown_seconds)],Vector2(104,157))
 			_label("Icono de arma: botín de grupo. Destello ámbar: ataque.",Vector2(104,175))
 		if game.state == "countdown":
@@ -883,12 +987,12 @@ func _draw_background(world_id: int, offset: float):
 		W01Environment.draw(self,assets,offset,clock)
 		return
 	var fade=0.0
-	if world_id==15 and not game.profile.is_empty():
+	if world_id==Campaign.escape_id() and not game.profile.is_empty():
 		var transition=game.data.escape.fondo_transicion
 		fade=1.0 if game.profile.get("completed",false) else clampf((game.world_time-float(transition.desde_seg))/float(transition.hasta_seg-transition.desde_seg),0,1)
 	for layer in range(1, 5):
 		var factors = game.data.combat.get("scroll",{}).get("parallax",[0.1,0.3,0.6,1.0])
-		var key = "w%02d_bg_layer%d_idle" % [world_id, layer]
+		var key = Campaign.asset_key(world_id,"bg","layer%d"%layer,"idle")
 		var texture=assets.get_texture(key,clock)
 		if texture!=null:
 			for rect in _background_tiles(texture.get_size(),offset,float(factors[layer-1])):
@@ -920,7 +1024,7 @@ func _draw_ship(pos: Vector2, size: Vector2):
 
 func _draw_game(world_id: int):
 	sonar.draw_pulse(self,assets,bool(options.reduce_flashes))
-	if world_id==15 and game.world_time<float(game.data.escape.fondo_transicion.desde_seg):
+	if world_id==Campaign.escape_id() and game.world_time<float(game.data.escape.fondo_transicion.desde_seg):
 		_pixel(Rect2(0,0,640,336),Color(0.8,0,0,0.03 if options.reduce_flashes else 0.04+0.06*absf(sin(clock*3))))
 	for hazard in game.hazards:
 		var rect = hazard.get("rect", Rect2())
@@ -935,11 +1039,11 @@ func _draw_game(world_id: int):
 			continue
 		if float(enemy.get("hp",0))<=0 or enemy.get("inactive",false):continue
 		var size = enemy.get("size", Vector2(32, 24))
-		var key = "w%02d_enemy_%s_move" % [world_id, enemy.id]
+		var key = Campaign.asset_key(world_id,"enemy",str(enemy.id))
 		if enemy.get("boss", false):
-			key = "w%02d_boss_%s_move" % [world_id, enemy.id]
+			key = Campaign.asset_key(world_id,"boss",str(enemy.id))
 		elif enemy.get("mini", false):
-			key = "w%02d_mini_%s_move" % [world_id, game.world.get("mini_tipo", enemy.id)]
+			key = Campaign.asset_key(world_id,"mini",str(game.world.get("mini_tipo", enemy.id)))
 		var flags = enemy.get("flags", {})
 		var tint=Indicators.actor_tint(enemy,game.total_time,bool(options.reduce_flashes))
 		if enemy.get("flash",0)>0 and not options.reduce_flashes and assets.has_sprite(key.replace("_move","_hit")):
@@ -1090,13 +1194,16 @@ func _draw_hud():
 	assets.sprite(self, "w01_ui_item_coin_idle", Rect2(350, 342, 12, 12))
 	_label("INFINITO" if sandbox else str(int(game.profile.credits)), Vector2(369, 344))
 	_pixel(Rect2(450, 343, 180, 6), Color(0.12, 0.2, 0.28))
-	var duration = maxf(1, float(game.world.get("duracion_hasta_jefe_seg", 300)))
+	var duration = maxf(1, float(game.world.get("alerta_jefe_seg", game.world.get("duracion_hasta_jefe_seg", 300))))
 	_pixel(Rect2(450, 343, 180 * (1.0 if game.state=="boss" else clampf(game.world_time / duration, 0, 1)), 6), Color(0.35, 0.65, 0.9))
 	var mini = float(game.world.get("minijefe_inicio_seg", -1))
-	if mini > 0:
+	if bool(game.world.get("miniboss_enabled",false)) and mini > 0:
 		_pixel(Rect2(450 + 180 * mini / duration, 341, 2, 10), Color.YELLOW)
 	_pixel(Rect2(628, 341, 2, 10), Color(1, 0.4, 0.5))
-	_label("M%d %s" % [game.profile.world, _time(game.world_time)], Vector2(485, 349))
+	var progress_label=("ESC " if int(game.profile.world)==Campaign.escape_id() else "M%d "%int(game.profile.world))+_time(game.world_time)
+	if game.state=="alert":progress_label="ALERTA JEFE FINAL"
+	elif game.state=="boss":progress_label="JEFE FINAL"
+	_label(progress_label, Vector2(485, 349))
 
 func _sonar_key_name()->String:
 	var custom=int(options.get("bindings",{}).get("key:sonar",-1))

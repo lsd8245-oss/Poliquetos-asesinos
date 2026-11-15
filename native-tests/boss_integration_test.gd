@@ -2,6 +2,8 @@ extends SceneTree
 const Game = preload("res://src/core/game.gd")
 const Shop = preload("res://src/shop/shop.gd")
 const Patterns = preload("res://src/bosses/patterns.gd")
+const Campaign=preload("res://src/core/campaign.gd")
+const Data=preload("res://src/core/data.gd")
 var failures: Array[String] = []
 
 func check(value: bool, text: String) -> void:
@@ -10,14 +12,14 @@ func check(value: bool, text: String) -> void:
 
 func make_game(world: int, lab: int = 0):
 	var p = Shop.create_profile()
-	p.world = world
-	p.lab_boss = lab
+	p.world = int(Campaign.config().old_to_new.get(str(world),world))
+	p.lab_boss = int(Campaign.config().legacy_lab_to_new.get(str(lab),lab)) if world==14 else lab
 	var g = Game.new()
 	g.start(p)
 	return g
 
 func spawn(g, id: String) -> Dictionary:
-	g.boss_system.spawn(g, id)
+	g.boss_system.spawn(g, str(Campaign.config().legacy_boss_to_current.get(id,id)))
 	var e: Dictionary = g.enemies.back()
 	e.entry = 0.0
 	return e
@@ -27,6 +29,12 @@ func active_robots(g) -> Array:
 
 func _initialize() -> void:
 	var g = make_game(3)
+	# Archived Polynoidae is exercised as an isolated historical pattern fixture,
+	# never inserted into the active campaign data or progression.
+	g.world=Data.read_json("data/archive/04a/worlds.json",[])[2].duplicate(true)
+	g.world.legacy_id=3;g.world.final_boss_enabled=true;g.world.miniboss_enabled=false
+	for row in Data.read_json("data/archive/04a/bosses.json",[]):
+		if row.id=="boss_w03_polyn":g.data.bosses.append(row.duplicate(true))
 	var armored = spawn(g, "boss_w03_polyn")
 	armored.phase = 2
 	g.boss_system.step(g, 0.05)

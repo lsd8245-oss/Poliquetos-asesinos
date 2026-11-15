@@ -8,7 +8,7 @@ func _initialize():
 	for row in report.encounters:
 		var p=Shop.create_profile()
 		p.world=int(row.world)
-		p.lab_boss=int(row.group)-1 if p.world==14 else 0
+		p.lab_boss=int(row.group)-1 if p.world==12 else 0
 		for key in row.max_build.ranks:p.upgrades[key]=int(row.max_build.ranks[key])
 		if row.max_build.rov:p.equipment.rov=true
 		if row.max_build.multicorer:p.equipment.multicorer=true
@@ -41,5 +41,5 @@ func _initialize():
 		measured.append({"world":row.world,"group":row.group,"measured_continuous_seconds":active,"required":row.minimum_seconds})
 	var file=FileAccess.open("user://balance-measured.json",FileAccess.WRITE)
 	file.store_string(JSON.stringify(measured,"\t"))
-	print("BALANCE PASS: 17 actual boss simulations meet min40% for nominal maximum reachable builds; human duration not measured")
+	print("BALANCE PASS: 14 actual boss simulations meet min40% for historical nominal build bounds (05A affordability not certified); human duration not measured")
 	quit()

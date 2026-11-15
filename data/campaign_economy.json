@@ -1,0 +1,334 @@
+{
+  "status": "provisional_05c",
+  "assumptions": [
+    "Modelled subtotal: regular-enemy coin drops plus fixed encounter rewards on Normal, all regular coins collected, no deaths.",
+    "Variable bullet-to-coin conversion at final-boss and miniboss phase transitions is unquantified and excluded; all 14 historical minibosses have two phases.",
+    "Weapon-at-cap cash, replay and difficulty multipliers excluded.",
+    "Escape 1000 is score, not spendable credits.",
+    "miniboss_direct_coin_loss=0 refers only to the fixed death reward, not phase-conversion income; removed weapon reward may convert to 100 at cap.",
+    "The 4485 (16.51%) reduction compares modelled subtotals, not maximum obtainable income or total possible loss.",
+    "No numeric prices or HP changed; human balance not approved."
+  ],
+  "before": {
+    "worlds": [
+      {
+        "world": 1,
+        "act": 1,
+        "base": 300,
+        "stage_coins": 225,
+        "victory": 120.0,
+        "no_death_bonus": 60.0,
+        "later_room_coins": 0,
+        "total": 405.0,
+        "guaranteed_victory_only": 120.0
+      },
+      {
+        "world": 2,
+        "act": 1,
+        "base": 400,
+        "stage_coins": 300,
+        "victory": 160.0,
+        "no_death_bonus": 80.0,
+        "later_room_coins": 0,
+        "total": 540.0,
+        "guaranteed_victory_only": 160.0
+      },
+      {
+        "world": 3,
+        "act": 1,
+        "base": 500,
+        "stage_coins": 375,
+        "victory": 200.0,
+        "no_death_bonus": 100.0,
+        "later_room_coins": 0,
+        "total": 675.0,
+        "guaranteed_victory_only": 200.0
+      },
+      {
+        "world": 4,
+        "act": 1,
+        "base": 600,
+        "stage_coins": 450,
+        "victory": 240.0,
+        "no_death_bonus": 120.0,
+        "later_room_coins": 0,
+        "total": 810.0,
+        "guaranteed_victory_only": 240.0
+      },
+      {
+        "world": 5,
+        "act": 2,
+        "base": 700,
+        "stage_coins": 525,
+        "victory": 280.0,
+        "no_death_bonus": 140.0,
+        "later_room_coins": 0,
+        "total": 945.0,
+        "guaranteed_victory_only": 280.0
+      },
+      {
+        "world": 6,
+        "act": 2,
+        "base": 800,
+        "stage_coins": 600,
+        "victory": 320.0,
+        "no_death_bonus": 160.0,
+        "later_room_coins": 0,
+        "total": 1080.0,
+        "guaranteed_victory_only": 320.0
+      },
+      {
+        "world": 7,
+        "act": 2,
+        "base": 900,
+        "stage_coins": 675,
+        "victory": 360.0,
+        "no_death_bonus": 180.0,
+        "later_room_coins": 0,
+        "total": 1215.0,
+        "guaranteed_victory_only": 360.0
+      },
+      {
+        "world": 8,
+        "act": 2,
+        "base": 1000,
+        "stage_coins": 750,
+        "victory": 400.0,
+        "no_death_bonus": 200.0,
+        "later_room_coins": 0,
+        "total": 1350.0,
+        "guaranteed_victory_only": 400.0
+      },
+      {
+        "world": 9,
+        "act": 3,
+        "base": 1100,
+        "stage_coins": 825,
+        "victory": 440.0,
+        "no_death_bonus": 220.0,
+        "later_room_coins": 0,
+        "total": 1485.0,
+        "guaranteed_victory_only": 440.0
+      },
+      {
+        "world": 10,
+        "act": 3,
+        "base": 1200,
+        "stage_coins": 900,
+        "victory": 480.0,
+        "no_death_bonus": 240.0,
+        "later_room_coins": 0,
+        "total": 1620.0,
+        "guaranteed_victory_only": 480.0
+      },
+      {
+        "world": 11,
+        "act": 3,
+        "base": 1300,
+        "stage_coins": 975,
+        "victory": 520.0,
+        "no_death_bonus": 260.0,
+        "later_room_coins": 0,
+        "total": 1755.0,
+        "guaranteed_victory_only": 520.0
+      },
+      {
+        "world": 12,
+        "act": 3,
+        "base": 1400,
+        "stage_coins": 1050,
+        "victory": 560.0,
+        "no_death_bonus": 280.0,
+        "later_room_coins": 0,
+        "total": 1890.0,
+        "guaranteed_victory_only": 560.0
+      },
+      {
+        "world": 13,
+        "act": 3,
+        "base": 1500,
+        "stage_coins": 1125,
+        "victory": 600.0,
+        "no_death_bonus": 300.0,
+        "later_room_coins": 0,
+        "total": 2025.0,
+        "guaranteed_victory_only": 600.0
+      },
+      {
+        "world": 14,
+        "act": 4,
+        "base": 6200,
+        "stage_coins": 4650,
+        "victory": 2480.0,
+        "no_death_bonus": 1240.0,
+        "later_room_coins": 3000.0,
+        "total": 11370.0,
+        "guaranteed_victory_only": 2480.0
+      }
+    ],
+    "total": 27165.0,
+    "victory_only": 7160.0,
+    "by_act": {
+      "1": 2430.0,
+      "2": 4590.0,
+      "3": 8775.0,
+      "4": 11370.0
+    }
+  },
+  "after": {
+    "worlds": [
+      {
+        "world": 1,
+        "act": 1,
+        "base": 300,
+        "stage_coins": 225,
+        "victory": 120.0,
+        "no_death_bonus": 60.0,
+        "later_room_coins": 0,
+        "total": 405.0,
+        "guaranteed_victory_only": 120.0
+      },
+      {
+        "world": 2,
+        "act": 1,
+        "base": 400,
+        "stage_coins": 300,
+        "victory": 160.0,
+        "no_death_bonus": 80.0,
+        "later_room_coins": 0,
+        "total": 540.0,
+        "guaranteed_victory_only": 160.0
+      },
+      {
+        "world": 3,
+        "act": 1,
+        "base": 600,
+        "stage_coins": 450,
+        "victory": 240.0,
+        "no_death_bonus": 120.0,
+        "later_room_coins": 0,
+        "total": 810.0,
+        "guaranteed_victory_only": 240.0
+      },
+      {
+        "world": 4,
+        "act": 2,
+        "base": 700,
+        "stage_coins": 525,
+        "victory": 280.0,
+        "no_death_bonus": 140.0,
+        "later_room_coins": 0,
+        "total": 945.0,
+        "guaranteed_victory_only": 280.0
+      },
+      {
+        "world": 5,
+        "act": 2,
+        "base": 900,
+        "stage_coins": 675,
+        "victory": 360.0,
+        "no_death_bonus": 180.0,
+        "later_room_coins": 0,
+        "total": 1215.0,
+        "guaranteed_victory_only": 360.0
+      },
+      {
+        "world": 6,
+        "act": 2,
+        "base": 1000,
+        "stage_coins": 750,
+        "victory": 400.0,
+        "no_death_bonus": 200.0,
+        "later_room_coins": 0,
+        "total": 1350.0,
+        "guaranteed_victory_only": 400.0
+      },
+      {
+        "world": 7,
+        "act": 3,
+        "base": 1100,
+        "stage_coins": 825,
+        "victory": 440.0,
+        "no_death_bonus": 220.0,
+        "later_room_coins": 0,
+        "total": 1485.0,
+        "guaranteed_victory_only": 440.0
+      },
+      {
+        "world": 8,
+        "act": 3,
+        "base": 1200,
+        "stage_coins": 900,
+        "victory": 480.0,
+        "no_death_bonus": 240.0,
+        "later_room_coins": 0,
+        "total": 1620.0,
+        "guaranteed_victory_only": 480.0
+      },
+      {
+        "world": 9,
+        "act": 3,
+        "base": 1300,
+        "stage_coins": 975,
+        "victory": 520.0,
+        "no_death_bonus": 260.0,
+        "later_room_coins": 0,
+        "total": 1755.0,
+        "guaranteed_victory_only": 520.0
+      },
+      {
+        "world": 10,
+        "act": 3,
+        "base": 1400,
+        "stage_coins": 1050,
+        "victory": 560.0,
+        "no_death_bonus": 280.0,
+        "later_room_coins": 0,
+        "total": 1890.0,
+        "guaranteed_victory_only": 560.0
+      },
+      {
+        "world": 11,
+        "act": 3,
+        "base": 1500,
+        "stage_coins": 1125,
+        "victory": 600.0,
+        "no_death_bonus": 300.0,
+        "later_room_coins": 0,
+        "total": 2025.0,
+        "guaranteed_victory_only": 600.0
+      },
+      {
+        "world": 12,
+        "act": 4,
+        "base": 4800,
+        "stage_coins": 3600,
+        "victory": 1920.0,
+        "no_death_bonus": 960.0,
+        "later_room_coins": 2160.0,
+        "total": 8640.0,
+        "guaranteed_victory_only": 1920.0
+      }
+    ],
+    "total": 22680.0,
+    "victory_only": 6080.0,
+    "by_act": {
+      "1": 1755.0,
+      "2": 3510.0,
+      "3": 8775.0,
+      "4": 8640.0
+    }
+  },
+  "miniboss_direct_coin_loss": 0,
+  "miniboss_weapon_cap_cash_loss_upper_bound": 1400,
+  "removed_stage_loss": 1755.0,
+  "laboratory_loss": 2730.0,
+  "all_upgrade_cost": 19850,
+  "all_equipment_cost": 10600,
+  "first_world": {
+    "victory_only": 120.0,
+    "full_collection_no_death": 405.0,
+    "cheapest_upgrade": 150,
+    "no_coin_collection_no_death": 180.0
+  }
+}

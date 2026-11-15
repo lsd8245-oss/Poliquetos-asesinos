@@ -5,238 +5,318 @@
     {
       "t": 10.0,
       "tipo": "oleada",
-      "enemigo": "pontod",
-      "cantidad": 8,
+      "enemigo": "hesiocaeca",
+      "cantidad": 9,
       "formacion": "linea_vertical",
       "y": 60,
       "portadora": true,
       "separacion_px": 32,
       "separacion_seg": 0.3,
-      "item": "rojo"
+      "item": "rojo",
+      "legacy_index": 0
     },
     {
-      "t": 19.875,
+      "t": 20.1599,
       "tipo": "oleada",
-      "enemigo": "lopado",
-      "cantidad": 8,
+      "enemigo": "nautil",
+      "cantidad": 9,
       "formacion": "linea_horizontal",
       "y": 110,
       "portadora": false,
       "separacion_px": 32,
-      "separacion_seg": 0.3
+      "separacion_seg": 0.3,
+      "legacy_index": 1
     },
     {
       "t": 25,
       "tipo": "peligro",
-      "id": "medusas",
+      "id": "costillas",
       "duracion_seg": 10,
-      "y": 280
+      "y": 280,
+      "legacy_index": 2
     },
     {
-      "t": 29.75,
+      "t": 30.3197,
       "tipo": "oleada",
-      "enemigo": "typhlo",
-      "cantidad": 7,
+      "enemigo": "chryso",
+      "cantidad": 10,
       "formacion": "v",
       "y": 168,
       "portadora": false,
       "separacion_px": 32,
-      "separacion_seg": 0.3
+      "separacion_seg": 0.3,
+      "legacy_index": 3
     },
     {
-      "t": 39.625,
+      "t": 40.4796,
       "tipo": "oleada",
-      "enemigo": "poeo",
-      "cantidad": 8,
+      "enemigo": "brada",
+      "cantidad": 10,
       "formacion": "v_invertida",
       "y": 220,
+      "portadora": false,
+      "separacion_px": 32,
+      "separacion_seg": 0.3,
+      "legacy_index": 4
+    },
+    {
+      "t": 50.6394,
+      "tipo": "oleada",
+      "enemigo": "bathykurila",
+      "cantidad": 10,
+      "formacion": "zigzag",
+      "y": 276,
       "portadora": true,
       "separacion_px": 32,
       "separacion_seg": 0.3,
-      "item": "verde"
-    },
-    {
-      "t": 49.5,
-      "tipo": "oleada",
-      "enemigo": "iospil",
-      "cantidad": 8,
-      "formacion": "zigzag",
-      "y": 276,
-      "portadora": false,
-      "separacion_px": 32,
-      "separacion_seg": 0.3
+      "item": "verde",
+      "legacy_index": 5
     },
     {
       "t": 54.0,
       "tipo": "escudo",
       "item": "amarillo",
-      "y": 168
+      "y": 168,
+      "legacy_index": 6
     },
     {
-      "t": 60.0,
+      "t": 60.7993,
       "tipo": "oleada",
-      "enemigo": "syll_stolon",
-      "cantidad": 13,
+      "enemigo": "cirrat",
+      "cantidad": 16,
       "formacion": "circulo",
       "y": 60,
       "portadora": false,
       "separacion_px": 32,
-      "separacion_seg": 0.3
+      "separacion_seg": 0.3,
+      "legacy_index": 7
     },
     {
-      "t": 69.25,
+      "t": 70.9591,
       "tipo": "oleada",
-      "enemigo": "alciop",
-      "cantidad": 7,
+      "enemigo": "ophryotrocha",
+      "cantidad": 8,
       "formacion": "doble_columna",
       "y": 110,
-      "portadora": true,
+      "portadora": false,
       "separacion_px": 32,
       "separacion_seg": 0.3,
-      "item": "azul"
+      "legacy_index": 8
     },
     {
-      "t": 79.125,
+      "t": 81.119,
       "tipo": "oleada",
-      "enemigo": "alciop",
-      "cantidad": 6,
+      "enemigo": "ophryotrocha",
+      "cantidad": 8,
       "formacion": "ambos_lados",
       "y": 168,
       "portadora": false,
       "separacion_px": 32,
-      "separacion_seg": 0.3
+      "separacion_seg": 0.3,
+      "legacy_index": 9
     },
     {
-      "t": 90.0,
-      "tipo": "minijefe",
-      "id": "mini_w09_lopado",
-      "escoltas": {
-        "enemigo": "lopado",
-        "cantidad": 2,
-        "vida": 16,
-        "tamano": [
-          40,
-          32
-        ]
-      }
-    },
-    {
-      "t": 150.0,
+      "t": 91.2789,
       "tipo": "oleada",
-      "enemigo": "syll_stolon",
-      "cantidad": 20,
+      "enemigo": "hesiocaeca",
+      "cantidad": 8,
       "formacion": "v_invertida",
       "y": 60,
+      "portadora": true,
+      "separacion_px": 32,
+      "separacion_seg": 0.3,
+      "item": "azul",
+      "legacy_index": 11
+    },
+    {
+      "t": 101.4387,
+      "tipo": "oleada",
+      "enemigo": "hesiocaeca",
+      "cantidad": 7,
+      "formacion": "zigzag",
+      "y": 110,
       "portadora": false,
       "separacion_px": 32,
-      "separacion_seg": 0.3
+      "separacion_seg": 0.3,
+      "legacy_index": 13
+    },
+    {
+      "t": 111.5986,
+      "tipo": "oleada",
+      "enemigo": "bathykurila",
+      "cantidad": 7,
+      "formacion": "circulo",
+      "y": 168,
+      "portadora": false,
+      "separacion_px": 32,
+      "separacion_seg": 0.3,
+      "legacy_index": 15
+    },
+    {
+      "t": 121.7584,
+      "tipo": "oleada",
+      "enemigo": "bathykurila",
+      "cantidad": 7,
+      "formacion": "doble_columna",
+      "y": 220,
+      "portadora": false,
+      "separacion_px": 32,
+      "separacion_seg": 0.3,
+      "legacy_index": 16
+    },
+    {
+      "t": 131.9183,
+      "tipo": "oleada",
+      "enemigo": "cirrat",
+      "cantidad": 12,
+      "formacion": "ambos_lados",
+      "y": 276,
+      "portadora": false,
+      "separacion_px": 32,
+      "separacion_seg": 0.3,
+      "legacy_index": 17
+    },
+    {
+      "t": 142.0781,
+      "tipo": "oleada",
+      "enemigo": "cirrat",
+      "cantidad": 12,
+      "formacion": "diagonal",
+      "y": 60,
+      "portadora": true,
+      "separacion_px": 32,
+      "separacion_seg": 0.3,
+      "item": "rojo",
+      "legacy_index": 18
+    },
+    {
+      "t": 152.238,
+      "tipo": "oleada",
+      "enemigo": "brada",
+      "cantidad": 7,
+      "formacion": "linea_vertical",
+      "y": 110,
+      "portadora": false,
+      "separacion_px": 32,
+      "separacion_seg": 0.3,
+      "legacy_index": 19
     },
     {
       "t": 155.0,
       "tipo": "escudo",
       "item": "amarillo",
-      "y": 168
-    },
-    {
-      "t": 159.875,
-      "tipo": "oleada",
-      "enemigo": "typhlo",
-      "cantidad": 12,
-      "formacion": "zigzag",
-      "y": 110,
-      "portadora": true,
-      "separacion_px": 32,
-      "separacion_seg": 0.3,
-      "item": "rojo"
+      "y": 168,
+      "legacy_index": 12
     },
     {
       "t": 160.0,
       "tipo": "peligro",
-      "id": "medusas",
+      "id": "costillas",
       "duracion_seg": 10,
-      "y": 280
+      "y": 280,
+      "legacy_index": 14
     },
     {
-      "t": 169.75,
+      "t": 162.3979,
       "tipo": "oleada",
-      "enemigo": "poeo",
-      "cantidad": 11,
-      "formacion": "circulo",
+      "enemigo": "brada",
+      "cantidad": 7,
+      "formacion": "linea_horizontal",
       "y": 168,
       "portadora": false,
       "separacion_px": 32,
-      "separacion_seg": 0.3
+      "separacion_seg": 0.3,
+      "legacy_index": 20
     },
     {
-      "t": 179.625,
+      "t": 172.5577,
       "tipo": "oleada",
-      "enemigo": "alciop",
-      "cantidad": 10,
-      "formacion": "doble_columna",
+      "enemigo": "nautil",
+      "cantidad": 8,
+      "formacion": "v",
       "y": 220,
       "portadora": false,
       "separacion_px": 32,
-      "separacion_seg": 0.3
+      "separacion_seg": 0.3,
+      "legacy_index": 21
     },
     {
-      "t": 189.5,
+      "t": 182.7176,
       "tipo": "oleada",
-      "enemigo": "alciop",
-      "cantidad": 9,
-      "formacion": "ambos_lados",
+      "enemigo": "nautil",
+      "cantidad": 7,
+      "formacion": "v_invertida",
       "y": 276,
       "portadora": true,
       "separacion_px": 32,
       "separacion_seg": 0.3,
-      "item": "verde"
+      "item": "verde",
+      "legacy_index": 22
     },
     {
-      "t": 199.375,
+      "t": 192.8774,
       "tipo": "oleada",
-      "enemigo": "lopado",
+      "enemigo": "ophryotrocha",
       "cantidad": 12,
-      "formacion": "diagonal",
+      "formacion": "zigzag",
       "y": 60,
       "portadora": false,
       "separacion_px": 32,
-      "separacion_seg": 0.3
+      "separacion_seg": 0.3,
+      "legacy_index": 23
     },
     {
-      "t": 209.25,
+      "t": 203.0373,
       "tipo": "oleada",
-      "enemigo": "pontod",
+      "enemigo": "ophryotrocha",
       "cantidad": 12,
-      "formacion": "linea_vertical",
+      "formacion": "circulo",
       "y": 110,
       "portadora": false,
       "separacion_px": 32,
-      "separacion_seg": 0.3
+      "separacion_seg": 0.3,
+      "legacy_index": 24
     },
     {
-      "t": 219.125,
+      "t": 213.1971,
       "tipo": "oleada",
-      "enemigo": "iospil",
-      "cantidad": 11,
-      "formacion": "linea_horizontal",
+      "enemigo": "chryso",
+      "cantidad": 7,
+      "formacion": "doble_columna",
       "y": 168,
+      "portadora": false,
+      "separacion_px": 32,
+      "separacion_seg": 0.3,
+      "legacy_index": 25
+    },
+    {
+      "t": 223.357,
+      "tipo": "oleada",
+      "enemigo": "chryso",
+      "cantidad": 7,
+      "formacion": "ambos_lados",
+      "y": 220,
       "portadora": true,
       "separacion_px": 32,
       "separacion_seg": 0.3,
-      "item": "azul"
+      "item": "azul",
+      "legacy_index": 26
     },
     {
       "t": 228,
       "tipo": "escudo",
       "item": "amarillo",
-      "y": 168
+      "y": 168,
+      "legacy_index": 27
     },
     {
       "t": 230,
       "tipo": "alerta_jefe",
-      "id": "boss_w09_tomo",
+      "id": "boss_w09_osedax",
       "jefes": [
-        "boss_w09_tomo"
-      ]
+        "boss_w09_osedax"
+      ],
+      "legacy_index": 28
     }
   ]
 }

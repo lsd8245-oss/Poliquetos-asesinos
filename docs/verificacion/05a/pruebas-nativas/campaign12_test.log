@@ -1,0 +1,28 @@
+Godot Engine v4.6.3.stable.official.7d41c59c4 - https://godotengine.org
+
+CAMPAIGN12 running test_contract
+CAMPAIGN12 running test_no_minis_and_victory_guards
+CAMPAIGN12 running test_pending_and_identity
+CAMPAIGN12 running test_legacy_stats
+CAMPAIGN12 running test_lab_pool
+CAMPAIGN12 running test_combat_victory
+COMBAT world1 room0 258.47s state=results
+CAMPAIGN12 running test_lab_progression_and_rewards
+COMBAT world12 room1 501.13s state=results
+COMBAT world12 room1 501.13s state=results
+COMBAT world12 room2 324.27s state=results
+COMBAT world12 room2 324.27s state=results
+COMBAT world12 room3 463.53s state=results
+COMBAT world12 room3 463.53s state=results
+CAMPAIGN12 running test_skins_and_escape
+COMBAT world3 room0 146.00s state=results
+COMBAT world4 room0 156.73s state=results
+COMBAT world6 room0 278.30s state=results
+COMBAT world7 room0 238.87s state=results
+COMBAT world10 room0 309.33s state=results
+COMBAT world1 room0 82.77s state=results
+COMBAT world1 room0 82.77s state=results
+COMBAT world1 room0 82.77s state=results
+COMBAT world1 room0 82.77s state=results
+COMBAT world1 room0 82.77s state=results
+CAMPAIGN12 PASS: 387 checks;12worlds/zero minis, mandatory collision victories, legacy stats/UIDs, lab3/escape13, idempotent rewards

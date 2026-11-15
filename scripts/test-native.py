@@ -27,7 +27,9 @@ def main():
     run('schemas',[sys.executable,'scripts/validate-v2-data.py','--self-test'])
     for path in sorted((ROOT/'native-tests').glob('*test.gd')):
         if path.name in ('performance_test.gd','visual_test.gd'):continue
-        run(path.stem,['godot','--headless','--path',str(ROOT),'--script',str(path)],expected='0 failures' if path.stem=='shop_save_test' else 'pass')
+        # The full campaign now defeats all final bosses with production
+        # projectiles instead of artificial boss damage; allow its real CPU cost.
+        run(path.stem,['godot','--headless','--path',str(ROOT),'--script',str(path)],timeout=300 if path.stem=='campaign_flow_test' else 90,expected='0 failures' if path.stem=='shop_save_test' else 'pass')
     run('normal-start',['godot','--headless','--path',str(ROOT),'--','--verify-export'],expected='EXPORT_VERIFY_PASS')
     run('pruebas-start',['godot','--headless','--path',str(ROOT),'--','--pruebas','--verify-export'],expected='EXPORT_VERIFY_PASS')
     for edition in ('normal','pruebas'):

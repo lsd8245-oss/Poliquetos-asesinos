@@ -19,7 +19,7 @@ class CampaignDataTests(unittest.TestCase):
         spec.loader.exec_module(validator)
         for kind in ['worlds','enemies','bosses','combat','escape']:
             validator.validate(kind,read(kind+'.json'))
-        for n in range(1,15): validator.validate('waves',read(f'waves/world_{n:02}.json'))
+        for n in range(1,13): validator.validate('waves',read(f'waves/world_{n:02}.json'))
         bad = read('combat.json')
         bad['shot'][0]['damage'] = -1
         with self.assertRaises(Exception): validator.validate('combat',bad)
@@ -29,53 +29,64 @@ class CampaignDataTests(unittest.TestCase):
 
     def test_tables_and_bosses(self):
         worlds = read('worlds.json')
-        self.assertEqual([w['enemigos_total'] for w in worlds], [90,125,135,135,135,150,150,162,162,200,200,245,285,250])
-        self.assertEqual([w['duracion_hasta_jefe_seg'] for w in worlds], [180]*4+[210]*4+[240]*4+[270,330])
+        self.assertEqual([w['enemigos_total'] for w in worlds], [90,125,135,135,150,162,162,200,200,245,285,250])
+        self.assertEqual([w['duracion_hasta_jefe_seg'] for w in worlds], [180]*3+[210]*3+[240]*4+[270,330])
         bosses = {b['id']: b for b in read('bosses.json')}
-        hp = [1750,2100,2450,3300,3700,4100,5150,6300,6100,6550,7000,7500,9950,35750]
-        minis = [975,1170,1365,1560,1755,1950,2145,2340,2535,2730,2925,3120,3315,3510]
-        for w, expected, mini in zip(worlds,hp,minis):
-            self.assertEqual(sum(bosses[k].get('vida_base',bosses[k]['vida']) for k in w['jefes']), expected)
-            self.assertEqual(bosses[w['minijefe']]['vida'], mini)
-            self.assertTrue(all(bosses[k]['vida']>=bosses[k].get('vida_base',bosses[k]['vida']) for k in w['jefes']))
-            for key in w['jefes']:
-                b = bosses[key]
-                self.assertEqual(b['fases'][0]['desde_pct'],100)
-                self.assertEqual(b['fases'][-1]['hasta_pct'],0)
-                self.assertGreaterEqual(b['minimo_seg'], .4*b['objetivo_seg'])
-                for a,z in zip(b['fases'],b['fases'][1:]): self.assertEqual(a['hasta_pct'],z['desde_pct'])
-        self.assertEqual(len(worlds[-1]['sectores_jefes']),4)
-        self.assertEqual([len(g['jefes']) for g in worlds[-1]['sectores_jefes']], [3,1,1,1])
+        archive = {b['id']: b for b in read('archive/04a/bosses.json')}
+        mapping = read('campaign.json')['legacy_boss_to_current']
+        self.assertEqual(set(bosses), set(mapping.values()))
+        for old, current in mapping.items():
+            b, original = bosses[current], archive[old]
+            self.assertEqual(b['vida'], original['vida'])
+            self.assertEqual(b['fases'], original['fases'])
+            self.assertEqual(b['segmentos'], original['segmentos'])
+            self.assertEqual(b['fases'][0]['desde_pct'],100)
+            self.assertEqual(b['fases'][-1]['hasta_pct'],0)
+            self.assertGreaterEqual(b['minimo_seg'], .4*b['objetivo_seg'])
+            for first, second in zip(b['fases'],b['fases'][1:]):
+                self.assertEqual(first['hasta_pct'],second['desde_pct'])
+        for w in worlds:
+            self.assertFalse(w['miniboss_enabled'])
+            self.assertTrue(w['final_boss_enabled'])
+            self.assertNotIn('minijefe', w)
+        self.assertEqual(len(worlds[-1]['sectores_jefes']),3)
+        self.assertEqual([len(g['jefes']) for g in worlds[-1]['sectores_jefes']], [3,1,1])
 
     def test_exact_waves_carriers_composition_and_timings(self):
         enemies = {e['id']: e for e in read('enemies.json')}
+        source_worlds = {w['id']: w for w in read('archive/04a/worlds.json')}
         for w in read('worlds.json'):
+            original = source_worlds[w['legacy_id']]
             events = read(f"waves/world_{w['id']:02}.json")['eventos']
+            source = read(f"archive/04a/waves/world_{w['legacy_id']:02}.json")['eventos']
             waves = [e for e in events if e['tipo']=='oleada']
             self.assertEqual(sum(e['cantidad'] for e in waves),w['enemigos_total'])
-            self.assertEqual(sum(e['cantidad'] for e in waves if e['t']<w['minijefe_inicio_seg']), round(w['enemigos_total']*.4))
             self.assertEqual(Counter(e['item'] for e in waves if e.get('portadora')),Counter(rojo=2,verde=2,azul=2))
             self.assertEqual(len([e for e in events if e['tipo']=='escudo']),3)
+            self.assertFalse(any(e['tipo']=='minijefe' for e in events))
+            self.assertEqual(len({e['legacy_index'] for e in events}), len(events))
+            self.assertEqual([e['t'] for e in events], sorted(e['t'] for e in events))
             counts = Counter()
             for e in waves:
-                self.assertTrue(e['t'] < w['minijefe_inicio_seg'] or e['t']>=w['minijefe_inicio_seg']+60)
                 self.assertLess(e['t'],w['alerta_jefe_seg'])
                 self.assertGreaterEqual(e['t'],10)
                 self.assertGreaterEqual(e['cantidad'],4)
                 self.assertLessEqual(e['cantidad'],20 if enemies[e['enemigo']]['categoria']=='enjambre' else 12)
-                if e['enemigo'] in w['recurrentes']: self.assertGreaterEqual(e['t'],w['duracion_hasta_jefe_seg']*.25)
+                self.assertTrue(enemies[e['enemigo']]['mundos'][str(w['id'])]['runtime_ready'])
+                old = source[e['legacy_index']]
+                self.assertEqual({k:v for k,v in e.items() if k not in ('t','legacy_index')},
+                                 {k:v for k,v in old.items() if k!='t'})
                 counts[e['enemigo']] += e['cantidad']
-            if w['id'] !=14:
-                self.assertLessEqual(abs(sum(counts[e] for e in w['unicos'])-w['enemigos_total']*.6),.5)
-                self.assertLessEqual(max(counts[e] for e in w['unicos'])-min(counts[e] for e in w['unicos']),1)
-                self.assertLessEqual(max(counts[e] for e in w['recurrentes'])-min(counts[e] for e in w['recurrentes']),1)
+            if w['id'] !=12:
+                self.assertLessEqual(abs(sum(counts[e] for e in original['unicos'])-w['enemigos_total']*.6),.5)
+                self.assertLessEqual(max(counts[e] for e in original['unicos'])-min(counts[e] for e in original['unicos']),1)
+                self.assertLessEqual(max(counts[e] for e in original['recurrentes'])-min(counts[e] for e in original['recurrentes']),1)
             else:
-                self.assertEqual(sum(counts[e] for e in w['unicos']),140)
-                self.assertEqual(sum(counts[e] for e in w['recurrentes']),110)
-            self.assertTrue(all(any(e['enemigo']==k and e['t']<w['minijefe_inicio_seg'] for e in waves) for k in w['unicos']))
-            mini = next(e for e in events if e['tipo']=='minijefe')
-            self.assertEqual(mini['t'],w['minijefe_inicio_seg'])
-            self.assertEqual(mini['escoltas']['cantidad'],2)
+                self.assertEqual(sum(counts[e] for e in original['unicos']),140)
+                self.assertEqual(sum(counts[e] for e in original['recurrentes']),110)
+            self.assertTrue(all(counts[k]>0 for k in original['unicos']))
+            self.assertLess(max(b['t']-a['t'] for a,b in zip(waves,waves[1:])),60)
+            self.assertTrue(any(original['minijefe_inicio_seg']<=e['t']<original['minijefe_inicio_seg']+60 for e in waves))
             self.assertEqual(next(e for e in events if e['tipo']=='alerta_jefe')['t'],w['alerta_jefe_seg'])
 
     def test_escape_and_seeded_lab(self):

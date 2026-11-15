@@ -8,7 +8,7 @@
       "id": {
         "type": "integer",
         "minimum": 1,
-        "maximum": 15
+        "maximum": 12
       },
       "nombre": {
         "type": "string",
@@ -26,14 +26,6 @@
       "enemigos_total": {
         "type": "integer",
         "minimum": 1
-      },
-      "minijefe_inicio_seg": {
-        "type": "number",
-        "minimum": 0
-      },
-      "minijefe_ventana_seg": {
-        "type": "number",
-        "exclusiveMinimum": 0
       },
       "alerta_jefe_seg": {
         "type": "number",
@@ -71,10 +63,6 @@
         },
         "minItems": 0
       },
-      "minijefe": {
-        "type": "string",
-        "pattern": "^[a-z][a-z0-9_]*$"
-      },
       "jefes": {
         "type": "array",
         "items": {
@@ -98,14 +86,6 @@
           "pattern": "^[a-z][a-z0-9_]*$"
         },
         "uniqueItems": true
-      },
-      "mini_tipo": {
-        "type": "string",
-        "pattern": "^[a-z][a-z0-9_]*$"
-      },
-      "vida_minijefe": {
-        "type": "number",
-        "minimum": 0
       },
       "jefe_objetivo_seg": {
         "type": "number",
@@ -135,7 +115,7 @@
             "id": {
               "type": "integer",
               "minimum": 1,
-              "maximum": 4
+              "maximum": 3
             },
             "jefes": {
               "type": "array",
@@ -166,6 +146,17 @@
           ],
           "additionalProperties": false
         }
+      },
+      "legacy_id": {
+        "type": "integer",
+        "minimum": 1,
+        "maximum": 14
+      },
+      "miniboss_enabled": {
+        "const": false
+      },
+      "final_boss_enabled": {
+        "const": true
       }
     },
     "required": [
@@ -174,8 +165,6 @@
       "acto",
       "duracion_hasta_jefe_seg",
       "enemigos_total",
-      "minijefe_inicio_seg",
-      "minijefe_ventana_seg",
       "alerta_jefe_seg",
       "paleta",
       "scroll_px_s",
@@ -183,12 +172,16 @@
       "musica_etapa",
       "musica_jefe",
       "peligros",
-      "minijefe",
-      "jefes"
+      "jefes",
+      "legacy_id",
+      "miniboss_enabled",
+      "final_boss_enabled",
+      "unicos",
+      "recurrentes"
     ],
     "additionalProperties": false
   },
-  "minItems": 1,
+  "minItems": 12,
   "examples": [
     [
       {
@@ -197,8 +190,6 @@
         "acto": 1,
         "duracion_hasta_jefe_seg": 180,
         "enemigos_total": 90,
-        "minijefe_inicio_seg": 60,
-        "minijefe_ventana_seg": 60,
         "alerta_jefe_seg": 170,
         "paleta": [
           "#7fd8f0",
@@ -213,11 +204,634 @@
           "boyas",
           "cascos"
         ],
-        "minijefe": "mini_w01_pisionidae",
+        "unicos": [
+          "hydroides",
+          "euphrosine",
+          "fabric",
+          "pision",
+          "lacy",
+          "sabellaria",
+          "eulalia"
+        ],
+        "recurrentes": [
+          "syll",
+          "phyll",
+          "spio"
+        ],
+        "jefe_objetivo_seg": 90,
+        "base_monedas": 300,
         "jefes": [
-          "boss_w01_nereididae"
-        ]
+          "boss_w01_nereis"
+        ],
+        "sectores_jefes": [],
+        "legacy_id": 1,
+        "miniboss_enabled": false,
+        "final_boss_enabled": true
+      },
+      {
+        "id": 2,
+        "nombre": "Playas arenosas",
+        "acto": 1,
+        "duracion_hasta_jefe_seg": 180,
+        "enemigos_total": 125,
+        "alerta_jefe_seg": 170,
+        "paleta": [
+          "#efd480",
+          "#39c7c3",
+          "#fff5bd"
+        ],
+        "scroll_px_s": 60,
+        "cancion_jefe": "Capitélido del Arenal",
+        "musica_etapa": "w02_level_instr",
+        "musica_jefe": "w02_boss_vocal",
+        "peligros": [
+          "conchas",
+          "rocas"
+        ],
+        "unicos": [
+          "arenicola",
+          "magelona",
+          "sthenelais",
+          "sacco",
+          "goniada",
+          "pectinaria",
+          "diopatra"
+        ],
+        "recurrentes": [
+          "spio",
+          "nepht",
+          "glycer",
+          "pision"
+        ],
+        "jefe_objetivo_seg": 90,
+        "base_monedas": 400,
+        "jefes": [
+          "boss_w02_capit"
+        ],
+        "sectores_jefes": [],
+        "legacy_id": 2,
+        "miniboss_enabled": false,
+        "final_boss_enabled": true
+      },
+      {
+        "id": 3,
+        "nombre": "Bosques de kelp",
+        "acto": 1,
+        "duracion_hasta_jefe_seg": 180,
+        "enemigos_total": 135,
+        "alerta_jefe_seg": 170,
+        "paleta": [
+          "#225f39",
+          "#74973b",
+          "#dfaa47"
+        ],
+        "scroll_px_s": 60,
+        "cancion_jefe": "Reina de los Tentáculos",
+        "musica_etapa": "w04_level_instr",
+        "musica_jefe": "w04_boss_vocal",
+        "peligros": [
+          "kelp"
+        ],
+        "unicos": [
+          "spirorbis",
+          "myxicola",
+          "spinther",
+          "trocho",
+          "cteno",
+          "dodeca",
+          "spha"
+        ],
+        "recurrentes": [
+          "syll",
+          "phyll",
+          "cirrat",
+          "hesio"
+        ],
+        "jefe_objetivo_seg": 105,
+        "base_monedas": 600,
+        "jefes": [
+          "boss_w03_tere"
+        ],
+        "sectores_jefes": [],
+        "legacy_id": 4,
+        "miniboss_enabled": false,
+        "final_boss_enabled": true
+      },
+      {
+        "id": 4,
+        "nombre": "Arrecifes tropicales",
+        "acto": 2,
+        "duracion_hasta_jefe_seg": 210,
+        "enemigos_total": 135,
+        "alerta_jefe_seg": 200,
+        "paleta": [
+          "#dc429d",
+          "#f17b36",
+          "#225abc"
+        ],
+        "scroll_px_s": 60,
+        "cancion_jefe": "Gusano de Fuego",
+        "musica_etapa": "w05_level_instr",
+        "musica_jefe": "w05_boss_vocal",
+        "peligros": [
+          "corales"
+        ],
+        "unicos": [
+          "spirobranchus",
+          "sabellastarte",
+          "eulepeth",
+          "acoet",
+          "pholoe",
+          "oenone",
+          "chaetopterus"
+        ],
+        "recurrentes": [
+          "syll",
+          "phyll",
+          "hesio",
+          "serp"
+        ],
+        "jefe_objetivo_seg": 105,
+        "base_monedas": 700,
+        "jefes": [
+          "boss_w04_hermo"
+        ],
+        "sectores_jefes": [],
+        "legacy_id": 5,
+        "miniboss_enabled": false,
+        "final_boss_enabled": true
+      },
+      {
+        "id": 5,
+        "nombre": "Estuarios y fango",
+        "acto": 2,
+        "duracion_hasta_jefe_seg": 210,
+        "enemigos_total": 150,
+        "alerta_jefe_seg": 200,
+        "paleta": [
+          "#72573d",
+          "#6c7140",
+          "#ad884d"
+        ],
+        "scroll_px_s": 60,
+        "cancion_jefe": "Orbiniidae, sal de ahí",
+        "musica_etapa": "w07_level_instr",
+        "musica_jefe": "w07_boss_vocal",
+        "peligros": [
+          "raices"
+        ],
+        "unicos": [
+          "aricidea",
+          "terebellides",
+          "questa",
+          "fauvel",
+          "protod",
+          "arabella",
+          "hediste_diversicolor"
+        ],
+        "recurrentes": [
+          "spio",
+          "nepht",
+          "glycer",
+          "magelona"
+        ],
+        "jefe_objetivo_seg": 120,
+        "base_monedas": 900,
+        "jefes": [
+          "boss_w05_orbin"
+        ],
+        "sectores_jefes": [],
+        "legacy_id": 7,
+        "miniboss_enabled": false,
+        "final_boss_enabled": true
+      },
+      {
+        "id": 6,
+        "nombre": "Sedimentos contaminados",
+        "acto": 2,
+        "duracion_hasta_jefe_seg": 210,
+        "enemigos_total": 162,
+        "alerta_jefe_seg": 200,
+        "paleta": [
+          "#80a52e",
+          "#703f91",
+          "#223c2e"
+        ],
+        "scroll_px_s": 60,
+        "cancion_jefe": "Zona muerta",
+        "musica_etapa": "w08_level_instr",
+        "musica_jefe": "w08_boss_vocal",
+        "peligros": [
+          "barriles",
+          "petroleo"
+        ],
+        "unicos": [
+          "ophelia",
+          "cossura",
+          "pilarg",
+          "lumbrineris",
+          "owenia",
+          "capitella_capitata",
+          "polydora_ciliata"
+        ],
+        "recurrentes": [
+          "glycer",
+          "dorville",
+          "spio"
+        ],
+        "jefe_objetivo_seg": 135,
+        "base_monedas": 1000,
+        "jefes": [
+          "boss_w06_pollution_capit",
+          "boss_w06_pollution_spio",
+          "boss_w06_pollution_cirrat"
+        ],
+        "sectores_jefes": [],
+        "legacy_id": 8,
+        "miniboss_enabled": false,
+        "final_boss_enabled": true
+      },
+      {
+        "id": 7,
+        "nombre": "Zona planctónica",
+        "acto": 3,
+        "duracion_hasta_jefe_seg": 240,
+        "enemigos_total": 162,
+        "alerta_jefe_seg": 230,
+        "paleta": [
+          "#10285a",
+          "#39d9e3",
+          "#63ef9c"
+        ],
+        "scroll_px_s": 60,
+        "cancion_jefe": "en_proceso",
+        "musica_etapa": "w09_level_instr",
+        "musica_jefe": "w09_boss_vocal",
+        "peligros": [
+          "medusas"
+        ],
+        "unicos": [
+          "pontod",
+          "lopado",
+          "typhlo",
+          "poeo",
+          "iospil",
+          "vanadis_antarctica",
+          "pelagobia_longicirrata"
+        ],
+        "recurrentes": [
+          "syll_stolon",
+          "alciop",
+          "swima"
+        ],
+        "jefe_objetivo_seg": 120,
+        "base_monedas": 1100,
+        "jefes": [
+          "boss_w07_tomo"
+        ],
+        "sectores_jefes": [],
+        "legacy_id": 9,
+        "miniboss_enabled": false,
+        "final_boss_enabled": true
+      },
+      {
+        "id": 8,
+        "nombre": "Zona antártica",
+        "acto": 3,
+        "duracion_hasta_jefe_seg": 240,
+        "enemigos_total": 200,
+        "alerta_jefe_seg": 230,
+        "paleta": [
+          "#f0fbff",
+          "#77b7db",
+          "#586ed9"
+        ],
+        "scroll_px_s": 60,
+        "cancion_jefe": "en_proceso",
+        "musica_etapa": "w10_level_instr",
+        "musica_jefe": "w10_boss_vocal",
+        "peligros": [
+          "icebergs",
+          "granizo"
+        ],
+        "unicos": [
+          "flabegraviera",
+          "aphelochaeta",
+          "mald",
+          "perkinsiana",
+          "amphar",
+          "laetmonice_producta",
+          "austrolaenilla_antarctica"
+        ],
+        "recurrentes": [
+          "spio",
+          "serp",
+          "alciop",
+          "aphro"
+        ],
+        "jefe_objetivo_seg": 120,
+        "base_monedas": 1200,
+        "jefes": [
+          "boss_w08_eulagisca"
+        ],
+        "sectores_jefes": [],
+        "legacy_id": 10,
+        "miniboss_enabled": false,
+        "final_boss_enabled": true
+      },
+      {
+        "id": 9,
+        "nombre": "Restos de ballena",
+        "acto": 3,
+        "duracion_hasta_jefe_seg": 240,
+        "enemigos_total": 200,
+        "alerta_jefe_seg": 230,
+        "paleta": [
+          "#a7a59d",
+          "#a3493b",
+          "#e6c58c"
+        ],
+        "scroll_px_s": 60,
+        "cancion_jefe": "Osedax",
+        "musica_etapa": "w11_level_instr",
+        "musica_jefe": "w11_boss_vocal",
+        "peligros": [
+          "costillas"
+        ],
+        "unicos": [
+          "hesiocaeca",
+          "nautil",
+          "chryso",
+          "brada",
+          "bathykurila",
+          "glycera",
+          "neanthes_visicete"
+        ],
+        "recurrentes": [
+          "cirrat",
+          "ophryotrocha",
+          "spha"
+        ],
+        "jefe_objetivo_seg": 120,
+        "base_monedas": 1300,
+        "jefes": [
+          "boss_w09_osedax"
+        ],
+        "sectores_jefes": [],
+        "legacy_id": 11,
+        "miniboss_enabled": false,
+        "final_boss_enabled": true
+      },
+      {
+        "id": 10,
+        "nombre": "Campos hidrotermales",
+        "acto": 3,
+        "duracion_hasta_jefe_seg": 240,
+        "enemigos_total": 245,
+        "alerta_jefe_seg": 230,
+        "paleta": [
+          "#15141c",
+          "#dd3a27",
+          "#f09236"
+        ],
+        "scroll_px_s": 60,
+        "cancion_jefe": "en_proceso",
+        "musica_etapa": "w12_level_instr",
+        "musica_jefe": "w12_boss_vocal",
+        "peligros": [
+          "geiseres",
+          "lava"
+        ],
+        "unicos": [
+          "riftia",
+          "paralvinella",
+          "branchinotogluma",
+          "amphisamytha",
+          "hesiolyra",
+          "branchipolynoe",
+          "thermopolynoe"
+        ],
+        "recurrentes": [
+          "serp",
+          "cirrat",
+          "dorville",
+          "ophryotrocha"
+        ],
+        "jefe_objetivo_seg": 120,
+        "base_monedas": 1400,
+        "jefes": [
+          "boss_w10_alvinella"
+        ],
+        "sectores_jefes": [],
+        "legacy_id": 12,
+        "miniboss_enabled": false,
+        "final_boss_enabled": true
+      },
+      {
+        "id": 11,
+        "nombre": "Zona hadal",
+        "acto": 3,
+        "duracion_hasta_jefe_seg": 270,
+        "enemigos_total": 285,
+        "alerta_jefe_seg": 260,
+        "paleta": [
+          "#0e0b1d",
+          "#795fa1",
+          "#68adb8"
+        ],
+        "scroll_px_s": 60,
+        "cancion_jefe": "en_proceso",
+        "musica_etapa": "w13_level_instr",
+        "musica_jefe": "w13_boss_vocal",
+        "peligros": [],
+        "unicos": [
+          "swima",
+          "aphro",
+          "scali",
+          "stern",
+          "macellicephaloides",
+          "macellicephala_tricornis",
+          "bathykermadeca_hadalis"
+        ],
+        "recurrentes": [
+          "nepht",
+          "glycer",
+          "dorville",
+          "alciop",
+          "cirrat",
+          "bathykurila"
+        ],
+        "jefe_objetivo_seg": 150,
+        "base_monedas": 1500,
+        "jefes": [
+          "boss_w11_hadalsovereign",
+          "boss_w11_riftia"
+        ],
+        "sectores_jefes": [],
+        "legacy_id": 13,
+        "miniboss_enabled": false,
+        "final_boss_enabled": true
+      },
+      {
+        "id": 12,
+        "nombre": "El laboratorio",
+        "acto": 4,
+        "duracion_hasta_jefe_seg": 330,
+        "enemigos_total": 250,
+        "alerta_jefe_seg": 320,
+        "paleta": [
+          "#787f86",
+          "#e1e9e3",
+          "#65f567"
+        ],
+        "scroll_px_s": 60,
+        "cancion_jefe": "en_proceso",
+        "musica_etapa": "w14_level_instr",
+        "musica_jefe": "w14_boss_vocal",
+        "peligros": [
+          "laseres",
+          "compuertas",
+          "cintas",
+          "torretas"
+        ],
+        "unicos": [
+          "mech_syll",
+          "mech_nereis",
+          "mech_sabel",
+          "mech_chaet",
+          "mech_riftia",
+          "mech_polyn",
+          "mech_oenone",
+          "mech_diopatra"
+        ],
+        "recurrentes": [
+          "hydroides",
+          "euphrosine",
+          "fabric",
+          "pision",
+          "lacy",
+          "syll",
+          "phyll",
+          "arenicola",
+          "magelona",
+          "sthenelais",
+          "sacco",
+          "goniada",
+          "spio",
+          "nepht",
+          "glycer",
+          "dodeca",
+          "oenone",
+          "arabella",
+          "spha",
+          "histrio",
+          "serp",
+          "hesio",
+          "spirorbis",
+          "myxicola",
+          "spinther",
+          "trocho",
+          "cteno",
+          "cirrat",
+          "spirobranchus",
+          "sabellastarte",
+          "eulepeth",
+          "acoet",
+          "pholoe",
+          "glycera",
+          "diopatra",
+          "chaetopterus",
+          "sabellaria",
+          "pectinaria",
+          "aricidea",
+          "terebellides",
+          "questa",
+          "fauvel",
+          "protod",
+          "ophelia",
+          "cossura",
+          "pilarg",
+          "lumbrineris",
+          "owenia",
+          "dorville",
+          "pontod",
+          "lopado",
+          "typhlo",
+          "poeo",
+          "iospil",
+          "syll_stolon",
+          "alciop",
+          "flabegraviera",
+          "aphelochaeta",
+          "mald",
+          "perkinsiana",
+          "amphar",
+          "hesiocaeca",
+          "nautil",
+          "chryso",
+          "brada",
+          "bathykurila",
+          "ophryotrocha",
+          "riftia",
+          "paralvinella",
+          "branchinotogluma",
+          "amphisamytha",
+          "hesiolyra",
+          "swima",
+          "aphro",
+          "scali",
+          "stern",
+          "macellicephaloides",
+          "capitella_capitata"
+        ],
+        "jefe_objetivo_seg": 390,
+        "base_monedas": 4800,
+        "jefes": [
+          "boss_w12_robot_pinza",
+          "boss_w12_robot_torreta",
+          "boss_w12_robot_taladro",
+          "boss_w12_scientist",
+          "boss_w12_eunice_titan"
+        ],
+        "sectores_jefes": [
+          {
+            "id": 1,
+            "jefes": [
+              "boss_w12_robot_pinza",
+              "boss_w12_robot_torreta",
+              "boss_w12_robot_taladro"
+            ],
+            "objetivo_seg": 90,
+            "base_monedas": 1200,
+            "texto": "Sala de robóticos"
+          },
+          {
+            "id": 2,
+            "jefes": [
+              "boss_w12_scientist"
+            ],
+            "objetivo_seg": 120,
+            "base_monedas": 1600,
+            "texto": "Sala del científico"
+          },
+          {
+            "id": 3,
+            "jefes": [
+              "boss_w12_eunice_titan"
+            ],
+            "objetivo_seg": 180,
+            "base_monedas": 2000,
+            "texto": "Tanque central: Eunice aphroditois"
+          }
+        ],
+        "semilla": 20261101,
+        "laboratorio_organicos": 110,
+        "laboratorio_roboticos": 140,
+        "legacy_id": 14,
+        "miniboss_enabled": false,
+        "final_boss_enabled": true
       }
     ]
-  ]
+  ],
+  "maxItems": 12
 }

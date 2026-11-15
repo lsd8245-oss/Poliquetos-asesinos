@@ -5,238 +5,288 @@
     {
       "t": 10.0,
       "tipo": "oleada",
-      "enemigo": "glycera",
-      "cantidad": 7,
+      "enemigo": "ophelia",
+      "cantidad": 8,
       "formacion": "linea_vertical",
       "y": 60,
       "portadora": true,
       "separacion_px": 32,
       "separacion_seg": 0.3,
-      "item": "rojo"
+      "item": "rojo",
+      "legacy_index": 0
     },
     {
-      "t": 18.0,
+      "t": 20.6994,
       "tipo": "oleada",
-      "enemigo": "diopatra",
+      "enemigo": "cossura",
       "cantidad": 8,
       "formacion": "linea_horizontal",
       "y": 110,
       "portadora": false,
       "separacion_px": 32,
-      "separacion_seg": 0.3
+      "separacion_seg": 0.3,
+      "legacy_index": 1
     },
     {
       "t": 25,
       "tipo": "peligro",
-      "id": "corriente_hojas",
+      "id": "barriles",
       "duracion_seg": 10,
-      "y": 280
+      "y": 280,
+      "legacy_index": 3
     },
     {
-      "t": 26.0,
+      "t": 31.3987,
       "tipo": "oleada",
-      "enemigo": "chaetopterus",
+      "enemigo": "pilarg",
       "cantidad": 7,
       "formacion": "v",
       "y": 168,
       "portadora": false,
       "separacion_px": 32,
-      "separacion_seg": 0.3
+      "separacion_seg": 0.3,
+      "legacy_index": 2
     },
     {
-      "t": 34.0,
+      "t": 37,
+      "tipo": "peligro",
+      "id": "petroleo",
+      "duracion_seg": 10,
+      "y": 40,
+      "legacy_index": 5
+    },
+    {
+      "t": 42.0981,
       "tipo": "oleada",
-      "enemigo": "sabellaria",
-      "cantidad": 7,
+      "enemigo": "lumbrineris",
+      "cantidad": 8,
       "formacion": "v_invertida",
       "y": 220,
       "portadora": true,
       "separacion_px": 32,
       "separacion_seg": 0.3,
-      "item": "verde"
-    },
-    {
-      "t": 42.0,
-      "tipo": "oleada",
-      "enemigo": "pectinaria",
-      "cantidad": 7,
-      "formacion": "zigzag",
-      "y": 276,
-      "portadora": false,
-      "separacion_px": 32,
-      "separacion_seg": 0.3
+      "item": "verde",
+      "legacy_index": 4
     },
     {
       "t": 45.0,
       "tipo": "escudo",
       "item": "amarillo",
-      "y": 168
+      "y": 168,
+      "legacy_index": 7
     },
     {
-      "t": 52.5,
+      "t": 52.7974,
       "tipo": "oleada",
-      "enemigo": "syll",
+      "enemigo": "owenia",
       "cantidad": 8,
+      "formacion": "zigzag",
+      "y": 276,
+      "portadora": false,
+      "separacion_px": 32,
+      "separacion_seg": 0.3,
+      "legacy_index": 6
+    },
+    {
+      "t": 63.4968,
+      "tipo": "oleada",
+      "enemigo": "glycer",
+      "cantidad": 7,
       "formacion": "circulo",
       "y": 60,
       "portadora": false,
       "separacion_px": 32,
-      "separacion_seg": 0.3
+      "separacion_seg": 0.3,
+      "legacy_index": 8
     },
     {
-      "t": 58.0,
+      "t": 74.1961,
       "tipo": "oleada",
-      "enemigo": "nepht",
-      "cantidad": 8,
+      "enemigo": "glycer",
+      "cantidad": 6,
       "formacion": "doble_columna",
       "y": 110,
+      "portadora": false,
+      "separacion_px": 32,
+      "separacion_seg": 0.3,
+      "legacy_index": 9
+    },
+    {
+      "t": 84.8955,
+      "tipo": "oleada",
+      "enemigo": "dorville",
+      "cantidad": 7,
+      "formacion": "ambos_lados",
+      "y": 168,
       "portadora": true,
       "separacion_px": 32,
       "separacion_seg": 0.3,
-      "item": "azul"
+      "item": "azul",
+      "legacy_index": 10
     },
     {
-      "t": 66.0,
+      "t": 95.5948,
       "tipo": "oleada",
-      "enemigo": "hesio",
-      "cantidad": 8,
-      "formacion": "ambos_lados",
-      "y": 168,
+      "enemigo": "dorville",
+      "cantidad": 6,
+      "formacion": "diagonal",
+      "y": 220,
       "portadora": false,
       "separacion_px": 32,
-      "separacion_seg": 0.3
+      "separacion_seg": 0.3,
+      "legacy_index": 11
     },
     {
-      "t": 75.0,
-      "tipo": "minijefe",
-      "id": "mini_w06_glycera",
-      "escoltas": {
-        "enemigo": "diopatra",
-        "cantidad": 2,
-        "vida": 12,
-        "tamano": [
-          40,
-          32
-        ]
-      }
-    },
-    {
-      "t": 135.0,
+      "t": 106.2942,
       "tipo": "oleada",
-      "enemigo": "chaetopterus",
-      "cantidad": 11,
+      "enemigo": "glycer",
+      "cantidad": 10,
       "formacion": "v_invertida",
       "y": 60,
       "portadora": false,
       "separacion_px": 32,
-      "separacion_seg": 0.3
+      "separacion_seg": 0.3,
+      "legacy_index": 13
     },
     {
-      "t": 140.0,
-      "tipo": "escudo",
-      "item": "amarillo",
-      "y": 168
-    },
-    {
-      "t": 143.0,
+      "t": 116.9935,
       "tipo": "oleada",
-      "enemigo": "glycera",
-      "cantidad": 11,
+      "enemigo": "glycer",
+      "cantidad": 10,
       "formacion": "zigzag",
       "y": 110,
       "portadora": true,
       "separacion_px": 32,
       "separacion_seg": 0.3,
-      "item": "rojo"
+      "item": "rojo",
+      "legacy_index": 15
     },
     {
-      "t": 145.0,
-      "tipo": "peligro",
-      "id": "corriente_hojas",
-      "duracion_seg": 10,
-      "y": 280
-    },
-    {
-      "t": 151.0,
+      "t": 127.6929,
       "tipo": "oleada",
-      "enemigo": "hesio",
+      "enemigo": "pilarg",
       "cantidad": 12,
       "formacion": "circulo",
       "y": 168,
       "portadora": false,
       "separacion_px": 32,
-      "separacion_seg": 0.3
+      "separacion_seg": 0.3,
+      "legacy_index": 17
     },
     {
-      "t": 159.0,
+      "t": 138.3922,
       "tipo": "oleada",
-      "enemigo": "nepht",
+      "enemigo": "ophelia",
       "cantidad": 12,
       "formacion": "doble_columna",
       "y": 220,
       "portadora": false,
       "separacion_px": 32,
-      "separacion_seg": 0.3
+      "separacion_seg": 0.3,
+      "legacy_index": 19
     },
     {
-      "t": 167.0,
+      "t": 140.0,
+      "tipo": "escudo",
+      "item": "amarillo",
+      "y": 168,
+      "legacy_index": 14
+    },
+    {
+      "t": 145.0,
+      "tipo": "peligro",
+      "id": "barriles",
+      "duracion_seg": 10,
+      "y": 280,
+      "legacy_index": 16
+    },
+    {
+      "t": 149.0916,
       "tipo": "oleada",
-      "enemigo": "sabellaria",
-      "cantidad": 11,
+      "enemigo": "dorville",
+      "cantidad": 10,
       "formacion": "ambos_lados",
       "y": 276,
+      "portadora": false,
+      "separacion_px": 32,
+      "separacion_seg": 0.3,
+      "legacy_index": 20
+    },
+    {
+      "t": 153.0,
+      "tipo": "peligro",
+      "id": "petroleo",
+      "duracion_seg": 10,
+      "y": 40,
+      "legacy_index": 18
+    },
+    {
+      "t": 159.7909,
+      "tipo": "oleada",
+      "enemigo": "dorville",
+      "cantidad": 9,
+      "formacion": "diagonal",
+      "y": 60,
       "portadora": true,
       "separacion_px": 32,
       "separacion_seg": 0.3,
-      "item": "verde"
+      "item": "verde",
+      "legacy_index": 21
     },
     {
-      "t": 175.0,
+      "t": 170.4903,
       "tipo": "oleada",
-      "enemigo": "syll",
+      "enemigo": "cossura",
       "cantidad": 12,
-      "formacion": "diagonal",
-      "y": 60,
-      "portadora": false,
-      "separacion_px": 32,
-      "separacion_seg": 0.3
-    },
-    {
-      "t": 183.0,
-      "tipo": "oleada",
-      "enemigo": "diopatra",
-      "cantidad": 10,
       "formacion": "linea_vertical",
       "y": 110,
       "portadora": false,
       "separacion_px": 32,
-      "separacion_seg": 0.3
+      "separacion_seg": 0.3,
+      "legacy_index": 22
     },
     {
-      "t": 191.0,
+      "t": 181.1896,
       "tipo": "oleada",
-      "enemigo": "pectinaria",
+      "enemigo": "lumbrineris",
       "cantidad": 11,
       "formacion": "linea_horizontal",
       "y": 168,
+      "portadora": false,
+      "separacion_px": 32,
+      "separacion_seg": 0.3,
+      "legacy_index": 23
+    },
+    {
+      "t": 191.889,
+      "tipo": "oleada",
+      "enemigo": "owenia",
+      "cantidad": 11,
+      "formacion": "v",
+      "y": 220,
       "portadora": true,
       "separacion_px": 32,
       "separacion_seg": 0.3,
-      "item": "azul"
+      "item": "azul",
+      "legacy_index": 24
     },
     {
       "t": 198,
       "tipo": "escudo",
       "item": "amarillo",
-      "y": 168
+      "y": 168,
+      "legacy_index": 25
     },
     {
       "t": 200,
       "tipo": "alerta_jefe",
-      "id": "boss_w06_leafqueen",
+      "id": "boss_w06_pollution_capit",
       "jefes": [
-        "boss_w06_leafqueen"
-      ]
+        "boss_w06_pollution_capit",
+        "boss_w06_pollution_spio",
+        "boss_w06_pollution_cirrat"
+      ],
+      "legacy_index": 26
     }
   ]
 }

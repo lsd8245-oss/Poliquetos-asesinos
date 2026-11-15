@@ -2,6 +2,7 @@ class_name PoliShop
 extends RefCounted
 
 const Data = preload("../core/data.gd")
+const Campaign = preload("../core/campaign.gd")
 const SANDBOX_CREDITS := 999999999
 static var _next_token := 0
 static var _visits: Dictionary = {}
@@ -24,7 +25,7 @@ static func create_profile(sandbox: bool = false, difficulty: String = "normal")
 		for cosmetic in cosmetics():
 			skins.append(cosmetic.id)
 	return {
-		"version": 2, "edition": "pruebas" if sandbox else "normal", "slot": 1,
+		"version": 3, "edition": "pruebas" if sandbox else "normal", "slot": 1,
 		"difficulty": difficulty if difficulty in ["easy", "normal", "hard"] else "normal",
 		"world": 1, "lab_boss": 0, "credits": SANDBOX_CREDITS if sandbox else 0,
 		"upgrades": upgrades, "equipment": {"sonar": true},
@@ -51,11 +52,11 @@ static func available_act(profile: Dictionary) -> int:
 	if profile.get("edition", "normal") == "pruebas":
 		return 4
 	var world := int(profile.get("world", 1))
-	if world >= 14 and int(profile.get("lab_boss", 0)) >= 1:
+	if world == Campaign.escape_id() or (world == Campaign.laboratory_id() and int(profile.get("lab_boss", 0)) >= 1):
 		return 4
-	if world >= 9:
+	if world >= 7:
 		return 3
-	if world >= 5:
+	if world >= 4:
 		return 2
 	return 1
 

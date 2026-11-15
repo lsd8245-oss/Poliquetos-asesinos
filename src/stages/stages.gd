@@ -1,20 +1,21 @@
 class_name PoliStages
 extends RefCounted
+const Campaign = preload("res://src/core/campaign.gd")
 var events: Array=[]
 var enemy_index:Dictionary={}
 var burst_queue:Array=[]
 var escape_checkpoint=0
 
 func begin(g):
-	events=(g.data.escape.eventos if int(g.profile.world)==15 else g.data.waves[int(g.profile.world)].eventos).duplicate(true)
+	events=(g.data.escape.eventos if int(g.profile.world)==Campaign.escape_id() else g.data.waves[int(g.profile.world)].eventos).duplicate(true)
 	enemy_index.clear()
 	burst_queue.clear()
 	escape_checkpoint=int(g.world_time/90)
 	for e in g.data.enemies:
 		enemy_index[e.id]=e
-	if int(g.profile.world)==14:
+	if int(g.profile.world)==Campaign.laboratory_id():
 		# Profile seed fixes both family selection and their wave mapping on every retry.
-		var available:Array=g.world.recurrentes.duplicate()
+		var available:Array=g.world.recurrentes.filter(func(id): return enemy_ready(g, str(id)))
 		var selected:Array=[]
 		var random=RandomNumberGenerator.new()
 		random.seed=int(g.profile.seed)
@@ -22,7 +23,7 @@ func begin(g):
 			selected.append(available.pop_at(random.randi_range(0,available.size()-1)))
 		var mapping={}
 		for event in events:
-			if event.tipo=="oleada" and not g.world.unicos.has(event.enemigo):
+			if event.tipo=="oleada" and not g.world.unicos.has(event.enemigo) and not selected.is_empty():
 				if not mapping.has(event.enemigo):
 					mapping[event.enemigo]=selected[mapping.size()%selected.size()]
 				event.enemigo=mapping[event.enemigo]
@@ -33,30 +34,30 @@ func step(g,dt:float):
 		g.scroll+=float(g.world.get("scroll_px_s",60))*dt
 		while g.cursor<events.size() and float(events[g.cursor].t)<=g.world_time:
 			var event:Dictionary=events[g.cursor]
-			var wave_id=g.cursor
+			var wave_id=int(event.get("legacy_index",g.cursor))
 			g.cursor+=1
 			match str(event.tipo):
 				"oleada":
 					spawn_wave(g,event,wave_id)
 				"minijefe":
-					g.mini_spawned=true
-					if g.boss_system!=null:
-						g.boss_system.spawn(g,str(event.id),true)
-					var pool:Array=g.world.unicos
-					for n in range(2):
-						spawn_enemy(g,str(pool[n%pool.size()]),Vector2(660+n*40,70+n*180),-1,{"escort":true,"uid":"escort_%d"%n})
+					# Archived external wave files cannot reactivate campaign minis.
+					if bool(g.world.get("miniboss_enabled",false)):
+						if g.boss_system!=null and g.boss_system.spawn(g,str(event.id),true):
+							var pool:Array=g.world.unicos
+							for n in range(2):
+								spawn_enemy(g,str(pool[n%pool.size()]),Vector2(660+n*40,70+n*180),-1,{"escort":true,"uid":"escort_%d"%n})
 				"escudo":
 					g.spawn_drop("amarillo",Vector2(600,float(event.get("y",140))),"shield:%d"%wave_id)
 				"peligro":
 					spawn_hazard(g,event)
-		if int(g.profile.world)==15:
+		if int(g.profile.world)==Campaign.escape_id():
 			var cp=int(g.world_time/float(g.data.escape.checkpoint_cada_seg))
 			if cp>escape_checkpoint:
 				escape_checkpoint=cp
 				g.make_checkpoint()
 			if g.world_time>=float(g.data.escape.duracion_seg):
 				g.finish_escape()
-		elif g.world_time>=float(g.world.alerta_jefe_seg) and g.mini_defeated:
+		elif g.world_time>=float(g.world.alerta_jefe_seg) and (not bool(g.world.get("miniboss_enabled",false)) or g.mini_defeated):
 			if bool(g.difficulty().get("alert_checkpoint",false)):
 				g.make_checkpoint()
 			g.state="alert"
@@ -70,13 +71,22 @@ func step(g,dt:float):
 			burst_queue.remove_at(i)
 
 func spawn_wave(g,event:Dictionary,wave_id:int):
+	wave_id=int(event.get("legacy_index",wave_id))
 	var key=str(wave_id)
-	g.wave_state[key]={"count":int(event.cantidad),"killed":0,"item":str(event.get("item","")) if event.get("portadora",false) else ""}
+	g.wave_state[key]={"count":0,"killed":0,"item":str(event.get("item","")) if event.get("portadora",false) else ""}
 	for n in range(int(event.cantidad)):
 		var pos=formation(str(event.formacion),n,int(event.cantidad),float(event.get("y",168)),float(event.get("separacion_px",32)))
-		spawn_enemy(g,str(event.enemigo),pos,wave_id,{"uid":"wave_%d_%d"%[wave_id,n],"ordinal":g.regular_spawned,"carrier":str(event.get("item","")) if event.get("portadora",false) else ""})
-		g.regular_spawned+=1
-		g.profile.spawned_total=int(g.profile.get("spawned_total",0))+1
+		var actor=spawn_enemy(g,str(event.enemigo),pos,wave_id,{"uid":"wave_%d_%d"%[wave_id,n],"ordinal":g.regular_spawned,"carrier":str(event.get("item","")) if event.get("portadora",false) else ""})
+		if not actor.is_empty():
+			g.wave_state[key].count+=1
+			g.regular_spawned+=1
+			g.profile.spawned_total=int(g.profile.get("spawned_total",0))+1
+
+func enemy_ready(g,id:String)->bool:
+	if not enemy_index.has(id):
+		return false
+	var cfg:Dictionary=enemy_index[id]
+	return bool(cfg.get("runtime_ready",true)) and bool(cfg.get("mundos",{}).get(str(g.profile.world),{}).get("runtime_ready",true))
 
 func formation(kind:String,n:int,count:int,y:float,gap:float)->Vector2:
 	var center=(count-1)/2.0
@@ -104,10 +114,12 @@ func spawn_enemy(g,id:String,pos:Vector2,wave:int=-1,extra:Dictionary={}):
 	if not enemy_index.has(id):
 		push_error("Enemy not found: "+id)
 		return {}
+	if not enemy_ready(g,id):
+		return {}
 	var cfg:Dictionary=enemy_index[id]
 	if cfg.movimiento=="M4" and wave>=0:
 		pos.y=-float(cfg.tamano[1]) if g.serial%2==0 else 336+float(cfg.tamano[1])
-	var n=int(g.profile.world)
+	var n=int(g.world.get("legacy_id",Campaign.legacy_world(int(g.profile.world))))
 	var ref=float(g.data.combat.enemy.dps_ref_base)+float(g.data.combat.enemy.dps_ref_world_step)*(mini(n,14)-1)
 	var hp=ceilf(ref/float(g.data.combat.enemy.small_hp_divisor))
 	if cfg.categoria=="enjambre":
@@ -194,7 +206,8 @@ func fire_enemy(g,e:Dictionary):
 			g.enemy_bullet(origin,velocity,options)
 
 func bullet_speed(g)->float:
-	return float(g.data.combat.enemy.bullet_speed_base)*(1+float(g.data.combat.enemy.bullet_speed_world_scale)*(int(g.profile.world)-1))*float(g.difficulty().get("bullet_speed",1))
+	var source=int(g.world.get("legacy_id",Campaign.legacy_world(int(g.profile.world))))
+	return float(g.data.combat.enemy.bullet_speed_base)*(1+float(g.data.combat.enemy.bullet_speed_world_scale)*(source-1))*float(g.difficulty().get("bullet_speed",1))
 
 func spawn_hazard(g,event:Dictionary):
 	var id=str(event.id)

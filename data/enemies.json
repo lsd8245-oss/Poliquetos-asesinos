@@ -7,11 +7,13 @@
     "mundos": {
       "1": {
         "rol": "unico",
-        "sprite_set": "w01_enemy_hydroides"
+        "sprite_set": "w01_enemy_hydroides",
+        "runtime_ready": true
       },
-      "14": {
+      "12": {
         "rol": "recurrente",
-        "sprite_set": "w14_enemy_hydroides"
+        "sprite_set": "w12_enemy_hydroides",
+        "runtime_ready": true
       }
     },
     "movimiento": "M5",
@@ -30,7 +32,8 @@
     "parametros": {
       "carcasa_abierta_seg": 1,
       "cadena_intervalo_seg": 0.15
-    }
+    },
+    "runtime_ready": true
   },
   {
     "id": "euphrosine",
@@ -40,11 +43,13 @@
     "mundos": {
       "1": {
         "rol": "unico",
-        "sprite_set": "w01_enemy_euphrosine"
+        "sprite_set": "w01_enemy_euphrosine",
+        "runtime_ready": true
       },
-      "14": {
+      "12": {
         "rol": "recurrente",
-        "sprite_set": "w14_enemy_euphrosine"
+        "sprite_set": "w12_enemy_euphrosine",
+        "runtime_ready": true
       }
     },
     "movimiento": "M7",
@@ -63,7 +68,8 @@
     "parametros": {
       "carcasa_abierta_seg": 1,
       "cadena_intervalo_seg": 0.15
-    }
+    },
+    "runtime_ready": true
   },
   {
     "id": "fabric",
@@ -73,11 +79,13 @@
     "mundos": {
       "1": {
         "rol": "unico",
-        "sprite_set": "w01_enemy_fabric"
+        "sprite_set": "w01_enemy_fabric",
+        "runtime_ready": true
       },
-      "14": {
+      "12": {
         "rol": "recurrente",
-        "sprite_set": "w14_enemy_fabric"
+        "sprite_set": "w12_enemy_fabric",
+        "runtime_ready": true
       }
     },
     "movimiento": "M5",
@@ -96,7 +104,8 @@
     "parametros": {
       "carcasa_abierta_seg": 1,
       "cadena_intervalo_seg": 0.15
-    }
+    },
+    "runtime_ready": true
   },
   {
     "id": "pision",
@@ -106,11 +115,18 @@
     "mundos": {
       "1": {
         "rol": "unico",
-        "sprite_set": "w01_enemy_pision"
+        "sprite_set": "w01_enemy_pision",
+        "runtime_ready": true
       },
-      "14": {
+      "2": {
         "rol": "recurrente",
-        "sprite_set": "w14_enemy_pision"
+        "sprite_set": "w02_enemy_pision",
+        "runtime_ready": true
+      },
+      "12": {
+        "rol": "recurrente",
+        "sprite_set": "w12_enemy_pision",
+        "runtime_ready": true
       }
     },
     "movimiento": "M4",
@@ -129,7 +145,8 @@
     "parametros": {
       "carcasa_abierta_seg": 1,
       "cadena_intervalo_seg": 0.15
-    }
+    },
+    "runtime_ready": true
   },
   {
     "id": "lacy",
@@ -139,11 +156,13 @@
     "mundos": {
       "1": {
         "rol": "unico",
-        "sprite_set": "w01_enemy_lacy"
+        "sprite_set": "w01_enemy_lacy",
+        "runtime_ready": true
       },
-      "14": {
+      "12": {
         "rol": "recurrente",
-        "sprite_set": "w14_enemy_lacy"
+        "sprite_set": "w12_enemy_lacy",
+        "runtime_ready": true
       }
     },
     "movimiento": "M4",
@@ -162,7 +181,62 @@
     "parametros": {
       "carcasa_abierta_seg": 1,
       "cadena_intervalo_seg": 0.15
-    }
+    },
+    "runtime_ready": true
+  },
+  {
+    "id": "sabellaria",
+    "familia": "Sabellaria · Sabellariidae",
+    "tipo": "tubicola",
+    "categoria": "mediano",
+    "mundos": {
+      "1": {
+        "rol": "unico",
+        "sprite_set": "w01_enemy_sabellaria",
+        "runtime_ready": true
+      },
+      "12": {
+        "rol": "recurrente",
+        "sprite_set": "w12_enemy_sabellaria",
+        "runtime_ready": true
+      }
+    },
+    "movimiento": "M5",
+    "disparo": "F3",
+    "tamano": [
+      48,
+      48
+    ],
+    "puntos": 100,
+    "drop": {
+      "moneda_chica": 0.35,
+      "moneda_grande": 0.05
+    },
+    "estado": "revisar",
+    "blindado": false,
+    "parametros": {
+      "carcasa_abierta_seg": 1,
+      "cadena_intervalo_seg": 0.15
+    },
+    "runtime_ready": true
+  },
+  {
+    "id": "eulalia",
+    "familia": "Eulalia · Phyllodocidae",
+    "tipo": "pendiente",
+    "mundos": {
+      "1": {
+        "rol": "unico",
+        "sprite_set": "w01_enemy_eulalia",
+        "runtime_ready": false
+      }
+    },
+    "estado": "pendiente",
+    "runtime_ready": false,
+    "pending": [
+      "original_png_and_atlas",
+      "accepted_behavior_and_balance"
+    ]
   },
   {
     "id": "syll",
@@ -172,27 +246,23 @@
     "mundos": {
       "1": {
         "rol": "recurrente",
-        "sprite_set": "w01_enemy_syll"
+        "sprite_set": "w01_enemy_syll",
+        "runtime_ready": true
       },
       "3": {
         "rol": "recurrente",
-        "sprite_set": "w03_enemy_syll"
+        "sprite_set": "w03_enemy_syll",
+        "runtime_ready": true
       },
       "4": {
         "rol": "recurrente",
-        "sprite_set": "w04_enemy_syll"
+        "sprite_set": "w04_enemy_syll",
+        "runtime_ready": true
       },
-      "5": {
+      "12": {
         "rol": "recurrente",
-        "sprite_set": "w05_enemy_syll"
-      },
-      "6": {
-        "rol": "recurrente",
-        "sprite_set": "w06_enemy_syll"
-      },
-      "14": {
-        "rol": "recurrente",
-        "sprite_set": "w14_enemy_syll"
+        "sprite_set": "w12_enemy_syll",
+        "runtime_ready": true
       }
     },
     "movimiento": "M2",
@@ -211,7 +281,8 @@
     "parametros": {
       "carcasa_abierta_seg": 1,
       "cadena_intervalo_seg": 0.15
-    }
+    },
+    "runtime_ready": true
   },
   {
     "id": "phyll",
@@ -221,23 +292,23 @@
     "mundos": {
       "1": {
         "rol": "recurrente",
-        "sprite_set": "w01_enemy_phyll"
+        "sprite_set": "w01_enemy_phyll",
+        "runtime_ready": true
       },
       "3": {
         "rol": "recurrente",
-        "sprite_set": "w03_enemy_phyll"
+        "sprite_set": "w03_enemy_phyll",
+        "runtime_ready": true
       },
       "4": {
         "rol": "recurrente",
-        "sprite_set": "w04_enemy_phyll"
+        "sprite_set": "w04_enemy_phyll",
+        "runtime_ready": true
       },
-      "5": {
+      "12": {
         "rol": "recurrente",
-        "sprite_set": "w05_enemy_phyll"
-      },
-      "14": {
-        "rol": "recurrente",
-        "sprite_set": "w14_enemy_phyll"
+        "sprite_set": "w12_enemy_phyll",
+        "runtime_ready": true
       }
     },
     "movimiento": "M3",
@@ -256,7 +327,64 @@
     "parametros": {
       "carcasa_abierta_seg": 1,
       "cadena_intervalo_seg": 0.15
-    }
+    },
+    "runtime_ready": true
+  },
+  {
+    "id": "spio",
+    "familia": "Spionidae",
+    "tipo": "enjambre",
+    "categoria": "enjambre",
+    "mundos": {
+      "1": {
+        "rol": "recurrente",
+        "sprite_set": "w01_enemy_spio",
+        "runtime_ready": true
+      },
+      "2": {
+        "rol": "recurrente",
+        "sprite_set": "w02_enemy_spio",
+        "runtime_ready": true
+      },
+      "5": {
+        "rol": "recurrente",
+        "sprite_set": "w05_enemy_spio",
+        "runtime_ready": true
+      },
+      "6": {
+        "rol": "recurrente",
+        "sprite_set": "w06_enemy_spio",
+        "runtime_ready": true
+      },
+      "8": {
+        "rol": "recurrente",
+        "sprite_set": "w08_enemy_spio",
+        "runtime_ready": true
+      },
+      "12": {
+        "rol": "recurrente",
+        "sprite_set": "w12_enemy_spio",
+        "runtime_ready": true
+      }
+    },
+    "movimiento": "M2",
+    "disparo": "F1",
+    "tamano": [
+      24,
+      24
+    ],
+    "puntos": 100,
+    "drop": {
+      "moneda_chica": 0.35,
+      "moneda_grande": 0.05
+    },
+    "estado": "revisar",
+    "blindado": false,
+    "parametros": {
+      "carcasa_abierta_seg": 1,
+      "cadena_intervalo_seg": 0.15
+    },
+    "runtime_ready": true
   },
   {
     "id": "arenicola",
@@ -266,11 +394,13 @@
     "mundos": {
       "2": {
         "rol": "unico",
-        "sprite_set": "w02_enemy_arenicola"
+        "sprite_set": "w02_enemy_arenicola",
+        "runtime_ready": true
       },
-      "14": {
+      "12": {
         "rol": "recurrente",
-        "sprite_set": "w14_enemy_arenicola"
+        "sprite_set": "w12_enemy_arenicola",
+        "runtime_ready": true
       }
     },
     "movimiento": "M6",
@@ -289,7 +419,8 @@
     "parametros": {
       "carcasa_abierta_seg": 1,
       "cadena_intervalo_seg": 0.15
-    }
+    },
+    "runtime_ready": true
   },
   {
     "id": "magelona",
@@ -299,11 +430,18 @@
     "mundos": {
       "2": {
         "rol": "unico",
-        "sprite_set": "w02_enemy_magelona"
+        "sprite_set": "w02_enemy_magelona",
+        "runtime_ready": true
       },
-      "14": {
+      "5": {
         "rol": "recurrente",
-        "sprite_set": "w14_enemy_magelona"
+        "sprite_set": "w05_enemy_magelona",
+        "runtime_ready": true
+      },
+      "12": {
+        "rol": "recurrente",
+        "sprite_set": "w12_enemy_magelona",
+        "runtime_ready": true
       }
     },
     "movimiento": "M6",
@@ -322,7 +460,8 @@
     "parametros": {
       "carcasa_abierta_seg": 1,
       "cadena_intervalo_seg": 0.15
-    }
+    },
+    "runtime_ready": true
   },
   {
     "id": "sthenelais",
@@ -332,11 +471,13 @@
     "mundos": {
       "2": {
         "rol": "unico",
-        "sprite_set": "w02_enemy_sthenelais"
+        "sprite_set": "w02_enemy_sthenelais",
+        "runtime_ready": true
       },
-      "14": {
+      "12": {
         "rol": "recurrente",
-        "sprite_set": "w14_enemy_sthenelais"
+        "sprite_set": "w12_enemy_sthenelais",
+        "runtime_ready": true
       }
     },
     "movimiento": "M7",
@@ -355,7 +496,8 @@
     "parametros": {
       "carcasa_abierta_seg": 1,
       "cadena_intervalo_seg": 0.15
-    }
+    },
+    "runtime_ready": true
   },
   {
     "id": "sacco",
@@ -365,11 +507,13 @@
     "mundos": {
       "2": {
         "rol": "unico",
-        "sprite_set": "w02_enemy_sacco"
+        "sprite_set": "w02_enemy_sacco",
+        "runtime_ready": true
       },
-      "14": {
+      "12": {
         "rol": "recurrente",
-        "sprite_set": "w14_enemy_sacco"
+        "sprite_set": "w12_enemy_sacco",
+        "runtime_ready": true
       }
     },
     "movimiento": "M4",
@@ -388,7 +532,8 @@
     "parametros": {
       "carcasa_abierta_seg": 1,
       "cadena_intervalo_seg": 0.15
-    }
+    },
+    "runtime_ready": true
   },
   {
     "id": "goniada",
@@ -398,11 +543,13 @@
     "mundos": {
       "2": {
         "rol": "unico",
-        "sprite_set": "w02_enemy_goniada"
+        "sprite_set": "w02_enemy_goniada",
+        "runtime_ready": true
       },
-      "14": {
+      "12": {
         "rol": "recurrente",
-        "sprite_set": "w14_enemy_goniada"
+        "sprite_set": "w12_enemy_goniada",
+        "runtime_ready": true
       }
     },
     "movimiento": "M3",
@@ -421,40 +568,31 @@
     "parametros": {
       "carcasa_abierta_seg": 1,
       "cadena_intervalo_seg": 0.15
-    }
+    },
+    "runtime_ready": true
   },
   {
-    "id": "spio",
-    "familia": "Spionidae",
-    "tipo": "enjambre",
-    "categoria": "enjambre",
+    "id": "pectinaria",
+    "familia": "Pectinaria · Pectinariidae",
+    "tipo": "tubicola",
+    "categoria": "mediano",
     "mundos": {
       "2": {
-        "rol": "recurrente",
-        "sprite_set": "w02_enemy_spio"
+        "rol": "unico",
+        "sprite_set": "w02_enemy_pectinaria",
+        "runtime_ready": true
       },
-      "3": {
+      "12": {
         "rol": "recurrente",
-        "sprite_set": "w03_enemy_spio"
-      },
-      "7": {
-        "rol": "recurrente",
-        "sprite_set": "w07_enemy_spio"
-      },
-      "10": {
-        "rol": "recurrente",
-        "sprite_set": "w10_enemy_spio"
-      },
-      "14": {
-        "rol": "recurrente",
-        "sprite_set": "w14_enemy_spio"
+        "sprite_set": "w12_enemy_pectinaria",
+        "runtime_ready": true
       }
     },
-    "movimiento": "M2",
-    "disparo": "F1",
+    "movimiento": "M5",
+    "disparo": "F3",
     "tamano": [
-      24,
-      24
+      48,
+      48
     ],
     "puntos": 100,
     "drop": {
@@ -466,7 +604,44 @@
     "parametros": {
       "carcasa_abierta_seg": 1,
       "cadena_intervalo_seg": 0.15
-    }
+    },
+    "runtime_ready": true
+  },
+  {
+    "id": "diopatra",
+    "familia": "Diopatra · Onuphidae",
+    "tipo": "tubicola",
+    "categoria": "mediano",
+    "mundos": {
+      "2": {
+        "rol": "unico",
+        "sprite_set": "w02_enemy_diopatra",
+        "runtime_ready": true
+      },
+      "12": {
+        "rol": "recurrente",
+        "sprite_set": "w12_enemy_diopatra",
+        "runtime_ready": true
+      }
+    },
+    "movimiento": "M5",
+    "disparo": "F3",
+    "tamano": [
+      48,
+      48
+    ],
+    "puntos": 100,
+    "drop": {
+      "moneda_chica": 0.35,
+      "moneda_grande": 0.05
+    },
+    "estado": "revisar",
+    "blindado": false,
+    "parametros": {
+      "carcasa_abierta_seg": 1,
+      "cadena_intervalo_seg": 0.15
+    },
+    "runtime_ready": true
   },
   {
     "id": "nepht",
@@ -476,23 +651,23 @@
     "mundos": {
       "2": {
         "rol": "recurrente",
-        "sprite_set": "w02_enemy_nepht"
+        "sprite_set": "w02_enemy_nepht",
+        "runtime_ready": true
       },
-      "6": {
+      "5": {
         "rol": "recurrente",
-        "sprite_set": "w06_enemy_nepht"
+        "sprite_set": "w05_enemy_nepht",
+        "runtime_ready": true
       },
-      "7": {
+      "11": {
         "rol": "recurrente",
-        "sprite_set": "w07_enemy_nepht"
+        "sprite_set": "w11_enemy_nepht",
+        "runtime_ready": true
       },
-      "13": {
+      "12": {
         "rol": "recurrente",
-        "sprite_set": "w13_enemy_nepht"
-      },
-      "14": {
-        "rol": "recurrente",
-        "sprite_set": "w14_enemy_nepht"
+        "sprite_set": "w12_enemy_nepht",
+        "runtime_ready": true
       }
     },
     "movimiento": "M3",
@@ -511,7 +686,8 @@
     "parametros": {
       "carcasa_abierta_seg": 1,
       "cadena_intervalo_seg": 0.15
-    }
+    },
+    "runtime_ready": true
   },
   {
     "id": "glycer",
@@ -521,23 +697,28 @@
     "mundos": {
       "2": {
         "rol": "recurrente",
-        "sprite_set": "w02_enemy_glycer"
+        "sprite_set": "w02_enemy_glycer",
+        "runtime_ready": true
       },
-      "7": {
+      "5": {
         "rol": "recurrente",
-        "sprite_set": "w07_enemy_glycer"
+        "sprite_set": "w05_enemy_glycer",
+        "runtime_ready": true
       },
-      "8": {
+      "6": {
         "rol": "recurrente",
-        "sprite_set": "w08_enemy_glycer"
+        "sprite_set": "w06_enemy_glycer",
+        "runtime_ready": true
       },
-      "13": {
+      "11": {
         "rol": "recurrente",
-        "sprite_set": "w13_enemy_glycer"
+        "sprite_set": "w11_enemy_glycer",
+        "runtime_ready": true
       },
-      "14": {
+      "12": {
         "rol": "recurrente",
-        "sprite_set": "w14_enemy_glycer"
+        "sprite_set": "w12_enemy_glycer",
+        "runtime_ready": true
       }
     },
     "movimiento": "M3",
@@ -556,7 +737,188 @@
     "parametros": {
       "carcasa_abierta_seg": 1,
       "cadena_intervalo_seg": 0.15
-    }
+    },
+    "runtime_ready": true
+  },
+  {
+    "id": "spirorbis",
+    "familia": "Spirorbis · Serpulidae",
+    "tipo": "tubicola",
+    "categoria": "mediano",
+    "mundos": {
+      "3": {
+        "rol": "unico",
+        "sprite_set": "w03_enemy_spirorbis",
+        "runtime_ready": true
+      },
+      "12": {
+        "rol": "recurrente",
+        "sprite_set": "w12_enemy_spirorbis",
+        "runtime_ready": true
+      }
+    },
+    "movimiento": "M5",
+    "disparo": "F3",
+    "tamano": [
+      48,
+      48
+    ],
+    "puntos": 100,
+    "drop": {
+      "moneda_chica": 0.35,
+      "moneda_grande": 0.05
+    },
+    "estado": "revisar",
+    "blindado": false,
+    "parametros": {
+      "carcasa_abierta_seg": 1,
+      "cadena_intervalo_seg": 0.15
+    },
+    "runtime_ready": true
+  },
+  {
+    "id": "myxicola",
+    "familia": "Myxicola · Sabellidae",
+    "tipo": "tubicola",
+    "categoria": "mediano",
+    "mundos": {
+      "3": {
+        "rol": "unico",
+        "sprite_set": "w03_enemy_myxicola",
+        "runtime_ready": true
+      },
+      "12": {
+        "rol": "recurrente",
+        "sprite_set": "w12_enemy_myxicola",
+        "runtime_ready": true
+      }
+    },
+    "movimiento": "M5",
+    "disparo": "F3",
+    "tamano": [
+      48,
+      48
+    ],
+    "puntos": 100,
+    "drop": {
+      "moneda_chica": 0.35,
+      "moneda_grande": 0.05
+    },
+    "estado": "revisar",
+    "blindado": false,
+    "parametros": {
+      "carcasa_abierta_seg": 1,
+      "cadena_intervalo_seg": 0.15
+    },
+    "runtime_ready": true
+  },
+  {
+    "id": "spinther",
+    "familia": "Spintheridae",
+    "tipo": "otro",
+    "categoria": "pequeno",
+    "mundos": {
+      "3": {
+        "rol": "unico",
+        "sprite_set": "w03_enemy_spinther",
+        "runtime_ready": true
+      },
+      "12": {
+        "rol": "recurrente",
+        "sprite_set": "w12_enemy_spinther",
+        "runtime_ready": true
+      }
+    },
+    "movimiento": "M4",
+    "disparo": "F1",
+    "tamano": [
+      32,
+      32
+    ],
+    "puntos": 100,
+    "drop": {
+      "moneda_chica": 0.35,
+      "moneda_grande": 0.05
+    },
+    "estado": "revisar",
+    "blindado": false,
+    "parametros": {
+      "carcasa_abierta_seg": 1,
+      "cadena_intervalo_seg": 0.15
+    },
+    "runtime_ready": true
+  },
+  {
+    "id": "trocho",
+    "familia": "Trochochaeta · Trochochaetidae",
+    "tipo": "otro",
+    "categoria": "pequeno",
+    "mundos": {
+      "3": {
+        "rol": "unico",
+        "sprite_set": "w03_enemy_trocho",
+        "runtime_ready": true
+      },
+      "12": {
+        "rol": "recurrente",
+        "sprite_set": "w12_enemy_trocho",
+        "runtime_ready": true
+      }
+    },
+    "movimiento": "M4",
+    "disparo": "F1",
+    "tamano": [
+      32,
+      32
+    ],
+    "puntos": 100,
+    "drop": {
+      "moneda_chica": 0.35,
+      "moneda_grande": 0.05
+    },
+    "estado": "revisar",
+    "blindado": false,
+    "parametros": {
+      "carcasa_abierta_seg": 1,
+      "cadena_intervalo_seg": 0.15
+    },
+    "runtime_ready": true
+  },
+  {
+    "id": "cteno",
+    "familia": "Ctenodrilidae",
+    "tipo": "enjambre",
+    "categoria": "enjambre",
+    "mundos": {
+      "3": {
+        "rol": "unico",
+        "sprite_set": "w03_enemy_cteno",
+        "runtime_ready": true
+      },
+      "12": {
+        "rol": "recurrente",
+        "sprite_set": "w12_enemy_cteno",
+        "runtime_ready": true
+      }
+    },
+    "movimiento": "M2",
+    "disparo": "F1",
+    "tamano": [
+      24,
+      24
+    ],
+    "puntos": 100,
+    "drop": {
+      "moneda_chica": 0.35,
+      "moneda_grande": 0.05
+    },
+    "estado": "revisar",
+    "blindado": false,
+    "parametros": {
+      "carcasa_abierta_seg": 1,
+      "cadena_intervalo_seg": 0.15
+    },
+    "runtime_ready": true
   },
   {
     "id": "dodeca",
@@ -566,11 +928,13 @@
     "mundos": {
       "3": {
         "rol": "unico",
-        "sprite_set": "w03_enemy_dodeca"
+        "sprite_set": "w03_enemy_dodeca",
+        "runtime_ready": true
       },
-      "14": {
+      "12": {
         "rol": "recurrente",
-        "sprite_set": "w14_enemy_dodeca"
+        "sprite_set": "w12_enemy_dodeca",
+        "runtime_ready": true
       }
     },
     "movimiento": "M2",
@@ -589,73 +953,8 @@
     "parametros": {
       "carcasa_abierta_seg": 1,
       "cadena_intervalo_seg": 0.15
-    }
-  },
-  {
-    "id": "oenone",
-    "familia": "Oenone · Oenonidae",
-    "tipo": "errante",
-    "categoria": "pequeno",
-    "mundos": {
-      "3": {
-        "rol": "unico",
-        "sprite_set": "w03_enemy_oenone"
-      },
-      "14": {
-        "rol": "recurrente",
-        "sprite_set": "w14_enemy_oenone"
-      }
     },
-    "movimiento": "M3",
-    "disparo": "F2",
-    "tamano": [
-      32,
-      32
-    ],
-    "puntos": 100,
-    "drop": {
-      "moneda_chica": 0.35,
-      "moneda_grande": 0.05
-    },
-    "estado": "revisar",
-    "blindado": false,
-    "parametros": {
-      "carcasa_abierta_seg": 1,
-      "cadena_intervalo_seg": 0.15
-    }
-  },
-  {
-    "id": "arabella",
-    "familia": "Arabella · Arabellidae",
-    "tipo": "errante",
-    "categoria": "pequeno",
-    "mundos": {
-      "3": {
-        "rol": "unico",
-        "sprite_set": "w03_enemy_arabella"
-      },
-      "14": {
-        "rol": "recurrente",
-        "sprite_set": "w14_enemy_arabella"
-      }
-    },
-    "movimiento": "M3",
-    "disparo": "F2",
-    "tamano": [
-      32,
-      32
-    ],
-    "puntos": 100,
-    "drop": {
-      "moneda_chica": 0.35,
-      "moneda_grande": 0.05
-    },
-    "estado": "revisar",
-    "blindado": false,
-    "parametros": {
-      "carcasa_abierta_seg": 1,
-      "cadena_intervalo_seg": 0.15
-    }
+    "runtime_ready": true
   },
   {
     "id": "spha",
@@ -665,92 +964,25 @@
     "mundos": {
       "3": {
         "rol": "unico",
-        "sprite_set": "w03_enemy_spha"
+        "sprite_set": "w03_enemy_spha",
+        "runtime_ready": true
       },
-      "14": {
+      "9": {
         "rol": "recurrente",
-        "sprite_set": "w14_enemy_spha"
-      }
-    },
-    "movimiento": "M4",
-    "disparo": "F1",
-    "tamano": [
-      32,
-      32
-    ],
-    "puntos": 100,
-    "drop": {
-      "moneda_chica": 0.35,
-      "moneda_grande": 0.05
-    },
-    "estado": "revisar",
-    "blindado": false,
-    "parametros": {
-      "carcasa_abierta_seg": 1,
-      "cadena_intervalo_seg": 0.15
-    }
-  },
-  {
-    "id": "histrio",
-    "familia": "Histriobdellidae",
-    "tipo": "otro",
-    "categoria": "pequeno",
-    "mundos": {
-      "3": {
-        "rol": "unico",
-        "sprite_set": "w03_enemy_histrio"
-      },
-      "14": {
-        "rol": "recurrente",
-        "sprite_set": "w14_enemy_histrio"
-      }
-    },
-    "movimiento": "M4",
-    "disparo": "F1",
-    "tamano": [
-      32,
-      32
-    ],
-    "puntos": 100,
-    "drop": {
-      "moneda_chica": 0.35,
-      "moneda_grande": 0.05
-    },
-    "estado": "revisar",
-    "blindado": false,
-    "parametros": {
-      "carcasa_abierta_seg": 1,
-      "cadena_intervalo_seg": 0.15
-    }
-  },
-  {
-    "id": "serp",
-    "familia": "Serpulidae",
-    "tipo": "tubicola",
-    "categoria": "mediano",
-    "mundos": {
-      "3": {
-        "rol": "recurrente",
-        "sprite_set": "w03_enemy_serp"
-      },
-      "10": {
-        "rol": "recurrente",
-        "sprite_set": "w10_enemy_serp"
+        "sprite_set": "w09_enemy_spha",
+        "runtime_ready": true
       },
       "12": {
         "rol": "recurrente",
-        "sprite_set": "w12_enemy_serp"
-      },
-      "14": {
-        "rol": "recurrente",
-        "sprite_set": "w14_enemy_serp"
+        "sprite_set": "w12_enemy_spha",
+        "runtime_ready": true
       }
     },
-    "movimiento": "M5",
-    "disparo": "F3",
+    "movimiento": "M4",
+    "disparo": "F1",
     "tamano": [
-      48,
-      48
+      32,
+      32
     ],
     "puntos": 100,
     "drop": {
@@ -762,7 +994,59 @@
     "parametros": {
       "carcasa_abierta_seg": 1,
       "cadena_intervalo_seg": 0.15
-    }
+    },
+    "runtime_ready": true
+  },
+  {
+    "id": "cirrat",
+    "familia": "Cirratulidae",
+    "tipo": "enjambre",
+    "categoria": "enjambre",
+    "mundos": {
+      "3": {
+        "rol": "recurrente",
+        "sprite_set": "w03_enemy_cirrat",
+        "runtime_ready": true
+      },
+      "9": {
+        "rol": "recurrente",
+        "sprite_set": "w09_enemy_cirrat",
+        "runtime_ready": true
+      },
+      "10": {
+        "rol": "recurrente",
+        "sprite_set": "w10_enemy_cirrat",
+        "runtime_ready": true
+      },
+      "11": {
+        "rol": "recurrente",
+        "sprite_set": "w11_enemy_cirrat",
+        "runtime_ready": true
+      },
+      "12": {
+        "rol": "recurrente",
+        "sprite_set": "w12_enemy_cirrat",
+        "runtime_ready": true
+      }
+    },
+    "movimiento": "M2",
+    "disparo": "F1",
+    "tamano": [
+      24,
+      24
+    ],
+    "puntos": 100,
+    "drop": {
+      "moneda_chica": 0.35,
+      "moneda_grande": 0.05
+    },
+    "estado": "revisar",
+    "blindado": false,
+    "parametros": {
+      "carcasa_abierta_seg": 1,
+      "cadena_intervalo_seg": 0.15
+    },
+    "runtime_ready": true
   },
   {
     "id": "hesio",
@@ -772,19 +1056,18 @@
     "mundos": {
       "3": {
         "rol": "recurrente",
-        "sprite_set": "w03_enemy_hesio"
+        "sprite_set": "w03_enemy_hesio",
+        "runtime_ready": true
       },
-      "5": {
+      "4": {
         "rol": "recurrente",
-        "sprite_set": "w05_enemy_hesio"
+        "sprite_set": "w04_enemy_hesio",
+        "runtime_ready": true
       },
-      "6": {
+      "12": {
         "rol": "recurrente",
-        "sprite_set": "w06_enemy_hesio"
-      },
-      "14": {
-        "rol": "recurrente",
-        "sprite_set": "w14_enemy_hesio"
+        "sprite_set": "w12_enemy_hesio",
+        "runtime_ready": true
       }
     },
     "movimiento": "M3",
@@ -803,217 +1086,8 @@
     "parametros": {
       "carcasa_abierta_seg": 1,
       "cadena_intervalo_seg": 0.15
-    }
-  },
-  {
-    "id": "spirorbis",
-    "familia": "Spirorbis · Serpulidae",
-    "tipo": "tubicola",
-    "categoria": "mediano",
-    "mundos": {
-      "4": {
-        "rol": "unico",
-        "sprite_set": "w04_enemy_spirorbis"
-      },
-      "14": {
-        "rol": "recurrente",
-        "sprite_set": "w14_enemy_spirorbis"
-      }
     },
-    "movimiento": "M5",
-    "disparo": "F3",
-    "tamano": [
-      48,
-      48
-    ],
-    "puntos": 100,
-    "drop": {
-      "moneda_chica": 0.35,
-      "moneda_grande": 0.05
-    },
-    "estado": "revisar",
-    "blindado": false,
-    "parametros": {
-      "carcasa_abierta_seg": 1,
-      "cadena_intervalo_seg": 0.15
-    }
-  },
-  {
-    "id": "myxicola",
-    "familia": "Myxicola · Sabellidae",
-    "tipo": "tubicola",
-    "categoria": "mediano",
-    "mundos": {
-      "4": {
-        "rol": "unico",
-        "sprite_set": "w04_enemy_myxicola"
-      },
-      "14": {
-        "rol": "recurrente",
-        "sprite_set": "w14_enemy_myxicola"
-      }
-    },
-    "movimiento": "M5",
-    "disparo": "F3",
-    "tamano": [
-      48,
-      48
-    ],
-    "puntos": 100,
-    "drop": {
-      "moneda_chica": 0.35,
-      "moneda_grande": 0.05
-    },
-    "estado": "revisar",
-    "blindado": false,
-    "parametros": {
-      "carcasa_abierta_seg": 1,
-      "cadena_intervalo_seg": 0.15
-    }
-  },
-  {
-    "id": "spinther",
-    "familia": "Spintheridae",
-    "tipo": "otro",
-    "categoria": "pequeno",
-    "mundos": {
-      "4": {
-        "rol": "unico",
-        "sprite_set": "w04_enemy_spinther"
-      },
-      "14": {
-        "rol": "recurrente",
-        "sprite_set": "w14_enemy_spinther"
-      }
-    },
-    "movimiento": "M4",
-    "disparo": "F1",
-    "tamano": [
-      32,
-      32
-    ],
-    "puntos": 100,
-    "drop": {
-      "moneda_chica": 0.35,
-      "moneda_grande": 0.05
-    },
-    "estado": "revisar",
-    "blindado": false,
-    "parametros": {
-      "carcasa_abierta_seg": 1,
-      "cadena_intervalo_seg": 0.15
-    }
-  },
-  {
-    "id": "trocho",
-    "familia": "Trochochaeta · Trochochaetidae",
-    "tipo": "otro",
-    "categoria": "pequeno",
-    "mundos": {
-      "4": {
-        "rol": "unico",
-        "sprite_set": "w04_enemy_trocho"
-      },
-      "14": {
-        "rol": "recurrente",
-        "sprite_set": "w14_enemy_trocho"
-      }
-    },
-    "movimiento": "M4",
-    "disparo": "F1",
-    "tamano": [
-      32,
-      32
-    ],
-    "puntos": 100,
-    "drop": {
-      "moneda_chica": 0.35,
-      "moneda_grande": 0.05
-    },
-    "estado": "revisar",
-    "blindado": false,
-    "parametros": {
-      "carcasa_abierta_seg": 1,
-      "cadena_intervalo_seg": 0.15
-    }
-  },
-  {
-    "id": "cteno",
-    "familia": "Ctenodrilidae",
-    "tipo": "enjambre",
-    "categoria": "enjambre",
-    "mundos": {
-      "4": {
-        "rol": "unico",
-        "sprite_set": "w04_enemy_cteno"
-      },
-      "14": {
-        "rol": "recurrente",
-        "sprite_set": "w14_enemy_cteno"
-      }
-    },
-    "movimiento": "M2",
-    "disparo": "F1",
-    "tamano": [
-      24,
-      24
-    ],
-    "puntos": 100,
-    "drop": {
-      "moneda_chica": 0.35,
-      "moneda_grande": 0.05
-    },
-    "estado": "revisar",
-    "blindado": false,
-    "parametros": {
-      "carcasa_abierta_seg": 1,
-      "cadena_intervalo_seg": 0.15
-    }
-  },
-  {
-    "id": "cirrat",
-    "familia": "Cirratulidae",
-    "tipo": "enjambre",
-    "categoria": "enjambre",
-    "mundos": {
-      "4": {
-        "rol": "recurrente",
-        "sprite_set": "w04_enemy_cirrat"
-      },
-      "11": {
-        "rol": "recurrente",
-        "sprite_set": "w11_enemy_cirrat"
-      },
-      "12": {
-        "rol": "recurrente",
-        "sprite_set": "w12_enemy_cirrat"
-      },
-      "13": {
-        "rol": "recurrente",
-        "sprite_set": "w13_enemy_cirrat"
-      },
-      "14": {
-        "rol": "recurrente",
-        "sprite_set": "w14_enemy_cirrat"
-      }
-    },
-    "movimiento": "M2",
-    "disparo": "F1",
-    "tamano": [
-      24,
-      24
-    ],
-    "puntos": 100,
-    "drop": {
-      "moneda_chica": 0.35,
-      "moneda_grande": 0.05
-    },
-    "estado": "revisar",
-    "blindado": false,
-    "parametros": {
-      "carcasa_abierta_seg": 1,
-      "cadena_intervalo_seg": 0.15
-    }
+    "runtime_ready": true
   },
   {
     "id": "spirobranchus",
@@ -1021,13 +1095,15 @@
     "tipo": "tubicola",
     "categoria": "mediano",
     "mundos": {
-      "5": {
+      "4": {
         "rol": "unico",
-        "sprite_set": "w05_enemy_spirobranchus"
+        "sprite_set": "w04_enemy_spirobranchus",
+        "runtime_ready": true
       },
-      "14": {
+      "12": {
         "rol": "recurrente",
-        "sprite_set": "w14_enemy_spirobranchus"
+        "sprite_set": "w12_enemy_spirobranchus",
+        "runtime_ready": true
       }
     },
     "movimiento": "M5",
@@ -1046,7 +1122,8 @@
     "parametros": {
       "carcasa_abierta_seg": 1,
       "cadena_intervalo_seg": 0.15
-    }
+    },
+    "runtime_ready": true
   },
   {
     "id": "sabellastarte",
@@ -1054,13 +1131,15 @@
     "tipo": "tubicola",
     "categoria": "mediano",
     "mundos": {
-      "5": {
+      "4": {
         "rol": "unico",
-        "sprite_set": "w05_enemy_sabellastarte"
+        "sprite_set": "w04_enemy_sabellastarte",
+        "runtime_ready": true
       },
-      "14": {
+      "12": {
         "rol": "recurrente",
-        "sprite_set": "w14_enemy_sabellastarte"
+        "sprite_set": "w12_enemy_sabellastarte",
+        "runtime_ready": true
       }
     },
     "movimiento": "M5",
@@ -1079,7 +1158,8 @@
     "parametros": {
       "carcasa_abierta_seg": 1,
       "cadena_intervalo_seg": 0.15
-    }
+    },
+    "runtime_ready": true
   },
   {
     "id": "eulepeth",
@@ -1087,13 +1167,15 @@
     "tipo": "escamoso",
     "categoria": "mediano",
     "mundos": {
-      "5": {
+      "4": {
         "rol": "unico",
-        "sprite_set": "w05_enemy_eulepeth"
+        "sprite_set": "w04_enemy_eulepeth",
+        "runtime_ready": true
       },
-      "14": {
+      "12": {
         "rol": "recurrente",
-        "sprite_set": "w14_enemy_eulepeth"
+        "sprite_set": "w12_enemy_eulepeth",
+        "runtime_ready": true
       }
     },
     "movimiento": "M7",
@@ -1112,7 +1194,8 @@
     "parametros": {
       "carcasa_abierta_seg": 1,
       "cadena_intervalo_seg": 0.15
-    }
+    },
+    "runtime_ready": true
   },
   {
     "id": "acoet",
@@ -1120,13 +1203,15 @@
     "tipo": "escamoso",
     "categoria": "mediano",
     "mundos": {
-      "5": {
+      "4": {
         "rol": "unico",
-        "sprite_set": "w05_enemy_acoet"
+        "sprite_set": "w04_enemy_acoet",
+        "runtime_ready": true
       },
-      "14": {
+      "12": {
         "rol": "recurrente",
-        "sprite_set": "w14_enemy_acoet"
+        "sprite_set": "w12_enemy_acoet",
+        "runtime_ready": true
       }
     },
     "movimiento": "M7",
@@ -1145,7 +1230,8 @@
     "parametros": {
       "carcasa_abierta_seg": 1,
       "cadena_intervalo_seg": 0.15
-    }
+    },
+    "runtime_ready": true
   },
   {
     "id": "pholoe",
@@ -1153,13 +1239,15 @@
     "tipo": "escamoso",
     "categoria": "mediano",
     "mundos": {
-      "5": {
+      "4": {
         "rol": "unico",
-        "sprite_set": "w05_enemy_pholoe"
+        "sprite_set": "w04_enemy_pholoe",
+        "runtime_ready": true
       },
-      "14": {
+      "12": {
         "rol": "recurrente",
-        "sprite_set": "w14_enemy_pholoe"
+        "sprite_set": "w12_enemy_pholoe",
+        "runtime_ready": true
       }
     },
     "movimiento": "M7",
@@ -1178,21 +1266,24 @@
     "parametros": {
       "carcasa_abierta_seg": 1,
       "cadena_intervalo_seg": 0.15
-    }
+    },
+    "runtime_ready": true
   },
   {
-    "id": "glycera",
-    "familia": "Glycera · Glyceridae",
+    "id": "oenone",
+    "familia": "Oenone · Oenonidae",
     "tipo": "errante",
     "categoria": "pequeno",
     "mundos": {
-      "6": {
+      "4": {
         "rol": "unico",
-        "sprite_set": "w06_enemy_glycera"
+        "sprite_set": "w04_enemy_oenone",
+        "runtime_ready": true
       },
-      "14": {
+      "12": {
         "rol": "recurrente",
-        "sprite_set": "w14_enemy_glycera"
+        "sprite_set": "w12_enemy_oenone",
+        "runtime_ready": true
       }
     },
     "movimiento": "M3",
@@ -1211,40 +1302,8 @@
     "parametros": {
       "carcasa_abierta_seg": 1,
       "cadena_intervalo_seg": 0.15
-    }
-  },
-  {
-    "id": "diopatra",
-    "familia": "Diopatra · Onuphidae",
-    "tipo": "tubicola",
-    "categoria": "mediano",
-    "mundos": {
-      "6": {
-        "rol": "unico",
-        "sprite_set": "w06_enemy_diopatra"
-      },
-      "14": {
-        "rol": "recurrente",
-        "sprite_set": "w14_enemy_diopatra"
-      }
     },
-    "movimiento": "M5",
-    "disparo": "F3",
-    "tamano": [
-      48,
-      48
-    ],
-    "puntos": 100,
-    "drop": {
-      "moneda_chica": 0.35,
-      "moneda_grande": 0.05
-    },
-    "estado": "revisar",
-    "blindado": false,
-    "parametros": {
-      "carcasa_abierta_seg": 1,
-      "cadena_intervalo_seg": 0.15
-    }
+    "runtime_ready": true
   },
   {
     "id": "chaetopterus",
@@ -1252,13 +1311,15 @@
     "tipo": "tubicola",
     "categoria": "mediano",
     "mundos": {
-      "6": {
+      "4": {
         "rol": "unico",
-        "sprite_set": "w06_enemy_chaetopterus"
+        "sprite_set": "w04_enemy_chaetopterus",
+        "runtime_ready": true
       },
-      "14": {
+      "12": {
         "rol": "recurrente",
-        "sprite_set": "w14_enemy_chaetopterus"
+        "sprite_set": "w12_enemy_chaetopterus",
+        "runtime_ready": true
       }
     },
     "movimiento": "M5",
@@ -1277,21 +1338,34 @@
     "parametros": {
       "carcasa_abierta_seg": 1,
       "cadena_intervalo_seg": 0.15
-    }
+    },
+    "runtime_ready": true
   },
   {
-    "id": "sabellaria",
-    "familia": "Sabellaria · Sabellariidae",
+    "id": "serp",
+    "familia": "Serpulidae",
     "tipo": "tubicola",
     "categoria": "mediano",
     "mundos": {
-      "6": {
-        "rol": "unico",
-        "sprite_set": "w06_enemy_sabellaria"
-      },
-      "14": {
+      "4": {
         "rol": "recurrente",
-        "sprite_set": "w14_enemy_sabellaria"
+        "sprite_set": "w04_enemy_serp",
+        "runtime_ready": true
+      },
+      "8": {
+        "rol": "recurrente",
+        "sprite_set": "w08_enemy_serp",
+        "runtime_ready": true
+      },
+      "10": {
+        "rol": "recurrente",
+        "sprite_set": "w10_enemy_serp",
+        "runtime_ready": true
+      },
+      "12": {
+        "rol": "recurrente",
+        "sprite_set": "w12_enemy_serp",
+        "runtime_ready": true
       }
     },
     "movimiento": "M5",
@@ -1310,40 +1384,8 @@
     "parametros": {
       "carcasa_abierta_seg": 1,
       "cadena_intervalo_seg": 0.15
-    }
-  },
-  {
-    "id": "pectinaria",
-    "familia": "Pectinaria · Pectinariidae",
-    "tipo": "tubicola",
-    "categoria": "mediano",
-    "mundos": {
-      "6": {
-        "rol": "unico",
-        "sprite_set": "w06_enemy_pectinaria"
-      },
-      "14": {
-        "rol": "recurrente",
-        "sprite_set": "w14_enemy_pectinaria"
-      }
     },
-    "movimiento": "M5",
-    "disparo": "F3",
-    "tamano": [
-      48,
-      48
-    ],
-    "puntos": 100,
-    "drop": {
-      "moneda_chica": 0.35,
-      "moneda_grande": 0.05
-    },
-    "estado": "revisar",
-    "blindado": false,
-    "parametros": {
-      "carcasa_abierta_seg": 1,
-      "cadena_intervalo_seg": 0.15
-    }
+    "runtime_ready": true
   },
   {
     "id": "aricidea",
@@ -1351,13 +1393,15 @@
     "tipo": "cavador",
     "categoria": "pequeno",
     "mundos": {
-      "7": {
+      "5": {
         "rol": "unico",
-        "sprite_set": "w07_enemy_aricidea"
+        "sprite_set": "w05_enemy_aricidea",
+        "runtime_ready": true
       },
-      "14": {
+      "12": {
         "rol": "recurrente",
-        "sprite_set": "w14_enemy_aricidea"
+        "sprite_set": "w12_enemy_aricidea",
+        "runtime_ready": true
       }
     },
     "movimiento": "M6",
@@ -1376,7 +1420,8 @@
     "parametros": {
       "carcasa_abierta_seg": 1,
       "cadena_intervalo_seg": 0.15
-    }
+    },
+    "runtime_ready": true
   },
   {
     "id": "terebellides",
@@ -1384,13 +1429,15 @@
     "tipo": "tubicola",
     "categoria": "mediano",
     "mundos": {
-      "7": {
+      "5": {
         "rol": "unico",
-        "sprite_set": "w07_enemy_terebellides"
+        "sprite_set": "w05_enemy_terebellides",
+        "runtime_ready": true
       },
-      "14": {
+      "12": {
         "rol": "recurrente",
-        "sprite_set": "w14_enemy_terebellides"
+        "sprite_set": "w12_enemy_terebellides",
+        "runtime_ready": true
       }
     },
     "movimiento": "M5",
@@ -1409,7 +1456,8 @@
     "parametros": {
       "carcasa_abierta_seg": 1,
       "cadena_intervalo_seg": 0.15
-    }
+    },
+    "runtime_ready": true
   },
   {
     "id": "questa",
@@ -1417,13 +1465,15 @@
     "tipo": "otro",
     "categoria": "pequeno",
     "mundos": {
-      "7": {
+      "5": {
         "rol": "unico",
-        "sprite_set": "w07_enemy_questa"
+        "sprite_set": "w05_enemy_questa",
+        "runtime_ready": true
       },
-      "14": {
+      "12": {
         "rol": "recurrente",
-        "sprite_set": "w14_enemy_questa"
+        "sprite_set": "w12_enemy_questa",
+        "runtime_ready": true
       }
     },
     "movimiento": "M4",
@@ -1442,7 +1492,8 @@
     "parametros": {
       "carcasa_abierta_seg": 1,
       "cadena_intervalo_seg": 0.15
-    }
+    },
+    "runtime_ready": true
   },
   {
     "id": "fauvel",
@@ -1450,13 +1501,15 @@
     "tipo": "otro",
     "categoria": "pequeno",
     "mundos": {
-      "7": {
+      "5": {
         "rol": "unico",
-        "sprite_set": "w07_enemy_fauvel"
+        "sprite_set": "w05_enemy_fauvel",
+        "runtime_ready": true
       },
-      "14": {
+      "12": {
         "rol": "recurrente",
-        "sprite_set": "w14_enemy_fauvel"
+        "sprite_set": "w12_enemy_fauvel",
+        "runtime_ready": true
       }
     },
     "movimiento": "M4",
@@ -1475,7 +1528,8 @@
     "parametros": {
       "carcasa_abierta_seg": 1,
       "cadena_intervalo_seg": 0.15
-    }
+    },
+    "runtime_ready": true
   },
   {
     "id": "protod",
@@ -1483,13 +1537,15 @@
     "tipo": "enjambre",
     "categoria": "enjambre",
     "mundos": {
-      "7": {
+      "5": {
         "rol": "unico",
-        "sprite_set": "w07_enemy_protod"
+        "sprite_set": "w05_enemy_protod",
+        "runtime_ready": true
       },
-      "14": {
+      "12": {
         "rol": "recurrente",
-        "sprite_set": "w14_enemy_protod"
+        "sprite_set": "w12_enemy_protod",
+        "runtime_ready": true
       }
     },
     "movimiento": "M2",
@@ -1508,7 +1564,62 @@
     "parametros": {
       "carcasa_abierta_seg": 1,
       "cadena_intervalo_seg": 0.15
-    }
+    },
+    "runtime_ready": true
+  },
+  {
+    "id": "arabella",
+    "familia": "Arabella · Arabellidae",
+    "tipo": "errante",
+    "categoria": "pequeno",
+    "mundos": {
+      "5": {
+        "rol": "unico",
+        "sprite_set": "w05_enemy_arabella",
+        "runtime_ready": true
+      },
+      "12": {
+        "rol": "recurrente",
+        "sprite_set": "w12_enemy_arabella",
+        "runtime_ready": true
+      }
+    },
+    "movimiento": "M3",
+    "disparo": "F2",
+    "tamano": [
+      32,
+      32
+    ],
+    "puntos": 100,
+    "drop": {
+      "moneda_chica": 0.35,
+      "moneda_grande": 0.05
+    },
+    "estado": "revisar",
+    "blindado": false,
+    "parametros": {
+      "carcasa_abierta_seg": 1,
+      "cadena_intervalo_seg": 0.15
+    },
+    "runtime_ready": true
+  },
+  {
+    "id": "hediste_diversicolor",
+    "familia": "Hediste diversicolor · Nereididae",
+    "tipo": "pendiente",
+    "mundos": {
+      "5": {
+        "rol": "unico",
+        "sprite_set": "w05_enemy_hediste_diversicolor",
+        "runtime_ready": false
+      }
+    },
+    "estado": "pendiente",
+    "runtime_ready": false,
+    "pending": [
+      "original_png_and_atlas",
+      "accepted_behavior_and_balance"
+    ]
   },
   {
     "id": "ophelia",
@@ -1516,13 +1627,15 @@
     "tipo": "cavador",
     "categoria": "pequeno",
     "mundos": {
-      "8": {
+      "6": {
         "rol": "unico",
-        "sprite_set": "w08_enemy_ophelia"
+        "sprite_set": "w06_enemy_ophelia",
+        "runtime_ready": true
       },
-      "14": {
+      "12": {
         "rol": "recurrente",
-        "sprite_set": "w14_enemy_ophelia"
+        "sprite_set": "w12_enemy_ophelia",
+        "runtime_ready": true
       }
     },
     "movimiento": "M6",
@@ -1541,7 +1654,8 @@
     "parametros": {
       "carcasa_abierta_seg": 1,
       "cadena_intervalo_seg": 0.15
-    }
+    },
+    "runtime_ready": true
   },
   {
     "id": "cossura",
@@ -1549,13 +1663,15 @@
     "tipo": "cavador",
     "categoria": "pequeno",
     "mundos": {
-      "8": {
+      "6": {
         "rol": "unico",
-        "sprite_set": "w08_enemy_cossura"
+        "sprite_set": "w06_enemy_cossura",
+        "runtime_ready": true
       },
-      "14": {
+      "12": {
         "rol": "recurrente",
-        "sprite_set": "w14_enemy_cossura"
+        "sprite_set": "w12_enemy_cossura",
+        "runtime_ready": true
       }
     },
     "movimiento": "M6",
@@ -1574,7 +1690,8 @@
     "parametros": {
       "carcasa_abierta_seg": 1,
       "cadena_intervalo_seg": 0.15
-    }
+    },
+    "runtime_ready": true
   },
   {
     "id": "pilarg",
@@ -1582,13 +1699,15 @@
     "tipo": "errante",
     "categoria": "pequeno",
     "mundos": {
-      "8": {
+      "6": {
         "rol": "unico",
-        "sprite_set": "w08_enemy_pilarg"
+        "sprite_set": "w06_enemy_pilarg",
+        "runtime_ready": true
       },
-      "14": {
+      "12": {
         "rol": "recurrente",
-        "sprite_set": "w14_enemy_pilarg"
+        "sprite_set": "w12_enemy_pilarg",
+        "runtime_ready": true
       }
     },
     "movimiento": "M3",
@@ -1607,7 +1726,8 @@
     "parametros": {
       "carcasa_abierta_seg": 1,
       "cadena_intervalo_seg": 0.15
-    }
+    },
+    "runtime_ready": true
   },
   {
     "id": "lumbrineris",
@@ -1615,13 +1735,15 @@
     "tipo": "errante",
     "categoria": "pequeno",
     "mundos": {
-      "8": {
+      "6": {
         "rol": "unico",
-        "sprite_set": "w08_enemy_lumbrineris"
+        "sprite_set": "w06_enemy_lumbrineris",
+        "runtime_ready": true
       },
-      "14": {
+      "12": {
         "rol": "recurrente",
-        "sprite_set": "w14_enemy_lumbrineris"
+        "sprite_set": "w12_enemy_lumbrineris",
+        "runtime_ready": true
       }
     },
     "movimiento": "M3",
@@ -1640,7 +1762,8 @@
     "parametros": {
       "carcasa_abierta_seg": 1,
       "cadena_intervalo_seg": 0.15
-    }
+    },
+    "runtime_ready": true
   },
   {
     "id": "owenia",
@@ -1648,13 +1771,15 @@
     "tipo": "tubicola",
     "categoria": "mediano",
     "mundos": {
-      "8": {
+      "6": {
         "rol": "unico",
-        "sprite_set": "w08_enemy_owenia"
+        "sprite_set": "w06_enemy_owenia",
+        "runtime_ready": true
       },
-      "14": {
+      "12": {
         "rol": "recurrente",
-        "sprite_set": "w14_enemy_owenia"
+        "sprite_set": "w12_enemy_owenia",
+        "runtime_ready": true
       }
     },
     "movimiento": "M5",
@@ -1673,7 +1798,49 @@
     "parametros": {
       "carcasa_abierta_seg": 1,
       "cadena_intervalo_seg": 0.15
-    }
+    },
+    "runtime_ready": true
+  },
+  {
+    "id": "capitella_capitata",
+    "familia": "Capitella capitata (complejo) · Capitellidae",
+    "tipo": "pendiente",
+    "mundos": {
+      "6": {
+        "rol": "unico",
+        "sprite_set": "w06_enemy_capitella_capitata",
+        "runtime_ready": false
+      },
+      "12": {
+        "rol": "recurrente",
+        "sprite_set": "w12_enemy_capitella_capitata",
+        "runtime_ready": false
+      }
+    },
+    "estado": "pendiente",
+    "runtime_ready": false,
+    "pending": [
+      "original_png_and_atlas",
+      "accepted_behavior_and_balance"
+    ]
+  },
+  {
+    "id": "polydora_ciliata",
+    "familia": "Polydora ciliata · Spionidae",
+    "tipo": "pendiente",
+    "mundos": {
+      "6": {
+        "rol": "unico",
+        "sprite_set": "w06_enemy_polydora_ciliata",
+        "runtime_ready": false
+      }
+    },
+    "estado": "pendiente",
+    "runtime_ready": false,
+    "pending": [
+      "original_png_and_atlas",
+      "accepted_behavior_and_balance"
+    ]
   },
   {
     "id": "dorville",
@@ -1681,21 +1848,25 @@
     "tipo": "errante",
     "categoria": "pequeno",
     "mundos": {
-      "8": {
+      "6": {
         "rol": "recurrente",
-        "sprite_set": "w08_enemy_dorville"
+        "sprite_set": "w06_enemy_dorville",
+        "runtime_ready": true
+      },
+      "10": {
+        "rol": "recurrente",
+        "sprite_set": "w10_enemy_dorville",
+        "runtime_ready": true
+      },
+      "11": {
+        "rol": "recurrente",
+        "sprite_set": "w11_enemy_dorville",
+        "runtime_ready": true
       },
       "12": {
         "rol": "recurrente",
-        "sprite_set": "w12_enemy_dorville"
-      },
-      "13": {
-        "rol": "recurrente",
-        "sprite_set": "w13_enemy_dorville"
-      },
-      "14": {
-        "rol": "recurrente",
-        "sprite_set": "w14_enemy_dorville"
+        "sprite_set": "w12_enemy_dorville",
+        "runtime_ready": true
       }
     },
     "movimiento": "M3",
@@ -1714,7 +1885,8 @@
     "parametros": {
       "carcasa_abierta_seg": 1,
       "cadena_intervalo_seg": 0.15
-    }
+    },
+    "runtime_ready": true
   },
   {
     "id": "pontod",
@@ -1722,13 +1894,15 @@
     "tipo": "pelagico",
     "categoria": "pequeno",
     "mundos": {
-      "9": {
+      "7": {
         "rol": "unico",
-        "sprite_set": "w09_enemy_pontod"
+        "sprite_set": "w07_enemy_pontod",
+        "runtime_ready": true
       },
-      "14": {
+      "12": {
         "rol": "recurrente",
-        "sprite_set": "w14_enemy_pontod"
+        "sprite_set": "w12_enemy_pontod",
+        "runtime_ready": true
       }
     },
     "movimiento": "M8",
@@ -1747,7 +1921,8 @@
     "parametros": {
       "carcasa_abierta_seg": 1,
       "cadena_intervalo_seg": 0.15
-    }
+    },
+    "runtime_ready": true
   },
   {
     "id": "lopado",
@@ -1755,13 +1930,15 @@
     "tipo": "pelagico",
     "categoria": "pequeno",
     "mundos": {
-      "9": {
+      "7": {
         "rol": "unico",
-        "sprite_set": "w09_enemy_lopado"
+        "sprite_set": "w07_enemy_lopado",
+        "runtime_ready": true
       },
-      "14": {
+      "12": {
         "rol": "recurrente",
-        "sprite_set": "w14_enemy_lopado"
+        "sprite_set": "w12_enemy_lopado",
+        "runtime_ready": true
       }
     },
     "movimiento": "M8",
@@ -1780,7 +1957,8 @@
     "parametros": {
       "carcasa_abierta_seg": 1,
       "cadena_intervalo_seg": 0.15
-    }
+    },
+    "runtime_ready": true
   },
   {
     "id": "typhlo",
@@ -1788,13 +1966,15 @@
     "tipo": "pelagico",
     "categoria": "pequeno",
     "mundos": {
-      "9": {
+      "7": {
         "rol": "unico",
-        "sprite_set": "w09_enemy_typhlo"
+        "sprite_set": "w07_enemy_typhlo",
+        "runtime_ready": true
       },
-      "14": {
+      "12": {
         "rol": "recurrente",
-        "sprite_set": "w14_enemy_typhlo"
+        "sprite_set": "w12_enemy_typhlo",
+        "runtime_ready": true
       }
     },
     "movimiento": "M8",
@@ -1813,7 +1993,8 @@
     "parametros": {
       "carcasa_abierta_seg": 1,
       "cadena_intervalo_seg": 0.15
-    }
+    },
+    "runtime_ready": true
   },
   {
     "id": "poeo",
@@ -1821,13 +2002,15 @@
     "tipo": "pelagico",
     "categoria": "pequeno",
     "mundos": {
-      "9": {
+      "7": {
         "rol": "unico",
-        "sprite_set": "w09_enemy_poeo"
+        "sprite_set": "w07_enemy_poeo",
+        "runtime_ready": true
       },
-      "14": {
+      "12": {
         "rol": "recurrente",
-        "sprite_set": "w14_enemy_poeo"
+        "sprite_set": "w12_enemy_poeo",
+        "runtime_ready": true
       }
     },
     "movimiento": "M8",
@@ -1846,7 +2029,8 @@
     "parametros": {
       "carcasa_abierta_seg": 1,
       "cadena_intervalo_seg": 0.15
-    }
+    },
+    "runtime_ready": true
   },
   {
     "id": "iospil",
@@ -1854,13 +2038,15 @@
     "tipo": "pelagico",
     "categoria": "pequeno",
     "mundos": {
-      "9": {
+      "7": {
         "rol": "unico",
-        "sprite_set": "w09_enemy_iospil"
+        "sprite_set": "w07_enemy_iospil",
+        "runtime_ready": true
       },
-      "14": {
+      "12": {
         "rol": "recurrente",
-        "sprite_set": "w14_enemy_iospil"
+        "sprite_set": "w12_enemy_iospil",
+        "runtime_ready": true
       }
     },
     "movimiento": "M8",
@@ -1879,7 +2065,44 @@
     "parametros": {
       "carcasa_abierta_seg": 1,
       "cadena_intervalo_seg": 0.15
-    }
+    },
+    "runtime_ready": true
+  },
+  {
+    "id": "vanadis_antarctica",
+    "familia": "Vanadis antarctica · Alciopidae",
+    "tipo": "pendiente",
+    "mundos": {
+      "7": {
+        "rol": "unico",
+        "sprite_set": "w07_enemy_vanadis_antarctica",
+        "runtime_ready": false
+      }
+    },
+    "estado": "pendiente",
+    "runtime_ready": false,
+    "pending": [
+      "original_png_and_atlas",
+      "accepted_behavior_and_balance"
+    ]
+  },
+  {
+    "id": "pelagobia_longicirrata",
+    "familia": "Pelagobia longicirrata · Lopadorrhynchidae",
+    "tipo": "pendiente",
+    "mundos": {
+      "7": {
+        "rol": "unico",
+        "sprite_set": "w07_enemy_pelagobia_longicirrata",
+        "runtime_ready": false
+      }
+    },
+    "estado": "pendiente",
+    "runtime_ready": false,
+    "pending": [
+      "original_png_and_atlas",
+      "accepted_behavior_and_balance"
+    ]
   },
   {
     "id": "syll_stolon",
@@ -1887,13 +2110,15 @@
     "tipo": "enjambre",
     "categoria": "enjambre",
     "mundos": {
-      "9": {
+      "7": {
         "rol": "recurrente",
-        "sprite_set": "w09_enemy_syll_stolon"
+        "sprite_set": "w07_enemy_syll_stolon",
+        "runtime_ready": true
       },
-      "14": {
+      "12": {
         "rol": "recurrente",
-        "sprite_set": "w14_enemy_syll_stolon"
+        "sprite_set": "w12_enemy_syll_stolon",
+        "runtime_ready": true
       }
     },
     "movimiento": "M2",
@@ -1912,7 +2137,8 @@
     "parametros": {
       "carcasa_abierta_seg": 1,
       "cadena_intervalo_seg": 0.15
-    }
+    },
+    "runtime_ready": true
   },
   {
     "id": "alciop",
@@ -1920,21 +2146,25 @@
     "tipo": "pelagico",
     "categoria": "pequeno",
     "mundos": {
-      "9": {
+      "7": {
         "rol": "recurrente",
-        "sprite_set": "w09_enemy_alciop"
+        "sprite_set": "w07_enemy_alciop",
+        "runtime_ready": true
       },
-      "10": {
+      "8": {
         "rol": "recurrente",
-        "sprite_set": "w10_enemy_alciop"
+        "sprite_set": "w08_enemy_alciop",
+        "runtime_ready": true
       },
-      "13": {
+      "11": {
         "rol": "recurrente",
-        "sprite_set": "w13_enemy_alciop"
+        "sprite_set": "w11_enemy_alciop",
+        "runtime_ready": true
       },
-      "14": {
+      "12": {
         "rol": "recurrente",
-        "sprite_set": "w14_enemy_alciop"
+        "sprite_set": "w12_enemy_alciop",
+        "runtime_ready": true
       }
     },
     "movimiento": "M8",
@@ -1953,7 +2183,49 @@
     "parametros": {
       "carcasa_abierta_seg": 1,
       "cadena_intervalo_seg": 0.15
-    }
+    },
+    "runtime_ready": true
+  },
+  {
+    "id": "swima",
+    "familia": "Acrocirridae",
+    "tipo": "pelagico",
+    "categoria": "pequeno",
+    "mundos": {
+      "7": {
+        "rol": "recurrente",
+        "sprite_set": "w07_enemy_swima",
+        "runtime_ready": true
+      },
+      "11": {
+        "rol": "unico",
+        "sprite_set": "w11_enemy_swima",
+        "runtime_ready": true
+      },
+      "12": {
+        "rol": "recurrente",
+        "sprite_set": "w12_enemy_swima",
+        "runtime_ready": true
+      }
+    },
+    "movimiento": "M8",
+    "disparo": "F4",
+    "tamano": [
+      32,
+      32
+    ],
+    "puntos": 100,
+    "drop": {
+      "moneda_chica": 0.35,
+      "moneda_grande": 0.05
+    },
+    "estado": "revisar",
+    "blindado": false,
+    "parametros": {
+      "carcasa_abierta_seg": 1,
+      "cadena_intervalo_seg": 0.15
+    },
+    "runtime_ready": true
   },
   {
     "id": "flabegraviera",
@@ -1961,13 +2233,15 @@
     "tipo": "otro",
     "categoria": "pequeno",
     "mundos": {
-      "10": {
+      "8": {
         "rol": "unico",
-        "sprite_set": "w10_enemy_flabegraviera"
+        "sprite_set": "w08_enemy_flabegraviera",
+        "runtime_ready": true
       },
-      "14": {
+      "12": {
         "rol": "recurrente",
-        "sprite_set": "w14_enemy_flabegraviera"
+        "sprite_set": "w12_enemy_flabegraviera",
+        "runtime_ready": true
       }
     },
     "movimiento": "M4",
@@ -1986,7 +2260,8 @@
     "parametros": {
       "carcasa_abierta_seg": 1,
       "cadena_intervalo_seg": 0.15
-    }
+    },
+    "runtime_ready": true
   },
   {
     "id": "aphelochaeta",
@@ -1994,13 +2269,15 @@
     "tipo": "enjambre",
     "categoria": "enjambre",
     "mundos": {
-      "10": {
+      "8": {
         "rol": "unico",
-        "sprite_set": "w10_enemy_aphelochaeta"
+        "sprite_set": "w08_enemy_aphelochaeta",
+        "runtime_ready": true
       },
-      "14": {
+      "12": {
         "rol": "recurrente",
-        "sprite_set": "w14_enemy_aphelochaeta"
+        "sprite_set": "w12_enemy_aphelochaeta",
+        "runtime_ready": true
       }
     },
     "movimiento": "M2",
@@ -2019,7 +2296,8 @@
     "parametros": {
       "carcasa_abierta_seg": 1,
       "cadena_intervalo_seg": 0.15
-    }
+    },
+    "runtime_ready": true
   },
   {
     "id": "mald",
@@ -2027,13 +2305,15 @@
     "tipo": "cavador",
     "categoria": "pequeno",
     "mundos": {
-      "10": {
+      "8": {
         "rol": "unico",
-        "sprite_set": "w10_enemy_mald"
+        "sprite_set": "w08_enemy_mald",
+        "runtime_ready": true
       },
-      "14": {
+      "12": {
         "rol": "recurrente",
-        "sprite_set": "w14_enemy_mald"
+        "sprite_set": "w12_enemy_mald",
+        "runtime_ready": true
       }
     },
     "movimiento": "M6",
@@ -2052,7 +2332,8 @@
     "parametros": {
       "carcasa_abierta_seg": 1,
       "cadena_intervalo_seg": 0.15
-    }
+    },
+    "runtime_ready": true
   },
   {
     "id": "perkinsiana",
@@ -2060,13 +2341,15 @@
     "tipo": "tubicola",
     "categoria": "mediano",
     "mundos": {
-      "10": {
+      "8": {
         "rol": "unico",
-        "sprite_set": "w10_enemy_perkinsiana"
+        "sprite_set": "w08_enemy_perkinsiana",
+        "runtime_ready": true
       },
-      "14": {
+      "12": {
         "rol": "recurrente",
-        "sprite_set": "w14_enemy_perkinsiana"
+        "sprite_set": "w12_enemy_perkinsiana",
+        "runtime_ready": true
       }
     },
     "movimiento": "M5",
@@ -2085,7 +2368,8 @@
     "parametros": {
       "carcasa_abierta_seg": 1,
       "cadena_intervalo_seg": 0.15
-    }
+    },
+    "runtime_ready": true
   },
   {
     "id": "amphar",
@@ -2093,13 +2377,15 @@
     "tipo": "tubicola",
     "categoria": "mediano",
     "mundos": {
-      "10": {
+      "8": {
         "rol": "unico",
-        "sprite_set": "w10_enemy_amphar"
+        "sprite_set": "w08_enemy_amphar",
+        "runtime_ready": true
       },
-      "14": {
+      "12": {
         "rol": "recurrente",
-        "sprite_set": "w14_enemy_amphar"
+        "sprite_set": "w12_enemy_amphar",
+        "runtime_ready": true
       }
     },
     "movimiento": "M5",
@@ -2118,403 +2404,44 @@
     "parametros": {
       "carcasa_abierta_seg": 1,
       "cadena_intervalo_seg": 0.15
-    }
+    },
+    "runtime_ready": true
   },
   {
-    "id": "hesiocaeca",
-    "familia": "Hesiocaeca · Hesionidae",
-    "tipo": "errante",
-    "categoria": "pequeno",
+    "id": "laetmonice_producta",
+    "familia": "Laetmonice producta · Aphroditidae",
+    "tipo": "pendiente",
     "mundos": {
-      "11": {
+      "8": {
         "rol": "unico",
-        "sprite_set": "w11_enemy_hesiocaeca"
-      },
-      "14": {
-        "rol": "recurrente",
-        "sprite_set": "w14_enemy_hesiocaeca"
+        "sprite_set": "w08_enemy_laetmonice_producta",
+        "runtime_ready": false
       }
     },
-    "movimiento": "M3",
-    "disparo": "F2",
-    "tamano": [
-      32,
-      32
-    ],
-    "puntos": 100,
-    "drop": {
-      "moneda_chica": 0.35,
-      "moneda_grande": 0.05
-    },
-    "estado": "revisar",
-    "blindado": false,
-    "parametros": {
-      "carcasa_abierta_seg": 1,
-      "cadena_intervalo_seg": 0.15
-    }
+    "estado": "pendiente",
+    "runtime_ready": false,
+    "pending": [
+      "original_png_and_atlas",
+      "accepted_behavior_and_balance"
+    ]
   },
   {
-    "id": "nautil",
-    "familia": "Nautiliniellidae",
-    "tipo": "otro",
-    "categoria": "pequeno",
+    "id": "austrolaenilla_antarctica",
+    "familia": "Austrolaenilla antarctica · Polynoidae",
+    "tipo": "pendiente",
     "mundos": {
-      "11": {
+      "8": {
         "rol": "unico",
-        "sprite_set": "w11_enemy_nautil"
-      },
-      "14": {
-        "rol": "recurrente",
-        "sprite_set": "w14_enemy_nautil"
+        "sprite_set": "w08_enemy_austrolaenilla_antarctica",
+        "runtime_ready": false
       }
     },
-    "movimiento": "M4",
-    "disparo": "F1",
-    "tamano": [
-      32,
-      32
-    ],
-    "puntos": 100,
-    "drop": {
-      "moneda_chica": 0.35,
-      "moneda_grande": 0.05
-    },
-    "estado": "revisar",
-    "blindado": false,
-    "parametros": {
-      "carcasa_abierta_seg": 1,
-      "cadena_intervalo_seg": 0.15
-    }
-  },
-  {
-    "id": "chryso",
-    "familia": "Chrysopetalidae",
-    "tipo": "escamoso",
-    "categoria": "mediano",
-    "mundos": {
-      "11": {
-        "rol": "unico",
-        "sprite_set": "w11_enemy_chryso"
-      },
-      "14": {
-        "rol": "recurrente",
-        "sprite_set": "w14_enemy_chryso"
-      }
-    },
-    "movimiento": "M7",
-    "disparo": "F2",
-    "tamano": [
-      48,
-      48
-    ],
-    "puntos": 100,
-    "drop": {
-      "moneda_chica": 0.35,
-      "moneda_grande": 0.05
-    },
-    "estado": "revisar",
-    "blindado": true,
-    "parametros": {
-      "carcasa_abierta_seg": 1,
-      "cadena_intervalo_seg": 0.15
-    }
-  },
-  {
-    "id": "brada",
-    "familia": "Brada · Flabelligeridae",
-    "tipo": "otro",
-    "categoria": "pequeno",
-    "mundos": {
-      "11": {
-        "rol": "unico",
-        "sprite_set": "w11_enemy_brada"
-      },
-      "14": {
-        "rol": "recurrente",
-        "sprite_set": "w14_enemy_brada"
-      }
-    },
-    "movimiento": "M4",
-    "disparo": "F1",
-    "tamano": [
-      32,
-      32
-    ],
-    "puntos": 100,
-    "drop": {
-      "moneda_chica": 0.35,
-      "moneda_grande": 0.05
-    },
-    "estado": "revisar",
-    "blindado": false,
-    "parametros": {
-      "carcasa_abierta_seg": 1,
-      "cadena_intervalo_seg": 0.15
-    }
-  },
-  {
-    "id": "bathykurila",
-    "familia": "Bathykurila · Polynoidae",
-    "tipo": "escamoso",
-    "categoria": "mediano",
-    "mundos": {
-      "11": {
-        "rol": "unico",
-        "sprite_set": "w11_enemy_bathykurila"
-      },
-      "14": {
-        "rol": "recurrente",
-        "sprite_set": "w14_enemy_bathykurila"
-      }
-    },
-    "movimiento": "M7",
-    "disparo": "F2",
-    "tamano": [
-      48,
-      48
-    ],
-    "puntos": 100,
-    "drop": {
-      "moneda_chica": 0.35,
-      "moneda_grande": 0.05
-    },
-    "estado": "revisar",
-    "blindado": true,
-    "parametros": {
-      "carcasa_abierta_seg": 1,
-      "cadena_intervalo_seg": 0.15
-    }
-  },
-  {
-    "id": "ophryotrocha",
-    "familia": "Ophryotrocha · Dorvilleidae",
-    "tipo": "errante",
-    "categoria": "pequeno",
-    "mundos": {
-      "11": {
-        "rol": "recurrente",
-        "sprite_set": "w11_enemy_ophryotrocha"
-      },
-      "14": {
-        "rol": "recurrente",
-        "sprite_set": "w14_enemy_ophryotrocha"
-      }
-    },
-    "movimiento": "M3",
-    "disparo": "F2",
-    "tamano": [
-      32,
-      32
-    ],
-    "puntos": 100,
-    "drop": {
-      "moneda_chica": 0.35,
-      "moneda_grande": 0.05
-    },
-    "estado": "revisar",
-    "blindado": false,
-    "parametros": {
-      "carcasa_abierta_seg": 1,
-      "cadena_intervalo_seg": 0.15
-    }
-  },
-  {
-    "id": "riftia",
-    "familia": "Siboglinidae · Riftia pachyptila",
-    "tipo": "tubicola",
-    "categoria": "mediano",
-    "mundos": {
-      "12": {
-        "rol": "unico",
-        "sprite_set": "w12_enemy_riftia"
-      },
-      "14": {
-        "rol": "recurrente",
-        "sprite_set": "w14_enemy_riftia"
-      }
-    },
-    "movimiento": "M5",
-    "disparo": "F3",
-    "tamano": [
-      48,
-      48
-    ],
-    "puntos": 100,
-    "drop": {
-      "moneda_chica": 0.35,
-      "moneda_grande": 0.05
-    },
-    "estado": "revisar",
-    "blindado": false,
-    "parametros": {
-      "carcasa_abierta_seg": 1,
-      "cadena_intervalo_seg": 0.15
-    }
-  },
-  {
-    "id": "paralvinella",
-    "familia": "Paralvinella · Alvinellidae",
-    "tipo": "tubicola",
-    "categoria": "mediano",
-    "mundos": {
-      "12": {
-        "rol": "unico",
-        "sprite_set": "w12_enemy_paralvinella"
-      },
-      "14": {
-        "rol": "recurrente",
-        "sprite_set": "w14_enemy_paralvinella"
-      }
-    },
-    "movimiento": "M5",
-    "disparo": "F3",
-    "tamano": [
-      48,
-      48
-    ],
-    "puntos": 100,
-    "drop": {
-      "moneda_chica": 0.35,
-      "moneda_grande": 0.05
-    },
-    "estado": "revisar",
-    "blindado": false,
-    "parametros": {
-      "carcasa_abierta_seg": 1,
-      "cadena_intervalo_seg": 0.15
-    }
-  },
-  {
-    "id": "branchinotogluma",
-    "familia": "Branchinotogluma · Polynoidae",
-    "tipo": "escamoso",
-    "categoria": "mediano",
-    "mundos": {
-      "12": {
-        "rol": "unico",
-        "sprite_set": "w12_enemy_branchinotogluma"
-      },
-      "14": {
-        "rol": "recurrente",
-        "sprite_set": "w14_enemy_branchinotogluma"
-      }
-    },
-    "movimiento": "M7",
-    "disparo": "F2",
-    "tamano": [
-      48,
-      48
-    ],
-    "puntos": 100,
-    "drop": {
-      "moneda_chica": 0.35,
-      "moneda_grande": 0.05
-    },
-    "estado": "revisar",
-    "blindado": true,
-    "parametros": {
-      "carcasa_abierta_seg": 1,
-      "cadena_intervalo_seg": 0.15
-    }
-  },
-  {
-    "id": "amphisamytha",
-    "familia": "Amphisamytha · Ampharetidae",
-    "tipo": "tubicola",
-    "categoria": "mediano",
-    "mundos": {
-      "12": {
-        "rol": "unico",
-        "sprite_set": "w12_enemy_amphisamytha"
-      },
-      "14": {
-        "rol": "recurrente",
-        "sprite_set": "w14_enemy_amphisamytha"
-      }
-    },
-    "movimiento": "M5",
-    "disparo": "F3",
-    "tamano": [
-      48,
-      48
-    ],
-    "puntos": 100,
-    "drop": {
-      "moneda_chica": 0.35,
-      "moneda_grande": 0.05
-    },
-    "estado": "revisar",
-    "blindado": false,
-    "parametros": {
-      "carcasa_abierta_seg": 1,
-      "cadena_intervalo_seg": 0.15
-    }
-  },
-  {
-    "id": "hesiolyra",
-    "familia": "Hesiolyra · Hesionidae",
-    "tipo": "errante",
-    "categoria": "pequeno",
-    "mundos": {
-      "12": {
-        "rol": "unico",
-        "sprite_set": "w12_enemy_hesiolyra"
-      },
-      "14": {
-        "rol": "recurrente",
-        "sprite_set": "w14_enemy_hesiolyra"
-      }
-    },
-    "movimiento": "M3",
-    "disparo": "F2",
-    "tamano": [
-      32,
-      32
-    ],
-    "puntos": 100,
-    "drop": {
-      "moneda_chica": 0.35,
-      "moneda_grande": 0.05
-    },
-    "estado": "revisar",
-    "blindado": false,
-    "parametros": {
-      "carcasa_abierta_seg": 1,
-      "cadena_intervalo_seg": 0.15
-    }
-  },
-  {
-    "id": "swima",
-    "familia": "Acrocirridae",
-    "tipo": "pelagico",
-    "categoria": "pequeno",
-    "mundos": {
-      "13": {
-        "rol": "unico",
-        "sprite_set": "w13_enemy_swima"
-      },
-      "14": {
-        "rol": "recurrente",
-        "sprite_set": "w14_enemy_swima"
-      }
-    },
-    "movimiento": "M8",
-    "disparo": "F4",
-    "tamano": [
-      32,
-      32
-    ],
-    "puntos": 100,
-    "drop": {
-      "moneda_chica": 0.35,
-      "moneda_grande": 0.05
-    },
-    "estado": "revisar",
-    "blindado": false,
-    "parametros": {
-      "carcasa_abierta_seg": 1,
-      "cadena_intervalo_seg": 0.15
-    }
+    "estado": "pendiente",
+    "runtime_ready": false,
+    "pending": [
+      "original_png_and_atlas",
+      "accepted_behavior_and_balance"
+    ]
   },
   {
     "id": "aphro",
@@ -2522,13 +2449,20 @@
     "tipo": "escamoso",
     "categoria": "mediano",
     "mundos": {
-      "13": {
-        "rol": "unico",
-        "sprite_set": "w13_enemy_aphro"
-      },
-      "14": {
+      "8": {
         "rol": "recurrente",
-        "sprite_set": "w14_enemy_aphro"
+        "sprite_set": "w08_enemy_aphro",
+        "runtime_ready": true
+      },
+      "11": {
+        "rol": "unico",
+        "sprite_set": "w11_enemy_aphro",
+        "runtime_ready": true
+      },
+      "12": {
+        "rol": "recurrente",
+        "sprite_set": "w12_enemy_aphro",
+        "runtime_ready": true
       }
     },
     "movimiento": "M7",
@@ -2547,7 +2481,504 @@
     "parametros": {
       "carcasa_abierta_seg": 1,
       "cadena_intervalo_seg": 0.15
-    }
+    },
+    "runtime_ready": true
+  },
+  {
+    "id": "hesiocaeca",
+    "familia": "Hesiocaeca · Hesionidae",
+    "tipo": "errante",
+    "categoria": "pequeno",
+    "mundos": {
+      "9": {
+        "rol": "unico",
+        "sprite_set": "w09_enemy_hesiocaeca",
+        "runtime_ready": true
+      },
+      "12": {
+        "rol": "recurrente",
+        "sprite_set": "w12_enemy_hesiocaeca",
+        "runtime_ready": true
+      }
+    },
+    "movimiento": "M3",
+    "disparo": "F2",
+    "tamano": [
+      32,
+      32
+    ],
+    "puntos": 100,
+    "drop": {
+      "moneda_chica": 0.35,
+      "moneda_grande": 0.05
+    },
+    "estado": "revisar",
+    "blindado": false,
+    "parametros": {
+      "carcasa_abierta_seg": 1,
+      "cadena_intervalo_seg": 0.15
+    },
+    "runtime_ready": true
+  },
+  {
+    "id": "nautil",
+    "familia": "Nautiliniellidae",
+    "tipo": "otro",
+    "categoria": "pequeno",
+    "mundos": {
+      "9": {
+        "rol": "unico",
+        "sprite_set": "w09_enemy_nautil",
+        "runtime_ready": true
+      },
+      "12": {
+        "rol": "recurrente",
+        "sprite_set": "w12_enemy_nautil",
+        "runtime_ready": true
+      }
+    },
+    "movimiento": "M4",
+    "disparo": "F1",
+    "tamano": [
+      32,
+      32
+    ],
+    "puntos": 100,
+    "drop": {
+      "moneda_chica": 0.35,
+      "moneda_grande": 0.05
+    },
+    "estado": "revisar",
+    "blindado": false,
+    "parametros": {
+      "carcasa_abierta_seg": 1,
+      "cadena_intervalo_seg": 0.15
+    },
+    "runtime_ready": true
+  },
+  {
+    "id": "chryso",
+    "familia": "Chrysopetalidae",
+    "tipo": "escamoso",
+    "categoria": "mediano",
+    "mundos": {
+      "9": {
+        "rol": "unico",
+        "sprite_set": "w09_enemy_chryso",
+        "runtime_ready": true
+      },
+      "12": {
+        "rol": "recurrente",
+        "sprite_set": "w12_enemy_chryso",
+        "runtime_ready": true
+      }
+    },
+    "movimiento": "M7",
+    "disparo": "F2",
+    "tamano": [
+      48,
+      48
+    ],
+    "puntos": 100,
+    "drop": {
+      "moneda_chica": 0.35,
+      "moneda_grande": 0.05
+    },
+    "estado": "revisar",
+    "blindado": true,
+    "parametros": {
+      "carcasa_abierta_seg": 1,
+      "cadena_intervalo_seg": 0.15
+    },
+    "runtime_ready": true
+  },
+  {
+    "id": "brada",
+    "familia": "Brada · Flabelligeridae",
+    "tipo": "otro",
+    "categoria": "pequeno",
+    "mundos": {
+      "9": {
+        "rol": "unico",
+        "sprite_set": "w09_enemy_brada",
+        "runtime_ready": true
+      },
+      "12": {
+        "rol": "recurrente",
+        "sprite_set": "w12_enemy_brada",
+        "runtime_ready": true
+      }
+    },
+    "movimiento": "M4",
+    "disparo": "F1",
+    "tamano": [
+      32,
+      32
+    ],
+    "puntos": 100,
+    "drop": {
+      "moneda_chica": 0.35,
+      "moneda_grande": 0.05
+    },
+    "estado": "revisar",
+    "blindado": false,
+    "parametros": {
+      "carcasa_abierta_seg": 1,
+      "cadena_intervalo_seg": 0.15
+    },
+    "runtime_ready": true
+  },
+  {
+    "id": "bathykurila",
+    "familia": "Bathykurila · Polynoidae",
+    "tipo": "escamoso",
+    "categoria": "mediano",
+    "mundos": {
+      "9": {
+        "rol": "unico",
+        "sprite_set": "w09_enemy_bathykurila",
+        "runtime_ready": true
+      },
+      "11": {
+        "rol": "recurrente",
+        "sprite_set": "w11_enemy_bathykurila",
+        "runtime_ready": true
+      },
+      "12": {
+        "rol": "recurrente",
+        "sprite_set": "w12_enemy_bathykurila",
+        "runtime_ready": true
+      }
+    },
+    "movimiento": "M7",
+    "disparo": "F2",
+    "tamano": [
+      48,
+      48
+    ],
+    "puntos": 100,
+    "drop": {
+      "moneda_chica": 0.35,
+      "moneda_grande": 0.05
+    },
+    "estado": "revisar",
+    "blindado": true,
+    "parametros": {
+      "carcasa_abierta_seg": 1,
+      "cadena_intervalo_seg": 0.15
+    },
+    "runtime_ready": true
+  },
+  {
+    "id": "glycera",
+    "familia": "Glycera · Glyceridae",
+    "tipo": "errante",
+    "categoria": "pequeno",
+    "mundos": {
+      "9": {
+        "rol": "unico",
+        "sprite_set": "w09_enemy_glycera",
+        "runtime_ready": true
+      },
+      "12": {
+        "rol": "recurrente",
+        "sprite_set": "w12_enemy_glycera",
+        "runtime_ready": true
+      }
+    },
+    "movimiento": "M3",
+    "disparo": "F2",
+    "tamano": [
+      32,
+      32
+    ],
+    "puntos": 100,
+    "drop": {
+      "moneda_chica": 0.35,
+      "moneda_grande": 0.05
+    },
+    "estado": "revisar",
+    "blindado": false,
+    "parametros": {
+      "carcasa_abierta_seg": 1,
+      "cadena_intervalo_seg": 0.15
+    },
+    "runtime_ready": true
+  },
+  {
+    "id": "neanthes_visicete",
+    "familia": "Neanthes visicete · Nereididae",
+    "tipo": "pendiente",
+    "mundos": {
+      "9": {
+        "rol": "unico",
+        "sprite_set": "w09_enemy_neanthes_visicete",
+        "runtime_ready": false
+      }
+    },
+    "estado": "pendiente",
+    "runtime_ready": false,
+    "pending": [
+      "original_png_and_atlas",
+      "accepted_behavior_and_balance"
+    ]
+  },
+  {
+    "id": "ophryotrocha",
+    "familia": "Ophryotrocha · Dorvilleidae",
+    "tipo": "errante",
+    "categoria": "pequeno",
+    "mundos": {
+      "9": {
+        "rol": "recurrente",
+        "sprite_set": "w09_enemy_ophryotrocha",
+        "runtime_ready": true
+      },
+      "10": {
+        "rol": "recurrente",
+        "sprite_set": "w10_enemy_ophryotrocha",
+        "runtime_ready": true
+      },
+      "12": {
+        "rol": "recurrente",
+        "sprite_set": "w12_enemy_ophryotrocha",
+        "runtime_ready": true
+      }
+    },
+    "movimiento": "M3",
+    "disparo": "F2",
+    "tamano": [
+      32,
+      32
+    ],
+    "puntos": 100,
+    "drop": {
+      "moneda_chica": 0.35,
+      "moneda_grande": 0.05
+    },
+    "estado": "revisar",
+    "blindado": false,
+    "parametros": {
+      "carcasa_abierta_seg": 1,
+      "cadena_intervalo_seg": 0.15
+    },
+    "runtime_ready": true
+  },
+  {
+    "id": "riftia",
+    "familia": "Siboglinidae · Riftia pachyptila",
+    "tipo": "tubicola",
+    "categoria": "mediano",
+    "mundos": {
+      "10": {
+        "rol": "unico",
+        "sprite_set": "w10_enemy_riftia",
+        "runtime_ready": true
+      },
+      "12": {
+        "rol": "recurrente",
+        "sprite_set": "w12_enemy_riftia",
+        "runtime_ready": true
+      }
+    },
+    "movimiento": "M5",
+    "disparo": "F3",
+    "tamano": [
+      48,
+      48
+    ],
+    "puntos": 100,
+    "drop": {
+      "moneda_chica": 0.35,
+      "moneda_grande": 0.05
+    },
+    "estado": "revisar",
+    "blindado": false,
+    "parametros": {
+      "carcasa_abierta_seg": 1,
+      "cadena_intervalo_seg": 0.15
+    },
+    "runtime_ready": true
+  },
+  {
+    "id": "paralvinella",
+    "familia": "Paralvinella · Alvinellidae",
+    "tipo": "tubicola",
+    "categoria": "mediano",
+    "mundos": {
+      "10": {
+        "rol": "unico",
+        "sprite_set": "w10_enemy_paralvinella",
+        "runtime_ready": true
+      },
+      "12": {
+        "rol": "recurrente",
+        "sprite_set": "w12_enemy_paralvinella",
+        "runtime_ready": true
+      }
+    },
+    "movimiento": "M5",
+    "disparo": "F3",
+    "tamano": [
+      48,
+      48
+    ],
+    "puntos": 100,
+    "drop": {
+      "moneda_chica": 0.35,
+      "moneda_grande": 0.05
+    },
+    "estado": "revisar",
+    "blindado": false,
+    "parametros": {
+      "carcasa_abierta_seg": 1,
+      "cadena_intervalo_seg": 0.15
+    },
+    "runtime_ready": true
+  },
+  {
+    "id": "branchinotogluma",
+    "familia": "Branchinotogluma · Polynoidae",
+    "tipo": "escamoso",
+    "categoria": "mediano",
+    "mundos": {
+      "10": {
+        "rol": "unico",
+        "sprite_set": "w10_enemy_branchinotogluma",
+        "runtime_ready": true
+      },
+      "12": {
+        "rol": "recurrente",
+        "sprite_set": "w12_enemy_branchinotogluma",
+        "runtime_ready": true
+      }
+    },
+    "movimiento": "M7",
+    "disparo": "F2",
+    "tamano": [
+      48,
+      48
+    ],
+    "puntos": 100,
+    "drop": {
+      "moneda_chica": 0.35,
+      "moneda_grande": 0.05
+    },
+    "estado": "revisar",
+    "blindado": true,
+    "parametros": {
+      "carcasa_abierta_seg": 1,
+      "cadena_intervalo_seg": 0.15
+    },
+    "runtime_ready": true
+  },
+  {
+    "id": "amphisamytha",
+    "familia": "Amphisamytha · Ampharetidae",
+    "tipo": "tubicola",
+    "categoria": "mediano",
+    "mundos": {
+      "10": {
+        "rol": "unico",
+        "sprite_set": "w10_enemy_amphisamytha",
+        "runtime_ready": true
+      },
+      "12": {
+        "rol": "recurrente",
+        "sprite_set": "w12_enemy_amphisamytha",
+        "runtime_ready": true
+      }
+    },
+    "movimiento": "M5",
+    "disparo": "F3",
+    "tamano": [
+      48,
+      48
+    ],
+    "puntos": 100,
+    "drop": {
+      "moneda_chica": 0.35,
+      "moneda_grande": 0.05
+    },
+    "estado": "revisar",
+    "blindado": false,
+    "parametros": {
+      "carcasa_abierta_seg": 1,
+      "cadena_intervalo_seg": 0.15
+    },
+    "runtime_ready": true
+  },
+  {
+    "id": "hesiolyra",
+    "familia": "Hesiolyra · Hesionidae",
+    "tipo": "errante",
+    "categoria": "pequeno",
+    "mundos": {
+      "10": {
+        "rol": "unico",
+        "sprite_set": "w10_enemy_hesiolyra",
+        "runtime_ready": true
+      },
+      "12": {
+        "rol": "recurrente",
+        "sprite_set": "w12_enemy_hesiolyra",
+        "runtime_ready": true
+      }
+    },
+    "movimiento": "M3",
+    "disparo": "F2",
+    "tamano": [
+      32,
+      32
+    ],
+    "puntos": 100,
+    "drop": {
+      "moneda_chica": 0.35,
+      "moneda_grande": 0.05
+    },
+    "estado": "revisar",
+    "blindado": false,
+    "parametros": {
+      "carcasa_abierta_seg": 1,
+      "cadena_intervalo_seg": 0.15
+    },
+    "runtime_ready": true
+  },
+  {
+    "id": "branchipolynoe",
+    "familia": "Branchipolynoe · Polynoidae",
+    "tipo": "pendiente",
+    "mundos": {
+      "10": {
+        "rol": "unico",
+        "sprite_set": "w10_enemy_branchipolynoe",
+        "runtime_ready": false
+      }
+    },
+    "estado": "pendiente",
+    "runtime_ready": false,
+    "pending": [
+      "original_png_and_atlas",
+      "accepted_behavior_and_balance"
+    ]
+  },
+  {
+    "id": "thermopolynoe",
+    "familia": "Thermopolynoe · Polynoidae",
+    "tipo": "pendiente",
+    "mundos": {
+      "10": {
+        "rol": "unico",
+        "sprite_set": "w10_enemy_thermopolynoe",
+        "runtime_ready": false
+      }
+    },
+    "estado": "pendiente",
+    "runtime_ready": false,
+    "pending": [
+      "original_png_and_atlas",
+      "accepted_behavior_and_balance"
+    ]
   },
   {
     "id": "scali",
@@ -2555,13 +2986,15 @@
     "tipo": "cavador",
     "categoria": "pequeno",
     "mundos": {
-      "13": {
+      "11": {
         "rol": "unico",
-        "sprite_set": "w13_enemy_scali"
+        "sprite_set": "w11_enemy_scali",
+        "runtime_ready": true
       },
-      "14": {
+      "12": {
         "rol": "recurrente",
-        "sprite_set": "w14_enemy_scali"
+        "sprite_set": "w12_enemy_scali",
+        "runtime_ready": true
       }
     },
     "movimiento": "M6",
@@ -2580,7 +3013,8 @@
     "parametros": {
       "carcasa_abierta_seg": 1,
       "cadena_intervalo_seg": 0.15
-    }
+    },
+    "runtime_ready": true
   },
   {
     "id": "stern",
@@ -2588,13 +3022,15 @@
     "tipo": "cavador",
     "categoria": "pequeno",
     "mundos": {
-      "13": {
+      "11": {
         "rol": "unico",
-        "sprite_set": "w13_enemy_stern"
+        "sprite_set": "w11_enemy_stern",
+        "runtime_ready": true
       },
-      "14": {
+      "12": {
         "rol": "recurrente",
-        "sprite_set": "w14_enemy_stern"
+        "sprite_set": "w12_enemy_stern",
+        "runtime_ready": true
       }
     },
     "movimiento": "M6",
@@ -2613,7 +3049,8 @@
     "parametros": {
       "carcasa_abierta_seg": 1,
       "cadena_intervalo_seg": 0.15
-    }
+    },
+    "runtime_ready": true
   },
   {
     "id": "macellicephaloides",
@@ -2621,13 +3058,15 @@
     "tipo": "escamoso",
     "categoria": "mediano",
     "mundos": {
-      "13": {
+      "11": {
         "rol": "unico",
-        "sprite_set": "w13_enemy_macellicephaloides"
+        "sprite_set": "w11_enemy_macellicephaloides",
+        "runtime_ready": true
       },
-      "14": {
+      "12": {
         "rol": "recurrente",
-        "sprite_set": "w14_enemy_macellicephaloides"
+        "sprite_set": "w12_enemy_macellicephaloides",
+        "runtime_ready": true
       }
     },
     "movimiento": "M7",
@@ -2646,7 +3085,76 @@
     "parametros": {
       "carcasa_abierta_seg": 1,
       "cadena_intervalo_seg": 0.15
-    }
+    },
+    "runtime_ready": true
+  },
+  {
+    "id": "macellicephala_tricornis",
+    "familia": "Macellicephala tricornis · Polynoidae",
+    "tipo": "pendiente",
+    "mundos": {
+      "11": {
+        "rol": "unico",
+        "sprite_set": "w11_enemy_macellicephala_tricornis",
+        "runtime_ready": false
+      }
+    },
+    "estado": "pendiente",
+    "runtime_ready": false,
+    "pending": [
+      "original_png_and_atlas",
+      "accepted_behavior_and_balance"
+    ]
+  },
+  {
+    "id": "bathykermadeca_hadalis",
+    "familia": "Bathykermadeca hadalis · Polynoidae",
+    "tipo": "pendiente",
+    "mundos": {
+      "11": {
+        "rol": "unico",
+        "sprite_set": "w11_enemy_bathykermadeca_hadalis",
+        "runtime_ready": false
+      }
+    },
+    "estado": "pendiente",
+    "runtime_ready": false,
+    "pending": [
+      "original_png_and_atlas",
+      "accepted_behavior_and_balance"
+    ]
+  },
+  {
+    "id": "mech_syll",
+    "familia": "Cablelarva",
+    "tipo": "robotico",
+    "categoria": "enjambre",
+    "mundos": {
+      "12": {
+        "rol": "unico",
+        "sprite_set": "w12_enemy_mech_syll",
+        "runtime_ready": true
+      }
+    },
+    "movimiento": "M2",
+    "disparo": "F0",
+    "tamano": [
+      24,
+      24
+    ],
+    "puntos": 100,
+    "drop": {
+      "moneda_chica": 0.35,
+      "moneda_grande": 0.05
+    },
+    "estado": "revisar",
+    "blindado": false,
+    "parametros": {
+      "carcasa_abierta_seg": 1,
+      "cadena_intervalo_seg": 0.15
+    },
+    "robot_codigo": "R1",
+    "runtime_ready": true
   },
   {
     "id": "mech_nereis",
@@ -2654,9 +3162,10 @@
     "tipo": "robotico",
     "categoria": "mediano",
     "mundos": {
-      "14": {
+      "12": {
         "rol": "unico",
-        "sprite_set": "w14_enemy_mech_nereis"
+        "sprite_set": "w12_enemy_mech_nereis",
+        "runtime_ready": true
       }
     },
     "movimiento": "M3",
@@ -2676,7 +3185,104 @@
       "carcasa_abierta_seg": 1,
       "cadena_intervalo_seg": 0.15
     },
-    "robot_codigo": "R2"
+    "robot_codigo": "R2",
+    "runtime_ready": true
+  },
+  {
+    "id": "mech_sabel",
+    "familia": "Torreta Sabélida",
+    "tipo": "robotico",
+    "categoria": "mediano",
+    "mundos": {
+      "12": {
+        "rol": "unico",
+        "sprite_set": "w12_enemy_mech_sabel",
+        "runtime_ready": true
+      }
+    },
+    "movimiento": "M5",
+    "disparo": "F3",
+    "tamano": [
+      48,
+      48
+    ],
+    "puntos": 100,
+    "drop": {
+      "moneda_chica": 0.35,
+      "moneda_grande": 0.05
+    },
+    "estado": "revisar",
+    "blindado": false,
+    "parametros": {
+      "carcasa_abierta_seg": 1,
+      "cadena_intervalo_seg": 0.15
+    },
+    "robot_codigo": "R3",
+    "runtime_ready": true
+  },
+  {
+    "id": "mech_chaet",
+    "familia": "Taladro Arenicola",
+    "tipo": "robotico",
+    "categoria": "mediano",
+    "mundos": {
+      "12": {
+        "rol": "unico",
+        "sprite_set": "w12_enemy_mech_chaet",
+        "runtime_ready": true
+      }
+    },
+    "movimiento": "M7",
+    "disparo": "F0",
+    "tamano": [
+      56,
+      56
+    ],
+    "puntos": 100,
+    "drop": {
+      "moneda_chica": 0.35,
+      "moneda_grande": 0.05
+    },
+    "estado": "revisar",
+    "blindado": false,
+    "parametros": {
+      "carcasa_abierta_seg": 1,
+      "cadena_intervalo_seg": 0.15
+    },
+    "robot_codigo": "R4",
+    "runtime_ready": true
+  },
+  {
+    "id": "mech_riftia",
+    "familia": "Pinza Glicera",
+    "tipo": "robotico",
+    "categoria": "mediano",
+    "mundos": {
+      "12": {
+        "rol": "unico",
+        "sprite_set": "w12_enemy_mech_riftia",
+        "runtime_ready": true
+      }
+    },
+    "movimiento": "M3",
+    "disparo": "F5",
+    "tamano": [
+      48,
+      48
+    ],
+    "puntos": 100,
+    "drop": {
+      "moneda_chica": 0.35,
+      "moneda_grande": 0.05
+    },
+    "estado": "revisar",
+    "blindado": false,
+    "parametros": {
+      "carcasa_abierta_seg": 1,
+      "cadena_intervalo_seg": 0.15
+    },
+    "robot_codigo": "R5",
+    "runtime_ready": true
   },
   {
     "id": "mech_polyn",
@@ -2684,9 +3290,10 @@
     "tipo": "robotico",
     "categoria": "mediano",
     "mundos": {
-      "14": {
+      "12": {
         "rol": "unico",
-        "sprite_set": "w14_enemy_mech_polyn"
+        "sprite_set": "w12_enemy_mech_polyn",
+        "runtime_ready": true
       }
     },
     "movimiento": "M1",
@@ -2707,24 +3314,62 @@
       "cadena_intervalo_seg": 0.15,
       "carcasa_periodo_seg": 5
     },
-    "robot_codigo": "R6"
+    "robot_codigo": "R6",
+    "runtime_ready": true
   },
   {
-    "id": "mech_riftia",
-    "familia": "Pinza Glicera",
-    "tipo": "robotico",
-    "categoria": "mediano",
+    "id": "mech_oenone",
+    "familia": "Robot Centinela Oenone",
+    "tipo": "pendiente",
     "mundos": {
-      "14": {
+      "12": {
         "rol": "unico",
-        "sprite_set": "w14_enemy_mech_riftia"
+        "sprite_set": "w12_enemy_mech_oenone",
+        "runtime_ready": false
       }
     },
-    "movimiento": "M3",
-    "disparo": "F5",
+    "estado": "pendiente",
+    "runtime_ready": false,
+    "pending": [
+      "original_png_and_atlas",
+      "accepted_behavior_and_balance"
+    ]
+  },
+  {
+    "id": "mech_diopatra",
+    "familia": "Robot Artillería Diopatra",
+    "tipo": "pendiente",
+    "mundos": {
+      "12": {
+        "rol": "unico",
+        "sprite_set": "w12_enemy_mech_diopatra",
+        "runtime_ready": false
+      }
+    },
+    "estado": "pendiente",
+    "runtime_ready": false,
+    "pending": [
+      "original_png_and_atlas",
+      "accepted_behavior_and_balance"
+    ]
+  },
+  {
+    "id": "histrio",
+    "familia": "Histriobdellidae",
+    "tipo": "otro",
+    "categoria": "pequeno",
+    "mundos": {
+      "12": {
+        "rol": "recurrente",
+        "sprite_set": "w12_enemy_histrio",
+        "runtime_ready": true
+      }
+    },
+    "movimiento": "M4",
+    "disparo": "F1",
     "tamano": [
-      48,
-      48
+      32,
+      32
     ],
     "puntos": 100,
     "drop": {
@@ -2737,96 +3382,6 @@
       "carcasa_abierta_seg": 1,
       "cadena_intervalo_seg": 0.15
     },
-    "robot_codigo": "R5"
-  },
-  {
-    "id": "mech_chaet",
-    "familia": "Taladro Arenicola",
-    "tipo": "robotico",
-    "categoria": "mediano",
-    "mundos": {
-      "14": {
-        "rol": "unico",
-        "sprite_set": "w14_enemy_mech_chaet"
-      }
-    },
-    "movimiento": "M7",
-    "disparo": "F0",
-    "tamano": [
-      56,
-      56
-    ],
-    "puntos": 100,
-    "drop": {
-      "moneda_chica": 0.35,
-      "moneda_grande": 0.05
-    },
-    "estado": "revisar",
-    "blindado": false,
-    "parametros": {
-      "carcasa_abierta_seg": 1,
-      "cadena_intervalo_seg": 0.15
-    },
-    "robot_codigo": "R4"
-  },
-  {
-    "id": "mech_syll",
-    "familia": "Cablelarva",
-    "tipo": "robotico",
-    "categoria": "enjambre",
-    "mundos": {
-      "14": {
-        "rol": "unico",
-        "sprite_set": "w14_enemy_mech_syll"
-      }
-    },
-    "movimiento": "M2",
-    "disparo": "F0",
-    "tamano": [
-      24,
-      24
-    ],
-    "puntos": 100,
-    "drop": {
-      "moneda_chica": 0.35,
-      "moneda_grande": 0.05
-    },
-    "estado": "revisar",
-    "blindado": false,
-    "parametros": {
-      "carcasa_abierta_seg": 1,
-      "cadena_intervalo_seg": 0.15
-    },
-    "robot_codigo": "R1"
-  },
-  {
-    "id": "mech_sabel",
-    "familia": "Torreta Sabélida",
-    "tipo": "robotico",
-    "categoria": "mediano",
-    "mundos": {
-      "14": {
-        "rol": "unico",
-        "sprite_set": "w14_enemy_mech_sabel"
-      }
-    },
-    "movimiento": "M5",
-    "disparo": "F3",
-    "tamano": [
-      48,
-      48
-    ],
-    "puntos": 100,
-    "drop": {
-      "moneda_chica": 0.35,
-      "moneda_grande": 0.05
-    },
-    "estado": "revisar",
-    "blindado": false,
-    "parametros": {
-      "carcasa_abierta_seg": 1,
-      "cadena_intervalo_seg": 0.15
-    },
-    "robot_codigo": "R3"
+    "runtime_ready": true
   }
 ]

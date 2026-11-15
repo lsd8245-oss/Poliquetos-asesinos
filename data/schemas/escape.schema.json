@@ -4,7 +4,7 @@
   "type": "object",
   "properties": {
     "id": {
-      "const": 15
+      "const": 13
     },
     "duracion_seg": {
       "type": "number",
@@ -90,7 +90,7 @@
         "mundo_destino": {
           "type": "integer",
           "minimum": 1,
-          "maximum": 14
+          "maximum": 12
         }
       },
       "required": [
@@ -149,6 +149,10 @@
               "separacion_seg": {
                 "type": "number",
                 "minimum": 0
+              },
+              "legacy_index": {
+                "type": "integer",
+                "minimum": 0
               }
             },
             "required": [
@@ -157,7 +161,8 @@
               "enemigo",
               "cantidad",
               "formacion",
-              "y"
+              "y",
+              "legacy_index"
             ],
             "additionalProperties": false,
             "allOf": [
@@ -201,6 +206,10 @@
               "y": {
                 "type": "number",
                 "minimum": 0
+              },
+              "legacy_index": {
+                "type": "integer",
+                "minimum": 0
               }
             },
             "required": [
@@ -208,7 +217,8 @@
               "tipo",
               "id",
               "duracion_seg",
-              "y"
+              "y",
+              "legacy_index"
             ],
             "additionalProperties": false
           }
@@ -228,7 +238,7 @@
   "additionalProperties": false,
   "examples": [
     {
-      "id": 15,
+      "id": 13,
       "duracion_seg": 300,
       "scroll_px_s": 120,
       "enemigos_total": 90,

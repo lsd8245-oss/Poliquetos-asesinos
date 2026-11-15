@@ -5,238 +5,246 @@
     {
       "t": 10.0,
       "tipo": "oleada",
-      "enemigo": "aricidea",
-      "cantidad": 7,
+      "enemigo": "pontod",
+      "cantidad": 8,
       "formacion": "linea_vertical",
       "y": 60,
       "portadora": true,
       "separacion_px": 32,
       "separacion_seg": 0.3,
-      "item": "rojo"
+      "item": "rojo",
+      "legacy_index": 0
     },
     {
-      "t": 18.0,
+      "t": 23.9417,
       "tipo": "oleada",
-      "enemigo": "terebellides",
+      "enemigo": "lopado",
       "cantidad": 8,
       "formacion": "linea_horizontal",
       "y": 110,
       "portadora": false,
       "separacion_px": 32,
-      "separacion_seg": 0.3
+      "separacion_seg": 0.3,
+      "legacy_index": 1
     },
     {
       "t": 25,
       "tipo": "peligro",
-      "id": "raices",
+      "id": "medusas",
       "duracion_seg": 10,
-      "y": 280
+      "y": 280,
+      "legacy_index": 2
     },
     {
-      "t": 26.0,
+      "t": 37.8833,
       "tipo": "oleada",
-      "enemigo": "questa",
+      "enemigo": "typhlo",
       "cantidad": 7,
       "formacion": "v",
       "y": 168,
       "portadora": false,
       "separacion_px": 32,
-      "separacion_seg": 0.3
+      "separacion_seg": 0.3,
+      "legacy_index": 3
     },
     {
-      "t": 34.0,
+      "t": 51.825,
       "tipo": "oleada",
-      "enemigo": "fauvel",
-      "cantidad": 7,
+      "enemigo": "poeo",
+      "cantidad": 8,
       "formacion": "v_invertida",
       "y": 220,
       "portadora": true,
       "separacion_px": 32,
       "separacion_seg": 0.3,
-      "item": "verde"
+      "item": "verde",
+      "legacy_index": 4
     },
     {
-      "t": 42.0,
+      "t": 54.0,
+      "tipo": "escudo",
+      "item": "amarillo",
+      "y": 168,
+      "legacy_index": 6
+    },
+    {
+      "t": 65.7667,
       "tipo": "oleada",
-      "enemigo": "protod",
-      "cantidad": 7,
+      "enemigo": "iospil",
+      "cantidad": 8,
       "formacion": "zigzag",
       "y": 276,
       "portadora": false,
       "separacion_px": 32,
-      "separacion_seg": 0.3
+      "separacion_seg": 0.3,
+      "legacy_index": 5
     },
     {
-      "t": 45.0,
-      "tipo": "escudo",
-      "item": "amarillo",
-      "y": 168
-    },
-    {
-      "t": 52.5,
+      "t": 79.7083,
       "tipo": "oleada",
-      "enemigo": "spio",
-      "cantidad": 8,
+      "enemigo": "syll_stolon",
+      "cantidad": 13,
       "formacion": "circulo",
       "y": 60,
       "portadora": false,
       "separacion_px": 32,
-      "separacion_seg": 0.3
+      "separacion_seg": 0.3,
+      "legacy_index": 7
     },
     {
-      "t": 58.0,
+      "t": 93.65,
       "tipo": "oleada",
-      "enemigo": "nepht",
-      "cantidad": 8,
+      "enemigo": "alciop",
+      "cantidad": 7,
       "formacion": "doble_columna",
       "y": 110,
       "portadora": true,
       "separacion_px": 32,
       "separacion_seg": 0.3,
-      "item": "azul"
+      "item": "azul",
+      "legacy_index": 8
     },
     {
-      "t": 66.0,
+      "t": 107.5917,
       "tipo": "oleada",
-      "enemigo": "glycer",
-      "cantidad": 8,
+      "enemigo": "alciop",
+      "cantidad": 6,
       "formacion": "ambos_lados",
       "y": 168,
       "portadora": false,
       "separacion_px": 32,
-      "separacion_seg": 0.3
+      "separacion_seg": 0.3,
+      "legacy_index": 9
     },
     {
-      "t": 75.0,
-      "tipo": "minijefe",
-      "id": "mini_w07_terebellides",
-      "escoltas": {
-        "enemigo": "terebellides",
-        "cantidad": 2,
-        "vida": 14,
-        "tamano": [
-          40,
-          32
-        ]
-      }
-    },
-    {
-      "t": 135.0,
+      "t": 121.5333,
       "tipo": "oleada",
-      "enemigo": "questa",
-      "cantidad": 11,
+      "enemigo": "syll_stolon",
+      "cantidad": 20,
       "formacion": "v_invertida",
       "y": 60,
       "portadora": false,
       "separacion_px": 32,
-      "separacion_seg": 0.3
+      "separacion_seg": 0.3,
+      "legacy_index": 11
     },
     {
-      "t": 140.0,
-      "tipo": "escudo",
-      "item": "amarillo",
-      "y": 168
-    },
-    {
-      "t": 143.0,
+      "t": 135.475,
       "tipo": "oleada",
-      "enemigo": "terebellides",
-      "cantidad": 10,
+      "enemigo": "typhlo",
+      "cantidad": 12,
       "formacion": "zigzag",
       "y": 110,
       "portadora": true,
       "separacion_px": 32,
       "separacion_seg": 0.3,
-      "item": "rojo"
+      "item": "rojo",
+      "legacy_index": 13
     },
     {
-      "t": 145.0,
+      "t": 149.4167,
+      "tipo": "oleada",
+      "enemigo": "poeo",
+      "cantidad": 11,
+      "formacion": "circulo",
+      "y": 168,
+      "portadora": false,
+      "separacion_px": 32,
+      "separacion_seg": 0.3,
+      "legacy_index": 15
+    },
+    {
+      "t": 155.0,
+      "tipo": "escudo",
+      "item": "amarillo",
+      "y": 168,
+      "legacy_index": 12
+    },
+    {
+      "t": 160.0,
       "tipo": "peligro",
-      "id": "raices",
+      "id": "medusas",
       "duracion_seg": 10,
-      "y": 280
+      "y": 280,
+      "legacy_index": 14
     },
     {
-      "t": 151.0,
+      "t": 163.3583,
       "tipo": "oleada",
-      "enemigo": "glycer",
-      "cantidad": 12,
-      "formacion": "circulo",
-      "y": 168,
-      "portadora": false,
-      "separacion_px": 32,
-      "separacion_seg": 0.3
-    },
-    {
-      "t": 159.0,
-      "tipo": "oleada",
-      "enemigo": "spio",
-      "cantidad": 12,
+      "enemigo": "alciop",
+      "cantidad": 10,
       "formacion": "doble_columna",
       "y": 220,
       "portadora": false,
       "separacion_px": 32,
-      "separacion_seg": 0.3
+      "separacion_seg": 0.3,
+      "legacy_index": 16
     },
     {
-      "t": 167.0,
+      "t": 177.3,
       "tipo": "oleada",
-      "enemigo": "nepht",
-      "cantidad": 12,
+      "enemigo": "alciop",
+      "cantidad": 9,
       "formacion": "ambos_lados",
       "y": 276,
       "portadora": true,
       "separacion_px": 32,
       "separacion_seg": 0.3,
-      "item": "verde"
+      "item": "verde",
+      "legacy_index": 17
     },
     {
-      "t": 175.0,
+      "t": 191.2417,
       "tipo": "oleada",
-      "enemigo": "aricidea",
-      "cantidad": 11,
+      "enemigo": "lopado",
+      "cantidad": 12,
       "formacion": "diagonal",
       "y": 60,
       "portadora": false,
       "separacion_px": 32,
-      "separacion_seg": 0.3
+      "separacion_seg": 0.3,
+      "legacy_index": 18
     },
     {
-      "t": 183.0,
+      "t": 205.1833,
       "tipo": "oleada",
-      "enemigo": "fauvel",
-      "cantidad": 11,
+      "enemigo": "pontod",
+      "cantidad": 12,
       "formacion": "linea_vertical",
       "y": 110,
       "portadora": false,
       "separacion_px": 32,
-      "separacion_seg": 0.3
+      "separacion_seg": 0.3,
+      "legacy_index": 19
     },
     {
-      "t": 191.0,
+      "t": 219.125,
       "tipo": "oleada",
-      "enemigo": "protod",
+      "enemigo": "iospil",
       "cantidad": 11,
       "formacion": "linea_horizontal",
       "y": 168,
       "portadora": true,
       "separacion_px": 32,
       "separacion_seg": 0.3,
-      "item": "azul"
+      "item": "azul",
+      "legacy_index": 20
     },
     {
-      "t": 198,
+      "t": 228,
       "tipo": "escudo",
       "item": "amarillo",
-      "y": 168
+      "y": 168,
+      "legacy_index": 21
     },
     {
-      "t": 200,
+      "t": 230,
       "tipo": "alerta_jefe",
-      "id": "boss_w07_orbin",
+      "id": "boss_w07_tomo",
       "jefes": [
-        "boss_w07_orbin"
-      ]
+        "boss_w07_tomo"
+      ],
+      "legacy_index": 22
     }
   ]
 }

@@ -111,11 +111,11 @@ func run():
 	var sandbox_profile = Shop.create_profile(true)
 	ui._start(sandbox_profile)
 	ui._activate("sandbox")
-	ui.sandbox_world = 14
-	ui.sandbox_lab = 3
+	ui.sandbox_world = 12
+	ui.sandbox_lab = 2
 	ui.sandbox_weapons = {"shot": 8, "missile": 3, "bomb": 2}
 	ui._activate("dev_start")
-	check(ui.game.profile.world == 14 and ui.game.profile.lab_boss == 3, "selector starts exact laboratory encounter")
+	check(ui.game.profile.world == 12 and ui.game.profile.lab_boss == 2, "selector starts exact laboratory encounter")
 	check(ui.game.profile.weapons.shot == 8 and ui.game.profile.weapons.bomb == 2, "selector applies only explicit weapon levels")
 	check(ui.game.stats.max_shield == 100 and ui.game.invulnerability == 0, "sandbox does not grant shield or invulnerability")
 	for page in ["title", "new", "slots", "options", "controls", "credits", "rest", "shop", "shipyard", "skins", "save", "replay", "sandbox", "dead", "results", "victory"]:

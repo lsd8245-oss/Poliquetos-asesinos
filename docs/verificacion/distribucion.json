@@ -1,9 +1,9 @@
 [
   {
     "edition": "Normal",
-    "installer_bytes": 29698179,
-    "installer_sha256": "2f920e3c408cd171b13cc96c49f33d406e75b8b1e0a6687b8d5f8b16598485b4",
-    "payload_sha256": "f8ad9b55a75448ca8a524c5208aabba36ef4338a5eac8eb9f29bace30202d513",
+    "installer_bytes": 29745519,
+    "installer_sha256": "16f04be5830208480deacffaeac2bea8d7b3b755684074e7e8019546a217fcda",
+    "payload_sha256": "d0eba82cf9fffc1d62b0b9cdaff02dd5c45e8b329374e818e55e99c0a4d8c322",
     "windows_pe_x64": true,
     "embedded_pck": true,
     "installer_crc_and_payload": true,
@@ -13,7 +13,7 @@
       "enemy_distance": 305.0,
       "executable": "/opt/godot/4.6.3/Godot_v4.6.3-stable_linux.x86_64",
       "first_wave_time": 10.0000000000001,
-      "kills": 5,
+      "kills": 4,
       "os": "Linux",
       "passed": true,
       "peak_enemy_bullets": 27,
@@ -79,9 +79,9 @@
         {
           "boss_system": true,
           "elapsed": 20.0,
-          "enemies": 3,
-          "regular_kills": 5,
-          "regular_spawned": 8,
+          "enemies": 0,
+          "regular_kills": 4,
+          "regular_spawned": 4,
           "scroll": 1200.0,
           "stage_system": true,
           "state": "playing",
@@ -89,16 +89,16 @@
           "world_time": 20.0000000000001
         }
       ],
-      "shield": 90.0,
+      "shield": 80.0,
       "shop_stats_match": true
     },
     "probe_host": "Godot Linux 4.6.3, not native Windows"
   },
   {
     "edition": "Pruebas",
-    "installer_bytes": 29699095,
-    "installer_sha256": "75057a26d8a6f5cf6b409cecd99c9d8bb3abb0075f4f829a9742f985f39cbbee",
-    "payload_sha256": "e1ef1a5e1cb0c5c65eac1f323a13dfb22e5865b26798cd74b1c1abbfc38a1538",
+    "installer_bytes": 29746368,
+    "installer_sha256": "f4b92554a70665644a81b4b658a296df263025c3ba6a1c554445ea7209afe4ca",
+    "payload_sha256": "8cf2b2b5cd73615283be15a16aa6a0f08d535d0c598edf3f32749478798889eb",
     "windows_pe_x64": true,
     "embedded_pck": true,
     "installer_crc_and_payload": true,
@@ -108,7 +108,7 @@
       "enemy_distance": 305.0,
       "executable": "/opt/godot/4.6.3/Godot_v4.6.3-stable_linux.x86_64",
       "first_wave_time": 10.0000000000001,
-      "kills": 5,
+      "kills": 4,
       "os": "Linux",
       "passed": true,
       "peak_enemy_bullets": 27,
@@ -174,9 +174,9 @@
         {
           "boss_system": true,
           "elapsed": 20.0,
-          "enemies": 3,
-          "regular_kills": 5,
-          "regular_spawned": 8,
+          "enemies": 0,
+          "regular_kills": 4,
+          "regular_spawned": 4,
           "scroll": 1200.0,
           "stage_system": true,
           "state": "playing",
@@ -184,7 +184,7 @@
           "world_time": 20.0000000000001
         }
       ],
-      "shield": 90.0,
+      "shield": 80.0,
       "shop_stats_match": true
     },
     "probe_host": "Godot Linux 4.6.3, not native Windows"

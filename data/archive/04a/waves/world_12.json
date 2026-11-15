@@ -1,0 +1,355 @@
+{
+  "mundo": 12,
+  "semilla": 0,
+  "eventos": [
+    {
+      "t": 10.0,
+      "tipo": "oleada",
+      "enemigo": "riftia",
+      "cantidad": 12,
+      "formacion": "linea_vertical",
+      "y": 60,
+      "portadora": true,
+      "separacion_px": 32,
+      "separacion_seg": 0.3,
+      "item": "rojo"
+    },
+    {
+      "t": 17.9,
+      "tipo": "oleada",
+      "enemigo": "paralvinella",
+      "cantidad": 12,
+      "formacion": "linea_horizontal",
+      "y": 110,
+      "portadora": false,
+      "separacion_px": 32,
+      "separacion_seg": 0.3
+    },
+    {
+      "t": 25,
+      "tipo": "peligro",
+      "id": "geiseres",
+      "duracion_seg": 10,
+      "y": 280
+    },
+    {
+      "t": 25.8,
+      "tipo": "oleada",
+      "enemigo": "branchinotogluma",
+      "cantidad": 11,
+      "formacion": "v",
+      "y": 168,
+      "portadora": false,
+      "separacion_px": 32,
+      "separacion_seg": 0.3
+    },
+    {
+      "t": 33.7,
+      "tipo": "oleada",
+      "enemigo": "amphisamytha",
+      "cantidad": 12,
+      "formacion": "v_invertida",
+      "y": 220,
+      "portadora": false,
+      "separacion_px": 32,
+      "separacion_seg": 0.3
+    },
+    {
+      "t": 37,
+      "tipo": "peligro",
+      "id": "lava",
+      "duracion_seg": 10,
+      "y": 40
+    },
+    {
+      "t": 41.6,
+      "tipo": "oleada",
+      "enemigo": "hesiolyra",
+      "cantidad": 12,
+      "formacion": "zigzag",
+      "y": 276,
+      "portadora": false,
+      "separacion_px": 32,
+      "separacion_seg": 0.3
+    },
+    {
+      "t": 54.0,
+      "tipo": "escudo",
+      "item": "amarillo",
+      "y": 168
+    },
+    {
+      "t": 60.0,
+      "tipo": "oleada",
+      "enemigo": "serp",
+      "cantidad": 7,
+      "formacion": "circulo",
+      "y": 60,
+      "portadora": true,
+      "separacion_px": 32,
+      "separacion_seg": 0.3,
+      "item": "verde"
+    },
+    {
+      "t": 60.0,
+      "tipo": "oleada",
+      "enemigo": "serp",
+      "cantidad": 6,
+      "formacion": "doble_columna",
+      "y": 110,
+      "portadora": false,
+      "separacion_px": 32,
+      "separacion_seg": 0.3
+    },
+    {
+      "t": 65.3,
+      "tipo": "oleada",
+      "enemigo": "cirrat",
+      "cantidad": 13,
+      "formacion": "ambos_lados",
+      "y": 168,
+      "portadora": false,
+      "separacion_px": 32,
+      "separacion_seg": 0.3
+    },
+    {
+      "t": 73.2,
+      "tipo": "oleada",
+      "enemigo": "dorville",
+      "cantidad": 7,
+      "formacion": "diagonal",
+      "y": 220,
+      "portadora": false,
+      "separacion_px": 32,
+      "separacion_seg": 0.3
+    },
+    {
+      "t": 81.1,
+      "tipo": "oleada",
+      "enemigo": "dorville",
+      "cantidad": 6,
+      "formacion": "linea_vertical",
+      "y": 276,
+      "portadora": false,
+      "separacion_px": 32,
+      "separacion_seg": 0.3
+    },
+    {
+      "t": 90.0,
+      "tipo": "minijefe",
+      "id": "mini_w12_paralvinella",
+      "escoltas": {
+        "enemigo": "paralvinella",
+        "cantidad": 2,
+        "vida": 20,
+        "tamano": [
+          40,
+          32
+        ]
+      }
+    },
+    {
+      "t": 150.0,
+      "tipo": "oleada",
+      "enemigo": "branchinotogluma",
+      "cantidad": 9,
+      "formacion": "v_invertida",
+      "y": 60,
+      "portadora": true,
+      "separacion_px": 32,
+      "separacion_seg": 0.3,
+      "item": "azul"
+    },
+    {
+      "t": 155.0,
+      "tipo": "escudo",
+      "item": "amarillo",
+      "y": 168
+    },
+    {
+      "t": 155.267,
+      "tipo": "oleada",
+      "enemigo": "branchinotogluma",
+      "cantidad": 9,
+      "formacion": "zigzag",
+      "y": 110,
+      "portadora": false,
+      "separacion_px": 32,
+      "separacion_seg": 0.3
+    },
+    {
+      "t": 160.0,
+      "tipo": "peligro",
+      "id": "geiseres",
+      "duracion_seg": 10,
+      "y": 280
+    },
+    {
+      "t": 160.533,
+      "tipo": "oleada",
+      "enemigo": "cirrat",
+      "cantidad": 20,
+      "formacion": "circulo",
+      "y": 168,
+      "portadora": false,
+      "separacion_px": 32,
+      "separacion_seg": 0.3
+    },
+    {
+      "t": 165.8,
+      "tipo": "oleada",
+      "enemigo": "paralvinella",
+      "cantidad": 9,
+      "formacion": "doble_columna",
+      "y": 220,
+      "portadora": false,
+      "separacion_px": 32,
+      "separacion_seg": 0.3
+    },
+    {
+      "t": 168.0,
+      "tipo": "peligro",
+      "id": "lava",
+      "duracion_seg": 10,
+      "y": 40
+    },
+    {
+      "t": 171.067,
+      "tipo": "oleada",
+      "enemigo": "paralvinella",
+      "cantidad": 9,
+      "formacion": "ambos_lados",
+      "y": 276,
+      "portadora": true,
+      "separacion_px": 32,
+      "separacion_seg": 0.3,
+      "item": "rojo"
+    },
+    {
+      "t": 176.333,
+      "tipo": "oleada",
+      "enemigo": "serp",
+      "cantidad": 10,
+      "formacion": "diagonal",
+      "y": 60,
+      "portadora": false,
+      "separacion_px": 32,
+      "separacion_seg": 0.3
+    },
+    {
+      "t": 181.6,
+      "tipo": "oleada",
+      "enemigo": "serp",
+      "cantidad": 10,
+      "formacion": "linea_vertical",
+      "y": 110,
+      "portadora": false,
+      "separacion_px": 32,
+      "separacion_seg": 0.3
+    },
+    {
+      "t": 186.867,
+      "tipo": "oleada",
+      "enemigo": "riftia",
+      "cantidad": 9,
+      "formacion": "linea_horizontal",
+      "y": 168,
+      "portadora": false,
+      "separacion_px": 32,
+      "separacion_seg": 0.3
+    },
+    {
+      "t": 192.133,
+      "tipo": "oleada",
+      "enemigo": "riftia",
+      "cantidad": 9,
+      "formacion": "v",
+      "y": 220,
+      "portadora": false,
+      "separacion_px": 32,
+      "separacion_seg": 0.3
+    },
+    {
+      "t": 197.4,
+      "tipo": "oleada",
+      "enemigo": "hesiolyra",
+      "cantidad": 9,
+      "formacion": "v_invertida",
+      "y": 276,
+      "portadora": true,
+      "separacion_px": 32,
+      "separacion_seg": 0.3,
+      "item": "verde"
+    },
+    {
+      "t": 202.667,
+      "tipo": "oleada",
+      "enemigo": "hesiolyra",
+      "cantidad": 8,
+      "formacion": "zigzag",
+      "y": 60,
+      "portadora": false,
+      "separacion_px": 32,
+      "separacion_seg": 0.3
+    },
+    {
+      "t": 207.933,
+      "tipo": "oleada",
+      "enemigo": "dorville",
+      "cantidad": 10,
+      "formacion": "circulo",
+      "y": 110,
+      "portadora": false,
+      "separacion_px": 32,
+      "separacion_seg": 0.3
+    },
+    {
+      "t": 213.2,
+      "tipo": "oleada",
+      "enemigo": "dorville",
+      "cantidad": 9,
+      "formacion": "doble_columna",
+      "y": 168,
+      "portadora": false,
+      "separacion_px": 32,
+      "separacion_seg": 0.3
+    },
+    {
+      "t": 218.467,
+      "tipo": "oleada",
+      "enemigo": "amphisamytha",
+      "cantidad": 9,
+      "formacion": "ambos_lados",
+      "y": 220,
+      "portadora": false,
+      "separacion_px": 32,
+      "separacion_seg": 0.3
+    },
+    {
+      "t": 223.733,
+      "tipo": "oleada",
+      "enemigo": "amphisamytha",
+      "cantidad": 8,
+      "formacion": "diagonal",
+      "y": 276,
+      "portadora": true,
+      "separacion_px": 32,
+      "separacion_seg": 0.3,
+      "item": "azul"
+    },
+    {
+      "t": 228,
+      "tipo": "escudo",
+      "item": "amarillo",
+      "y": 168
+    },
+    {
+      "t": 230,
+      "tipo": "alerta_jefe",
+      "id": "boss_w12_alvinella",
+      "jefes": [
+        "boss_w12_alvinella"
+      ]
+    }
+  ]
+}

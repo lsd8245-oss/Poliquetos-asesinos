@@ -9,11 +9,11 @@ func _initialize():
 		if g.world_time>=169.9:break
 		g.step(0.25,{})
 		for e in g.enemies:
-			if e.get("mini",false) and e.hp>0:g.hit_enemy(e,1000000,e.pos)
+			assert(not e.get("mini",false),"No mini actors may spawn")
 	print("stage1 time/state/budget ",g.world_time," ",g.state," ",g.regular_spawned)
 	assert(g.regular_spawned==90,"World1 exact regular budget")
-	assert(g.mini_defeated)
-	assert(g.checkpoint.mini_defeated)
+	assert(not g.mini_defeated and g.mini_status=="disabled" and g.mini_spawn_count==0)
+	assert(not g.checkpoint.mini_defeated and g.checkpoint.time==0,"No fabricated mini checkpoint")
 	assert(g.state=="alert")
 	assert(absf(g.world_time-170)<0.5)
 	var frozen=g.world_time
@@ -27,7 +27,7 @@ func _initialize():
 		g.step(0.25,{})
 	print("stage2 time/state/budget ",g.world_time," ",g.state," ",g.regular_spawned)
 	assert(not g.mini_defeated)
-	assert(g.regular_spawned>36,"Intense waves resume despite living mini")
+	assert(g.regular_spawned>36,"Same regular budget continues across former mini window")
 	assert(g.state=="playing")
-	print("STAGES TESTS PASS: exact90, timeline, mini checkpoint, pause, overlap")
+	print("STAGES TESTS PASS: exact90, timeline, disabled mini/no fake checkpoint, pause, continuous waves")
 	quit()

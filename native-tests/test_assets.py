@@ -203,18 +203,33 @@ func _init():
         names = {a['nombre'] for a in json.loads((ROOT / 'assets/assets_manifest.json').read_text())['assets']}
         raw = json.loads((ROOT / 'data/worlds.json').read_text())
         worlds = raw.get('mundos', raw.get('worlds', [])) if isinstance(raw,dict) else raw
+        routes = json.loads((ROOT/'assets/campaign_aliases.json').read_text())
+        aliases = routes['aliases']
+        pending = {p['key'] for p in routes['pending']}
+        enemies = {e['id']: e for e in json.loads((ROOT/'data/enemies.json').read_text())}
         for world in worlds:
             number = world['id']
-            for enemy in world.get('unicos', []) + world.get('recurrentes', []):
-                self.assertIn(f'w{number:02}_enemy_{enemy}_move', names)
-            if world.get('mini_tipo'):
-                self.assertIn(f"w{number:02}_mini_{world['mini_tipo']}_move", names)
-        raw = json.loads((ROOT / 'data/bosses.json').read_text())
-        bosses = raw.get('jefes', raw.get('bosses', [])) if isinstance(raw,dict) else raw
-        for boss in bosses:
-            if boss.get('tipo') == 'minijefe':
-                continue
-            self.assertIn(f"w{boss['mundo']:02}_boss_{boss['id']}_move", names)
+            for enemy in world['unicos'] + world['recurrentes']:
+                for action in ('move', 'hit'):
+                    key = f'w{number:02}_enemy_{enemy}_{action}'
+                    if enemies[enemy]['mundos'][str(number)]['runtime_ready']:
+                        self.assertIn(key, aliases)
+                        self.assertIn(aliases[key], names)
+                    else:
+                        self.assertIn(key, pending)
+                        self.assertNotIn(key, aliases)
+            self.assertFalse(world['miniboss_enabled'])
+        for boss in json.loads((ROOT/'data/bosses.json').read_text()):
+            for action in ('move', 'hit'):
+                key = f"w{boss['mundo']:02}_boss_{boss['id']}_{action}"
+                self.assertIn(key, aliases)
+                self.assertIn(aliases[key], names)
+        # Retired mini/final artwork is still present in the original inventory.
+        archived = json.loads((ROOT/'data/archive/04a/worlds.json').read_text())
+        for world in archived:
+            self.assertIn(f"w{world['id']:02}_mini_{world['mini_tipo']}_move", names)
+            for boss in world['jefes']:
+                self.assertIn(f"w{world['id']:02}_boss_{boss}_move", names)
 
 if __name__ == '__main__':
     unittest.main()

@@ -1,6 +1,7 @@
 extends SceneTree
 const Main=preload("res://src/core/main.gd")
 const Shop=preload("res://src/shop/shop.gd")
+const Combat=preload("res://native-tests/fixtures/campaign_combat.gd")
 func _initialize():call_deferred("run")
 func run():
 	var ui=Main.new()
@@ -9,7 +10,8 @@ func run():
 	ui.set_process(false)
 	ui._start(Shop.create_profile())
 	ui.intro_clock=0
-	ui.game.finish_encounter()
+	Combat.enter_final(ui.game)
+	assert(Combat.defeat(ui.game),"actual projectile defeat before results flow")
 	ui._process(0.1)
 	assert(ui.screen=="results")
 	ui._process(4.1)
@@ -22,7 +24,7 @@ func run():
 	ui._process(0.1)
 	assert(ui.screen=="game" and int(ui.game.profile.world)==2)
 	var completed=Shop.create_profile()
-	completed.world=15
+	completed.world=13
 	completed.completed=true
 	completed.resume="completed"
 	ui._start(completed,true)

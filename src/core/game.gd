@@ -2,6 +2,7 @@ class_name PoliGame
 extends RefCounted
 
 const Data = preload("res://src/core/data.gd")
+const Campaign = preload("res://src/core/campaign.gd")
 const Stages = preload("res://src/stages/stages.gd")
 const Weapons = preload("res://src/weapons/weapons.gd")
 const Bosses = preload("res://src/bosses/bosses.gd")
@@ -39,6 +40,9 @@ var wave_state: Dictionary = {}
 var claimed_drops: Dictionary = {}
 var mini_defeated = false
 var mini_spawned = false
+var mini_status = "disabled"
+var mini_spawn_count = 0
+var boss_spawn_count = 0
 var boss_spawned = false
 var checkpoint: Dictionary = {}
 var result: Dictionary = {}
@@ -70,7 +74,7 @@ func _init():
 	boss_system = Bosses.new()
 
 func equipment(id: String) -> bool:
-	return profile.get("equipment",{}).has(id)
+	return bool(profile.get("equipment",{}).get(id,false))
 
 func refresh_stats():
 	stats = Shop.stats(profile)
@@ -96,7 +100,12 @@ func start(p: Dictionary, restore_checkpoint: Dictionary = {}):
 	claimed_drops = profile.get("claimed_drops",{}).duplicate(true)
 	mini_spawned = false
 	mini_defeated = false
+	mini_status = "waiting" if bool(world.get("miniboss_enabled",false)) else "disabled"
+	mini_spawn_count = 0
+	boss_spawn_count = 0
 	boss_spawned = false
+	if boss_system != null:
+		boss_system.reset()
 	lander_used = int(profile.get("lander_used_world",0)) == int(profile.world)
 	net_stock = int(data.combat.get("gear",{}).get("net_capacity",5))
 	rng.seed = int(profile.get("seed",12345)) + int(profile.world)
@@ -124,7 +133,7 @@ func start(p: Dictionary, restore_checkpoint: Dictionary = {}):
 	if not restore_checkpoint.is_empty():
 		world_time = float(restore_checkpoint.get("time",0.0))
 		cursor = int(restore_checkpoint.get("cursor",0))
-		mini_spawned = bool(restore_checkpoint.get("mini_defeated",false))
+		mini_spawned = bool(world.get("miniboss_enabled",false)) and bool(restore_checkpoint.get("mini_defeated",false))
 		mini_defeated = mini_spawned
 		regular_spawned = int(restore_checkpoint.get("regular_spawned",0))
 		regular_kills = int(restore_checkpoint.get("regular_kills",0))
@@ -134,26 +143,39 @@ func start(p: Dictionary, restore_checkpoint: Dictionary = {}):
 	checkpoint = {"time":world_time,"cursor":cursor,"mini_defeated":mini_defeated,"regular_spawned":regular_spawned,"regular_kills":regular_kills,"world_collected":world_collected}
 	if stage_system != null:
 		stage_system.begin(self)
-	if int(profile.world)==14 and int(profile.get("lab_boss",0))>0:
+	if int(profile.world)==Campaign.laboratory_id() and int(profile.get("lab_boss",0))>0 and int(profile.lab_boss)<lab_encounters():
 		world_time = float(world.duracion_hasta_jefe_seg)
-		mini_defeated = true
-		mini_spawned = true
 		state = "alert"
 		phase_clock = 0.0
 		set_notice("SALA %d DEL LABORATORIO" % (int(profile.lab_boss)+1),2.0)
 
 func world_config(id: int) -> Dictionary:
-	if id == 15:
+	if id == Campaign.escape_id():
 		var escape = data.escape.duplicate(true)
 		escape["nombre"] = "Escape del laboratorio"
 		escape["acto"] = 4
-		escape["id"] = 15
+		escape["id"] = Campaign.escape_id()
+		escape["legacy_id"] = Campaign.legacy_world(id)
 		escape["duracion_hasta_jefe_seg"] = escape.get("duracion_seg",300)
 		return escape
 	for w in data.worlds:
 		if int(w.id)==id:
 			return w
 	return data.worlds[0]
+
+func legacy_world() -> int:
+	return int(world.get("legacy_id",Campaign.legacy_world(int(profile.world))))
+
+func lab_encounters() -> int:
+	return mini(Campaign.lab_encounter_count(),world.get("sectores_jefes",[]).size())
+
+func encounter_base() -> float:
+	if int(profile.world)==Campaign.laboratory_id():
+		var encounter=int(profile.get("lab_boss",0))
+		if encounter>=0 and encounter<lab_encounters():
+			return float(world.sectores_jefes[encounter].base_monedas)
+		return 0.0
+	return float(world.get("base_monedas",0))
 
 func set_notice(text: String, duration: float = 2.0):
 	notice = text
@@ -247,7 +269,7 @@ func enemy_bullet(pos: Vector2, velocity: Vector2, options: Dictionary = {}) -> 
 		return false
 	var b: Dictionary = free_bullets.pop_back()
 	b.clear()
-	b.merge({"pos":pos,"velocity":velocity,"ttl":8.0,"age":0.0,"size":Vector2(6,6),"source":"Poliqueto","boss":false,"damage":floorf(float(data.combat.enemy.bullet_damage_base)+float(data.combat.enemy.bullet_damage_world_step)*(int(profile.world)-1)),"homing":false,"bounce":0,"slow":0.0})
+	b.merge({"pos":pos,"velocity":velocity,"ttl":8.0,"age":0.0,"size":Vector2(6,6),"source":"Poliqueto","boss":false,"damage":floorf(float(data.combat.enemy.bullet_damage_base)+float(data.combat.enemy.bullet_damage_world_step)*(legacy_world()-1)),"homing":false,"bounce":0,"slow":0.0})
 	b.merge(options,true)
 	enemy_bullets.append(b)
 	max_bullets_seen = maxi(max_bullets_seen,enemy_bullets.size())
@@ -456,9 +478,7 @@ func collect_drop(drop: Dictionary):
 
 func add_coins(amount: float):
 	if replay:
-		var base=float(world.get("base_monedas",0))
-		if int(profile.world)==14:
-			base=float(world.sectores_jefes[clampi(int(profile.lab_boss),0,3)].base_monedas)
+		var base=encounter_base()
 		amount=minf(amount,maxf(0.0,base*0.5-replay_earned))
 		replay_earned+=amount
 		profile.replay_earned=replay_earned
@@ -511,7 +531,7 @@ func step_enemies(dt: float):
 		for rect in enemy_hit_rects(e):
 			if rect.grow(3).has_point(player.pos):contact_hit=true
 		if contact_hit and not e.get("hidden",false) and float(e.get("entry",0))<=0:
-			var contact=float(data.combat.enemy.boss_contact_base)+float(data.combat.enemy.boss_contact_world_step)*(int(profile.world)-1) if e.get("boss",false) else float(data.combat.enemy.contact_damage_base)+float(data.combat.enemy.contact_damage_world_step)*(int(profile.world)-1)
+			var contact=float(data.combat.enemy.boss_contact_base)+float(data.combat.enemy.boss_contact_world_step)*(legacy_world()-1) if e.get("boss",false) else float(data.combat.enemy.contact_damage_base)+float(data.combat.enemy.contact_damage_world_step)*(legacy_world()-1)
 			damage_player(contact,str(e.get("name",e.get("id","Poliqueto"))),bool(e.get("boss",false)))
 		if not e.get("boss",false) and not e.get("mini",false) and (e.pos.x< -150 or e.age>40):
 			enemies.remove_at(i)
@@ -578,15 +598,11 @@ func unlock_skin(id: String):
 		profile.skins.append(id)
 
 func finish_encounter():
-	if state in ["results","rest","victory"]:
+	# Only the boss controller can confirm an actual defeat after its delay.
+	if state!="boss" or boss_system==null or not boss_system.encounter_victory or not boss_system.encounter_defeated(self):
 		return
-	var base=float(world.get("base_monedas",0))
+	var base=encounter_base()
 	var encounter=int(profile.get("lab_boss",0))
-	if int(profile.world)==14:
-		base=float(world.sectores_jefes[clampi(encounter,0,3)].base_monedas)
-		# Later lab rooms contain boss phases/escorts, not another 250 regular enemies.
-		if encounter>0:
-			add_coins(base*0.6)
 	var deaths=int(profile.deaths.get(str(profile.world),0))
 	var reward=base*0.4
 	var bonus=base*0.2 if deaths==0 and not replay else 0.0
@@ -595,41 +611,48 @@ func finish_encounter():
 		bonus=0.0
 	var reward_key="%d:%d"%[int(profile.world),encounter]
 	var rewarded:Dictionary=profile.get("rewarded",{})
+	var room_extra=0.0
 	if not replay and rewarded.has(reward_key):
 		reward=0.0
 		bonus=0.0
 	else:
 		rewarded[reward_key]=true
+		# Later rooms contain finals, rather than another regular enemy budget.
+		# Include this component inside the same persistent deduplication gate.
+		if int(profile.world)==Campaign.laboratory_id() and encounter>0:
+			room_extra=base*0.6
 	profile.rewarded=rewarded
-	add_coins(reward+bonus)
+	add_coins(reward+bonus+room_extra)
 	result={"mundo":int(profile.world),"nombre":world.nombre,"enemigos_derrotados":regular_kills,"enemigos_total":int(world.enemigos_total),"porcentaje":100.0*regular_kills/maxi(1,int(world.enemigos_total)),"monedas_recogidas":world_collected-reward-bonus,"recompensa":reward,"bono":bonus,"muertes":deaths,"tiempo":float(profile.get("world_elapsed",world_time+encounter_time)),"objeto_unico":""}
 	if not replay:
-		var skin={3:"coral",6:"abisal",9:"bioluminiscente",12:"magma"}.get(int(profile.world),"")
+		var skin=str(data.campaign.skin_world_rewards.get(str(profile.world),""))
 		if skin!="":
 			unlock_skin(skin)
 			result.objeto_unico=skin
-		if int(profile.world)==4:unlock_skin("batiscafo_amarillo")
+		if legacy_world()==4:unlock_skin("batiscafo_amarillo")
 		if deaths==0 and profile.difficulty=="hard":unlock_skin("fantasma")
-		if int(profile.world)==14:
+		if int(profile.world)==Campaign.laboratory_id():
 			profile.lab_boss=encounter+1
-			if int(profile.lab_boss)>=4:
+			if int(profile.lab_boss)>=lab_encounters():
 				unlock_skin("laboratorio")
-				if not profile.cleared.has(14):profile.cleared.append(14)
+				if not profile.cleared.has(Campaign.laboratory_id()):profile.cleared.append(Campaign.laboratory_id())
 		elif not profile.cleared.has(int(profile.world)):
 			profile.cleared.append(int(profile.world))
-	if replay and int(profile.world)==14:
+	if replay and int(profile.world)==Campaign.laboratory_id():
 		profile.lab_boss=encounter+1
 	profile.resume="rest"
 	state="results"
 	phase_clock=0.0
 
 func continue_campaign():
+	if state not in ["results","rest"] or profile.get("resume","")!="rest":
+		return
 	if profile.get("completed",false) and not replay:
 		state="victory"
 		return
 	profile.resume="playing"
 	if replay:
-		if int(profile.world)==14 and int(profile.lab_boss)<4:
+		if int(profile.world)==Campaign.laboratory_id() and int(profile.lab_boss)<lab_encounters():
 			profile.replay_earned=0
 			start(profile)
 			return
@@ -639,25 +662,35 @@ func continue_campaign():
 		progress.time=profile.time
 		progress.upgrades=profile.upgrades
 		progress.equipment=profile.equipment
+		# Shop/profile state belongs to the original campaign, including resume.
+		# A migrated removed-world rest becomes a safe playing entry. Honor any
+		# playing return conservatively, so Next cannot silently skip that stage.
+		var return_resume=str(progress.get("resume","completed" if progress.get("completed",false) else "playing"))
+		if return_resume=="playing":
+			start(progress)
+			return
 		profile=progress
 		world=world_config(int(profile.world))
 		replay=false
-		state="rest"
-		profile.resume="rest"
+		state="victory" if return_resume=="completed" else "rest"
+		profile.resume=return_resume
 		return
-	if int(profile.world)==14 and int(profile.lab_boss)<4:
+	if int(profile.world)==Campaign.laboratory_id() and int(profile.lab_boss)<lab_encounters():
 		start(profile)
 		return
-	profile.world=mini(15,int(profile.world)+1)
+	profile.world=mini(Campaign.escape_id(),int(profile.world)+1)
 	profile.lab_boss=0
 	profile.claimed_drops={}
 	start(profile)
 
 func begin_replay(id: int):
+	if id<1 or id>Campaign.world_count():
+		return
 	if not profile.cleared.has(id) and profile.edition!="pruebas":
 		return
 	replay_return=profile.duplicate(true)
 	var p=profile.duplicate(true)
+	p.resume="playing"
 	p.world=id
 	p.lab_boss=0
 	p.claimed_drops={}
@@ -670,7 +703,7 @@ func begin_replay(id: int):
 	replay=true
 
 func finish_escape():
-	if state=="victory":return
+	if int(profile.world)!=Campaign.escape_id() or state!="playing" or world_time<float(data.escape.duracion_seg):return
 	var deaths=0
 	for n in profile.deaths.values():deaths+=int(n)
 	if deaths==0:unlock_skin("dorado")

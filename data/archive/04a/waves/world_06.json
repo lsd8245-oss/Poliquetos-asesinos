@@ -1,0 +1,242 @@
+{
+  "mundo": 6,
+  "semilla": 0,
+  "eventos": [
+    {
+      "t": 10.0,
+      "tipo": "oleada",
+      "enemigo": "glycera",
+      "cantidad": 7,
+      "formacion": "linea_vertical",
+      "y": 60,
+      "portadora": true,
+      "separacion_px": 32,
+      "separacion_seg": 0.3,
+      "item": "rojo"
+    },
+    {
+      "t": 18.0,
+      "tipo": "oleada",
+      "enemigo": "diopatra",
+      "cantidad": 8,
+      "formacion": "linea_horizontal",
+      "y": 110,
+      "portadora": false,
+      "separacion_px": 32,
+      "separacion_seg": 0.3
+    },
+    {
+      "t": 25,
+      "tipo": "peligro",
+      "id": "corriente_hojas",
+      "duracion_seg": 10,
+      "y": 280
+    },
+    {
+      "t": 26.0,
+      "tipo": "oleada",
+      "enemigo": "chaetopterus",
+      "cantidad": 7,
+      "formacion": "v",
+      "y": 168,
+      "portadora": false,
+      "separacion_px": 32,
+      "separacion_seg": 0.3
+    },
+    {
+      "t": 34.0,
+      "tipo": "oleada",
+      "enemigo": "sabellaria",
+      "cantidad": 7,
+      "formacion": "v_invertida",
+      "y": 220,
+      "portadora": true,
+      "separacion_px": 32,
+      "separacion_seg": 0.3,
+      "item": "verde"
+    },
+    {
+      "t": 42.0,
+      "tipo": "oleada",
+      "enemigo": "pectinaria",
+      "cantidad": 7,
+      "formacion": "zigzag",
+      "y": 276,
+      "portadora": false,
+      "separacion_px": 32,
+      "separacion_seg": 0.3
+    },
+    {
+      "t": 45.0,
+      "tipo": "escudo",
+      "item": "amarillo",
+      "y": 168
+    },
+    {
+      "t": 52.5,
+      "tipo": "oleada",
+      "enemigo": "syll",
+      "cantidad": 8,
+      "formacion": "circulo",
+      "y": 60,
+      "portadora": false,
+      "separacion_px": 32,
+      "separacion_seg": 0.3
+    },
+    {
+      "t": 58.0,
+      "tipo": "oleada",
+      "enemigo": "nepht",
+      "cantidad": 8,
+      "formacion": "doble_columna",
+      "y": 110,
+      "portadora": true,
+      "separacion_px": 32,
+      "separacion_seg": 0.3,
+      "item": "azul"
+    },
+    {
+      "t": 66.0,
+      "tipo": "oleada",
+      "enemigo": "hesio",
+      "cantidad": 8,
+      "formacion": "ambos_lados",
+      "y": 168,
+      "portadora": false,
+      "separacion_px": 32,
+      "separacion_seg": 0.3
+    },
+    {
+      "t": 75.0,
+      "tipo": "minijefe",
+      "id": "mini_w06_glycera",
+      "escoltas": {
+        "enemigo": "diopatra",
+        "cantidad": 2,
+        "vida": 12,
+        "tamano": [
+          40,
+          32
+        ]
+      }
+    },
+    {
+      "t": 135.0,
+      "tipo": "oleada",
+      "enemigo": "chaetopterus",
+      "cantidad": 11,
+      "formacion": "v_invertida",
+      "y": 60,
+      "portadora": false,
+      "separacion_px": 32,
+      "separacion_seg": 0.3
+    },
+    {
+      "t": 140.0,
+      "tipo": "escudo",
+      "item": "amarillo",
+      "y": 168
+    },
+    {
+      "t": 143.0,
+      "tipo": "oleada",
+      "enemigo": "glycera",
+      "cantidad": 11,
+      "formacion": "zigzag",
+      "y": 110,
+      "portadora": true,
+      "separacion_px": 32,
+      "separacion_seg": 0.3,
+      "item": "rojo"
+    },
+    {
+      "t": 145.0,
+      "tipo": "peligro",
+      "id": "corriente_hojas",
+      "duracion_seg": 10,
+      "y": 280
+    },
+    {
+      "t": 151.0,
+      "tipo": "oleada",
+      "enemigo": "hesio",
+      "cantidad": 12,
+      "formacion": "circulo",
+      "y": 168,
+      "portadora": false,
+      "separacion_px": 32,
+      "separacion_seg": 0.3
+    },
+    {
+      "t": 159.0,
+      "tipo": "oleada",
+      "enemigo": "nepht",
+      "cantidad": 12,
+      "formacion": "doble_columna",
+      "y": 220,
+      "portadora": false,
+      "separacion_px": 32,
+      "separacion_seg": 0.3
+    },
+    {
+      "t": 167.0,
+      "tipo": "oleada",
+      "enemigo": "sabellaria",
+      "cantidad": 11,
+      "formacion": "ambos_lados",
+      "y": 276,
+      "portadora": true,
+      "separacion_px": 32,
+      "separacion_seg": 0.3,
+      "item": "verde"
+    },
+    {
+      "t": 175.0,
+      "tipo": "oleada",
+      "enemigo": "syll",
+      "cantidad": 12,
+      "formacion": "diagonal",
+      "y": 60,
+      "portadora": false,
+      "separacion_px": 32,
+      "separacion_seg": 0.3
+    },
+    {
+      "t": 183.0,
+      "tipo": "oleada",
+      "enemigo": "diopatra",
+      "cantidad": 10,
+      "formacion": "linea_vertical",
+      "y": 110,
+      "portadora": false,
+      "separacion_px": 32,
+      "separacion_seg": 0.3
+    },
+    {
+      "t": 191.0,
+      "tipo": "oleada",
+      "enemigo": "pectinaria",
+      "cantidad": 11,
+      "formacion": "linea_horizontal",
+      "y": 168,
+      "portadora": true,
+      "separacion_px": 32,
+      "separacion_seg": 0.3,
+      "item": "azul"
+    },
+    {
+      "t": 198,
+      "tipo": "escudo",
+      "item": "amarillo",
+      "y": 168
+    },
+    {
+      "t": 200,
+      "tipo": "alerta_jefe",
+      "id": "boss_w06_leafqueen",
+      "jefes": [
+        "boss_w06_leafqueen"
+      ]
+    }
+  ]
+}

@@ -21,7 +21,7 @@ func run_tests() -> void:
 		var files: Array = []
 		for slot in range(1, 4):
 			files.append(Saves.file_path(slot, sandbox))
-		files.append(Saves.file_path(1, sandbox).get_base_dir().path_join("options.json"))
+		files.append(Saves.legacy_file_path(1, sandbox).get_base_dir().path_join("options.json"))
 		for path in files:
 			for suffix in ["", ".bak", ".tmp"]:
 				var target: String = path + suffix
@@ -29,7 +29,7 @@ func run_tests() -> void:
 				if FileAccess.file_exists(target):
 					DirAccess.remove_absolute(ProjectSettings.globalize_path(target))
 	var p: Dictionary = Shop.create_profile()
-	check(p.get("version") == 2 and p.get("credits") == 0, "new normal profile")
+	check(p.get("version") == 3 and p.get("credits") == 0, "new normal profile")
 	var stats: Dictionary = Shop.stats(p)
 	check(stats.max_shield == 100 and stats.speed == 160 and stats.max_bombs == 2, "base stats")
 	var visit: Dictionary = Shop.visit()
@@ -51,12 +51,12 @@ func run_tests() -> void:
 	var next_visit: Dictionary = Shop.visit()
 	check(not Shop.refund(p, "upgrade:dano", next_visit).ok, "new visit cannot refund earlier purchase")
 	check(not Shop.purchase(p, "gear:niskin", next_visit).ok, "act2 locked")
-	p.world = 5
+	p.world = 4
 	check(Shop.purchase(p, "gear:niskin", next_visit).ok, "act2 unlocked")
 	check(not Shop.purchase(p, "gear:rov", next_visit).ok, "act3 locked")
-	p.world = 9
+	p.world = 7
 	check(Shop.purchase(p, "gear:rov", next_visit).ok, "act3 unlocked")
-	p.world = 14
+	p.world = 12
 	check(not Shop.purchase(p, "gear:deflector", next_visit).ok, "act4 requires first lab boss")
 	p.lab_boss = 1
 	check(Shop.purchase(p, "gear:deflector", next_visit).ok, "act4 unlocked")
@@ -105,7 +105,7 @@ func run_tests() -> void:
 	check(loaded.ok and loaded.recovered and loaded.profile == p, "corrupt primary recovers valid backup")
 	var legacy := {"version": 1, "coins": 456, "current_world": 3, "difficulty": "hard"}
 	var migrated: Dictionary = Saves.import_slot(3, JSON.stringify(legacy))
-	check(migrated.ok and migrated.profile.version == 2 and migrated.profile.credits == 456 and migrated.profile.world == 3, "basic version1 migration")
+	check(migrated.ok and migrated.profile.version == 3 and migrated.profile.credits == 456 and migrated.profile.world == 2 and migrated.migrated and not migrated.migration_notice.is_empty(), "basic version1 migration")
 	check(not Saves.import_slot(3, '{"version":99}').ok, "future version rejected")
 	check(not Saves.import_slot(3, '{}').ok, "version required")
 	check(not Saves.import_slot(3, '{"version":2,"credits":-1}').ok, "invalid profile rejected")
@@ -141,7 +141,7 @@ func run_tests() -> void:
 	valid_optional.claimed_drops = {"1:0:carrier0": true}
 	valid_optional.rewarded = {"1:0": true}
 	valid_optional.world_entry_weapons = {"shot": 4, "missile": 2, "bomb": 1}
-	valid_optional.entry_world = 14
+	valid_optional.entry_world = 12
 	valid_optional.lander_used_world = 0
 	valid_optional.coins_total = 200.5
 	valid_optional.replay_earned = 12.5
@@ -191,7 +191,7 @@ func run_tests() -> void:
 	check(Saves.load_options().options == options, "restore exact options")
 	check(Saves.load_options(true).options != options, "options isolated by edition")
 	check(Saves.save_options(options).ok, "options backup generation")
-	file = FileAccess.open(Saves.file_path(1).get_base_dir().path_join("options.json"), FileAccess.WRITE)
+	file = FileAccess.open(Saves.legacy_file_path(1).get_base_dir().path_join("options.json"), FileAccess.WRITE)
 	file.store_string("[]")
 	file.close()
 	check(Saves.load_options().recovered and Saves.load_options().options == options, "corrupt options recover backup")

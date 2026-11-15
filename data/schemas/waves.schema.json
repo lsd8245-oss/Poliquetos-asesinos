@@ -6,7 +6,7 @@
     "mundo": {
       "type": "integer",
       "minimum": 1,
-      "maximum": 15
+      "maximum": 12
     },
     "eventos": {
       "type": "array",
@@ -57,6 +57,10 @@
               "separacion_seg": {
                 "type": "number",
                 "minimum": 0
+              },
+              "legacy_index": {
+                "type": "integer",
+                "minimum": 0
               }
             },
             "required": [
@@ -65,7 +69,8 @@
               "enemigo",
               "cantidad",
               "formacion",
-              "y"
+              "y",
+              "legacy_index"
             ],
             "additionalProperties": false,
             "allOf": [
@@ -96,10 +101,7 @@
                 "minimum": 0
               },
               "tipo": {
-                "enum": [
-                  "minijefe",
-                  "alerta_jefe"
-                ]
+                "const": "alerta_jefe"
               },
               "id": {
                 "type": "string",
@@ -113,43 +115,16 @@
                 },
                 "uniqueItems": true
               },
-              "escoltas": {
-                "type": "object",
-                "properties": {
-                  "enemigo": {
-                    "type": "string",
-                    "pattern": "^[a-z][a-z0-9_]*$"
-                  },
-                  "cantidad": {
-                    "const": 2
-                  },
-                  "vida": {
-                    "type": "number",
-                    "minimum": 0
-                  },
-                  "tamano": {
-                    "type": "array",
-                    "items": {
-                      "type": "number",
-                      "exclusiveMinimum": 0
-                    },
-                    "minItems": 2,
-                    "maxItems": 2
-                  }
-                },
-                "required": [
-                  "enemigo",
-                  "cantidad",
-                  "vida",
-                  "tamano"
-                ],
-                "additionalProperties": false
+              "legacy_index": {
+                "type": "integer",
+                "minimum": 0
               }
             },
             "required": [
               "t",
               "tipo",
-              "id"
+              "id",
+              "legacy_index"
             ],
             "additionalProperties": false
           },
@@ -169,13 +144,18 @@
               "y": {
                 "type": "number",
                 "minimum": 0
+              },
+              "legacy_index": {
+                "type": "integer",
+                "minimum": 0
               }
             },
             "required": [
               "t",
               "tipo",
               "item",
-              "y"
+              "y",
+              "legacy_index"
             ],
             "additionalProperties": false
           },
@@ -200,6 +180,10 @@
               "y": {
                 "type": "number",
                 "minimum": 0
+              },
+              "legacy_index": {
+                "type": "integer",
+                "minimum": 0
               }
             },
             "required": [
@@ -207,7 +191,8 @@
               "tipo",
               "id",
               "duracion_seg",
-              "y"
+              "y",
+              "legacy_index"
             ],
             "additionalProperties": false
           }
@@ -228,25 +213,20 @@
   "examples": [
     {
       "mundo": 1,
+      "semilla": 0,
       "eventos": [
         {
-          "t": 10,
+          "t": 10.0,
           "tipo": "oleada",
-          "enemigo": "serpulidae",
-          "cantidad": 6,
+          "enemigo": "hydroides",
+          "cantidad": 4,
           "formacion": "linea_vertical",
-          "y": 168,
-          "portadora": false
-        },
-        {
-          "t": 60,
-          "tipo": "minijefe",
-          "id": "mini_w01_pisionidae"
-        },
-        {
-          "t": 170,
-          "tipo": "alerta_jefe",
-          "id": "boss_w01_nereididae"
+          "y": 60,
+          "portadora": true,
+          "separacion_px": 32,
+          "separacion_seg": 0.3,
+          "item": "rojo",
+          "legacy_index": 0
         }
       ]
     }

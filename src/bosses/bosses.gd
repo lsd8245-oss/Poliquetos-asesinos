@@ -1,12 +1,47 @@
 class_name PoliBosses
 extends RefCounted
 const Patterns=preload("res://src/bosses/patterns.gd")
+const Campaign=preload("res://src/core/campaign.gd")
 var defeat_clock=-1.0
+var encounter_victory=false
 var group_ids:Array=[]
 var robot_phase: int = 1
 var robot_clock: float = 0.0
 var robot_max_hp: float = 0.0
 var robot_rules: Dictionary = {}
+
+func reset():
+	defeat_clock=-1.0
+	encounter_victory=false
+	group_ids.clear()
+	robot_phase=1
+	robot_clock=0.0
+	robot_max_hp=0.0
+	robot_rules.clear()
+
+func encounter_ids(g)->Array:
+	if not bool(g.world.get("final_boss_enabled",false)):
+		return []
+	if int(g.profile.world)==Campaign.laboratory_id():
+		var room=int(g.profile.get("lab_boss",0))
+		if room<0 or room>=g.lab_encounters():
+			return []
+		return g.world.sectores_jefes[room].jefes.duplicate()
+	return g.world.get("jefes",[]).duplicate()
+
+func encounter_defeated(g)->bool:
+	if not g.boss_spawned or g.boss_spawn_count<group_ids.size() or group_ids.is_empty():
+		return false
+	for id in group_ids:
+		var defeated=false
+		for e in g.enemies:
+			if e.get("boss",false) and str(e.id)==str(id):
+				# Fusion donors belong to the defeated group without awarding kills.
+				defeated=e.hp<=0 and (e.get("counted_dead",false) or e.get("fused",false))
+				break
+		if not defeated:
+			return false
+	return true
 
 func _is_robot(e: Dictionary) -> bool:
 	return e.get("boss", false) and str(e.config.get("arquetipo", "")).begins_with("robot_")
@@ -96,15 +131,22 @@ func _robot_damage(g, e: Dictionary, dealt: float) -> bool:
 	g.set_notice("FASE %d" % robot_phase, 1.0)
 	return true
 
-func spawn(g,id:String,mini:bool=false,index:int=0,count:int=1):
+func spawn(g,id:String,mini:bool=false,index:int=0,count:int=1)->bool:
+	if mini and not bool(g.world.get("miniboss_enabled",false)):
+		return false
 	var cfg:Dictionary={}
 	for row in g.data.bosses:
 		if row.id==id:
 			cfg=row
 			break
-	if cfg.is_empty():
-		push_error("Boss not found: "+id)
-		return
+	if cfg.is_empty() or int(cfg.get("mundo",0))!=int(g.profile.world):
+		return false
+	if not mini and (str(cfg.get("tipo",""))!="jefe" or not encounter_ids(g).has(id)):
+		return false
+	if mini and str(cfg.get("tipo",""))!="minijefe":
+		return false
+	if g.enemies.any(func(e): return e.get("uid","")=="boss:"+id):
+		return false
 	var size=Vector2(cfg.tamano[0],cfg.tamano[1])
 	var hp=float(cfg.vida)*float(g.difficulty().get("boss_hp",1))
 	var lane=336.0*(index+1)/(count+1)
@@ -121,9 +163,17 @@ func spawn(g,id:String,mini:bool=false,index:int=0,count:int=1):
 		robot_max_hp += hp
 	Patterns.sync_parts(e, {"player":g.player.pos}, 0.0)
 	g.enemies.append(e)
+	if mini:
+		g.mini_spawned=true
+		g.mini_spawn_count+=1
+		g.mini_status="active"
+	else:
+		g.boss_spawned=true
+		g.boss_spawn_count+=1
 	if _is_robot(e):
 		_select_robot_bodies(g, 0.0)
 	g.set_notice(str(cfg.nombre).to_upper(),float(g.data.combat.timings.boss_entry))
+	return true
 
 func step(g,dt:float):
 	if g.state=="alert" and g.phase_clock>=float(g.data.combat.timings.alert):
@@ -131,11 +181,9 @@ func step(g,dt:float):
 		g.state="boss"
 		g.phase_clock=0.0
 		g.encounter_time=0.0
-		g.boss_spawned=true
 		defeat_clock=-1.0
-		group_ids=g.world.jefes.duplicate()
-		if int(g.profile.world)==14:
-			group_ids=g.world.sectores_jefes[clampi(int(g.profile.lab_boss),0,3)].jefes.duplicate()
+		encounter_victory=false
+		group_ids=encounter_ids(g)
 		for n in range(group_ids.size()):
 			spawn(g,str(group_ids[n]),false,n,group_ids.size())
 	if g.state=="boss":
@@ -162,9 +210,9 @@ func step(g,dt:float):
 		if e.get("inactive", false):
 			continue
 		var fury=1.0
-		if int(g.profile.world)==8:
+		if g.legacy_world()==8:
 			fury=pow(1.25,3-active_boss_count)
-		elif int(g.profile.world)==13 and e.config.arquetipo=="hadalsovereign":
+		elif g.legacy_world()==13 and e.config.arquetipo=="hadalsovereign":
 			var riftia_alive=false
 			for other in g.enemies:
 				if other.get("boss",false) and other.config.arquetipo=="riftia" and other.hp>0:
@@ -201,7 +249,7 @@ func step(g,dt:float):
 						g.stage_system.spawn_enemy(g,str(action.enemy),action.pos,-1,{"summoned":true})
 				"notice":
 					g.set_notice(str(action.text),1.0)
-	if g.state=="boss" and active_boss_count==0 and g.boss_spawned:
+	if g.state=="boss" and active_boss_count==0 and encounter_defeated(g):
 		if defeat_clock<0:
 			defeat_clock=float(g.data.combat.timings.boss_defeat)
 			g.clear_enemy_bullets(false)
@@ -209,6 +257,7 @@ func step(g,dt:float):
 			g.effects.append({"kind":"explosion","pos":Vector2(480,168),"ttl":defeat_clock})
 		defeat_clock-=dt
 		if defeat_clock<=0:
+			encounter_victory=true
 			g.finish_encounter()
 			defeat_clock=-1.0
 
@@ -263,6 +312,7 @@ func damage(g,e:Dictionary,amount:float,hit_pos:Vector2,bomb:bool=false):
 		g.clear_enemy_bullets(false)
 		if e.mini:
 			g.mini_defeated=true
+			g.mini_status="defeated"
 			g.make_checkpoint()
 			var weapon="rojo"
 			if g.profile.weapons.missile<g.profile.weapons.shot:weapon="verde"

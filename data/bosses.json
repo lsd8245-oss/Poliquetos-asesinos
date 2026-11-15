@@ -82,69 +82,9 @@
       "hermo_anillo_seg": 5,
       "mucosidad_lento": 0.3
     },
-    "vida_base": 1750
-  },
-  {
-    "id": "mini_w01_pision",
-    "nombre": "Pisionidae gigante",
-    "mundo": 1,
-    "arquetipo": "mini_m4",
-    "tipo": "minijefe",
-    "vida": 975,
-    "objetivo_seg": 50,
-    "minimo_seg": 0,
-    "tamano": [
-      128,
-      96
-    ],
-    "segmentos": [
-      {
-        "id": "cabeza",
-        "hitbox": [
-          0,
-          24,
-          32,
-          48
-        ],
-        "debil": true,
-        "mult_dano": 2
-      },
-      {
-        "id": "cuerpo",
-        "hitbox": [
-          32,
-          0,
-          96,
-          96
-        ],
-        "debil": false,
-        "mult_dano": 0.5
-      }
-    ],
-    "fases": [
-      {
-        "desde_pct": 100,
-        "hasta_pct": 50,
-        "patrones": [
-          "m4",
-          "f1"
-        ]
-      },
-      {
-        "desde_pct": 50,
-        "hasta_pct": 0,
-        "patrones": [
-          "m4",
-          "f1",
-          "embestida_telegrafiada"
-        ]
-      }
-    ],
-    "recompensa_extra": 0,
-    "objeto_unico": null,
-    "movimiento": "M4",
-    "disparo": "F1",
-    "drop_item": "arma_mas_baja"
+    "vida_base": 1750,
+    "asset_id": "boss_w01_nereis",
+    "asset_world": 1
   },
   {
     "id": "boss_w02_capit",
@@ -227,219 +167,14 @@
       "hermo_anillo_seg": 5,
       "mucosidad_lento": 0.3
     },
-    "vida_base": 2100
+    "vida_base": 2100,
+    "asset_id": "boss_w02_capit",
+    "asset_world": 2
   },
   {
-    "id": "mini_w02_arenicola",
-    "nombre": "Arenicola · Arenicolidae gigante",
-    "mundo": 2,
-    "arquetipo": "mini_m6",
-    "tipo": "minijefe",
-    "vida": 1170,
-    "objetivo_seg": 50,
-    "minimo_seg": 0,
-    "tamano": [
-      128,
-      96
-    ],
-    "segmentos": [
-      {
-        "id": "cabeza",
-        "hitbox": [
-          0,
-          24,
-          32,
-          48
-        ],
-        "debil": true,
-        "mult_dano": 2
-      },
-      {
-        "id": "cuerpo",
-        "hitbox": [
-          32,
-          0,
-          96,
-          96
-        ],
-        "debil": false,
-        "mult_dano": 0.5
-      }
-    ],
-    "fases": [
-      {
-        "desde_pct": 100,
-        "hasta_pct": 50,
-        "patrones": [
-          "m6",
-          "f5"
-        ]
-      },
-      {
-        "desde_pct": 50,
-        "hasta_pct": 0,
-        "patrones": [
-          "m6",
-          "f5",
-          "embestida_telegrafiada"
-        ]
-      }
-    ],
-    "recompensa_extra": 0,
-    "objeto_unico": null,
-    "movimiento": "M6",
-    "disparo": "F5",
-    "drop_item": "arma_mas_baja"
-  },
-  {
-    "id": "boss_w03_polyn",
-    "nombre": "Polinoidae",
-    "mundo": 3,
-    "arquetipo": "polyn",
-    "tipo": "jefe",
-    "vida": 5983,
-    "objetivo_seg": 90,
-    "minimo_seg": 36.0,
-    "tamano": [
-      200,
-      140
-    ],
-    "segmentos": [
-      {
-        "id": "cabeza",
-        "hitbox": [
-          0,
-          42.0,
-          50.0,
-          56.0
-        ],
-        "debil": true,
-        "mult_dano": 2
-      },
-      {
-        "id": "cuerpo",
-        "hitbox": [
-          50.0,
-          0,
-          150.0,
-          140
-        ],
-        "debil": false,
-        "mult_dano": 0.5
-      }
-    ],
-    "fases": [
-      {
-        "desde_pct": 100,
-        "hasta_pct": 66,
-        "patrones": [
-          "escamas_rebote"
-        ]
-      },
-      {
-        "desde_pct": 66,
-        "hasta_pct": 33,
-        "patrones": [
-          "elitros_bloquean"
-        ]
-      },
-      {
-        "desde_pct": 33,
-        "hasta_pct": 0,
-        "patrones": [
-          "carga_blindada",
-          "lluvia_piedras"
-        ]
-      }
-    ],
-    "recompensa_extra": 0,
-    "objeto_unico": "coral",
-    "parametros": {
-      "intervalo": 2,
-      "telegraph": 0.5,
-      "velocidad": 80,
-      "entrada_seg": 3,
-      "derrota_seg": 3,
-      "invulnerabilidad_fase_seg": 3,
-      "furia_cadencia": 1.3,
-      "furia_velocidad": 1.3,
-      "polyn_apertura_seg": 4,
-      "tomo_visibilidad_seg": 2,
-      "destello_seg": 0.3,
-      "estalactita_aviso_seg": 0.7,
-      "congelacion_seg": 1,
-      "lava_subida_seg": 10,
-      "hermo_anillo_seg": 5,
-      "mucosidad_lento": 0.3
-    },
-    "vida_base": 2450
-  },
-  {
-    "id": "mini_w03_oenone",
-    "nombre": "Oenone · Oenonidae gigante",
-    "mundo": 3,
-    "arquetipo": "mini_m3",
-    "tipo": "minijefe",
-    "vida": 1365,
-    "objetivo_seg": 50,
-    "minimo_seg": 0,
-    "tamano": [
-      128,
-      96
-    ],
-    "segmentos": [
-      {
-        "id": "cabeza",
-        "hitbox": [
-          0,
-          24,
-          32,
-          48
-        ],
-        "debil": true,
-        "mult_dano": 2
-      },
-      {
-        "id": "cuerpo",
-        "hitbox": [
-          32,
-          0,
-          96,
-          96
-        ],
-        "debil": false,
-        "mult_dano": 0.5
-      }
-    ],
-    "fases": [
-      {
-        "desde_pct": 100,
-        "hasta_pct": 50,
-        "patrones": [
-          "m3",
-          "f2"
-        ]
-      },
-      {
-        "desde_pct": 50,
-        "hasta_pct": 0,
-        "patrones": [
-          "m3",
-          "f2",
-          "embestida_telegrafiada"
-        ]
-      }
-    ],
-    "recompensa_extra": 0,
-    "objeto_unico": null,
-    "movimiento": "M3",
-    "disparo": "F2",
-    "drop_item": "arma_mas_baja"
-  },
-  {
-    "id": "boss_w04_tere",
+    "id": "boss_w03_tere",
     "nombre": "Terebellidae",
-    "mundo": 4,
+    "mundo": 3,
     "arquetipo": "tere",
     "tipo": "jefe",
     "vida": 8028,
@@ -517,74 +252,14 @@
       "hermo_anillo_seg": 5,
       "mucosidad_lento": 0.3
     },
-    "vida_base": 3300
+    "vida_base": 3300,
+    "asset_id": "boss_w04_tere",
+    "asset_world": 4
   },
   {
-    "id": "mini_w04_myxicola",
-    "nombre": "Myxicola · Sabellidae gigante",
-    "mundo": 4,
-    "arquetipo": "mini_m5",
-    "tipo": "minijefe",
-    "vida": 1560,
-    "objetivo_seg": 50,
-    "minimo_seg": 0,
-    "tamano": [
-      128,
-      96
-    ],
-    "segmentos": [
-      {
-        "id": "cabeza",
-        "hitbox": [
-          0,
-          24,
-          32,
-          48
-        ],
-        "debil": true,
-        "mult_dano": 2
-      },
-      {
-        "id": "cuerpo",
-        "hitbox": [
-          32,
-          0,
-          96,
-          96
-        ],
-        "debil": false,
-        "mult_dano": 0.5
-      }
-    ],
-    "fases": [
-      {
-        "desde_pct": 100,
-        "hasta_pct": 50,
-        "patrones": [
-          "m5",
-          "f3"
-        ]
-      },
-      {
-        "desde_pct": 50,
-        "hasta_pct": 0,
-        "patrones": [
-          "m5",
-          "f3",
-          "embestida_telegrafiada"
-        ]
-      }
-    ],
-    "recompensa_extra": 0,
-    "objeto_unico": null,
-    "movimiento": "M5",
-    "disparo": "F3",
-    "drop_item": "arma_mas_baja"
-  },
-  {
-    "id": "boss_w05_hermo",
+    "id": "boss_w04_hermo",
     "nombre": "Hermodice carunculata",
-    "mundo": 5,
+    "mundo": 4,
     "arquetipo": "hermo",
     "tipo": "jefe",
     "vida": 8658,
@@ -663,220 +338,14 @@
       "hermo_anillo_seg": 5,
       "mucosidad_lento": 0.3
     },
-    "vida_base": 3700
+    "vida_base": 3700,
+    "asset_id": "boss_w05_hermo",
+    "asset_world": 5
   },
   {
-    "id": "mini_w05_spirobranchus",
-    "nombre": "Spirobranchus giganteus · Serpulidae gigante",
-    "mundo": 5,
-    "arquetipo": "mini_m5",
-    "tipo": "minijefe",
-    "vida": 1755,
-    "objetivo_seg": 50,
-    "minimo_seg": 0,
-    "tamano": [
-      128,
-      96
-    ],
-    "segmentos": [
-      {
-        "id": "cabeza",
-        "hitbox": [
-          0,
-          24,
-          32,
-          48
-        ],
-        "debil": true,
-        "mult_dano": 2
-      },
-      {
-        "id": "cuerpo",
-        "hitbox": [
-          32,
-          0,
-          96,
-          96
-        ],
-        "debil": false,
-        "mult_dano": 0.5
-      }
-    ],
-    "fases": [
-      {
-        "desde_pct": 100,
-        "hasta_pct": 50,
-        "patrones": [
-          "m5",
-          "f3"
-        ]
-      },
-      {
-        "desde_pct": 50,
-        "hasta_pct": 0,
-        "patrones": [
-          "m5",
-          "f3",
-          "embestida_telegrafiada"
-        ]
-      }
-    ],
-    "recompensa_extra": 0,
-    "objeto_unico": null,
-    "movimiento": "M5",
-    "disparo": "F3",
-    "drop_item": "arma_mas_baja"
-  },
-  {
-    "id": "boss_w06_leafqueen",
-    "nombre": "Phyllodocidae",
-    "mundo": 6,
-    "arquetipo": "leafqueen",
-    "tipo": "jefe",
-    "vida": 9496,
-    "objetivo_seg": 105,
-    "minimo_seg": 42.0,
-    "tamano": [
-      220,
-      140
-    ],
-    "segmentos": [
-      {
-        "id": "cabeza",
-        "hitbox": [
-          0,
-          42.0,
-          55.0,
-          56.0
-        ],
-        "debil": true,
-        "mult_dano": 2
-      },
-      {
-        "id": "cuerpo",
-        "hitbox": [
-          55.0,
-          0,
-          165.0,
-          140
-        ],
-        "debil": false,
-        "mult_dano": 0.5
-      }
-    ],
-    "fases": [
-      {
-        "desde_pct": 100,
-        "hasta_pct": 66,
-        "patrones": [
-          "camuflaje_hojas",
-          "falsos_blancos"
-        ]
-      },
-      {
-        "desde_pct": 66,
-        "hasta_pct": 33,
-        "patrones": [
-          "hojas_cortantes"
-        ]
-      },
-      {
-        "desde_pct": 33,
-        "hasta_pct": 0,
-        "patrones": [
-          "hojas_guiadas",
-          "ondulacion_total"
-        ]
-      }
-    ],
-    "recompensa_extra": 0,
-    "objeto_unico": "abisal",
-    "parametros": {
-      "intervalo": 2,
-      "telegraph": 0.5,
-      "velocidad": 80,
-      "entrada_seg": 3,
-      "derrota_seg": 3,
-      "invulnerabilidad_fase_seg": 3,
-      "furia_cadencia": 1.3,
-      "furia_velocidad": 1.3,
-      "polyn_apertura_seg": 4,
-      "tomo_visibilidad_seg": 2,
-      "destello_seg": 0.3,
-      "estalactita_aviso_seg": 0.7,
-      "congelacion_seg": 1,
-      "lava_subida_seg": 10,
-      "hermo_anillo_seg": 5,
-      "mucosidad_lento": 0.3
-    },
-    "vida_base": 4100
-  },
-  {
-    "id": "mini_w06_glycera",
-    "nombre": "Glycera · Glyceridae gigante",
-    "mundo": 6,
-    "arquetipo": "mini_m3",
-    "tipo": "minijefe",
-    "vida": 1950,
-    "objetivo_seg": 50,
-    "minimo_seg": 0,
-    "tamano": [
-      128,
-      96
-    ],
-    "segmentos": [
-      {
-        "id": "cabeza",
-        "hitbox": [
-          0,
-          24,
-          32,
-          48
-        ],
-        "debil": true,
-        "mult_dano": 2
-      },
-      {
-        "id": "cuerpo",
-        "hitbox": [
-          32,
-          0,
-          96,
-          96
-        ],
-        "debil": false,
-        "mult_dano": 0.5
-      }
-    ],
-    "fases": [
-      {
-        "desde_pct": 100,
-        "hasta_pct": 50,
-        "patrones": [
-          "m3",
-          "f2"
-        ]
-      },
-      {
-        "desde_pct": 50,
-        "hasta_pct": 0,
-        "patrones": [
-          "m3",
-          "f2",
-          "embestida_telegrafiada"
-        ]
-      }
-    ],
-    "recompensa_extra": 0,
-    "objeto_unico": null,
-    "movimiento": "M3",
-    "disparo": "F2",
-    "drop_item": "arma_mas_baja"
-  },
-  {
-    "id": "boss_w07_orbin",
+    "id": "boss_w05_orbin",
     "nombre": "Orbiniidae",
-    "mundo": 7,
+    "mundo": 5,
     "arquetipo": "orbin",
     "tipo": "jefe",
     "vida": 11838,
@@ -954,74 +423,14 @@
       "hermo_anillo_seg": 5,
       "mucosidad_lento": 0.3
     },
-    "vida_base": 5150
+    "vida_base": 5150,
+    "asset_id": "boss_w07_orbin",
+    "asset_world": 7
   },
   {
-    "id": "mini_w07_terebellides",
-    "nombre": "Terebellides · Trichobranchidae gigante",
-    "mundo": 7,
-    "arquetipo": "mini_m5",
-    "tipo": "minijefe",
-    "vida": 2145,
-    "objetivo_seg": 50,
-    "minimo_seg": 0,
-    "tamano": [
-      128,
-      96
-    ],
-    "segmentos": [
-      {
-        "id": "cabeza",
-        "hitbox": [
-          0,
-          24,
-          32,
-          48
-        ],
-        "debil": true,
-        "mult_dano": 2
-      },
-      {
-        "id": "cuerpo",
-        "hitbox": [
-          32,
-          0,
-          96,
-          96
-        ],
-        "debil": false,
-        "mult_dano": 0.5
-      }
-    ],
-    "fases": [
-      {
-        "desde_pct": 100,
-        "hasta_pct": 50,
-        "patrones": [
-          "m5",
-          "f3"
-        ]
-      },
-      {
-        "desde_pct": 50,
-        "hasta_pct": 0,
-        "patrones": [
-          "m5",
-          "f3",
-          "embestida_telegrafiada"
-        ]
-      }
-    ],
-    "recompensa_extra": 0,
-    "objeto_unico": null,
-    "movimiento": "M5",
-    "disparo": "F3",
-    "drop_item": "arma_mas_baja"
-  },
-  {
-    "id": "boss_w08_pollution_capit",
+    "id": "boss_w06_pollution_capit",
     "nombre": "Capitella capitata",
-    "mundo": 8,
+    "mundo": 6,
     "arquetipo": "pollutionCapit",
     "tipo": "jefe",
     "vida": 5326,
@@ -1099,12 +508,14 @@
       "hermo_anillo_seg": 5,
       "mucosidad_lento": 0.3
     },
-    "vida_base": 2100
+    "vida_base": 2100,
+    "asset_id": "boss_w08_pollution_capit",
+    "asset_world": 8
   },
   {
-    "id": "boss_w08_pollution_spio",
+    "id": "boss_w06_pollution_spio",
     "nombre": "Streblospio benedicti",
-    "mundo": 8,
+    "mundo": 6,
     "arquetipo": "pollutionSpio",
     "tipo": "jefe",
     "vida": 5326,
@@ -1182,12 +593,14 @@
       "hermo_anillo_seg": 5,
       "mucosidad_lento": 0.3
     },
-    "vida_base": 2100
+    "vida_base": 2100,
+    "asset_id": "boss_w08_pollution_spio",
+    "asset_world": 8
   },
   {
-    "id": "boss_w08_pollution_cirrat",
+    "id": "boss_w06_pollution_cirrat",
     "nombre": "Cirriformia tentaculata",
-    "mundo": 8,
+    "mundo": 6,
     "arquetipo": "pollutionCirrat",
     "tipo": "jefe",
     "vida": 5325,
@@ -1265,74 +678,14 @@
       "hermo_anillo_seg": 5,
       "mucosidad_lento": 0.3
     },
-    "vida_base": 2100
+    "vida_base": 2100,
+    "asset_id": "boss_w08_pollution_cirrat",
+    "asset_world": 8
   },
   {
-    "id": "mini_w08_lumbrineris",
-    "nombre": "Lumbrineris · Lumbrineridae gigante",
-    "mundo": 8,
-    "arquetipo": "mini_m3",
-    "tipo": "minijefe",
-    "vida": 2340,
-    "objetivo_seg": 50,
-    "minimo_seg": 0,
-    "tamano": [
-      128,
-      96
-    ],
-    "segmentos": [
-      {
-        "id": "cabeza",
-        "hitbox": [
-          0,
-          24,
-          32,
-          48
-        ],
-        "debil": true,
-        "mult_dano": 2
-      },
-      {
-        "id": "cuerpo",
-        "hitbox": [
-          32,
-          0,
-          96,
-          96
-        ],
-        "debil": false,
-        "mult_dano": 0.5
-      }
-    ],
-    "fases": [
-      {
-        "desde_pct": 100,
-        "hasta_pct": 50,
-        "patrones": [
-          "m3",
-          "f2"
-        ]
-      },
-      {
-        "desde_pct": 50,
-        "hasta_pct": 0,
-        "patrones": [
-          "m3",
-          "f2",
-          "embestida_telegrafiada"
-        ]
-      }
-    ],
-    "recompensa_extra": 0,
-    "objeto_unico": null,
-    "movimiento": "M3",
-    "disparo": "F2",
-    "drop_item": "arma_mas_baja"
-  },
-  {
-    "id": "boss_w09_tomo",
+    "id": "boss_w07_tomo",
     "nombre": "Tomopteridae",
-    "mundo": 9,
+    "mundo": 7,
     "arquetipo": "tomo",
     "tipo": "jefe",
     "vida": 13593,
@@ -1410,74 +763,14 @@
       "hermo_anillo_seg": 5,
       "mucosidad_lento": 0.3
     },
-    "vida_base": 6100
+    "vida_base": 6100,
+    "asset_id": "boss_w09_tomo",
+    "asset_world": 9
   },
   {
-    "id": "mini_w09_lopado",
-    "nombre": "Lopadorrhynchidae gigante",
-    "mundo": 9,
-    "arquetipo": "mini_m8",
-    "tipo": "minijefe",
-    "vida": 2535,
-    "objetivo_seg": 50,
-    "minimo_seg": 0,
-    "tamano": [
-      128,
-      96
-    ],
-    "segmentos": [
-      {
-        "id": "cabeza",
-        "hitbox": [
-          0,
-          24,
-          32,
-          48
-        ],
-        "debil": true,
-        "mult_dano": 2
-      },
-      {
-        "id": "cuerpo",
-        "hitbox": [
-          32,
-          0,
-          96,
-          96
-        ],
-        "debil": false,
-        "mult_dano": 0.5
-      }
-    ],
-    "fases": [
-      {
-        "desde_pct": 100,
-        "hasta_pct": 50,
-        "patrones": [
-          "m8",
-          "f4"
-        ]
-      },
-      {
-        "desde_pct": 50,
-        "hasta_pct": 0,
-        "patrones": [
-          "m8",
-          "f4",
-          "embestida_telegrafiada"
-        ]
-      }
-    ],
-    "recompensa_extra": 0,
-    "objeto_unico": null,
-    "movimiento": "M8",
-    "disparo": "F4",
-    "drop_item": "arma_mas_baja"
-  },
-  {
-    "id": "boss_w10_eulagisca",
+    "id": "boss_w08_eulagisca",
     "nombre": "Eulagisca gigantea",
-    "mundo": 10,
+    "mundo": 8,
     "arquetipo": "eulagisca",
     "tipo": "jefe",
     "vida": 15615,
@@ -1555,74 +848,14 @@
       "hermo_anillo_seg": 5,
       "mucosidad_lento": 0.3
     },
-    "vida_base": 6550
+    "vida_base": 6550,
+    "asset_id": "boss_w10_eulagisca",
+    "asset_world": 10
   },
   {
-    "id": "mini_w10_flabegraviera",
-    "nombre": "Flabegraviera · Flabelligeridae gigante",
-    "mundo": 10,
-    "arquetipo": "mini_m4",
-    "tipo": "minijefe",
-    "vida": 2730,
-    "objetivo_seg": 50,
-    "minimo_seg": 0,
-    "tamano": [
-      128,
-      96
-    ],
-    "segmentos": [
-      {
-        "id": "cabeza",
-        "hitbox": [
-          0,
-          24,
-          32,
-          48
-        ],
-        "debil": true,
-        "mult_dano": 2
-      },
-      {
-        "id": "cuerpo",
-        "hitbox": [
-          32,
-          0,
-          96,
-          96
-        ],
-        "debil": false,
-        "mult_dano": 0.5
-      }
-    ],
-    "fases": [
-      {
-        "desde_pct": 100,
-        "hasta_pct": 50,
-        "patrones": [
-          "m4",
-          "f1"
-        ]
-      },
-      {
-        "desde_pct": 50,
-        "hasta_pct": 0,
-        "patrones": [
-          "m4",
-          "f1",
-          "embestida_telegrafiada"
-        ]
-      }
-    ],
-    "recompensa_extra": 0,
-    "objeto_unico": null,
-    "movimiento": "M4",
-    "disparo": "F1",
-    "drop_item": "arma_mas_baja"
-  },
-  {
-    "id": "boss_w11_osedax",
+    "id": "boss_w09_osedax",
     "nombre": "Osedax",
-    "mundo": 11,
+    "mundo": 9,
     "arquetipo": "osedax",
     "tipo": "jefe",
     "vida": 16684,
@@ -1699,74 +932,14 @@
       "hermo_anillo_seg": 5,
       "mucosidad_lento": 0.3
     },
-    "vida_base": 7000
+    "vida_base": 7000,
+    "asset_id": "boss_w11_osedax",
+    "asset_world": 11
   },
   {
-    "id": "mini_w11_chryso",
-    "nombre": "Chrysopetalidae gigante",
-    "mundo": 11,
-    "arquetipo": "mini_m7",
-    "tipo": "minijefe",
-    "vida": 2925,
-    "objetivo_seg": 50,
-    "minimo_seg": 0,
-    "tamano": [
-      128,
-      96
-    ],
-    "segmentos": [
-      {
-        "id": "cabeza",
-        "hitbox": [
-          0,
-          24,
-          32,
-          48
-        ],
-        "debil": true,
-        "mult_dano": 2
-      },
-      {
-        "id": "cuerpo",
-        "hitbox": [
-          32,
-          0,
-          96,
-          96
-        ],
-        "debil": false,
-        "mult_dano": 0.5
-      }
-    ],
-    "fases": [
-      {
-        "desde_pct": 100,
-        "hasta_pct": 50,
-        "patrones": [
-          "m7",
-          "f2"
-        ]
-      },
-      {
-        "desde_pct": 50,
-        "hasta_pct": 0,
-        "patrones": [
-          "m7",
-          "f2",
-          "embestida_telegrafiada"
-        ]
-      }
-    ],
-    "recompensa_extra": 0,
-    "objeto_unico": null,
-    "movimiento": "M7",
-    "disparo": "F2",
-    "drop_item": "arma_mas_baja"
-  },
-  {
-    "id": "boss_w12_alvinella",
+    "id": "boss_w10_alvinella",
     "nombre": "Alvinella pompejana",
-    "mundo": 12,
+    "mundo": 10,
     "arquetipo": "alvinella",
     "tipo": "jefe",
     "vida": 17822,
@@ -1844,74 +1017,14 @@
       "hermo_anillo_seg": 5,
       "mucosidad_lento": 0.3
     },
-    "vida_base": 7500
+    "vida_base": 7500,
+    "asset_id": "boss_w12_alvinella",
+    "asset_world": 12
   },
   {
-    "id": "mini_w12_paralvinella",
-    "nombre": "Paralvinella · Alvinellidae gigante",
-    "mundo": 12,
-    "arquetipo": "mini_m5",
-    "tipo": "minijefe",
-    "vida": 3120,
-    "objetivo_seg": 50,
-    "minimo_seg": 0,
-    "tamano": [
-      128,
-      96
-    ],
-    "segmentos": [
-      {
-        "id": "cabeza",
-        "hitbox": [
-          0,
-          24,
-          32,
-          48
-        ],
-        "debil": true,
-        "mult_dano": 2
-      },
-      {
-        "id": "cuerpo",
-        "hitbox": [
-          32,
-          0,
-          96,
-          96
-        ],
-        "debil": false,
-        "mult_dano": 0.5
-      }
-    ],
-    "fases": [
-      {
-        "desde_pct": 100,
-        "hasta_pct": 50,
-        "patrones": [
-          "m5",
-          "f3"
-        ]
-      },
-      {
-        "desde_pct": 50,
-        "hasta_pct": 0,
-        "patrones": [
-          "m5",
-          "f3",
-          "embestida_telegrafiada"
-        ]
-      }
-    ],
-    "recompensa_extra": 0,
-    "objeto_unico": null,
-    "movimiento": "M5",
-    "disparo": "F3",
-    "drop_item": "arma_mas_baja"
-  },
-  {
-    "id": "boss_w13_hadalsovereign",
+    "id": "boss_w11_hadalsovereign",
     "nombre": "Macellicephaloides grandicirra",
-    "mundo": 13,
+    "mundo": 11,
     "arquetipo": "hadalsovereign",
     "tipo": "jefe",
     "vida": 15385,
@@ -1988,12 +1101,14 @@
       "hermo_anillo_seg": 5,
       "mucosidad_lento": 0.3
     },
-    "vida_base": 5950
+    "vida_base": 5950,
+    "asset_id": "boss_w13_hadalsovereign",
+    "asset_world": 13
   },
   {
-    "id": "boss_w13_riftia",
+    "id": "boss_w11_riftia",
     "nombre": "Riftia pachyptila",
-    "mundo": 13,
+    "mundo": 11,
     "arquetipo": "riftia",
     "tipo": "jefe",
     "vida": 10342,
@@ -2070,74 +1185,14 @@
       "hermo_anillo_seg": 5,
       "mucosidad_lento": 0.3
     },
-    "vida_base": 4000
+    "vida_base": 4000,
+    "asset_id": "boss_w13_riftia",
+    "asset_world": 13
   },
   {
-    "id": "mini_w13_aphro",
-    "nombre": "Aphroditidae gigante",
-    "mundo": 13,
-    "arquetipo": "mini_m7",
-    "tipo": "minijefe",
-    "vida": 3315,
-    "objetivo_seg": 50,
-    "minimo_seg": 0,
-    "tamano": [
-      128,
-      96
-    ],
-    "segmentos": [
-      {
-        "id": "cabeza",
-        "hitbox": [
-          0,
-          24,
-          32,
-          48
-        ],
-        "debil": true,
-        "mult_dano": 2
-      },
-      {
-        "id": "cuerpo",
-        "hitbox": [
-          32,
-          0,
-          96,
-          96
-        ],
-        "debil": false,
-        "mult_dano": 0.5
-      }
-    ],
-    "fases": [
-      {
-        "desde_pct": 100,
-        "hasta_pct": 50,
-        "patrones": [
-          "m7",
-          "f2"
-        ]
-      },
-      {
-        "desde_pct": 50,
-        "hasta_pct": 0,
-        "patrones": [
-          "m7",
-          "f2",
-          "embestida_telegrafiada"
-        ]
-      }
-    ],
-    "recompensa_extra": 0,
-    "objeto_unico": null,
-    "movimiento": "M7",
-    "disparo": "F2",
-    "drop_item": "arma_mas_baja"
-  },
-  {
-    "id": "boss_w14_robot_pinza",
+    "id": "boss_w12_robot_pinza",
     "nombre": "Robot Pinza",
-    "mundo": 14,
+    "mundo": 12,
     "arquetipo": "robot_pinza",
     "tipo": "jefe",
     "vida": 5460,
@@ -2214,12 +1269,14 @@
       "hermo_anillo_seg": 5,
       "mucosidad_lento": 0.3
     },
-    "vida_base": 2100
+    "vida_base": 2100,
+    "asset_id": "boss_w14_robot_pinza",
+    "asset_world": 14
   },
   {
-    "id": "boss_w14_robot_torreta",
+    "id": "boss_w12_robot_torreta",
     "nombre": "Robot Torreta",
-    "mundo": 14,
+    "mundo": 12,
     "arquetipo": "robot_torreta",
     "tipo": "jefe",
     "vida": 5460,
@@ -2296,12 +1353,14 @@
       "hermo_anillo_seg": 5,
       "mucosidad_lento": 0.3
     },
-    "vida_base": 2100
+    "vida_base": 2100,
+    "asset_id": "boss_w14_robot_torreta",
+    "asset_world": 14
   },
   {
-    "id": "boss_w14_robot_taladro",
+    "id": "boss_w12_robot_taladro",
     "nombre": "Robot Taladro",
-    "mundo": 14,
+    "mundo": 12,
     "arquetipo": "robot_taladro",
     "tipo": "jefe",
     "vida": 5459,
@@ -2378,95 +1437,14 @@
       "hermo_anillo_seg": 5,
       "mucosidad_lento": 0.3
     },
-    "vida_base": 2100
+    "vida_base": 2100,
+    "asset_id": "boss_w14_robot_taladro",
+    "asset_world": 14
   },
   {
-    "id": "boss_w14_epitoke",
-    "nombre": "Epitoca",
-    "mundo": 14,
-    "arquetipo": "epitoke",
-    "tipo": "jefe",
-    "vida": 18714,
-    "objetivo_seg": 120,
-    "minimo_seg": 48.0,
-    "tamano": [
-      220,
-      140
-    ],
-    "segmentos": [
-      {
-        "id": "cabeza",
-        "hitbox": [
-          0,
-          42.0,
-          55.0,
-          56.0
-        ],
-        "debil": true,
-        "mult_dano": 2
-      },
-      {
-        "id": "cuerpo",
-        "hitbox": [
-          55.0,
-          0,
-          165.0,
-          140
-        ],
-        "debil": false,
-        "mult_dano": 0.5
-      }
-    ],
-    "fases": [
-      {
-        "desde_pct": 100,
-        "hasta_pct": 66,
-        "patrones": [
-          "gusano_ondas"
-        ]
-      },
-      {
-        "desde_pct": 66,
-        "hasta_pct": 33,
-        "patrones": [
-          "transformacion_epitoca"
-        ]
-      },
-      {
-        "desde_pct": 33,
-        "hasta_pct": 0,
-        "patrones": [
-          "nubes_gametos",
-          "orbita"
-        ]
-      }
-    ],
-    "recompensa_extra": 0,
-    "objeto_unico": null,
-    "parametros": {
-      "intervalo": 2,
-      "telegraph": 0.5,
-      "velocidad": 80,
-      "entrada_seg": 3,
-      "derrota_seg": 3,
-      "invulnerabilidad_fase_seg": 3,
-      "furia_cadencia": 1.3,
-      "furia_velocidad": 1.3,
-      "polyn_apertura_seg": 4,
-      "tomo_visibilidad_seg": 2,
-      "destello_seg": 0.3,
-      "estalactita_aviso_seg": 0.7,
-      "congelacion_seg": 1,
-      "lava_subida_seg": 10,
-      "hermo_anillo_seg": 5,
-      "mucosidad_lento": 0.3
-    },
-    "vida_base": 8400
-  },
-  {
-    "id": "boss_w14_scientist",
+    "id": "boss_w12_scientist",
     "nombre": "Científico",
-    "mundo": 14,
+    "mundo": 12,
     "arquetipo": "scientist",
     "tipo": "jefe",
     "vida": 18714,
@@ -2544,12 +1522,14 @@
       "hermo_anillo_seg": 5,
       "mucosidad_lento": 0.3
     },
-    "vida_base": 8400
+    "vida_base": 8400,
+    "asset_id": "boss_w14_scientist",
+    "asset_world": 14
   },
   {
-    "id": "boss_w14_eunice_titan",
+    "id": "boss_w12_eunice_titan",
     "nombre": "Eunice aphroditois",
-    "mundo": 14,
+    "mundo": 12,
     "arquetipo": "euniceTitan",
     "tipo": "jefe",
     "vida": 26894,
@@ -2635,68 +1615,8 @@
       "hermo_anillo_seg": 5,
       "mucosidad_lento": 0.3
     },
-    "vida_base": 12650
-  },
-  {
-    "id": "mini_w14_mech_nereis",
-    "nombre": "Nereis Mk1 gigante",
-    "mundo": 14,
-    "arquetipo": "mini_robot",
-    "tipo": "minijefe",
-    "vida": 3510,
-    "objetivo_seg": 50,
-    "minimo_seg": 0,
-    "tamano": [
-      128,
-      96
-    ],
-    "segmentos": [
-      {
-        "id": "cabeza",
-        "hitbox": [
-          0,
-          24,
-          32,
-          48
-        ],
-        "debil": true,
-        "mult_dano": 2
-      },
-      {
-        "id": "cuerpo",
-        "hitbox": [
-          32,
-          0,
-          96,
-          96
-        ],
-        "debil": false,
-        "mult_dano": 0.5
-      }
-    ],
-    "fases": [
-      {
-        "desde_pct": 100,
-        "hasta_pct": 50,
-        "patrones": [
-          "m3",
-          "f2"
-        ]
-      },
-      {
-        "desde_pct": 50,
-        "hasta_pct": 0,
-        "patrones": [
-          "m3",
-          "f2",
-          "embestida_telegrafiada"
-        ]
-      }
-    ],
-    "recompensa_extra": 0,
-    "objeto_unico": null,
-    "movimiento": "M3",
-    "disparo": "F2",
-    "drop_item": "arma_mas_baja"
+    "vida_base": 12650,
+    "asset_id": "boss_w14_eunice_titan",
+    "asset_world": 14
   }
 ]

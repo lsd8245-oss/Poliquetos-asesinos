@@ -5,8 +5,6 @@
     "acto": 1,
     "duracion_hasta_jefe_seg": 180,
     "enemigos_total": 90,
-    "minijefe_inicio_seg": 60.0,
-    "minijefe_ventana_seg": 60,
     "alerta_jefe_seg": 170,
     "paleta": [
       "#7fd8f0",
@@ -21,26 +19,29 @@
       "boyas",
       "cascos"
     ],
-    "minijefe": "mini_w01_pision",
-    "mini_tipo": "pision",
-    "vida_minijefe": 975,
     "unicos": [
       "hydroides",
       "euphrosine",
       "fabric",
       "pision",
-      "lacy"
+      "lacy",
+      "sabellaria",
+      "eulalia"
     ],
     "recurrentes": [
       "syll",
-      "phyll"
+      "phyll",
+      "spio"
     ],
     "jefe_objetivo_seg": 90,
     "base_monedas": 300,
     "jefes": [
       "boss_w01_nereis"
     ],
-    "sectores_jefes": []
+    "sectores_jefes": [],
+    "legacy_id": 1,
+    "miniboss_enabled": false,
+    "final_boss_enabled": true
   },
   {
     "id": 2,
@@ -48,8 +49,6 @@
     "acto": 1,
     "duracion_hasta_jefe_seg": 180,
     "enemigos_total": 125,
-    "minijefe_inicio_seg": 60.0,
-    "minijefe_ventana_seg": 60,
     "alerta_jefe_seg": 170,
     "paleta": [
       "#efd480",
@@ -64,81 +63,37 @@
       "conchas",
       "rocas"
     ],
-    "minijefe": "mini_w02_arenicola",
-    "mini_tipo": "arenicola",
-    "vida_minijefe": 1170,
     "unicos": [
       "arenicola",
       "magelona",
       "sthenelais",
       "sacco",
-      "goniada"
+      "goniada",
+      "pectinaria",
+      "diopatra"
     ],
     "recurrentes": [
       "spio",
       "nepht",
-      "glycer"
+      "glycer",
+      "pision"
     ],
     "jefe_objetivo_seg": 90,
     "base_monedas": 400,
     "jefes": [
       "boss_w02_capit"
     ],
-    "sectores_jefes": []
+    "sectores_jefes": [],
+    "legacy_id": 2,
+    "miniboss_enabled": false,
+    "final_boss_enabled": true
   },
   {
     "id": 3,
-    "nombre": "Costa rocosa",
-    "acto": 1,
-    "duracion_hasta_jefe_seg": 180,
-    "enemigos_total": 135,
-    "minijefe_inicio_seg": 60.0,
-    "minijefe_ventana_seg": 60,
-    "alerta_jefe_seg": 170,
-    "paleta": [
-      "#647d8e",
-      "#567445",
-      "#ef975e"
-    ],
-    "scroll_px_s": 60,
-    "cancion_jefe": "Polinoideo de Hierro",
-    "musica_etapa": "w03_level_instr",
-    "musica_jefe": "w03_boss_vocal",
-    "peligros": [
-      "corriente_marea"
-    ],
-    "minijefe": "mini_w03_oenone",
-    "mini_tipo": "oenone",
-    "vida_minijefe": 1365,
-    "unicos": [
-      "dodeca",
-      "oenone",
-      "arabella",
-      "spha",
-      "histrio"
-    ],
-    "recurrentes": [
-      "syll",
-      "spio",
-      "phyll",
-      "serp",
-      "hesio"
-    ],
-    "jefe_objetivo_seg": 90,
-    "base_monedas": 500,
-    "jefes": [
-      "boss_w03_polyn"
-    ],
-    "sectores_jefes": []
-  },
-  {
-    "id": 4,
     "nombre": "Bosques de kelp",
     "acto": 1,
     "duracion_hasta_jefe_seg": 180,
     "enemigos_total": 135,
-    "minijefe_inicio_seg": 60.0,
-    "minijefe_ventana_seg": 60,
     "alerta_jefe_seg": 170,
     "paleta": [
       "#225f39",
@@ -152,36 +107,37 @@
     "peligros": [
       "kelp"
     ],
-    "minijefe": "mini_w04_myxicola",
-    "mini_tipo": "myxicola",
-    "vida_minijefe": 1560,
     "unicos": [
       "spirorbis",
       "myxicola",
       "spinther",
       "trocho",
-      "cteno"
+      "cteno",
+      "dodeca",
+      "spha"
     ],
     "recurrentes": [
       "syll",
       "phyll",
-      "cirrat"
+      "cirrat",
+      "hesio"
     ],
     "jefe_objetivo_seg": 105,
     "base_monedas": 600,
     "jefes": [
-      "boss_w04_tere"
+      "boss_w03_tere"
     ],
-    "sectores_jefes": []
+    "sectores_jefes": [],
+    "legacy_id": 4,
+    "miniboss_enabled": false,
+    "final_boss_enabled": true
   },
   {
-    "id": 5,
+    "id": 4,
     "nombre": "Arrecifes tropicales",
     "acto": 2,
     "duracion_hasta_jefe_seg": 210,
     "enemigos_total": 135,
-    "minijefe_inicio_seg": 75.0,
-    "minijefe_ventana_seg": 60,
     "alerta_jefe_seg": 200,
     "paleta": [
       "#dc429d",
@@ -195,79 +151,37 @@
     "peligros": [
       "corales"
     ],
-    "minijefe": "mini_w05_spirobranchus",
-    "mini_tipo": "spirobranchus",
-    "vida_minijefe": 1755,
     "unicos": [
       "spirobranchus",
       "sabellastarte",
       "eulepeth",
       "acoet",
-      "pholoe"
+      "pholoe",
+      "oenone",
+      "chaetopterus"
     ],
     "recurrentes": [
       "syll",
       "phyll",
-      "hesio"
+      "hesio",
+      "serp"
     ],
     "jefe_objetivo_seg": 105,
     "base_monedas": 700,
     "jefes": [
-      "boss_w05_hermo"
+      "boss_w04_hermo"
     ],
-    "sectores_jefes": []
+    "sectores_jefes": [],
+    "legacy_id": 5,
+    "miniboss_enabled": false,
+    "final_boss_enabled": true
   },
   {
-    "id": 6,
-    "nombre": "Praderas de pastos marinos",
-    "acto": 2,
-    "duracion_hasta_jefe_seg": 210,
-    "enemigos_total": 150,
-    "minijefe_inicio_seg": 75.0,
-    "minijefe_ventana_seg": 60,
-    "alerta_jefe_seg": 200,
-    "paleta": [
-      "#8dcc38",
-      "#14885a",
-      "#c6df75"
-    ],
-    "scroll_px_s": 60,
-    "cancion_jefe": "Hoja entre las Hojas",
-    "musica_etapa": "w06_level_instr",
-    "musica_jefe": "w06_boss_vocal",
-    "peligros": [
-      "corriente_hojas"
-    ],
-    "minijefe": "mini_w06_glycera",
-    "mini_tipo": "glycera",
-    "vida_minijefe": 1950,
-    "unicos": [
-      "glycera",
-      "diopatra",
-      "chaetopterus",
-      "sabellaria",
-      "pectinaria"
-    ],
-    "recurrentes": [
-      "syll",
-      "nepht",
-      "hesio"
-    ],
-    "jefe_objetivo_seg": 105,
-    "base_monedas": 800,
-    "jefes": [
-      "boss_w06_leafqueen"
-    ],
-    "sectores_jefes": []
-  },
-  {
-    "id": 7,
+    "id": 5,
     "nombre": "Estuarios y fango",
     "acto": 2,
     "duracion_hasta_jefe_seg": 210,
     "enemigos_total": 150,
-    "minijefe_inicio_seg": 75.0,
-    "minijefe_ventana_seg": 60,
     "alerta_jefe_seg": 200,
     "paleta": [
       "#72573d",
@@ -281,36 +195,37 @@
     "peligros": [
       "raices"
     ],
-    "minijefe": "mini_w07_terebellides",
-    "mini_tipo": "terebellides",
-    "vida_minijefe": 2145,
     "unicos": [
       "aricidea",
       "terebellides",
       "questa",
       "fauvel",
-      "protod"
+      "protod",
+      "arabella",
+      "hediste_diversicolor"
     ],
     "recurrentes": [
       "spio",
       "nepht",
-      "glycer"
+      "glycer",
+      "magelona"
     ],
     "jefe_objetivo_seg": 120,
     "base_monedas": 900,
     "jefes": [
-      "boss_w07_orbin"
+      "boss_w05_orbin"
     ],
-    "sectores_jefes": []
+    "sectores_jefes": [],
+    "legacy_id": 7,
+    "miniboss_enabled": false,
+    "final_boss_enabled": true
   },
   {
-    "id": 8,
+    "id": 6,
     "nombre": "Sedimentos contaminados",
     "acto": 2,
     "duracion_hasta_jefe_seg": 210,
     "enemigos_total": 162,
-    "minijefe_inicio_seg": 75.0,
-    "minijefe_ventana_seg": 60,
     "alerta_jefe_seg": 200,
     "paleta": [
       "#80a52e",
@@ -325,37 +240,38 @@
       "barriles",
       "petroleo"
     ],
-    "minijefe": "mini_w08_lumbrineris",
-    "mini_tipo": "lumbrineris",
-    "vida_minijefe": 2340,
     "unicos": [
       "ophelia",
       "cossura",
       "pilarg",
       "lumbrineris",
-      "owenia"
+      "owenia",
+      "capitella_capitata",
+      "polydora_ciliata"
     ],
     "recurrentes": [
       "glycer",
-      "dorville"
+      "dorville",
+      "spio"
     ],
     "jefe_objetivo_seg": 135,
     "base_monedas": 1000,
     "jefes": [
-      "boss_w08_pollution_capit",
-      "boss_w08_pollution_spio",
-      "boss_w08_pollution_cirrat"
+      "boss_w06_pollution_capit",
+      "boss_w06_pollution_spio",
+      "boss_w06_pollution_cirrat"
     ],
-    "sectores_jefes": []
+    "sectores_jefes": [],
+    "legacy_id": 8,
+    "miniboss_enabled": false,
+    "final_boss_enabled": true
   },
   {
-    "id": 9,
+    "id": 7,
     "nombre": "Zona planctónica",
     "acto": 3,
     "duracion_hasta_jefe_seg": 240,
     "enemigos_total": 162,
-    "minijefe_inicio_seg": 90.0,
-    "minijefe_ventana_seg": 60,
     "alerta_jefe_seg": 230,
     "paleta": [
       "#10285a",
@@ -369,35 +285,36 @@
     "peligros": [
       "medusas"
     ],
-    "minijefe": "mini_w09_lopado",
-    "mini_tipo": "lopado",
-    "vida_minijefe": 2535,
     "unicos": [
       "pontod",
       "lopado",
       "typhlo",
       "poeo",
-      "iospil"
+      "iospil",
+      "vanadis_antarctica",
+      "pelagobia_longicirrata"
     ],
     "recurrentes": [
       "syll_stolon",
-      "alciop"
+      "alciop",
+      "swima"
     ],
     "jefe_objetivo_seg": 120,
     "base_monedas": 1100,
     "jefes": [
-      "boss_w09_tomo"
+      "boss_w07_tomo"
     ],
-    "sectores_jefes": []
+    "sectores_jefes": [],
+    "legacy_id": 9,
+    "miniboss_enabled": false,
+    "final_boss_enabled": true
   },
   {
-    "id": 10,
+    "id": 8,
     "nombre": "Zona antártica",
     "acto": 3,
     "duracion_hasta_jefe_seg": 240,
     "enemigos_total": 200,
-    "minijefe_inicio_seg": 90.0,
-    "minijefe_ventana_seg": 60,
     "alerta_jefe_seg": 230,
     "paleta": [
       "#f0fbff",
@@ -412,36 +329,37 @@
       "icebergs",
       "granizo"
     ],
-    "minijefe": "mini_w10_flabegraviera",
-    "mini_tipo": "flabegraviera",
-    "vida_minijefe": 2730,
     "unicos": [
       "flabegraviera",
       "aphelochaeta",
       "mald",
       "perkinsiana",
-      "amphar"
+      "amphar",
+      "laetmonice_producta",
+      "austrolaenilla_antarctica"
     ],
     "recurrentes": [
       "spio",
       "serp",
-      "alciop"
+      "alciop",
+      "aphro"
     ],
     "jefe_objetivo_seg": 120,
     "base_monedas": 1200,
     "jefes": [
-      "boss_w10_eulagisca"
+      "boss_w08_eulagisca"
     ],
-    "sectores_jefes": []
+    "sectores_jefes": [],
+    "legacy_id": 10,
+    "miniboss_enabled": false,
+    "final_boss_enabled": true
   },
   {
-    "id": 11,
+    "id": 9,
     "nombre": "Restos de ballena",
     "acto": 3,
     "duracion_hasta_jefe_seg": 240,
     "enemigos_total": 200,
-    "minijefe_inicio_seg": 90.0,
-    "minijefe_ventana_seg": 60,
     "alerta_jefe_seg": 230,
     "paleta": [
       "#a7a59d",
@@ -455,35 +373,36 @@
     "peligros": [
       "costillas"
     ],
-    "minijefe": "mini_w11_chryso",
-    "mini_tipo": "chryso",
-    "vida_minijefe": 2925,
     "unicos": [
       "hesiocaeca",
       "nautil",
       "chryso",
       "brada",
-      "bathykurila"
+      "bathykurila",
+      "glycera",
+      "neanthes_visicete"
     ],
     "recurrentes": [
       "cirrat",
-      "ophryotrocha"
+      "ophryotrocha",
+      "spha"
     ],
     "jefe_objetivo_seg": 120,
     "base_monedas": 1300,
     "jefes": [
-      "boss_w11_osedax"
+      "boss_w09_osedax"
     ],
-    "sectores_jefes": []
+    "sectores_jefes": [],
+    "legacy_id": 11,
+    "miniboss_enabled": false,
+    "final_boss_enabled": true
   },
   {
-    "id": 12,
+    "id": 10,
     "nombre": "Campos hidrotermales",
     "acto": 3,
     "duracion_hasta_jefe_seg": 240,
     "enemigos_total": 245,
-    "minijefe_inicio_seg": 90.0,
-    "minijefe_ventana_seg": 60,
     "alerta_jefe_seg": 230,
     "paleta": [
       "#15141c",
@@ -498,36 +417,37 @@
       "geiseres",
       "lava"
     ],
-    "minijefe": "mini_w12_paralvinella",
-    "mini_tipo": "paralvinella",
-    "vida_minijefe": 3120,
     "unicos": [
       "riftia",
       "paralvinella",
       "branchinotogluma",
       "amphisamytha",
-      "hesiolyra"
+      "hesiolyra",
+      "branchipolynoe",
+      "thermopolynoe"
     ],
     "recurrentes": [
       "serp",
       "cirrat",
-      "dorville"
+      "dorville",
+      "ophryotrocha"
     ],
     "jefe_objetivo_seg": 120,
     "base_monedas": 1400,
     "jefes": [
-      "boss_w12_alvinella"
+      "boss_w10_alvinella"
     ],
-    "sectores_jefes": []
+    "sectores_jefes": [],
+    "legacy_id": 12,
+    "miniboss_enabled": false,
+    "final_boss_enabled": true
   },
   {
-    "id": 13,
+    "id": 11,
     "nombre": "Zona hadal",
     "acto": 3,
     "duracion_hasta_jefe_seg": 270,
     "enemigos_total": 285,
-    "minijefe_inicio_seg": 105.0,
-    "minijefe_ventana_seg": 60,
     "alerta_jefe_seg": 260,
     "paleta": [
       "#0e0b1d",
@@ -539,39 +459,40 @@
     "musica_etapa": "w13_level_instr",
     "musica_jefe": "w13_boss_vocal",
     "peligros": [],
-    "minijefe": "mini_w13_aphro",
-    "mini_tipo": "aphro",
-    "vida_minijefe": 3315,
     "unicos": [
       "swima",
       "aphro",
       "scali",
       "stern",
-      "macellicephaloides"
+      "macellicephaloides",
+      "macellicephala_tricornis",
+      "bathykermadeca_hadalis"
     ],
     "recurrentes": [
       "nepht",
       "glycer",
       "dorville",
       "alciop",
-      "cirrat"
+      "cirrat",
+      "bathykurila"
     ],
     "jefe_objetivo_seg": 150,
     "base_monedas": 1500,
     "jefes": [
-      "boss_w13_hadalsovereign",
-      "boss_w13_riftia"
+      "boss_w11_hadalsovereign",
+      "boss_w11_riftia"
     ],
-    "sectores_jefes": []
+    "sectores_jefes": [],
+    "legacy_id": 13,
+    "miniboss_enabled": false,
+    "final_boss_enabled": true
   },
   {
-    "id": 14,
+    "id": 12,
     "nombre": "El laboratorio",
     "acto": 4,
     "duracion_hasta_jefe_seg": 330,
     "enemigos_total": 250,
-    "minijefe_inicio_seg": 135.0,
-    "minijefe_ventana_seg": 60,
     "alerta_jefe_seg": 320,
     "paleta": [
       "#787f86",
@@ -588,16 +509,15 @@
       "cintas",
       "torretas"
     ],
-    "minijefe": "mini_w14_mech_nereis",
-    "mini_tipo": "mech_nereis",
-    "vida_minijefe": 3510,
     "unicos": [
       "mech_syll",
       "mech_nereis",
       "mech_sabel",
       "mech_chaet",
       "mech_riftia",
-      "mech_polyn"
+      "mech_polyn",
+      "mech_oenone",
+      "mech_diopatra"
     ],
     "recurrentes": [
       "hydroides",
@@ -676,25 +596,25 @@
       "aphro",
       "scali",
       "stern",
-      "macellicephaloides"
+      "macellicephaloides",
+      "capitella_capitata"
     ],
-    "jefe_objetivo_seg": 510,
-    "base_monedas": 6200,
+    "jefe_objetivo_seg": 390,
+    "base_monedas": 4800,
     "jefes": [
-      "boss_w14_robot_pinza",
-      "boss_w14_robot_torreta",
-      "boss_w14_robot_taladro",
-      "boss_w14_epitoke",
-      "boss_w14_scientist",
-      "boss_w14_eunice_titan"
+      "boss_w12_robot_pinza",
+      "boss_w12_robot_torreta",
+      "boss_w12_robot_taladro",
+      "boss_w12_scientist",
+      "boss_w12_eunice_titan"
     ],
     "sectores_jefes": [
       {
         "id": 1,
         "jefes": [
-          "boss_w14_robot_pinza",
-          "boss_w14_robot_torreta",
-          "boss_w14_robot_taladro"
+          "boss_w12_robot_pinza",
+          "boss_w12_robot_torreta",
+          "boss_w12_robot_taladro"
         ],
         "objetivo_seg": 90,
         "base_monedas": 1200,
@@ -703,25 +623,16 @@
       {
         "id": 2,
         "jefes": [
-          "boss_w14_epitoke"
-        ],
-        "objetivo_seg": 120,
-        "base_monedas": 1400,
-        "texto": "Sala de la epitoca"
-      },
-      {
-        "id": 3,
-        "jefes": [
-          "boss_w14_scientist"
+          "boss_w12_scientist"
         ],
         "objetivo_seg": 120,
         "base_monedas": 1600,
         "texto": "Sala del científico"
       },
       {
-        "id": 4,
+        "id": 3,
         "jefes": [
-          "boss_w14_eunice_titan"
+          "boss_w12_eunice_titan"
         ],
         "objetivo_seg": 180,
         "base_monedas": 2000,
@@ -730,6 +641,9 @@
     ],
     "semilla": 20261101,
     "laboratorio_organicos": 110,
-    "laboratorio_roboticos": 140
+    "laboratorio_roboticos": 140,
+    "legacy_id": 14,
+    "miniboss_enabled": false,
+    "final_boss_enabled": true
   }
 ]

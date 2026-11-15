@@ -41,6 +41,14 @@ class B1VisualContracts(unittest.TestCase):
     def test_gameplay_data_audio_and_existing_creature_pngs_match_accepted_base(self):
         fixture = json.loads((ROOT / 'native-tests/b1_preserved_sha256.json').read_text())
         self.assertEqual(fixture['baseline'], 'd31d3406f07868942bbd3f594bee78d0f12d63b7')
+        # 05A explicitly migrates these contracts; their accepted historical bytes
+        # stay frozen in archive. New active semantics are covered by campaign12 tests.
+        migrated = {'data/'+name+'.json' for name in
+                    ('worlds','enemies','bosses','escape','shop','cosmetics','balance_report')}
+        migrated |= {'data/schemas/'+name+'.schema.json' for name in
+                     ('worlds','enemies','bosses','escape','shop','cosmetics','save','waves')}
+        migrated |= {f'data/waves/world_{n:02}.json' for n in range(1,15)}
+        runtime_migrated = {'src/stages/stages.gd', 'src/core/game.gd', 'src/bosses/bosses.gd', 'src/shop/shop.gd', 'src/core/data.gd', 'src/save/saves.gd'}
         for path, expected in fixture['sha256'].items():
             with self.subTest(path=path):
                 if path in ('data/combat.json', 'data/schemas/combat.schema.json'):
@@ -57,14 +65,25 @@ class B1VisualContracts(unittest.TestCase):
                         for example in current.get('examples',[]):example.pop('sonar')
                     self.assertEqual(current,json.loads(baseline))
                 else:
-                    self.assertEqual(hashlib.sha256((ROOT / path).read_bytes()).hexdigest(), expected,
+                    source = ROOT/'data/archive/04a'/path[5:] if path in migrated else ROOT/path
+                    if path in runtime_migrated:source = ROOT/'native-tests/05a_runtime_baseline'/(path+'.txt')
+                    self.assertEqual(hashlib.sha256(source.read_bytes()).hexdigest(), expected,
                                      'Changed preserved gameplay/data/audio/creature asset: ' + path)
-        # Adding a second data/audio source is also a scope change.
-        for folder in ('data', 'assets/audio'):
-            actual = {str(p.relative_to(ROOT)) for p in (ROOT / folder).rglob('*')
-                      if p.is_file() and not p.name.endswith('.import')}
-            expected = {p for p in fixture['sha256'] if p.startswith(folder + '/')}
-            self.assertEqual(actual, expected, folder)
+        original_data = {p for p in fixture['sha256'] if p.startswith('data/')}
+        active_data = {str(p.relative_to(ROOT)) for p in (ROOT/'data').rglob('*')
+                       if p.is_file() and 'archive' not in p.parts and not p.name.endswith('.import')}
+        extra = {'data/campaign.json','data/campaign_economy.json','data/wave_schedule_migration.json',
+                 'data/schemas/campaign.schema.json','data/schemas/campaign_aliases.schema.json'}
+        removed = {'data/waves/world_13.json','data/waves/world_14.json'}
+        self.assertEqual(active_data, (original_data-removed)|extra)
+        # The original empty marker is not JSON. All original JSON + the original
+        # asset manifest and the archive manifest are the exact archived file set.
+        archived = {str(p.relative_to(ROOT/'data/archive/04a')) for p in (ROOT/'data/archive/04a').rglob('*') if p.is_file()}
+        self.assertEqual(archived, {p[5:] for p in original_data if p.endswith('.json')}|
+                         {'assets_manifest.json','archive_manifest.json'})
+        audio = {str(p.relative_to(ROOT)) for p in (ROOT/'assets/audio').rglob('*')
+                 if p.is_file() and not p.name.endswith('.import')}
+        self.assertEqual(audio, {p for p in fixture['sha256'] if p.startswith('assets/audio/')})
 
     def test_bullets_effects_and_pickups_are_review_art_with_pixel_silhouettes(self):
         selected = [a for key, a in self.assets.items()

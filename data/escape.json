@@ -1,5 +1,5 @@
 {
-  "id": 15,
+  "id": 13,
   "duracion_seg": 300,
   "scroll_px_s": 120,
   "enemigos_total": 90,
@@ -50,14 +50,16 @@
       "tipo": "peligro",
       "id": "compuertas",
       "duracion_seg": 3,
-      "y": 168
+      "y": 168,
+      "legacy_index": 0
     },
     {
       "t": 4,
       "tipo": "peligro",
       "id": "laseres",
       "duracion_seg": 3,
-      "y": 168
+      "y": 168,
+      "legacy_index": 1
     },
     {
       "t": 10.0,
@@ -68,35 +70,40 @@
       "y": 100,
       "portadora": false,
       "separacion_px": 32,
-      "separacion_seg": 0.3
+      "separacion_seg": 0.3,
+      "legacy_index": 2
     },
     {
       "t": 16,
       "tipo": "peligro",
       "id": "compuertas",
       "duracion_seg": 3,
-      "y": 168
+      "y": 168,
+      "legacy_index": 3
     },
     {
       "t": 16,
       "tipo": "peligro",
       "id": "laseres",
       "duracion_seg": 3,
-      "y": 168
+      "y": 168,
+      "legacy_index": 4
     },
     {
       "t": 28,
       "tipo": "peligro",
       "id": "compuertas",
       "duracion_seg": 3,
-      "y": 168
+      "y": 168,
+      "legacy_index": 5
     },
     {
       "t": 28,
       "tipo": "peligro",
       "id": "laseres",
       "duracion_seg": 3,
-      "y": 168
+      "y": 168,
+      "legacy_index": 6
     },
     {
       "t": 33.33333333333333,
@@ -107,35 +114,40 @@
       "y": 140,
       "portadora": false,
       "separacion_px": 32,
-      "separacion_seg": 0.3
+      "separacion_seg": 0.3,
+      "legacy_index": 7
     },
     {
       "t": 40,
       "tipo": "peligro",
       "id": "compuertas",
       "duracion_seg": 3,
-      "y": 168
+      "y": 168,
+      "legacy_index": 8
     },
     {
       "t": 40,
       "tipo": "peligro",
       "id": "laseres",
       "duracion_seg": 3,
-      "y": 168
+      "y": 168,
+      "legacy_index": 9
     },
     {
       "t": 52,
       "tipo": "peligro",
       "id": "compuertas",
       "duracion_seg": 3,
-      "y": 168
+      "y": 168,
+      "legacy_index": 10
     },
     {
       "t": 52,
       "tipo": "peligro",
       "id": "laseres",
       "duracion_seg": 3,
-      "y": 168
+      "y": 168,
+      "legacy_index": 11
     },
     {
       "t": 56.666666666666664,
@@ -146,49 +158,56 @@
       "y": 180,
       "portadora": false,
       "separacion_px": 32,
-      "separacion_seg": 0.3
+      "separacion_seg": 0.3,
+      "legacy_index": 12
     },
     {
       "t": 64,
       "tipo": "peligro",
       "id": "compuertas",
       "duracion_seg": 3,
-      "y": 168
+      "y": 168,
+      "legacy_index": 13
     },
     {
       "t": 64,
       "tipo": "peligro",
       "id": "laseres",
       "duracion_seg": 3,
-      "y": 168
+      "y": 168,
+      "legacy_index": 14
     },
     {
       "t": 76,
       "tipo": "peligro",
       "id": "compuertas",
       "duracion_seg": 3,
-      "y": 168
+      "y": 168,
+      "legacy_index": 15
     },
     {
       "t": 76,
       "tipo": "peligro",
       "id": "laseres",
       "duracion_seg": 3,
-      "y": 168
+      "y": 168,
+      "legacy_index": 16
     },
     {
       "t": 94,
       "tipo": "peligro",
       "id": "escombros",
       "duracion_seg": 3,
-      "y": 168
+      "y": 168,
+      "legacy_index": 17
     },
     {
       "t": 94,
       "tipo": "peligro",
       "id": "corrientes",
       "duracion_seg": 3,
-      "y": 168
+      "y": 168,
+      "legacy_index": 18
     },
     {
       "t": 100.0,
@@ -199,35 +218,40 @@
       "y": 100,
       "portadora": false,
       "separacion_px": 32,
-      "separacion_seg": 0.3
+      "separacion_seg": 0.3,
+      "legacy_index": 19
     },
     {
       "t": 106,
       "tipo": "peligro",
       "id": "escombros",
       "duracion_seg": 3,
-      "y": 168
+      "y": 168,
+      "legacy_index": 20
     },
     {
       "t": 106,
       "tipo": "peligro",
       "id": "corrientes",
       "duracion_seg": 3,
-      "y": 168
+      "y": 168,
+      "legacy_index": 21
     },
     {
       "t": 118,
       "tipo": "peligro",
       "id": "escombros",
       "duracion_seg": 3,
-      "y": 168
+      "y": 168,
+      "legacy_index": 22
     },
     {
       "t": 118,
       "tipo": "peligro",
       "id": "corrientes",
       "duracion_seg": 3,
-      "y": 168
+      "y": 168,
+      "legacy_index": 23
     },
     {
       "t": 125.0,
@@ -238,35 +262,40 @@
       "y": 140,
       "portadora": false,
       "separacion_px": 32,
-      "separacion_seg": 0.3
+      "separacion_seg": 0.3,
+      "legacy_index": 24
     },
     {
       "t": 130,
       "tipo": "peligro",
       "id": "escombros",
       "duracion_seg": 3,
-      "y": 168
+      "y": 168,
+      "legacy_index": 25
     },
     {
       "t": 130,
       "tipo": "peligro",
       "id": "corrientes",
       "duracion_seg": 3,
-      "y": 168
+      "y": 168,
+      "legacy_index": 26
     },
     {
       "t": 142,
       "tipo": "peligro",
       "id": "escombros",
       "duracion_seg": 3,
-      "y": 168
+      "y": 168,
+      "legacy_index": 27
     },
     {
       "t": 142,
       "tipo": "peligro",
       "id": "corrientes",
       "duracion_seg": 3,
-      "y": 168
+      "y": 168,
+      "legacy_index": 28
     },
     {
       "t": 150.0,
@@ -277,35 +306,40 @@
       "y": 180,
       "portadora": false,
       "separacion_px": 32,
-      "separacion_seg": 0.3
+      "separacion_seg": 0.3,
+      "legacy_index": 29
     },
     {
       "t": 154,
       "tipo": "peligro",
       "id": "escombros",
       "duracion_seg": 3,
-      "y": 168
+      "y": 168,
+      "legacy_index": 30
     },
     {
       "t": 154,
       "tipo": "peligro",
       "id": "corrientes",
       "duracion_seg": 3,
-      "y": 168
+      "y": 168,
+      "legacy_index": 31
     },
     {
       "t": 166,
       "tipo": "peligro",
       "id": "escombros",
       "duracion_seg": 3,
-      "y": 168
+      "y": 168,
+      "legacy_index": 32
     },
     {
       "t": 166,
       "tipo": "peligro",
       "id": "corrientes",
       "duracion_seg": 3,
-      "y": 168
+      "y": 168,
+      "legacy_index": 33
     },
     {
       "t": 175.0,
@@ -316,49 +350,56 @@
       "y": 220,
       "portadora": false,
       "separacion_px": 32,
-      "separacion_seg": 0.3
+      "separacion_seg": 0.3,
+      "legacy_index": 34
     },
     {
       "t": 178,
       "tipo": "peligro",
       "id": "escombros",
       "duracion_seg": 3,
-      "y": 168
+      "y": 168,
+      "legacy_index": 35
     },
     {
       "t": 178,
       "tipo": "peligro",
       "id": "corrientes",
       "duracion_seg": 3,
-      "y": 168
+      "y": 168,
+      "legacy_index": 36
     },
     {
       "t": 190,
       "tipo": "peligro",
       "id": "escombros",
       "duracion_seg": 3,
-      "y": 168
+      "y": 168,
+      "legacy_index": 37
     },
     {
       "t": 190,
       "tipo": "peligro",
       "id": "corrientes",
       "duracion_seg": 3,
-      "y": 168
+      "y": 168,
+      "legacy_index": 38
     },
     {
       "t": 202,
       "tipo": "peligro",
       "id": "escombros",
       "duracion_seg": 3,
-      "y": 168
+      "y": 168,
+      "legacy_index": 39
     },
     {
       "t": 202,
       "tipo": "peligro",
       "id": "corrientes",
       "duracion_seg": 3,
-      "y": 168
+      "y": 168,
+      "legacy_index": 40
     },
     {
       "t": 220.0,
@@ -369,7 +410,8 @@
       "y": 100,
       "portadora": false,
       "separacion_px": 32,
-      "separacion_seg": 0.3
+      "separacion_seg": 0.3,
+      "legacy_index": 41
     }
   ]
 }

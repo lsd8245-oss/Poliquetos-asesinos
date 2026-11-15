@@ -29,7 +29,7 @@
         "type": "object",
         "minProperties": 1,
         "patternProperties": {
-          "^([1-9]|1[0-5])$": {
+          "^([1-9]|1[0-2])$": {
             "type": "object",
             "properties": {
               "rol": {
@@ -41,11 +41,15 @@
               "sprite_set": {
                 "type": "string",
                 "pattern": "^[a-z][a-z0-9_]*$"
+              },
+              "runtime_ready": {
+                "type": "boolean"
               }
             },
             "required": [
               "rol",
-              "sprite_set"
+              "sprite_set",
+              "runtime_ready"
             ],
             "additionalProperties": false
           }
@@ -89,7 +93,8 @@
       "estado": {
         "enum": [
           "revisar",
-          "confirmado"
+          "confirmado",
+          "pendiente"
         ]
       },
       "tamano": {
@@ -135,44 +140,129 @@
           "cadena_intervalo_seg"
         ],
         "additionalProperties": false
+      },
+      "runtime_ready": {
+        "type": "boolean"
+      },
+      "pending": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        },
+        "minItems": 1
       }
     },
     "required": [
       "id",
       "familia",
       "tipo",
-      "categoria",
       "mundos",
-      "movimiento",
-      "disparo",
-      "puntos",
-      "drop",
-      "estado"
+      "estado",
+      "runtime_ready"
     ],
-    "additionalProperties": false
+    "additionalProperties": false,
+    "allOf": [
+      {
+        "if": {
+          "properties": {
+            "runtime_ready": {
+              "const": true
+            }
+          }
+        },
+        "then": {
+          "required": [
+            "categoria",
+            "movimiento",
+            "disparo",
+            "puntos",
+            "drop",
+            "tamano"
+          ]
+        },
+        "else": {
+          "required": [
+            "pending"
+          ],
+          "properties": {
+            "estado": {
+              "const": "pendiente"
+            }
+          },
+          "not": {
+            "anyOf": [
+              {
+                "required": [
+                  "movimiento"
+                ]
+              },
+              {
+                "required": [
+                  "disparo"
+                ]
+              }
+            ]
+          }
+        }
+      }
+    ]
   },
   "minItems": 1,
   "examples": [
     [
       {
-        "id": "serpulidae",
-        "familia": "Serpulidae (Hydroides)",
+        "id": "hydroides",
+        "familia": "Hydroides · Serpulidae",
         "tipo": "tubicola",
-        "categoria": "pequeno",
+        "categoria": "mediano",
         "mundos": {
           "1": {
             "rol": "unico",
-            "sprite_set": "w01_enemy_serpulidae"
+            "sprite_set": "w01_enemy_hydroides",
+            "runtime_ready": true
+          },
+          "12": {
+            "rol": "recurrente",
+            "sprite_set": "w12_enemy_hydroides",
+            "runtime_ready": true
           }
         },
         "movimiento": "M5",
         "disparo": "F3",
+        "tamano": [
+          48,
+          48
+        ],
         "puntos": 100,
         "drop": {
           "moneda_chica": 0.35,
           "moneda_grande": 0.05
         },
-        "estado": "revisar"
+        "estado": "revisar",
+        "blindado": false,
+        "parametros": {
+          "carcasa_abierta_seg": 1,
+          "cadena_intervalo_seg": 0.15
+        },
+        "runtime_ready": true
+      },
+      {
+        "id": "eulalia",
+        "familia": "Eulalia · Phyllodocidae",
+        "tipo": "pendiente",
+        "mundos": {
+          "1": {
+            "rol": "unico",
+            "sprite_set": "w01_enemy_eulalia",
+            "runtime_ready": false
+          }
+        },
+        "estado": "pendiente",
+        "runtime_ready": false,
+        "pending": [
+          "original_png_and_atlas",
+          "accepted_behavior_and_balance"
+        ]
       }
     ]
   ]

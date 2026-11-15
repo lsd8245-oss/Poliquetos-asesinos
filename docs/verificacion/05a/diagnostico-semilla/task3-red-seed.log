@@ -1,0 +1,177 @@
+Godot Engine v4.6.3.stable.official.7d41c59c4 - https://godotengine.org
+
+ERROR: new uint32 seed2147483648 saves in editionfalse
+   at: push_error (core/variant/variant_utility.cpp:1024)
+   GDScript backtrace (most recent call first):
+       [0] check (res://native-tests/campaign12_save_test.gd:15)
+       [1] check_seed_bounds (res://native-tests/campaign12_save_test.gd:435)
+       [2] run_tests (res://native-tests/campaign12_save_test.gd:569)
+ERROR: new uint32 seed restores exactly as integer
+   at: push_error (core/variant/variant_utility.cpp:1024)
+   GDScript backtrace (most recent call first):
+       [0] check (res://native-tests/campaign12_save_test.gd:15)
+       [1] check_seed_bounds (res://native-tests/campaign12_save_test.gd:437)
+       [2] run_tests (res://native-tests/campaign12_save_test.gd:569)
+ERROR: v3 import preserves full uint32 seed
+   at: push_error (core/variant/variant_utility.cpp:1024)
+   GDScript backtrace (most recent call first):
+       [0] check (res://native-tests/campaign12_save_test.gd:15)
+       [1] check_seed_bounds (res://native-tests/campaign12_save_test.gd:439)
+       [2] run_tests (res://native-tests/campaign12_save_test.gd:569)
+ERROR: legacy v1 uint32 seed migrates unchanged
+   at: push_error (core/variant/variant_utility.cpp:1024)
+   GDScript backtrace (most recent call first):
+       [0] check (res://native-tests/campaign12_save_test.gd:15)
+       [1] check_seed_bounds (res://native-tests/campaign12_save_test.gd:447)
+       [2] run_tests (res://native-tests/campaign12_save_test.gd:569)
+ERROR: legacy uint32 import persists exact seed
+   at: push_error (core/variant/variant_utility.cpp:1024)
+   GDScript backtrace (most recent call first):
+       [0] check (res://native-tests/campaign12_save_test.gd:15)
+       [1] check_seed_bounds (res://native-tests/campaign12_save_test.gd:452)
+       [2] run_tests (res://native-tests/campaign12_save_test.gd:569)
+ERROR: legacy v2 uint32 seed migrates unchanged
+   at: push_error (core/variant/variant_utility.cpp:1024)
+   GDScript backtrace (most recent call first):
+       [0] check (res://native-tests/campaign12_save_test.gd:15)
+       [1] check_seed_bounds (res://native-tests/campaign12_save_test.gd:447)
+       [2] run_tests (res://native-tests/campaign12_save_test.gd:569)
+ERROR: legacy uint32 import persists exact seed
+   at: push_error (core/variant/variant_utility.cpp:1024)
+   GDScript backtrace (most recent call first):
+       [0] check (res://native-tests/campaign12_save_test.gd:15)
+       [1] check_seed_bounds (res://native-tests/campaign12_save_test.gd:452)
+       [2] run_tests (res://native-tests/campaign12_save_test.gd:569)
+ERROR: new uint32 seed4294967295 saves in editionfalse
+   at: push_error (core/variant/variant_utility.cpp:1024)
+   GDScript backtrace (most recent call first):
+       [0] check (res://native-tests/campaign12_save_test.gd:15)
+       [1] check_seed_bounds (res://native-tests/campaign12_save_test.gd:435)
+       [2] run_tests (res://native-tests/campaign12_save_test.gd:569)
+ERROR: new uint32 seed restores exactly as integer
+   at: push_error (core/variant/variant_utility.cpp:1024)
+   GDScript backtrace (most recent call first):
+       [0] check (res://native-tests/campaign12_save_test.gd:15)
+       [1] check_seed_bounds (res://native-tests/campaign12_save_test.gd:437)
+       [2] run_tests (res://native-tests/campaign12_save_test.gd:569)
+ERROR: v3 import preserves full uint32 seed
+   at: push_error (core/variant/variant_utility.cpp:1024)
+   GDScript backtrace (most recent call first):
+       [0] check (res://native-tests/campaign12_save_test.gd:15)
+       [1] check_seed_bounds (res://native-tests/campaign12_save_test.gd:439)
+       [2] run_tests (res://native-tests/campaign12_save_test.gd:569)
+ERROR: legacy v1 uint32 seed migrates unchanged
+   at: push_error (core/variant/variant_utility.cpp:1024)
+   GDScript backtrace (most recent call first):
+       [0] check (res://native-tests/campaign12_save_test.gd:15)
+       [1] check_seed_bounds (res://native-tests/campaign12_save_test.gd:447)
+       [2] run_tests (res://native-tests/campaign12_save_test.gd:569)
+ERROR: legacy uint32 import persists exact seed
+   at: push_error (core/variant/variant_utility.cpp:1024)
+   GDScript backtrace (most recent call first):
+       [0] check (res://native-tests/campaign12_save_test.gd:15)
+       [1] check_seed_bounds (res://native-tests/campaign12_save_test.gd:452)
+       [2] run_tests (res://native-tests/campaign12_save_test.gd:569)
+ERROR: legacy v2 uint32 seed migrates unchanged
+   at: push_error (core/variant/variant_utility.cpp:1024)
+   GDScript backtrace (most recent call first):
+       [0] check (res://native-tests/campaign12_save_test.gd:15)
+       [1] check_seed_bounds (res://native-tests/campaign12_save_test.gd:447)
+       [2] run_tests (res://native-tests/campaign12_save_test.gd:569)
+ERROR: legacy uint32 import persists exact seed
+   at: push_error (core/variant/variant_utility.cpp:1024)
+   GDScript backtrace (most recent call first):
+       [0] check (res://native-tests/campaign12_save_test.gd:15)
+       [1] check_seed_bounds (res://native-tests/campaign12_save_test.gd:452)
+       [2] run_tests (res://native-tests/campaign12_save_test.gd:569)
+WARNING: `NaN` ("Not a Number") found in argument passed to JSON.stringify(). `NaN` cannot be represented in JSON, so the value has been replaced with `null`. This warning will not be printed for any later NaN occurrences.
+     at: _stringify (core/io/json.cpp:86)
+     GDScript backtrace (most recent call first):
+         [0] _encode (res://src/save/saves.gd:62)
+         [1] check_seed_bounds (res://native-tests/campaign12_save_test.gd:463)
+         [2] run_tests (res://native-tests/campaign12_save_test.gd:569)
+ERROR: new uint32 seed2147483648 saves in editiontrue
+   at: push_error (core/variant/variant_utility.cpp:1024)
+   GDScript backtrace (most recent call first):
+       [0] check (res://native-tests/campaign12_save_test.gd:15)
+       [1] check_seed_bounds (res://native-tests/campaign12_save_test.gd:435)
+       [2] run_tests (res://native-tests/campaign12_save_test.gd:569)
+ERROR: new uint32 seed restores exactly as integer
+   at: push_error (core/variant/variant_utility.cpp:1024)
+   GDScript backtrace (most recent call first):
+       [0] check (res://native-tests/campaign12_save_test.gd:15)
+       [1] check_seed_bounds (res://native-tests/campaign12_save_test.gd:437)
+       [2] run_tests (res://native-tests/campaign12_save_test.gd:569)
+ERROR: v3 import preserves full uint32 seed
+   at: push_error (core/variant/variant_utility.cpp:1024)
+   GDScript backtrace (most recent call first):
+       [0] check (res://native-tests/campaign12_save_test.gd:15)
+       [1] check_seed_bounds (res://native-tests/campaign12_save_test.gd:439)
+       [2] run_tests (res://native-tests/campaign12_save_test.gd:569)
+ERROR: legacy v1 uint32 seed migrates unchanged
+   at: push_error (core/variant/variant_utility.cpp:1024)
+   GDScript backtrace (most recent call first):
+       [0] check (res://native-tests/campaign12_save_test.gd:15)
+       [1] check_seed_bounds (res://native-tests/campaign12_save_test.gd:447)
+       [2] run_tests (res://native-tests/campaign12_save_test.gd:569)
+ERROR: legacy uint32 import persists exact seed
+   at: push_error (core/variant/variant_utility.cpp:1024)
+   GDScript backtrace (most recent call first):
+       [0] check (res://native-tests/campaign12_save_test.gd:15)
+       [1] check_seed_bounds (res://native-tests/campaign12_save_test.gd:452)
+       [2] run_tests (res://native-tests/campaign12_save_test.gd:569)
+ERROR: legacy v2 uint32 seed migrates unchanged
+   at: push_error (core/variant/variant_utility.cpp:1024)
+   GDScript backtrace (most recent call first):
+       [0] check (res://native-tests/campaign12_save_test.gd:15)
+       [1] check_seed_bounds (res://native-tests/campaign12_save_test.gd:447)
+       [2] run_tests (res://native-tests/campaign12_save_test.gd:569)
+ERROR: legacy uint32 import persists exact seed
+   at: push_error (core/variant/variant_utility.cpp:1024)
+   GDScript backtrace (most recent call first):
+       [0] check (res://native-tests/campaign12_save_test.gd:15)
+       [1] check_seed_bounds (res://native-tests/campaign12_save_test.gd:452)
+       [2] run_tests (res://native-tests/campaign12_save_test.gd:569)
+ERROR: new uint32 seed4294967295 saves in editiontrue
+   at: push_error (core/variant/variant_utility.cpp:1024)
+   GDScript backtrace (most recent call first):
+       [0] check (res://native-tests/campaign12_save_test.gd:15)
+       [1] check_seed_bounds (res://native-tests/campaign12_save_test.gd:435)
+       [2] run_tests (res://native-tests/campaign12_save_test.gd:569)
+ERROR: new uint32 seed restores exactly as integer
+   at: push_error (core/variant/variant_utility.cpp:1024)
+   GDScript backtrace (most recent call first):
+       [0] check (res://native-tests/campaign12_save_test.gd:15)
+       [1] check_seed_bounds (res://native-tests/campaign12_save_test.gd:437)
+       [2] run_tests (res://native-tests/campaign12_save_test.gd:569)
+ERROR: v3 import preserves full uint32 seed
+   at: push_error (core/variant/variant_utility.cpp:1024)
+   GDScript backtrace (most recent call first):
+       [0] check (res://native-tests/campaign12_save_test.gd:15)
+       [1] check_seed_bounds (res://native-tests/campaign12_save_test.gd:439)
+       [2] run_tests (res://native-tests/campaign12_save_test.gd:569)
+ERROR: legacy v1 uint32 seed migrates unchanged
+   at: push_error (core/variant/variant_utility.cpp:1024)
+   GDScript backtrace (most recent call first):
+       [0] check (res://native-tests/campaign12_save_test.gd:15)
+       [1] check_seed_bounds (res://native-tests/campaign12_save_test.gd:447)
+       [2] run_tests (res://native-tests/campaign12_save_test.gd:569)
+ERROR: legacy uint32 import persists exact seed
+   at: push_error (core/variant/variant_utility.cpp:1024)
+   GDScript backtrace (most recent call first):
+       [0] check (res://native-tests/campaign12_save_test.gd:15)
+       [1] check_seed_bounds (res://native-tests/campaign12_save_test.gd:452)
+       [2] run_tests (res://native-tests/campaign12_save_test.gd:569)
+ERROR: legacy v2 uint32 seed migrates unchanged
+   at: push_error (core/variant/variant_utility.cpp:1024)
+   GDScript backtrace (most recent call first):
+       [0] check (res://native-tests/campaign12_save_test.gd:15)
+       [1] check_seed_bounds (res://native-tests/campaign12_save_test.gd:447)
+       [2] run_tests (res://native-tests/campaign12_save_test.gd:569)
+ERROR: legacy uint32 import persists exact seed
+   at: push_error (core/variant/variant_utility.cpp:1024)
+   GDScript backtrace (most recent call first):
+       [0] check (res://native-tests/campaign12_save_test.gd:15)
+       [1] check_seed_bounds (res://native-tests/campaign12_save_test.gd:452)
+       [2] run_tests (res://native-tests/campaign12_save_test.gd:569)
+CAMPAIGN12 SAVE FAIL: 643 checks; 28 failures

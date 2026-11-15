@@ -1,355 +1,576 @@
 {
   "mundo": 12,
-  "semilla": 0,
+  "semilla": 20261101,
   "eventos": [
     {
       "t": 10.0,
       "tipo": "oleada",
-      "enemigo": "riftia",
-      "cantidad": 12,
+      "enemigo": "mech_syll",
+      "cantidad": 10,
       "formacion": "linea_vertical",
       "y": 60,
       "portadora": true,
       "separacion_px": 32,
       "separacion_seg": 0.3,
-      "item": "rojo"
+      "item": "rojo",
+      "legacy_index": 0
     },
     {
-      "t": 17.9,
+      "t": 18.0011,
       "tipo": "oleada",
-      "enemigo": "paralvinella",
-      "cantidad": 12,
+      "enemigo": "mech_nereis",
+      "cantidad": 10,
       "formacion": "linea_horizontal",
       "y": 110,
       "portadora": false,
       "separacion_px": 32,
-      "separacion_seg": 0.3
+      "separacion_seg": 0.3,
+      "legacy_index": 1
     },
     {
       "t": 25,
       "tipo": "peligro",
-      "id": "geiseres",
+      "id": "laseres",
       "duracion_seg": 10,
-      "y": 280
+      "y": 280,
+      "legacy_index": 2
     },
     {
-      "t": 25.8,
+      "t": 26.0021,
       "tipo": "oleada",
-      "enemigo": "branchinotogluma",
-      "cantidad": 11,
+      "enemigo": "mech_sabel",
+      "cantidad": 10,
       "formacion": "v",
       "y": 168,
       "portadora": false,
       "separacion_px": 32,
-      "separacion_seg": 0.3
+      "separacion_seg": 0.3,
+      "legacy_index": 3
     },
     {
-      "t": 33.7,
+      "t": 34.0032,
       "tipo": "oleada",
-      "enemigo": "amphisamytha",
-      "cantidad": 12,
+      "enemigo": "mech_chaet",
+      "cantidad": 10,
       "formacion": "v_invertida",
       "y": 220,
       "portadora": false,
       "separacion_px": 32,
-      "separacion_seg": 0.3
+      "separacion_seg": 0.3,
+      "legacy_index": 4
     },
     {
       "t": 37,
       "tipo": "peligro",
-      "id": "lava",
+      "id": "compuertas",
       "duracion_seg": 10,
-      "y": 40
+      "y": 40,
+      "legacy_index": 5
     },
     {
-      "t": 41.6,
+      "t": 42.0042,
       "tipo": "oleada",
-      "enemigo": "hesiolyra",
-      "cantidad": 12,
+      "enemigo": "mech_riftia",
+      "cantidad": 10,
       "formacion": "zigzag",
       "y": 276,
       "portadora": false,
       "separacion_px": 32,
-      "separacion_seg": 0.3
+      "separacion_seg": 0.3,
+      "legacy_index": 6
     },
     {
-      "t": 54.0,
-      "tipo": "escudo",
-      "item": "amarillo",
-      "y": 168
+      "t": 49,
+      "tipo": "peligro",
+      "id": "cintas",
+      "duracion_seg": 10,
+      "y": 280,
+      "legacy_index": 7
     },
     {
-      "t": 60.0,
+      "t": 50.0053,
       "tipo": "oleada",
-      "enemigo": "serp",
-      "cantidad": 7,
+      "enemigo": "mech_polyn",
+      "cantidad": 10,
       "formacion": "circulo",
       "y": 60,
-      "portadora": true,
+      "portadora": false,
       "separacion_px": 32,
       "separacion_seg": 0.3,
-      "item": "verde"
+      "legacy_index": 8
     },
     {
-      "t": 60.0,
+      "t": 58.0063,
       "tipo": "oleada",
-      "enemigo": "serp",
-      "cantidad": 6,
+      "enemigo": "hydroides",
+      "cantidad": 5,
       "formacion": "doble_columna",
       "y": 110,
       "portadora": false,
       "separacion_px": 32,
-      "separacion_seg": 0.3
+      "separacion_seg": 0.3,
+      "legacy_index": 11
     },
     {
-      "t": 65.3,
+      "t": 61,
+      "tipo": "peligro",
+      "id": "torretas",
+      "duracion_seg": 10,
+      "y": 40,
+      "legacy_index": 9
+    },
+    {
+      "t": 66.0074,
       "tipo": "oleada",
-      "enemigo": "cirrat",
-      "cantidad": 13,
+      "enemigo": "euphrosine",
+      "cantidad": 5,
       "formacion": "ambos_lados",
       "y": 168,
       "portadora": false,
       "separacion_px": 32,
-      "separacion_seg": 0.3
+      "separacion_seg": 0.3,
+      "legacy_index": 12
     },
     {
-      "t": 73.2,
+      "t": 74.0084,
       "tipo": "oleada",
-      "enemigo": "dorville",
-      "cantidad": 7,
+      "enemigo": "magelona",
+      "cantidad": 5,
       "formacion": "diagonal",
       "y": 220,
-      "portadora": false,
+      "portadora": true,
       "separacion_px": 32,
-      "separacion_seg": 0.3
+      "separacion_seg": 0.3,
+      "item": "verde",
+      "legacy_index": 13
     },
     {
-      "t": 81.1,
+      "t": 81.0,
+      "tipo": "escudo",
+      "item": "amarillo",
+      "y": 168,
+      "legacy_index": 10
+    },
+    {
+      "t": 82.0095,
       "tipo": "oleada",
-      "enemigo": "dorville",
-      "cantidad": 6,
+      "enemigo": "spirorbis",
+      "cantidad": 5,
       "formacion": "linea_vertical",
       "y": 276,
       "portadora": false,
       "separacion_px": 32,
-      "separacion_seg": 0.3
+      "separacion_seg": 0.3,
+      "legacy_index": 14
     },
     {
-      "t": 90.0,
-      "tipo": "minijefe",
-      "id": "mini_w12_paralvinella",
-      "escoltas": {
-        "enemigo": "paralvinella",
-        "cantidad": 2,
-        "vida": 20,
-        "tamano": [
-          40,
-          32
-        ]
-      }
-    },
-    {
-      "t": 150.0,
+      "t": 90.0105,
       "tipo": "oleada",
-      "enemigo": "branchinotogluma",
-      "cantidad": 9,
+      "enemigo": "spinther",
+      "cantidad": 5,
+      "formacion": "linea_horizontal",
+      "y": 60,
+      "portadora": false,
+      "separacion_px": 32,
+      "separacion_seg": 0.3,
+      "legacy_index": 15
+    },
+    {
+      "t": 98.0116,
+      "tipo": "oleada",
+      "enemigo": "acoet",
+      "cantidad": 5,
+      "formacion": "v",
+      "y": 110,
+      "portadora": false,
+      "separacion_px": 32,
+      "separacion_seg": 0.3,
+      "legacy_index": 16
+    },
+    {
+      "t": 106.0126,
+      "tipo": "oleada",
+      "enemigo": "terebellides",
+      "cantidad": 5,
+      "formacion": "v_invertida",
+      "y": 168,
+      "portadora": false,
+      "separacion_px": 32,
+      "separacion_seg": 0.3,
+      "legacy_index": 17
+    },
+    {
+      "t": 114.0137,
+      "tipo": "oleada",
+      "enemigo": "mald",
+      "cantidad": 5,
+      "formacion": "zigzag",
+      "y": 220,
+      "portadora": false,
+      "separacion_px": 32,
+      "separacion_seg": 0.3,
+      "legacy_index": 18
+    },
+    {
+      "t": 122.0147,
+      "tipo": "oleada",
+      "enemigo": "mech_nereis",
+      "cantidad": 7,
       "formacion": "v_invertida",
       "y": 60,
+      "portadora": false,
+      "separacion_px": 32,
+      "separacion_seg": 0.3,
+      "legacy_index": 20
+    },
+    {
+      "t": 130.0158,
+      "tipo": "oleada",
+      "enemigo": "mech_riftia",
+      "cantidad": 6,
+      "formacion": "zigzag",
+      "y": 110,
       "portadora": true,
       "separacion_px": 32,
       "separacion_seg": 0.3,
-      "item": "azul"
+      "item": "azul",
+      "legacy_index": 21
     },
     {
-      "t": 155.0,
-      "tipo": "escudo",
-      "item": "amarillo",
-      "y": 168
-    },
-    {
-      "t": 155.267,
+      "t": 138.0168,
       "tipo": "oleada",
-      "enemigo": "branchinotogluma",
-      "cantidad": 9,
-      "formacion": "zigzag",
-      "y": 110,
-      "portadora": false,
-      "separacion_px": 32,
-      "separacion_seg": 0.3
-    },
-    {
-      "t": 160.0,
-      "tipo": "peligro",
-      "id": "geiseres",
-      "duracion_seg": 10,
-      "y": 280
-    },
-    {
-      "t": 160.533,
-      "tipo": "oleada",
-      "enemigo": "cirrat",
-      "cantidad": 20,
+      "enemigo": "goniada",
+      "cantidad": 5,
       "formacion": "circulo",
       "y": 168,
       "portadora": false,
       "separacion_px": 32,
-      "separacion_seg": 0.3
+      "separacion_seg": 0.3,
+      "legacy_index": 23
     },
     {
-      "t": 165.8,
+      "t": 146.0179,
       "tipo": "oleada",
-      "enemigo": "paralvinella",
-      "cantidad": 9,
+      "enemigo": "arenicola",
+      "cantidad": 5,
       "formacion": "doble_columna",
       "y": 220,
       "portadora": false,
       "separacion_px": 32,
-      "separacion_seg": 0.3
+      "separacion_seg": 0.3,
+      "legacy_index": 25
     },
     {
-      "t": 168.0,
-      "tipo": "peligro",
-      "id": "lava",
-      "duracion_seg": 10,
-      "y": 40
-    },
-    {
-      "t": 171.067,
+      "t": 154.0189,
       "tipo": "oleada",
-      "enemigo": "paralvinella",
-      "cantidad": 9,
+      "enemigo": "oenone",
+      "cantidad": 5,
       "formacion": "ambos_lados",
       "y": 276,
-      "portadora": true,
+      "portadora": false,
       "separacion_px": 32,
       "separacion_seg": 0.3,
-      "item": "rojo"
+      "legacy_index": 27
     },
     {
-      "t": 176.333,
+      "t": 162.02,
       "tipo": "oleada",
-      "enemigo": "serp",
-      "cantidad": 10,
+      "enemigo": "nautil",
+      "cantidad": 5,
       "formacion": "diagonal",
       "y": 60,
       "portadora": false,
       "separacion_px": 32,
-      "separacion_seg": 0.3
+      "separacion_seg": 0.3,
+      "legacy_index": 28
     },
     {
-      "t": 181.6,
+      "t": 170.0211,
       "tipo": "oleada",
-      "enemigo": "serp",
-      "cantidad": 10,
+      "enemigo": "spirobranchus",
+      "cantidad": 5,
       "formacion": "linea_vertical",
       "y": 110,
       "portadora": false,
       "separacion_px": 32,
-      "separacion_seg": 0.3
+      "separacion_seg": 0.3,
+      "legacy_index": 30
     },
     {
-      "t": 186.867,
+      "t": 178.0221,
       "tipo": "oleada",
-      "enemigo": "riftia",
-      "cantidad": 9,
+      "enemigo": "syll",
+      "cantidad": 5,
       "formacion": "linea_horizontal",
       "y": 168,
       "portadora": false,
       "separacion_px": 32,
-      "separacion_seg": 0.3
+      "separacion_seg": 0.3,
+      "legacy_index": 32
     },
     {
-      "t": 192.133,
+      "t": 186.0232,
       "tipo": "oleada",
-      "enemigo": "riftia",
-      "cantidad": 9,
+      "enemigo": "spha",
+      "cantidad": 5,
       "formacion": "v",
       "y": 220,
       "portadora": false,
       "separacion_px": 32,
-      "separacion_seg": 0.3
+      "separacion_seg": 0.3,
+      "legacy_index": 33
     },
     {
-      "t": 197.4,
+      "t": 194.0242,
       "tipo": "oleada",
-      "enemigo": "hesiolyra",
-      "cantidad": 9,
+      "enemigo": "mech_sabel",
+      "cantidad": 6,
       "formacion": "v_invertida",
       "y": 276,
       "portadora": true,
       "separacion_px": 32,
       "separacion_seg": 0.3,
-      "item": "verde"
+      "item": "rojo",
+      "legacy_index": 34
     },
     {
-      "t": 202.667,
+      "t": 200.0,
+      "tipo": "escudo",
+      "item": "amarillo",
+      "y": 168,
+      "legacy_index": 22
+    },
+    {
+      "t": 202.0253,
       "tipo": "oleada",
-      "enemigo": "hesiolyra",
-      "cantidad": 8,
+      "enemigo": "mech_chaet",
+      "cantidad": 6,
       "formacion": "zigzag",
       "y": 60,
       "portadora": false,
       "separacion_px": 32,
-      "separacion_seg": 0.3
+      "separacion_seg": 0.3,
+      "legacy_index": 35
     },
     {
-      "t": 207.933,
+      "t": 205.0,
+      "tipo": "peligro",
+      "id": "laseres",
+      "duracion_seg": 10,
+      "y": 280,
+      "legacy_index": 24
+    },
+    {
+      "t": 210.0263,
       "tipo": "oleada",
-      "enemigo": "dorville",
-      "cantidad": 10,
+      "enemigo": "protod",
+      "cantidad": 5,
       "formacion": "circulo",
       "y": 110,
       "portadora": false,
       "separacion_px": 32,
-      "separacion_seg": 0.3
+      "separacion_seg": 0.3,
+      "legacy_index": 36
     },
     {
-      "t": 213.2,
+      "t": 213.0,
+      "tipo": "peligro",
+      "id": "compuertas",
+      "duracion_seg": 10,
+      "y": 40,
+      "legacy_index": 26
+    },
+    {
+      "t": 218.0274,
       "tipo": "oleada",
-      "enemigo": "dorville",
-      "cantidad": 9,
+      "enemigo": "mech_nereis",
+      "cantidad": 7,
       "formacion": "doble_columna",
       "y": 168,
       "portadora": false,
       "separacion_px": 32,
-      "separacion_seg": 0.3
+      "separacion_seg": 0.3,
+      "legacy_index": 37
     },
     {
-      "t": 218.467,
+      "t": 221.0,
+      "tipo": "peligro",
+      "id": "cintas",
+      "duracion_seg": 10,
+      "y": 280,
+      "legacy_index": 29
+    },
+    {
+      "t": 226.0284,
       "tipo": "oleada",
-      "enemigo": "amphisamytha",
-      "cantidad": 9,
+      "enemigo": "aphelochaeta",
+      "cantidad": 5,
       "formacion": "ambos_lados",
       "y": 220,
       "portadora": false,
       "separacion_px": 32,
-      "separacion_seg": 0.3
+      "separacion_seg": 0.3,
+      "legacy_index": 38
     },
     {
-      "t": 223.733,
+      "t": 229.0,
+      "tipo": "peligro",
+      "id": "torretas",
+      "duracion_seg": 10,
+      "y": 40,
+      "legacy_index": 31
+    },
+    {
+      "t": 234.0295,
       "tipo": "oleada",
-      "enemigo": "amphisamytha",
-      "cantidad": 8,
+      "enemigo": "phyll",
+      "cantidad": 5,
       "formacion": "diagonal",
+      "y": 276,
+      "portadora": false,
+      "separacion_px": 32,
+      "separacion_seg": 0.3,
+      "legacy_index": 39
+    },
+    {
+      "t": 242.0305,
+      "tipo": "oleada",
+      "enemigo": "chaetopterus",
+      "cantidad": 5,
+      "formacion": "linea_vertical",
+      "y": 60,
+      "portadora": false,
+      "separacion_px": 32,
+      "separacion_seg": 0.3,
+      "legacy_index": 40
+    },
+    {
+      "t": 250.0316,
+      "tipo": "oleada",
+      "enemigo": "mech_polyn",
+      "cantidad": 7,
+      "formacion": "linea_horizontal",
+      "y": 110,
+      "portadora": true,
+      "separacion_px": 32,
+      "separacion_seg": 0.3,
+      "item": "verde",
+      "legacy_index": 41
+    },
+    {
+      "t": 258.0326,
+      "tipo": "oleada",
+      "enemigo": "lopado",
+      "cantidad": 5,
+      "formacion": "v",
+      "y": 168,
+      "portadora": false,
+      "separacion_px": 32,
+      "separacion_seg": 0.3,
+      "legacy_index": 42
+    },
+    {
+      "t": 266.0337,
+      "tipo": "oleada",
+      "enemigo": "mech_riftia",
+      "cantidad": 7,
+      "formacion": "v_invertida",
+      "y": 220,
+      "portadora": false,
+      "separacion_px": 32,
+      "separacion_seg": 0.3,
+      "legacy_index": 43
+    },
+    {
+      "t": 274.0347,
+      "tipo": "oleada",
+      "enemigo": "mech_polyn",
+      "cantidad": 6,
+      "formacion": "zigzag",
+      "y": 276,
+      "portadora": false,
+      "separacion_px": 32,
+      "separacion_seg": 0.3,
+      "legacy_index": 44
+    },
+    {
+      "t": 282.0358,
+      "tipo": "oleada",
+      "enemigo": "macellicephaloides",
+      "cantidad": 5,
+      "formacion": "circulo",
+      "y": 60,
+      "portadora": false,
+      "separacion_px": 32,
+      "separacion_seg": 0.3,
+      "legacy_index": 45
+    },
+    {
+      "t": 290.0368,
+      "tipo": "oleada",
+      "enemigo": "mech_chaet",
+      "cantidad": 7,
+      "formacion": "doble_columna",
+      "y": 110,
+      "portadora": false,
+      "separacion_px": 32,
+      "separacion_seg": 0.3,
+      "legacy_index": 46
+    },
+    {
+      "t": 298.0379,
+      "tipo": "oleada",
+      "enemigo": "mech_syll",
+      "cantidad": 14,
+      "formacion": "ambos_lados",
+      "y": 168,
+      "portadora": false,
+      "separacion_px": 32,
+      "separacion_seg": 0.3,
+      "legacy_index": 47
+    },
+    {
+      "t": 306.0389,
+      "tipo": "oleada",
+      "enemigo": "glycer",
+      "cantidad": 5,
+      "formacion": "diagonal",
+      "y": 220,
+      "portadora": false,
+      "separacion_px": 32,
+      "separacion_seg": 0.3,
+      "legacy_index": 48
+    },
+    {
+      "t": 314.04,
+      "tipo": "oleada",
+      "enemigo": "mech_sabel",
+      "cantidad": 7,
+      "formacion": "linea_vertical",
       "y": 276,
       "portadora": true,
       "separacion_px": 32,
       "separacion_seg": 0.3,
-      "item": "azul"
+      "item": "azul",
+      "legacy_index": 49
     },
     {
-      "t": 228,
+      "t": 318,
       "tipo": "escudo",
       "item": "amarillo",
-      "y": 168
+      "y": 168,
+      "legacy_index": 50
     },
     {
-      "t": 230,
+      "t": 320,
       "tipo": "alerta_jefe",
-      "id": "boss_w12_alvinella",
+      "id": "boss_w12_robot_pinza",
       "jefes": [
-        "boss_w12_alvinella"
-      ]
+        "boss_w12_robot_pinza",
+        "boss_w12_robot_torreta",
+        "boss_w12_robot_taladro"
+      ],
+      "legacy_index": 51
     }
   ]
 }

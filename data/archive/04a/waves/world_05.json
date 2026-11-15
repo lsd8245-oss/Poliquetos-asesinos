@@ -1,0 +1,242 @@
+{
+  "mundo": 5,
+  "semilla": 0,
+  "eventos": [
+    {
+      "t": 10.0,
+      "tipo": "oleada",
+      "enemigo": "spirobranchus",
+      "cantidad": 7,
+      "formacion": "linea_vertical",
+      "y": 60,
+      "portadora": true,
+      "separacion_px": 32,
+      "separacion_seg": 0.3,
+      "item": "rojo"
+    },
+    {
+      "t": 18.0,
+      "tipo": "oleada",
+      "enemigo": "sabellastarte",
+      "cantidad": 6,
+      "formacion": "linea_horizontal",
+      "y": 110,
+      "portadora": false,
+      "separacion_px": 32,
+      "separacion_seg": 0.3
+    },
+    {
+      "t": 25,
+      "tipo": "peligro",
+      "id": "corales",
+      "duracion_seg": 10,
+      "y": 280
+    },
+    {
+      "t": 26.0,
+      "tipo": "oleada",
+      "enemigo": "eulepeth",
+      "cantidad": 7,
+      "formacion": "v",
+      "y": 168,
+      "portadora": false,
+      "separacion_px": 32,
+      "separacion_seg": 0.3
+    },
+    {
+      "t": 34.0,
+      "tipo": "oleada",
+      "enemigo": "acoet",
+      "cantidad": 6,
+      "formacion": "v_invertida",
+      "y": 220,
+      "portadora": true,
+      "separacion_px": 32,
+      "separacion_seg": 0.3,
+      "item": "verde"
+    },
+    {
+      "t": 42.0,
+      "tipo": "oleada",
+      "enemigo": "pholoe",
+      "cantidad": 7,
+      "formacion": "zigzag",
+      "y": 276,
+      "portadora": false,
+      "separacion_px": 32,
+      "separacion_seg": 0.3
+    },
+    {
+      "t": 45.0,
+      "tipo": "escudo",
+      "item": "amarillo",
+      "y": 168
+    },
+    {
+      "t": 52.5,
+      "tipo": "oleada",
+      "enemigo": "syll",
+      "cantidad": 7,
+      "formacion": "circulo",
+      "y": 60,
+      "portadora": false,
+      "separacion_px": 32,
+      "separacion_seg": 0.3
+    },
+    {
+      "t": 58.0,
+      "tipo": "oleada",
+      "enemigo": "phyll",
+      "cantidad": 7,
+      "formacion": "doble_columna",
+      "y": 110,
+      "portadora": true,
+      "separacion_px": 32,
+      "separacion_seg": 0.3,
+      "item": "azul"
+    },
+    {
+      "t": 66.0,
+      "tipo": "oleada",
+      "enemigo": "hesio",
+      "cantidad": 7,
+      "formacion": "ambos_lados",
+      "y": 168,
+      "portadora": false,
+      "separacion_px": 32,
+      "separacion_seg": 0.3
+    },
+    {
+      "t": 75.0,
+      "tipo": "minijefe",
+      "id": "mini_w05_spirobranchus",
+      "escoltas": {
+        "enemigo": "sabellastarte",
+        "cantidad": 2,
+        "vida": 12,
+        "tamano": [
+          40,
+          32
+        ]
+      }
+    },
+    {
+      "t": 135.0,
+      "tipo": "oleada",
+      "enemigo": "phyll",
+      "cantidad": 11,
+      "formacion": "v_invertida",
+      "y": 60,
+      "portadora": false,
+      "separacion_px": 32,
+      "separacion_seg": 0.3
+    },
+    {
+      "t": 140.0,
+      "tipo": "escudo",
+      "item": "amarillo",
+      "y": 168
+    },
+    {
+      "t": 143.0,
+      "tipo": "oleada",
+      "enemigo": "pholoe",
+      "cantidad": 9,
+      "formacion": "zigzag",
+      "y": 110,
+      "portadora": true,
+      "separacion_px": 32,
+      "separacion_seg": 0.3,
+      "item": "rojo"
+    },
+    {
+      "t": 145.0,
+      "tipo": "peligro",
+      "id": "corales",
+      "duracion_seg": 10,
+      "y": 280
+    },
+    {
+      "t": 151.0,
+      "tipo": "oleada",
+      "enemigo": "hesio",
+      "cantidad": 11,
+      "formacion": "circulo",
+      "y": 168,
+      "portadora": false,
+      "separacion_px": 32,
+      "separacion_seg": 0.3
+    },
+    {
+      "t": 159.0,
+      "tipo": "oleada",
+      "enemigo": "sabellastarte",
+      "cantidad": 10,
+      "formacion": "doble_columna",
+      "y": 220,
+      "portadora": false,
+      "separacion_px": 32,
+      "separacion_seg": 0.3
+    },
+    {
+      "t": 167.0,
+      "tipo": "oleada",
+      "enemigo": "spirobranchus",
+      "cantidad": 10,
+      "formacion": "ambos_lados",
+      "y": 276,
+      "portadora": true,
+      "separacion_px": 32,
+      "separacion_seg": 0.3,
+      "item": "verde"
+    },
+    {
+      "t": 175.0,
+      "tipo": "oleada",
+      "enemigo": "syll",
+      "cantidad": 11,
+      "formacion": "diagonal",
+      "y": 60,
+      "portadora": false,
+      "separacion_px": 32,
+      "separacion_seg": 0.3
+    },
+    {
+      "t": 183.0,
+      "tipo": "oleada",
+      "enemigo": "acoet",
+      "cantidad": 10,
+      "formacion": "linea_vertical",
+      "y": 110,
+      "portadora": false,
+      "separacion_px": 32,
+      "separacion_seg": 0.3
+    },
+    {
+      "t": 191.0,
+      "tipo": "oleada",
+      "enemigo": "eulepeth",
+      "cantidad": 9,
+      "formacion": "linea_horizontal",
+      "y": 168,
+      "portadora": true,
+      "separacion_px": 32,
+      "separacion_seg": 0.3,
+      "item": "azul"
+    },
+    {
+      "t": 198,
+      "tipo": "escudo",
+      "item": "amarillo",
+      "y": 168
+    },
+    {
+      "t": 200,
+      "tipo": "alerta_jefe",
+      "id": "boss_w05_hermo",
+      "jefes": [
+        "boss_w05_hermo"
+      ]
+    }
+  ]
+}

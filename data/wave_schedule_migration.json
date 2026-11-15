@@ -1,0 +1,1371 @@
+{
+  "policy": "same ordered waves uniformly from 10s to original last regular wave",
+  "worlds": [
+    {
+      "world": 1,
+      "legacy_world": 1,
+      "regular_count": 14,
+      "individuals": 90,
+      "schedule": [
+        {
+          "legacy_index": 0,
+          "old_t": 10.0,
+          "new_t": 10.0
+        },
+        {
+          "legacy_index": 1,
+          "old_t": 17.0,
+          "new_t": 21.6923
+        },
+        {
+          "legacy_index": 2,
+          "old_t": 24.0,
+          "new_t": 33.3846
+        },
+        {
+          "legacy_index": 4,
+          "old_t": 31.0,
+          "new_t": 45.0769
+        },
+        {
+          "legacy_index": 7,
+          "old_t": 38.0,
+          "new_t": 56.7692
+        },
+        {
+          "legacy_index": 8,
+          "old_t": 45.0,
+          "new_t": 68.4615
+        },
+        {
+          "legacy_index": 9,
+          "old_t": 52.0,
+          "new_t": 80.1538
+        },
+        {
+          "legacy_index": 11,
+          "old_t": 120.0,
+          "new_t": 91.8462
+        },
+        {
+          "legacy_index": 13,
+          "old_t": 127.0,
+          "new_t": 103.5385
+        },
+        {
+          "legacy_index": 15,
+          "old_t": 134.0,
+          "new_t": 115.2308
+        },
+        {
+          "legacy_index": 17,
+          "old_t": 141.0,
+          "new_t": 126.9231
+        },
+        {
+          "legacy_index": 18,
+          "old_t": 148.0,
+          "new_t": 138.6154
+        },
+        {
+          "legacy_index": 19,
+          "old_t": 155.0,
+          "new_t": 150.3077
+        },
+        {
+          "legacy_index": 20,
+          "old_t": 162.0,
+          "new_t": 162.0
+        }
+      ]
+    },
+    {
+      "world": 2,
+      "legacy_world": 2,
+      "regular_count": 16,
+      "individuals": 125,
+      "schedule": [
+        {
+          "legacy_index": 0,
+          "old_t": 10.0,
+          "new_t": 10.0
+        },
+        {
+          "legacy_index": 1,
+          "old_t": 16.125,
+          "new_t": 20.1917
+        },
+        {
+          "legacy_index": 2,
+          "old_t": 22.25,
+          "new_t": 30.3833
+        },
+        {
+          "legacy_index": 4,
+          "old_t": 28.375,
+          "new_t": 40.575
+        },
+        {
+          "legacy_index": 5,
+          "old_t": 34.5,
+          "new_t": 50.7667
+        },
+        {
+          "legacy_index": 8,
+          "old_t": 45.0,
+          "new_t": 60.9583
+        },
+        {
+          "legacy_index": 9,
+          "old_t": 46.75,
+          "new_t": 71.15
+        },
+        {
+          "legacy_index": 10,
+          "old_t": 52.875,
+          "new_t": 81.3417
+        },
+        {
+          "legacy_index": 12,
+          "old_t": 120.0,
+          "new_t": 91.5333
+        },
+        {
+          "legacy_index": 14,
+          "old_t": 126.125,
+          "new_t": 101.725
+        },
+        {
+          "legacy_index": 16,
+          "old_t": 132.25,
+          "new_t": 111.9167
+        },
+        {
+          "legacy_index": 18,
+          "old_t": 138.375,
+          "new_t": 122.1083
+        },
+        {
+          "legacy_index": 19,
+          "old_t": 144.5,
+          "new_t": 132.3
+        },
+        {
+          "legacy_index": 20,
+          "old_t": 150.625,
+          "new_t": 142.4917
+        },
+        {
+          "legacy_index": 21,
+          "old_t": 156.75,
+          "new_t": 152.6833
+        },
+        {
+          "legacy_index": 22,
+          "old_t": 162.875,
+          "new_t": 162.875
+        }
+      ]
+    },
+    {
+      "world": 3,
+      "legacy_world": 4,
+      "regular_count": 16,
+      "individuals": 135,
+      "schedule": [
+        {
+          "legacy_index": 0,
+          "old_t": 10.0,
+          "new_t": 10.0
+        },
+        {
+          "legacy_index": 1,
+          "old_t": 16.125,
+          "new_t": 20.1917
+        },
+        {
+          "legacy_index": 2,
+          "old_t": 22.25,
+          "new_t": 30.3833
+        },
+        {
+          "legacy_index": 4,
+          "old_t": 28.375,
+          "new_t": 40.575
+        },
+        {
+          "legacy_index": 5,
+          "old_t": 34.5,
+          "new_t": 50.7667
+        },
+        {
+          "legacy_index": 7,
+          "old_t": 45.0,
+          "new_t": 60.9583
+        },
+        {
+          "legacy_index": 8,
+          "old_t": 46.75,
+          "new_t": 71.15
+        },
+        {
+          "legacy_index": 9,
+          "old_t": 52.875,
+          "new_t": 81.3417
+        },
+        {
+          "legacy_index": 11,
+          "old_t": 120.0,
+          "new_t": 91.5333
+        },
+        {
+          "legacy_index": 13,
+          "old_t": 126.125,
+          "new_t": 101.725
+        },
+        {
+          "legacy_index": 15,
+          "old_t": 132.25,
+          "new_t": 111.9167
+        },
+        {
+          "legacy_index": 16,
+          "old_t": 138.375,
+          "new_t": 122.1083
+        },
+        {
+          "legacy_index": 17,
+          "old_t": 144.5,
+          "new_t": 132.3
+        },
+        {
+          "legacy_index": 18,
+          "old_t": 150.625,
+          "new_t": 142.4917
+        },
+        {
+          "legacy_index": 19,
+          "old_t": 156.75,
+          "new_t": 152.6833
+        },
+        {
+          "legacy_index": 20,
+          "old_t": 162.875,
+          "new_t": 162.875
+        }
+      ]
+    },
+    {
+      "world": 4,
+      "legacy_world": 5,
+      "regular_count": 16,
+      "individuals": 135,
+      "schedule": [
+        {
+          "legacy_index": 0,
+          "old_t": 10.0,
+          "new_t": 10.0
+        },
+        {
+          "legacy_index": 1,
+          "old_t": 18.0,
+          "new_t": 22.0667
+        },
+        {
+          "legacy_index": 3,
+          "old_t": 26.0,
+          "new_t": 34.1333
+        },
+        {
+          "legacy_index": 4,
+          "old_t": 34.0,
+          "new_t": 46.2
+        },
+        {
+          "legacy_index": 5,
+          "old_t": 42.0,
+          "new_t": 58.2667
+        },
+        {
+          "legacy_index": 7,
+          "old_t": 52.5,
+          "new_t": 70.3333
+        },
+        {
+          "legacy_index": 8,
+          "old_t": 58.0,
+          "new_t": 82.4
+        },
+        {
+          "legacy_index": 9,
+          "old_t": 66.0,
+          "new_t": 94.4667
+        },
+        {
+          "legacy_index": 11,
+          "old_t": 135.0,
+          "new_t": 106.5333
+        },
+        {
+          "legacy_index": 13,
+          "old_t": 143.0,
+          "new_t": 118.6
+        },
+        {
+          "legacy_index": 15,
+          "old_t": 151.0,
+          "new_t": 130.6667
+        },
+        {
+          "legacy_index": 16,
+          "old_t": 159.0,
+          "new_t": 142.7333
+        },
+        {
+          "legacy_index": 17,
+          "old_t": 167.0,
+          "new_t": 154.8
+        },
+        {
+          "legacy_index": 18,
+          "old_t": 175.0,
+          "new_t": 166.8667
+        },
+        {
+          "legacy_index": 19,
+          "old_t": 183.0,
+          "new_t": 178.9333
+        },
+        {
+          "legacy_index": 20,
+          "old_t": 191.0,
+          "new_t": 191.0
+        }
+      ]
+    },
+    {
+      "world": 5,
+      "legacy_world": 7,
+      "regular_count": 16,
+      "individuals": 150,
+      "schedule": [
+        {
+          "legacy_index": 0,
+          "old_t": 10.0,
+          "new_t": 10.0
+        },
+        {
+          "legacy_index": 1,
+          "old_t": 18.0,
+          "new_t": 22.0667
+        },
+        {
+          "legacy_index": 3,
+          "old_t": 26.0,
+          "new_t": 34.1333
+        },
+        {
+          "legacy_index": 4,
+          "old_t": 34.0,
+          "new_t": 46.2
+        },
+        {
+          "legacy_index": 5,
+          "old_t": 42.0,
+          "new_t": 58.2667
+        },
+        {
+          "legacy_index": 7,
+          "old_t": 52.5,
+          "new_t": 70.3333
+        },
+        {
+          "legacy_index": 8,
+          "old_t": 58.0,
+          "new_t": 82.4
+        },
+        {
+          "legacy_index": 9,
+          "old_t": 66.0,
+          "new_t": 94.4667
+        },
+        {
+          "legacy_index": 11,
+          "old_t": 135.0,
+          "new_t": 106.5333
+        },
+        {
+          "legacy_index": 13,
+          "old_t": 143.0,
+          "new_t": 118.6
+        },
+        {
+          "legacy_index": 15,
+          "old_t": 151.0,
+          "new_t": 130.6667
+        },
+        {
+          "legacy_index": 16,
+          "old_t": 159.0,
+          "new_t": 142.7333
+        },
+        {
+          "legacy_index": 17,
+          "old_t": 167.0,
+          "new_t": 154.8
+        },
+        {
+          "legacy_index": 18,
+          "old_t": 175.0,
+          "new_t": 166.8667
+        },
+        {
+          "legacy_index": 19,
+          "old_t": 183.0,
+          "new_t": 178.9333
+        },
+        {
+          "legacy_index": 20,
+          "old_t": 191.0,
+          "new_t": 191.0
+        }
+      ]
+    },
+    {
+      "world": 6,
+      "legacy_world": 8,
+      "regular_count": 18,
+      "individuals": 162,
+      "schedule": [
+        {
+          "legacy_index": 0,
+          "old_t": 10.0,
+          "new_t": 10.0
+        },
+        {
+          "legacy_index": 1,
+          "old_t": 17.111,
+          "new_t": 20.6994
+        },
+        {
+          "legacy_index": 2,
+          "old_t": 24.222,
+          "new_t": 31.3987
+        },
+        {
+          "legacy_index": 4,
+          "old_t": 31.333,
+          "new_t": 42.0981
+        },
+        {
+          "legacy_index": 6,
+          "old_t": 38.444,
+          "new_t": 52.7974
+        },
+        {
+          "legacy_index": 8,
+          "old_t": 52.5,
+          "new_t": 63.4968
+        },
+        {
+          "legacy_index": 9,
+          "old_t": 52.667,
+          "new_t": 74.1961
+        },
+        {
+          "legacy_index": 10,
+          "old_t": 59.778,
+          "new_t": 84.8955
+        },
+        {
+          "legacy_index": 11,
+          "old_t": 66.889,
+          "new_t": 95.5948
+        },
+        {
+          "legacy_index": 13,
+          "old_t": 135.0,
+          "new_t": 106.2942
+        },
+        {
+          "legacy_index": 15,
+          "old_t": 142.111,
+          "new_t": 116.9935
+        },
+        {
+          "legacy_index": 17,
+          "old_t": 149.222,
+          "new_t": 127.6929
+        },
+        {
+          "legacy_index": 19,
+          "old_t": 156.333,
+          "new_t": 138.3922
+        },
+        {
+          "legacy_index": 20,
+          "old_t": 163.444,
+          "new_t": 149.0916
+        },
+        {
+          "legacy_index": 21,
+          "old_t": 170.556,
+          "new_t": 159.7909
+        },
+        {
+          "legacy_index": 22,
+          "old_t": 177.667,
+          "new_t": 170.4903
+        },
+        {
+          "legacy_index": 23,
+          "old_t": 184.778,
+          "new_t": 181.1896
+        },
+        {
+          "legacy_index": 24,
+          "old_t": 191.889,
+          "new_t": 191.889
+        }
+      ]
+    },
+    {
+      "world": 7,
+      "legacy_world": 9,
+      "regular_count": 16,
+      "individuals": 162,
+      "schedule": [
+        {
+          "legacy_index": 0,
+          "old_t": 10.0,
+          "new_t": 10.0
+        },
+        {
+          "legacy_index": 1,
+          "old_t": 19.875,
+          "new_t": 23.9417
+        },
+        {
+          "legacy_index": 3,
+          "old_t": 29.75,
+          "new_t": 37.8833
+        },
+        {
+          "legacy_index": 4,
+          "old_t": 39.625,
+          "new_t": 51.825
+        },
+        {
+          "legacy_index": 5,
+          "old_t": 49.5,
+          "new_t": 65.7667
+        },
+        {
+          "legacy_index": 7,
+          "old_t": 60.0,
+          "new_t": 79.7083
+        },
+        {
+          "legacy_index": 8,
+          "old_t": 69.25,
+          "new_t": 93.65
+        },
+        {
+          "legacy_index": 9,
+          "old_t": 79.125,
+          "new_t": 107.5917
+        },
+        {
+          "legacy_index": 11,
+          "old_t": 150.0,
+          "new_t": 121.5333
+        },
+        {
+          "legacy_index": 13,
+          "old_t": 159.875,
+          "new_t": 135.475
+        },
+        {
+          "legacy_index": 15,
+          "old_t": 169.75,
+          "new_t": 149.4167
+        },
+        {
+          "legacy_index": 16,
+          "old_t": 179.625,
+          "new_t": 163.3583
+        },
+        {
+          "legacy_index": 17,
+          "old_t": 189.5,
+          "new_t": 177.3
+        },
+        {
+          "legacy_index": 18,
+          "old_t": 199.375,
+          "new_t": 191.2417
+        },
+        {
+          "legacy_index": 19,
+          "old_t": 209.25,
+          "new_t": 205.1833
+        },
+        {
+          "legacy_index": 20,
+          "old_t": 219.125,
+          "new_t": 219.125
+        }
+      ]
+    },
+    {
+      "world": 8,
+      "legacy_world": 10,
+      "regular_count": 22,
+      "individuals": 200,
+      "schedule": [
+        {
+          "legacy_index": 0,
+          "old_t": 10.0,
+          "new_t": 10.0
+        },
+        {
+          "legacy_index": 1,
+          "old_t": 19.875,
+          "new_t": 20.1599
+        },
+        {
+          "legacy_index": 3,
+          "old_t": 29.75,
+          "new_t": 30.3197
+        },
+        {
+          "legacy_index": 5,
+          "old_t": 39.625,
+          "new_t": 40.4796
+        },
+        {
+          "legacy_index": 6,
+          "old_t": 49.5,
+          "new_t": 50.6394
+        },
+        {
+          "legacy_index": 8,
+          "old_t": 60.0,
+          "new_t": 60.7993
+        },
+        {
+          "legacy_index": 9,
+          "old_t": 69.25,
+          "new_t": 70.9591
+        },
+        {
+          "legacy_index": 10,
+          "old_t": 79.125,
+          "new_t": 81.119
+        },
+        {
+          "legacy_index": 12,
+          "old_t": 150.0,
+          "new_t": 91.2789
+        },
+        {
+          "legacy_index": 14,
+          "old_t": 155.643,
+          "new_t": 101.4387
+        },
+        {
+          "legacy_index": 16,
+          "old_t": 161.286,
+          "new_t": 111.5986
+        },
+        {
+          "legacy_index": 17,
+          "old_t": 166.929,
+          "new_t": 121.7584
+        },
+        {
+          "legacy_index": 19,
+          "old_t": 172.571,
+          "new_t": 131.9183
+        },
+        {
+          "legacy_index": 20,
+          "old_t": 178.214,
+          "new_t": 142.0781
+        },
+        {
+          "legacy_index": 21,
+          "old_t": 183.857,
+          "new_t": 152.238
+        },
+        {
+          "legacy_index": 22,
+          "old_t": 189.5,
+          "new_t": 162.3979
+        },
+        {
+          "legacy_index": 23,
+          "old_t": 195.143,
+          "new_t": 172.5577
+        },
+        {
+          "legacy_index": 24,
+          "old_t": 200.786,
+          "new_t": 182.7176
+        },
+        {
+          "legacy_index": 25,
+          "old_t": 206.429,
+          "new_t": 192.8774
+        },
+        {
+          "legacy_index": 26,
+          "old_t": 212.071,
+          "new_t": 203.0373
+        },
+        {
+          "legacy_index": 27,
+          "old_t": 217.714,
+          "new_t": 213.1971
+        },
+        {
+          "legacy_index": 28,
+          "old_t": 223.357,
+          "new_t": 223.357
+        }
+      ]
+    },
+    {
+      "world": 9,
+      "legacy_world": 11,
+      "regular_count": 22,
+      "individuals": 200,
+      "schedule": [
+        {
+          "legacy_index": 0,
+          "old_t": 10.0,
+          "new_t": 10.0
+        },
+        {
+          "legacy_index": 1,
+          "old_t": 19.875,
+          "new_t": 20.1599
+        },
+        {
+          "legacy_index": 3,
+          "old_t": 29.75,
+          "new_t": 30.3197
+        },
+        {
+          "legacy_index": 4,
+          "old_t": 39.625,
+          "new_t": 40.4796
+        },
+        {
+          "legacy_index": 5,
+          "old_t": 49.5,
+          "new_t": 50.6394
+        },
+        {
+          "legacy_index": 7,
+          "old_t": 60.0,
+          "new_t": 60.7993
+        },
+        {
+          "legacy_index": 8,
+          "old_t": 69.25,
+          "new_t": 70.9591
+        },
+        {
+          "legacy_index": 9,
+          "old_t": 79.125,
+          "new_t": 81.119
+        },
+        {
+          "legacy_index": 11,
+          "old_t": 150.0,
+          "new_t": 91.2789
+        },
+        {
+          "legacy_index": 13,
+          "old_t": 155.643,
+          "new_t": 101.4387
+        },
+        {
+          "legacy_index": 15,
+          "old_t": 161.286,
+          "new_t": 111.5986
+        },
+        {
+          "legacy_index": 16,
+          "old_t": 166.929,
+          "new_t": 121.7584
+        },
+        {
+          "legacy_index": 17,
+          "old_t": 172.571,
+          "new_t": 131.9183
+        },
+        {
+          "legacy_index": 18,
+          "old_t": 178.214,
+          "new_t": 142.0781
+        },
+        {
+          "legacy_index": 19,
+          "old_t": 183.857,
+          "new_t": 152.238
+        },
+        {
+          "legacy_index": 20,
+          "old_t": 189.5,
+          "new_t": 162.3979
+        },
+        {
+          "legacy_index": 21,
+          "old_t": 195.143,
+          "new_t": 172.5577
+        },
+        {
+          "legacy_index": 22,
+          "old_t": 200.786,
+          "new_t": 182.7176
+        },
+        {
+          "legacy_index": 23,
+          "old_t": 206.429,
+          "new_t": 192.8774
+        },
+        {
+          "legacy_index": 24,
+          "old_t": 212.071,
+          "new_t": 203.0373
+        },
+        {
+          "legacy_index": 25,
+          "old_t": 217.714,
+          "new_t": 213.1971
+        },
+        {
+          "legacy_index": 26,
+          "old_t": 223.357,
+          "new_t": 223.357
+        }
+      ]
+    },
+    {
+      "world": 10,
+      "legacy_world": 12,
+      "regular_count": 25,
+      "individuals": 245,
+      "schedule": [
+        {
+          "legacy_index": 0,
+          "old_t": 10.0,
+          "new_t": 10.0
+        },
+        {
+          "legacy_index": 1,
+          "old_t": 17.9,
+          "new_t": 18.9055
+        },
+        {
+          "legacy_index": 3,
+          "old_t": 25.8,
+          "new_t": 27.8111
+        },
+        {
+          "legacy_index": 4,
+          "old_t": 33.7,
+          "new_t": 36.7166
+        },
+        {
+          "legacy_index": 6,
+          "old_t": 41.6,
+          "new_t": 45.6222
+        },
+        {
+          "legacy_index": 8,
+          "old_t": 60.0,
+          "new_t": 54.5277
+        },
+        {
+          "legacy_index": 9,
+          "old_t": 60.0,
+          "new_t": 63.4333
+        },
+        {
+          "legacy_index": 10,
+          "old_t": 65.3,
+          "new_t": 72.3388
+        },
+        {
+          "legacy_index": 11,
+          "old_t": 73.2,
+          "new_t": 81.2443
+        },
+        {
+          "legacy_index": 12,
+          "old_t": 81.1,
+          "new_t": 90.1499
+        },
+        {
+          "legacy_index": 14,
+          "old_t": 150.0,
+          "new_t": 99.0554
+        },
+        {
+          "legacy_index": 16,
+          "old_t": 155.267,
+          "new_t": 107.961
+        },
+        {
+          "legacy_index": 18,
+          "old_t": 160.533,
+          "new_t": 116.8665
+        },
+        {
+          "legacy_index": 19,
+          "old_t": 165.8,
+          "new_t": 125.772
+        },
+        {
+          "legacy_index": 21,
+          "old_t": 171.067,
+          "new_t": 134.6776
+        },
+        {
+          "legacy_index": 22,
+          "old_t": 176.333,
+          "new_t": 143.5831
+        },
+        {
+          "legacy_index": 23,
+          "old_t": 181.6,
+          "new_t": 152.4887
+        },
+        {
+          "legacy_index": 24,
+          "old_t": 186.867,
+          "new_t": 161.3942
+        },
+        {
+          "legacy_index": 25,
+          "old_t": 192.133,
+          "new_t": 170.2997
+        },
+        {
+          "legacy_index": 26,
+          "old_t": 197.4,
+          "new_t": 179.2053
+        },
+        {
+          "legacy_index": 27,
+          "old_t": 202.667,
+          "new_t": 188.1108
+        },
+        {
+          "legacy_index": 28,
+          "old_t": 207.933,
+          "new_t": 197.0164
+        },
+        {
+          "legacy_index": 29,
+          "old_t": 213.2,
+          "new_t": 205.9219
+        },
+        {
+          "legacy_index": 30,
+          "old_t": 218.467,
+          "new_t": 214.8275
+        },
+        {
+          "legacy_index": 31,
+          "old_t": 223.733,
+          "new_t": 223.733
+        }
+      ]
+    },
+    {
+      "world": 11,
+      "legacy_world": 13,
+      "regular_count": 34,
+      "individuals": 285,
+      "schedule": [
+        {
+          "legacy_index": 0,
+          "old_t": 10.0,
+          "new_t": 10.0
+        },
+        {
+          "legacy_index": 1,
+          "old_t": 16.267,
+          "new_t": 17.3955
+        },
+        {
+          "legacy_index": 2,
+          "old_t": 22.533,
+          "new_t": 24.7911
+        },
+        {
+          "legacy_index": 3,
+          "old_t": 28.8,
+          "new_t": 32.1866
+        },
+        {
+          "legacy_index": 4,
+          "old_t": 35.067,
+          "new_t": 39.5822
+        },
+        {
+          "legacy_index": 5,
+          "old_t": 41.333,
+          "new_t": 46.9777
+        },
+        {
+          "legacy_index": 6,
+          "old_t": 47.6,
+          "new_t": 54.3733
+        },
+        {
+          "legacy_index": 7,
+          "old_t": 53.867,
+          "new_t": 61.7688
+        },
+        {
+          "legacy_index": 8,
+          "old_t": 60.133,
+          "new_t": 69.1644
+        },
+        {
+          "legacy_index": 10,
+          "old_t": 66.4,
+          "new_t": 76.5599
+        },
+        {
+          "legacy_index": 11,
+          "old_t": 72.667,
+          "new_t": 83.9555
+        },
+        {
+          "legacy_index": 12,
+          "old_t": 78.933,
+          "new_t": 91.351
+        },
+        {
+          "legacy_index": 13,
+          "old_t": 85.2,
+          "new_t": 98.7465
+        },
+        {
+          "legacy_index": 14,
+          "old_t": 91.467,
+          "new_t": 106.1421
+        },
+        {
+          "legacy_index": 15,
+          "old_t": 97.733,
+          "new_t": 113.5376
+        },
+        {
+          "legacy_index": 17,
+          "old_t": 165.0,
+          "new_t": 120.9332
+        },
+        {
+          "legacy_index": 18,
+          "old_t": 169.947,
+          "new_t": 128.3287
+        },
+        {
+          "legacy_index": 20,
+          "old_t": 174.895,
+          "new_t": 135.7243
+        },
+        {
+          "legacy_index": 21,
+          "old_t": 179.842,
+          "new_t": 143.1198
+        },
+        {
+          "legacy_index": 22,
+          "old_t": 184.789,
+          "new_t": 150.5154
+        },
+        {
+          "legacy_index": 23,
+          "old_t": 189.737,
+          "new_t": 157.9109
+        },
+        {
+          "legacy_index": 24,
+          "old_t": 194.684,
+          "new_t": 165.3065
+        },
+        {
+          "legacy_index": 25,
+          "old_t": 199.632,
+          "new_t": 172.702
+        },
+        {
+          "legacy_index": 26,
+          "old_t": 204.579,
+          "new_t": 180.0975
+        },
+        {
+          "legacy_index": 27,
+          "old_t": 209.526,
+          "new_t": 187.4931
+        },
+        {
+          "legacy_index": 28,
+          "old_t": 214.474,
+          "new_t": 194.8886
+        },
+        {
+          "legacy_index": 29,
+          "old_t": 219.421,
+          "new_t": 202.2842
+        },
+        {
+          "legacy_index": 30,
+          "old_t": 224.368,
+          "new_t": 209.6797
+        },
+        {
+          "legacy_index": 31,
+          "old_t": 229.316,
+          "new_t": 217.0753
+        },
+        {
+          "legacy_index": 32,
+          "old_t": 234.263,
+          "new_t": 224.4708
+        },
+        {
+          "legacy_index": 33,
+          "old_t": 239.211,
+          "new_t": 231.8664
+        },
+        {
+          "legacy_index": 34,
+          "old_t": 244.158,
+          "new_t": 239.2619
+        },
+        {
+          "legacy_index": 35,
+          "old_t": 249.105,
+          "new_t": 246.6575
+        },
+        {
+          "legacy_index": 36,
+          "old_t": 254.053,
+          "new_t": 254.053
+        }
+      ]
+    },
+    {
+      "world": 12,
+      "legacy_world": 14,
+      "regular_count": 39,
+      "individuals": 250,
+      "schedule": [
+        {
+          "legacy_index": 0,
+          "old_t": 10.0,
+          "new_t": 10.0
+        },
+        {
+          "legacy_index": 1,
+          "old_t": 18.857,
+          "new_t": 18.0011
+        },
+        {
+          "legacy_index": 3,
+          "old_t": 27.714,
+          "new_t": 26.0021
+        },
+        {
+          "legacy_index": 4,
+          "old_t": 36.571,
+          "new_t": 34.0032
+        },
+        {
+          "legacy_index": 6,
+          "old_t": 45.429,
+          "new_t": 42.0042
+        },
+        {
+          "legacy_index": 8,
+          "old_t": 54.286,
+          "new_t": 50.0053
+        },
+        {
+          "legacy_index": 11,
+          "old_t": 82.5,
+          "new_t": 58.0063
+        },
+        {
+          "legacy_index": 12,
+          "old_t": 82.5,
+          "new_t": 66.0074
+        },
+        {
+          "legacy_index": 13,
+          "old_t": 82.5,
+          "new_t": 74.0084
+        },
+        {
+          "legacy_index": 14,
+          "old_t": 89.714,
+          "new_t": 82.0095
+        },
+        {
+          "legacy_index": 15,
+          "old_t": 98.571,
+          "new_t": 90.0105
+        },
+        {
+          "legacy_index": 16,
+          "old_t": 107.429,
+          "new_t": 98.0116
+        },
+        {
+          "legacy_index": 17,
+          "old_t": 116.286,
+          "new_t": 106.0126
+        },
+        {
+          "legacy_index": 18,
+          "old_t": 125.143,
+          "new_t": 114.0137
+        },
+        {
+          "legacy_index": 20,
+          "old_t": 195.0,
+          "new_t": 122.0147
+        },
+        {
+          "legacy_index": 21,
+          "old_t": 199.96,
+          "new_t": 130.0158
+        },
+        {
+          "legacy_index": 23,
+          "old_t": 204.92,
+          "new_t": 138.0168
+        },
+        {
+          "legacy_index": 25,
+          "old_t": 209.88,
+          "new_t": 146.0179
+        },
+        {
+          "legacy_index": 27,
+          "old_t": 214.84,
+          "new_t": 154.0189
+        },
+        {
+          "legacy_index": 28,
+          "old_t": 219.8,
+          "new_t": 162.02
+        },
+        {
+          "legacy_index": 30,
+          "old_t": 224.76,
+          "new_t": 170.0211
+        },
+        {
+          "legacy_index": 32,
+          "old_t": 229.72,
+          "new_t": 178.0221
+        },
+        {
+          "legacy_index": 33,
+          "old_t": 234.68,
+          "new_t": 186.0232
+        },
+        {
+          "legacy_index": 34,
+          "old_t": 239.64,
+          "new_t": 194.0242
+        },
+        {
+          "legacy_index": 35,
+          "old_t": 244.6,
+          "new_t": 202.0253
+        },
+        {
+          "legacy_index": 36,
+          "old_t": 249.56,
+          "new_t": 210.0263
+        },
+        {
+          "legacy_index": 37,
+          "old_t": 254.52,
+          "new_t": 218.0274
+        },
+        {
+          "legacy_index": 38,
+          "old_t": 259.48,
+          "new_t": 226.0284
+        },
+        {
+          "legacy_index": 39,
+          "old_t": 264.44,
+          "new_t": 234.0295
+        },
+        {
+          "legacy_index": 40,
+          "old_t": 269.4,
+          "new_t": 242.0305
+        },
+        {
+          "legacy_index": 41,
+          "old_t": 274.36,
+          "new_t": 250.0316
+        },
+        {
+          "legacy_index": 42,
+          "old_t": 279.32,
+          "new_t": 258.0326
+        },
+        {
+          "legacy_index": 43,
+          "old_t": 284.28,
+          "new_t": 266.0337
+        },
+        {
+          "legacy_index": 44,
+          "old_t": 289.24,
+          "new_t": 274.0347
+        },
+        {
+          "legacy_index": 45,
+          "old_t": 294.2,
+          "new_t": 282.0358
+        },
+        {
+          "legacy_index": 46,
+          "old_t": 299.16,
+          "new_t": 290.0368
+        },
+        {
+          "legacy_index": 47,
+          "old_t": 304.12,
+          "new_t": 298.0379
+        },
+        {
+          "legacy_index": 48,
+          "old_t": 309.08,
+          "new_t": 306.0389
+        },
+        {
+          "legacy_index": 49,
+          "old_t": 314.04,
+          "new_t": 314.04
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,65 @@
+{
+  "passed": false,
+  "failure": "RuntimeError: Timed out: real rest after close/reopen",
+  "sha256": "a73b4be19024c8651c098380e9024df0cfc41830a1c94d566c769180ac82d7ca",
+  "host": "Windows PE under Wine/Linux, NOT physical Windows",
+  "controls": "Automated X11 keyboard, read-only telemetry; no forced damage, HP, time, money or victory",
+  "purchase": {
+    "item": "escudo_max",
+    "before": 375.0,
+    "after": 125
+  },
+  "wall_seconds": 625.3970148190001,
+  "exit_code": -15,
+  "accepted_as_delivery": false,
+  "video_sha256": "aaa55c75fe3e19f48f48f01075f74722958e68a06097ec5eb6fe6f06cf3205d0",
+  "video_bytes": 357562612,
+  "victory_frame": {
+    "bombs": 0,
+    "boss_spawns": 1,
+    "bullets": [],
+    "buttons": [
+      "results_skip"
+    ],
+    "completed": false,
+    "credits": 375.0,
+    "drops": [],
+    "edition": "normal",
+    "elapsed": 540.473344014764,
+    "enemies": [],
+    "lab": 0,
+    "minis": 0,
+    "os": "Windows",
+    "player": [
+      76.1202774047852,
+      167.158615112305
+    ],
+    "regular_kills": 84,
+    "regular_spawned": 90,
+    "resume": "rest",
+    "screen": "results",
+    "selected": 0,
+    "selector_lab": 0,
+    "selector_world": 1,
+    "shield": 59.0,
+    "shop_item": "",
+    "state": "results",
+    "upgrades": {
+      "bombas": 0,
+      "cadencia": 0,
+      "dano": 0,
+      "escudo_max": 0,
+      "iman": 0,
+      "misiles": 0,
+      "regeneracion": 0,
+      "velocidad": 0
+    },
+    "weapons": {
+      "bomb": 3,
+      "missile": 2,
+      "shot": 3
+    },
+    "world": 1,
+    "world_time": 170.00234846369
+  }
+}

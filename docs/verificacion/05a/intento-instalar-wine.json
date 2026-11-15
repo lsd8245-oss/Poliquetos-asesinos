@@ -1,0 +1,14 @@
+[
+  {
+    "edition": "Normal",
+    "sha256": "16f04be5830208480deacffaeac2bea8d7b3b755684074e7e8019546a217fcda",
+    "exit": 1,
+    "output": "Application could not be started, or no application associated with the specified file.\nShellExecuteEx failed: wine: failed to load L\"\\\\??\\\\C:\\\\windows\\\\syswow64\\\\ntdll.dll\" error c0000135\n"
+  },
+  {
+    "edition": "Pruebas",
+    "sha256": "f4b92554a70665644a81b4b658a296df263025c3ba6a1c554445ea7209afe4ca",
+    "exit": 1,
+    "output": "Application could not be started, or no application associated with the specified file.\nShellExecuteEx failed: wine: failed to load L\"\\\\??\\\\C:\\\\windows\\\\syswow64\\\\ntdll.dll\" error c0000135\n"
+  }
+]

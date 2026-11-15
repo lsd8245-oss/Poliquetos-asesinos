@@ -1,7 +1,5 @@
 {
-  "assumption": "Reachable build envelope from nominal no-death prior income; max-level/phase bonus coin income may permit stronger builds. Human playtime not measured.",
-  "nominal_target_seconds": 5400,
-  "nominal_minimum_seconds": 4212,
+  "assumption": "HP preserved from 04A; historical build budgets retained as legacy_budget, not a claim of 05A affordability.",
   "encounters": [
     {
       "world": 1,
@@ -11,7 +9,6 @@
       ],
       "target_seconds": 90,
       "minimum_seconds": 36.0,
-      "budget": 0,
       "weapon_level_bound": 4,
       "base_hp": 1750,
       "tuned_hp": 2319,
@@ -29,7 +26,8 @@
         "multicorer": false,
         "cost": 0
       },
-      "normal_continuous_lower_seconds": 41.81666666666667
+      "normal_continuous_lower_seconds": 41.81666666666667,
+      "legacy_budget": 0
     },
     {
       "world": 2,
@@ -39,7 +37,6 @@
       ],
       "target_seconds": 90,
       "minimum_seconds": 36.0,
-      "budget": 360.0,
       "weapon_level_bound": 7,
       "base_hp": 2100,
       "tuned_hp": 4534,
@@ -57,45 +54,17 @@
         "multicorer": false,
         "cost": 300
       },
-      "normal_continuous_lower_seconds": 41.96288515406162
+      "normal_continuous_lower_seconds": 41.96288515406162,
+      "legacy_budget": 360.0
     },
     {
       "world": 3,
       "group": 0,
       "boss_ids": [
-        "boss_w03_polyn"
-      ],
-      "target_seconds": 90,
-      "minimum_seconds": 36.0,
-      "budget": 840.0,
-      "weapon_level_bound": 8,
-      "base_hp": 2450,
-      "tuned_hp": 5983,
-      "transition_gap": 6,
-      "max_build": {
-        "required_hp": 5981.176470588235,
-        "dps": 74.4,
-        "bomb_burst": 620.0,
-        "ranks": {
-          "dano": 2,
-          "cadencia": 0,
-          "bombas": 0
-        },
-        "rov": false,
-        "multicorer": false,
-        "cost": 800
-      },
-      "normal_continuous_lower_seconds": 42.041666666666664
-    },
-    {
-      "world": 4,
-      "group": 0,
-      "boss_ids": [
-        "boss_w04_tere"
+        "boss_w03_tere"
       ],
       "target_seconds": 105,
       "minimum_seconds": 42.0,
-      "budget": 1440.0,
       "weapon_level_bound": 8,
       "base_hp": 3300,
       "tuned_hp": 8028,
@@ -113,17 +82,17 @@
         "multicorer": false,
         "cost": 1400
       },
-      "normal_continuous_lower_seconds": 49.365102639296175
+      "normal_continuous_lower_seconds": 49.365102639296175,
+      "legacy_budget": 1440.0
     },
     {
-      "world": 5,
+      "world": 4,
       "group": 0,
       "boss_ids": [
-        "boss_w05_hermo"
+        "boss_w04_hermo"
       ],
       "target_seconds": 105,
       "minimum_seconds": 42.0,
-      "budget": 2160.0,
       "weapon_level_bound": 8,
       "base_hp": 3700,
       "tuned_hp": 8658,
@@ -141,45 +110,17 @@
         "multicorer": false,
         "cost": 1950
       },
-      "normal_continuous_lower_seconds": 49.27956989247312
+      "normal_continuous_lower_seconds": 49.27956989247312,
+      "legacy_budget": 2160.0
     },
     {
-      "world": 6,
+      "world": 5,
       "group": 0,
       "boss_ids": [
-        "boss_w06_leafqueen"
-      ],
-      "target_seconds": 105,
-      "minimum_seconds": 42.0,
-      "budget": 3000.0,
-      "weapon_level_bound": 8,
-      "base_hp": 4100,
-      "tuned_hp": 9496,
-      "transition_gap": 6,
-      "max_build": {
-        "required_hp": 9494.4,
-        "dps": 97.91999999999999,
-        "bomb_burst": 1019.9999999999999,
-        "ranks": {
-          "dano": 3,
-          "cadencia": 2,
-          "bombas": 1
-        },
-        "rov": false,
-        "multicorer": false,
-        "cost": 2750
-      },
-      "normal_continuous_lower_seconds": 49.28022875816994
-    },
-    {
-      "world": 7,
-      "group": 0,
-      "boss_ids": [
-        "boss_w07_orbin"
+        "boss_w05_orbin"
       ],
       "target_seconds": 120,
       "minimum_seconds": 48.0,
-      "budget": 3960.0,
       "weapon_level_bound": 8,
       "base_hp": 5150,
       "tuned_hp": 11838,
@@ -197,19 +138,19 @@
         "multicorer": false,
         "cost": 3950
       },
-      "normal_continuous_lower_seconds": 56.337837837837846
+      "normal_continuous_lower_seconds": 56.337837837837846,
+      "legacy_budget": 3960.0
     },
     {
-      "world": 8,
+      "world": 6,
       "group": 0,
       "boss_ids": [
-        "boss_w08_pollution_capit",
-        "boss_w08_pollution_spio",
-        "boss_w08_pollution_cirrat"
+        "boss_w06_pollution_capit",
+        "boss_w06_pollution_spio",
+        "boss_w06_pollution_cirrat"
       ],
       "target_seconds": 135,
       "minimum_seconds": 54.0,
-      "budget": 5040.0,
       "weapon_level_bound": 8,
       "base_hp": 6300,
       "tuned_hp": 15977,
@@ -227,17 +168,17 @@
         "multicorer": false,
         "cost": 4850
       },
-      "normal_continuous_lower_seconds": 64.39275814275814
+      "normal_continuous_lower_seconds": 64.39275814275814,
+      "legacy_budget": 5040.0
     },
     {
-      "world": 9,
+      "world": 7,
       "group": 0,
       "boss_ids": [
-        "boss_w09_tomo"
+        "boss_w07_tomo"
       ],
       "target_seconds": 120,
       "minimum_seconds": 48.0,
-      "budget": 6240.0,
       "weapon_level_bound": 8,
       "base_hp": 6100,
       "tuned_hp": 13593,
@@ -255,17 +196,17 @@
         "multicorer": false,
         "cost": 6150
       },
-      "normal_continuous_lower_seconds": 56.20511583011583
+      "normal_continuous_lower_seconds": 56.20511583011583,
+      "legacy_budget": 6240.0
     },
     {
-      "world": 10,
+      "world": 8,
       "group": 0,
       "boss_ids": [
-        "boss_w10_eulagisca"
+        "boss_w08_eulagisca"
       ],
       "target_seconds": 120,
       "minimum_seconds": 48.0,
-      "budget": 7560.0,
       "weapon_level_bound": 8,
       "base_hp": 6550,
       "tuned_hp": 15615,
@@ -283,17 +224,17 @@
         "multicorer": false,
         "cost": 7350
       },
-      "normal_continuous_lower_seconds": 55.85454204204204
+      "normal_continuous_lower_seconds": 55.85454204204204,
+      "legacy_budget": 7560.0
     },
     {
-      "world": 11,
+      "world": 9,
       "group": 0,
       "boss_ids": [
-        "boss_w11_osedax"
+        "boss_w09_osedax"
       ],
       "target_seconds": 120,
       "minimum_seconds": 48.0,
-      "budget": 9000.0,
       "weapon_level_bound": 8,
       "base_hp": 7000,
       "tuned_hp": 16684,
@@ -311,17 +252,17 @@
         "multicorer": false,
         "cost": 8600
       },
-      "normal_continuous_lower_seconds": 56.36057692307692
+      "normal_continuous_lower_seconds": 56.36057692307692,
+      "legacy_budget": 9000.0
     },
     {
-      "world": 12,
+      "world": 10,
       "group": 0,
       "boss_ids": [
-        "boss_w12_alvinella"
+        "boss_w10_alvinella"
       ],
       "target_seconds": 120,
       "minimum_seconds": 48.0,
-      "budget": 10560.0,
       "weapon_level_bound": 8,
       "base_hp": 7500,
       "tuned_hp": 17822,
@@ -339,18 +280,18 @@
         "multicorer": false,
         "cost": 9900
       },
-      "normal_continuous_lower_seconds": 56.29141865079366
+      "normal_continuous_lower_seconds": 56.29141865079366,
+      "legacy_budget": 10560.0
     },
     {
-      "world": 13,
+      "world": 11,
       "group": 0,
       "boss_ids": [
-        "boss_w13_hadalsovereign",
-        "boss_w13_riftia"
+        "boss_w11_hadalsovereign",
+        "boss_w11_riftia"
       ],
       "target_seconds": 150,
       "minimum_seconds": 60.0,
-      "budget": 12240.0,
       "weapon_level_bound": 8,
       "base_hp": 9950,
       "tuned_hp": 25727,
@@ -368,19 +309,19 @@
         "multicorer": true,
         "cost": 12100
       },
-      "normal_continuous_lower_seconds": 71.66257248711341
+      "normal_continuous_lower_seconds": 71.66257248711341,
+      "legacy_budget": 12240.0
     },
     {
-      "world": 14,
+      "world": 12,
       "group": 1,
       "boss_ids": [
-        "boss_w14_robot_pinza",
-        "boss_w14_robot_torreta",
-        "boss_w14_robot_taladro"
+        "boss_w12_robot_pinza",
+        "boss_w12_robot_torreta",
+        "boss_w12_robot_taladro"
       ],
       "target_seconds": 90,
       "minimum_seconds": 36.0,
-      "budget": 14040.0,
       "weapon_level_bound": 8,
       "base_hp": 6300,
       "tuned_hp": 16379,
@@ -398,17 +339,17 @@
         "multicorer": true,
         "cost": 12100
       },
-      "normal_continuous_lower_seconds": 43.428841817010316
+      "normal_continuous_lower_seconds": 43.428841817010316,
+      "legacy_budget": 14040.0
     },
     {
-      "world": 14,
+      "world": 12,
       "group": 2,
       "boss_ids": [
-        "boss_w14_epitoke"
+        "boss_w12_scientist"
       ],
       "target_seconds": 120,
       "minimum_seconds": 48.0,
-      "budget": 15480.0,
       "weapon_level_bound": 8,
       "base_hp": 8400,
       "tuned_hp": 18714,
@@ -426,45 +367,17 @@
         "multicorer": true,
         "cost": 12100
       },
-      "normal_continuous_lower_seconds": 56.48123389175258
+      "normal_continuous_lower_seconds": 56.48123389175258,
+      "legacy_budget": 17160.0
     },
     {
-      "world": 14,
+      "world": 12,
       "group": 3,
       "boss_ids": [
-        "boss_w14_scientist"
-      ],
-      "target_seconds": 120,
-      "minimum_seconds": 48.0,
-      "budget": 17160.0,
-      "weapon_level_bound": 8,
-      "base_hp": 8400,
-      "tuned_hp": 18714,
-      "transition_gap": 6,
-      "max_build": {
-        "required_hp": 18712.84705882353,
-        "dps": 165.54666666666665,
-        "bomb_burst": 2000.0,
-        "ranks": {
-          "dano": 5,
-          "cadencia": 4,
-          "bombas": 3
-        },
-        "rov": true,
-        "multicorer": true,
-        "cost": 12100
-      },
-      "normal_continuous_lower_seconds": 56.48123389175258
-    },
-    {
-      "world": 14,
-      "group": 4,
-      "boss_ids": [
-        "boss_w14_eunice_titan"
+        "boss_w12_eunice_titan"
       ],
       "target_seconds": 180,
       "minimum_seconds": 72.0,
-      "budget": 19080.0,
       "weapon_level_bound": 8,
       "base_hp": 12650,
       "tuned_hp": 26894,
@@ -482,7 +395,9 @@
         "multicorer": true,
         "cost": 12100
       },
-      "normal_continuous_lower_seconds": 84.18725837628867
+      "normal_continuous_lower_seconds": 84.18725837628867,
+      "legacy_budget": 19080.0
     }
-  ]
+  ],
+  "status": "provisional_05c"
 }

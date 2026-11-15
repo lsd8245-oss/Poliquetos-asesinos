@@ -1,0 +1,25 @@
+{
+  "edition": "Normal",
+  "raw_sha256": "3794f560231f7ecc63955a1436c48f7ea2744ffcafd59dd692eab1de211b564c",
+  "raw_bytes": 358523012,
+  "published_sha256": "86f459128ccacf6e0c5fa60e2727961ab5f48c24faa4a6b7c20fa0ee60878e5c",
+  "published_bytes": 81875000,
+  "raw_probe": {
+    "width": 1366,
+    "height": 768,
+    "avg_frame_rate": "240160/12029",
+    "duration": "601.450000",
+    "nb_read_frames": "12008"
+  },
+  "published_probe": {
+    "width": 1366,
+    "height": 768,
+    "avg_frame_rate": "240160/12029",
+    "duration": "601.450000",
+    "nb_read_frames": "12008"
+  },
+  "all_frames_preserved": true,
+  "full_decode_errors": 0,
+  "transcode": "libx264 veryfast CRF27, 2threads, fps_mode passthrough, +faststart; no cropping/resizing/cuts; silent recording (Dummy audio driver)",
+  "capture_warning": "One XShm image warning during display setup; recording continued. Full game, menus and restart remain in the continuous capture."
+}

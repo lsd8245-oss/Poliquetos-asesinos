@@ -1,0 +1,457 @@
+{
+  "estado": "propuesta_no_aplicada",
+  "base": "pulido/w01-combate-vfx-b1",
+  "mundos_eliminados_ids_antiguos": [
+    3,
+    6
+  ],
+  "escape_nuevo_id": 13,
+  "mundos": [
+    {
+      "nuevo_id": 1,
+      "antiguo_id": 1,
+      "nombre": "Superficie marina",
+      "acto": 1,
+      "comunes_originales": [
+        "hydroides",
+        "euphrosine",
+        "fabric",
+        "pision",
+        "lacy"
+      ],
+      "recurrentes_originales": [
+        "syll",
+        "phyll"
+      ],
+      "comunes_agregados": [
+        "sabellaria",
+        "eulalia"
+      ],
+      "recurrente_agregado": "spio",
+      "minijefe_id_original": "mini_w01_pision",
+      "jefes_ids_originales": [
+        "boss_w01_nereis"
+      ],
+      "enemigos_etapa_presupuesto": 90,
+      "minijefe_estado": "inactivo_temporal",
+      "jefe_final_estado": "activo"
+    },
+    {
+      "nuevo_id": 2,
+      "antiguo_id": 2,
+      "nombre": "Playas arenosas",
+      "acto": 1,
+      "comunes_originales": [
+        "arenicola",
+        "magelona",
+        "sthenelais",
+        "sacco",
+        "goniada"
+      ],
+      "recurrentes_originales": [
+        "spio",
+        "nepht",
+        "glycer"
+      ],
+      "comunes_agregados": [
+        "pectinaria",
+        "diopatra"
+      ],
+      "recurrente_agregado": "pision",
+      "minijefe_id_original": "mini_w02_arenicola",
+      "jefes_ids_originales": [
+        "boss_w02_capit"
+      ],
+      "enemigos_etapa_presupuesto": 125,
+      "minijefe_estado": "inactivo_temporal",
+      "jefe_final_estado": "activo"
+    },
+    {
+      "nuevo_id": 3,
+      "antiguo_id": 4,
+      "nombre": "Bosques de kelp",
+      "acto": 1,
+      "comunes_originales": [
+        "spirorbis",
+        "myxicola",
+        "spinther",
+        "trocho",
+        "cteno"
+      ],
+      "recurrentes_originales": [
+        "syll",
+        "phyll",
+        "cirrat"
+      ],
+      "comunes_agregados": [
+        "dodeca",
+        "spha"
+      ],
+      "recurrente_agregado": "hesio",
+      "minijefe_id_original": "mini_w04_myxicola",
+      "jefes_ids_originales": [
+        "boss_w04_tere"
+      ],
+      "enemigos_etapa_presupuesto": 135,
+      "minijefe_estado": "inactivo_temporal",
+      "jefe_final_estado": "activo"
+    },
+    {
+      "nuevo_id": 4,
+      "antiguo_id": 5,
+      "nombre": "Arrecifes tropicales",
+      "acto": 2,
+      "comunes_originales": [
+        "spirobranchus",
+        "sabellastarte",
+        "eulepeth",
+        "acoet",
+        "pholoe"
+      ],
+      "recurrentes_originales": [
+        "syll",
+        "phyll",
+        "hesio"
+      ],
+      "comunes_agregados": [
+        "oenone",
+        "chaetopterus"
+      ],
+      "recurrente_agregado": "serp",
+      "minijefe_id_original": "mini_w05_spirobranchus",
+      "jefes_ids_originales": [
+        "boss_w05_hermo"
+      ],
+      "enemigos_etapa_presupuesto": 135,
+      "minijefe_estado": "inactivo_temporal",
+      "jefe_final_estado": "activo"
+    },
+    {
+      "nuevo_id": 5,
+      "antiguo_id": 7,
+      "nombre": "Estuarios y fango",
+      "acto": 2,
+      "comunes_originales": [
+        "aricidea",
+        "terebellides",
+        "questa",
+        "fauvel",
+        "protod"
+      ],
+      "recurrentes_originales": [
+        "spio",
+        "nepht",
+        "glycer"
+      ],
+      "comunes_agregados": [
+        "arabella",
+        "hediste_diversicolor"
+      ],
+      "recurrente_agregado": "magelona",
+      "minijefe_id_original": "mini_w07_terebellides",
+      "jefes_ids_originales": [
+        "boss_w07_orbin"
+      ],
+      "enemigos_etapa_presupuesto": 150,
+      "minijefe_estado": "inactivo_temporal",
+      "jefe_final_estado": "activo"
+    },
+    {
+      "nuevo_id": 6,
+      "antiguo_id": 8,
+      "nombre": "Sedimentos contaminados",
+      "acto": 2,
+      "comunes_originales": [
+        "ophelia",
+        "cossura",
+        "pilarg",
+        "lumbrineris",
+        "owenia"
+      ],
+      "recurrentes_originales": [
+        "glycer",
+        "dorville"
+      ],
+      "comunes_agregados": [
+        "capitella_capitata",
+        "polydora_ciliata"
+      ],
+      "recurrente_agregado": "spio",
+      "minijefe_id_original": "mini_w08_lumbrineris",
+      "jefes_ids_originales": [
+        "boss_w08_pollution_capit",
+        "boss_w08_pollution_spio",
+        "boss_w08_pollution_cirrat"
+      ],
+      "enemigos_etapa_presupuesto": 162,
+      "minijefe_estado": "inactivo_temporal",
+      "jefe_final_estado": "activo"
+    },
+    {
+      "nuevo_id": 7,
+      "antiguo_id": 9,
+      "nombre": "Zona planctónica",
+      "acto": 3,
+      "comunes_originales": [
+        "pontod",
+        "lopado",
+        "typhlo",
+        "poeo",
+        "iospil"
+      ],
+      "recurrentes_originales": [
+        "syll_stolon",
+        "alciop"
+      ],
+      "comunes_agregados": [
+        "vanadis_antarctica",
+        "pelagobia_longicirrata"
+      ],
+      "recurrente_agregado": "swima",
+      "minijefe_id_original": "mini_w09_lopado",
+      "jefes_ids_originales": [
+        "boss_w09_tomo"
+      ],
+      "enemigos_etapa_presupuesto": 162,
+      "minijefe_estado": "inactivo_temporal",
+      "jefe_final_estado": "activo"
+    },
+    {
+      "nuevo_id": 8,
+      "antiguo_id": 10,
+      "nombre": "Zona antártica",
+      "acto": 3,
+      "comunes_originales": [
+        "flabegraviera",
+        "aphelochaeta",
+        "mald",
+        "perkinsiana",
+        "amphar"
+      ],
+      "recurrentes_originales": [
+        "spio",
+        "serp",
+        "alciop"
+      ],
+      "comunes_agregados": [
+        "laetmonice_producta",
+        "austrolaenilla_antarctica"
+      ],
+      "recurrente_agregado": "aphro",
+      "minijefe_id_original": "mini_w10_flabegraviera",
+      "jefes_ids_originales": [
+        "boss_w10_eulagisca"
+      ],
+      "enemigos_etapa_presupuesto": 200,
+      "minijefe_estado": "inactivo_temporal",
+      "jefe_final_estado": "activo"
+    },
+    {
+      "nuevo_id": 9,
+      "antiguo_id": 11,
+      "nombre": "Restos de ballena",
+      "acto": 3,
+      "comunes_originales": [
+        "hesiocaeca",
+        "nautil",
+        "chryso",
+        "brada",
+        "bathykurila"
+      ],
+      "recurrentes_originales": [
+        "cirrat",
+        "ophryotrocha"
+      ],
+      "comunes_agregados": [
+        "glycera",
+        "neanthes_visicete"
+      ],
+      "recurrente_agregado": "spha",
+      "minijefe_id_original": "mini_w11_chryso",
+      "jefes_ids_originales": [
+        "boss_w11_osedax"
+      ],
+      "enemigos_etapa_presupuesto": 200,
+      "minijefe_estado": "inactivo_temporal",
+      "jefe_final_estado": "activo"
+    },
+    {
+      "nuevo_id": 10,
+      "antiguo_id": 12,
+      "nombre": "Campos hidrotermales",
+      "acto": 3,
+      "comunes_originales": [
+        "riftia",
+        "paralvinella",
+        "branchinotogluma",
+        "amphisamytha",
+        "hesiolyra"
+      ],
+      "recurrentes_originales": [
+        "serp",
+        "cirrat",
+        "dorville"
+      ],
+      "comunes_agregados": [
+        "branchipolynoe",
+        "thermopolynoe"
+      ],
+      "recurrente_agregado": "ophryotrocha",
+      "minijefe_id_original": "mini_w12_paralvinella",
+      "jefes_ids_originales": [
+        "boss_w12_alvinella"
+      ],
+      "enemigos_etapa_presupuesto": 245,
+      "minijefe_estado": "inactivo_temporal",
+      "jefe_final_estado": "activo"
+    },
+    {
+      "nuevo_id": 11,
+      "antiguo_id": 13,
+      "nombre": "Zona hadal",
+      "acto": 3,
+      "comunes_originales": [
+        "swima",
+        "aphro",
+        "scali",
+        "stern",
+        "macellicephaloides"
+      ],
+      "recurrentes_originales": [
+        "nepht",
+        "glycer",
+        "dorville",
+        "alciop",
+        "cirrat"
+      ],
+      "comunes_agregados": [
+        "macellicephala_tricornis",
+        "bathykermadeca_hadalis"
+      ],
+      "recurrente_agregado": "bathykurila",
+      "minijefe_id_original": "mini_w13_aphro",
+      "jefes_ids_originales": [
+        "boss_w13_hadalsovereign",
+        "boss_w13_riftia"
+      ],
+      "enemigos_etapa_presupuesto": 285,
+      "minijefe_estado": "inactivo_temporal",
+      "jefe_final_estado": "activo"
+    },
+    {
+      "nuevo_id": 12,
+      "antiguo_id": 14,
+      "nombre": "El laboratorio",
+      "acto": 4,
+      "comunes_originales": [
+        "mech_syll",
+        "mech_nereis",
+        "mech_sabel",
+        "mech_chaet",
+        "mech_riftia",
+        "mech_polyn"
+      ],
+      "recurrentes_originales": [
+        "hydroides",
+        "euphrosine",
+        "fabric",
+        "pision",
+        "lacy",
+        "syll",
+        "phyll",
+        "arenicola",
+        "magelona",
+        "sthenelais",
+        "sacco",
+        "goniada",
+        "spio",
+        "nepht",
+        "glycer",
+        "dodeca",
+        "oenone",
+        "arabella",
+        "spha",
+        "histrio",
+        "serp",
+        "hesio",
+        "spirorbis",
+        "myxicola",
+        "spinther",
+        "trocho",
+        "cteno",
+        "cirrat",
+        "spirobranchus",
+        "sabellastarte",
+        "eulepeth",
+        "acoet",
+        "pholoe",
+        "glycera",
+        "diopatra",
+        "chaetopterus",
+        "sabellaria",
+        "pectinaria",
+        "aricidea",
+        "terebellides",
+        "questa",
+        "fauvel",
+        "protod",
+        "ophelia",
+        "cossura",
+        "pilarg",
+        "lumbrineris",
+        "owenia",
+        "dorville",
+        "pontod",
+        "lopado",
+        "typhlo",
+        "poeo",
+        "iospil",
+        "syll_stolon",
+        "alciop",
+        "flabegraviera",
+        "aphelochaeta",
+        "mald",
+        "perkinsiana",
+        "amphar",
+        "hesiocaeca",
+        "nautil",
+        "chryso",
+        "brada",
+        "bathykurila",
+        "ophryotrocha",
+        "riftia",
+        "paralvinella",
+        "branchinotogluma",
+        "amphisamytha",
+        "hesiolyra",
+        "swima",
+        "aphro",
+        "scali",
+        "stern",
+        "macellicephaloides"
+      ],
+      "comunes_agregados": [
+        "mech_oenone",
+        "mech_diopatra"
+      ],
+      "recurrente_agregado": "capitella_capitata",
+      "minijefe_id_original": "mini_w14_mech_nereis",
+      "jefes_ids_originales": [
+        "boss_w14_robot_pinza",
+        "boss_w14_robot_torreta",
+        "boss_w14_robot_taladro",
+        "boss_w14_epitoke",
+        "boss_w14_scientist",
+        "boss_w14_eunice_titan"
+      ],
+      "enemigos_etapa_presupuesto": 250,
+      "minijefe_estado": "inactivo_temporal",
+      "jefe_final_estado": "activo_excepto_epitoka_laboratorio"
+    }
+  ],
+  "politica_encuentros": {
+    "minijefes": "inactivos_temporalmente; mantener IDs y assets como referencias históricas",
+    "jefes_finales": "activos; conservar encuentros y recompensas",
+    "excepcion_laboratorio": "Epitoka fuera del diseño activo; conservar histórico; no inventar sustituto"
+  }
+}

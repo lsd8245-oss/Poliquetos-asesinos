@@ -1,0 +1,235 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://poliquetos.local/schemas/shop.schema.json",
+  "type": "object",
+  "properties": {
+    "mejoras": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[a-z][a-z0-9_]*$"
+          },
+          "rangos": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "efecto_por_rango": {
+            "type": "object",
+            "minProperties": 1,
+            "additionalProperties": {
+              "type": "number"
+            }
+          },
+          "costos": {
+            "type": "array",
+            "items": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "minItems": 1
+          },
+          "nombre": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "id",
+          "rangos",
+          "efecto_por_rango",
+          "costos"
+        ],
+        "additionalProperties": false
+      },
+      "minItems": 1
+    },
+    "equipo": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[a-z][a-z0-9_]*$"
+          },
+          "acto": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 4
+          },
+          "costo": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "efecto": {
+            "type": "string",
+            "minLength": 1
+          },
+          "nombre": {
+            "type": "string"
+          },
+          "descripcion": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "required": [
+          "id",
+          "acto",
+          "costo",
+          "efecto"
+        ],
+        "additionalProperties": false
+      },
+      "minItems": 1
+    },
+    "reembolso_misma_visita": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "base_stats": {
+      "type": "object",
+      "properties": {
+        "max_shield": {
+          "type": "number",
+          "minimum": 0
+        },
+        "damage_mult": {
+          "type": "number",
+          "minimum": 0
+        },
+        "rate_mult": {
+          "type": "number",
+          "minimum": 0
+        },
+        "min_missile": {
+          "type": "number",
+          "minimum": 0
+        },
+        "max_bombs": {
+          "type": "number",
+          "minimum": 0
+        },
+        "regen": {
+          "type": "number",
+          "minimum": 0
+        },
+        "magnet": {
+          "type": "number",
+          "minimum": 0
+        },
+        "speed": {
+          "type": "number",
+          "minimum": 0
+        }
+      },
+      "required": [
+        "max_shield",
+        "damage_mult",
+        "rate_mult",
+        "min_missile",
+        "max_bombs",
+        "regen",
+        "magnet",
+        "speed"
+      ],
+      "additionalProperties": false
+    },
+    "economia": {
+      "type": "array",
+      "minItems": 17,
+      "maxItems": 17,
+      "items": {
+        "type": "object",
+        "properties": {
+          "mundo": {
+            "type": "string",
+            "minLength": 1
+          },
+          "acto": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "enemigos": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "duracion_hasta_jefe_seg": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "jefe_objetivo_seg": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "base_monedas": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "vida_jefe": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "vida_minijefe": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "dps_ref": {
+            "type": "integer",
+            "minimum": 0
+          }
+        },
+        "required": [
+          "mundo",
+          "acto",
+          "enemigos",
+          "duracion_hasta_jefe_seg",
+          "jefe_objetivo_seg",
+          "base_monedas",
+          "vida_jefe",
+          "vida_minijefe",
+          "dps_ref"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  "required": [
+    "mejoras",
+    "equipo",
+    "reembolso_misma_visita"
+  ],
+  "additionalProperties": false,
+  "examples": [
+    {
+      "mejoras": [
+        {
+          "id": "escudo_max",
+          "rangos": 5,
+          "efecto_por_rango": {
+            "escudo": 20
+          },
+          "costos": [
+            250,
+            450,
+            700,
+            1000,
+            1400
+          ]
+        }
+      ],
+      "equipo": [
+        {
+          "id": "draga",
+          "acto": 1,
+          "costo": 600,
+          "efecto": "autorecoger_96px"
+        }
+      ],
+      "reembolso_misma_visita": 1
+    }
+  ]
+}

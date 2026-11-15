@@ -8,31 +8,31 @@
   {
     "id": "batiscafo_amarillo",
     "nombre": "Batiscafo amarillo",
-    "desbloqueo": "mundo4_completado",
+    "desbloqueo": "mundo3_completado",
     "sprite_set": "ui_ship_batiscafo_amarillo"
   },
   {
     "id": "coral",
     "nombre": "Coral",
-    "desbloqueo": "objeto_jefe3",
+    "desbloqueo": "historico_jefe3",
     "sprite_set": "ui_ship_coral"
   },
   {
     "id": "abisal",
     "nombre": "Abisal",
-    "desbloqueo": "objeto_jefe6",
+    "desbloqueo": "historico_jefe6",
     "sprite_set": "ui_ship_abisal"
   },
   {
     "id": "bioluminiscente",
     "nombre": "Bioluminiscente",
-    "desbloqueo": "objeto_jefe9",
+    "desbloqueo": "objeto_jefe7",
     "sprite_set": "ui_ship_bioluminiscente"
   },
   {
     "id": "magma",
     "nombre": "Magma",
-    "desbloqueo": "objeto_jefe12",
+    "desbloqueo": "objeto_jefe10",
     "sprite_set": "ui_ship_magma"
   },
   {

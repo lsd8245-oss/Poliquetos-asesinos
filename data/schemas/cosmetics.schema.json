@@ -34,10 +34,10 @@
   "examples": [
     [
       {
-        "id": "dorado",
-        "nombre": "Dorado",
-        "desbloqueo": "partida_sin_muertes",
-        "sprite_set": "ui_ship_dorado"
+        "id": "original",
+        "nombre": "Casco original",
+        "desbloqueo": "inicio",
+        "sprite_set": "ui_ship_original"
       }
     ]
   ]

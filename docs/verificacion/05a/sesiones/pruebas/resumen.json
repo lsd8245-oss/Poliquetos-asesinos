@@ -1,0 +1,417 @@
+{
+  "passed": true,
+  "real_route_passed": true,
+  "host": "Windows PE under Wine/Linux, NOT physical Windows",
+  "controls": "Automated X11 keyboard, read-only telemetry; no forced damage, HP, time, money or victory",
+  "sha256": "8cf2b2b5cd73615283be15a16aa6a0f08d535d0c598edf3f32749478798889eb",
+  "desktop_size": [
+    1366,
+    768
+  ],
+  "purchase": {
+    "item": "escudo_max",
+    "before": 999999999,
+    "after": 999999999
+  },
+  "exit_code": 0,
+  "wall_seconds": 349.34991086900027,
+  "victory_frame": {
+    "bombs": 0,
+    "boss_spawns": 1,
+    "bullets": [],
+    "buttons": [
+      "results_skip"
+    ],
+    "completed": false,
+    "credits": 999999999,
+    "drops": [],
+    "edition": "pruebas",
+    "elapsed": 269.827356018079,
+    "enemies": [],
+    "lab": 0,
+    "minis": 0,
+    "os": "Windows",
+    "player": [
+      80.8586959838867,
+      167.683288574219
+    ],
+    "profile_version": 3,
+    "regular_kills": 90,
+    "regular_spawned": 90,
+    "resume": "rest",
+    "screen": "results",
+    "seed": 147001,
+    "selected": 0,
+    "selector_lab": 0,
+    "selector_world": 1,
+    "shield": 100.0,
+    "shop_item": "",
+    "state": "results",
+    "upgrades": {
+      "bombas": 0,
+      "cadencia": 0,
+      "dano": 0,
+      "escudo_max": 0,
+      "iman": 0,
+      "misiles": 0,
+      "regeneracion": 0,
+      "velocidad": 0
+    },
+    "weapons": {
+      "bomb": 8,
+      "missile": 8,
+      "shot": 8
+    },
+    "world": 1,
+    "world_time": 170.026108142187
+  },
+  "restored_frame": {
+    "bombs": 0,
+    "boss_spawns": 0,
+    "bullets": [],
+    "buttons": [
+      "shop",
+      "shipyard",
+      "skins",
+      "save",
+      "replay",
+      "next",
+      "options",
+      "leave",
+      "sandbox"
+    ],
+    "completed": false,
+    "credits": 999999999,
+    "drops": [],
+    "edition": "pruebas",
+    "elapsed": 269.827356018079,
+    "enemies": [],
+    "lab": 0,
+    "minis": 0,
+    "os": "Windows",
+    "player": [
+      80.0,
+      168.0
+    ],
+    "profile_version": 3,
+    "regular_kills": 0,
+    "regular_spawned": 0,
+    "resume": "rest",
+    "screen": "rest",
+    "seed": 147001,
+    "selected": 0,
+    "selector_lab": 0,
+    "selector_world": 1,
+    "shield": 120.0,
+    "shop_item": "",
+    "state": "rest",
+    "upgrades": {
+      "bombas": 0,
+      "cadencia": 0,
+      "dano": 0,
+      "escudo_max": 1,
+      "iman": 0,
+      "misiles": 0,
+      "regeneracion": 0,
+      "velocidad": 0
+    },
+    "weapons": {
+      "bomb": 8,
+      "missile": 8,
+      "shot": 8
+    },
+    "world": 1,
+    "world_time": 0.0
+  },
+  "next_world_frame": {
+    "bombs": 0,
+    "boss_spawns": 0,
+    "bullets": [],
+    "buttons": [],
+    "completed": false,
+    "credits": 999999999,
+    "drops": [],
+    "edition": "pruebas",
+    "elapsed": 269.827356018079,
+    "enemies": [],
+    "lab": 0,
+    "minis": 0,
+    "os": "Windows",
+    "player": [
+      80.0,
+      168.0
+    ],
+    "profile_version": 3,
+    "regular_kills": 0,
+    "regular_spawned": 0,
+    "resume": "playing",
+    "screen": "game",
+    "seed": 147001,
+    "selected": 0,
+    "selector_lab": 0,
+    "selector_world": 1,
+    "shield": 120.0,
+    "shop_item": "",
+    "state": "playing",
+    "upgrades": {
+      "bombas": 0,
+      "cadencia": 0,
+      "dano": 0,
+      "escudo_max": 1,
+      "iman": 0,
+      "misiles": 0,
+      "regeneracion": 0,
+      "velocidad": 0
+    },
+    "weapons": {
+      "bomb": 8,
+      "missile": 8,
+      "shot": 8
+    },
+    "world": 2,
+    "world_time": 0.0
+  },
+  "disk_saves": [
+    {
+      "sha256": "04ca510f468b9e60868a63ec869b02824aa2f4f143e364cf06f1e5bfdaa43f69",
+      "profile": {
+        "_integer_paths": [
+          [
+            "version"
+          ],
+          [
+            "slot"
+          ],
+          [
+            "world"
+          ],
+          [
+            "lab_boss"
+          ],
+          [
+            "credits"
+          ],
+          [
+            "upgrades",
+            "escudo_max"
+          ],
+          [
+            "upgrades",
+            "dano"
+          ],
+          [
+            "upgrades",
+            "cadencia"
+          ],
+          [
+            "upgrades",
+            "misiles"
+          ],
+          [
+            "upgrades",
+            "bombas"
+          ],
+          [
+            "upgrades",
+            "regeneracion"
+          ],
+          [
+            "upgrades",
+            "iman"
+          ],
+          [
+            "upgrades",
+            "velocidad"
+          ],
+          [
+            "weapons",
+            "shot"
+          ],
+          [
+            "weapons",
+            "missile"
+          ],
+          [
+            "weapons",
+            "bomb"
+          ],
+          [
+            "bombs"
+          ],
+          [
+            "cleared",
+            0
+          ],
+          [
+            "seed"
+          ],
+          [
+            "world_entry_weapons",
+            "shot"
+          ],
+          [
+            "world_entry_weapons",
+            "missile"
+          ],
+          [
+            "world_entry_weapons",
+            "bomb"
+          ],
+          [
+            "entry_world"
+          ],
+          [
+            "spawned_total"
+          ],
+          [
+            "kills_total"
+          ]
+        ],
+        "bombs": 0,
+        "claimed_drops": {
+          "1:0:carrier:0": true,
+          "1:0:carrier:13": true,
+          "1:0:carrier:17": true,
+          "1:0:carrier:20": true,
+          "1:0:carrier:4": true,
+          "1:0:carrier:8": true,
+          "1:0:enemy:wave_0_1": true,
+          "1:0:enemy:wave_0_3": true,
+          "1:0:enemy:wave_11_1": true,
+          "1:0:enemy:wave_11_3": true,
+          "1:0:enemy:wave_11_5": true,
+          "1:0:enemy:wave_11_7": true,
+          "1:0:enemy:wave_11_9": true,
+          "1:0:enemy:wave_13_0": true,
+          "1:0:enemy:wave_13_2": true,
+          "1:0:enemy:wave_13_4": true,
+          "1:0:enemy:wave_15_0": true,
+          "1:0:enemy:wave_15_10": true,
+          "1:0:enemy:wave_15_2": true,
+          "1:0:enemy:wave_15_4": true,
+          "1:0:enemy:wave_15_6": true,
+          "1:0:enemy:wave_15_8": true,
+          "1:0:enemy:wave_17_1": true,
+          "1:0:enemy:wave_17_3": true,
+          "1:0:enemy:wave_17_5": true,
+          "1:0:enemy:wave_18_0": true,
+          "1:0:enemy:wave_18_2": true,
+          "1:0:enemy:wave_18_4": true,
+          "1:0:enemy:wave_18_6": true,
+          "1:0:enemy:wave_19_3": true,
+          "1:0:enemy:wave_19_5": true,
+          "1:0:enemy:wave_1_1": true,
+          "1:0:enemy:wave_1_3": true,
+          "1:0:enemy:wave_20_1": true,
+          "1:0:enemy:wave_20_3": true,
+          "1:0:enemy:wave_2_1": true,
+          "1:0:enemy:wave_2_3": true,
+          "1:0:enemy:wave_4_2": true,
+          "1:0:enemy:wave_8_1": true,
+          "1:0:enemy:wave_8_3": true,
+          "1:0:enemy:wave_8_5": true,
+          "1:0:enemy:wave_9_0": true,
+          "1:0:enemy:wave_9_2": true,
+          "1:0:enemy:wave_9_4": true,
+          "1:0:enemy:wave_9_6": true,
+          "1:0:phase:boss:boss_w01_nereis:2:10": true,
+          "1:0:phase:boss:boss_w01_nereis:2:3": true,
+          "1:0:phase:boss:boss_w01_nereis:2:6": true,
+          "1:0:phase:boss:boss_w01_nereis:2:8": true,
+          "1:0:phase:boss:boss_w01_nereis:2:9": true
+        },
+        "cleared": [
+          1
+        ],
+        "coins_total": 1000.0,
+        "colors": {
+          "hull": "#75c9df",
+          "lights": "#d7ffed",
+          "trail": "#4a9cff"
+        },
+        "completed": false,
+        "credits": 999999999,
+        "deaths": {},
+        "difficulty": "normal",
+        "edition": "pruebas",
+        "entry_world": 1,
+        "equipment": {
+          "sonar": true
+        },
+        "kills_total": 90,
+        "lab_boss": 0,
+        "resume": "rest",
+        "rewarded": {
+          "1:0": true
+        },
+        "seed": 147001,
+        "skin": "original",
+        "skins": [
+          "original",
+          "batiscafo_amarillo",
+          "coral",
+          "abisal",
+          "bioluminiscente",
+          "magma",
+          "laboratorio",
+          "fantasma",
+          "dorado"
+        ],
+        "slot": 1,
+        "spawned_total": 90,
+        "time": 269.82735601807855,
+        "upgrades": {
+          "bombas": 0,
+          "cadencia": 0,
+          "dano": 0,
+          "escudo_max": 1,
+          "iman": 0,
+          "misiles": 0,
+          "regeneracion": 0,
+          "velocidad": 0
+        },
+        "version": 3,
+        "weapons": {
+          "bomb": 8,
+          "missile": 8,
+          "shot": 8
+        },
+        "weapons_available": [
+          "shot",
+          "missile",
+          "bomb"
+        ],
+        "world": 1,
+        "world_elapsed": 269.82735601807855,
+        "world_entry_weapons": {
+          "bomb": 8,
+          "missile": 8,
+          "shot": 8
+        }
+      }
+    }
+  ],
+  "explicit_selector_weapon_levels": {
+    "shot": 8,
+    "missile": 8,
+    "bomb": 8
+  },
+  "phases": {
+    "1": {
+      "simulation_elapsed": 176.030305808853,
+      "hp": 2319.0
+    },
+    "2": {
+      "simulation_elapsed": 215.331728788647,
+      "hp": 1530.54
+    },
+    "3": {
+      "simulation_elapsed": 234.074589455312,
+      "hp": 765.27
+    }
+  },
+  "max_regular_spawned": 90,
+  "max_minis": 0,
+  "game_errors": [],
+  "scope": "Full actual Windows PE under Wine, automated keyboard; weapon8 selected via real Pruebas UI. Equipment/upgrades pending before shop; no HP/time/damage/currency/victory injection."
+}
